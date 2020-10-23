@@ -1,0 +1,58 @@
+---
+sidebar: sidebar
+permalink: xcp-prepare-windows-for-xcp-smb.html
+keywords:
+summary:
+---
+
+= Prepare Windows for XCP SMB
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+XCP SMB uses Windows client host systems to generate parallel I/O streams and fully use available network and storage performance.
+
+=== Configure storage
+
+XCP SMB transitions and migrations have the following user login requirements:
+
+*	XCP host system: An XCP host user must have administrator privilege (the user must be part of "BUILTIN\Administrators" group on the XCP SMB host system).
+*	Add the migration or XCP host user to the "Manage Audit and Security Log Policy in your Active Directory. To locate the 'Manage Auditing and Security Log' Policy on Windows 10, follow these steps:
+
+.	Open the Group Policy Editor dialog box
+.	Go to: Computer Configuration > Windows Settings > Security Settings > Local Policies > User Rights Assignment
+.	Click “Mange auditing and security log”
+.	To add an XCP host user, select “Add User or Group”
++
+For more information see: link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953(v%3Dws.11)[Manage auditing and security log].
+
+*	Target storage system: XCP host user must have read and write access.
+*	Source storage system:
+**	If the user is part of the “Backup Operators” group in the source storage system, the
+members of this group can read files while bypassing the security rules,
+regardless of any permissions that protect those files.
+**	If the user is not part of “Backup Operators” group in source system, the user
+must have read access.
+
+NOTE: Write permission is required in the source storage system for supporting the XCP option “- preserve-atime”.
+
+== Prepare File Analytics
+
+File Analytics has the following two parts:
+
+*	File Analytics server running on Linux
+*	XCP SMB service running on Windows
+
+File Analytics installation has the following requirements:
+
+*	Supported OS and system requirements are the same as given for NFS and SMB installation. Because the database will reside on a Linux box, you must make sure you have a minimum of 10 GB free space.
+*	The Linux machine where you install the File Analytics server must be connected to the internet or the yum repository. The installation script talks to the yum repository to download the required packages, such as PostgreSQL, HTTP and SSL.
+*	The File Analytics GUI can only be hosted on a Linux machine along with XCP services for Linux running on same box.
+*	For running SMB services, complete the following steps:
+** Verify that your Windows box can ping the Linux machine where the File Analytics server is running.
+** If you are inside a firewall, verify that ports 5030 and 5432 are open. Port 5030 is used to make the REST call to Windows. Port 5432 port is used for the PostgreSQL connection.
+
+NOTE:  The XCP File Analytics server always runs on a Linux machine. There is no separate installation available for SMB File Analytics. If you are a Windows user and want to run File Analytics for SMB share, then you must install File Analytics for Linux and connect the Windows box to a Linux database.
+If you only use XCP File Analytics, you do not need to configure the XCP Catalog for NFS.

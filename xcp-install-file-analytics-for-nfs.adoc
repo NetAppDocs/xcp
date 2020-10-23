@@ -1,0 +1,48 @@
+---
+sidebar: sidebar
+permalink: xcp-install-file-analytics-for-nfs.html
+keywords:
+summary:
+---
+
+= Install File Analytics for NFS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+For system requirements for NFS, see `Install XCP NFS`.
+The `configure.sh` script installs and enables default configurations of HTTPD and PostgreSQL available for Linux server. You can change/update to a more recent version as needed and to adhere to security guidelines.
+
+*Before you begin*
+
+*	You cannot run the XCP application and XCP as service simultaneously in the same host. If any XCP operations are running, complete the operations before you start configuration.
+*	Your Linux machine must be connected to the Yum repository server or the internet.
+
+*Steps*
+
+.	Go to your XCP folder and run the `./configure.sh` script.  The script takes three to ten minutes to configure the Linux machine and complete the following tasks. Download PostgreSQL packages and install the PostgreSQL server. Install the HTTPD, use the open SSL to create a self-signed certificate (`server.key & server.crt`) and create the XCP File Analytics database
++
+*	Run XCP File Analytics on a fresh system.
+**	On a fresh system, select option 1 to install File Analytics
+**	In the XCP configuration menu, select option 1. Configure client system
+**	Update password for admin user and database user
+**	Start the XCP service
++
+* Upgrade File Analytics from the previous version.
+**	Select `option 1`.  Because installation and configuration has already run this system, checks are only made if the service is running.
+**	If the previous XCP service is running, you will be prompted to stop the XCP service before proceeding with upgrades. (If a File Analytics scan is running for NFS or SMB share, make sure that the operation is completed, or stop the operation manually). Proceed to the next step after this is done.
+**	New GUI files will copy to /var/www/html location and older files will back up at same location.
+**	In the XCP configuration menu, select `option 0`. This skips doing the configuration again and starts the XCP service automatically.
++
+NOTE:	By default, only the admin user is created and supported.
+
++
+. To check that XCP is running as a service, enter the following command:
++
+----
+ service xcp status
+----
+
+ . To start using the File Analytics GUI, go to https://<ip addr of linux>/xcp.

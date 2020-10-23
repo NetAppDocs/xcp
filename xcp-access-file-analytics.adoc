@@ -1,0 +1,150 @@
+---
+sidebar: sidebar
+permalink: xcp-access-file-analytics.html
+keywords:
+summary:
+---
+
+= Access File Analytics
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+XCP File Analytics GUI provides a dashboard with graphs for visualizing File Analytics.
+The XCP File Analytics GUI is enabled when you configure XCP on a Linux machine.
+
+NOTE: See the NetApp IMT to check the supported browsers for accessing File Analytics.
+
+.	Use the link https://<IP address of linux machine>/xcp to access the File Analytics GUI.
+When prompted, accept the security certificate:
+..	Click Advanced below the privacy statement.
+..	Click the proceed to <IP address of linux machine> link.
+. Log in to the GUI using the username “admin” and the password you set during configuration
++
+image:xcp_image2.png[Error: Missing Graphic Image]
++
+.	On login, you can see that the NFS agent is added: a green tick is present showing minimal system configuration of the Linux system and XCP version.
+.	If you have configured an SMB agent, you can see the SMB agent added in the same agent card.
+
+== Add file servers
+You can configure NFS and SMB exported file systems in the XCP File Analytics GUI. This enables XCP File Analytics to scan and analyze data on the file system. Use the following steps to add NFS or SMB file servers.
+
+* To add file servers, click Add File Server.
+
+image:xcp_image3.png[Error: Missing Graphic Image]
+
+Add the file server IP address, select the NFS or SMB option and click “Add”.
+
+NOTE: If an SMB agent is not visible in the GUI, you will not be able to add SMB server.
+
+After adding the file server, XCP displays:
+
+*	Total file shares available
+*	File shares with analytics data
+(The initial count is “0”, this updates when you run a successful scan)
+*	Total space utilization – the sum of space utilized by all the exports
+*	The data for file shares and space utilization is real-time data direct from the NFS/SMB server. Collecting and processing the data takes several seconds.
+
+NOTE: Space available versus space used in File Analytics is calculated from each exported file system available over NFS. For example, if the volumes consist of qtrees and the exports are created over a qtree, the overall space is the cumulative space of the volume size and the qtree size.
+
+==	Run a scan
+
+When the NFS/SMB files system is added to the XCP File Analytics GUI, you can start a file system scan to analyze and represent the data.
+
+* Click the arrow on the added file server card to view the file shares on the file server.
+
+image:xcp_image4.png[Error: Missing Graphic Image]
+
+*	From the list of file shares, click the name of the file share to scan.
+*	Click Scan to start the scan.
+*	XCP displays a progress bar for the scan. On completion:
+**	The “stat view” and “file distribution” tabs are enabled to allow you to view graphs.
+
+image:xcp_image5.png[Error: Missing Graphic Image]
+
+== Learn about graphs
+
+The File Analytics GUI dashboard displays multiple graphs for visualizing File Analytics.
+
+=== Hot Cold Count Graph
+
+XCP File Analytics categorizes files not accessed for 90 days as cold data. Files accessed in the last 90 days are hot data. Criteria to define hot and cold data is based on access time only.
+
+image:xcp_image6.png[Error: Missing Graphic Image]
+
+The Hot Cold Count graph displays the number of inodes (in millions) that are hot or cold in XCP NFS. In XCP SMB, this graph denotes the number of files that are hot or cold.
+The colored bar represents the hot data and shows the percentage of files accessed within 90 days.
+
+=== Hot Cold Size Graph
+
+image:xcp_image7.png[Error: Missing Graphic Image]
+
+The Hot Cold Size graph displays the percentage of files that are hot and cold and the total size of the files in each category. The colored bar represents the hot data and the uncolored part represents the cold data. Criteria to define hot and cold data is based on access time only.
+
+=== Entries in Directory Graph
+
+image:xcp_image8.png[Error: Missing Graphic Image]
+
+The Entries in Directories graph displays the number of entries in directories. The Depth column contains different directory sizes and the Count column indicates the number of entries in each directory depth.
+
+=== File Distribution by Size Graph
+
+image:xcp_image9.png[Error: Missing Graphic Image]
+
+The File Distribution by Size graph displays the number of files that are under the given file sizes. The File Size column contains the categories of file size and the Count column indicates the distribution of the number of files.
+
+=== Directory Depth Graph
+
+image:xcp_image10.png[Error: Missing Graphic Image]
+
+The Directory Depth graph represents the distribution of the number of directories in various directory depth ranges. The Depth column contains various directory depths and the Count column contains the count of each directory depth in the file share.
+
+=== File Space Used by Size Graph
+
+image:xcp_image11.png[Error: Missing Graphic Image]
+
+The File Space Used by Size graph displays the number of files in different file-size ranges.  The File Size column contains different file size ranges and the Space Used column indicates the space used by each file size range.
+
+=== Space Occupied by Users Graph
+
+image:xcp_image12.png[Error: Missing Graphic Image]
+
+The Space Occupied by Users graph displays the space used by users. The Username column contains the names of users (UID when usernames cannot be retrieved) and the Space Used column indicates the space used by each username.
+
+=== Files Accessed/Modified/Created Graph
+
+image:xcp_image13.png[Error: Missing Graphic Image]
+
+The Files Accessed/Modified/Created graph displays the count of files changed overtime. The X-axis represents the period of time within which changes were made and the y- axis represents the number of files changed.
+
+NOTE: To get the access time (atime) graph in SMB scans, check the box for preserving atime before running a scan.
+
+=== File Distribution by Extension Graphic
+
+image:xcp_image14.png[Error: Missing Graphic Image]
+
+The File Distribution by Extension graph represents the count of the different file extensions in a file share. The size of the divisions representing the extensions is based on the number of files with each extension.
+
+image:xcp_image15.png[Error: Missing Graphic Image]
+
+=== File Distribution by Type Graph
+
+The Distribution by Type graph represents the count of the following types of files:
+
+* REG: Regular files
+*	LNK: Files with links
+*	Specials: Files with device files and character files.
+*	DIR: Files with directories
+*	Junction: Available in SMB only
+
+== Filters
+
+XCP provides filter options that can be used in XCP operations. XCP uses filters for `-match` and `-exclude` (NFS only) options.
+
+For NFS, run `xcp help info` and refer to the FILTERS section to see how to use `-match` and `-exclude` filters.
+
+For SMB, run `xcp help -match` to get more details on match (`-exclude` is not available in SMB).
+
+If you want to use filters in XCP commands, run `xcp help <command>` to see if they are supported options.
