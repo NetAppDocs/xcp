@@ -13,17 +13,17 @@ entries:
         url: /xcp-install-xcp-smb.html
       - title: Install File Analytics for NFS
         url: /xcp-install-file-analytics-for-nfs.html
-    - title: Configure XCP
-      url: /xcp-configure-xcp.html
-      entries:
-        - title: Create the JSON configuration file
-          url: /xcp-create-the-json-configuration-file.html
-    - title: Plan data migration
-      url: /xcp-plan-data-migration.html
-      entries:
-        - title: Access File Analytics
-          url: /xcp-access-file-analytics.html
-    - title: Migrate data
-      url: /xcp-migrate-data.html
-    - title: Troubleshoot errors
-      url: /xcp-troubleshoot-errors.html
+  - title: Configure XCP
+    url: /xcp-configure-xcp.html
+    entries:
+      - title: Create the JSON configuration file
+        url: /xcp-create-the-json-configuration-file.html
+  - title: Plan data migration
+    url: /xcp-plan-data-migration.html
+    entries:
+      - title: Access File Analytics
+        url: /xcp-access-file-analytics.html
+  - title: Migrate data
+    url: /xcp-migrate-data.html
+  - title: Troubleshoot errors
+    url: /xcp-troubleshoot-errors.html
