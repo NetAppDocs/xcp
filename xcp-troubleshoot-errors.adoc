@@ -17,36 +17,36 @@ summary:
 |===
 |XCP issue | Solution
 
-|`xcp`: ERROR: must run as root
+|`xcp: ERROR`: must run as root
 |Execute XCP commands as root user
-|`xcp`: ERROR: License file `/opt/NetApp/xFiles/xcp/license` not found.
+|`xcp: ERROR`: License file `/opt/NetApp/xFiles/xcp/license` not found.
 |Download the license from https://xcp.netapp.com and copy to `/opt/NetApp/xFiles/xcp/`
-|`xcp`: ERROR: This license has expired
+|`xcp: ERROR`: This license has expired
 |Renew or obtain the new XCP license from http://xcp.netapp.com.
-|`xcp`: ERROR: License unreadable
+|`xcp: ERROR`: License unreadable
 |License file might be corrupted. Obtain the new XCP license from http://xcp.netapp.com.
-|`xcp`: ERROR: XCP not activated,
+|`xcp: ERROR`: XCP not activated,
 run 'activate' first
 |Run the `xcp activate` command
 |This copy is not licensed
 |Obtain the appropriate XCP license file. Copy the XCP license to the `/opt/NetApp/xFiles/xcp/` directory on the XCP server. Run the `xcp activate` command to activate the license.
-|`xcp`: ERROR: Failed to activate license: Server unreachable
+|`xcp: ERROR`: Failed to activate license: Server unreachable
 |You are trying to activate the online license and your host system is not connected to internet. Make sure your system is connected internet.
-|`xcp`: ERROR: Failed to activate license: Server xcp.netapp.com unreachable
-`xcp`: HINT: Configure DNS on this host or return to the license page to request a private license
+|`xcp: ERROR`: Failed to activate license: Server xcp.netapp.com unreachable
+`xcp: HINT`: Configure DNS on this host or return to the license page to request a private license
 Expected error: Failed to activate license: Server xcp.netapp.com unreachable
 |Make sure xcp.netapp.com is reachable from your host or request for the offline license
-|`xcp`: ERROR: Catalog inaccessible: Cannot mount nfs_server:/export[:subdirectory]
+|`xcp: ERROR`: Catalog inaccessible: Cannot mount `nfs_server:/export[:subdirectory]`
 |Open the editor on the XCP Linux client host and update the configuration file with the proper catalog location. The XCP configuration file is located at `/opt/NetApp/xFiles/xcp/xcp.ini`. Sample entries of configuration file:
 
 `[root@scspr1949387001 ~]# cat /opt/NetApp/xFiles/xcp/xcp.ini # Sample xcp config [xcp] catalog = 10.235.128.153:/catalog`
-|nfs3 error 2: no such file or directory
+|`nfs3 error 2`: no such file or directory
 |Operation did not find the source file(s) on the target NFS export. Run the `xcp sync` command to copy the incremental updates from source to destination
-|`xcp`: ERROR: Empty or invalid index
+|`xcp: ERROR`: Empty or invalid index
 |Previous copy operation was interrupted before indexing the files. Rerun `xcp copy` with the new index and make sure the system returns “indexed” before interrupting copy
-|`xcp`: ERROR: compare batches: child process failed (exit code -9): recv <type 'exceptions.EOFError'>:
+|`xcp: ERROR`: compare batches: child process failed (exit code -`9): recv <type 'exceptions.EOFError'>`:
 |Follow the instructions in the following KB article: link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/NetApp_XCP/XCP:_ERROR:_Cannot_allocate_memory_-_when_syncing_NFS_data[Cannot allocate memory when synching NFS data]
-|`xcp`: ERROR: For xcp to process ACLs, please mount <path>using the OS nfs4 client
+|`xcp: ERROR`: For xcp to process ACLs, please mount `<path>` using the OS nfs4 client
 |Mount the source/target on the XCP host
 |===
 
@@ -56,40 +56,40 @@ Expected error: Failed to activate license: Server xcp.netapp.com unreachable
 |===
 |Issue |Solution
 
-|`xcp`: ERROR: This license has expired
+|`xcp: ERROR`: This license has expired
 |Renew or obtain the new XCP license from http://xcp.netapp.com.
 |This copy is not licensed
 |Obtain the appropriate XCP license file. Copy the XCP license to the `c:\netapp\xcp` folder on the XCP host. Run the `xcp activate` command to activate the license
-|`xcp`: ERROR: XCP not activated, run 'activate' first
+|`xcp: ERROR`: XCP not activated, run 'activate' first
 |Download the XCP license from http://xcp.netapp.com. Copy the file on the XCP Linux client host at `c:\netapp\xcp` on the XCP host. Run the `xcp activate` command to activate the license.
-|`xcp`: ERROR: License file C:\NetApp\XCP\license not found
+|`xcp: ERROR`: License file C:\NetApp\XCP\license not found
 |Register for the XCP license at http://xcp.netapp.com. Download and copy the license file to `C:\NetApp\XCP\` on the XCP Windows client host.
-|`xcp scan` Error: The network name cannot be found
+|`xcp scan Error`: The network name cannot be found
 |Rerun the command with correct share name
-|`xcp copy` Error: ERROR failed to obtain fallback security principal
+|`xcp copy Error`: ERROR failed to obtain fallback security principal
 
 Error message logged in xcp.log file:
 `pywintypes.error: (1722, 'LookupAccountName', 'The RPC server is unavailable.'`)
 |Add the destination box in the hosts file (*C:\Windows\System32\drivers\etc\hosts*).
 Netapp storage destination box entry must be in the below format:
-``<data vserver data interface ip>` 1 or more white spaces <cifs server name>
-|`xcp copy`: ERROR failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
+``<data vserver data interface ip>` 1 or more white spaces `<cifs server name>`
+|`xcp copy: ERROR` failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
 
 Error messaged logged in xcp.log file:
 'No mapping between account names and security IDs was done'
 |The fallback user/group does not exist at the target system (destination box) or active directory.
 
 Rerun the command with correct fallback user/group options
-|`xcp copy`: ERROR failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
+|`xcp copy: ERROR` failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
 
 Error messaged logged in xcp.log file:
-pywintypes.error: `(87, 'LookupAccountName', 'The parameter is incorrect.')`
+`pywintypes.error`: `(87, 'LookupAccountName', 'The parameter is incorrect.')`
 |Incorrect parameter for fallback user/group option.
 Rerun the command with the correct syntax for fallback user/group options
 |`xcp copy` with acl migration
 
 Erorr message logged in xcp.log file:
-pywintypes.error: `(1314, 'GetNamedSecurityInfo', 'A required privilege is not held by the client.')`
+`pywintypes.error`: `(1314, 'GetNamedSecurityInfo', 'A required privilege is not held by the client.')`
 |A user is facing an ssue related to security descriptors because with the privileges that the migrations user owns, XCP can only get owner, group, and DACL, but, it cannot get SACL.
 Add your migration user to "Manage Audit and Security Log” policy in your Active Directory.
 Reference: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953(v%3Dws.11)
@@ -165,7 +165,7 @@ Reference: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/win
 |SSL installation failed
 |Run configure again and select the installation option. If the previous installation was successful, you can select the repair option. If you are still getting the error, try manual steps as follows:
 
-1.	Install mod_ssl:
+1.	Install `mod_ssl`:
 
 `yum install mod_ssl -y`
 

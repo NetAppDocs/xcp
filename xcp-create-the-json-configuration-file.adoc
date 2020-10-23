@@ -45,7 +45,9 @@ If you want to enable event log messages, the syslog client, or customer logging
 |===
 |Default configuration |Example json configuration file
 
-|{
+a|
+----
+{
   "logConfig": {
     "level": "INFO",
     "maxBytes": 52428800,
@@ -53,7 +55,10 @@ If you want to enable event log messages, the syslog client, or customer logging
   },
   "sanitize": false
 }
-|{
+----
+a|
+----
+{
   "logConfig": {
     "level": "INFO",
     "maxBytes": 52428800,
@@ -71,4 +76,5 @@ If you want to enable event log messages, the syslog client, or customer logging
   },
   "sanitize": false
 }
+----
 |===

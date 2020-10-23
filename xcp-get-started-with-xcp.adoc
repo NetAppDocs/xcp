@@ -44,6 +44,7 @@ The following features are not supported on XCP NFS:
 |===
 
 The following features are not supported on XCP SMB:
+
 |===
 |Feature Name |Description
 
@@ -59,7 +60,7 @@ The following features are not supported on XCP SMB:
 
 The following common features not available for XCP NFS and SMB
 
-* *Active source support*. When data is active and continuously changing on the source volume. In such cases, use Snapshot for the data migration or perform the migration when there is no data changes happening on the source.
+* *Active source support*: When data is active and continuously changing on the source volume. In such cases, use Snapshot for the data migration or perform the migration when there is no data changes happening on the source.
 *	*XCP multiple instance on same host*: When running multiple instances of XCP on same host you might get unpredictable results.
 *	*Time to complete migration*: XCP upfront does not provide the time to complete the migration or the time to complete any command used for migration. If you are doing final cutover confirm that data churn on the source volume is low.
 

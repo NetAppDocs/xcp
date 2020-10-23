@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Install XCP
+= Install XCP Procedures
 :hardbreaks:
 :nofooter:
 :icons: font
