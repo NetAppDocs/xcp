@@ -12,95 +12,48 @@ summary:
 :linkattrs:
 :imagesdir: ./media/
 
-This section details the system requirements and the procedures to install XCP. If you want to upgrade XCP, delete the current installation and replace it with a new installation of the latest version.
+== Install and configure workflow
 
-== Install XCP NFS
+This document provides an easy workflow for installing and setting up XCP on NFS and SMB systems.
 
-This section details the system requirements and the procedures for the initial setup of XCP on a Linux client and the INI file configuration.
+image:xcp_image16.PNG[Error: Missing Graphic Image]
 
-*System Requirements*
-|===
-| |Requirement
+== Download XCP
 
-|System
-|64-bit Intel or AMD server, minimum 4 cores and 32 GB RAM
-|Operating System & Software
-|RHEL8. See the IMT for supported operating systems
-|Special Requirements
-|Network connectivity and root level access to source and destination NFSv3 exports
+Download XCP from the NetApp support site and obtain a license from the XCP site.
 
-No other active applications
-|Storage
-|20 MB of disk space for the XCP binary and at least 50 MB of disk space for the logs that are stored in the /opt/NetApp/xFiles/xcp/ directory
-|Supported Protocol Version
-|NFSv3 and NFSv4 (ACL only)
-|Supported browser (File Analytics only)
-|XCP File Analytics supports Google Chrome version 76 and later. See the IMT matrix for all the supported versions of the browser
-|===
+You can download XCP from the link:https://mysupport.netapp.com/products/p/xcp.html[NetApp Support site].
 
-*Steps*
+== License XCP
 
-. Log in to the Linux machine as the root user and download and install the license:
-+
-----
-[root@scspr1980872003 ~]# ls -l
-total 36188
--rw-r--r--  1 root root 37043983 Oct  5 09:36 NETAPP_XCP_<version>.tgz
--rw-------. 1 root root     1994 Sep  4  2019 license
-----
-+
-.	Untar XCP to extract the tool:
-+
-----
-[root@scspr1980872003 ~]# tar -xvf NETAPP_XCP_<version>.tgz
-[root@scspr1980872003 ~]# ls
-NETAPP_XCP_<version>.tgz license xcp
-[root@scspr1980872003 ~]# cd xcp/linux/
-[root@scspr1980872003 linux]# ls
-xcp
-----
-+
-.	Verify that the `/opt/NetApp/xFiles/xcp` path is available on the system from a previous version of XCP.
-+
-If `/opt/NetApp/xFiles/xcp` is available, activate the license by using the `xcp activate` command and proceed with data migration.
-+
-If `/opt/NetApp/xFiles/xcp` is not available, the system creates the XCP host configuration directory and files at `/opt/NetApp/xFiles/xcp` when you run the `xcp activate` command is run for the first time.
-+
-The `xcp activate` command fails as license is not installed.
-+
-----
-[root@scspr1980872003 linux]# ./xcp activate
-(c) 2020 NetApp, Inc.
-xcp: Host config file not found. Creating sample at '/opt/NetApp/xFiles/xcp/xcp.ini'
+NetApp offers a free 90-day XCP license. You can obtain the license file from https://xcp.netapp.com. The licensing portal offers different licensing options. After 90 days you can renew the license for another 90 days using the same portal.
 
-xcp: ERROR: License file /opt/NetApp/xFiles/xcp/license not found.
-Register for a license at https://xcp.netapp.com
-----
-+
-. Copy the license to `/opt/NetApp/xFiles/xcp/`:
-+
-----
-[root@scspr1980872003 linux]# cp ~/license /opt/NetApp/xFiles/xcp/
-----
-+
-.	Verify that the license file was copied to `/opt/NetApp/xFiles/xcp/`:
-+
-----
-[root@ scspr1980872003 ~]# ls -altr /opt/NetApp/xFiles/xcp/
-total 44
-drwxr-xr-x 3 root root    17 Oct  1 06:07 ..
--rw-r--r-- 1 root root   304 Oct  1 06:07 license
-drwxr-xr-x 2 root root     6 Oct  1 10:16 xcpfalogs
-drwxr-xr-x 2 root root    21 Oct  1 10:16 xcplogs
--rw-r--r-- 1 root root   110 Oct  5 00:48 xcp.ini
-drwxr-xr-x 4 root root    83 Oct  5 00:48 .
-[root@scspr1978802001 ~]#
-----
-+
-.	Activate XCP:
-+
-----
-[root@scspr1980872003 linux]# ./xcp activate
-XCP <version>; (c) 2020 NetApp, Inc.;
-XCP already activated
-----
+The XCP license is available as an offline or online license. If you want to send migration statistics use an online license. The online license requires an internet connection. The offline license does not require an internet connection.
+
+== Prepare your system
+
+If you are using XCP NFS on a Linux system, you must prepare catalog and storage.
+
+If you are using XCP SMB on a Microsoft Windows system, you must prepare storage.
+
+== Prepare Linux for XCP NFS
+XCP NFS uses Linux client host systems to generate parallel I/O streams and fully use available network and storage performance.
+
+=== Configure catalog
+XCP saves operation reports and metadata in an NFSv3-accessible catalog directory. Provisioning the catalog is a one-time preinstallation task requiring the following:
+
+*	A NetApp NFSv3 export for security and reliability.
+*	At least ten disks or solid-state drives in the aggregate containing the export for performance.
+*	Storage configured to allow root access to the catalog export for the IP addresses of all Linux clients used to run XCP (multiple XCP clients can share a catalog location).
+*	Approximately 1 GB of space for every 10 million objects (directories plus files and hard links) to be indexed; each copy that can be resumed or synched and each offline-searchable scan requires an index.
+
+NOTE: You should store XCP catalogs separately. They should not be located on either the source or destination NFS export directory. XCP maintains metadata—reports in the catalog location specified during the initial setup. You must specify and update the location for storing the reports before you run any operation with XCP.
+
+=== Configure storage
+
+XCP NFS transitions and migrations have the following source and target storage requirements:
+
+*	Source and target servers must have NFSv3 protocol service enabled. For NFSv4 ACL migration, you must enable NFSv4 protocol service and NFSv4 ACL on the destination server.
+*	Source and target volumes must be exported with root access to the XCP Linux client host.
+
+NOTE: Configure the source for NFSv3 and NFSv4 exports as read-only so administrators cannot accidentally modify it.

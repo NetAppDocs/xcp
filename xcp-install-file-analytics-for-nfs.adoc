@@ -22,7 +22,7 @@ The `configure.sh` script installs and enables default configurations of HTTPD a
 
 *Steps*
 
-.	Go to your XCP folder and run the `./configure.sh` script.  The script takes three to ten minutes to configure the Linux machine and complete the following tasks. Download PostgreSQL packages and install the PostgreSQL server. Install the HTTPD, use the open SSL to create a self-signed certificate (`server.key & server.crt`) and create the XCP File Analytics database
+.	Go to your XCP folder and run the `./configure.sh` script.  The script takes three to ten minutes to configure the Linux machine and complete the following tasks. Download PostgreSQL packages and install the PostgreSQL server. Install the HTTPD, use the open SSL to create a self-signed certificate (`server.key and server.crt`) and create the XCP File Analytics database
 +
 *	Run XCP File Analytics on a fresh system.
 **	On a fresh system, select option 1 to install File Analytics
@@ -45,4 +45,4 @@ NOTE:	By default, only the admin user is created and supported.
  service xcp status
 ----
 
- . To start using the File Analytics GUI, go to https://<ip addr of linux>/xcp.
+ . To start using the File Analytics GUI, go to https:// <linux ip address> /xcp.

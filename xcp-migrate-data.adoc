@@ -18,7 +18,7 @@ After planning the migration with the show and scan commands, you can migrate da
 
 ==== Copy
 
-The `copy` command scans and copies the entire source directory structure to a destination NFSv3 export. The 15Tcopy15T command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are displayed at the end of the copy operation
+The `copy` command scans and copies the entire source directory structure to a destination NFSv3 export. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are displayed at the end of the copy operation
 
 *Example:*
 
@@ -51,7 +51,7 @@ xcp sync [options] -id <id used for copy>
 
 See `xcp help sync` for more details.
 
-==== Verfiy
+==== Verify
 The `verify` command uses a full byte-by-byte data comparison between source and target directories after the copy operation without using a catalog index number. The command checks for modification times and other file or directory attributes, including permissions. The command also reads the files on both sides and compares the data.
 
 *Example:*
