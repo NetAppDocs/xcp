@@ -16,7 +16,7 @@ summary:
 
 This document provides an easy workflow for installing and setting up XCP on NFS and SMB systems.
 
-image:xcp_image16.png[Error: Missing Graphic Image]
+image:xcp_image16.PNG[Error: Missing Graphic Image]
 
 == Download XCP
 
