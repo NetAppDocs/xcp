@@ -15,12 +15,12 @@ summary:
 XCP File Analytics GUI provides a dashboard with graphs for visualizing File Analytics.
 The XCP File Analytics GUI is enabled when you configure XCP on a Linux machine.
 
-NOTE: See the NetApp IMT to check the supported browsers for accessing File Analytics.
+NOTE: See the NetApp IMT to check the supported browsers for accessing link:https://mysupport.netapp.com/matrix/[File Analytics].
 
-.	Use the link https://<IP address of linux machine>/xcp to access the File Analytics GUI.
+.	Use the link `https: //<IP address of linux machine>/xcp` to access the File Analytics GUI.
 When prompted, accept the security certificate:
 ..	Click Advanced below the privacy statement.
-..	Click the proceed to <IP address of linux machine> link.
+..	Click the proceed to `<IP address of linux machine>` link.
 . Log in to the GUI using the username “admin” and the password you set during configuration
 +
 image:xcp_image2.png[Error: Missing Graphic Image]

@@ -29,6 +29,6 @@ NOTE: You should store XCP catalogs separately. They should not be located on ei
 XCP NFS transitions and migrations have the following source and target storage requirements:
 
 *	Source and target servers must have NFSv3 protocol service enabled. For NFSv4 ACL migration, you must enable NFSv4 protocol service and NFSv4 ACL on the destination server.
-*	Source and target volumes must be exported with root access to the XCP Linux client host.
+*	Source and target volumes must be exported with `root` access to the XCP Linux client host.
 
 NOTE: Configure the source for NFSv3 and NFSv4 exports as read-only so administrators cannot accidentally modify it.

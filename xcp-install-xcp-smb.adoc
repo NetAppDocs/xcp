@@ -57,7 +57,7 @@ Follow these steps to perform the initial setup of XCP SMB.
 
 . Copy the license and the XCP SMB binary `NETAPP_XCP_<version>.tgz` on a Windows host.
 +
-. Create an xcp directory on your desktop.
+. Create an `xcp` directory on your desktop.
 Verify that the `C:\NetApp\XCP` path is available on the system from a previous version of XCP.
 If `C:\NetApp\XCP` is available, activate XCP by using the `xcp activate` command and proceed with data migration.
 +
