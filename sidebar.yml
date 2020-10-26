@@ -1,4 +1,6 @@
 entries:
+  - title: XCP documentation
+    url: /index.html
   - title: Get started with XCP
     url: /xcp-get-started-with-xcp.html
     type: solutions

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-create-the-json-configuration-file.html
-keywords:
-summary:
+keywords: netapp, xcp, create, json, configuration, file
+summary: Create the JSON configuration file
 ---
 
 = Create the JSON configuration file
