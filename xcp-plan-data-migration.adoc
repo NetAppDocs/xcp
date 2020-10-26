@@ -33,13 +33,13 @@ Run `xcp help show` for more details.
 
 *Scan*
 
-The scan command recursively scans the entire source NFSv3 exported paths and prints the statistics of file structure at the end of the scancan. NetApp recommends putting the source NFS export mounts in read-only mode during the scan operation.
+The scan command recursively scans the entire source NFSv3 exported paths and prints the statistics of file structure at the end of the scan. NetApp recommends putting the source NFS export mounts in read-only mode during the scan operation.
 Example:
 
         * `xcp scan NFS server:/export path`
         * `xcp scan nfs_server01.netapp.com:/export1`
-        
-Run *xcp help scan* for more details.
+
+Run `xcp help scan` for more details.
 
 Optionally, use File Analytics to view the results graphically.
 

@@ -32,6 +32,6 @@ The XCP license is available as an offline or online license. If you want to sen
 
 == Prepare your system
 
-If you are using XCP NFS on a Linux system, you must prepare catalog and storage.
+If you are using link:xcp-prepare-linux-for-xcp-nfs.html[XCP NFS on a Linux system], you must prepare catalog and storage.
 
-If you are using XCP SMB on a Microsoft Windows system, you must prepare storage.
+If you are using link:xcp-prepare-windows-for-xcp-smb.html[XCP SMB on a Microsoft Windows system], you must prepare storage.
