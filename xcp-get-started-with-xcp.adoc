@@ -1,9 +1,10 @@
 ---
 sidebar: sidebar
 permalink: xcp-get-started-with-xcp.html
-keywords:
-summary:
+keywords: netapp, xcp, getting, started, get, learn, about, supported, unsupported, features, configurations
+summary: Getting started with XCP
 ---
+
 = Get started with XCP
 :hardbreaks:
 :nofooter:

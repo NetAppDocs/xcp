@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-troubleshoot-errors.html
-keywords:
-summary:
+keywords: netapp, xcp, troubleshoot, troubleshooting, nfs, errors, smb, file, anyalytics
+summary: Troubleshooting
 ---
 
 = Troubleshoot errors

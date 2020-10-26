@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-install-file-analytics-for-nfs.html
-keywords:
-summary:
+keywords: netapp, xcp, install, installing, file, analytics, nfs
+summary: How to install file analytics for NFS
 ---
 
 = Install File Analytics for NFS

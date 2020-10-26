@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-install-xcp.html
-keywords:
-summary:
+keywords: netapp, xcp, install, installing, download, downloading, license, preparing, system
+summary: Installing XCP
 ---
 
 = Install XCP

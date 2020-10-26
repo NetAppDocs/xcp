@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-prepare-linux-for-xcp-nfs.html
-keywords:
-summary:
+keywords: netapp, xcp, prepare, preparing, preparation, linux, nfs, configure, configuring, catalog, storage
+summary: Prepare Linux for XCP NFS
 ---
 
 = Prepare Linux for XCP NFS
