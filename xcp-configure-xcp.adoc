@@ -1,0 +1,168 @@
+---
+sidebar: sidebar
+permalink: xcp-configure-xcp.html
+keywords:
+summary:
+---
+
+= Configure XCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== Configure the INI file for XCP NFS
+
+Follow these steps to configure the INI file for XCP NFS.
+
+*Steps*
+
+. Add the catalog location for the XCP server in the host configuration file using the `vi` editor.
++
+NOTE:	Catalog location should be exported before modifying the details in the `xcp.ini` XCP configuration file. Catalog location (NFSv3) should be mountable by the XCP Linux host but not necessarily be mounted.
+
++
+----
+[root@localhost /]# vi /opt/NetApp/xFiles/xcp/xcp.ini
+----
++
+.	Verify that the XCP Linux client host configuration file entries for the catalog were modified.
++
+----
+[root@localhost /]# cat /opt/NetApp/xFiles/xcp/xcp.ini
+# Sample xcp config
+[xcp]
+catalog = 10.61.82.210:/vol/xcpvol/
+----
+
+== Performance tuning (NFS only)
+
+For the optimal performance and reliability, NetApp recommends setting the following Linux kernel TCP performance parameters in `/etc/sysctl.conf` on the XCP Linux client host. Run `sysctl -p` or the reboot command to commit the changes:
+
+----
+net.core.rmem_default = 1342177
+37Tnet.core.rmem_max = 16777216
+37Tnet.core.rmem_max = 16777216
+37Tnet.core.wmem_default = 1342177
+37Tnet.core.wmem_max = 16777216
+37Tnet.ipv4.tcp_rmem = 4096 1342177 16777216
+37Tnet.ipv4.tcp_wmem = 4096 1342177 16777216
+37Tnet.core.netdev_max_backlog = 300000
+37Tnet.ipv4.tcp_fin_timeout = 10
+----
+
+== Environment variable (NFS only)
+The environment variable XCP_CONFIG_DIR overrides the default location, `/opt/NetApp/xFiles/xcp`. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom configuration directory is set, the log file is named `xcp.hostname.log` instead of the default, `xcp.log`.
+
+----
+[root@localhost /]# export XCP_CONFIG_DIR ='/tmp/xcp_config_dir_path'
+----
+
+The environment variable XCP_LOG_DIR overrides the default location that stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom log directory is set, the log file is named `xcp.hostname.log` instead of the default, `xcp.log`.
+
+----
+[root@localhost /]# export XCP_LOG_DIR='/tmp/xcp_log_dir_path'
+----
+
+The environment variable XCP_CATALOG_PATH overrides the setting in xcp.ini. If set, the value should be in the xcp path format, `server:export[:subdirectory]`.
+
+----
+[root@localhost /]# export XCP_CATALOG_PATH='10.61.82.210:/vol/xcpvol/'
+----
+
+== Logging for NFS and SMB (optional)
+
+XCP supports configuring multiple optional features by using the `xcpLogConfig.json` JSON configuration file. To enable only specific features, manually create the `xcpLogConfig.json` configuration file,
+You can use the `xcpLogConfig.json` configuration file to enable:
+
+* event log messages
+*	syslog client for XCP
+*	custom XCP logging
+
+Event log messages and the syslog client are disabled in the default configuration. Configuration is common for both NFS and SMB.
+
+|===
+|Config JSON file location |NFS |SMB
+
+|Config file default location
+|/opt/NetApp/xFiles/xcp/
+|C:\NetApp\XCP\ConfigFile
+|Custom location requires the `XCP_CONFIG_DIR` environment variable
+|*Error! Reference source not found.*
+|NA
+|===
+
+The JSON configuration file options are case sensitive. These options are the same for XCP NFS and XCP SMB.
+
+|===
+|Sub Options Name |JSON Data Type |Default |Description
+
+|logConfig
+|
+|
+|Option to customize XCP logging.
+|“level”
+|String
+|INFO
+|Log message severity filter level.
+XCP log messages support five severity levels in order of decreasing severity:
+CRITICAL, ERROR, WARNING, INFO, DEBUG
+(NetApp strongly recommends using INFO or DEBUG)
+|“maxBytes”
+|Integer
+|52428800
+|Size of each rotating log file. Max supported rotation files are 10.
+|“name”
+|String
+|xcp.log
+|Option to set custom log file name.
+|eventlog
+|
+|
+|Option to configure event log message.
+|“isEnabled”
+|Boolean
+|false
+|This boolean option is used to enable event messaging. Setting it false will not generate any event messages and no event logs will be published to event log file.
+|“level”
+|String
+|INFO
+|Event message severity filter level.
+Event messaging support five severity levels in order of decreasing severity:
+CRITICAL, ERROR, WARNING, INFO, DEBUG
+|syslog
+|
+|
+|Option to configure syslog messaging.
+|“isEnabled”
+|Boolean
+|false
+|This boolean option is used to enable syslog client in XCP.
+|“level”
+|String
+|INFO
+|Message severity filter level.
+XCP event log messages support five severity levels in order of decreasing severity:
+CRITICAL, ERROR, WARNING, INFO, DEBUG
+|“serverIp”
+|String
+|None
+|Remote syslog server IP addresses or hostname.
+|“port”
+|Integer
+|514
+|Remote syslog receiver port.
+Syslog receivers accepting syslog datagrams on a different port can be configured with port option  UDP port 514 but you can also configure to the desired port.
+|“sanitize”
+|Boolean
+|false
+|A common option for XCP support; setting its value to true will hide sensitive information (IP and username) in the messages going to support (logging, events, syslog, etc.)
+For example, with the sanitize option as false
+
+•	2020-07-17 03:10:23,779 - INFO - 12806 xcp xcp Paths: ['10.234.104.251:/cat_vol']
+•	2020-07-17 03:10:23,778 - INFO - 12806 xcp xcp User Name: root
+With the sanitize option as true
+•	2020-07-17 03:13:51,596 - INFO - 12859 xcp xcp Paths: ['IP: XX.XX.XX.XX:/cat_vol']
+•	2020-07-17 03:13:51,595 - INFO - 12859 xcp xcp User Name: ******
+|===

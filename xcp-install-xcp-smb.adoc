@@ -1,0 +1,90 @@
+---
+sidebar: sidebar
+permalink: xcp-install-xcp-smb.html
+keywords:
+summary:
+---
+
+= Install XCP SMB
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+This section details the system requirements and the procedure for VC++ redistributable installation and the initial setup of XCP on a Windows client.
+
+NOTE:	There is no option to upgrade, reinstall XCP (?) to replace any existing version.
+
+*System Requirements*
+|===
+| |Requirement
+
+|System
+|64-bit Intel or AMD server, minimum 4 cores and 32GB RAM
+|Operating System & Software
+|Windows 2k12 R2 or above. See the IMT matrix for supported Microsoft OS versions
+
+Visual C++ 2017 redistributable must be installed on the XCP host.
+
+|Special Requirements
+|The source storage system, XCP host, and the target ONTAP system must be part of same Active Directory domain
+|Storage
+|20 MB of disk space for the XCP binary and at least 50 MB of disk space for the logs that are stored in the C:\NetApp\XCP directory
+|Supported Protocol Version
+|All SMB protocol versions
+|Supported browser (File Analytics only)
+|XCP File Analytics supports Google Chrome version 76 and later. See the IMT matrix for all the supported versions of the browser
+|===
+
+=== XCP SMB Microsoft VC++ Redistributable installation
+
+Follow these steps for the VC++ redistributable installation.
+
+*Steps*
+
+. Go to https://go.microsoft.com/fwlink/?LinkId=746572 and download VC++ 2017 redistributable.
++
+. To start the installation, double click the installer. Accept the terms and conditions and click Install.
++
+.	When the installation is complete, click Restart.
+
+=== XCP SMB Initial Setup Procedure
+
+Follow these steps to perform the initial setup of XCP SMB.
+
+*Steps*
+
+. Copy the license and the XCP SMB binary `NETAPP_XCP_<version>.tgz` on a Windows host.
++
+. Create an `xcp` directory on your desktop.
+Verify that the `C:\NetApp\XCP` path is available on the system from a previous version of XCP.
+If `C:\NetApp\XCP` is available, activate XCP by using the `xcp activate` command and proceed with data migration.
++
+If `C:\NetApp\XCP` is not available, the system creates the XCP host configuration directory and files at `C:\NetApp\XCP` when you run the `xcp activate` command for the first time. The `activate xcp` command fails and creates an error message asking for a new license.
++
+----
+C:\>xcp.exe activate
+(c) 2020 NetApp, Inc.
+
+License file C:\NetApp\XCP\license not found.
+Register for a license at https://xcp.netapp.com
+----
++
+. Copy the license to the newly created folder `C:\NetApp\XCP:`
++
+----
+C:\>copy license c:\NetApp\XCP
+        1 file(s) copied.
+----
++
+.	Activate XCP:
++
+----
+C:\>xcp.exe activate
+XCP SMB; (c) 2020 NetApp, Inc.;
+
+XCP already activated
+
+C:\>
+----

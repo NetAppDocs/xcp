@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: xcp-install-file-analytics-for-nfs.html
+keywords:
+summary:
+---
+
+= Install File Analytics for NFS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+For system requirements for NFS, see _Install XCP NFS_.
+The `configure.sh` script installs and enables default configurations of HTTPD and PostgreSQL available for Linux server. You can change/update to a more recent version as needed and to adhere to security guidelines.
+
+*Before you begin*
+
+*	You cannot run the XCP application and XCP as service simultaneously in the same host. If any XCP operations are running, complete the operations before you start configuration.
+*	Your Linux machine must be connected to the Yum repository server or the internet.
+
+*Steps*
+
+.	Go to your XCP folder and run the `./configure.sh script`.
+The script takes three to ten minutes to configure the Linux machine and complete the following tasks:
+..	Download PostgreSQL packages
+..	Install the PostgreSQL server
+..	Install the HTTPD
+..	Use the open SSL to create a self-signed certificate (`server.key and server.crt`)
+..	Create the XCP File Analytics database
+.	Select option 1 Configure client system from the XCP configuration menu.
+.	For a new install, update the password for the administrator and database users.
+For an upgrade, you are prompted to stop the XCP service. When done, select option 0.
+.	Start the XCP service.
+Use the following command to check if the XCP service is running:
+service xcp status
+.	Launch File Analytics in the browser: *https:// <ip address of linux>/xcp*.

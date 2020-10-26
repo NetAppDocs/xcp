@@ -1,0 +1,80 @@
+---
+sidebar: sidebar
+permalink: xcp-create-the-json-configuration-file.html
+keywords:
+summary:
+---
+
+= Create the JSON configuration file
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+If you want to enable event log messages, the syslog client, or customer logging, complete the following steps.
+
+*Steps*
+
+. Open any text editor, such as notepad or vi.
+.	Create a new file with the following JSON template.
++
+----
+{
+  "logConfig": {
+    "level": "INFO",
+    "maxBytes": 52428800,
+    "name": "xcp.log"
+  },
+  "eventlog": {
+    "isEnabled": false,
+    "level": "INFO"
+  },
+  "syslog": {
+    "isEnabled": false,
+    "level": "INFO",
+    "serverIp": "10.234.219.87",
+    "port": 514
+  },
+  "sanitize": false
+}
+----
+.	For any features you want to enable, change the `isEnabled` value to `true`.
+.	Name the file `xcpLogConfig.json` and sae it to the file location mentioned in *Error! Reference source not found.*
+
+|===
+|Default configuration |Example json configuration file
+
+a|
+----
+{
+  "logConfig": {
+    "level": "INFO",
+    "maxBytes": 52428800,
+    "name": "xcp.log"
+  },
+  "sanitize": false
+}
+----
+a|
+----
+{
+  "logConfig": {
+    "level": "INFO",
+    "maxBytes": 52428800,
+    "name": "xcp.log"
+  },
+  "eventlog": {
+    "isEnabled": false,
+    "level": "INFO"
+  },
+  "syslog": {
+    "isEnabled": false,
+    "level": "INFO",
+    "serverIp": "10.234.219.87",
+    "port": 514
+  },
+  "sanitize": false
+}
+----
+|===
