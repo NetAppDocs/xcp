@@ -193,7 +193,7 @@ Make sure that you are using supported version of browser. See the IMT: https://
 |•	Make sure that you are using a supported version of the browser. See the IMT: https://mysupport.netapp.com/matrix/
 •	Check the user is “admin” and the password is correct
 •	Make sure the XCP service is running by issuing “xcp service status”
-•	Verify that port  5030 is open on Linux. Open the application at https:// <linux ip> :5030/api/xcp, and confirm that the messagereads msg: `Missing Authorization Header`
+•	Verify that port  5030 is open on Linux. Open the application at *https:// <linux ip> :5030/api/xcp*, and confirm that the messagereads msg: `Missing Authorization Header`
 •	Check whether the `xcp.ini` file is present in the `/opt/NetApp/xFiles/xcp/` location. To reset the `xcp.ini` file, run the configuration script and select the *Repair* option. Next, select the menu option to *rebuild xcp.ini file*
 |XCP GUI is not showing updated pages.
 |Clear the cache and try again

@@ -4,7 +4,7 @@ permalink: xcp-get-started-with-xcp.html
 keywords:
 summary:
 ---
-= Get Started with XCP
+= Get started with XCP
 :hardbreaks:
 :nofooter:
 :icons: font
