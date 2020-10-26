@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-configure-xcp.html
-keywords:
-summary:
+keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs, 
+summary: Steps to configure XCP
 ---
 
 = Configure XCP

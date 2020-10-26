@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-migrate-data.html
-keywords:
-summary:
+keywords: netapp, xcp, migrate, data, nfs, smb, copy, resume, sync, verify
+summary: Migrate data
 ---
 
 = Migrate data

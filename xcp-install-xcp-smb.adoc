@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-install-xcp-smb.html
-keywords:
-summary:
+keywords: netapp, xcp, install, smb
+summary: Installing XCP SMB
 ---
 
 = Install XCP SMB

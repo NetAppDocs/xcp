@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-access-file-analytics.html
-keywords:
-summary:
+keywords: netapp, xcp, file, servers, access, analytics, learn, about, graphs, hot, cold, count, size, entries in directory, distribution by size, directory depth, file space used by size
+summary: XCP File Analytics GUI provides a dashboard with graphs for visualizing File Analytics.
 ---
 
 = Access File Analytics
