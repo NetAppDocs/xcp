@@ -1,0 +1,106 @@
+---
+sidebar: sidebar
+permalink: xcp-install-procedure-xcp.html
+keywords:
+summary:
+---
+
+= Install XCP Procedures
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+This section details the system requirements and the procedures to install XCP. If you want to upgrade XCP, delete the current installation and replace it with a new installation of the latest version.
+
+== Install XCP NFS
+
+This section details the system requirements and the procedures for the initial setup of XCP on a Linux client and the INI file configuration.
+
+*System Requirements*
+|===
+| |Requirement
+
+|System
+|64-bit Intel or AMD server, minimum 4 cores and 32 GB RAM
+|Operating System & Software
+|RHEL8. See the IMT for supported operating systems
+|Special Requirements
+|Network connectivity and root level access to source and destination NFSv3 exports
+
+No other active applications
+|Storage
+|20 MB of disk space for the XCP binary and at least 50 MB of disk space for the logs that are stored in the /opt/NetApp/xFiles/xcp/ directory
+|Supported Protocol Version
+|NFSv3 and NFSv4 (ACL only)
+|Supported browser (File Analytics only)
+|XCP File Analytics supports Google Chrome version 76 and later. See the IMT matrix for all the supported versions of the browser
+|===
+
+*Steps*
+
+. Log in to the Linux machine as the root user and download and install the license:
++
+----
+[root@scspr1980872003 ~]# ls -l
+total 36188
+-rw-r--r--  1 root root 37043983 Oct  5 09:36 NETAPP_XCP_<version>.tgz
+-rw-------. 1 root root     1994 Sep  4  2019 license
+----
++
+.	Untar XCP to extract the tool:
++
+----
+[root@scspr1980872003 ~]# tar -xvf NETAPP_XCP_<version>.tgz
+[root@scspr1980872003 ~]# ls
+NETAPP_XCP_<version>.tgz license xcp
+[root@scspr1980872003 ~]# cd xcp/linux/
+[root@scspr1980872003 linux]# ls
+xcp
+----
++
+.	Verify that the `/opt/NetApp/xFiles/xcp` path is available on the system from a previous version of XCP.
++
+If `/opt/NetApp/xFiles/xcp` is available, activate the license by using the `xcp activate` command and proceed with data migration.
++
+If `/opt/NetApp/xFiles/xcp` is not available, the system creates the XCP host configuration directory and files at `/opt/NetApp/xFiles/xcp` when you run the `xcp activate` command is run for the first time.
++
+The `xcp activate` command fails as license is not installed.
++
+----
+[root@scspr1980872003 linux]# ./xcp activate
+(c) 2020 NetApp, Inc.
+xcp: Host config file not found. Creating sample at '/opt/NetApp/xFiles/xcp/xcp.ini'
+
+xcp: ERROR: License file /opt/NetApp/xFiles/xcp/license not found.
+Register for a license at https://xcp.netapp.com
+----
++
+. Copy the license to `/opt/NetApp/xFiles/xcp/`:
++
+----
+[root@scspr1980872003 linux]# cp ~/license /opt/NetApp/xFiles/xcp/
+----
++
+.	Verify that the license file was copied to `/opt/NetApp/xFiles/xcp/`:
++
+----
+[root@ scspr1980872003 ~]# ls -altr /opt/NetApp/xFiles/xcp/
+total 44
+drwxr-xr-x 3 root root    17 Oct  1 06:07 ..
+-rw-r--r-- 1 root root   304 Oct  1 06:07 license
+drwxr-xr-x 2 root root     6 Oct  1 10:16 xcpfalogs
+drwxr-xr-x 2 root root    21 Oct  1 10:16 xcplogs
+-rw-r--r-- 1 root root   110 Oct  5 00:48 xcp.ini
+drwxr-xr-x 4 root root    83 Oct  5 00:48 .
+[root@scspr1978802001 ~]#
+----
++
+.	Activate XCP:
++
+----
+[root@scspr1980872003 linux]# ./xcp activate
+XCP <version>; (c) 2020 NetApp, Inc.;
+XCP already activated
+----

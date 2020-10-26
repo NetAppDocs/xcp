@@ -1,0 +1,68 @@
+---
+sidebar: sidebar
+permalink: xcp-get-started-with-xcp.html
+keywords:
+summary:
+---
+= Get started with XCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== Learn about XCP
+
+NetApp XCP is a client-based software for any-to-NetApp and NetApp-to-NetApp data migrations and file analytics. XCP is designed to scale and achieve greater performance by utilizing all the available system resources to manage high-volume datasets and high-performance migrations. XCP helps you get complete visibility into the file system with the option to generate customer reports. Thanks to the matching and formatting capabilities, you can customize the reports to match any reporting needs.
+
+Use XCP for NFS or SMB systems as one of the following solutions:
+
+*	Migration solution
+*	File Analytics solution
+
+XCP is command-line software available in a single package supporting NFS and SMB protocols. XCP is available as a Linux binary for NFS datasets and is available as a Windows executable for SMB datasets.
+
+XCP File Analytics is host-based software that detects file shares, runs scans on the file system, and provides a dashboard for file analytics. XCP file analytics works for both NetApp and third-party systems and runs on Linux or Windows hosts to provide analytics for NFS and SMB exported file systems. The binary for the file analytics GUI is included in the single package supporting NFS and SMB protocols.
+
+The XCP CLI is robust. For more information, see the _XCP Reference_.
+
+*XCP workflow*
+
+image:xcp_image1.png[Error: Missing Graphic Image]
+
+== Unsupported features
+
+The following features are not supported on XCP NFS:
+
+|===
+|Feature Name |Description
+
+|IPv6
+|Does not support IP version 6 (IPv6)
+|NFSv4 ACLS (third-party)
+|Does not support third-party to NetApp NFSv4 ACLs
+|===
+
+The following features are not supported on XCP SMB:
+
+|===
+|Feature Name |Description
+
+|NFS symbolic link (symlink)
+|NFS symlink is not supported in XCP SMB
+|ACL option for scan
+|ACLs not supported for scan option
+|IPv6
+|Does not support IP version 6 (IPv6)
+|NTFS Alternate Data Streams
+|XCP does not currently support Alternate Data Streams
+|===
+
+The following common features not available for XCP NFS and SMB
+
+* *Active source support*: When data is active and continuously changing on the source volume. In such cases, use Snapshot for the data migration or perform the migration when there is no data changes happening on the source.
+*	*XCP multiple instance on same host*: When running multiple instances of XCP on same host you might get unpredictable results.
+*	*Time to complete migration*: XCP upfront does not provide the time to complete the migration or the time to complete any command used for migration. If you are doing final cutover confirm that data churn on the source volume is low.
+
+== Supported configurations
+All the XCP supported configurations such as hosts, ONTAP versions, and supported browsers, are listed in the Interoperability Matrix Tool (IMT). For more information, see https://mysupport.netapp.com/matrix/.

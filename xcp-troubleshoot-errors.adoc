@@ -1,0 +1,215 @@
+---
+sidebar: sidebar
+permalink: xcp-troubleshoot-errors.html
+keywords:
+summary:
+---
+
+= Troubleshoot errors
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+=== Troubleshoot XCP NFS errors
+
+|===
+|XCP issue | Solution
+
+|`xcp: ERROR`: must run as root
+|Execute XCP commands as root user
+|`xcp: ERROR`: License file `/opt/NetApp/xFiles/xcp/license` not found.
+|Download the license from https://xcp.netapp.com and copy to `/opt/NetApp/xFiles/xcp/`
+|`xcp: ERROR`: This license has expired
+|Renew or obtain the new XCP license from http://xcp.netapp.com.
+|`xcp: ERROR`: License unreadable
+|License file might be corrupted. Obtain the new XCP license from http://xcp.netapp.com.
+|`xcp: ERROR`: XCP not activated,
+run 'activate' first
+|Run the `xcp activate` command
+|This copy is not licensed
+|Obtain the appropriate XCP license file. Copy the XCP license to the `/opt/NetApp/xFiles/xcp/` directory on the XCP server. Run the `xcp activate` command to activate the license.
+|`xcp: ERROR`: Failed to activate license: Server unreachable
+|You are trying to activate the online license and your host system is not connected to internet. Make sure your system is connected internet.
+|`xcp: ERROR`: Failed to activate license: Server xcp.netapp.com unreachable
+`xcp: HINT`: Configure DNS on this host or return to the license page to request a private license
+Expected error: Failed to activate license: Server xcp.netapp.com unreachable
+|Make sure xcp.netapp.com is reachable from your host or request for the offline license
+|`xcp: ERROR`: Catalog inaccessible: Cannot mount `nfs_server:/export[:subdirectory]`
+|Open the editor on the XCP Linux client host and update the configuration file with the proper catalog location. The XCP configuration file is located at `/opt/NetApp/xFiles/xcp/xcp.ini`. Sample entries of configuration file:
+
+`[root@scspr1949387001 ~]# cat /opt/NetApp/xFiles/xcp/xcp.ini # Sample xcp config [xcp] catalog = 10.235.128.153:/catalog`
+|`nfs3 error 2`: no such file or directory
+|Operation did not find the source file(s) on the target NFS export. Run the `xcp sync` command to copy the incremental updates from source to destination
+|`xcp: ERROR`: Empty or invalid index
+|Previous copy operation was interrupted before indexing the files. Rerun `xcp copy` with the new index and make sure the system returns “indexed” before interrupting copy
+|`xcp: ERROR`: compare batches: child process failed (exit code -`9): recv <type 'exceptions.EOFError'>`:
+|Follow the instructions in the following KB article: link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/NetApp_XCP/XCP:_ERROR:_Cannot_allocate_memory_-_when_syncing_NFS_data[Cannot allocate memory when synching NFS data]
+|`xcp: ERROR`: For xcp to process ACLs, please mount `<path>` using the OS nfs4 client
+|Mount the source/target on the XCP host
+|===
+
+
+=== Troubleshoot XCP SMB Errors
+
+|===
+|Issue |Solution
+
+|`xcp: ERROR`: This license has expired
+|Renew or obtain the new XCP license from http://xcp.netapp.com.
+|This copy is not licensed
+|Obtain the appropriate XCP license file. Copy the XCP license to the `c:\netapp\xcp` folder on the XCP host. Run the `xcp activate` command to activate the license
+|`xcp: ERROR`: XCP not activated, run 'activate' first
+|Download the XCP license from http://xcp.netapp.com. Copy the file on the XCP Linux client host at `c:\netapp\xcp` on the XCP host. Run the `xcp activate` command to activate the license.
+|`xcp: ERROR`: License file C:\NetApp\XCP\license not found
+|Register for the XCP license at http://xcp.netapp.com. Download and copy the license file to `C:\NetApp\XCP\` on the XCP Windows client host.
+|`xcp scan Error`: The network name cannot be found
+|Rerun the command with correct share name
+|`xcp copy Error`: ERROR failed to obtain fallback security principal
+
+Error message logged in xcp.log file:
+`pywintypes.error: (1722, 'LookupAccountName', 'The RPC server is unavailable.'`)
+|Add the destination box in the hosts file (*C:\Windows\System32\drivers\etc\hosts*).
+Netapp storage destination box entry must be in the below format:
+``<data vserver data interface ip>` 1 or more white spaces `<cifs server name>`
+|`xcp copy: ERROR` failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
+
+Error messaged logged in xcp.log file:
+'No mapping between account names and security IDs was done'
+|The fallback user/group does not exist at the target system (destination box) or active directory.
+
+Rerun the command with correct fallback user/group options
+|`xcp copy: ERROR` failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
+
+Error messaged logged in xcp.log file:
+`pywintypes.error`: `(87, 'LookupAccountName', 'The parameter is incorrect.')`
+|Incorrect parameter for fallback user/group option.
+Rerun the command with the correct syntax for fallback user/group options
+|`xcp copy` with acl migration
+
+Erorr message logged in xcp.log file:
+`pywintypes.error`: `(1314, 'GetNamedSecurityInfo', 'A required privilege is not held by the client.')`
+|A user is facing an ssue related to security descriptors because with the privileges that the migrations user owns, XCP can only get owner, group, and DACL, but, it cannot get SACL.
+Add your migration user to "Manage Audit and Security Log” policy in your Active Directory.
+Reference: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953(v%3Dws.11)
+|===
+
+=== Troubleshoot XCP File Analytics errors
+|===
+|Issue |Solution
+
+|PostgreSQL installation or service failed
+|Run configure again and select the installation option. If the previous installation was successful, you can select the repair option. If you are still getting the error, try manual steps as follows:
+
+1.	Run PostgreSQL on the Linux system
+
+`sudo yum -y install postgresql-serversudo systemctl start postgresq`
+
+2.	Create a data directory for the PostgreSQL database:
+
+`sudo mkdir /var/lib/postgres/data`
+
+3.	Initialize the database:
+
+`sudo -i -u postgres initdb  -D '/var/lib/pgsql/data`
+
+4. Open the following file using an appropriate Linux file editor:
+
+`/var/lib/pgsql/data/pg_hba.conf`
+
+5.	Remove the following entry:
+
+``# host    all             all           127.0.0.1/32            trust`
+
+6.	Add the following entry:
+
+`# host    all             all             0.0.0.0/0            password`
+
+7.	Open the file `/var/lib/pgsql/data/postgresql.conf`
+
+8.	Add the following entry:
+
+`# listen_addresses='*'`
+
+9.	Start the PostgreSQL service:
+
+`sudo systemctl start postgresql.service`
+|HTTPD installation or service failed
+|Run configure again and select the installation option. If the previous installation was successful, you can select the repair option. If you are still getting the error, try manual steps as follows:
+
+1.	Install HTTPD on the Linux system:
+
+`sudo yum -y install httpd`
+
+2.	Open the following configuration file to rewrite the rules:
+
+`/etc/httpd/conf/httpd.conf`
+
+3.	Add the following entries to the file:
+
+`RewriteEngine On`
+`RewriteOptions Inherit`
+`<Directory "/var/www/html/">``
+`AllowOverride None`
+`Require all granted`
+`RewriteCond %{REQUEST_FILENAME} -f [OR]``
+`RewriteCond %{REQUEST_FILENAME} -d`
+`RewriteRule ^ - [L]``
+`RewriteRule ^ xcp/index.html [L]``
+``</Directory>``
+
+4.	Start the HTTPD services:
+
+`sudo systemctl start httpd`
+|SSL installation failed
+|Run configure again and select the installation option. If the previous installation was successful, you can select the repair option. If you are still getting the error, try manual steps as follows:
+
+1.	Install `mod_ssl`:
+
+`yum install mod_ssl -y`
+
+2.	Generate the Secure Sockets Layer (SSL) certificate:
+
+`yum openssl req -x509 -nodes -days 365 -newkey` `rsa:2048 -keyout /etc/ssl/private/apache`-`selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`
+
+3.	Enable the HTTPS services:
+
+`yum openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048`
+
+4.	Restart the HTTPD services:
+
+`sudo systemctl restart httpd`
+
+5.	Copy the SSL certificate to an appropriate location:
+
+`sudo cp -pr /etc/pki/tls/certs/localhost.crt /opt/NetApp/xFiles/xcp/server.crt`
+`sudo cp  -pr /etc/pki/tls/private/localhost.key /opt/NetApp/xFiles/xcp/server.key`
+|Not able to open login page after successful install
+|Make sure your system is able to ping the Linux machine where XCP File Analytics is installed and HTTPD is running. If the services are not running, run `configure` and choose the repair option.
+
+Make sure that you are using supported version of browser. See the IMT: https://mysupport.netapp.com/matrix/
+|User login failed
+|•	Make sure that you are using a supported version of the browser. See the IMT: https://mysupport.netapp.com/matrix/
+•	Check the user is “admin” and the password is correct
+•	Make sure the XCP service is running by issuing “xcp service status”
+•	Verify that port  5030 is open on Linux. Open the application at *https:// <linux ip> :5030/api/xcp*, and confirm that the messagereads msg: `Missing Authorization Header`
+•	Check whether the `xcp.ini` file is present in the `/opt/NetApp/xFiles/xcp/` location. To reset the `xcp.ini` file, run the configuration script and select the *Repair* option. Next, select the menu option to *rebuild xcp.ini file*
+|XCP GUI is not showing updated pages.
+|Clear the cache and try again
+|XCP service is not starting
+|To run the `xcp` service, use the `sudo systectl start xcp` command. Alternatively, run the configuration script and select the *Repair* option to start the services that are stopped
+|Failed to scan file share
+|File share/volume might not be readable. Check manually whether the file share is accessible/readable by running the `xcp show` command
+|Could not load file servers
+|Try a page refresh. If the problem persists, manually run the `xcp show` command on the prompt and check whether you can scan the file server. If successful, raise a ticket with NetApp customer support. If unsuccessful, check manually to see if the file server is active
+
+Check whether the `xcp.ini` file and license files are in the correct location. To reset the `xcp.ini` file, run the configuration script and select the *Repair* option. Next, select the menu option to *rebuild xcp.ini file.*
+
+Check the xcpfalogs logs to see if the license needs renewal
+|XCP File Analytics page is not displayed after system reboot
+|XCP services might be down. Run the configuration script and select the option to *Repair*. This will restart all the services that are stopped
+|The total space for an exported file system on a given file server might show more space compared to the allocated physical storage.
+|This can happen when there are qtree level exports inside the volume.
+For example, if the volume size is 10 GB that is exported as `/vol1` and there is a qtree inside the volume `/vol1/qtree1`, then the `xcp show` command will show the `vol1` size as `10 GB` and the `qtree1` size as `10 GB`. XCP File Analytics sums the space of both exports and gives the total space, in this case, `20 GB`. It does not understand that `qtree1` is a logical space.
+|===
