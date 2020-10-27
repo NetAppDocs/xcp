@@ -17,6 +17,8 @@ entries:
         url: /xcp-install-xcp-smb.html
       - title: Install File Analytics for NFS
         url: /xcp-install-file-analytics-for-nfs.html
+      - title: Install File Analytics for SMB
+        url: /xcp-install-file-analytics-for-smb.html
   - title: Configure XCP
     url: /xcp-configure-xcp.html
     entries:
