@@ -18,16 +18,33 @@ entries:
       - title: Install File Analytics for SMB
         url: /xcp-install-file-analytics-for-smb.html
   - title: Configure XCP
-    url: /xcp-configure-xcp.html
     entries:
-      - title: Create the JSON configuration file
-        url: /xcp-create-the-json-configuration-file.html
+      - title: Configure the INI file for XCP NFS
+        url: /xcp-configure-the-ini-file-for-xcp-nfs.html
+      - title: Performance tuning (NFS only)
+        url: /xcp-performance-tuning.html
+      - title: Environment variable (NFS only)
+        url: /xcp-environment-variable.html
+      - title: Environment variable (NFS only)
+        url: xcp-logging-for-nfs-and-smb.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html
     entries:
+      - title: Plan NFS data migration
+        url: /xcp-plan-nfs-data-migration.html
+      - title: Plan SMB data migration
+        url: /xcp-plan-smb-data-migration.html
+      - title: Plan using File Analytics
+        url: /xcp-using-file-analytics.html
       - title: Access File Analytics
         url: /xcp-access-file-analytics.html
+      - title: Run a scan
+        url: xcp-run-a-scan.html
   - title: Migrate data
-    url: /xcp-migrate-data.html
+    entries:
+      - title: Migrate NFS data
+        url: xcp-migrate-nfs-data.html
+      - title: Migrate SMB data
+        url: xcp-migrate-smb-data.html    
   - title: Troubleshoot errors
     url: /xcp-troubleshoot-errors.html

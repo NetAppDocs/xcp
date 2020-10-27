@@ -1,0 +1,33 @@
+---
+sidebar: sidebar
+permalink: xcp-add-file-servers.html
+keywords: netapp, xcp, file, servers, access, analytics, learn, about, graphs, hot, cold, count, size, entries in directory, distribution by size, directory depth, file space used by size
+summary: XCP File Analytics GUI provides a dashboard with graphs for visualizing File Analytics.
+---
+
+= Add file servers
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+You can configure NFS and SMB exported file systems in the XCP File Analytics GUI. This enables XCP File Analytics to scan and analyze data on the file system. Use the following steps to add NFS or SMB file servers.
+
+* To add file servers, click Add File Server.
+
+image:xcp_image3.png[Error: Missing Graphic Image]
+
+Add the file server IP address, select the NFS or SMB option and click “Add”.
+
+NOTE: If an SMB agent is not visible in the GUI, you will not be able to add SMB server.
+
+After adding the file server, XCP displays:
+
+*	Total file shares available
+*	File shares with analytics data
+(The initial count is “0”, this updates when you run a successful scan)
+*	Total space utilization – the sum of space utilized by all the exports
+*	The data for file shares and space utilization is real-time data direct from the NFS/SMB server. Collecting and processing the data takes several seconds.
+
+NOTE: Space available versus space used in File Analytics is calculated from each exported file system available over NFS. For example, if the volumes consist of qtrees and the exports are created over a qtree, the overall space is the cumulative space of the volume size and the qtree size.
