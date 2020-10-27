@@ -36,7 +36,7 @@ Optional -  If you have a CA certificate, place the certificate in this location
 .. In Windows, stop the existing XCP service by entering control + c on the command line
 .. Replace xcp.exe with latest version
 +
-.	If you are doing a fresh install or upgrade, complete the following steps to update the windows agent:
+.	If you are doing a fresh install or upgrade, complete the following steps to update the Windows agent:
 ..	Go to the Linux machine and run `./configure.sh`
 ..	Select option 4
 ..	When prompted, enter the IP address for the Windows machine
