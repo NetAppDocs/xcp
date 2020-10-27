@@ -24,17 +24,23 @@ For system requirements for SMB see `Install XCP SMB`.
 . To perform a fresh install of File Analytics for SMB, complete the following steps:
 ..	Copy the xcp.exe file to your Windows C: drive.
 ..	Download the XCP license file from https://xcp.netapp.com/
-..	Create the folder C:\NetApp\XCP and copy the XCP license to this location.
+..	Create the folder `C:\NetApp\XCP` and copy the XCP license to this location.
 ..	Activate the XCP license:  `xcp.exe activate`
-..	Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/`  (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP` (Optional -  If you have a CA certificate, place the certificate in this location with the same name and extensions).
+..	Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/`  (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP`
+Optional -  If you have a CA certificate, place the certificate in this location with the same name and extensions.
 ..	In the XCP CLI run `xcp configure`, and when prompted, add the IP address of the Linux machine where the XCP File Analytics server is configured.
 ..	Add the password for the database that was entered during the XCP Linux File Analytics configuration.
 +
 . Upgrade the existing File Analytics.
-.. Before you run File Analytics (?) make sure the Linux server where File Analytics is running is also upgraded.
+.. Before you run File Analytics make sure the Linux server where File Analytics is running is also upgraded.
 .. In Windows, stop the existing XCP service by entering control + c on the command line
 .. Replace xcp.exe with latest version
 +
+.	If you are doing a fresh install or upgrade, complete the following steps to update the windows agent:
+..	Go to the Linux machine and run `./configure.sh`
+..	Select option 4
+..	When prompted, enter the IP address for the Windows machine
++
 .	Start the service.
 +
-To run the service on the Windows machine, run the `xcp listen` command with administrator privilege on the command prompt. Keep the window in an open state to continuously run the service
+To run the service on the Windows machine, run the `xcp listen` command with administrator privilege on the command prompt. Keep the window in an open state to continuously run the service.

@@ -1,8 +1,6 @@
 entries:
   - title: XCP documentation
     url: /index.html
-  - title: Get started with XCP
-    url: /xcp-get-started-with-xcp.html
     type: solutions
   - title: Install XCP
     url: /xcp-install-xcp.html
