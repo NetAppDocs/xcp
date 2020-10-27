@@ -25,7 +25,7 @@ entries:
         url: /xcp-performance-tuning.html
       - title: Environment variable (NFS only)
         url: /xcp-environment-variable.html
-      - title: Environment variable (NFS only)
+      - title: Logging for NFS and SMB (optional)
         url: xcp-logging-for-nfs-and-smb.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html
@@ -45,6 +45,6 @@ entries:
       - title: Migrate NFS data
         url: xcp-migrate-nfs-data.html
       - title: Migrate SMB data
-        url: xcp-migrate-smb-data.html    
+        url: xcp-migrate-smb-data.html
   - title: Troubleshoot errors
     url: /xcp-troubleshoot-errors.html
