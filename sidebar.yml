@@ -40,21 +40,21 @@ entries:
         url: /xcp-using-file-analytics.html
       - title: Access File Analytics
         url: /xcp-access-file-analytics.html
-        - title: Add file servers
-        url: xcp-add-file-servers.html
+      - title: Add file servers
+        url: /xcp-add-file-servers.html
       - title: Run a scan
-        url: xcp-run-a-scan.html
+        url: /xcp-run-a-scan.html
   - title: Migrate data
     entries:
       - title: Migrate NFS data
-        url: xcp-migrate-nfs-data.html
+        url: /xcp-migrate-nfs-data.html
       - title: Migrate SMB data
-        url: xcp-migrate-smb-data.html
+        url: /xcp-migrate-smb-data.html
   - title:  Troubleshoot
     entries:
       - title: Troubleshoot XCP NFS errors
-        url: xcp-troubleshoot-xcp-nfs.html
+        url: /xcp-troubleshoot-xcp-nfs.html
       - title: Troubleshoot XCP SMB Errors
-        url: xcp-troubleshoot-xcp-smb-errors.html
+        url: /xcp-troubleshoot-xcp-smb-errors.html
       - title: Troubleshoot XCP File Analytics errors
-        url: xcp-troubleshoot-xcp-file-analytics-errors.html
+        url: /xcp-troubleshoot-xcp-file-analytics-errors.html
