@@ -37,22 +37,3 @@ regardless of any permissions that protect those files.
 must have read access.
 
 NOTE: Write permission is required in the source storage system for supporting the XCP option “- preserve-atime”.
-
-== Prepare File Analytics
-
-File Analytics has the following two parts:
-
-*	File Analytics server running on Linux
-*	XCP SMB service running on Windows
-
-File Analytics installation has the following requirements:
-
-*	Supported OS and system requirements are the same as given for NFS and SMB installation. Because the database will reside on a Linux box, you must make sure you have a minimum of 10 GB free space.
-*	The Linux machine where you install the File Analytics server must be connected to the internet or the yum repository. The installation script talks to the yum repository to download the required packages, such as PostgreSQL, HTTP and SSL.
-*	The File Analytics GUI can only be hosted on a Linux machine along with XCP services for Linux running on same box.
-*	For running SMB services, complete the following steps:
-** Verify that your Windows box can ping the Linux machine where the File Analytics server is running.
-** If you are inside a firewall, verify that ports 5030 and 5432 are open. Port 5030 is used to make the REST call to Windows. Port 5432 port is used for the PostgreSQL connection.
-
-NOTE:  The XCP File Analytics server always runs on a Linux machine. There is no separate installation available for SMB File Analytics. If you are a Windows user and want to run File Analytics for SMB share, then you must install File Analytics for Linux and connect the Windows box to a Linux database.
-If you only use XCP File Analytics, you do not need to configure the XCP Catalog for NFS.

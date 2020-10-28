@@ -1,0 +1,49 @@
+---
+sidebar: sidebar
+permalink: xcp-troubleshoot-xcp-nfs.html
+keywords: netapp, xcp, troubleshoot, troubleshooting, nfs, errors,
+summary: Troubleshooting XCP NFS errors
+---
+
+= Troubleshoot XCP NFS errors
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+|===
+|XCP issue | Solution
+
+|`xcp: ERROR`: must run as root
+|Execute XCP commands as root user
+|`xcp: ERROR`: License file `/opt/NetApp/xFiles/xcp/license` not found.
+|Download the license from https://xcp.netapp.com and copy to `/opt/NetApp/xFiles/xcp/`
+|`xcp: ERROR`: This license has expired
+|Renew or obtain the new XCP license from http://xcp.netapp.com.
+|`xcp: ERROR`: License unreadable
+|License file might be corrupted. Obtain the new XCP license from http://xcp.netapp.com.
+|`xcp: ERROR`: XCP not activated,
+run 'activate' first
+|Run the `xcp activate` command
+|This copy is not licensed
+|Obtain the appropriate XCP license file. Copy the XCP license to the `/opt/NetApp/xFiles/xcp/` directory on the XCP server. Run the `xcp activate` command to activate the license.
+|`xcp: ERROR`: Failed to activate license: Server unreachable
+|You are trying to activate the online license and your host system is not connected to internet. Make sure your system is connected internet.
+|`xcp: ERROR`: Failed to activate license: Server xcp.netapp.com unreachable
+`xcp: HINT`: Configure DNS on this host or return to the license page to request a private license
+Expected error: Failed to activate license: Server xcp.netapp.com unreachable
+|Make sure xcp.netapp.com is reachable from your host or request for the offline license
+|`xcp: ERROR`: Catalog inaccessible: Cannot mount `nfs_server:/export[:subdirectory]`
+|Open the editor on the XCP Linux client host and update the configuration file with the proper catalog location. The XCP configuration file is located at `/opt/NetApp/xFiles/xcp/xcp.ini`. Sample entries of configuration file:
+
+`[root@scspr1949387001 ~]# cat /opt/NetApp/xFiles/xcp/xcp.ini # Sample xcp config [xcp] catalog = 10.235.128.153:/catalog`
+|`nfs3 error 2`: no such file or directory
+|Operation did not find the source file(s) on the target NFS export. Run the `xcp sync` command to copy the incremental updates from source to destination
+|`xcp: ERROR`: Empty or invalid index
+|Previous copy operation was interrupted before indexing the files. Rerun `xcp copy` with the new index and make sure the system returns “indexed” before interrupting copy
+|`xcp: ERROR`: compare batches: child process failed (`exit code -9): recv <type 'exceptions.EOFError'>`:
+|Follow the instructions in the following KB article: link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/NetApp_XCP/XCP:_ERROR:_Cannot_allocate_memory_-_when_syncing_NFS_data[Cannot allocate memory when synching NFS data]
+|`xcp: ERROR`: For xcp to process ACLs, please mount `<path>` using the OS nfs4 client
+|Mount the source/target on the XCP host
+|===
