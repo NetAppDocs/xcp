@@ -34,11 +34,11 @@ entries:
     entries:
       - title: Plan NFS data migration
         url: /xcp-plan-nfs-data-migration.html
+      - title: Plan SMB data migration
+        url: /xcp-plan-smb-data-migration.html
+      - title: Plan using File Analytics
+        url: /xcp-using-file-analytics.html
         entries:
-          - title: Plan SMB data migration
-            url: /xcp-plan-smb-data-migration.html
-          - title: Plan using File Analytics
-            url: /xcp-using-file-analytics.html
           - title: Access File Analytics
             url: /xcp-access-file-analytics.html
           - title: Add file servers
