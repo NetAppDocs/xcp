@@ -34,16 +34,19 @@ entries:
     entries:
       - title: Plan NFS data migration
         url: /xcp-plan-nfs-data-migration.html
-      - title: Plan SMB data migration
-        url: /xcp-plan-smb-data-migration.html
-      - title: Plan using File Analytics
-        url: /xcp-using-file-analytics.html
-      - title: Access File Analytics
-        url: /xcp-access-file-analytics.html
-      - title: Add file servers
-        url: /xcp-add-file-servers.html
-      - title: Run a scan
-        url: /xcp-run-a-scan.html
+        entries:
+          - title: Plan SMB data migration
+            url: /xcp-plan-smb-data-migration.html
+          - title: Plan using File Analytics
+            url: /xcp-using-file-analytics.html
+          - title: Access File Analytics
+            url: /xcp-access-file-analytics.html
+          - title: Add file servers
+            url: /xcp-add-file-servers.html
+          - title: Run a scan
+            url: /xcp-run-a-scan.html
+      - title: Filters
+        url: /xcp-filters.html
   - title: Migrate data
     entries:
       - title: Migrate NFS data
@@ -58,3 +61,5 @@ entries:
         url: /xcp-troubleshoot-xcp-smb-errors.html
       - title: Troubleshoot XCP File Analytics errors
         url: /xcp-troubleshoot-xcp-file-analytics-errors.html
+  - title: Get more information
+    url: /get-more-information.html
