@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: xcp-filters.html
-keywords: netapp, xcp, filters
+keywords: netapp, xcp, filters,
 summary: XCP provides filter options that can be used in XCP operations.
 ---
 

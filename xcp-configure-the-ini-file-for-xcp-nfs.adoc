@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: xcp-configure-the-ini-file-for-xcp-nfs.html
 keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure XCP
+summary: Steps to configure the INI file XCP
 ---
 
 = Configure the INI file for XCP NFS

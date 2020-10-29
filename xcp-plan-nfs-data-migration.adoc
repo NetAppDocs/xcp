@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: xcp-plan-nfs-data-migration.html
 keywords: netapp, xcp, plan, planning, data, migration, migrate, migrating, nfs, smb, file, analytics
-summary: Plan data migration
+summary: Plan NFS data migrations
 ---
 
 = Plan NFS data migration

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-environment-variable.html
-keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure XCP
+keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs, enviroment,
+summary: Environment variable (NFS only)
 ---
 
 = Environment variable (NFS only)

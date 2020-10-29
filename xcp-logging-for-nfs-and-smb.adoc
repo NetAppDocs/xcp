@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-logging-for-nfs-and-smb.html
-keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure XCP
+keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs, smb,
+summary: Logging for NFS and SMB
 ---
 
 == Logging for NFS and SMB (optional)

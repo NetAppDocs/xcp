@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-prepare-file-analytics.adoc.html
-keywords: netapp, xcp, prepare, preparing, preparation, windows, smb, configure, configuring, storage, file analytics
-summary: Prepare Windows for XCP SMB
+keywords: netapp, xcp, prepare, preparing, preparation, file analytics,
+summary: Prepare File Analytics
 ---
 
 = Prepare File Analytics

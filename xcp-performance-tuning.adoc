@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: xcp-performance-tuning.html
 keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure XCP
+summary: Performance tuning (NFS only)
 ---
 
 = Performance tuning (NFS only)
