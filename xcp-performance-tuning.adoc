@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: xcp-performance-tuning.html
+keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
+summary: Performance tuning (NFS only)
+---
+
+= Performance tuning (NFS only)
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+For the optimal performance and reliability, NetApp recommends setting the following Linux kernel TCP performance parameters in `/etc/sysctl.conf` on the XCP Linux client host. Run `sysctl -p` or the reboot command to commit the changes:
+
+----
+net.core.rmem_default = 1342177
+37Tnet.core.rmem_max = 16777216
+37Tnet.core.rmem_max = 16777216
+37Tnet.core.wmem_default = 1342177
+37Tnet.core.wmem_max = 16777216
+37Tnet.ipv4.tcp_rmem = 4096 1342177 16777216
+37Tnet.ipv4.tcp_wmem = 4096 1342177 16777216
+37Tnet.core.netdev_max_backlog = 300000
+37Tnet.ipv4.tcp_fin_timeout = 10
+----
