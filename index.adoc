@@ -30,6 +30,13 @@ The XCP CLI is robust. For more information, see the _XCP Reference_.
 
 image:xcp_image1.png[Error: Missing Graphic Image]
 
+== What’s new in XCP 1.6.2
+*	Enhanced the hard link support in NFS
+*	Exclude filter for XCP NFS commands
+*	XCP SMB support for HTML/CSV report
+*	Memory optimization for resume
+*	Updated documentation and help for NFS
+
 == Unsupported features
 
 The following features are not supported on XCP NFS:

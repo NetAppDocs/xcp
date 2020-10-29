@@ -1,8 +1,6 @@
 entries:
-  - title: XCP documentation
-    url: /index.html
   - title: Get started with XCP
-    url: /xcp-get-started-with-xcp.html
+    url: /index.html
     type: solutions
   - title: Install XCP
     url: /xcp-install-xcp.html
@@ -11,23 +9,57 @@ entries:
         url: /xcp-prepare-linux-for-xcp-nfs.html
       - title: Prepare Windows for XCP SMB
         url: /xcp-prepare-windows-for-xcp-smb.html
+      - title: Prepare File Analytics
+        url: xcp-prepare-file-analytics.adoc.html
       - title: Install XCP NFS
         url: /xcp-install-xcp-nfs.html
       - title: Install XCP SMB
         url: /xcp-install-xcp-smb.html
       - title: Install File Analytics for NFS
         url: /xcp-install-file-analytics-for-nfs.html
+      - title: Install File Analytics for SMB
+        url: /xcp-install-file-analytics-for-smb.html
   - title: Configure XCP
-    url: /xcp-configure-xcp.html
     entries:
-      - title: Create the JSON configuration file
-        url: /xcp-create-the-json-configuration-file.html
+      - title: Configure the INI file for XCP NFS
+        url: /xcp-configure-the-ini-file-for-xcp-nfs.html
+      - title: Performance tuning (NFS only)
+        url: /xcp-performance-tuning.html
+      - title: Environment variable (NFS only)
+        url: /xcp-environment-variable.html
+      - title: Logging for NFS and SMB (optional)
+        url: xcp-logging-for-nfs-and-smb.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html
     entries:
-      - title: Access File Analytics
-        url: /xcp-access-file-analytics.html
+      - title: Plan NFS data migration
+        url: /xcp-plan-nfs-data-migration.html
+      - title: Plan SMB data migration
+        url: /xcp-plan-smb-data-migration.html
+      - title: Plan using File Analytics
+        url: /xcp-using-file-analytics.html
+        entries:
+          - title: Access File Analytics
+            url: /xcp-access-file-analytics.html
+          - title: Add file servers
+            url: /xcp-add-file-servers.html
+          - title: Run a scan
+            url: /xcp-run-a-scan.html
+      - title: Filters
+        url: /xcp-filters.html
   - title: Migrate data
-    url: /xcp-migrate-data.html
-  - title: Troubleshoot errors
-    url: /xcp-troubleshoot-errors.html
+    entries:
+      - title: Migrate NFS data
+        url: /xcp-migrate-nfs-data.html
+      - title: Migrate SMB data
+        url: /xcp-migrate-smb-data.html
+  - title:  Troubleshoot
+    entries:
+      - title: Troubleshoot XCP NFS errors
+        url: /xcp-troubleshoot-xcp-nfs.html
+      - title: Troubleshoot XCP SMB Errors
+        url: /xcp-troubleshoot-xcp-smb-errors.html
+      - title: Troubleshoot XCP File Analytics errors
+        url: /xcp-troubleshoot-xcp-file-analytics-errors.html
+  - title: Get more information
+    url: /get-more-information.html
