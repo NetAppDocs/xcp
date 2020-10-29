@@ -54,7 +54,6 @@ The `verify` command uses a full byte-by-byte data comparison between source and
 
 *Example:*
 
-`xcp verify``
 ----
 xcp verify src_server:/src_export dst_server:/dst_export
 ----
