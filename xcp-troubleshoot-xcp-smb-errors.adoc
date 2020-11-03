@@ -52,5 +52,5 @@ Erorr message logged in xcp.log file:
 `pywintypes.error`: `(1314, 'GetNamedSecurityInfo', 'A required privilege is not held by the client.')`
 |A user is facing an ssue related to security descriptors because with the privileges that the migrations user owns, XCP can only get owner, group, and DACL, but, it cannot get SACL.
 Add your migration user to "Manage Audit and Security Log” policy in your Active Directory.
-Reference: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953(v%3Dws.11)
+Reference: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953%28v%3Dws.11%29
 |===
