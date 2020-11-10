@@ -16,12 +16,12 @@ For the optimal performance and reliability, NetApp recommends setting the follo
 
 ----
 net.core.rmem_default = 1342177
-37Tnet.core.rmem_max = 16777216
-37Tnet.core.rmem_max = 16777216
-37Tnet.core.wmem_default = 1342177
-37Tnet.core.wmem_max = 16777216
-37Tnet.ipv4.tcp_rmem = 4096 1342177 16777216
-37Tnet.ipv4.tcp_wmem = 4096 1342177 16777216
-37Tnet.core.netdev_max_backlog = 300000
-37Tnet.ipv4.tcp_fin_timeout = 10
+net.core.rmem_max = 16777216
+net.core.rmem_max = 16777216
+net.core.wmem_default = 1342177
+net.core.wmem_max = 16777216
+net.ipv4.tcp_rmem = 4096 1342177 16777216
+net.ipv4.tcp_wmem = 4096 1342177 16777216
+net.core.netdev_max_backlog = 300000
+net.ipv4.tcp_fin_timeout = 10
 ----
