@@ -12,6 +12,9 @@ summary: Performance tuning (NFS only)
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+After planning the migration with the show and scan commands, you can migrate data.
+
 For the optimal performance and reliability, NetApp recommends setting the following Linux kernel TCP performance parameters in `/etc/sysctl.conf` on the XCP Linux client host. Run `sysctl -p` or the reboot command to commit the changes:
 
 ----

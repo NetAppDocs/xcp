@@ -12,11 +12,16 @@ summary: Adding file servers
 :linkattrs:
 :imagesdir: ./media/
 
-You can configure NFS and SMB exported file systems in the XCP File Analytics GUI. This enables XCP File Analytics to scan and analyze data on the file system. Use the following steps to add NFS or SMB file servers.
+[.lead]
+You can configure NFS and SMB exported file systems in the XCP File Analytics GUI.
 
-* To add file servers, click Add File Server.
+This enables XCP File Analytics to scan and analyze data on the file system. Use the following steps to add NFS or SMB file servers.
 
-image:xcp_image3.png[Error: Missing Graphic Image]
+.Step
+
+. To add file servers, click *Add File Server*.
+
+image:xcp_image3.png[Add file server screen]
 
 Add the file server IP address, select the NFS or SMB option and click “Add”.
 

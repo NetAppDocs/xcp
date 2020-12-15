@@ -17,8 +17,10 @@ This section details the system requirements and the procedure for VC++ redistri
 NOTE:	There is no option to upgrade, reinstall XCP to replace any existing version.
 
 *System Requirements*
+
+[cols="35,65"]
 |===
-| |Requirement
+|Item |Requirement
 
 |System
 |64-bit Intel or AMD server, minimum 4 cores and 32GB RAM
@@ -41,7 +43,7 @@ Visual C++ 2017 redistributable must be installed on the XCP host.
 
 Follow these steps for the VC++ redistributable installation.
 
-*Steps*
+.Steps
 
 . Go to https://go.microsoft.com/fwlink/?LinkId=746572 and download VC++ 2017 redistributable.
 +
@@ -53,7 +55,7 @@ Follow these steps for the VC++ redistributable installation.
 
 Follow these steps to perform the initial setup of XCP SMB.
 
-*Steps*
+.Steps
 
 . Copy the license and the XCP SMB binary `NETAPP_XCP_<version>.tgz` on a Windows host.
 +

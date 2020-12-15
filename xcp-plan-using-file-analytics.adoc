@@ -12,6 +12,9 @@ summary: Plan using File Analytics
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+Plan your data migration using File Analytics.
+
 NOTE: XCP is a CLI, whereas File Analytics has a GUI.
 
 *Overview*

@@ -12,6 +12,10 @@ summary: Troubleshooting XCP File Analytics errors
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+Review the solutions to troubleshoot your issue.
+
+[cols="40,60"]
 |===
 |Issue |Solution
 
@@ -66,14 +70,14 @@ a|Run configure again and select the installation option. If the previous instal
 +
 `RewriteEngine On`
 `RewriteOptions Inherit`
-`<Directory "/var/www/html/">``
+`<Directory "/var/www/html/">`
 `AllowOverride None`
 `Require all granted`
-`RewriteCond %{REQUEST_FILENAME} -f [OR]``
+`RewriteCond %{REQUEST_FILENAME} -f [OR]`
 `RewriteCond %{REQUEST_FILENAME} -d`
-`RewriteRule ^ - [L]``
-`RewriteRule ^ xcp/index.html [L]``
-``</Directory>``
+`RewriteRule ^ - [L]`
+`RewriteRule ^ xcp/index.html [L]`
+`</Directory>`
 +
 .	Start the HTTPD services:
 +

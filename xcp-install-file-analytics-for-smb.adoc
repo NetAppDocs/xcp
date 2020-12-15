@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-install-file-analytics-for-smb.html
-keywords: netapp, xcp, install, installing, file, analytics, smb
-summary: How to install file analytics for SMB
+keywords: netapp, xcp, install, installing, file, analytics, smb, upgrade, upgrading
+summary: Install or upgrade File Analytics for SMB
 ---
 
 = Install File Analytics for SMB
@@ -12,35 +12,52 @@ summary: How to install file analytics for SMB
 :linkattrs:
 :imagesdir: ./media/
 
-For system requirements for SMB see `Install XCP SMB`.
+[.lead]
+Install or upgrade File Analytics for SMB.
+
+For system requirements for SMB see link:xcp-install-xcp-smb.html[Install XCP SMB].
 
 *Before you begin*
 
 * You must configure XCP File Analytics for NFS on a Linux machine to use the XCP SMB service.
-*	When XCP File Analytics is running on your Linux machine, you can begin configuring XCP File Analytics on a Windows machine.
+*	Make sure the XCP service is running on your Linux machine, before you begin configuring XCP File Analytics on a Windows machine.
 
-*Steps*
+== Fresh install of File Analytics for SMB
 
-. To perform a fresh install of File Analytics for SMB, complete the following steps:
-..	Copy the xcp.exe file to your Windows C: drive.
-..	Download the XCP license file from https://xcp.netapp.com/
-..	Create the folder `C:\NetApp\XCP` and copy the XCP license to this location.
-..	Activate the XCP license:  `xcp.exe activate`
-..	Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/`  (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP`
-Optional -  If you have a CA certificate, place the certificate in this location with the same name and extensions.
-..	In the XCP CLI run `xcp configure`, and when prompted, add the IP address of the Linux machine where the XCP File Analytics server is configured.
-..	Add the password for the database that was entered during the XCP Linux File Analytics configuration.
-+
-. Upgrade the existing File Analytics.
-.. Before you run File Analytics make sure the Linux server where File Analytics is running is also upgraded.
-.. In Windows, stop the existing XCP service by entering control + c on the command line
-.. Replace xcp.exe with latest version
-+
-.	If you are doing a fresh install or upgrade, complete the following steps to update the Windows agent:
-..	Go to the Linux machine and run `./configure.sh`
-..	Select option 4
-..	When prompted, enter the IP address for the Windows machine
-+
-.	Start the service.
-+
-To run the service on the Windows machine, run the `xcp listen` command with administrator privilege on the command prompt. Keep the window in an open state to continuously run the service.
+To perform a fresh install of File Analytics for SMB, complete the following steps.
+
+.Steps
+
+. Copy the xcp.exe file to your Windows C: drive, this binary is available inside /xcp/windows after you untar the tgz.
+. Download the XCP license file from https://xcp.netapp.com/
+. Create the folder `C:\\NetApp\XCP` and copy the XCP license to this location.
+. Activate the XCP license using the following command at the command prompt:  `xcp.exe activate`
+. Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/` (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP`
+Optional - If you have a CA certificate, place the certificate in this location with the same name and extensions.
+. In the Windows CLI command prompt, run `xcp configure`.
+. When prompted, provide the IP address of the Linux machine where the XCP File Analytics server is configured.
+. When prompted, provide the password for the database that was entered during the XCP Linux File Analytics configuration.
+. Go to the Linux machine and run `./configure.sh`.
+. Select option 4 (Update XCP windows agent IP) on the main menu and provide the IP address for the Windows machine.
+. Go to your Windows machine and run `xcp listen`, now XCP File Analytics for SMB is configured. Keep the window in an open state to continuously run the service.
+. Launch File Analytics on the Google Chrome browser and refresh the page: `\https://<ip address of linux>/xcp`
+. Click OK when the dialog box displays.
+A new tab will open. Please enable pop ups on the browser if it is blocked. Accept the privacy policy for the URL and the following message displays: `SMB agent is ready to use. Please refresh the analytics page`
+. Return to the original tab where the XCP File Analytics GUI is hosted and refresh the page.
+This will display the SMB agent under the Agents card.
+
+== Upgrade of File Analytics for SMB
+
+To upgrade the existing File Analytics for SMB, complete the following steps.
+
+. Before you run File Analytics make sure the Linux server where File Analytics is running is also upgraded and the service is running.
+. In Windows, stop the existing XCP service by entering control + c on the command line.
+. Replace xcp.exe with latest binary.
+. Go to the Linux machine and run `./configure.sh`.
+. Select option 4 (Update XCP windows agent IP) on the main menu and provide the IP address for the Windows machine.
+. Go to your Windows machine and run `xcp listen`, now XCP File Analytics for SMB is configured. Keep the window in an open state to continuously run the service.
+. Launch File Analytics on the Google Chrome browser and refresh the page: `\https://<ip address of linux>/xcp`
+. Click OK when the dialog box displays.
+A new tab will open. Please enable pop ups on the browser if it is blocked. Accept the privacy policy for the URL and the following message displays: `SMB agent is ready to use. Please refresh the analytics page`
+.	Return to the original tab where the XCP File Analytics GUI is hosted and refresh the page.
+This will display the SMB agent under the Agents card.
