@@ -23,7 +23,7 @@ This enables XCP File Analytics to scan and analyze data on the file system. Use
 
 image:xcp_image3.png[Add file server screen]
 
-Add the file server IP address, select the NFS or SMB option and click “Add”.
+Add the file server IP address, select the NFS or SMB option and click *Add*.
 
 NOTE: If an SMB agent is not visible in the GUI, you will not be able to add SMB server.
 

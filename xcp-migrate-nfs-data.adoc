@@ -13,7 +13,7 @@ summary: Migrate NFS data
 :imagesdir: ./media/
 
 [.lead]
-After planning the migration with the show and scan commands, you can migrate data.
+After planning the migration with the `show` and `scan` commands, you can migrate data.
 
 === Copy
 

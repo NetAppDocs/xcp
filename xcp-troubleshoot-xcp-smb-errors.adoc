@@ -34,7 +34,7 @@ Error message logged in xcp.log file:
 `pywintypes.error: (1722, 'LookupAccountName', 'The RPC server is unavailable.'`)
 |Add the destination box in the hosts file (`C:\Windows\System32\drivers\etc\hosts`).
 Netapp storage destination box entry must be in the below format:
-``<data vserver data interface ip>` 1 or more white spaces `<cifs server name>`
+`<data vserver data interface ip>` 1 or more white spaces `<cifs server name>`
 |`xcp copy: ERROR` failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
 
 Error messaged logged in xcp.log file:

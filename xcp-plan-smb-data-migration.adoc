@@ -27,7 +27,7 @@ Run `xcp help show` for more details.
 
 === Scan
 
-The scan command recursively scans the entire SMB share and lists all the files at the end of the scan.
+The `scan` command recursively scans the entire SMB share and lists all the files at the end of the scan.
 Example :
 
 * `xcp scan \\SMB server\share1`

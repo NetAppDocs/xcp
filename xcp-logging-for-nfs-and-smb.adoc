@@ -67,7 +67,7 @@ CRITICAL, ERROR, WARNING, INFO, DEBUG
 |“isEnabled”
 |Boolean
 |false
-|This boolean option is used to enable event messaging. Setting it false will not generate any event messages and no event logs will be published to event log file.
+|This boolean option is used to enable event messaging. Setting it to `false` will not generate any event messages and no event logs will be published to event log file.
 |“level”
 |String
 |INFO
@@ -101,12 +101,12 @@ Syslog receivers accepting syslog datagrams on a different port can be configure
 |Boolean
 |false
 a|A common option for XCP support; setting its value to true will hide sensitive information (IP and username) in the messages going to support (logging, events, syslog, etc.)
-For example, with the sanitize option as false:
-*	2020-07-17 03:10:23,779 - INFO - 12806 xcp xcp Paths: ['10.234.104.251:/cat_vol']
-*	2020-07-17 03:10:23,778 - INFO - 12806 xcp xcp User Name: root
-With the sanitize option as true
-*	2020-07-17 03:13:51,596 - INFO - 12859 xcp xcp Paths: ['IP: XX.XX.XX.XX:/cat_vol']
-*	2020-07-17 03:13:51,595 - INFO - 12859 xcp xcp User Name: * * *
+For example, with the `sanitize` option as `false`:
+*	`2020-07-17 03:10:23,779 - INFO - 12806 xcp xcp Paths: ['10.234.104.251:/cat_vol']`
+*	`2020-07-17 03:10:23,778 - INFO - 12806 xcp xcp User Name: root`
+With the `sanitize` option as `true`:
+*	`2020-07-17 03:13:51,596 - INFO - 12859 xcp xcp Paths: ['IP: XX.XX.XX.XX:/cat_vol']`
+*	`2020-07-17 03:13:51,595 - INFO - 12859 xcp xcp User Name: * * *`
 |===
 
 = Create the JSON configuration file

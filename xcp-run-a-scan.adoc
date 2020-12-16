@@ -26,7 +26,7 @@ image:xcp_image4.png[View file shares image]
 +
 XCP displays a progress bar for the scan.
 
-. When the scan is complete the “stat view” and “file distribution” tabs are enabled to allow you to view graphs.
+. When the scan is complete the *stat view* and *file distribution* tabs are enabled to allow you to view graphs.
 
 image:xcp_image5.png[Scan complete image]
 

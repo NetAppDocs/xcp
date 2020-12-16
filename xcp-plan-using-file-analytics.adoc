@@ -25,7 +25,7 @@ XCP File Analytics uses the XCP scan API to collect data from NFS or SMB hosts. 
 * File Analytics database
 * File Analytics GUI to manage and view data
 
-The deployment the method for XCP File Analytics components depends on the solution required:
+The deployment method for XCP File Analytics components depends on the solution required:
 
 *	Deploying XCP File Analytics solutions for NFS file systems:
 ** You can deploy the File Analytics GUI, database, and XCP service in the same Linux host.
