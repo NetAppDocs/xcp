@@ -12,7 +12,9 @@ summary: Plan data migration
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
 You can plan your migration using the CLI or the File Analytics GUI.
+
 Use the following commands to plan your migration:
 
 *	Show

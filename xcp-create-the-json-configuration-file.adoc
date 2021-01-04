@@ -12,6 +12,9 @@ summary: Create the JSON configuration file
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+Create the JSON configuration file.
+
 If you want to enable event log messages, the syslog client, or customer logging, complete the following steps.
 
 *Steps*
