@@ -12,6 +12,8 @@ summary: Prepare File Analytics
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+Prepare for your data migration using File Analytics.
 
 File Analytics has the following two parts:
 

@@ -12,9 +12,12 @@ summary: Steps to configure the INI file XCP
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+Steps to configure the INI file XCP.
+
 Follow these steps to configure the INI file for XCP NFS.
 
-*Steps*
+.Steps
 
 . Add the catalog location for the XCP server in the host configuration file using the `vi` editor.
 +
@@ -24,7 +27,7 @@ NOTE:	Catalog location should be exported before modifying the details in the `x
 ----
 [root@localhost /]# vi /opt/NetApp/xFiles/xcp/xcp.ini
 ----
-+
+
 .	Verify that the XCP Linux client host configuration file entries for the catalog were modified.
 +
 ----

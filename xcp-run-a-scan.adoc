@@ -12,18 +12,23 @@ summary: Running a scan
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
 When the NFS/SMB files system is added to the XCP File Analytics GUI, you can start a file system scan to analyze and represent the data.
 
-* Click the arrow on the added file server card to view the file shares on the file server.
+.Steps
 
-image:xcp_image4.png[Error: Missing Graphic Image]
+. Click the arrow on the added file server card to view the file shares on the file server.
++
+image:xcp_image4.png[View file shares image]
 
-*	From the list of file shares, click the name of the file share to scan.
-*	Click Scan to start the scan.
-*	XCP displays a progress bar for the scan. On completion:
-**	The “stat view” and “file distribution” tabs are enabled to allow you to view graphs.
+.	From the list of file shares, click the name of the file share to scan.
+.	Click *Scan* to start the scan.
++
+XCP displays a progress bar for the scan.
 
-image:xcp_image5.png[Error: Missing Graphic Image]
+. When the scan is complete the *stat view* and *file distribution* tabs are enabled to allow you to view graphs.
+
+image:xcp_image5.png[Scan complete image]
 
 == Learn about graphs
 
@@ -33,50 +38,50 @@ The File Analytics GUI dashboard displays multiple graphs for visualizing File A
 
 XCP File Analytics categorizes files not accessed for 90 days as cold data. Files accessed in the last 90 days are hot data. Criteria to define hot and cold data is based on access time only.
 
-image:xcp_image6.png[Error: Missing Graphic Image]
+image:xcp_image6.png[Hot Cold Count Graph]
 
 The Hot Cold Count graph displays the number of inodes (in millions) that are hot or cold in XCP NFS. In XCP SMB, this graph denotes the number of files that are hot or cold.
 The colored bar represents the hot data and shows the percentage of files accessed within 90 days.
 
 === Hot Cold Size Graph
 
-image:xcp_image7.png[Error: Missing Graphic Image]
+image:xcp_image7.png[Hot Cold Size Graph]
 
 The Hot Cold Size graph displays the percentage of files that are hot and cold and the total size of the files in each category. The colored bar represents the hot data and the uncolored part represents the cold data. Criteria to define hot and cold data is based on access time only.
 
 === Entries in Directory Graph
 
-image:xcp_image8.png[Error: Missing Graphic Image]
+image:xcp_image8.png[Entries in Directory Graph]
 
 The Entries in Directories graph displays the number of entries in directories. The Depth column contains different directory sizes and the Count column indicates the number of entries in each directory depth.
 
 === File Distribution by Size Graph
 
-image:xcp_image9.png[Error: Missing Graphic Image]
+image:xcp_image9.png[File Distribution by Size Graph]
 
 The File Distribution by Size graph displays the number of files that are under the given file sizes. The File Size column contains the categories of file size and the Count column indicates the distribution of the number of files.
 
 === Directory Depth Graph
 
-image:xcp_image10.png[Error: Missing Graphic Image]
+image:xcp_image10.png[Directory Depth Graph]
 
 The Directory Depth graph represents the distribution of the number of directories in various directory depth ranges. The Depth column contains various directory depths and the Count column contains the count of each directory depth in the file share.
 
 === File Space Used by Size Graph
 
-image:xcp_image11.png[Error: Missing Graphic Image]
+image:xcp_image11.png[File Space Used by Size Graph]
 
 The File Space Used by Size graph displays the number of files in different file-size ranges.  The File Size column contains different file size ranges and the Space Used column indicates the space used by each file size range.
 
 === Space Occupied by Users Graph
 
-image:xcp_image12.png[Error: Missing Graphic Image]
+image:xcp_image12.png[Space Occupied by Users Graph]
 
 The Space Occupied by Users graph displays the space used by users. The Username column contains the names of users (UID when usernames cannot be retrieved) and the Space Used column indicates the space used by each username.
 
 === Files Accessed/Modified/Created Graph
 
-image:xcp_image13.png[Error: Missing Graphic Image]
+image:xcp_image13.png[Files Accessed/Modified/Created Graph]
 
 The Files Accessed/Modified/Created graph displays the count of files changed overtime. The X-axis represents the period of time within which changes were made and the y- axis represents the number of files changed.
 
@@ -84,13 +89,13 @@ NOTE: To get the access time (atime) graph in SMB scans, check the box for prese
 
 === File Distribution by Extension Graphic
 
-image:xcp_image14.png[Error: Missing Graphic Image]
+image:xcp_image14.png[File Distribution by Extension Graphic]
 
 The File Distribution by Extension graph represents the count of the different file extensions in a file share. The size of the divisions representing the extensions is based on the number of files with each extension.
 
-image:xcp_image15.png[Error: Missing Graphic Image]
-
 === File Distribution by Type Graph
+
+image:xcp_image15.png[File Distribution by Extension Graphic]
 
 The Distribution by Type graph represents the count of the following types of files:
 

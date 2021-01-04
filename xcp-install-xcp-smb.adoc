@@ -14,16 +14,18 @@ summary: Installing XCP SMB
 
 This section details the system requirements and the procedure for VC++ redistributable installation and the initial setup of XCP on a Windows client.
 
-NOTE:	There is no option to upgrade, reinstall XCP to replace any existing version.
+NOTE:	There is no option to upgrade; reinstall XCP to replace any existing version.
 
 *System Requirements*
+
+[cols="35,65"]
 |===
-| |Requirement
+|Item |Requirement
 
 |System
-|64-bit Intel or AMD server, minimum 4 cores and 32GB RAM
+|64-bit Intel or AMD server, minimum 4 cores and 32 GB RAM
 |Operating System & Software
-|Windows 2k12 R2 or above. See the IMT matrix for supported Microsoft OS versions
+|Windows 2012 R2 or above. See the link:https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix Tool] for supported Microsoft OS versions
 
 Visual C++ 2017 redistributable must be installed on the XCP host.
 
@@ -41,19 +43,19 @@ Visual C++ 2017 redistributable must be installed on the XCP host.
 
 Follow these steps for the VC++ redistributable installation.
 
-*Steps*
+.Steps
 
-. Go to https://go.microsoft.com/fwlink/?LinkId=746572 and download VC++ 2017 redistributable.
+. Click link:https://go.microsoft.com/fwlink/?LinkId=746572[VC++ 2017 redistributable^] to download the executable to your default downloads folder.
 +
-. To start the installation, double click the installer. Accept the terms and conditions and click Install.
+. To start the installation, double click the installer. Accept the terms and conditions and click *Install*.
 +
-.	When the installation is complete, click Restart.
+.	When the installation is complete, click *Restart*.
 
 === XCP SMB Initial Setup Procedure
 
 Follow these steps to perform the initial setup of XCP SMB.
 
-*Steps*
+.Steps
 
 . Copy the license and the XCP SMB binary `NETAPP_XCP_<version>.tgz` on a Windows host.
 +
