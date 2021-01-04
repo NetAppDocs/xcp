@@ -16,8 +16,10 @@ If you want to upgrade XCP, delete the current installation and replace it with 
 This section details the system requirements and the procedures for the initial setup of XCP on a Linux client and the INI file configuration.
 
 *System Requirements*
+
+[cols="35,65"]
 |===
-| |Requirement
+|Item |Requirement
 
 |System
 |64-bit Intel or AMD server, minimum 4 cores and 32 GB RAM
@@ -35,7 +37,7 @@ No other active applications
 |XCP File Analytics supports Google Chrome version 76 and later. See the IMT matrix for all the supported versions of the browser
 |===
 
-*Steps*
+.Steps
 
 . Log in to the Linux machine as the root user and download and install the license:
 +

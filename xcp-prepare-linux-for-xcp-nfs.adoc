@@ -12,9 +12,11 @@ summary: Prepare Linux for XCP NFS
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
 XCP NFS uses Linux client host systems to generate parallel I/O streams and fully use available network and storage performance.
 
 === Configure catalog
+
 XCP saves operation reports and metadata in an NFSv3-accessible catalog directory. Provisioning the catalog is a one-time preinstallation task requiring the following:
 
 *	A NetApp NFSv3 export for security and reliability.
@@ -22,7 +24,7 @@ XCP saves operation reports and metadata in an NFSv3-accessible catalog director
 *	Storage configured to allow root access to the catalog export for the IP addresses of all Linux clients used to run XCP (multiple XCP clients can share a catalog location).
 *	Approximately 1 GB of space for every 10 million objects (directories plus files and hard links) to be indexed; each copy that can be resumed or synched and each offline-searchable scan requires an index.
 
-NOTE: You should store XCP catalogs separately. They should not be located on either the source or destination NFS export directory. XCP maintains metadata—reports in the catalog location specified during the initial setup. You must specify and update the location for storing the reports before you run any operation with XCP.
+NOTE: You should store XCP catalogs separately. They should not be located on either the source or the destination NFS export directory. XCP maintains metadata—reports in the catalog location specified during the initial setup. You must specify and update the location for storing the reports before you run any operation with XCP.
 
 === Configure storage
 

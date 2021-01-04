@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: xcp-filters.html
 keywords: netapp, xcp, filters,
-summary: XCP provides filter options that can be used in XCP operations.
+summary: XCP provides filter options that can be used in XCP operations
 ---
 
 = Filters
@@ -12,7 +12,10 @@ summary: XCP provides filter options that can be used in XCP operations.
 :linkattrs:
 :imagesdir: ./media/
 
-XCP provides filter options that can be used in XCP operations. XCP uses filters for `-match` and `-exclude` (NFS only) options.
+[.lead]
+XCP provides filter options that can be used in XCP operations.
+
+XCP uses filters for `-match` and `-exclude` (NFS only) options.
 
 For NFS, run `xcp help info` and refer to the FILTERS section to see how to use `-match` and `-exclude` filters.
 

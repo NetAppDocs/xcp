@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: xcp-logging-for-nfs-and-smb.html
 keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs, smb,
-summary: Logging for NFS and SMB
+summary: Logging for XCP NFS and SMB
 ---
 
 == Logging for NFS and SMB (optional)
@@ -11,6 +11,9 @@ summary: Logging for NFS and SMB
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
+
+[.lead]
+Logging for XCP NFS and SMB.
 
 XCP supports configuring multiple optional features by using the `xcpLogConfig.json` JSON configuration file. To enable only specific features, manually create the `xcpLogConfig.json` configuration file,
 You can use the `xcpLogConfig.json` configuration file to enable:
@@ -28,12 +31,13 @@ Event log messages and the syslog client are disabled in the default configurati
 |/opt/NetApp/xFiles/xcp/
 |C:\NetApp\XCP\ConfigFile
 |Custom location requires the `XCP_CONFIG_DIR` environment variable
-|*Error! Reference source not found.*
-|NA
+|Error! Reference source not found.
+|N/A
 |===
 
 The JSON configuration file options are case sensitive. These options are the same for XCP NFS and XCP SMB.
 
+[cols="20,15,15,50"]
 |===
 |Sub Options Name |JSON Data Type |Default |Description
 
@@ -63,7 +67,7 @@ CRITICAL, ERROR, WARNING, INFO, DEBUG
 |“isEnabled”
 |Boolean
 |false
-|This boolean option is used to enable event messaging. Setting it false will not generate any event messages and no event logs will be published to event log file.
+|This boolean option is used to enable event messaging. Setting it to `false` will not generate any event messages and no event logs will be published to event log file.
 |“level”
 |String
 |INFO
@@ -96,20 +100,20 @@ Syslog receivers accepting syslog datagrams on a different port can be configure
 |“sanitize”
 |Boolean
 |false
-|A common option for XCP support; setting its value to true will hide sensitive information (IP and username) in the messages going to support (logging, events, syslog, etc.)
-For example, with the sanitize option as false
-
-•	2020-07-17 03:10:23,779 - INFO - 12806 xcp xcp Paths: ['10.234.104.251:/cat_vol']
-•	2020-07-17 03:10:23,778 - INFO - 12806 xcp xcp User Name: root
-With the sanitize option as true
-•	2020-07-17 03:13:51,596 - INFO - 12859 xcp xcp Paths: ['IP: XX.XX.XX.XX:/cat_vol']
-•	2020-07-17 03:13:51,595 - INFO - 12859 xcp xcp User Name: ******
+a|A common option for XCP support; setting its value to true will hide sensitive information (IP and username) in the messages going to support (logging, events, syslog, etc.)
+For example, with the `sanitize` option as `false`:
+*	`2020-07-17 03:10:23,779 - INFO - 12806 xcp xcp Paths: ['10.234.104.251:/cat_vol']`
+*	`2020-07-17 03:10:23,778 - INFO - 12806 xcp xcp User Name: root`
+With the `sanitize` option as `true`:
+*	`2020-07-17 03:13:51,596 - INFO - 12859 xcp xcp Paths: ['IP: XX.XX.XX.XX:/cat_vol']`
+*	`2020-07-17 03:13:51,595 - INFO - 12859 xcp xcp User Name: * * *`
 |===
 
 = Create the JSON configuration file
+
 If you want to enable event log messages, the syslog client, or customer logging, complete the following steps.
 
-*Steps*
+.Steps
 
 . Open any text editor, such as notepad or vi.
 .	Create a new file with the following JSON template.

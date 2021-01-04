@@ -12,6 +12,9 @@ summary: Troubleshooting XCP NFS errors
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+Review the solutions to troubleshoot your issue.
+
 |===
 |XCP issue | Solution
 
@@ -42,7 +45,7 @@ Expected error: Failed to activate license: Server xcp.netapp.com unreachable
 |Operation did not find the source file(s) on the target NFS export. Run the `xcp sync` command to copy the incremental updates from source to destination
 |`xcp: ERROR`: Empty or invalid index
 |Previous copy operation was interrupted before indexing the files. Rerun `xcp copy` with the new index and make sure the system returns “indexed” before interrupting copy
-|`xcp: ERROR`: compare batches: child process failed (`exit code -9): recv <type 'exceptions.EOFError'>`:
+|`xcp: ERROR`: compare batches: child process failed (`exit code -9): recv <type 'exceptions.EOFError'>`
 |Follow the instructions in the following KB article: link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/NetApp_XCP/XCP:_ERROR:_Cannot_allocate_memory_-_when_syncing_NFS_data[Cannot allocate memory when synching NFS data]
 |`xcp: ERROR`: For xcp to process ACLs, please mount `<path>` using the OS nfs4 client
 |Mount the source/target on the XCP host

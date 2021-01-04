@@ -12,24 +12,27 @@ summary: Plan SMB data migration
 :linkattrs:
 :imagesdir: ./media/
 
-*Show*:
+[.lead]
+Plan your SMB data migrations.
+
+=== Show
 
 The `show` command shows all SMB shares available on the server with the permissions and space available.
 Example:
 
-        * `xcp show \\<SMB file server IP/FQDN>`
-        * `xcp show smb_server01.netapp.com`
+* `xcp show \\<SMB file server IP/FQDN>`
+* `xcp show smb_server01.netapp.com`
 
 Run `xcp help show` for more details.
 
-*Scan*:
+=== Scan
 
-The scan command recursively scans the entire SMB share and lists all the files at the end of the scan.
+The `scan` command recursively scans the entire SMB share and lists all the files at the end of the scan.
 Example :
 
-        * `xcp scan \\SMB server\share1`
-        * `xcp scan smb_server01.netapp.com:/share1`
+* `xcp scan \\SMB server\share1`
+* `xcp scan smb_server01.netapp.com:/share1`
 
 Run `xcp help scan` for more details.
-.
+
 Optionally, use File Analytics to view the results graphically.
