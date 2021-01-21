@@ -25,7 +25,7 @@ The `configure.sh` script installs and enables default configurations of HTTPD a
 
 .Steps
 
-.	Go to your XCP folder and run the `./configure.sh script`.
+.	Go to your XCP folder and run the `./configure.sh' script.
 The script takes three to ten minutes to configure the Linux machine and complete the following tasks:
 ..	Download PostgreSQL packages
 ..	Install the PostgreSQL server
