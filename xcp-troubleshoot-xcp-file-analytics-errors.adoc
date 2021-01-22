@@ -118,7 +118,7 @@ a|*	Make sure that you are using a supported version of the browser. See the IMT
 |XCP GUI is not showing updated pages.
 |Clear the cache and try again
 |XCP service is not starting
-|To run the `xcp` service, use the `sudo systectl start xcp` command. Alternatively, run the configuration script and select the *Repair* option to start the services that are stopped
+|To run the `xcp` service, use the `sudo systemctl start xcp` command. Alternatively, run the configuration script and select the *Repair* option to start the services that are stopped
 |Failed to scan file share
 |File share/volume might not be readable. Check manually whether the file share is accessible/readable by running the `xcp show` command
 |Could not load file servers
