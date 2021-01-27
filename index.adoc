@@ -69,6 +69,8 @@ The following features are not supported on XCP SMB:
 |Does not support IP version 6 (IPv6)
 |NTFS Alternate Data Streams
 |XCP does not currently support Alternate Data Streams
+|XCP Filters
+|The XCP SMB exclude option currently excludes directories based on their pattern in the filter and traverses the filesystem of those directories.
 |===
 
 The following common features are not available for XCP NFS and SMB:
