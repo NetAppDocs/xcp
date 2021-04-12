@@ -1,10 +1,10 @@
 ---
 permalink: home.html
 sidebar: sidebar
-keywords: release, notes, new, features, fixed, issues, known, xcp
-summary: Describes new features, upgrade notes, fixed issues, known limitations, and known issues.
+keywords: information, library, releases, documentation, install, configure, xcp
+summary: Welcome to XCP Information Library, includes links to earlier releases.
 ---
-= XCP v1.6.3 Documentaion
+= XCP v1.6.3 Documentation
 
 Welcome to the XCP Information Library. Here you will find documentation for XCP v1.6.3 of including how to install, configure, and use XCP.
 
