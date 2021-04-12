@@ -1,4 +1,8 @@
 entries:
+  - title: Home
+    url: /home.html
+  - title: Release Notes
+    url: /releasenotes.html
   - title: Get started with XCP
     url: /index.html
     type: solutions
