@@ -60,7 +60,7 @@ Corrective action : Since source data was modified during sync operation, run sy
 Please check xcp.log file to get details on skipped files.
 ----
 
-The number of files, directories, and links which are skipped during a migration are listed on the console and the reason for skipping this data is printed. This information is only available to the end user and always appears for a live source migration when you are modifying files and directories during the migration because XCP cannot copy and sync the data. This information allows you to know what is not copied but you cannot use it to selectively copy these files in the next incremental sync operation.
+The number of files, directories, and links which are skipped during a migration are listed on the console and the reason for skipping this data is printed. This information is only available to the end user and always appears for a live source migration when you are modifying files and directories during the migration because XCP cannot copy and sync the data. This information tells you what files have not been copied, but you cannot use it to selectively copy these files in the next incremental sync operation.
 
 == Supported configurations
 
