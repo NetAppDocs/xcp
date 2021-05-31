@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: xcp-troubleshoot-migrattion-wf.html
+keywords: netapp, xcp, troubleshoot, troubleshooting, nfs, errors,
+summary: Troubleshooting XCP NFS errors
+---
+
+= Troubleshoot XCP migration workflows
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Review the folloiwng solutions to troubleshoot XCP migration workflow issues.
+
+|===
+|XCP issue | Cause | Solution
+
+|The XCP `verify` command fails during a migration.
+The STATUS shows as FAILED.
+|The XCP `verify` command was run when the source was live.
+|Run the XCP `verify` command after the final cutover.
+
+|The XCP `verify` command fails after a cutover.
+|The XCP cutover sync operation might not have copied all the data.
+|Run the XCP `sync` command again followed by the `verify` command after the final cutover. If problem persists, contact technical support.
+
+|The XCP `sync` command fails (this applies to all sync failures during migrations).
+|XCP is not able to read the data which can be due to an issue in XCP.
+Check the XCP STATUS message after the command operation completes.
+|Rerun the `sync` command, if the sync operation fails again, contact technical support.
+
+|The XCP `copy`, `resume`, and `sync` commands fail due to insufficient memory.
+XCP crashes and the status is FAILED with XCP.
+|There is low available memory on the host or there has been a huge incremental change.
+|Follow the KB article.
+|===
+
+//BURT 1391465 05/31/2021
