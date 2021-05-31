@@ -12,7 +12,7 @@ summary: NetApp XCP allows for scalable and high-performance data migrations
 :imagesdir: ./media/
 
 [.lead]
-The following workflows and configurations are supported by XCP.
+The following workflows and configurations are supported in XCP.
 
 == Supported workflows in XCP
 Starting from XCP 1.7, when a source is active, that is you are actively using the source volume and changing data on the source, you can migrate the source data to the destination.  During the migration, XCP makes runtime calls to detect the state of the files which are being copied to decide whether or not to copy the data to the destination. As a result, because you are continuously modifying the data, XCP might not copy all the data from the source to the destination. Starting from XCP 1.7, the data that is not copied to the destination will get copied in the next incremental sync operation if XCP does not detect any more anomalies.
