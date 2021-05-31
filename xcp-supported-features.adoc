@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: supported_features.html
+permalink: xcp-supported-features.html
 keywords: netapp, xcp, about, features, unsupported, supported, configuration
 summary: NetApp XCP allows for scalable and high-performance data migrations
 ---

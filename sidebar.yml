@@ -8,9 +8,9 @@ entries:
     type: solutions
     entries:
       - title: Unsupported features
-        url: /unsupported_features.html
+        url: /xcp-unsupported-features.html
       - title: Supported workflows and configurations
-        url: /supported_features.html
+        url: /xcp-supported-features.html
   - title: Install XCP
     url: /xcp-install-xcp.html
     entries:
