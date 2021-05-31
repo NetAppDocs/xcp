@@ -20,14 +20,14 @@ Starting from XCP 1.7, when a source is active, that is you are actively using t
 For XCP 1.6.3 and earlier, XCP provides support for the following migration workflows:
 
 * *Snap based migration:* Enables you to create a baseline snapshot to copy data and later use incremental snapshot to sync the data, followed by cutover snapshot. In each case, you can run verify the operation to check the integrity of the data at any point in migration.
-* *Non snapshot based migration:* Enables you to do baseline data directly from the volume which ensures you stop all I/O operations for the source volume and continues this for the incremental sync operation until you do the cutover. For this case workflow, XCP cannot detect if you have not followed proper procedure.
+* *Non-snapshot-based migration:* Enables you to do baseline data directly from the volume which ensures you stop all I/O operations for the source volume and continues this for the incremental sync operation until you do the cutover. For this case workflow, XCP cannot detect if you have not followed proper procedure.
 * *Mix of snapshot and read-only source volume:* When performing out the migration, you can switch from a read-only volume to the snapshot until you do the cutover.
 
 Starting form XCP 1.7, the following migration workflow is also supported:
 
-* *Live non-snapshot based migration:*
+* *Live non-snapshot-based migration:*
 +
-The live non-snapshot based migration workflow enables you to perform the following functions:
+The live non-snapshot-based migration workflow enables you to perform the following functions:
 
 ** You can find out if a source is live.
 ** You can use XCP and perform a baseline copy. However, if you also run verify the operation might fail. Wait until after a successful baseline copy before you perform the next step.
@@ -37,7 +37,7 @@ The live non-snapshot based migration workflow enables you to perform the follow
 . Run the final sync operation.
 . Run the verify option.
 
-NOTE: In all cases, to enable you to complete a successful XCP migration operation, you should rely on the XCP STATUS messages. If you get any failure messages, you can contact customer support or you can refer to the link:Troubleshooting section at the end of the procedure for more information and possible solutions.
+NOTE: In all cases, to enable you to complete a successful XCP migration operation, you should rely on the XCP STATUS messages. If you get any failure messages, you can contact customer support or you can refer to link:xcp-troubleshoot-migrattion-wf.html[Troubleshoot XCP migration workflows] for more information and possible solutions.
 
 == Visible changes for a live source
 You can check if the source is live after you perform an XCP migration command by checking the console messages. On the console, additional messages are only visible during a copy or sync operation when the source data is changing for append and deletion operations. These messages only appear when XCP detects if a source is live during a migration, otherwise these messages are not displayed.
@@ -60,7 +60,7 @@ Corrective action : Since source data was modified during sync operation, run sy
 Please check xcp.log file to get details on skipped files.
 ----
 
-The number of files, directories, and links which are skipped during a migration are listed on the console and the reason for skipping this data is printed. This information is only available to the end user and always appears for a live source migration when you are modifying files and directories during the migration because XCP cannot copy and sync the data. This information allows you to know what is not copied but you cannot use it to selectively copy these files in the next incremental sync operation. 
+The number of files, directories, and links which are skipped during a migration are listed on the console and the reason for skipping this data is printed. This information is only available to the end user and always appears for a live source migration when you are modifying files and directories during the migration because XCP cannot copy and sync the data. This information allows you to know what is not copied but you cannot use it to selectively copy these files in the next incremental sync operation.
 
 == Supported configurations
 

@@ -13,7 +13,7 @@ summary: Troubleshooting XCP NFS errors
 :imagesdir: ./media/
 
 [.lead]
-Review the folloiwng solutions to troubleshoot XCP migration workflow issues.
+Review the following solutions to troubleshoot XCP migration workflow issues.
 
 |===
 |XCP issue | Cause | Solution
@@ -29,8 +29,8 @@ The STATUS shows as FAILED.
 
 |The XCP `sync` command fails (this applies to all sync failures during migrations).
 |XCP is not able to read the data which can be due to an issue in XCP.
-Check the XCP STATUS message after the command operation completes.
-|Rerun the `sync` command, if the sync operation fails again, contact technical support.
+|Check the XCP STATUS message after the command operation completes.
+Rerun the `sync` command, if the sync operation fails again, contact technical support.
 
 |The XCP `copy`, `resume`, and `sync` commands fail due to insufficient memory.
 XCP crashes and the status is FAILED with XCP.
