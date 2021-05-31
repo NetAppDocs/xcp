@@ -39,6 +39,29 @@ The live non-snapshot based migration workflow enables you to perform the follow
 
 NOTE: In all cases, to enable you to complete a successful XCP migration operation, you should rely on the XCP STATUS messages. If you get any failure messages, you can contact customer support or you can refer to the link:Troubleshooting section at the end of the procedure for more information and possible solutions.
 
+== Visible changes for a live source
+You can check if the source is live after you perform an XCP migration command by checking the console messages. On the console, additional messages are only visible during a copy or sync operation when the source data is changing for append and deletion operations. These messages only appear when XCP detects if a source is live during a migration, otherwise these messages are not displayed.
+
+The is an example of a console message during a copy or sync operation:
+
+----
+Unreadable dirs : 0, Unreadable files : 4, Files modified while reading : 4, Total hardlinks of skipped files : 6
+
+
+Skipped summary : 4 files were being modified while reading. Total hardlinks of skipped files were 6.
+
+
+Reason for skipping :
+
+* Files were modified/deleted while sync was in progress.
+
+Corrective action : Since source data was modified during sync operation, run sync command for incremental changes.
+
+Please check xcp.log file to get details on skipped files.
+----
+
+The number of files, directories, and links which are skipped during a migration are listed on the console and the reason for skipping this data is printed. This information is only available to the end user and always appears for a live source migration when you are modifying files and directories during the migration because XCP cannot copy and sync the data. This information allows you to know what is not copied but you cannot use it to selectively copy these files in the next incremental sync operation. 
+
 == Supported configurations
 
 All the XCP supported configurations such as hosts, ONTAP versions, and supported browsers, are listed in the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool (IMT)^].
