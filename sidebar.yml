@@ -7,10 +7,8 @@ entries:
     url: /index.html
     type: solutions
     entries:
-      - title: Unsupported features
-        url: /xcp-unsupported-features.html
-      - title: Supported workflows and configurations
-        url: /xcp-supported-features.html
+      - title: Ports used by XCP
+        url: /ports-used-xcp.html
   - title: Install XCP
     url: /xcp-install-xcp.html
     entries:
