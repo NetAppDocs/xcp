@@ -1,0 +1,17 @@
+---
+sidebar: sidebar
+permalink: xcp-ports-used.html
+keywords: ports, xcp
+summary: You muse check that you are using the correct ports for XCP migration.
+---
+
+= Ports used by XCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+
+//BURT 1391465 05/31/2021
