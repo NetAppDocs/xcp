@@ -63,7 +63,7 @@ The following features are not supported on XCP SMB:
 |XCP does not currently support Alternate Data Streams
 |XCP Filters
 |The XCP SMB exclude option currently excludes directories based on their pattern in the filter and traverses the filesystem of those directories.
-|Active source
+|Active source support
 |XCP does not support the use of a baseline or an incremental Snapshot copy followed by live source migration for an incremental sync.
 |===
 

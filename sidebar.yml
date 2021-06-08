@@ -68,7 +68,5 @@ entries:
         url: /xcp-troubleshoot-xcp-smb-errors.html
       - title: Troubleshoot XCP File Analytics errors
         url: /xcp-troubleshoot-xcp-file-analytics-errors.html
-      - title: Troubleshoot XCP migration workflows
-        url: /xcp-troubleshoot-migrattion-wf.html
   - title: Get more information
     url: /get-more-information.html
