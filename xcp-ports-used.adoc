@@ -14,4 +14,23 @@ summary: You muse check that you are using the correct ports for XCP migration.
 
 [.lead]
 
+The following ports are used by XCP.
+
+[col=2*,options="header",cols="50,50"]
+|===
+|Source |Port
+|CIFS
+|445 TCP/UDP
+|HTTP (httpd)
+|80
+|HTTPS
+|443|NFS
+|111 TCP/UDP and 2049 TCP/UDP|Postgresql
+|5432
+|XCP
+(as a service for File Analytics)
+|5030
+|===
+
+
 //BURT 1391465 05/31/2021
