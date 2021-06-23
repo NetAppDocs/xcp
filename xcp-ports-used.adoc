@@ -18,7 +18,7 @@ The following ports are used by XCP.
 
 [col=2*,options="header",cols="50,50"]
 |===
-|Source |Port
+|Service |Port
 |CIFS
 |445 TCP/UDP
 |HTTP (httpd)
