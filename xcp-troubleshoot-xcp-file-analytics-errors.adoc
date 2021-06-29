@@ -134,3 +134,5 @@ Check the `xcpfalogs` logs to see if the license needs renewal
 |This can happen when there are qtree level exports inside the volume.
 For example, if the volume size is 10 GB that is exported as `/vol1` and there is a qtree inside the volume `/vol1/qtree1`, then the `xcp show` command will show the `vol1` size as `10 GB` and the `qtree1` size as `10 GB`. XCP File Analytics sums the space of both exports and gives the total space, in this case, `20 GB`. It does not understand that `qtree1` is a logical space.
 |===
+
+// BURT 1391465 06/29/2021

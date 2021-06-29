@@ -40,3 +40,5 @@ For an upgrade, you are prompted to stop the XCP service. When done, select `opt
 Use the following command to check if the XCP service is running:
 service xcp status
 .	Launch File Analytics in the browser: *\https://<ip address of linux>/xcp*.
+
+// BURT 1391465 06/29/2021
