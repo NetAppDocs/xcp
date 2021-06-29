@@ -115,6 +115,7 @@ a|*	Make sure that you are using a supported version of the browser. See the IMT
 *	Make sure the XCP service is running by issuing “xcp service status”
 *	Verify that port  5030 is open on Linux. Open the application at *https:// <linux ip> :5030/api/xcp*, and confirm that the messagereads msg: `Missing Authorization Header`
 *	Check whether the `xcp.ini` file is present in the `/opt/NetApp/xFiles/xcp/` location. To reset the `xcp.ini` file, run the configuration script and select the *Repair* option. Next, select the menu option to *rebuild xcp.ini file*
+* Manually run the `xcp --listen` command on the CLI and try to login. If you do not receive a request on the server, re-check the installation and the ports used for communication with the server.  After you verify that the installation is correct, run the `service xcp start` command to restart the service.
 |XCP GUI is not showing updated pages.
 |Clear the cache and try again
 |XCP service is not starting
