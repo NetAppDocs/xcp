@@ -37,6 +37,8 @@ No other active applications
 |XCP File Analytics supports Google Chrome version 76 and later. See the IMT matrix for all the supported versions of the browser
 |===
 
+NOTE: The recommended configuration for live source migration is 8 cores and 64 GB RAM.
+
 .Steps
 
 . Log in to the Linux machine as the root user and download and install the license:
@@ -103,3 +105,4 @@ drwxr-xr-x 4 root root    83 Oct  5 00:48 .
 XCP <version>; (c) 2020 NetApp, Inc.;
 XCP already activated
 ----
+//BURT 1391465 05/31/2021

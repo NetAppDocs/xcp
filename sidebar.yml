@@ -6,6 +6,9 @@ entries:
   - title: Get started with XCP
     url: /index.html
     type: solutions
+    entries:
+      - title: Ports used by XCP
+        url: /xcp-ports-used.html
   - title: Install XCP
     url: /xcp-install-xcp.html
     entries:

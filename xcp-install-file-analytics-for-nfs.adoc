@@ -22,6 +22,7 @@ The `configure.sh` script installs and enables default configurations of HTTPD a
 
 *	You cannot run the XCP application and XCP as service simultaneously on the same host. If any XCP operations are running, complete the operations before you start configuration.
 *	Your Linux machine must be connected to the Yum repository server or the internet.
+* If a firewall is configured on the Linux machine, you must change the firewall settings to enable the ports used by XCP, the XCP service, and the services used by XCP File Analytics. For more information, go to xref:xcp-ports-used.html[Ports used by XCP].
 
 .Steps
 
@@ -39,3 +40,5 @@ For an upgrade, you are prompted to stop the XCP service. When done, select `opt
 Use the following command to check if the XCP service is running:
 service xcp status
 .	Launch File Analytics in the browser: *\https://<ip address of linux>/xcp*.
+
+// BURT 1391465 06/29/2021

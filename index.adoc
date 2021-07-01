@@ -63,16 +63,18 @@ The following features are not supported on XCP SMB:
 |XCP does not currently support Alternate Data Streams
 |XCP Filters
 |The XCP SMB exclude option currently excludes directories based on their pattern in the filter and traverses the filesystem of those directories.
+|Active source support
+|XCP does not support the use of a baseline or an incremental Snapshot copy followed by live source migration for an incremental sync.
 |===
 
 The following common features are not available for XCP NFS and SMB:
 
-* *Active source support*: When data is active and continuously changing on the source volume. In such cases, use Snapshot for the data migration or perform the migration when there is no data changes happening on the source.
 *	*XCP multiple instances on same host*: When running multiple instances of XCP on the same host you might get unpredictable results.
 *	*Time to complete migration*: XCP upfront does not provide the time to complete the migration or the time to complete any command used for migration. If you are doing final cutover confirm that data churn on the source volume is low.
 * *Running copy again on an uncleaned target*: XCP baseline copy will fail when there is partial data on the destination target. For a successful XCP baseline copy and XCP verify, the destination must be clean.
 * *Live destination*: XCP does not support modifying data on the destination volume during a migration or during an incremental sync.
 
 == Supported configurations
-
 All the XCP supported configurations such as hosts, ONTAP versions, and supported browsers, are listed in the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool (IMT)^].
+
+// BURT 1391465 05/31/2021
