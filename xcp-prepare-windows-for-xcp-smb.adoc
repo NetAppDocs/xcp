@@ -29,7 +29,7 @@ XCP SMB transitions and migrations have the following user login requirements:
 .	Click *Mange auditing and security log*.
 .	To add an XCP host user, select *Add User or Group*.
 
-For more information see: link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953(v%3Dws.11)[Manage auditing and security log].
+For more information, see: link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953(v%3Dws.11)[Manage auditing and security log^].
 
 *	Target storage system: XCP host user must have read and write access.
 *	Source storage system:
@@ -39,4 +39,4 @@ regardless of any permissions that protect those files.
 **	If the user is not part of “Backup Operators” group in source system, the user
 must have read access.
 
-NOTE: Write permission is required in the source storage system for supporting the XCP option “- preserve-atime”.
+NOTE: Write permission is required in the source storage system for supporting the XCP option `- preserve-atime`.
