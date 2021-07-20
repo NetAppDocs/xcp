@@ -25,7 +25,7 @@ NOTE:	There is no option to upgrade; reinstall XCP to replace any existing versi
 |System
 |64-bit Intel or AMD server, minimum 4 cores and 32 GB RAM
 |Operating System & Software
-|Windows 2012 R2 or above. See the link:https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix Tool] for supported Microsoft OS versions
+|Windows 2012 R2 or above. See the link:https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix Tool^] for supported Microsoft OS versions
 
 Visual C++ 2017 redistributable must be installed on the XCP host.
 

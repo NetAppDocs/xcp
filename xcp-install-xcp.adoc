@@ -25,7 +25,7 @@ image:xcp_image16.PNG[Error: Missing Graphic Image]
 
 Download XCP from the NetApp support site and obtain a license from the XCP site.
 
-You can download XCP from the link:https://mysupport.netapp.com/products/p/xcp.html[NetApp Support site].
+You can download XCP from the link:https://mysupport.netapp.com/products/p/xcp.html[NetApp Support site^].
 
 == License XCP
 
