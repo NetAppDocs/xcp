@@ -25,11 +25,11 @@ image:xcp_image16.PNG[Error: Missing Graphic Image]
 
 Download XCP from the NetApp support site and obtain a license from the XCP site.
 
-You can download XCP from the link:https://mysupport.netapp.com/products/p/xcp.html[NetApp Support site].
+You can download XCP from the link:https://mysupport.netapp.com/products/p/xcp.html[NetApp Support site^].
 
 == License XCP
 
-NetApp offers a free 90-day XCP license. You can obtain the license file from https://xcp.netapp.com. The licensing portal offers different licensing options. After 90 days you can renew the license for another 90 days using the same portal.
+NetApp offers a free 90-day XCP license. You can obtain the license file from the link:https://xcp.netapp.com/[XCP site^]. The licensing portal offers different licensing options. After 90 days you can renew the license for another 90 days using the same portal.
 
 The XCP license is available as an offline or online license. If you want to send migration statistics use an online license. The online license requires an internet connection. The offline license does not require an internet connection.
 

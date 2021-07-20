@@ -19,13 +19,13 @@ Review the solutions to troubleshoot your issue.
 |Issue |Solution
 
 |`xcp: ERROR`: This license has expired
-|Renew or obtain the new XCP license from http://xcp.netapp.com.
+|Renew or obtain the new XCP license from the link:https://xcp.netapp.com/[XCP site^].
 |This copy is not licensed
 |Obtain the appropriate XCP license file. Copy the XCP license to the `c:\netapp\xcp` folder on the XCP host. Run the `xcp activate` command to activate the license
 |`xcp: ERROR`: XCP not activated, run 'activate' first
-|Download the XCP license from http://xcp.netapp.com. Copy the file on the XCP Linux client host at `c:\netapp\xcp` on the XCP host. Run the `xcp activate` command to activate the license.
+|Download the XCP license from the link:https://xcp.netapp.com/[XCP site^]. Copy the file on the XCP Linux client host at `c:\netapp\xcp` on the XCP host. Run the `xcp activate` command to activate the license.
 |`xcp: ERROR`: License file C:\NetApp\XCP\license not found
-|Register for the XCP license at http://xcp.netapp.com. Download and copy the license file to `C:\NetApp\XCP\` on the XCP Windows client host.
+|Register for the XCP license on the link:https://xcp.netapp.com/[XCP site^]. Download and copy the license file to `C:\NetApp\XCP\` on the XCP Windows client host.
 |`xcp scan Error`: The network name cannot be found
 |Rerun the command with correct share name
 |`xcp copy Error`: ERROR failed to obtain fallback security principal
