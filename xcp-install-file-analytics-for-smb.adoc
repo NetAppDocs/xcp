@@ -29,7 +29,7 @@ To perform a fresh install of File Analytics for SMB, complete the following ste
 .Steps
 
 . Copy the `xcp.exe` file to your Windows `C:` drive, this binary is available inside `/xcp/windows` after you untar the tgz.
-. Download the XCP license file from https://xcp.netapp.com/
+. Download the XCP license file from the link:https://xcp.netapp.com/[XCP site^].
 . Create the folder `C:\\NetApp\XCP` and copy the XCP license to this location.
 . Activate the XCP license using the following command at the command prompt:  `xcp.exe activate`
 . Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/` (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP`

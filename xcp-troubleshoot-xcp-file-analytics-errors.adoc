@@ -108,9 +108,9 @@ a|Run configure again and select the installation option. If the previous instal
 |Not able to open login page after successful install
 |Make sure your system is able to ping the Linux machine where XCP File Analytics is installed and HTTPD is running. If the services are not running, run `configure` and choose the repair option.
 
-Make sure that you are using supported version of browser. See the IMT: https://mysupport.netapp.com/matrix/
+Make sure that you are using supported version of browser. See the link:https://mysupport.netapp.com/matrix/[IMT^].
 |User login failed
-a|*	Make sure that you are using a supported version of the browser. See the IMT: https://mysupport.netapp.com/matrix/
+a|*	Make sure that you are using a supported version of the browser. See the link:https://mysupport.netapp.com/matrix/[IMT^].
 *	Check the user is “admin” and the password is correct.
 *	Make sure the XCP service is running by issuing “xcp service status”
 *	Verify that port  5030 is open on Linux. Open the application at *https:// <linux ip> :5030/api/xcp*, and confirm that the messagereads msg: `Missing Authorization Header`.
