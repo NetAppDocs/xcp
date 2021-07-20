@@ -15,7 +15,7 @@ summary: Install or upgrade File Analytics for SMB
 [.lead]
 Install or upgrade File Analytics for SMB.
 
-For system requirements for SMB see link:xcp-install-xcp-smb.html[Install XCP SMB].
+For system requirements for SMB, see link:xcp-install-xcp-smb.html[Install XCP SMB].
 
 *Before you begin*
 
