@@ -24,7 +24,7 @@ This section details the system requirements and the procedures for the initial 
 |System
 |64-bit Intel or AMD server, minimum 4 cores and 32 GB RAM
 |Operating System & Software
-|RHEL8. See the IMT for supported operating systems
+|RHEL8. See the link:https://mysupport.netapp.com/matrix/[IMT^] for supported operating systems
 |Special Requirements
 |Network connectivity and root level access to source and destination NFSv3 exports
 
@@ -34,7 +34,7 @@ No other active applications
 |Supported Protocol Version
 |NFSv3 and NFSv4 (ACL only)
 |Supported browser (File Analytics only)
-|XCP File Analytics supports Google Chrome version 76 and later. See the IMT matrix for all the supported versions of the browser
+|XCP File Analytics supports Google Chrome version 76 and later. See the link:https://mysupport.netapp.com/matrix/[IMT^] matrix for all the supported versions of the browser
 |===
 
 NOTE: The recommended configuration for live source migration is 8 cores and 64 GB RAM.
