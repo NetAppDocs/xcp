@@ -1,0 +1,40 @@
+---
+sidebar: sidebar
+permalink: xcp-configure-duplicate-nfs.html
+keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
+summary: Steps to configure the INI file XCP
+---
+
+= Configure security (NFS only)
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The XCP security feature gives you the capability to use a non-root user on a Linux host machine to perform a migration. In earlier XCP versions, you perform a migration using the root user of the Linux machine. This root user has all the permissions for the source, destination, and catalog volumes. As part of the migration, the mount is completed by the XCP operations. For a non-root user to work, the Linux root-user must complete the mount.
+
+When you are preforming migrations, it is common to turn off security and let an administrator copy everything as fast as possible. For ongoing transitions in production environments where XCP is has been used for years, it is not secure to run as an administrator (or root). Removing the requirement to run XCP as the root gives you the capability to use XCP in secure environments. When a regular non-root user runs XCP operations, all the XCP operations have the same access rights and limits as the user.
+
+XCP processes conform to all security policies and technologies configured by the administrators of NetApp ONTAP, Linux, and Hadoop or MapR. For example, if wire encryption is configured for NFSv4, then XCP traffic is automatically encrypted. If you use a ticketing system for authentication, the XCP user must obtain a ticket.
+
+.Combine POSIX and HDFS connectors, multinode scale-out, and security features
+You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `xcp copy` and `xcp verify` commands combine POSIX and HDFS connectors with the security and scale-out features:
+
+* `xcp copy` command:
++
+----
+./xcp copy hdfs:///user/demo/d1 file:///mnt/nfs-server0/d3
+./xcp copy -match "'USER1 in name'" file:///mnt/nfs-server0/d3
+hdfs:///user/demo/d1
+./xcp copy —node worker1,worker2,worker3 hdfs:///user/demo/d1
+file:///mnt/nfs-server0/d3
+----
+* `xcp verify` command:
+----
+./xcp verify file:///mnt/nfs-server0/d3 hdfs:///user/demo/d2
+----
+
+// BURT 1423222 09/13/2021

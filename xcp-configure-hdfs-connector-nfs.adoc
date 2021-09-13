@@ -1,0 +1,97 @@
+---
+sidebar: sidebar
+permalink: xcp-configure-hdfs-connector-nfs.html
+keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
+summary: Steps to configure the INI file XCP
+---
+
+= Configure the HDFS connector (NFS only)
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The HDFS connector (hdfs://) allows XCP to access any HDFS file system that is available with different vendors. Currently, only the MapR cluster is qualified and supported.
+
+.Supported features
+
+The following features are supported for HDFS connectors:
+• Relative paths are supported, for example, `hdfs://./testDir`
+• You can use the `xcp copy` command from HDFS to NFS and NFS to HDFS
+
+.Path Syntax
+The path syntax for an HDFS connector is `hdfs://[user@host:port]/full-path`.
+
+NOTE: If you do not specify a user, host and port, XCP calls `hdfsConnect` with the host set to `default` and the port set to `0`.
+
+.Set up a HDFS connector
+To run the `HDFS copy` command, you must set the HDFS client on the Linux system and, based on the Hadoop vendor, follow the setup configuration available on the internet. For example, to set the client for a MapR cluster, use `/https://docs.datafabric.hpe.com/60/AdvancedInstallation/SettingUptheClient-redhat.html`.
+
+After you complete the HFDS client setup, you must complete the  configuration on the client. To use the HDFS paths with XCP commands, you require the following two environment variables:
+* NHDFS_LIBHDFS_PATH
+* NHDFS_LIBJVM_PATH
+For example, the settings below work with MapR and java-1.8.0-openjdk-devel on CentOS:
+----
+export JAVA_HOME=$(dirname $(dirname $(readlink $(readlink $
+(which javac)))))
+export NHDFS_LIBJVM_PATH=`find $JAVA_HOME -name "libjvm.so"` export
+NHDFS_LIBHDFS_PATH=/opt/mapr/lib/libMapRClient.so
+----
+Before running XCP, you must verify that the standard Hadoop commands work by using commands such as:
+----
+[demo@mapr0 ~]$ hadoop fs -ls Found 3 items
+drwxr-xr-x - demo mapr 0 2021-01-14 00:02 d1
+drwxr-xr-x - demo mapr 0 2021-01-14 00:02 d2
+drwxr-xr-x - demo mapr 0 2021-01-14 00:02 d3
+----
+The following are examples of the `xcp copy`, `xcp scan`, `xcp verify` and `xcp delete commands`. You can use the mounted path on the source and destination by using the HDFS (hdfs://) connector.
+
+* `xcp scan` command:
++
+----
+./xcp scan -match "'USER1 in name'" hdfs:///user/demo
+./xcp scan -md5 -match "'USER1 in name'" hdfs:///user/demo
+./xcp scan -stats hdfs:///user/demo
+----
+* `xcp copy` command:
++
+----
+./xcp copy hdfs:///user/demo/d1 hdfs:///user/demo/d2
+./xcp verify hdfs:///user/demo/d1 hdfs:///user/demo/d2
+./xcp copy -match "'USER1 in name'" hdfs:///user/demo/d1 hdfs:///
+user/demo/d2
+----
+* `xcp verify` command:
++
+----
+./xcp verify hdfs:///user/demo/d1 hdfs:///user/demo/d2
+----
+* `xcp delete` command:
+----
+./xcp delete -force hdfs:///user/demo/d1
+----
+
+.Ownership (UID and GID)
+When you are set up as a regular user, by default, an `xcp copy` command to an HDFS or NFS3 destination does not attempt to set the ownership, user ID (UID) and group ID (GID), because that is usually performed by an administrator. Typically, when user A copies files from user B, user A expects to own the destination. This is not the case when the root copies the files. When the root copies the files, the -chown option changes the behavior so that a non-root copy with -chown also attempts to set the UID and GID.
+
+.Combine POSIX and HDFS connectors, multinode scale-out, and security features
+You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `xcp copy` and `xcp verify` commands combine POSIX and HDFS connectors with the security and scale-out features:
+
+* `xcp copy` command:
++
+----
+./xcp copy hdfs:///user/demo/d1 file:///mnt/nfs-server0/d3
+./xcp copy -match "'USER1 in name'" file:///mnt/nfs-server0/d3
+hdfs:///user/demo/d1
+./xcp copy —node worker1,worker2,worker3 hdfs:///user/demo/d1
+file:///mnt/nfs-server0/d3
+----
+* `xcp verify` command:
+----
+./xcp verify file:///mnt/nfs-server0/d3 hdfs:///user/demo/d2
+----
+
+// BURT 1423222 09/13/2021

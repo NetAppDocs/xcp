@@ -1,0 +1,124 @@
+---
+sidebar: sidebar
+permalink: xcp-configure-posix-connector-nfs.html
+keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
+summary: Steps to configure the INI file XCP
+---
+
+= Configure the POSIX connector (NFS only)
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The POSIX connector (file://) allows XCP to access any Linux-mounted file system, such as NFSv4, XFS,and veritas. For example, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector.
+
+.Supported features
+
+The following features are supported for POSIX connectors:
+* For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the XCP `scan` command gets the full values (seconds and nanoseconds) and the XCP `copy` command sets them.
+* Relative paths are supported, for example, `\file://./testDir`
+* POSIX connectors are more secure than XCP with NFSv3 TCP sockets, see the security section below for more information.
+
+.Path Syntax
+The path syntax for a POSIX connector is `file://<mounted path on linux>`.
+
+.Set up a POSIX connector
+To set up a POSIX connector, you must perform the following tasks:
+* Use the POSIX connector to mount the NFSv4 file system on the Linux client running XCP.
+* Mount a source and a destination.
+* Verify that the destination path has the necessary permission to write the data.
+
+In the following case source example, a destination and a catalog are mounted:
+----
+root@scspr2395903001 ~]# findmnt -t nfs4
+TARGET SOURCE FSTYPE OPTIONS
+/t/10.237.170.39_src_vol 10.237.170.39:/source_vol nfs4
+rw,relatime,vers=4.0,rsize=65536,wsize=65536,namlen=255,hard,proto=t
+cp,timeo=600,retrans=2,sec=sys,clien
+/t/10.237.170.53_dest_vol 10.237.170.53:/dest_vol nfs4
+rw,relatime,vers=4.0,rsize=65536,wsize=65536,namlen=255,hard,proto=t
+cp,timeo=600,retrans=2,sec=sys,clien
+/t/10.237.170.53_catalog_vol 10.237.170.53:/xcp_catalog nfs4
+rw,relatime,vers=4.0,rsize=65536,wsize=65536,namlen=255,hard,proto=t
+cp,timeo=600,retrans=2,sec=sys,clien
+[root@scspr2395903001 ~]#
+----
+
+For a catalog volume you should also update the `xcp.ini` file. You can use the following POSIX connector path instead of the export path:
+----
+[root@scspr2395903001 ~]# cat /opt/NetApp/xFiles/xcp/ xcp.ini
+# Sample xcp config [xcp]
+catalog = file:///t/10.237.170.53_catalog_vol
+[root@scspr2395903001 ~]#
+----
+
+The following are examples of the `xcp copy`, `xcp scan`, `xcp verify` and `xcp delete` commands:
+
+* `xcp scan` command:
++
+----
+./xcp scan -match "'USER1 in name'" file:///mnt/nfs-server0/d3
+./xcp scan -md5 -match "'USER1 in name'" file:///mnt/nfs-server0/d3
+./xcp scan -stats file:///mnt/nfs-server0/d3
+----
+* `xcp copy` command:
++
+----
+./xcp copy file:///mnt/nfs-server0/d3 file:///mnt/nfs-server0/d4
+./xcp copy -match "'USER1 in name'" file:///mnt/nfs-server0/d3 file:///
+mnt/nfs-server0/d4
+----
+* `xcp verify` command:
++
+----
+./xcp verify file:///mnt/nfs-server0/d3 file:///mnt/nfs-server0/d4
+----
+* `xcp delete` command:
++
+----
+./xcp delete -force file:///mnt/nfs-server0/d4
+----
+
+.XCP Catalog
+You can use a POSIX path to a mounted NFS file system to which you have write to permission. For example, in `/opt/ NetApp/xcp/xcp.ini` you can use the following catalog configuration:
+----
+[xcp]
+catalog=file:///mnt/xcp-catalog
+----
+You can manage the sample configuration of an XCP catalog shared by non-root users by creating a Linux group for XCP users:
+----
+sudo groupadd -g 7711 xcp_users
+sudo usermod -G xcp_users -a demo
+sudo chown -R :xcp_users /opt/NetApp/xcp
+sudo chmod -R g+w /opt/NetApp/xcp
+sudo chown -R :xcp_users /mnt/xcp-catalog
+sudo chmod -R g+w /mnt/xcp-catalog
+----
+
+NOTE: The XCP catalog contains metadata from scans and copies. As a result, you should configure the catalog file system permissions for an allowed user or users only because the file and directory names and other metadata are stored and should be secured, even though no data is stored in the catalog.
+
+.Ownership (UID and GID)
+When you are set up as a regular user, by default, an `xcp copy` command to a POSIX or NFS3 destination does not attempt to set the ownership, user ID (UID) and group ID (GID), because that is usually performed by an administrator. Typically, when user A copies files from user B, user A expects to own the destination. This is not the case when the root copies the files. When the root copies the files, the -chown option changes the behavior so that a non-root copy with -chown also attempts to set the UID and GID.
+
+.Combine POSIX and HDFS connectors, multinode scale-out, and security features
+You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `xcp copy` and `xcp verify` commands combine POSIX and HDFS connectors with the security and scale-out features:
+
+* `xcp copy` command:
++
+----
+./xcp copy hdfs:///user/demo/d1 file:///mnt/nfs-server0/d3
+./xcp copy -match "'USER1 in name'" file:///mnt/nfs-server0/d3
+hdfs:///user/demo/d1
+./xcp copy —node worker1,worker2,worker3 hdfs:///user/demo/d1
+file:///mnt/nfs-server0/d3
+----
+* `xcp verify` command:
+----
+./xcp verify file:///mnt/nfs-server0/d3 hdfs:///user/demo/d2
+----
+
+// BURT 1423222 09/13/2021

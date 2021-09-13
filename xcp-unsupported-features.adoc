@@ -20,8 +20,19 @@ The following features are not supported on XCP NFS:
 
 |IPv6
 |Does not support IP version 6 (IPv6)
-|NFSv4 ACLS (third-party)
+|NFSv4 access control lists (ACLs) (third-party)
 |Does not support third-party to NetApp NFSv4 ACLs
+|POSIX connector
+a|* The `sync` command does not support the POSIX connector.
+* The POSIX connector might be slower compared to the XCP NFSv3 TCP socket client engine.
+|HDFS connector
+a|* The `sync` command does not support the HDFS connector.
+* The HDFS file system does not support symbolic links (symlinks), hard links, or special files.
+|ACLs
+|XCP does not copy ACLs
+|Linux
+|XCP can no longer run on earlier distributions of Linux that were supported by XCP 1.6.3.
+
 |===
 
 The following features are not supported on XCP SMB:
@@ -51,5 +62,5 @@ The following common features are not available for XCP NFS and SMB:
 * *Running copy again on an uncleaned target*: XCP baseline copy will fail when there is partial data on the destination target. For a successful XCP baseline copy and XCP verify, the destination must be clean.
 * *Live destination*: XCP does not support modifying data on the destination volume during a migration or during an incremental sync.
 
-
 // BURT 1391465 05/31/2021
+// BURT 1423222 09/13/2021
