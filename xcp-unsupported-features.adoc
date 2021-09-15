@@ -27,7 +27,7 @@ a|* The `sync` command does not support the POSIX connector.
 * The POSIX connector might be slower compared to the XCP NFSv3 TCP socket client engine.
 |HDFS connector
 a|* The `sync` command does not support the HDFS connector.
-* The HDFS file system does not support symbolic links (symlinks), hard links, or special files.
+* The Hadoop Distributed File System (HDFS) file system does not support symbolic links (symlinks), hard links, or special files.
 |ACLs
 |XCP does not copy ACLs
 |Linux

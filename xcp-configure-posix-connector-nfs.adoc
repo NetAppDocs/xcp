@@ -14,17 +14,17 @@ summary: Steps to configure the INI file XCP
 :imagesdir: ./media/
 
 [.lead]
-The POSIX connector (file://) allows XCP to access any Linux-mounted file system, such as NFSv4, XFS,and veritas. For example, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector.
+The POSIX connector (file://) allows XCP to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas. For example, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector.
 
 .Supported features
 
 The following features are supported for POSIX connectors:
-* For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the XCP `scan` command gets the full values (seconds and nanoseconds) and the XCP `copy` command sets them.
+* For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the XCP `scan` command gets the full values (seconds and nanoseconds) and the XCP `copy` command sets them
 * Relative paths are supported, for example, `\file://./testDir`
-* POSIX connectors are more secure than XCP with NFSv3 TCP sockets, see the security section below for more information.
+* POSIX connectors are more secure than XCP with NFSv3 TCP sockets, see link:xcp-configure-security-nfs.html[Configure security]
 
 .Path Syntax
-The path syntax for a POSIX connector is `file://<mounted path on linux>`.
+The path syntax for a POSIX connector is `\file://<mounted path on linux>`.
 
 .Set up a POSIX connector
 To set up a POSIX connector, you must perform the following tasks:
@@ -32,7 +32,7 @@ To set up a POSIX connector, you must perform the following tasks:
 * Mount a source and a destination.
 * Verify that the destination path has the necessary permission to write the data.
 
-In the following case source example, a destination and a catalog are mounted:
+A destination and a catalog are mounted in the following example:
 ----
 root@scspr2395903001 ~]# findmnt -t nfs4
 TARGET SOURCE FSTYPE OPTIONS
@@ -48,7 +48,7 @@ cp,timeo=600,retrans=2,sec=sys,clien
 [root@scspr2395903001 ~]#
 ----
 
-For a catalog volume you should also update the `xcp.ini` file. You can use the following POSIX connector path instead of the export path:
+For a catalog volume you should also update the `xcp.ini` file. Instead of the export path, you can use the following POSIX connector path:
 ----
 [root@scspr2395903001 ~]# cat /opt/NetApp/xFiles/xcp/ xcp.ini
 # Sample xcp config [xcp]
@@ -56,28 +56,28 @@ catalog = file:///t/10.237.170.53_catalog_vol
 [root@scspr2395903001 ~]#
 ----
 
-The following are examples of the `xcp copy`, `xcp scan`, `xcp verify` and `xcp delete` commands:
+The following are examples of the `scan`, `copy`, `verify` and `delete` commands:
 
-* `xcp scan` command:
+* `scan` command example:
 +
 ----
 ./xcp scan -match "'USER1 in name'" file:///mnt/nfs-server0/d3
 ./xcp scan -md5 -match "'USER1 in name'" file:///mnt/nfs-server0/d3
 ./xcp scan -stats file:///mnt/nfs-server0/d3
 ----
-* `xcp copy` command:
+* `copy` command example:
 +
 ----
 ./xcp copy file:///mnt/nfs-server0/d3 file:///mnt/nfs-server0/d4
 ./xcp copy -match "'USER1 in name'" file:///mnt/nfs-server0/d3 file:///
 mnt/nfs-server0/d4
 ----
-* `xcp verify` command:
+* `verify` command example:
 +
 ----
 ./xcp verify file:///mnt/nfs-server0/d3 file:///mnt/nfs-server0/d4
 ----
-* `xcp delete` command:
+* `delete` command example:
 +
 ----
 ./xcp delete -force file:///mnt/nfs-server0/d4
@@ -99,15 +99,15 @@ sudo chown -R :xcp_users /mnt/xcp-catalog
 sudo chmod -R g+w /mnt/xcp-catalog
 ----
 
-NOTE: The XCP catalog contains metadata from scans and copies. As a result, you should configure the catalog file system permissions for an allowed user or users only because the file and directory names and other metadata are stored and should be secured, even though no data is stored in the catalog.
+The XCP catalog contains metadata from scans and copies. Even though no data is stored in the catalog, it is recommended that configure the catalog file system permissions for an allowed user or users because the file and directory names and other metadata are stored and should be secured.
 
 .Ownership (UID and GID)
-When you are set up as a regular user, by default, an `xcp copy` command to a POSIX or NFS3 destination does not attempt to set the ownership, user ID (UID) and group ID (GID), because that is usually performed by an administrator. Typically, when user A copies files from user B, user A expects to own the destination. This is not the case when the root copies the files. When the root copies the files, the -chown option changes the behavior so that a non-root copy with -chown also attempts to set the UID and GID.
+When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership, user ID (UID) and group ID (GID), because that is typically performed by an administrator, for example, when user A copies files from user B, user A expects to own the destination. However, this is not the case when the root copies the files. When the root copies the files, the `-chown` option changes the behavior so that a non-root copy with `-chown` attempts to set the UID and GID.
 
 .Combine POSIX and HDFS connectors, multinode scale-out, and security features
-You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `xcp copy` and `xcp verify` commands combine POSIX and HDFS connectors with the security and scale-out features:
+You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `copy` and `verify` commands combine POSIX and HDFS connectors with the security and scale-out features:
 
-* `xcp copy` command:
+* `copy` command example:
 +
 ----
 ./xcp copy hdfs:///user/demo/d1 file:///mnt/nfs-server0/d3
@@ -116,7 +116,7 @@ hdfs:///user/demo/d1
 ./xcp copy —node worker1,worker2,worker3 hdfs:///user/demo/d1
 file:///mnt/nfs-server0/d3
 ----
-* `xcp verify` command:
+* `verify` command example:
 ----
 ./xcp verify file:///mnt/nfs-server0/d3 hdfs:///user/demo/d2
 ----

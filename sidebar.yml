@@ -47,7 +47,7 @@ entries:
       - title: Configure multinode scale-out (NFS only)
         url: /xcp-configure-multinode-scaleout-nfs.html
       - title: Configure security (NFS only)
-        url: /xcp-configure-duplicate-nfs.html
+        url: /xcp-configure-security-nfs.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html
     entries:
