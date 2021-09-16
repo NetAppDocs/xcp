@@ -47,7 +47,7 @@ entries:
       - title: Configure security (NFS only)
         url: /xcp-configure-security-nfs.html
       - title: Logging for NFS and SMB (optional)
-        url: xcp-logging-for-nfs-and-smb.html
+        url: /xcp-logging-for-nfs-and-smb.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html
     entries:

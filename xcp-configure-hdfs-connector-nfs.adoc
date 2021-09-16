@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-configure-hdfs-connector-nfs.html
-keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure the INI file XCP
+keywords: xcp, nfs, hdfs, connector, configure
+summary: The HDFS connector gives XCP the capability to access any HDFS file system that is available with different vendors.
 ---
 
 = Configure the HDFS connector (NFS only)
@@ -14,7 +14,7 @@ summary: Steps to configure the INI file XCP
 :imagesdir: ./media/
 
 [.lead]
-The Hadoop Distributed File System (HDFS) connector (hdfs://) allows XCP to access any HDFS file system that is available with different vendors. Currently, only the MapR cluster is qualified and supported.
+The Hadoop Distributed File System (HDFS) connector (hdfs://) gives XCP the capability to access any HDFS file system that is available with different vendors. Currently, only the MapR cluster is qualified and supported.
 
 .Supported features
 

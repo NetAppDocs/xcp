@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-configure-security-nfs.html
-keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure the INI file XCP
+keywords: xcp, configure, nfs, security. feature
+summary: The XCP security feature gives you the capability to use a non-root user on a Linux host machine to perform a migration.
 ---
 
 = Configure security (NFS only)

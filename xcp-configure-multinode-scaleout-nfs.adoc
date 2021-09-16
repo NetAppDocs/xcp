@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-configure-multinode-scaleout-nfs.html
-keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure the INI file XCP
+keywords: xcp, configure, nfs, multinode, scale, out
+summary: To overcome the performance limits of a single node, you can use a single the XCP copy command to run workers on multiple Linux systems or cluster nodes.
 ---
 
 = Configure multinode scale-out (NFS only)

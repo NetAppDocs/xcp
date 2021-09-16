@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: xcp-configure-posix-connector-nfs.html
-keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
-summary: Steps to configure the INI file XCP
+keywords: xcp, configure, nfs, posix, connector
+summary: The POSIX connector gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas.
 ---
 
 = Configure the POSIX connector (NFS only)
@@ -14,7 +14,7 @@ summary: Steps to configure the INI file XCP
 :imagesdir: ./media/
 
 [.lead]
-The POSIX connector (file://) allows XCP to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas. For example, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector.
+The POSIX connector (file://) gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas. For example, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector.
 
 .Supported features
 
