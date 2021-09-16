@@ -19,7 +19,7 @@ The POSIX connector (file://) allows XCP to access any Linux-mounted file system
 .Supported features
 
 The following features are supported for POSIX connectors:
-* For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the XCP `scan` command gets the full values (seconds and nanoseconds) and the XCP `copy` command sets them
+* For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the `scan` command gets the full values (seconds and nanoseconds) and the `copy` command sets them
 * Relative paths are supported, for example, `\file://./testDir`
 * POSIX connectors are more secure than XCP with NFSv3 TCP sockets, see link:xcp-configure-security-nfs.html[Configure security]
 
@@ -84,12 +84,12 @@ mnt/nfs-server0/d4
 ----
 
 .XCP Catalog
-You can use a POSIX path to a mounted NFS file system to which you have write to permission. For example, in `/opt/ NetApp/xcp/xcp.ini` you can use the following catalog configuration:
+You can use a POSIX path to a mounted NFS file system to which you have write to permission. For example, in `/opt/ NetApp/xcp/xcp.ini`, you can use the following catalog configuration:
 ----
 [xcp]
 catalog=file:///mnt/xcp-catalog
 ----
-You can manage the sample configuration of an XCP catalog shared by non-root users by creating a Linux group for XCP users:
+You can manage the sample configuration of an XCP catalog that is shared by non-root users by creating a Linux group for XCP users:
 ----
 sudo groupadd -g 7711 xcp_users
 sudo usermod -G xcp_users -a demo
@@ -99,10 +99,10 @@ sudo chown -R :xcp_users /mnt/xcp-catalog
 sudo chmod -R g+w /mnt/xcp-catalog
 ----
 
-The XCP catalog contains metadata from scans and copies. Even though no data is stored in the catalog, it is recommended that configure the catalog file system permissions for an allowed user or users because the file and directory names and other metadata are stored and should be secured.
+The XCP catalog contains metadata from scans and copies. Even though no data is stored in the catalog, it is recommended that you configure the catalog file system permissions for an allowed user or users because the file and directory names and other metadata are stored and should be secured.
 
 .Ownership (UID and GID)
-When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership, user ID (UID) and group ID (GID), because that is typically performed by an administrator, for example, when user A copies files from user B, user A expects to own the destination. However, this is not the case when the root copies the files. When the root copies the files, the `-chown` option changes the behavior so that a non-root copy with `-chown` attempts to set the UID and GID.
+When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership, the user ID (UID) and group ID (GID). This is typically performed by an administrator. Therefore, when user A copies files from user B, user A expects to own the destination. However, this is not the case when the root copies the files. When the root copies the files, the `-chown` option changes the behavior so that a non-root copy with `-chown` attempts to set the UID and GID.
 
 .Combine POSIX and HDFS connectors, multinode scale-out, and security features
 You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `copy` and `verify` commands combine POSIX and HDFS connectors with the security and scale-out features:

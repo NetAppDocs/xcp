@@ -28,12 +28,12 @@ Multinode scale-out is helpful in any environment where the performance of a sin
 The path syntax for multinode scale-out is `--nodes worker1,worker2,worker3`.
 
 .Set up multinode scale-out
-Consider a setup with four Linux hosts with similar CPU and RAM configurations. You can use all four hosts for migration because XCP can coordinate the copy operations across all the nodes. To make use of these nodes in a scale-out environment, you must identify one of the four nodes as the master node and other nodes as worker nodes. For example, for a Linux four node setup, name each node as "master", "worker1", "worker2" and "worker3". You then setup the configuration on the master node by using the following procedure:
+Consider a setup with four Linux hosts with similar CPU and RAM configurations. You can use all four hosts for migration because XCP can coordinate the copy operations across all the nodes. To make use of these nodes in a scale-out environment, you must identify one of the four nodes as the master node and other nodes as worker nodes. For example, for a Linux four node setup, name each node as "master", "worker1", "worker2" and "worker3". You then set up the configuration on the master node by using the following procedure:
 
 . Copy XCP in the home directory.
 . Install and activate the XCP license.
 . Modify the `xcp.ini` file and add the catalog path.
-. Set `passwordless ssh` from the master node to the worker nodes:
+. Set passwordless SSH from the master node to the worker nodes:
 .. Generate the key on the master node:
 +
 `ssh-keygen -b 2048 -t rsa -f / root/.ssh/id_rsa -q -N ''`
@@ -41,15 +41,14 @@ Consider a setup with four Linux hosts with similar CPU and RAM configurations. 
 +
 `ssh-copy-id -i /root/.ssh/ id_rsa.pub root@worker1`
 
-The XCP master node uses Secure Shell (SSH) to run workers on other nodes because SSH is secure and widely. You must configure the worker nodes to enable `passwordless ssh` access for the user running XCP on the master node. For example, to enable a user demonstration on the master node to use node `worker1` as an XCP worker node, you must set up the following configuration on the worker node:
+The XCP master node uses Secure Shell (SSH) to run workers on other nodes because SSH is secure and widely. You must configure the worker nodes to enable passwordless SSH access for the user running XCP on the master node. For example, to enable a user demonstration on the master node to use node "worker1" as an XCP worker node, you must set up the following configuration on the worker node:
 
 . Copy XCP binary from the master node to all the worker nodes in home directory.
 +
 You are not required to copy the license or `ini` files on all the worker nodes or activate XCP.
 . Mount the source and destination exported file system on all the nodes.
-+
-When XCP runs on a worker node, the worker node has no local configuration (no license, log files, or catalog). XCP binary only is required on the system in your home directory.
-For example, to run the `copy` command, the master node and all worker nodes need access to the source and destination. For the `xcp copy --nodes linux1,linux2 hdfs:///user/demo/test \file:///mnt/ontap`, the Linux1 and Linux2 hosts must have the HDFS client software configured and the NFS export mounted on /mnt/ontap, and, as mentioned previously, a copy of the XCP binary in the your home directory.
+
+When XCP runs on a worker node, the worker node has no local configuration (no license, log files, or catalog). XCP binary only is required on the system in your home directory. To run the `copy` command, the master node and all worker nodes need access to the source and destination. For the `xcp copy --nodes linux1,linux2 hdfs:///user/demo/test \file:///mnt/ontap` command, the Linux1 and Linux2 hosts must have the HDFS client software configured and the NFS export mounted on /mnt/ontap, and, as mentioned previously, a copy of the XCP binary in the home directory.
 
 .MaxStartups
 When you start up multiple XCP workers simultaneously, to avoid errors, you should increase the `sshd MaxStartups` parameter on each worker node as shown in the following example:

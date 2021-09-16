@@ -64,11 +64,9 @@ Rerun the `sync` command. If the sync operation fails again, contact technical s
 XCP crashes and the XCP status shows as FAILED. (Live)
 |There is low available memory on the host or there has been a huge incremental change. Follow the instructions in the following KB article: link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/NetApp_XCP/XCP:_ERROR:_Cannot_allocate_memory_-_when_syncing_NFS_data[Cannot allocate memory when synching NFS data^]
 |`mnt3 error 13: permission denied`
-|As a non-root user, you do not have the correct permissions to
-access the file system. Check if you can access the file system and perform read write operations.
+|As a non-root user, you do not have the correct permissions to access the file system. Check if you can access the file system and perform read write operations.
 |`xcp: batch 1: ERROR: [Errno 13] Permission denied:`
-|As a non-root user, you do not have the correct permissions to
-access the file system. Check if you can access the file system and perform read write operations.
+|As a non-root user, you do not have the correct permissions to access the file system. Check if you can access the file system and perform read write operations.
 |`mxcp: ERROR: OSMounter 'file:///t/ 10.234.115.215_src_vol/DIR': [Errno 2] No such file or directory`
 |The path `/t/10.234.115.215_src_vol/ DIR` is not mounted on the Linux file system. Check if the path exists.
 |`ERROR: run sync {-id: 'xcp_index_1624263869.3734858'}: sync not yet available for hdfs/ posix/s3fs sources and targets -workaround is copy with a match filter for recent mods`

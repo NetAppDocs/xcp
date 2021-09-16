@@ -25,13 +25,13 @@ The following features are not supported on XCP NFS:
 |POSIX connector
 a|* The `sync` command does not support the POSIX connector.
 * The POSIX connector might be slower compared to the XCP NFSv3 TCP socket client engine.
-|HDFS connector
+|Hadoop Distributed File System (HDFS) connector
 a|* The `sync` command does not support the HDFS connector.
-* The Hadoop Distributed File System (HDFS) file system does not support symbolic links (symlinks), hard links, or special files.
+* The HDFS file system does not support symbolic links (symlinks), hard links, or special files.
 |ACLs
 |XCP does not copy ACLs
 |Linux
-|XCP can no longer run on earlier distributions of Linux that were supported by XCP 1.6.3.
+|XCP is no longer supported on earlier distributions of Linux that were supported by XCP 1.6.3.
 
 |===
 
