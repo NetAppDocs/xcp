@@ -38,8 +38,6 @@ entries:
         url: /xcp-performance-tuning.html
       - title: Environment variable (NFS only)
         url: /xcp-environment-variable.html
-      - title: Logging for NFS and SMB (optional)
-        url: xcp-logging-for-nfs-and-smb.html
       - title: Configure the POSIX connector (NFS only)
         url: /xcp-configure-posix-connector-nfs.html
       - title: Configure the HDFS connector (NFS only)
@@ -48,6 +46,8 @@ entries:
         url: /xcp-configure-multinode-scaleout-nfs.html
       - title: Configure security (NFS only)
         url: /xcp-configure-security-nfs.html
+      - title: Logging for NFS and SMB (optional)
+        url: xcp-logging-for-nfs-and-smb.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html
     entries:
