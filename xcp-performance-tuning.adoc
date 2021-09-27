@@ -15,6 +15,8 @@ summary: Performance tuning (NFS only)
 [.lead]
 After planning the migration with the show and scan commands, you can migrate data.
 
+NOTE: A root user can perform the following step when you are performing data migration as a non-root user. 
+
 For the optimal performance and reliability, NetApp recommends setting the following Linux kernel TCP performance parameters in `/etc/sysctl.conf` on the XCP Linux client host. Run `sysctl -p` or the reboot command to commit the changes:
 
 ----

@@ -44,8 +44,6 @@ entries:
         url: /xcp-configure-hdfs-connector-nfs.html
       - title: Configure multinode scale-out (NFS only)
         url: /xcp-configure-multinode-scaleout-nfs.html
-      - title: Configure security (NFS only)
-        url: /xcp-configure-security-nfs.html
       - title: Logging for NFS and SMB (optional)
         url: /xcp-logging-for-nfs-and-smb.html
   - title: Plan data migration

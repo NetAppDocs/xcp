@@ -34,3 +34,13 @@ XCP NFS transitions and migrations have the following source and target storage 
 *	Source and target volumes must be exported with `root` access to the XCP Linux client host.
 
 NOTE: Configure the source for NFSv3 and NFSv4 exports as read-only so administrators cannot accidentally modify it.
+
+=== Configure a non-root user
+
+Starting XCP 1.8, you can perform data migration as a non-root Linux user. If you are non-root user and you want to perform data migration, see link:[Install XCP] and link:[Configure XCP] for more information.
+
+To perform data migration as a non-root user, you should have following set up:
+*	Read permission access to the source volume
+*	Read/write permission access to the destination volume
+*	Read/write permission access to the catalog volume
+*	The source, destination, and catalog volumes should be mounted with version NFSv3 or NFSv4.

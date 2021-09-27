@@ -44,11 +44,6 @@ Consider a setup with four Linux hosts with similar CPU and RAM configurations. 
 The XCP master node uses Secure Shell (SSH) to run workers on other nodes because SSH is secure and widely. You must configure the worker nodes to enable passwordless SSH access for the user running XCP on the master node. For example, to enable a user demonstration on the master node to use node "worker1" as an XCP worker node, you must set up the following configuration on the worker node:
 
 . Copy XCP binary from the master node to all the worker nodes in home directory.
-+
-You are not required to copy the license or `ini` files on all the worker nodes or activate XCP.
-. Mount the source and destination exported file system on all the nodes.
-
-When XCP runs on a worker node, the worker node has no local configuration (no license, log files, or catalog). XCP binary only is required on the system in your home directory. To run the `copy` command, the master node and all worker nodes need access to the source and destination. For the `xcp copy --nodes linux1,linux2 hdfs:///user/demo/test \file:///mnt/ontap` command, the Linux1 and Linux2 hosts must have the HDFS client software configured and the NFS export mounted on /mnt/ontap, and, as mentioned previously, a copy of the XCP binary in the home directory.
 
 .MaxStartups
 When you start up multiple XCP workers simultaneously, to avoid errors, you should increase the `sshd MaxStartups` parameter on each worker node as shown in the following example:
@@ -64,6 +59,11 @@ When XCP runs a worker on a cluster node, the worker process inherits the enviro
 NHDFS_LIBJVM_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/
 amd64/server/libjvm.so
 ----
+
+If you are using a multisession with POSIX and HDFS file path, you must mount the file system on the master as well as all the worker nodes.
+You must also mount the source and destination exported file system on the master and worker nodes.
+
+When XCP runs on a worker node, the worker node has no local configuration (no license, log files, or catalog). XCP binary only is required on the system in your home directory. For example, to run the `copy` command, the master node and all worker nodes need access to the source and destination. For the `xcp copy --nodes linux1,linux2 hdfs:///user/demo/test file:///mnt/ontap`, the Linux1 and Linux2 hosts must have the HDFS client software configured and the NFS export mounted on /mnt/ontap, and, as mentioned previously, a copy of the XCP binary in the home directory.
 
 .Combine POSIX and HDFS connectors, multinode scale-out, and security features
 You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `copy` and `verify` commands combine POSIX and HDFS connectors with the security and scale-out features:
