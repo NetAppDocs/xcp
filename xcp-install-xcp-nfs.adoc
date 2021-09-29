@@ -54,7 +54,7 @@ total 36188
 -rw-------. 1 root root     1994 Sep  4  2019 license
 ----
 +
-.	Untar XCP to extract the tool:
+.	To extract the tool, untar XCP:
 +
 ----
 [root@scspr1980872003 ~]# tar -xvf NETAPP_XCP_<version>.tgz
@@ -69,9 +69,9 @@ xcp
 +
 If `/opt/NetApp/xFiles/xcp` is available, activate the license by using the `xcp activate` command and proceed with data migration.
 +
-If `/opt/NetApp/xFiles/xcp` is not available, the system creates the XCP host configuration directory and files at `/opt/NetApp/xFiles/xcp` when you run the `xcp activate` command is run for the first time.
+If `/opt/NetApp/xFiles/xcp` is not available, when you run the `xcp activate` command is run for the first time, the system creates the XCP host configuration directory in `/opt/NetApp/xFiles/xcp`.
 +
-The `xcp activate` command fails as license is not installed.
+The `xcp activate` command fails because the license is not installed:
 +
 ----
 [root@scspr1980872003 linux]# ./xcp activate
@@ -139,9 +139,9 @@ xcp
 +
 If the `/home/user1/NetApp/xFiles/xcp` path is available, activate the license by using the `xcp activate` command and proceeding with data migration.
 +
-If `/home/user1/NetApp/xFiles/xcp` is not available, the system creates the XCP host configuration directory and files it at `/home/user1/NetApp/xFiles/xcp` when you run the `xcp activate` command for the first time.
+If `/home/user1/NetApp/xFiles/xcp` is not available, when you run the `xcp activate` command for the first time, the system creates the XCP host configuration directory in `/home/user1/NetApp/xFiles/xcp`.
 +
-The `xcp activate` command fails because the license is not installed.
+The `xcp activate` command fails because the license is not installed:
 +
 ----
 [user1@scspr2474004001 linux]$ /home/user1/xcp/linux/xcp activate
