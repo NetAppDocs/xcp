@@ -17,7 +17,7 @@ All the XCP supported configurations such as hosts, ONTAP versions, and supporte
 
 == XCP security
 
-The XCP security feature gives you the capability to use a non-root user on a Linux host machine to perform a migration. In earlier XCP versions, you performed a migration using the root user of the Linux machine. This root user had all the permissions for the source, destination, and catalog volumes. As part of the migration, the mount was completed by the XCP operations. For XCP 1.8, for a non-root user to work, the Linux root user must complete the mount.
+The XCP security feature gives you the capability to perform a migration by using a non-root user on a Linux host machine. In earlier XCP versions, you performed a migration by using the root user of the Linux machine. This root user had all the permissions for the source, destination, and catalog volumes. As part of the migration, the mount was completed by the XCP operations. For XCP 1.8, for a non-root user to work, the Linux root user must complete the mount.
 
 When you are preforming migrations, it is common to turn off security and let an administrator copy everything as fast as possible. For ongoing transitions in production environments where XCP has been in use for several years, it is not secure to run as an administrator (or root). Removing the requirement to run XCP as the root user gives you the capability to use XCP in secure environments. When a regular non-root user runs XCP operations, all the XCP operations have the same access rights and limits as the user.
 
@@ -26,17 +26,17 @@ XCP processes conform to all security policies and technologies configured by th
 == XCP connectors
 
 === POSIX
-XCP now supports the use of POSIX connectors to provide source and destination paths for data migration. When a non-root user has the permissions required for data migration, they can perform data migration on the paths that are already mounted by a root user by using POSIX connectors.
+XCP now supports the use of POSIX connectors to provide source and destination paths for data migration. When you run as a non-root user with the permissions required for data migration, you can perform data migration on the paths that are already mounted by a root user by using POSIX connectors.
 
 The POSIX connector (file://) gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas. As a result, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector. However, the POSIX connector might be slower compared to the XCP NFSv3 TCP socket client engine.
 
 === HDFS
-XCP supports migrating data from a Hadoop Distributed File System (HDFS) file system to a NetApp file system and vice versa. The HDFS connector (hdfs://) gives XCP the capability to access any HDFS file system that is available with different vendors. When non-root user support is available, a migration administrator on a Hapdoop cluster with non-root access can migrate a Hadoop file system data to an ONTAP cluster.
+XCP supports migrating data from a Hadoop Distributed File System (HDFS) file system to a NetApp file system and vice versa. The HDFS connector (hdfs://) gives XCP the capability to access any HDFS file system that is available with different vendors. When non-root user support is available, a migration administrator on a Hapdoop cluster with non-root access can migrate Hadoop file system data to an ONTAP cluster.
 
 Currently, HDFS connectors are qualified and supported for MapR and Cloudera clusters.
 
 == XCP scale-out
-In earlier versions of XCP, you could not use multiple hosts to distribute and orchestrate your migration. Using a single Linux host with increased RAM and CPU cores and enough bandwidth would still take months to copy petabytes of data. Starting with XCP 1.8, you can improve your data migration by using multiple Linux hosts and distributing your workload.
+In earlier versions of XCP, you could not use multiple hosts to distribute and orchestrate your migration. Using a single Linux host with increased RAM and CPU cores and enough bandwidth would still take months to copy petabytes of data. Starting with XCP 1.8, you can improve your data migration by using multinode scale-out with multiple Linux hosts to distribute your workload.
 
 You can benefit from multinode scale-out in any environment where the performance of a single system is not sufficient. To overcome the performance limits of a single node, you can use a single `copy` (or `scan -md5`) command to run workers on multiple Linux systems or Hadoop cluster nodes.
 

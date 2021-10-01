@@ -39,7 +39,7 @@ NOTE: Configure the source for NFSv3 and NFSv4 exports as read-only so administr
 
 Starting with XCP 1.8, you can perform data migration as a Linux non-root user, see link:xcp-install-xcp-nfs.html#install-xcp-for-a-non-root-user[Install XCP] and link:xcp-configure-the-ini-file-for-xcp-nfs.html#configure-the-ini-file-for-a-non-root-user[Configure XCP] for more information.
 
-To perform data migration as a non-root user, you should have following setup:
+To perform data migration as a non-root user, you should have following configuration:
 
 *	Read permission access to the source volume
 *	Read/write permission access to the destination volume
