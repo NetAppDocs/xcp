@@ -51,7 +51,7 @@ restart sshd
 ----
 
 .The "nodes.ini" file
-When XCP runs a worker on a cluster node, the worker process inherits the environment variables from the main XCP process on the master node. To customize the environment of a particular node, you must only set the variables in the `nodes.ini` file in the configuration directory on the master node (worker nodes do not have a configuration  directory or catalog). For example, for an ubuntu server mars that has its `libjvm.so` in a different location to the master node, such as wave (which is CentOS), wave requires a configuration directory to allow a worker on mars to use the HDFS connector. This setup is shown in the following example:
+When XCP runs a worker on a cluster node, the worker process inherits the environment variables from the main XCP process on the master node. To customize a particular node environment, you must set the variables in the `nodes.ini` file in the configuration directory only on the master node (worker nodes do not have a configuration directory or catalog). For example, for an ubuntu server mars that has its `libjvm.so` in a different location to the master node, such as wave (which is CentOS), wave requires a configuration directory to allow a worker on mars to use the HDFS connector. This setup is shown in the following example:
 ----
 [schay@wave ~]$ cat /opt/NetApp/xFiles/xcp/nodes.ini [mars]
 NHDFS_LIBJVM_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/

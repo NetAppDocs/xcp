@@ -28,10 +28,10 @@ XCP processes conform to all security policies and technologies configured by th
 === POSIX
 XCP now supports the use of POSIX connectors to provide source and destination paths for data migration. When you run as a non-root user with the permissions required for data migration, by using POSIX connectors, you can perform data migration on the paths that are already mounted by a root user.
 
-The POSIX connector (file://) gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas. As a result, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector. However, the POSIX connector might be slower compared to the XCP NFSv3 TCP socket client engine.
+The POSIX connector (file://) gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas. As a result, when you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector. However, the POSIX connector might be slower compared to the XCP NFSv3 TCP socket client engine.
 
 === HDFS
-XCP supports migrating data from a Hadoop Distributed File System (HDFS) file system to a NetApp file system and vice versa. The HDFS connector (hdfs://) gives XCP the capability to access any HDFS file system that is available with different vendors. When non-root user support is available, a migration administrator on a Hapdoop cluster with non-root access can migrate Hadoop file system data to an ONTAP cluster.
+XCP supports migrating data from a Hadoop Distributed File System (HDFS) file system to a NetApp file system and vice versa. The HDFS connector (hdfs://) gives XCP the capability to access any HDFS file system that is available with different vendors. When non-root user support is available, a migration administrator on a Hadoop cluster with non-root access can migrate Hadoop file system data to an ONTAP cluster.
 
 Currently, HDFS connectors are qualified and supported for MapR and Cloudera clusters.
 
