@@ -26,7 +26,7 @@ XCP processes conform to all security policies and technologies configured by th
 == XCP connectors
 
 === POSIX
-XCP now supports the use of POSIX connectors to provide source and destination paths for data migration. When you run as a non-root user with the permissions required for data migration, you can perform data migration on the paths that are already mounted by a root user by using POSIX connectors.
+XCP now supports the use of POSIX connectors to provide source and destination paths for data migration. When you run as a non-root user with the permissions required for data migration, by using POSIX connectors, you can perform data migration on the paths that are already mounted by a root user.
 
 The POSIX connector (file://) gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas. As a result, if you do not have permission to mount a file system, you can use a file system that is already mounted on the client by using a POSIX connector. However, the POSIX connector might be slower compared to the XCP NFSv3 TCP socket client engine.
 
