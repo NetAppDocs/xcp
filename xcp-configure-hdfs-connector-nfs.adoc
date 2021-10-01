@@ -20,7 +20,7 @@ The Hadoop Distributed File System (HDFS) connector (hdfs://) gives XCP the capa
 
 The following features are supported for HDFS connectors:
 • Relative paths, for example, `hdfs://./testDir`
-• Using the `copy` command from HDFS to NFS and NFS to HDFS
+• Using the `copy` command from HDFS to NFS, NFS to HDFS, and HDFS to HDFS
 
 .Path Syntax
 The path syntax for a HDFS connector is `hdfs://[user@host:port]/full-path`.
@@ -30,7 +30,7 @@ NOTE: If you do not specify a user, host, and port, XCP calls `hdfsConnect` with
 .Set up a HDFS connector
 To run the HDFS `copy` command, you must set the HDFS client on the Linux system and, based on the Hadoop vendor, follow the setup configuration available on the internet. For example, you can set the client for a MapR cluster by using `/https://docs.datafabric.hpe.com/60/AdvancedInstallation/SettingUptheClient-redhat.html`.
 
-After you complete the HFDS client setup, you must complete the  configuration on the client. To use the HDFS paths with XCP commands, you require the following two environment variables:
+After you complete the HFDS client setup, you must complete the configuration on the client. To use the HDFS paths with XCP commands, you must have the following environment variables:
 
 * NHDFS_LIBHDFS_PATH
 * NHDFS_LIBJVM_PATH

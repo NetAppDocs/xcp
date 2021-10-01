@@ -13,11 +13,11 @@ summary: Performance tuning (NFS only)
 :imagesdir: ./media/
 
 [.lead]
-After planning the migration with the show and scan commands, you can migrate data.
+After planning the migration by using the `show` and `scan` commands, you can migrate data.
 
-NOTE: A root user can perform the following step when you are performing data migration as a non-root user. 
+NOTE: When you are performing data migration as a non-root user, a root user can perform the following step.
 
-For the optimal performance and reliability, NetApp recommends setting the following Linux kernel TCP performance parameters in `/etc/sysctl.conf` on the XCP Linux client host. Run `sysctl -p` or the reboot command to commit the changes:
+For the optimal performance and reliability, NetApp recommends setting the following Linux kernel TCP performance parameters in `/etc/sysctl.conf` on the XCP Linux client host. Run `sysctl -p` or the `reboot` command to commit the changes:
 
 ----
 net.core.rmem_default = 1342177

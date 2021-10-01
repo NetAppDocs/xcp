@@ -17,7 +17,7 @@ Steps to configure the INI file for XCP.
 
 == Configure the INI file for a root user
 
-You can use the following procedure to configure the INI file for an XCP NFS for a root user.
+You can use the following procedure to configure the INI file for an XCP NFS root user.
 
 .Steps
 
@@ -41,8 +41,8 @@ catalog = 10.61.82.210:/vol/xcpvol/
 
 == Configure the INI file for a non-root user
 
-As a non-root user, you do not have permission to mount the NFS file system. In this scenario, a root user has to mount the catalog volume. As a non-root user running XCP, if you have read/write permission to the catalog volume, you can access the mounted catalog volume using a POSIX connector. After the volume is mounted you can add catalog the path by using the following command:
-+
+As a non-root user, you do not have permission to mount the NFS file system. A root user is required to first mount the catalog volume and then, as a non-root user running XCP, if you have read/write permission to the catalog volume, you can access the mounted catalog volume by using a POSIX connector. After the volume is mounted, you can add catalog the path:
+
 ----
 (t/10.237.170.53_catalog_vol – This is the path where catalog volume is mounted)as follows.
 

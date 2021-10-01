@@ -19,6 +19,7 @@ XCP now supports the use of POSIX connectors to provide source and destination p
 .Supported features
 
 The following features are supported for POSIX connectors:
+
 * For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the `scan` command gets the full values (seconds and nanoseconds) and the `copy` command sets them
 * Relative paths are supported, for example, `\file://./testDir`
 * POSIX connectors are more secure than XCP with NFSv3 TCP sockets, see link:xcp-configure-security-nfs.html[Configure security]
@@ -28,8 +29,9 @@ The path syntax for a POSIX connector is `\file://<mounted path on linux>`.
 
 .Set up a POSIX connector
 To set up a POSIX connector, you must perform the following tasks:
-* Mount a source and a destination.
-* Verify that the destination path has the necessary permission to write the data.
+
+* Mount a source and a destination volume
+* Verify that the destination path has the necessary permission to write the data
 
 A destination and a catalog are mounted in the following example:
 ----
@@ -47,15 +49,11 @@ cp,timeo=600,retrans=2,sec=sys,clien
 [root@scspr2395903001 ~]#
 ----
 
-POSIX connectors access a source and destination volume by using the POSIX syntax file://. In the above examples, the source path is `file:///t/10.237.170.39_src_vol` and destination path is `file:// /t/10.237.170.53_dest_vol`.
+POSIX connectors access a source and destination volume by using the POSIX syntax `file://`. In the above example, the source path is `\file:///t/10.237.170.39_src_vol` and the destination path is `file:// /t/10.237.170.53_dest_vol`.
 
-You can manage the sample configuration of an XCP catalog shared by non-root users by creating a Linux group for XCP users. If you are a non-root user, the following permissions are required for Linux users to perform the migration.
+You can manage the sample configuration of an XCP catalog shared by non-root users by creating a Linux group for XCP users. If you are non-root user following permissions are required for the LINUX users to perform the migration.
 
-In the following sample output:
-* `demo` is the non-root user
-* `/mnt/xcp-catalog` is the path where catalog volume is mounted.
-+
-The XCP catalog contains metadata from scans and copies. Even though no data is stored in the catalog, it is recommended that configure the catalog file system permissions for an allowed user or users because the file and directory names and other metadata are stored and should be secured.
+In the following sample output, `demo` is the non-root user and `/mnt/xcp-catalog` is the path where catalog volume is mounted:
 ----
 sudo groupadd -g 7711 xcp_users
 sudo usermod -G xcp_users -a demo
@@ -63,7 +61,9 @@ sudo chown -R :xcp_users /mnt/xcp-catalog
 sudo chmod -R g+w /mnt/xcp-catalog
 ----
 
+The XCP catalog does not store data but it does store file and directory names, and other metadata, from scans and copies. Therefore, it is recommended that you configure the catalog file system permissions for allowed users to give them the capability to secure the stored metadata.
+
 .Ownership (UID and GID)
-When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership, the user ID (UID) and group ID (GID). This is typically performed by an administrator. Therefore, when user A copies files from user B, user A expects to own the destination. However, this is not the case when the root copies the files. When the root copies the files, the `-chown` option changes the behavior so that a non-root copy with `-chown` attempts to set the UID and GID.
+When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership (user ID (UID) and group ID (GID)). Setting the ownership is typically performed by an administrator. When user A copies files from user B, user A expects to own the destination. However, this is not the case when a root user copies the files. When a root user copies the files, the `-chown` option changes the behavior so that a non-root `copy` command with `-chown` attempts to set the UID and GID.
 
 // BURT 1423222 09/13/2021
