@@ -38,10 +38,10 @@ The XCP security feature gives you the capability to perform a migration as a no
 
 When you are preforming data migrations, it is common to turn off security and let an administrator copy everything as fast as possible. For ongoing transitions in production environments where XCP has been in use for several years, it is not secure to run as an administrator (or root). Therefore, removing the requirement to run XCP as the root user gives you the capability to use XCP in secure environments. When a regular non-root user runs XCP operations, they have the same access rights and limits as the user.
 
-In this secure environment, a root user should mount the source, destination and catalog volume on the host machine and provide the necessary permissions for the destination and catalog volumes for a non-root user to write the data. This gives the non-root user the capability to perform a migration by using the XCP POSIX connector feature.
+In this secure environment, a root user should mount the source, destination, and catalog volume on the host machine and provide the necessary permissions for the destination and catalog volumes for a non-root user to write the data. This gives the non-root user the capability to perform a migration by using the XCP POSIX connector feature.
 
 == XCP scale-out
-Until now, data migration using XCP was limited to a single host with higher RAM and CPU. To speed up the migration, memory and cores on the single host was increased but it could still take months to copy petabytes of data. XCP scaled-out architecture has given you the capability to use multiple hosts to perform a data migration. With this feature, you can use multiple Linux hosts to distribute your workload and decrease the migration time.
+Until now, data migration using XCP was limited to a single host with higher RAM and CPU. To speed up the migration, memory and cores on the single host was increased, but it could still take months to copy petabytes of data. XCP scaled-out architecture has given you the capability to use multiple hosts to perform a data migration. With this feature, you can use multiple Linux hosts to distribute your workload and decrease the migration time.
 
 You can benefit from multinode scale-out in any environment where the performance of a single system is not sufficient. To overcome the performance limits of a single node, you can use a single `copy` (or `scan -md5`) command to run workers on multiple Linux systems or Hadoop cluster nodes. Currently, XCP Scale-out is only supported for `copy` command operations.
 
