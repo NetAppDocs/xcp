@@ -5,7 +5,7 @@ keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs, env
 summary: Environment variable (NFS only)
 ---
 
-= Environment variable (NFS only)
+= Environment variable
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -34,3 +34,7 @@ The environment variable XCP_CATALOG_PATH overrides the setting in xcp.ini. If s
 ----
 [root@localhost /]# export XCP_CATALOG_PATH='10.61.82.210:/vol/xcpvol/'
 ----
+
+NOTE: For a non-root user, you must replace `XCP_CATALOG_PATH` from the exported path with the POSIX path.
+
+//2021-Nov-08, BURT 1423222

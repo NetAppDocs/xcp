@@ -5,7 +5,7 @@ keywords: xcp, nfs, hdfs, connector, configure
 summary: The HDFS connector gives XCP the capability to access any HDFS file system that is available with different vendors.
 ---
 
-= Configure the HDFS connector (NFS only)
+= Configure the HDFS connector
 
 :hardbreaks:
 :nofooter:

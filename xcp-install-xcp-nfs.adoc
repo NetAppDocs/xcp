@@ -32,7 +32,7 @@ No other active applications
 |Storage
 |20 MB of disk space for the XCP binary and at least 50 MB of disk space for the logs that are stored in the /opt/NetApp/xFiles/xcp/ directory
 |Supported Protocol Version
-|NFSv3 and NFSv4 (ACL only)
+|NFSv3 and NFSv4 (POSIX and ACL)
 |Supported browser (File Analytics only)
 |XCP File Analytics supports Google Chrome version 76 and later. See the link:https://mysupport.netapp.com/matrix/[IMT^] matrix for all the supported versions of the browser
 |===
@@ -175,7 +175,7 @@ drwxrwxr-x 2 user1 user1  21 Sep 20 02:04 xcplogs
 +
 ----
 [user1@scspr2474004001 linux]$ ./xcp activate
-XCP Nightly_dev; (c) 2021 NetApp, Inc.; Licensed to Srikanta Panda [Network Appliance, Inc] until Mon Nov 22 20:55:09 2021
+(c) 2021 NetApp, Inc.
 
 XCP already activated
 

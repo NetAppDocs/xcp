@@ -5,7 +5,7 @@ keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
 summary: Performance tuning (NFS only)
 ---
 
-= Performance tuning (NFS only)
+= Performance tuning
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -30,3 +30,7 @@ net.ipv4.tcp_wmem = 4096 1342177 16777216
 net.core.netdev_max_backlog = 300000
 net.ipv4.tcp_fin_timeout = 10
 ----
+
+NOTE: For a non-root user, the setting must be performed by a root user.
+
+// 2021-Nov-08, BURT 1423222

@@ -5,7 +5,7 @@ keywords: xcp, configure, nfs, posix, connector
 summary: The POSIX connector gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas.
 ---
 
-= Configure the POSIX connector (NFS only)
+= Configure the POSIX connector
 
 :hardbreaks:
 :nofooter:
@@ -51,7 +51,7 @@ cp,timeo=600,retrans=2,sec=sys,clien
 
 POSIX connectors access a source and destination volume by using the POSIX syntax `file://`. In the above example, the source path is `\file:///t/10.237.170.39_src_vol` and the destination path is `file:// /t/10.237.170.53_dest_vol`.
 
-You can manage the sample configuration of an XCP catalog shared by non-root users by creating a Linux group for XCP users. If you are non-root user following permissions are required for the LINUX users to perform the migration.
+You can manage the sample configuration of an XCP catalog shared by non-root users by creating a Linux group for XCP users. For non-root users, the following the permissions are required for Linux group users to perform migrations.
 
 In the following sample output, `demo` is the non-root user and `/mnt/xcp-catalog` is the path where catalog volume is mounted:
 ----
@@ -61,7 +61,7 @@ sudo chown -R :xcp_users /mnt/xcp-catalog
 sudo chmod -R g+w /mnt/xcp-catalog
 ----
 
-The XCP catalog does not store data but it does store file and directory names, and other metadata, from scans and copies. Therefore, it is recommended that you configure the catalog file system permissions for allowed users to give them the capability to secure the stored metadata.
+The XCP catalog does not store data but it does store scan and copy file names, directory names, and other metadata. Therefore, it is recommended that you configure the catalog file system permissions for allowed users to give them the capability to secure the stored metadata.
 
 .Ownership (UID and GID)
 When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership (user ID (UID) and group ID (GID)). Setting the ownership is typically performed by an administrator. When user A copies files from user B, user A expects to own the destination. However, this is not the case when a root user copies the files. When a root user copies the files, the `-chown` option changes the behavior so that a non-root `copy` command with `-chown` attempts to set the UID and GID.

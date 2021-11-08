@@ -70,7 +70,7 @@ XCP crashes and the XCP status shows as FAILED. (Live)
 |`mxcp: ERROR: OSMounter 'file:///t/ 10.234.115.215_src_vol/DIR': [Errno 2] No such file or directory`
 |The path `/t/10.234.115.215_src_vol/ DIR` is not mounted on the Linux file system. Check if the path exists.
 |`ERROR: run sync {-id: 'xcp_index_1624263869.3734858'}: sync not yet available for hdfs/ posix/s3fs sources and targets -workaround is copy with a match filter for recent mods`
-|The `sync` command is not supported in XCP for POSIX and HDFS connectors.
+|The `sync` command is not supported in XCP for the POSIX and HDFS connectors.
 |The `xcp verify` command fails with different mod time
 |You can identify the file and manually copy the file to the destination.
 |`xcp: ERROR: batch 4: Could not connect to node:`
