@@ -8,7 +8,7 @@ sidebar:
       url: /index.html
       type: solutions
       entries:
-        - title: XCP NFS add-ons
+        - title: XCP NFS add-on features
           url: /xcp-nfs-add-ons.html
         - title: Unsupported features
           url: /xcp-unsupported-features.html

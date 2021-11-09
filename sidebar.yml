@@ -7,6 +7,8 @@ entries:
     url: /index.html
     type: solutions
     entries:
+      - title: XCP NFS add-on features
+        url: /xcp-nfs-add-ons.html
       - title: Unsupported features
         url: /xcp-unsupported-features.html
       - title: Supported configurations
@@ -44,8 +46,6 @@ entries:
         url: /xcp-configure-hdfs-connector-nfs.html
       - title: Configure multinode scale-out (NFS only)
         url: /xcp-configure-multinode-scaleout-nfs.html
-      - title: Logging for NFS and SMB (optional)
-        url: /xcp-logging-for-nfs-and-smb.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html
     entries:
@@ -64,6 +64,8 @@ entries:
             url: /xcp-run-a-scan.html
       - title: Filters
         url: /xcp-filters.html
+      - title: Logging for NFS and SMB (optional)
+        url: /xcp-logging-for-nfs-and-smb.html
   - title: Migrate data
     entries:
       - title: Migrate NFS data

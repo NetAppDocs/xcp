@@ -76,7 +76,7 @@ file:///mnt/nfs-server0/d3
 ----
 * `verify` command example:
 ----
-./xcp verify file:///mnt/nfs-server0/d3 hdfs:///user/demo/d2
+./xcp verify hdfs:///user/demo/d2 file:///mnt/nfs-server0/d3 
 ----
 
 // BURT 1423222 09/13/2021

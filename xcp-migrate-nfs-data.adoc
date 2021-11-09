@@ -69,11 +69,11 @@ xcp verify src_server:/src_export dst_server:/dst_export
 ----
 *POSIX path example:*
 ----
-xcp verify \file:///mnt/source file:///mnt/dest
+xcp verify file:///mnt/source file:///mnt/dest
 ----
 
 *HDFS path example:*
 ----
-xcp verify hdfs:///user/demo1/data hdfs://user/demo1/dest
+xcp verify hdfs:///user/demo1/data file:///user/demo1/dest
 ----
 See `xcp help verify` for more details.
