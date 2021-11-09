@@ -75,12 +75,12 @@ XCP crashes and the XCP status shows as FAILED. (Live)
 |You can identify the file and manually copy the file to the destination.
 |`Non dir object copy/sync can not be resumed; try copy again.`
 `For more details please refer XCP user guide.`
-|Becuase a single file cannot be resumed, it is recommended to run the `xcp copy` command again for the file.
+|Because you cannot resume a single file, it is recommended to run the `xcp copy` command again for the file.
 Any change in the file leads to a complete copy of the file. As a result, performance is not affected.
 |`Non dir object can not be synced; try copy again.`
 `For more details please refer XCP user guide.`
-|As single file can not be synced, it is recommended to run the `xcp copy` command again for the file.
-Any change in file leads to a complete copy of file. As a result, performance is not affected.
+|Because you cannot sync a single file, it is recommended to run the `xcp copy` command again for the file.
+Any change in the file leads to a complete copy of the file. As a result, performance is not affected.
 |===
 
 // BURT 1391465 05/31/2021
