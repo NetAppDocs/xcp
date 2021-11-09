@@ -21,7 +21,7 @@ Review the solutions to troubleshoot your issue.
 |`xcp: ERROR`: must run as root
 |Execute XCP commands as root user
 |`xcp: ERROR`: License file `/opt/NetApp/xFiles/xcp/license` not found.
-|Download the license from the link:https://xcp.netapp.com/[XCP site^] and copy to `/opt/NetApp/xFiles/xcp/`
+|Download the license from the link:https://xcp.netapp.com/[XCP site^], copy it to `/opt/NetApp/xFiles/xcp/`, and activate it by running the `xcp activate` command.
 |`xcp: ERROR`: This license has expired
 |Renew or obtain the new XCP license from the link:https://xcp.netapp.com/[XCP site^].
 |`xcp: ERROR`: License unreadable
@@ -32,7 +32,7 @@ run 'activate' first
 |This copy is not licensed
 |Obtain the appropriate XCP license file. Copy the XCP license to the `/opt/NetApp/xFiles/xcp/` directory on the XCP server. Run the `xcp activate` command to activate the license.
 |`xcp: ERROR`: Failed to activate license: Server unreachable
-|You are trying to activate the online license and your host system is not connected to internet. Make sure your system is connected internet.
+|You are trying to activate the online license and your host system is not connected to the internet. Make sure your system is connected to the internet.
 |`xcp: ERROR`: Failed to activate license: Server xcp.netapp.com unreachable
 `xcp: HINT`: Configure DNS on this host or return to the license page to request a private license
 Expected error: Failed to activate license: Server xcp.netapp.com unreachable
@@ -40,15 +40,18 @@ Expected error: Failed to activate license: Server xcp.netapp.com unreachable
 |`xcp: ERROR`: Catalog inaccessible: Cannot mount `nfs_server:/export[:subdirectory]`
 |Open the editor on the XCP Linux client host and update the configuration file with the proper catalog location. The XCP configuration file is located at `/opt/NetApp/xFiles/xcp/xcp.ini`. Sample entries of configuration file:
 
-`[root@scspr1949387001 ~]# cat /opt/NetApp/xFiles/xcp/xcp.ini # Sample xcp config [xcp] catalog = 10.235.128.153:/catalog`
+`[root@scspr1949387001 ~]# cat /opt/NetApp/xFiles/xcp/xcp.ini`
+`[xcp]`
+`catalog = 10.235.128.153:/catalog`
 |`nfs3 error 2`: no such file or directory
 |Operation did not find the source file(s) on the target NFS export. Run the `xcp sync` command to copy the incremental updates from source to destination
 |`xcp: ERROR`: Empty or invalid index
-|Previous copy operation was interrupted before indexing the files. Rerun `xcp copy` with the new index and make sure the system returns “indexed” before interrupting copy
+|Previous copy operation was interrupted before the index file was created. Rerun the same command with the new index and when the command is executing, verify that the keyword “indexed” is displayed in the stats.
 |`xcp: ERROR`: compare batches: child process failed `(exit code -9): recv <type 'exceptions.EOFError'>`
 |Follow the instructions in the following KB article: link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/NetApp_XCP/XCP:_ERROR:_Cannot_allocate_memory_-_when_syncing_NFS_data[Cannot allocate memory when synching NFS data^]
 |`xcp: ERROR`: For xcp to process ACLs, please mount `<path>` using the OS nfs4 client
-|Mount the source and target on the XCP host
+|Mount the source and target on the XCP host using NFSv4, for example, `mount -o vers=4.0 10.10.10.10:/source_vol /mnt/source`
+
 |The XCP `verify` command fails during a migration.
 The STATUS shows as FAILED. (Live)
 |The XCP `verify` command was run when the source was live. Run the XCP `verify` command after the final cutover.
@@ -81,6 +84,12 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 `For more details please refer XCP user guide.`
 |Because you cannot sync a single file, it is recommended to run the `xcp copy` command again for the file.
 Any change in the file leads to a complete copy of the file. As a result, performance is not affected.
+|`xcp: ERROR: batch 4: Could not connect to node:`
+|Verify that the node given in the `—nodes` parameter is reachable. Try connecting by using Secure Shell (SSH) from the master node
+|`[Error 13] permission denied`
+|Check if you have permission to write on the destination volume.
+|`xcp: ERROR: batch 2: child process failed (exit code -6): recv <type 'exceptions.EOFError'>:`
+|Increase your system memory and rerun the test.
 |===
 
 // BURT 1391465 05/31/2021
