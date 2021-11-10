@@ -30,6 +30,8 @@ The following ports are used by XCP.
 |XCP
 (as a service for File Analytics)
 |5030
+|HDFS
+|7222
 |===
 
 

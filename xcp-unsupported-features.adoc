@@ -20,8 +20,20 @@ The following features are not supported on XCP NFS:
 
 |IPv6
 |Does not support IP version 6 (IPv6)
-|NFSv4 ACLS (third-party)
+|NFSv4 access control lists (ACLs) (third-party)
 |Does not support third-party to NetApp NFSv4 ACLs
+|POSIX connector
+a|* The `sync` command does not support the POSIX connector
+* You should not use the `copy` command when the source is active
+|Hadoop Distributed File System (HDFS) connector
+a|* The `sync` command does not support the HDFS connector
+* The HDFS file system does not support symbolic links (symlinks), hard links, or special files
+* You should not use the `copy` command when the source is active
+|ACLs
+|When the source is a non-NetApp system, XCP does not copy ACLs.
+|Linux
+|XCP is no longer supported on earlier distributions of Linux that were supported by XCP 1.6.3.
+
 |===
 
 The following features are not supported on XCP SMB:
@@ -50,6 +62,7 @@ The following common features are not available for XCP NFS and SMB:
 *	*Time to complete migration*: XCP upfront does not provide the time to complete the migration or the time to complete any command used for migration. If you are doing final cutover confirm that data churn on the source volume is low.
 * *Running copy again on an uncleaned target*: XCP baseline copy will fail when there is partial data on the destination target. For a successful XCP baseline copy and XCP verify, the destination must be clean.
 * *Live destination*: XCP does not support modifying data on the destination volume during a migration or during an incremental sync.
-
+* *Non-root user for File Analytics*: XCP does not support installations and configurations performed by a non-root user or a sudo user.
 
 // BURT 1391465 05/31/2021
+// BURT 1423222 09/13/2021

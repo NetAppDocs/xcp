@@ -1,0 +1,68 @@
+---
+sidebar: sidebar
+permalink: xcp-configure-posix-connector-nfs.html
+keywords: xcp, configure, nfs, posix, connector
+summary: The POSIX connector gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas.
+---
+
+= Configure the POSIX connector
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+XCP now supports the use of POSIX connectors to provide source and destination paths for data migration.
+
+.Supported features
+
+The following features are supported for POSIX connectors:
+
+* For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the `scan` command gets the full values (seconds and nanoseconds) and the `copy` command sets them
+* POSIX connectors are more secure than XCP with NFSv3 TCP sockets, see link:xcp-configure-security-nfs.html[Configure security]
+
+.Path Syntax
+The path syntax for a POSIX connector is `\file://<mounted path on linux>`.
+
+.Set up a POSIX connector
+To set up a POSIX connector, you must perform the following tasks:
+
+* Mount a source and a destination volume
+* Verify that the destination path has the necessary permission to write the data
+
+A destination and a catalog are mounted in the following example:
+----
+root@scspr2395903001 ~]# findmnt -t nfs4
+TARGET SOURCE FSTYPE OPTIONS
+/t/10.237.170.39_src_vol 10.237.170.39:/source_vol nfs4
+rw,relatime,vers=4.0,rsize=65536,wsize=65536,namlen=255,hard,proto=t
+cp,timeo=600,retrans=2,sec=sys,clien
+/t/10.237.170.53_dest_vol 10.237.170.53:/dest_vol nfs4
+rw,relatime,vers=4.0,rsize=65536,wsize=65536,namlen=255,hard,proto=t
+cp,timeo=600,retrans=2,sec=sys,clien
+/t/10.237.170.53_catalog_vol 10.237.170.53:/xcp_catalog nfs4
+rw,relatime,vers=4.0,rsize=65536,wsize=65536,namlen=255,hard,proto=t
+cp,timeo=600,retrans=2,sec=sys,clien
+[root@scspr2395903001 ~]#
+----
+
+POSIX connectors access a source and destination volume by using the POSIX syntax `file://`. In the above example, the source path is `\file:///t/10.237.170.39_src_vol` and the destination path is `file:// /t/10.237.170.53_dest_vol`.
+
+You can manage the sample configuration of an XCP catalog shared by non-root users by creating a Linux group for XCP users. For non-root users, the following the permissions are required for Linux group users to perform migrations.
+
+In the following sample output, `demo` is the non-root user and `/mnt/xcp-catalog` is the path where catalog volume is mounted:
+----
+sudo groupadd -g 7711 xcp_users
+sudo usermod -G xcp_users -a demo
+sudo chown -R :xcp_users /mnt/xcp-catalog
+sudo chmod -R g+w /mnt/xcp-catalog
+----
+
+The XCP catalog does not store data but it does store scan and copy file names, directory names, and other metadata. Therefore, it is recommended that you configure the catalog file system permissions for allowed users to give them the capability to secure the stored metadata.
+
+.Ownership (UID and GID)
+When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership (user ID (UID) and group ID (GID)). Setting the ownership is typically performed by an administrator. When user A copies files from user B, user A expects to own the destination. However, this is not the case when a root user copies the files. When a root user copies the files, the `-chown` option changes the behavior so that a non-root `copy` command with `-chown` attempts to set the UID and GID.
+
+// BURT 1423222 09/13/2021

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
-permalink: xcp-prepare-file-analytics.adoc.html
-keywords: netapp, xcp, prepare, preparing, preparation, file analytics,
-summary: Prepare File Analytics
+permalink: xcp-prepare-file-analytics.html
+keywords: netapp, xcp, prepare, preparing, preparation, file analytics
+summary: Prepare for your data migration using File Analytics.
 ---
 
 = Prepare File Analytics
