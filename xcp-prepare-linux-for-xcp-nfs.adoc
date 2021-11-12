@@ -15,22 +15,34 @@ summary: Prepare Linux for XCP NFS
 [.lead]
 XCP NFS uses Linux client host systems to generate parallel I/O streams and fully use available network and storage performance.
 
-=== Configure catalog
+You can configure your setup for a root and a non-root user and then, depending on your setup, you can select either user.
 
-XCP saves operation reports and metadata in an NFSv3-accessible catalog directory. Provisioning the catalog is a one-time preinstallation task requiring the following:
+== Configure catalog
 
-*	A NetApp NFSv3 export for security and reliability.
-*	At least ten disks or solid-state drives in the aggregate containing the export for performance.
-*	Storage configured to allow root access to the catalog export for the IP addresses of all Linux clients used to run XCP (multiple XCP clients can share a catalog location).
-*	Approximately 1 GB of space for every 10 million objects (directories plus files and hard links) to be indexed; each copy that can be resumed or synched and each offline-searchable scan requires an index.
+XCP saves operation reports and metadata in an NFSv3-accessible catalog directory or on any POSIX path with the required permissions.
 
-NOTE: You should store XCP catalogs separately. They should not be located on either the source or the destination NFS export directory. XCP maintains metadata—reports in the catalog location specified during the initial setup. You must specify and update the location for storing the reports before you run any operation with XCP.
+* Provisioning the catalog is a one-time pre-installation activity.
+*	Approximately 1 GB of space is indexed for every 10 million objects (directories plus files and hard links); each copy that can be resumed or synched and each offline-searchable scan requires an index.
+* To support performance, at least ten disks or solid-state drives are required in the aggregate containing the export directory.
 
-=== Configure storage
+NOTE: You should store XCP catalogs separately. They should not be located on either the source or the destination NFS export directory. XCP maintains the metadata which are the reports in the catalog location specified during the initial setup. Before you run any operation using XCP, you must specify and update the location for storing the reports.
+
+== Configure storage
 
 XCP NFS transitions and migrations have the following source and target storage requirements:
 
-*	Source and target servers must have NFSv3 protocol service enabled. For NFSv4 ACL migration, you must enable NFSv4 protocol service and NFSv4 ACL on the destination server.
-*	Source and target volumes must be exported with `root` access to the XCP Linux client host.
+*	Source and target servers must have the NFSv3 or NFS v4.0 protocol service enabled
+** For NFSv4 ACL migration, you must enable NFSv4 protocol service and NFSv4 ACL on the destination server
+* Source and target volumes must be exported with `root` access to the XCP Linux client host
 
-NOTE: Configure the source for NFSv3 and NFSv4 exports as read-only so administrators cannot accidentally modify it.
+NOTE: To prevent administrators accidentally modifying the source volume, you should configure the source volume for the NFSv3 and NFSv4 export directories as read-only.
+
+== Root user
+A root user on a Linux machine has the permissions to mount the source, destination, and catalog volumes.
+
+== Non-root user
+A non-root user has the following permissions on a mounted volume:
+
+* Read permission access to the source volume
+* Read/write permission access to the mounted destination volume
+* Read/write permission access to the catalog volume

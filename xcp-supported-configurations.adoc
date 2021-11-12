@@ -14,5 +14,3 @@ summary: XCP supported configurations such as hosts, ONTAP versions, and support
 [.lead]
 
 All the XCP supported configurations such as hosts, ONTAP versions, and supported browsers, are listed in the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool (IMT)^].
-
-// BURT 1391465 05/31/2021

@@ -32,12 +32,16 @@ No other active applications
 |Storage
 |20 MB of disk space for the XCP binary and at least 50 MB of disk space for the logs that are stored in the /opt/NetApp/xFiles/xcp/ directory
 |Supported Protocol Version
-|NFSv3 and NFSv4 (ACL only)
+|NFSv3 and NFSv4 (POSIX and ACL)
 |Supported browser (File Analytics only)
 |XCP File Analytics supports Google Chrome version 76 and later. See the link:https://mysupport.netapp.com/matrix/[IMT^] matrix for all the supported versions of the browser
 |===
 
 NOTE: The recommended configuration for live source migration is 8 cores and 64 GB RAM.
+
+== Install XCP NFS for a root user
+
+You can use the following procedure to install XCP for a root user.
 
 .Steps
 
@@ -50,7 +54,7 @@ total 36188
 -rw-------. 1 root root     1994 Sep  4  2019 license
 ----
 +
-.	Untar XCP to extract the tool:
+.	To extract the tool, untar XCP:
 +
 ----
 [root@scspr1980872003 ~]# tar -xvf NETAPP_XCP_<version>.tgz
@@ -65,9 +69,9 @@ xcp
 +
 If `/opt/NetApp/xFiles/xcp` is available, activate the license by using the `xcp activate` command and proceed with data migration.
 +
-If `/opt/NetApp/xFiles/xcp` is not available, the system creates the XCP host configuration directory and files at `/opt/NetApp/xFiles/xcp` when you run the `xcp activate` command is run for the first time.
+If `/opt/NetApp/xFiles/xcp` is not available, when you run the `xcp activate` command is run for the first time, the system creates the XCP host configuration directory in `/opt/NetApp/xFiles/xcp`.
 +
-The `xcp activate` command fails as license is not installed.
+The `xcp activate` command fails because the license is not installed:
 +
 ----
 [root@scspr1980872003 linux]# ./xcp activate
@@ -105,4 +109,77 @@ drwxr-xr-x 4 root root    83 Oct  5 00:48 .
 XCP <version>; (c) 2020 NetApp, Inc.;
 XCP already activated
 ----
+
+== Install XCP for a non-root user
+
+You can use the following procedure to install XCP for a non-root user.
+
+.Steps
+.	Log in to the Linux machine as the non-root user and download and install the license:
++
+----
+[user1@scspr2474004001 ~]$ ls -l
+total 36640
+-rwxr-xr-x 1 user1 user1      352 Sep 20 01:56 license
+-rw-r--r-- 1 user1 user1 37512339 Sep 20 01:56 NETAPP_XCP_Nightly_dev.tgz
+[user1@scspr2474004001 ~]$
+----
+
+. To extract the tool, untar XCP:
++
+----
+[user1@scspr2474004001 ~]$ tar -xvf NETAPP_XCP_Nightly_dev.tar
+[user1@scspr2474004001 ~]$ cd xcp/linux/
+[user1@scspr2474004001 linux]$ ls
+xcp
+[user1@scspr2474004001 linux]$
+----
+
+.	Verify that the `/home/user1/NetApp/xFiles/xcp` path is available on the system from a previous version of XCP.
++
+If the `/home/user1/NetApp/xFiles/xcp` path is available, activate the license by using the `xcp activate` command and proceeding with data migration.
++
+If `/home/user1/NetApp/xFiles/xcp` is not available, when you run the `xcp activate` command for the first time, the system creates the XCP host configuration directory in `/home/user1/NetApp/xFiles/xcp`.
++
+The `xcp activate` command fails because the license is not installed:
++
+----
+[user1@scspr2474004001 linux]$ /home/user1/xcp/linux/xcp activate
+(c) 2021 NetApp, Inc.
+xcp: Host config file not found. Creating sample at '/home/user1/NetApp/xFiles/xcp/xcp.ini'
+
+xcp: ERROR: License file /home/user1/NetApp/xFiles/xcp/license not found.
+Register for a license at https://xcp.netapp.com
+[user1@scspr2474004001 linux]$
+----
+
+.	Copy the license to `/home/user1/NetApp/xFiles/xcp/`:
++
+----
+[user1@scspr2474004001 linux]$ cp ~/license /home/user1/NetApp/xFiles/xcp/
+[user1@scspr2474004001 linux]$
+----
+
+.	Verify that the license file was copied to `/home/user1/NetApp/xFiles/xcp/`:
++
+----
+[user1@scspr2474004001 xcp]$ ls -ltr
+total 8
+drwxrwxr-x 2 user1 user1  21 Sep 20 02:04 xcplogs
+-rw-rw-r-- 1 user1 user1  71 Sep 20 02:04 xcp.ini
+-rwxr-xr-x 1 user1 user1 352 Sep 20 02:10 license
+[user1@scspr2474004001 xcp]$
+----
+
+.	Activate XCP:
++
+----
+[user1@scspr2474004001 linux]$ ./xcp activate
+(c) 2021 NetApp, Inc.
+
+XCP already activated
+
+[user1@scspr2474004001 linux]$
+----
+
 //BURT 1391465 05/31/2021

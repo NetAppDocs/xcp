@@ -17,6 +17,8 @@ sidebar:
       url: /index.html
       type: solutions
       entries:
+        - title: XCP NFS add-on features
+          url: /xcp-nfs-add-ons.html
         - title: Unsupported features
           url: /xcp-unsupported-features.html
         - title: Supported configurations
@@ -48,8 +50,12 @@ sidebar:
           url: /xcp-performance-tuning.html
         - title: Environment variable (NFS only)
           url: /xcp-environment-variable.html
-        - title: Logging for NFS and SMB (optional)
-          url: xcp-logging-for-nfs-and-smb.html
+        - title: Configure the POSIX connector (NFS only)
+          url: /xcp-configure-posix-connector-nfs.html
+        - title: Configure the HDFS connector (NFS only)
+          url: /xcp-configure-hdfs-connector-nfs.html
+        - title: Configure multinode scale-out (NFS only)
+          url: /xcp-configure-multinode-scaleout-nfs.html
     - title: Plan data migration
       url: /xcp-plan-data-migration.html
       entries:
@@ -68,6 +74,8 @@ sidebar:
               url: /xcp-run-a-scan.html
         - title: Filters
           url: /xcp-filters.html
+        - title: Logging for NFS and SMB (optional)
+          url: /xcp-logging-for-nfs-and-smb.html
     - title: Migrate data
       entries:
         - title: Migrate NFS data
