@@ -13,7 +13,7 @@ summary: Performance tuning (NFS only)
 :imagesdir: ./media/
 
 [.lead]
-After planning the migration by using the `show` and `scan` commands, you can migrate data.
+For XCP NFS, after planning the migration by using the `show` and `scan` commands, you can migrate data.
 
 NOTE: When you are performing data migration as a non-root user, a root user can perform the following step.
 
