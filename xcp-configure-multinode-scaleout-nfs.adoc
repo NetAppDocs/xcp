@@ -20,7 +20,6 @@ For XCP NFS, you can overcome the performance limits of a single node by using a
 Multinode scale-out is helpful in any environment where the performance of a single system is not sufficient, for example, in the following scenarios:
 
 * When it takes months for a single node to copy petabytes of data
-* In secure environments with Kerberos wire encryption slows down an individual node
 * When high latency connections to cloud object stores slows down an individual node
 * In large HDFS cluster farms where you run a very large number of I/O operations
 
