@@ -36,15 +36,15 @@ entries:
     entries:
       - title: Configure the INI file for XCP NFS
         url: /xcp-configure-the-ini-file-for-xcp-nfs.html
-      - title: Performance tuning (NFS only)
+      - title: Performance tuning
         url: /xcp-performance-tuning.html
-      - title: Environment variable (NFS only)
+      - title: Environment variable
         url: /xcp-environment-variable.html
-      - title: Configure the POSIX connector (NFS only)
+      - title: Configure the POSIX connector
         url: /xcp-configure-posix-connector-nfs.html
-      - title: Configure the HDFS connector (NFS only)
+      - title: Configure the HDFS connector
         url: /xcp-configure-hdfs-connector-nfs.html
-      - title: Configure multinode scale-out (NFS only)
+      - title: Configure multinode scale-out
         url: /xcp-configure-multinode-scaleout-nfs.html
   - title: Plan data migration
     url: /xcp-plan-data-migration.html

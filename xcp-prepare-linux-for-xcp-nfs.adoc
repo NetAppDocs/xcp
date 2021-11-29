@@ -23,9 +23,9 @@ XCP saves operation reports and metadata in an NFSv3-accessible catalog director
 
 * Provisioning the catalog is a one-time pre-installation activity.
 *	Approximately 1 GB of space is indexed for every 10 million objects (directories plus files and hard links); each copy that can be resumed or synched and each offline-searchable scan requires an index.
-* To support performance, at least ten disks or solid-state drives are required in the aggregate containing the export directory.
+* To support performance, at least ten disks or SSDs are required in the aggregate containing the export directory.
 
-NOTE: You should store XCP catalogs separately. They should not be located on either the source or the destination NFS export directory. XCP maintains the metadata which are the reports in the catalog location specified during the initial setup. Before you run any operation using XCP, you must specify and update the location for storing the reports.
+NOTE: You must store XCP catalogs separately. They must not be located on either the source or the destination NFS export directory. XCP maintains the metadata, which are the reports in the catalog location specified during the initial setup. Before you run any operation using XCP, you must specify and update the location for storing the reports.
 
 == Configure storage
 

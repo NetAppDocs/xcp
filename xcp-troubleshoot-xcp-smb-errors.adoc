@@ -26,12 +26,12 @@ Review the solutions to troubleshoot your issue.
 |Download the XCP license from the link:https://xcp.netapp.com/[XCP site^]. Copy the file on the XCP Linux client host at `c:\netapp\xcp` on the XCP host. Run the `xcp activate` command to activate the license.
 |`xcp: ERROR`: License file C:\NetApp\XCP\license not found
 |Register for the XCP license on the link:https://xcp.netapp.com/[XCP site^]. Download and copy the license file to `C:\NetApp\XCP\` on the XCP Windows client host.
-|`xcp scan Error`: The network name cannot be found
+|xcp scan Error: The network name cannot be found
 |Rerun the command with correct share name
-|`xcp copy Error`: ERROR failed to obtain fallback security principal
+|xcp copy Error: ERROR failed to obtain fallback security principal
 
 Error message logged in xcp.log file:
-`pywintypes.error: (1722, 'LookupAccountName', 'The RPC server is unavailable.'`)
+`pywintypes.error: (1722, 'LookupAccountName', 'The RPC server is unavailable.')`
 |Add the destination box in the hosts file (`C:\Windows\System32\drivers\etc\hosts`).
 Netapp storage destination box entry must be in the below format:
 `<data vserver data interface ip>` 1 or more white spaces `<cifs server name>`
@@ -45,7 +45,7 @@ Rerun the command with correct fallback user/group options
 |`xcp copy: ERROR` failed to obtain fallback security principal (Post adding destination box entry in the hosts files)
 
 Error messaged logged in xcp.log file:
-`pywintypes.error`: `(87, 'LookupAccountName', 'The parameter is incorrect.')`
+`pywintypes.error: (87, 'LookupAccountName', 'The parameter is incorrect.')`
 |Incorrect parameter for fallback user/group option.
 Rerun the command with the correct syntax for fallback user/group options
 |`xcp copy` with acl migration
