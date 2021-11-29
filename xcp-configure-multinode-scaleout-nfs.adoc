@@ -14,13 +14,12 @@ summary: To overcome the performance limits of a single node, you can use a sing
 :imagesdir: ./media/
 
 [.lead]
-To overcome the performance limits of a single node, you can use a single `copy` (or `scan -md5`) command to run workers on multiple Linux systems or cluster nodes.
+For XCP NFS, you can overcome the performance limits of a single node by using a single `copy` (or `scan -md5`) command to run workers on multiple Linux systems or cluster nodes.
 
 .Supported features
 Multinode scale-out is helpful in any environment where the performance of a single system is not sufficient, for example, in the following scenarios:
 
 * When it takes months for a single node to copy petabytes of data
-* In secure environments with Kerberos wire encryption slows down an individual node
 * When high latency connections to cloud object stores slows down an individual node
 * In large HDFS cluster farms where you run a very large number of I/O operations
 
@@ -28,12 +27,12 @@ Multinode scale-out is helpful in any environment where the performance of a sin
 The path syntax for multinode scale-out is `--nodes worker1,worker2,worker3`.
 
 .Set up multinode scale-out
-Consider a setup with four Linux hosts with similar CPU and RAM configurations. You can use all four hosts for migration because XCP can coordinate the copy operations across all the host nodes. To make use of these nodes in a scale-out environment, you must identify one of the four nodes as the master node and other nodes as worker nodes. For example, for a Linux four-node setup, name each node as "master", "worker1", "worker2", and "worker3" and then set up the configuration on the master node:
+Consider a setup with four Linux hosts with similar CPU and RAM configurations. You can use all four hosts for migration because XCP can coordinate the copy operations across all the host nodes. To make use of these nodes in a scale-out environment, you must identify one of the four nodes as the master node and other nodes as worker nodes. For example, for a Linux four-node setup, name the nodes as "master", "worker1", "worker2", and "worker3" and then set up the configuration on the master node:
 
 . Copy XCP in the home directory.
 . Install and activate the XCP license.
 . Modify the `xcp.ini` file and add the catalog path.
-. Set passwordless SSH from the master node to the worker nodes:
+. Set passwordless Secure Shell (SSH) from the master node to the worker nodes:
 .. Generate the key on the master node:
 +
 `ssh-keygen -b 2048 -t rsa -f / root/.ssh/id_rsa -q -N ''`
@@ -41,7 +40,7 @@ Consider a setup with four Linux hosts with similar CPU and RAM configurations. 
 +
 `ssh-copy-id -i /root/.ssh/ id_rsa.pub root@worker1`
 
-The XCP master node uses Secure Shell (SSH) to run workers on other nodes. You must configure the worker nodes to enable passwordless SSH access for the user running XCP on the master node. For example, to enable a user demonstration on a master node to use node "worker1" as an XCP worker node, you must copy XCP binary from the master node to all the worker nodes in the home directory.
+The XCP master node uses SSH to run workers on other nodes. You must configure the worker nodes to enable passwordless SSH access for the user running XCP on the master node. For example, to enable a user demonstration on a master node to use node "worker1" as an XCP worker node, you must copy XCP binary from the master node to all the worker nodes in the home directory.
 
 .MaxStartups
 When you start up multiple XCP workers simultaneously, to avoid errors, you should increase the `sshd MaxStartups` parameter on each worker node as shown in the following example:
@@ -51,7 +50,7 @@ restart sshd
 ----
 
 .The "nodes.ini" file
-When XCP runs a worker on a cluster node, the worker process inherits the environment variables from the main XCP process on the master node. To customize a particular node environment, you must set the variables in the `nodes.ini` file in the configuration directory only on the master node (worker nodes do not have a configuration directory or catalog). For example, for an ubuntu server mars that has its `libjvm.so` in a different location to the master node, such as wave (which is CentOS), wave requires a configuration directory to allow a worker on mars to use the HDFS connector. This setup is shown in the following example:
+When XCP runs a worker on a cluster node, the worker process inherits the environment variables from the main XCP process on the master node. To customize a particular node environment, you must set the variables in the `nodes.ini` file in the configuration directory only on the master node (worker nodes do not have a configuration directory or catalog). For example, for an ubuntu server mars that has its `libjvm.so` in a different location to the master node, such as wave (which is CentOS), it requires a configuration directory to allow a worker on mars to use the HDFS connector. This setup is shown in the following example:
 ----
 [schay@wave ~]$ cat /opt/NetApp/xFiles/xcp/nodes.ini [mars]
 NHDFS_LIBJVM_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/
@@ -60,7 +59,7 @@ amd64/server/libjvm.so
 
 If you are using a multisession with POSIX and HDFS file paths, you must mount the file system and the source and destination exported file system on the master node and all worker nodes.
 
-When XCP runs on a worker node, the worker node has no local configuration (no license, log files, or catalog). XCP binary only is required on the system in your home directory. For example, to run the `copy` command, the master node and all worker nodes need access to the source and destination. For the `xcp copy --nodes linux1,linux2 hdfs:///user/demo/test \file:///mnt/ontap`, the `linux1` and `linux2` hosts must have the HDFS client software configured and the NFS export mounted on /mnt/ontap, and, as mentioned previously, a copy of the XCP binary in the home directory.
+When XCP runs on a worker node, the worker node has no local configuration (no license, log files, or catalog). XCP binary only is required on the system in your home directory. For example, to run the `copy` command, the master node and all worker nodes need access to the source and destination. For `xcp copy --nodes linux1,linux2 hdfs:///user/demo/test \file:///mnt/ontap`, the `linux1` and `linux2` hosts must have the HDFS client software configured and the NFS export mounted on /mnt/ontap, and, as mentioned previously, a copy of the XCP binary in the home directory.
 
 .Combine POSIX and HDFS connectors, multinode scale-out, and security features
 You can use the POSIX and HDFS connectors, multinode scale-out, and security features in combination. For example, the following `copy` and `verify` commands combine POSIX and HDFS connectors with the security and scale-out features:
@@ -76,7 +75,7 @@ file:///mnt/nfs-server0/d3
 ----
 * `verify` command example:
 ----
-./xcp verify hdfs:///user/demo/d2 file:///mnt/nfs-server0/d3 
+./xcp verify hdfs:///user/demo/d2 file:///mnt/nfs-server0/d3
 ----
 
 // BURT 1423222 09/13/2021

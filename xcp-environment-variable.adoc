@@ -13,7 +13,7 @@ summary: Environment variable (NFS only)
 :imagesdir: ./media/
 
 [.lead]
-Optional environment variable configuration for NFS systems.
+Optional environment variable configuration for XCP NFS systems.
 
 NOTE: A non-root user can also use the following variables.
 
