@@ -47,9 +47,9 @@ Follow these steps for the VC++ redistributable installation.
 
 . Click link:https://go.microsoft.com/fwlink/?LinkId=746572[VC++ 2017 redistributable^] to download the executable to your default downloads folder.
 +
-. To start the installation, double click the installer. Accept the terms and conditions and click *Install*.
+. To start the installation, double click the installer. Accept the terms and conditions and select *Install*.
 +
-.	When the installation is complete, click *Restart*.
+.	When the installation is complete, restart the Windows client.
 
 === XCP SMB Initial Setup Procedure
 
@@ -57,17 +57,17 @@ Follow these steps to perform the initial setup of XCP SMB.
 
 .Steps
 
-. Copy the license and the XCP SMB binary `NETAPP_XCP_<version>.tgz` on a Windows host.
-+
-. Create an `xcp` directory on your desktop.
-Verify that the `C:\NetApp\XCP` path is available on the system from a previous version of XCP.
+. Download the license and the XCP SMB binary `NETAPP_XCP_<version>.tgz` on a Windows client.
+. Untar the `NETAPP_XCP_<version>.tgz` file.
+. Copy the `xcp.exe` file to your Windows C: drive, this binary is available inside `/xcp/windows` after you untar the `tgz` file.
+. Verify that the `C:\NetApp\XCP` path is available on the system from a previous version of XCP.
 If `C:\NetApp\XCP` is available, activate XCP by using the `xcp activate` command and proceed with data migration.
 +
 If `C:\NetApp\XCP` is not available, the system creates the XCP host configuration directory and files at `C:\NetApp\XCP` when you run the `xcp activate` command for the first time. The `activate xcp` command fails and creates an error message asking for a new license.
 +
 ----
 C:\>xcp.exe activate
-(c) 2020 NetApp, Inc.
+(c) yyyy NetApp, Inc.
 
 License file C:\NetApp\XCP\license not found.
 Register for a license at https://xcp.netapp.com
@@ -90,3 +90,5 @@ XCP already activated
 
 C:\>
 ----
+
+// 2021-12-10, BURT 1442440

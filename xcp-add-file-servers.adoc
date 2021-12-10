@@ -19,7 +19,7 @@ This enables XCP File Analytics to scan and analyze data on the file system. Use
 
 .Step
 
-. To add file servers, click *Add File Server*.
+. To add file servers, select *Add File Server*.
 
 image:xcp_image3.png[Add file server screen]
 

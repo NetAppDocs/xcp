@@ -41,7 +41,7 @@ Optional - If you have a CA certificate, place the certificate in this location 
 . Select `option 4 (Update XCP windows agent IP)` on the main menu and provide the IP address for the Windows machine.
 . Go to your Windows machine and run `xcp listen`, now XCP File Analytics for SMB is configured. Keep the window in an open state to continuously run the service.
 . Launch File Analytics on the Google Chrome browser and refresh the page: `\https://<ip address of linux>/xcp`
-. Click `OK` when the dialog box displays.
+. Select `OK` when the dialog box displays.
 A new tab will open. Please enable pop ups on the browser if it is blocked. Accept the privacy policy for the URL and the following message displays: `SMB agent is ready to use. Please refresh the analytics page`
 . Return to the original tab where the XCP File Analytics GUI is hosted and refresh the page.
 This will display the SMB agent under the Agents card.
@@ -57,7 +57,7 @@ To upgrade the existing File Analytics for SMB, complete the following steps.
 . Select `option 4 (Update XCP windows agent IP)` on the main menu and provide the IP address for the Windows machine.
 . Go to your Windows machine and run `xcp listen`, now XCP File Analytics for SMB is configured. Keep the window in an open state to continuously run the service.
 . Launch File Analytics on the Google Chrome browser and refresh the page: `\https://<ip address of linux>/xcp`
-. Click `OK` when the dialog box displays.
+. Select `OK` when the dialog box displays.
 A new tab will open. Please enable pop ups on the browser if it is blocked. Accept the privacy policy for the URL and the following message displays: `SMB agent is ready to use. Please refresh the analytics page`
 .	Return to the original tab where the XCP File Analytics GUI is hosted and refresh the page.
 This will display the SMB agent under the Agents card.

@@ -17,12 +17,12 @@ When the NFS/SMB files system is added to the XCP File Analytics GUI, you can st
 
 .Steps
 
-. Click the arrow on the added file server card to view the file shares on the file server.
+. Select the arrow on the added file server card to view the file shares on the file server.
 +
 image:xcp_image4.png[View file shares image]
 
-.	From the list of file shares, click the name of the file share to scan.
-.	Click *Scan* to start the scan.
+.	From the list of file shares, select the name of the file share to scan.
+.	Select *Scan* to start the scan.
 +
 XCP displays a progress bar for the scan.
 

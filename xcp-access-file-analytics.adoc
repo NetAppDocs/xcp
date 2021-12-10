@@ -24,8 +24,8 @@ NOTE: To check the supported browsers for accessing File Analytics, see the link
 
 .	Use the link `\https://<IP address of linux machine>/xcp` to access the File Analytics GUI.
 When prompted, accept the security certificate:
-..	Click Advanced below the privacy statement.
-..	Click the proceed to `<IP address of linux machine>` link.
+.. Select Advanced below the privacy statement.
+..	Select the proceed to `<IP address of linux machine>` link.
 . Log in to the GUI using the username “admin” and the password you set during configuration
 +
 image:xcp_image2.png[XCP File Analytics sign in screen]
