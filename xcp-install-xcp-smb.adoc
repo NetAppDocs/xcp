@@ -61,9 +61,9 @@ Follow these steps to perform the initial setup of XCP SMB.
 . Untar the `NETAPP_XCP_<version>.tgz` file.
 . Copy the `xcp.exe` file to your Windows C: drive, this binary is available inside `/xcp/windows` after you untar the `tgz` file.
 . Verify that the `C:\NetApp\XCP` path is available on the system from a previous version of XCP.
-If `C:\NetApp\XCP` is available, activate XCP by using the `xcp activate` command and proceed with data migration.
+If `C:\NetApp\XCP` is available, activate XCP by using the `xcp.exe activate` command and proceed with data migration.
 +
-If `C:\NetApp\XCP` is not available, the system creates the XCP host configuration directory and files at `C:\NetApp\XCP` when you run the `xcp activate` command for the first time. The `activate xcp` command fails and creates an error message asking for a new license.
+If `C:\NetApp\XCP` is not available, the system creates the XCP host configuration directory and files it at `C:\NetApp\XCP` when you run the `xcp.exe activate` command for the first time. The `xcp.exe activate` command fails and creates an error message asking for a new license.
 +
 ----
 C:\>xcp.exe activate
