@@ -31,6 +31,9 @@ See `xcp help copy` for more details.
 
 The `sync` command scans for changes and modifications in the source and target shares in parallel, and applies the appropriate actions (remove, modify, rename, and so on) to the target to make sure that the target is identical to the source.
 
+NOTE: XCP sync does not preserve access time. To preserve access time, use the `-atime` flag.
+
+
 The sync command compares data content, time stamps, file attributes, ownership, and security information.
 
 *Example:*
@@ -52,3 +55,5 @@ C:\xcp>xcp verify \\<source SMB share> \\<destination SMB share>
 ----
 
 See `xcp help verify` for more details.
+
+// BURT 1450816, 2022-01-18 
