@@ -84,11 +84,12 @@ C:\>copy license c:\NetApp\XCP
 +
 ----
 C:\>xcp.exe activate
-XCP SMB; (c) 2020 NetApp, Inc.;
+XCP SMB; (c) yyyy NetApp, Inc.;
 
-XCP already activated
+XCP activated
 
 C:\>
 ----
 
 // 2021-12-20, BURT 1442440
+// 2021-01-18, BURT 1450816
