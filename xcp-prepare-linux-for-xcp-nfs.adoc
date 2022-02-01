@@ -34,7 +34,7 @@ XCP NFS transitions and migrations have the following source and target storage 
 *	Source and target servers must have the NFSv3 or NFS v4.0 protocol service enabled
 ** For NFSv4 ACL migration, you must enable NFSv4 protocol service and NFSv4 ACL on the destination server
 * Source and target volumes must be exported with `root` access to the XCP Linux client host
-* For NFSv4 ACL migration, NFSv4 requires the use of the UTF-8 encoding language. You should use the UTF-8 encoding language for volumes that require ACL migration.
+* For NFSv4 ACL migration, NFSv4 requires that UTF-8 encoding language is used. You should use UTF-8 for volumes that require ACL migration.
 
 NOTE: To prevent administrators accidentally modifying the source volume, you should configure the source volume for the NFSv3 and NFSv4 export directories as read-only.
 
