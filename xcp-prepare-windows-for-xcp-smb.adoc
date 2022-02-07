@@ -43,7 +43,7 @@ NOTE: Write permission is required in the source storage system for supporting t
 
 == Configure the Windows client
 
-* Add the destination storage box and the source storage box to the host configuration file:
+* Add the destination storage box and the source storage box to the host file:
 +
 . Navigate to the following location: `(C:\Windows\System32\drivers\etc\hosts)`
 . Insert the following information to the file:
