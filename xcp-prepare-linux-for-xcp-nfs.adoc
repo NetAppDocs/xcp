@@ -36,7 +36,12 @@ XCP NFS transitions and migrations have the following source and target storage 
 * Source and target volumes must be exported with `root` access to the XCP Linux client host
 * For NFSv4 ACL migration, NFSv4 requires that the encoding language UTF-8 is used. You should use UTF-8 for volumes that require ACL migration.
 
-NOTE: To prevent administrators accidentally modifying the source volume, you should configure the source volume for the NFSv3 and NFSv4 export directories as read-only.
+[NOTE]
+====
+* To prevent administrators accidentally modifying the source volume, you should configure the source volume for the NFSv3 and NFSv4 export directories as read-only.
+
+* In ONTAP, you can use the diag `-atime-update` option to preserve atime. This feature is only available in ONTAP. This feature is helpful if you want to preserve atime of source objects while running XCP.
+====
 
 == Root user
 A root user on a Linux machine has the permissions to mount the source, destination, and catalog volumes.
@@ -49,3 +54,4 @@ A non-root user has the following permissions on a mounted volume:
 * Read/write permission access to the catalog volume
 
 // BURT 1448943, 2022-02-01
+// BURT 1455348, 2022-02-07
