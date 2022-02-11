@@ -19,7 +19,7 @@ XCP includes some additional NFS features that make it easy to change the owners
 
 .About this task
 
-Before changing the ownership of the files, you must configure the new owner. Otherwise, the command will fail. The XCP `chown` and `chmod` commands work similar to the Linux `chown` and `chmod`.
+Before changing the ownership of the files, you must configure the new owner. Otherwise, the command will fail. The XCP `chown` and `chmod` commands work similar to the Linux `chown` and `chmod` commands.
 
 == Chmod
 
