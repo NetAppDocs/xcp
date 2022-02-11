@@ -15,7 +15,7 @@ summary: Prepare Windows for XCP SMB
 [.lead]
 XCP SMB uses Windows client host systems to generate parallel I/O streams and fully use available network and storage performance.
 
-=== Configure storage
+== Configure storage
 
 XCP SMB transitions and migrations have the following user login requirements:
 
