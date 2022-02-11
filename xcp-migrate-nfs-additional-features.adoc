@@ -38,7 +38,7 @@ Run the `xcp help chmod` command for more details.
 
 == Chown
 
-The `chown` command scans and changes the ownership of all the files for the chosen directory structure. The `chown` command requires a NFS share or POSIX path as variables. XCP `chown` recursively change the ownership for a given path. You can use the `chown` command to display the changes when the owner of a file is changed to a different UID.
+The `chown` command scans and changes the ownership of all the files for the chosen directory structure. The `chown` command requires a NFS share or POSIX path as variables. XCP `chown` recursively change the ownership for a given path. 
 
 *Example*
 ....

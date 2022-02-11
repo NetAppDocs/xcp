@@ -40,7 +40,7 @@ XCP NFS transitions and migrations have the following source and target storage 
 ====
 * To prevent administrators accidentally modifying the source volume, you should configure the source volume for the NFSv3 and NFSv4 export directories as read-only.
 
-* In ONTAP, you can use the diag `-atime-update` option to preserve atime. This feature is only available in ONTAP. This feature is helpful if you want to preserve atime of source objects while running XCP.
+* In ONTAP, you can use the diagnostic `-atime-update` option to preserve atime. This feature is only available in ONTAP and is helpful if you want to preserve atime of source objects while running XCP.
 ====
 
 == Root user
