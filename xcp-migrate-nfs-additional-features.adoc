@@ -27,27 +27,27 @@ The `chmod` command scans and changes the file permission of all the files for t
 
 *Example:*
 ....
-xcp chmod -mode 777 NFS [server:/export path | file://<NFS mounted path> | hdfs://<hdfs mounted path> ]
+xcp chmod -mode 777 NFS [server:/export path | file://<NFS mounted path>]
 xcp chmod -mode 707 nfs_server01.netapp.com:/export1
 xcp chmod -reference nfs_server01.netapp.com:/export/dir1/file.txt  nfs_server02.netapp.com: export1
 xcp chmod -match “fnm(‘file.txt’)” -mode 111 file:///mnt/nfs_mount_point/
-xcp chmod -exclude “fnm(‘file.txt’)” -mode 111 hdfs:///demo/user1/
+xcp chmod -exclude “fnm(‘file.txt’)” -mode 111 file:///demo/user1/
 ....
 
 Run the `xcp help chmod` command for more details.
 
 == Chown
 
-The `chown` command scans and changes the ownership of all the files for the chosen directory structure. The `chown` command requires a NFS share or POSIX path as variables. XCP `chown` recursively change the ownership for a given path. 
+The `chown` command scans and changes the ownership of all the files for the chosen directory structure. The `chown` command requires a NFS share or POSIX path as variables. XCP `chown` recursively change the ownership for a given path.
 
 *Example*
 ....
-xcp chown -user user1 NFS [server:/export path | file://<NFS mounted path> | hdfs://<hdfs mounted path> ]
+xcp chown -user user1 NFS [server:/export path | file://<NFS mounted path>
 xcp chown -user user1 nfs_server01.netapp.com:/export1
 xcp chown -user user1 -group group1 nfs_server01.netapp.com:/export1/dir1/
 xcp chown  -reference nfs_server01.netapp.com:/export/dir1/file.txt  nfs_server02.netapp.com:/export1
 xcp chown -match “fnm(‘file.txt’)” -user user1 file:///mnt/nfs_mount_point/
-xcp chown -exclude “fnm(‘file.txt’)” -user user1 -group group1 hdfs:///demo/user1/
+xcp chown -exclude “fnm(‘file.txt’)” -user user1 -group group1
 xcp chown -user-from user1 -user user2 file:///mnt/nfs_mount_point/
 xcp chown -group-from group1 -group group2 nfs_server01.netapp.com:/export1/
 ....
