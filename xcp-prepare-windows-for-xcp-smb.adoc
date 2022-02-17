@@ -41,7 +41,7 @@ must have read access.
 
 NOTE: Write permission is required in the source storage system for supporting the XCP option `- preserve-atime`.
 
-== Configure the Windows client
+== Configure a Windows client
 
 * Add the destination storage box and the source storage box to the host file:
 +
