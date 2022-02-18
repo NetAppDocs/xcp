@@ -46,7 +46,7 @@ NOTE: Write permission is required in the source storage system for supporting t
 * Add the destination storage box and the source storage box to the host file:
 +
 . Navigate to the following location: `(C:\Windows\System32\drivers\etc\hosts)`
-. Insert the following information to the file:
+. Insert the following host entries to the file in the below format:
 +
 
 `<Source data vserver data interface ip>   <Source cifs server name>  <Destination data vserver data interface ip>   <Destination cifs server name>`
