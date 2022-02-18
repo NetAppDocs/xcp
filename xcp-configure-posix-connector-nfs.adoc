@@ -65,4 +65,20 @@ The XCP catalog does not store data but it does store scan and copy file names, 
 .Ownership (UID and GID)
 When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership (user ID (UID) and group ID (GID)). Setting the ownership is typically performed by an administrator. When user A copies files from user B, user A expects to own the destination. However, this is not the case when a root user copies the files. When a root user copies the files, the `-chown` option changes the behavior so that a non-root `copy` command with `-chown` attempts to set the UID and GID.
 
+.Increase the maximum number of open file descriptors
+
+For optimal performance and reliability, you can increase the maximum number of open file descriptors for the XCP user on all nodes.
+
+*Steps*
+
+. Open the file using the Linux command `vi /etc/security/limits.conf`
+. Add the following line to the file:
+`<username> - nofile 999999`
+
+*Example*
+----
+root - nofile 999999
+----
+
 // BURT 1423222 09/13/2021
+// BURT 1448943
