@@ -80,5 +80,7 @@ For optimal performance and reliability, you can increase the maximum number of 
 root - nofile 999999
 ----
 
+See link:https://access.redhat.com/solutions/61334^[Red Hat solutions] for more details.
+
 // BURT 1423222 09/13/2021
-// BURT 1448943
+// BURT 1448943 19/02/2022
