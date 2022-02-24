@@ -11,4 +11,4 @@ The link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2881500[XCP v1.8.
 You are required to sign on to the NetApp Support Site to access the Release Notes.
 
 //BURT 1432222 16-Sep-2021
-// BURT 1448943, 22-02-2022
+//BURT 1448943, 22-02-2022
