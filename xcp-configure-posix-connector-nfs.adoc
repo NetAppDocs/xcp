@@ -74,7 +74,7 @@ For optimal performance and reliability, you can increase the maximum number of 
 
 .Steps
 
-. Open the file using the following command:
+. Open the file by using the following command:
  `vi /etc/security/limits.conf`
 . Add the following line to the file:
 `<username> - nofile 999999`
@@ -84,7 +84,7 @@ For optimal performance and reliability, you can increase the maximum number of 
 root - nofile 999999
 ----
 
-See link:https://access.redhat.com/solutions/61334^[Red Hat solutions] for more details.
+See link:https://access.redhat.com/solutions/61334^[Red Hat solutions] for more information.
 
 // BURT 1423222 09/13/2021
 // BURT 1448943 18/02/2022

@@ -23,7 +23,7 @@ Before changing the ownership of the files, you must configure the new owner. Ot
 
 == Chmod
 
-The `chmod` command scans and changes the file permission of all the files for the chosen directory structure. The `chmod` command requires a mode or reference and NFS share or POSIX path as variables. XCP `chmod` recursively changes the permissions for a given path. You can use the `chmod` command to display the total files scanned and the permissions that have been changed in the output.
+The `chmod` command scans and changes the file permission of all files in the chosen directory structure. The `chmod` command requires a mode or reference and NFS share or POSIX path as variables. XCP `chmod` recursively changes the permissions for a given path. You can use the `chmod` command to display the total files scanned and the permissions that have been changed in the output.
 
 *Example:*
 ....
@@ -34,11 +34,11 @@ xcp chmod -match “fnm(‘file.txt’)” -mode 111 file:///mnt/nfs_mount_point
 xcp chmod -exclude “fnm(‘file.txt’)” -mode 111 file:///demo/user1/
 ....
 
-Run the `xcp help chmod` command for more details.
+Run the `xcp help chmod` command for more information.
 
 == Chown
 
-The `chown` command scans and changes the ownership of all the files for the chosen directory structure. The `chown` command requires a NFS share or POSIX path as variables. XCP `chown` recursively change the ownership for a given path.
+The `chown` command scans and changes the ownership of all files in the chosen directory structure. The `chown` command requires a NFS share or POSIX path as variables. XCP `chown` recursively change the ownership for a given path.
 
 *Example*
 ....
@@ -52,6 +52,6 @@ xcp chown -user-from user1 -user user2 file:///mnt/nfs_mount_point/
 xcp chown -group-from group1 -group group2 nfs_server01.netapp.com:/export1/
 ....
 
-Run the `xcp help chown` command for more details.
+Run the `xcp help chown` command for more information.
 
 //1455556, 2022-02-11
