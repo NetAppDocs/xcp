@@ -72,7 +72,9 @@ entries:
         url: /xcp-migrate-nfs-data.html
       - title: Migrate SMB data
         url: /xcp-migrate-smb-data.html
-  - title:  Troubleshoot
+      - title: Additional NFS features
+        url: /xcp-migrate-nfs-additional-features.html
+  - title: Troubleshoot
     entries:
       - title: Troubleshoot XCP NFS errors
         url: /xcp-troubleshoot-xcp-nfs.html

@@ -19,6 +19,8 @@ After planning the migration with the `show` and `scan` commands, you can migrat
 
 The `copy` command scans and copies the entire source directory structure to a destination SMB share. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are printed to the console once every five seconds.
 
+NOTE: During the copy operation, you can use the `-preserve-atime` flag with the `copy` command to preserve access time at the source.
+
 *Example:*
 
 ----
@@ -33,6 +35,8 @@ The `sync` command scans for changes and modifications in the source and target 
 
 The sync command compares data content, time stamps, file attributes, ownership, and security information.
 
+NOTE: During the sync operation,  you can use the `-preserve-atime` flag with the `sync` command to preserve access time at the source.
+
 *Example:*
 
 ----
@@ -45,6 +49,13 @@ See `xcp help sync` for more details.
 
 The `verify` command reads both source and target shares and compares them, providing information about what is different. You can use the command on any source and destination, regardless of the tool used to perform the copy or sync.
 
+[NOTE]
+====
+* During the verify operation, you can use the `-preserve-atime` flag with the `verify` command to preserve access time at the source.
+
+* During the verify operation, you can use the `-noatime` flag with the `verify` command to exclude access time differences.
+====
+
 *Example:*
 
 ----
@@ -52,3 +63,6 @@ C:\xcp>xcp verify \\<source SMB share> \\<destination SMB share>
 ----
 
 See `xcp help verify` for more details.
+
+// BURT 1450816, 2022-01-18
+// BURT 1450816, 2022-01-26
