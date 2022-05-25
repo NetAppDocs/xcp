@@ -5,7 +5,7 @@ keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs, smb
 summary: Logging for XCP NFS and SMB
 ---
 
-== Logging for NFS and SMB (optional)
+= Logging for NFS and SMB (optional)
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -108,7 +108,7 @@ With the `sanitize` option as `true`:
 *	`2020-07-17 03:13:51,595 - INFO - 12859 xcp xcp User Name: * * *`
 |===
 
-= Create the JSON configuration file
+== Create the JSON configuration file
 
 If you want to enable event log messages, the syslog client, or customer logging, complete the following steps.
 
