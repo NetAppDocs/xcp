@@ -15,7 +15,7 @@ summary: Migrate SMB data
 [.lead]
 After planning the migration with the `show` and `scan` commands, you can migrate data.
 
-=== Copy
+== Copy
 
 The `copy` command scans and copies the entire source directory structure to a destination SMB share. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are printed to the console once every five seconds.
 
@@ -27,7 +27,7 @@ C:\xcp>xcp copy \\<source SMB share> \\<destination SMB share>
 
 See `xcp help copy` for more details.
 
-=== Sync
+== Sync
 
 The `sync` command scans for changes and modifications in the source and target shares in parallel, and applies the appropriate actions (remove, modify, rename, and so on) to the target to make sure that the target is identical to the source.
 
@@ -41,7 +41,7 @@ C:\xcp>xcp sync \\<source SMB share> \\<destination SMB share>
 
 See `xcp help sync` for more details.
 
-=== Verify
+== Verify
 
 The `verify` command reads both source and target shares and compares them, providing information about what is different. You can use the command on any source and destination, regardless of the tool used to perform the copy or sync.
 
@@ -52,3 +52,5 @@ C:\xcp>xcp verify \\<source SMB share> \\<destination SMB share>
 ----
 
 See `xcp help verify` for more details.
+
+// 2022-05-26, Issue 20

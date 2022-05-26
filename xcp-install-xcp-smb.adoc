@@ -39,7 +39,7 @@ Visual C++ 2017 redistributable must be installed on the XCP host.
 |XCP File Analytics supports Google Chrome version 76 and later. See the IMT matrix for all the supported versions of the browser
 |===
 
-=== XCP SMB Microsoft VC++ Redistributable installation
+== XCP SMB Microsoft VC++ Redistributable installation
 
 Follow these steps for the VC++ redistributable installation.
 
@@ -51,7 +51,7 @@ Follow these steps for the VC++ redistributable installation.
 +
 .	When the installation is complete, restart the Windows client.
 
-=== XCP SMB Initial Setup Procedure
+== XCP SMB Initial Setup Procedure
 
 Follow these steps to perform the initial setup of XCP SMB.
 
@@ -92,3 +92,4 @@ C:\>
 ----
 
 // 2021-12-20, BURT 1442440
+// 2022-05-26, Issue 20
