@@ -84,9 +84,9 @@ C:\>copy license c:\NetApp\XCP
 +
 ----
 C:\>xcp.exe activate
-XCP SMB; (c) 2020 NetApp, Inc.;
+XCP SMB; (c) yyyy NetApp, Inc.;
 
-XCP already activated
+XCP activated
 
 C:\>
 ----

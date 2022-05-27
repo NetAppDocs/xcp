@@ -16,17 +16,19 @@ summary: The POSIX connector gives XCP the capability to access any Linux-mounte
 [.lead]
 XCP NFS now supports the use of POSIX connectors to provide source and destination paths for data migration.
 
-.Supported features
+== Supported features
 
 The following features are supported for POSIX connectors:
 
 * For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the `scan` command gets the full values (seconds and nanoseconds) and the `copy` command sets them
 * POSIX connectors are more secure than XCP with NFSv3 TCP sockets. See link:xcp-configure-security-nfs.html[Configure security]
 
-.Path Syntax
+== Path Syntax
+
 The path syntax for a POSIX connector is `\file://<mounted path on linux>`.
 
-.Set up a POSIX connector
+== Set up a POSIX connector
+
 To set up a POSIX connector, you must perform the following tasks:
 
 * Mount a source and a destination volume
@@ -62,7 +64,27 @@ sudo chmod -R g+w /mnt/xcp-catalog
 
 The XCP catalog does not store data but it does store scan and copy file names, directory names, and other metadata. Therefore, it is recommended that you configure the catalog file system permissions for allowed users to give them the capability to secure the stored metadata.
 
-.Ownership (UID and GID)
+== Ownership (UID and GID)
+
 When you are set up as a regular user, by default, a `copy` command to a POSIX or NFS3 destination does not attempt to set the ownership (user ID (UID) and group ID (GID)). Setting the ownership is typically performed by an administrator. When user A copies files from user B, user A expects to own the destination. However, this is not the case when a root user copies the files. When a root user copies the files, the `-chown` option changes the behavior so that a non-root `copy` command with `-chown` attempts to set the UID and GID.
 
+== Increase the maximum number of open file descriptors
+
+For optimal performance and reliability, you can increase the maximum number of open file descriptors for the XCP user on all nodes.
+
+.Steps
+
+. Open the file by using the following command:
+ `vi /etc/security/limits.conf`
+. Add the following line to the file:
+`<username> - nofile 999999`
+
+*Example*
+----
+root - nofile 999999
+----
+
+See link:https://access.redhat.com/solutions/61334^[Red Hat solutions] for more information.
+
 // BURT 1423222 09/13/2021
+// BURT 1448943 18/02/2022
