@@ -64,9 +64,7 @@ C:\xcp>xcp verify \\<source SMB share> \\<destination SMB share>
 
 See `xcp help verify` for more details.
 
-<<<<<<< HEAD
+
 // 2022-05-26, Issue 20
-=======
 // BURT 1450816, 2022-01-18
 // BURT 1450816, 2022-01-26
->>>>>>> a8dc3fcc03e0017a8557c4f936ab5b64fa6a14bd
