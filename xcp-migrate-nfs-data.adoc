@@ -15,7 +15,7 @@ summary: Migrate NFS data
 [.lead]
 After planning the migration with the `show` and `scan` commands, you can migrate data.
 
-=== Copy
+== Copy
 
 The `copy` command scans and copies the entire source directory structure to a destination NFSv3 export. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are displayed at the end of the copy operation.
 
@@ -36,7 +36,7 @@ xcp copy -newid <id> hdfs:///demo/user file:///mnt/dest
 
 See `xcp help copy` for more details.
 
-=== Resume
+== Resume
 
 The `resume` command restarts a previously interrupted copy operation by specifying the catalog index name or number. The catalog index name or number of the previous copy operation is stored on the `<catalog path>:/catalog/indexes` directory.
 
@@ -48,7 +48,7 @@ xcp resume [options] -id <id used for copy>
 
 See `xcp help resume` for more details.
 
-=== Sync
+== Sync
 
 The `sync` command scans for changes and modifications performed on a source NFS directory using a catalog index tag name or the number of a previous copy operation. Source incremental changes are copied and applied to the target directory. The old catalog index numbers are replaced with a new one [.underline]#after the sync operation#.
 
@@ -59,7 +59,7 @@ xcp sync [options] -id <id used for copy>
 
 See `xcp help sync` for more details.
 
-=== Verify
+== Verify
 
 The `verify` command uses a full byte-by-byte data comparison between source and target directories after the copy operation without using a catalog index number. The command checks for modification times and other file or directory attributes, including permissions. The command also reads the files on both sides and compares the data.
 
@@ -77,3 +77,5 @@ xcp verify file:///mnt/source file:///mnt/dest
 xcp verify hdfs:///user/demo1/data file:///user/demo1/dest
 ----
 See `xcp help verify` for more details.
+
+// 2022-05-26, Issue 20

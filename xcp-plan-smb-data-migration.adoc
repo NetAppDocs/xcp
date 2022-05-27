@@ -15,7 +15,7 @@ summary: Plan SMB data migration
 [.lead]
 Plan your SMB data migrations.
 
-=== Show
+== Show
 
 The `show` command shows all SMB shares available on the server with the permissions and space available.
 Example:
@@ -25,7 +25,7 @@ Example:
 
 Run `xcp help show` for more details.
 
-=== Scan
+== Scan
 
 The `scan` command recursively scans the entire SMB share and lists all the files at the end of the scan.
 
@@ -40,4 +40,4 @@ Run `xcp help scan` for more details.
 
 Optionally, use File Analytics to view the results graphically.
 
-// BURT 1450816, 2022-01-26
+// 2022-05-26, Issue 20
