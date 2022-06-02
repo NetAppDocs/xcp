@@ -35,10 +35,10 @@ Consider a setup with four Linux hosts with similar CPU and RAM configurations. 
 . Set passwordless Secure Shell (SSH) from the master node to the worker nodes:
 .. Generate the key on the master node:
 +
-`ssh-keygen -b 2048 -t rsa -f / root/.ssh/id_rsa -q -N ''`
+`ssh-keygen -b 2048 -t rsa -f /root/.ssh/id_rsa -q -N ''`
 .. Copy the key to all the worker nodes:
 +
-`ssh-copy-id -i /root/.ssh/ id_rsa.pub root@worker1`
+`ssh-copy-id -i /root/.ssh/id_rsa.pub root@worker1`
 
 The XCP master node uses SSH to run workers on other nodes. You must configure the worker nodes to enable passwordless SSH access for the user running XCP on the master node. For example, to enable a user demonstration on a master node to use node "worker1" as an XCP worker node, you must copy XCP binary from the master node to all the worker nodes in the home directory.
 
