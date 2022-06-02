@@ -31,6 +31,8 @@ Event log messages and the syslog client are disabled in the default configurati
 |C:\NetApp\XCP\ConfigFile
 |Custom location requires the `XCP_CONFIG_DIR` environment variable
 |Config File location requires the `XCP_CONFIG_DIR environment` variable
+|N/A
+
 |===
 
 The JSON configuration file options are case sensitive. These options are the same for XCP NFS and XCP SMB.
