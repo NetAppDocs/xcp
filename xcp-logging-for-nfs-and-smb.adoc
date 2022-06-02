@@ -30,8 +30,7 @@ Event log messages and the syslog client are disabled in the default configurati
 |/opt/NetApp/xFiles/xcp/
 |C:\NetApp\XCP\ConfigFile
 |Custom location requires the `XCP_CONFIG_DIR` environment variable
-|Error! Reference source not found.
-|N/A
+|Config File location requires the `XCP_CONFIG_DIR environment` variable
 |===
 
 The JSON configuration file options are case sensitive. These options are the same for XCP NFS and XCP SMB.
@@ -138,7 +137,7 @@ If you want to enable event log messages, the syslog client, or customer logging
 }
 ----
 .	For any features that you want to enable, change the `isEnabled` value to `true`.
-.	Name the file `xcpLogConfig.json` and save it to the file location mentioned in *Error! Reference source not found.*
+.	Name the file `xcpLogConfig.json` and save it to the file location mentioned in *Config File location requires the `XCP_CONFIG_DIR environment` variable*.
 
 |===
 |Default configuration |Example json configuration file
@@ -176,3 +175,5 @@ a|
 }
 ----
 |===
+
+// 2022-06-02, Issue 29
