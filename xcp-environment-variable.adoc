@@ -17,13 +17,13 @@ Optional environment variable configuration for XCP NFS systems.
 
 NOTE: A non-root user can also use the following variables.
 
-The environment variable `XCP_CONFIG_DIR` overrides the default location, `/opt/NetApp/xFiles/xcp`. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When the `XCP_CONFIG_DIR` variable is set, a new directory with name same as the host name is created inside the custom configuration directory path, new logs are stored at this location.
+The environment variable `XCP_CONFIG_DIR` overrides the default location, `/opt/NetApp/xFiles/xcp`. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When the `XCP_CONFIG_DIR` variable is set, a new directory with the same name as the host name is created inside the custom configuration directory path, new logs are stored at this location.
 
 ----
 [root@localhost /]# export XCP_CONFIG_DIR ='/tmp/xcp_config_dir_path'
 ----
 
-The environment variable `XCP_LOG_DIR` overrides the default location that stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When the  `XCP_LOG_DIR` variable is set, a new directory with name same as the host name is created inside the custom log directory path, new logs are stored at this location.
+The environment variable `XCP_LOG_DIR` overrides the default location that stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When the  `XCP_LOG_DIR` variable is set, a new directory with the same name as the host name is created inside the custom log directory path, new logs are stored at this location.
 
 ----
 [root@localhost /]# export XCP_LOG_DIR='/tmp/xcp_log_dir_path'
