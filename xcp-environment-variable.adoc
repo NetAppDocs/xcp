@@ -17,13 +17,13 @@ Optional environment variable configuration for XCP NFS systems.
 
 NOTE: A non-root user can also use the following variables.
 
-The environment variable XCP_CONFIG_DIR overrides the default location, `/opt/NetApp/xFiles/xcp`. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom configuration directory is set, the log file is named `xcp.hostname.log` instead of the default, `xcp.log`.
+The environment variable `XCP_CONFIG_DIR` overrides the default location, `/opt/NetApp/xFiles/xcp`. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom configuration directory is set, the log file is named `xcp.hostname.log` instead of the default, `xcp.log`. When the `XCP_CONFIG_DIR` variable is set, a new directory with name same as the host name is created inside the custom configuration directory path where new logs will be stored.
 
 ----
 [root@localhost /]# export XCP_CONFIG_DIR ='/tmp/xcp_config_dir_path'
 ----
 
-The environment variable XCP_LOG_DIR overrides the default location that stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom log directory is set, the log file is named `xcp.hostname.log` instead of the default, `xcp.log`.
+The environment variable `XCP_LOG_DIR` overrides the default location that stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom log directory is set, the log file is named `xcp.hostname.log` instead of the default, `xcp.log`. When `XCP_LOG_DIR` is set, a new directory with name same as host name is created inside  the custom log directory path where the new logs will be stored
 
 ----
 [root@localhost /]# export XCP_LOG_DIR='/tmp/xcp_log_dir_path'
@@ -38,3 +38,4 @@ The environment variable XCP_CATALOG_PATH overrides the setting in xcp.ini. If s
 NOTE: For a non-root user, you must replace `XCP_CATALOG_PATH` from the exported path with the POSIX path.
 
 //2021-Nov-08, BURT 1423222
+// 2022-06-08, BURT 1483365
