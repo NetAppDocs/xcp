@@ -70,5 +70,5 @@ xcp logdump -m <migration id>
 
 NOTE: After migration, if you use the `XCP_CONFIG_DIR` or `XCP_LOG_DIR` environment variables to override the default config location or log location, the `logdump` command fails when used with an old migration or job ID. To avoid this, use the same logpath until migration completes.
 
-//1455556, 2022-02-11
+// 1455556, 2022-02-11
 // 1483343, 2022-06-17
