@@ -15,6 +15,8 @@ summary: Troubleshooting XCP NFS errors
 [.lead]
 Review the solutions to troubleshoot your issue.
 
+== XCP issues and solutions
+
 |===
 |XCP issue | Solution
 
@@ -92,5 +94,19 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 |Increase your system memory and rerun the test.
 |===
 
+== Logdump
+
+If you encounter an issue with an XCP command or job, the `logdump` command enables you dump log files related to the issue into a zipped folder that can be sent to NetApp for debugging. The `logdump` command filters logs based on the migration ID or job ID and dumps those logs into a folder and a zipped folder in the current directory. The directory and zipped folder has the same name as the migration or job ID that is used with the command.
+
+*Example*
+----
+xcp logdump -j <job id>
+xcp logdump -m <migration id>
+----
+
+NOTE: After migration, if you use the `XCP_CONFIG_DIR` or `XCP_LOG_DIR` environment variables to override the default config location or log location, the `logdump` command fails when used with an old migration or job ID. To avoid this, use the same logpath until migration completes.
+o
+
 // BURT 1391465 05/31/2021
 // BURT 1423222 09/13/2021
+// 1483343, 2022-06-17
