@@ -44,6 +44,7 @@ The XCP master node uses SSH to run workers on other nodes. You must configure t
 
 .MaxStartups
 When you start up multiple XCP workers simultaneously, to avoid errors, you should increase the `sshd MaxStartups` parameter on each worker node as shown in the following example:
+
 ----
 echo "MaxStartups 100" | sudo tee -a /etc/ssh/sshd_config
 sudo systemctl restart sshd
