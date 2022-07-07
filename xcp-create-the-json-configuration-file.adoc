@@ -30,16 +30,16 @@ If you want to enable event log messages, the syslog client, or customer logging
     "name": "xcp.log"
   },
   "eventlog": {
-    "isEnabled": false,
+    "isEnabled": False,
     "level": "INFO"
   },
   "syslog": {
-    "isEnabled": false,
+    "isEnabled": False,
     "level": "INFO",
     "serverIp": "10.234.219.87",
     "port": 514
   },
-  "sanitize": false
+  "sanitize": False
 }
 ----
 .	For any features you want to enable, change the `isEnabled` value to `true`.
