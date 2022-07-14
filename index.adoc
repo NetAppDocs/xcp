@@ -27,6 +27,8 @@ XCP is command-line software available in a single package supporting NFS and SM
 
 XCP File Analytics is host-based software that detects file shares, runs scans on the file system, and provides a dashboard for file analytics. XCP File Analytics works for both NetApp and third-party systems and runs on Linux or Windows hosts to provide analytics for NFS and SMB exported file systems. The binary for the file analytics GUI is included in the single package supporting NFS and SMB protocols.
 
+NOTE: The XCP binary is code signed. For more details, please refer to the README in: `NETAPP_XCP_<version>.tgz`
+
 The XCP CLI is robust. For more information, download _XCP Reference_ on the link:https://xcp.netapp.com/[XCP site^].
 
 *XCP workflow*
