@@ -98,7 +98,7 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 
 == Logdump
 
-If you encounter an issue with a XCP command or job, the `logdump` command enables you to dump log files related to the issue into a zipped folder that can be sent to NetApp for debugging. The `logdump` command filters logs based on the migration ID or job ID and dumps those logs into a folder and a zipped folder in the current directory. The directory and zipped folder has the same name as the migration or job ID that is used with the command.
+If you encounter an issue with an XCP command or job, the `logdump` command enables you to dump log files related to the issue into a zipped folder that can be sent to NetApp for debugging. The `logdump` command filters logs based on the migration ID or job ID and dumps those logs into a folder and a zipped folder in the current directory. The directory and zipped folder has the same name as the migration or job ID that is used with the command.
 
 *Example*
 ----

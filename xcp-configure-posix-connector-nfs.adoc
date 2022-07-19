@@ -21,7 +21,7 @@ XCP NFS now supports the use of POSIX connectors to provide source and destinati
 The following features are supported for POSIX connectors:
 
 * For POSIX file systems that support nanosecond `atime`, `mtime`, and `ctime`, the `scan` command gets the full values (seconds and nanoseconds) and the `copy` command sets them
-* POSIX connectors are more secure than XCP with NFSv3 TCP sockets. See link:xcp-configure-security-nfs.html[Configure security]
+* POSIX connectors are more secure than XCP with NFSv3 TCP sockets. See link:https://docs.netapp.com/us-en/xcp/xcp-configure-security-nfs.html[Configure security]
 
 == Path Syntax
 
