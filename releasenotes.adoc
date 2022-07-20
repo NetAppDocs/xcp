@@ -6,7 +6,7 @@ summary: Describes new features, upgrade notes, fixed issues, known limitations,
 ---
 = XCP v1.9 Release Notes
 
-The link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2881500[XCP v1.9 Release Notes^] describe new features, upgrade notes, fixed issues, known limitations, and known issues.
+The link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2883342[XCP v1.9 Release Notes^] describe new features, upgrade notes, fixed issues, known limitations, and known issues.
 
 You are required to sign on to the NetApp Support Site to access the Release Notes.
 
