@@ -31,7 +31,7 @@ The `scan` command recursively scans the entire SMB share and lists all the file
 
 NOTE: During the scan operation, you can use the `-preserve-atime` flag with the `scan` command to preserve access time at the source .
 
-*Example :*
+*Example:*
 
 * `xcp scan \\SMB server\share1`
 * `xcp scan smb_server01.netapp.com:/share1`
