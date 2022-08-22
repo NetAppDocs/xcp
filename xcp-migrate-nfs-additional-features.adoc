@@ -15,15 +15,17 @@ summary: XCP includes some additional NFS features that make it easy to change t
 
 [.lead]
 
-XCP includes some additional NFS features that make it easy to change the ownership and permissions of files and directories for any NFS share or POSIX path. You can use the XCP `chown` and `chmod` commands to recursively change all of the files and directories for a given NFS share or POSIX path. This increases the performance of millions of files.
+XCP includes some additional NFS features.
 
-.About this task
+== Chown and Chmod
 
-Before changing the ownership of the files, you must configure the new owner. Otherwise, the command will fail. The XCP `chown` and `chmod` commands work similar to the Linux `chown` and `chmod` commands.
+You can use the XCP `chown` and `chmod` commands to recursively change all of the files and directories for a given NFS share or POSIX path. This increases the performance of millions of files.
 
-== Chmod
+NOTE: Before changing the ownership of the files, you must configure the new owner. Otherwise, the command will fail. The XCP `chown` and `chmod` commands work similar to the Linux `chown` and `chmod` commands.
 
-The `chmod` command scans and changes the file permission of all files in the chosen directory structure. The `chmod` command requires a mode or reference and NFS share or POSIX path as variables. XCP `chmod` recursively changes the permissions for a given path. You can use the `chmod` command to display the total files scanned and the permissions that have been changed in the output.
+=== Chmod
+
+The `chmod` command scans and changes the file permission of all files in the chosen directory structure. The `chmod` command requires a mode or reference and an NFS share or POSIX path as variables. XCP `chmod` recursively changes the permissions for a given path. You can use the `chmod` command to display the total files scanned and the permissions that have been changed in the output.
 
 *Example:*
 ....
@@ -36,9 +38,11 @@ xcp chmod -exclude “fnm(‘file.txt’)” -mode 111 file:///demo/user1/
 
 Run the `xcp help chmod` command for more information.
 
-== Chown
+=== Chown
 
-The `chown` command scans and changes the ownership of all files in the chosen directory structure. The `chown` command requires a NFS share or POSIX path as variables. XCP `chown` recursively change the ownership for a given path.
+You can use the XCP `chown` command to recursively change all of the files and directories for a given NFS share or POSIX path. This increases the performance of millions of files.
+
+The `chown` command scans and changes the ownership of all files in the chosen directory structure. The `chown` command requires an NFS share or POSIX path as variables. XCP `chown` recursively changes the ownership for a given path.
 
 *Example*
 ....
@@ -54,4 +58,6 @@ xcp chown -group-from group1 -group group2 nfs_server01.netapp.com:/export1/
 
 Run the `xcp help chown` command for more information.
 
-//1455556, 2022-02-11
+
+// 1455556, 2022-02-11
+// 1483343, 2022-06-17

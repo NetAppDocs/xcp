@@ -26,7 +26,7 @@ The path syntax for a HDFS connector is `hdfs://[user@host:port]/full-path`.
 NOTE: If you do not specify a user, host, and port, XCP calls `hdfsConnect` with the host set to `default` and the port set to `0`.
 
 .Set up a HDFS connector
-To run the HDFS `copy` command, you must set the HDFS client on the Linux system, and based on the Hadoop vendor, follow the setup configuration available on the internet. For example, you can set the client for a MapR cluster by using `https://docs.datafabric.hpe.com/60/AdvancedInstallation/SettingUptheClient- redhat.html`.
+To run the HDFS `copy` command, you must set the HDFS client on the Linux system, and based on the Hadoop vendor, follow the setup configuration available on the internet. For example, you can set the client for a MapR cluster by using `https://docs.datafabric.hpe.com/60/AdvancedInstallation/SettingUptheClient-redhat.html`.
 
 After you complete the HFDS client setup, you must complete the configuration on the client. To use the HDFS paths with XCP commands, you must have the following environment variables:
 
