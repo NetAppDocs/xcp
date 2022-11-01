@@ -22,7 +22,7 @@ NOTE: To check the supported browsers for accessing File Analytics, see the link
 
 .Steps
 
-.	Use the link `\https://<IP address of linux machine>/xcp` to access the File Analytics GUI.
+. Use the link `\https://<IP address of linux machine>/xcp` to access the File Analytics GUI.
 When prompted, accept the security certificate:
 .. Select Advanced below the privacy statement.
 ..	Select the proceed to `<IP address of linux machine>` link.
@@ -30,7 +30,7 @@ When prompted, accept the security certificate:
 +
 There are two ways to log in to the File Analytics GUI.
 +
-.. By using the username “admin” and the password you set during configuration
+.. By using the username “admin” and the password you set during configuration.
 +
 image:xcp_image2.png[XCP File Analytics sign in screen]
 +
@@ -39,7 +39,7 @@ image:xcp_image2.png[XCP File Analytics sign in screen]
 You can use this login capability to setup XCP File Analytics on a particular machine and share the web UI URL enterprise-wide. You can use this to login to the File Analytics UI using your enterprise SSO credentials. 
 +
 NOTE: SSO login is optional and can be configured and enabled permanently. 
-To setup SAML based SSO login, refer to the  “Configure SSO” section.
+To setup SAML based SSO login, refer to the  <<Configure SSO credentials>> section.
 
 . On login, you can see that the NFS agent is added: a green tick is present showing minimal system configuration of the Linux system and XCP version.
 .	If you have configured an SMB agent, you can see the SMB agent added in the same agent card.
