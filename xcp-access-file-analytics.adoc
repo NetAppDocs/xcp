@@ -85,4 +85,4 @@ image:xcp_image19.png[Idp setting example]
 .. Click the *Enable SAML* checkbox to permanently enable SAML-based SSO.
 .. Click *Save*.
 .. Log out of File Analytics and log back in again. You are redirected to your enterprise SSO page.
-
+ 
