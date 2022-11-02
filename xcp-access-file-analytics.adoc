@@ -82,8 +82,6 @@ After registration, you receive details of your enterprise's IdP endpoints. You 
 +
 image:xcp_image19.png[Idp setting example]
 +
-_The URLs in the above example are only for demonstration purposes._
-+
 .. Click the *Enable SAML* checkbox to permanently enable SAML-based SSO.
 .. Click *Save*.
 .. Log out of File Analytics and log back in again. You are redirected to your enterprise SSO page.
