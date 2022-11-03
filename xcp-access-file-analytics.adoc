@@ -34,9 +34,9 @@ There are two ways to log in to the File Analytics GUI.
 +
 image:xcp_image2.png[XCP File Analytics sign in screen]
 +
-.. Configure and enable enterprise-wide single sign on capability to log in.
+.. Configure and enable enterprise-wide single sign-on (SSO) capability to log in.
 +
-You can use this login capability to setup XCP File Analytics on a particular machine and share the web UI URL enterprise-wide. You can use this to login to the File Analytics UI using your enterprise SSO credentials. 
+You can use this login capability to set up XCP File Analytics on a particular machine and share the web UI URL enterprise-wide, allowing users to log in to the UI using their SSO credentials.
 +
 NOTE: SSO login is optional and can be configured and enabled permanently. 
 To setup SAML based SSO login, refer to the  <<Configure SSO credentials>> section.
@@ -46,18 +46,18 @@ To setup SAML based SSO login, refer to the  <<Configure SSO credentials>> secti
 
 == Configure SSO credentials
 
-The SSO (single sign-on) based login mechanism is implemented in XCP File Analytics using SAML (Security Assertion Markup Language) and supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the task of authentication to the enterprise's third-party Identity Provider (IdP) that can utilize any number of approaches for MFA (multifactor authentication). 
+The SSO based login mechanism is implemented in XCP File Analytics using SAML (Security Assertion Markup Language) and supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the task of authentication to the enterprise's third-party Identity Provider (IdP) that can utilize any number of approaches for MFA (multifactor authentication). 
 
 .Steps
 
 . Register the XCP File Analytics application with your enterprise identity provider.
 +
-File Analytics now runs as a service provider (SP) and therefore must be registered with your enterprise identity provider. Generally, there is a team in the enterprise that handles this SSO integration process. The first step is to find and reach out to the relevant team and share the metadata details for your your File Analytics application with them.
+File Analytics now runs as a service provider and therefore must be registered with your enterprise identity provider. Generally, there is a team in the enterprise that handles this SSO integration process. The first step is to find and reach out to the relevant team and share the metadata details for your your File Analytics application with them.
 +
 The following are the mandatory details that you must share to register with your identity provider: 
 +
-* *SP Entity id* - `https://<IP address of linux machine>/xcp`
-* *SP Assertion consumer Service URL (ACS)* - `https://<IP address of linux machine>:5030/api/xcp/SAML/sp`
+* *Service provider entity ID* - `\https://<IP address of linux machine>/xcp`
+* *Service provider Assertion Consumer Service (ACS) URL* - `\https://<IP address of linux machine>:5030/api/xcp/SAML/sp`
 +
 You can also verify these details by logging in to the File Analytics UI:
 +
