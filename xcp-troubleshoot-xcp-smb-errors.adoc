@@ -15,6 +15,7 @@ summary: Troubleshooting XCP SMB Errors
 [.lead]
 Review the solutions to troubleshoot your issue.
 
+[options="header"]
 |===
 |Issue |Solution
 

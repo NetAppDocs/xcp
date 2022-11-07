@@ -17,6 +17,7 @@ Review the solutions to troubleshoot your issue.
 
 == XCP issues and solutions
 
+[options="header"]
 |===
 |XCP issue | Solution
 | `xcp: ERROR`: compare batches: Incompatible index file. Please use the index file generated with the current version of XCP only. Alternatively, you can download an older XCP binary from xcp.netapp.com.

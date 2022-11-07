@@ -14,7 +14,7 @@ summary: Some features are not supported on XCP NFS or XCP SMB.
 [.lead]
 The following features are not supported on XCP NFS:
 
-[cols="40,60"]
+[cols="40,60"options="header"]
 |===
 |Feature Name |Description
 
