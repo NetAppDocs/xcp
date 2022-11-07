@@ -39,14 +39,14 @@ image:xcp_image2.png[XCP File Analytics sign in screen]
 You can use this login capability to set up XCP File Analytics on a particular machine and share the web UI URL enterprise-wide, allowing users to log in to the UI using their SSO credentials.
 +
 NOTE: SSO login is optional and can be configured and enabled permanently. 
-To set up SAML based SSO login, refer to the  <<Configure SSO credentials>> section.
+To set up Security Assertion Markup Language (SAML) based SSO login, refer to the <<Configure SSO credentials>> section.
 
 . On login, you can see that the NFS agent is added: a green tick is present showing minimal system configuration of the Linux system and XCP version.
 .	If you have configured an SMB agent, you can see the SMB agent added in the same agent card.
 
 == Configure SSO credentials
 
-The SSO based login mechanism is implemented in XCP File Analytics using SAML (Security Assertion Markup Language) and supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the task of authentication to the enterprise's third-party identity provider (IdP) that can utilize any number of approaches for MFA (multifactor authentication). 
+The SSO based login mechanism is implemented in XCP File Analytics using SAML and is supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the task of authentication to the enterprise's third-party identity provider (IdP) that can utilize any number of approaches for MFA (multifactor authentication). 
 
 .Steps
 
