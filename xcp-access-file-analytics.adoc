@@ -46,13 +46,13 @@ To set up SAML based SSO login, refer to the  <<Configure SSO credentials>> sect
 
 == Configure SSO credentials
 
-The SSO based login mechanism is implemented in XCP File Analytics using SAML (Security Assertion Markup Language) and supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the task of authentication to the enterprise's third-party Identity Provider (IdP) that can utilize any number of approaches for MFA (multifactor authentication). 
+The SSO based login mechanism is implemented in XCP File Analytics using SAML (Security Assertion Markup Language) and supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the task of authentication to the enterprise's third-party identity provider (IdP) that can utilize any number of approaches for MFA (multifactor authentication). 
 
 .Steps
 
 . Register the XCP File Analytics application with your enterprise identity provider.
 +
-File Analytics now runs as a service provider and therefore must be registered with your enterprise identity provider. Generally, there is a team in the enterprise that handles this SSO integration process. The first step is to find and reach out to the relevant team and share the metadata details for your File Analytics application with them.
+File Analytics now runs as a service provider and therefore must be registered with your enterprise identity provider. Generally, there is a team in the enterprise that handles this SSO integration process. The first step is to find and reach out to the relevant team and share the File Analytics application metadata details with them.
 +
 The following are the mandatory details that you must share to register with your identity provider: 
 +
@@ -61,7 +61,7 @@ The following are the mandatory details that you must share to register with you
 +
 You can also verify these details by logging in to the File Analytics UI:
 +
-.. Login to UI using the username “admin” and password set up during installation.
+.. Log in to UI using the username “admin” and password set up during installation.
 +
 .. Select the *User* icon on the top right corner of the page, then select *SAML settings*. 
 +
@@ -73,7 +73,7 @@ image:xcp_image18.png[SAML settings example]
 +
 After registration, you receive details of your enterprise's IdP endpoints. You are required to provide this IdP endpoint metadata to the File Analytics UI. 
 
-. Provide the Identity Provider (IdP) details:
+. Provide the IdP details:
 .. Go to *Dashboard*, select the *User* icon at the top right corner of the page, then select *SAML settings*.
 +
 .. Input the IdP details that you obtained after registration.
