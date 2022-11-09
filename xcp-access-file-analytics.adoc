@@ -46,7 +46,7 @@ To set up Security Assertion Markup Language (SAML) based SSO login, see <<Confi
 
 == Configure SSO credentials
 
-The SSO login functionality is implemented in XCP File Analytics using SAML and is supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the authentication task to the enterprise's third-party identity provider (IdP) which can utilize any number of approaches for MFA (multifactor authentication). 
+The SSO login functionality is implemented in XCP File Analytics using SAML and is supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the authentication task to the third-party identity provider (IdP) for your enterprise which can utilize any number of approaches for MFA (multifactor authentication). 
 
 .Steps
 
