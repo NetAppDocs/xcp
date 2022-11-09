@@ -26,27 +26,27 @@ NOTE: To check the supported browsers for accessing File Analytics, see the link
 When prompted, accept the security certificate:
 .. Select Advanced below the privacy statement.
 ..	Select the proceed to `<IP address of linux machine>` link.
-. Log in to the File Analytics GUI
+. Log in to the File Analytics GUI.
 +
-There are two ways to log in to the File Analytics GUI.
+There are two ways to log in to the File Analytics GUI:
 +
-.. By using the username “admin” and the password you set during configuration.
+.. Use the username “admin” and the password you set during configuration.
 +
 image:xcp_image2.png[XCP File Analytics sign in screen]
 +
-.. Configure and enable enterprise-wide single sign-on (SSO) capability to log in.
+.. Configure and enable enterprise-wide single sign-on (SSO) capability.
 +
 You can use this login capability to set up XCP File Analytics on a particular machine and share the web UI URL enterprise-wide, allowing users to log in to the UI using their SSO credentials.
 +
 NOTE: SSO login is optional and can be configured and enabled permanently. 
-To set up Security Assertion Markup Language (SAML) based SSO login, refer to the <<Configure SSO credentials>> section.
+To set up Security Assertion Markup Language (SAML) based SSO login, see <<Configure SSO credentials>>.
 
 . On login, you can see that the NFS agent is added: a green tick is present showing minimal system configuration of the Linux system and XCP version.
 .	If you have configured an SMB agent, you can see the SMB agent added in the same agent card.
 
 == Configure SSO credentials
 
-The SSO based login mechanism is implemented in XCP File Analytics using SAML and is supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the task of authentication to the enterprise's third-party identity provider (IdP) that can utilize any number of approaches for MFA (multifactor authentication). 
+The SSO login functionality is implemented in XCP File Analytics using SAML and is supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the authentication task to the enterprise's third-party identity provider (IdP) which can utilize any number of approaches for MFA (multifactor authentication). 
 
 .Steps
 
@@ -56,22 +56,20 @@ File Analytics now runs as a service provider and therefore must be registered w
 +
 The following are the mandatory details that you must share to register with your identity provider: 
 +
-* *Service provider entity ID* - `\https://<IP address of linux machine>/xcp`
-* *Service provider Assertion Consumer Service (ACS) URL* - `\https://<IP address of linux machine>:5030/api/xcp/SAML/sp`
+* *Service provider entity ID:* `\https://<IP address of linux machine>/xcp`
+* *Service provider Assertion Consumer Service (ACS) URL:* `\https://<IP address of linux machine>:5030/api/xcp/SAML/sp`
 +
 You can also verify these details by logging in to the File Analytics UI:
 +
-.. Log in to UI using the username “admin” and password set up during installation.
+.. Log in to the UI using the username “admin” and password set up during installation.
 +
 .. Select the *User* icon on the top right corner of the page, then select *SAML settings*. 
 +
 Check *Service provider settings* in the drop down menu that appears.
 +
-*Example*
-+
 image:xcp_image18.png[SAML settings example]
 +
-After registration, you receive details of your enterprise's IdP endpoints. You are required to provide this IdP endpoint metadata to the File Analytics UI. 
+After registration, you receive the IdP endpoints details for your enterprise. You are required to provide this IdP endpoint metadata to the File Analytics UI. 
 
 . Provide the IdP details:
 .. Go to *Dashboard*, select the *User* icon at the top right corner of the page, then select *SAML settings*.
@@ -82,8 +80,8 @@ After registration, you receive details of your enterprise's IdP endpoints. You 
 +
 image:xcp_image19.png[Idp setting example]
 +
-.. Click the *Enable SAML* checkbox to permanently enable SAML-based SSO.
-.. Click *Save*.
+.. Select the *Enable SAML* checkbox to permanently enable SAML-based SSO.
+.. Select *Save*.
 .. Log out of File Analytics and log back in again. 
 +
 You are redirected to your enterprise SSO page.
