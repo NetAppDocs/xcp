@@ -41,7 +41,7 @@ You can use this login capability to set up XCP File Analytics on a particular m
 NOTE: SSO login is optional and can be configured and enabled permanently. 
 To set up Security Assertion Markup Language (SAML) based SSO login, see <<Configure SSO credentials>>.
 
-. On login, you can see that the NFS agent is added: a green tick is present showing minimal system configuration of the Linux system and XCP version.
+. After logging in, you can see that the NFS agent; a green tick is present showing minimal system configuration of the Linux system and XCP version.
 .	If you have configured an SMB agent, you can see the SMB agent added in the same agent card.
 
 == Configure SSO credentials
@@ -69,10 +69,10 @@ Check *Service provider settings* in the drop down menu that appears.
 +
 image:xcp_image18.png[SAML settings example]
 +
-After registration, you receive the IdP endpoints details for your enterprise. You are required to provide this IdP endpoint metadata to the File Analytics UI. 
+After registration, you receive the IdP endpoint details for your enterprise. You are required to provide this IdP endpoint metadata to the File Analytics UI. 
 
 . Provide the IdP details:
-.. Go to *Dashboard*, select the *User* icon at the top right corner of the page, then select *SAML settings*.
+.. Go to *Dashboard*. Select the *User* icon at the top right corner of the page and select *SAML settings*.
 +
 .. Input the IdP details that you obtained after registration.
 +
