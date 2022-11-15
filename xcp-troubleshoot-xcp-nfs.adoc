@@ -17,10 +17,10 @@ Review the solutions to troubleshoot your issue.
 
 == XCP issues and solutions
 
+[options="header"]
 |===
 |XCP issue | Solution
-
-| `xcp: ERROR`:  Incompatible index file. Please use index file generated with current version of XCP only. Alternatively you could download older XCP binary from xcp.netapp.com.
+| `xcp: ERROR`: compare batches: Incompatible index file. Please use the index file generated with the current version of XCP only. Alternatively, you can download an older XCP binary from xcp.netapp.com.
 | You are trying to perform operations on an index that was generated using an XCP version older than XCP 1.9. This is not supported. It is recommended to complete any in-progress migrations and then switch to this version of XCP. Alternatively, you can re-run the `scan`, `copy` or `verify` commands to generate a new index with XCP 1.9.
 |`xcp: ERROR`: must run as root
 |Execute XCP commands as root user
@@ -55,6 +55,7 @@ Expected error: Failed to activate license: Server xcp.netapp.com unreachable
 |Follow the instructions in the following KB article: link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/NetApp_XCP/XCP:_ERROR:_Cannot_allocate_memory_-_when_syncing_NFS_data[Cannot allocate memory when synching NFS data^]
 |`xcp: ERROR`: For xcp to process ACLs, please mount `<path>` using the OS nfs4 client
 |Mount the source and target on the XCP host using NFSv4, for example, `mount -o vers=4.0 10.10.10.10:/source_vol /mnt/source`
+
 
 |The XCP `verify` command fails during a migration.
 The STATUS shows as FAILED. (Live)
@@ -94,6 +95,8 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 |Check if you have permission to write on the destination volume.
 |`xcp: ERROR: batch 2: child process failed (exit code -6): recv <type 'exceptions.EOFError'>:`
 |Increase your system memory and rerun the test.
+| `xcp:ERROR: invalid path 'IP:/users009/user1/2022-07-01_04:36:52_1489367`
+| If there is a colon (:) in the file path, use three colons (:::) instead.
 |===
 
 == Logdump
