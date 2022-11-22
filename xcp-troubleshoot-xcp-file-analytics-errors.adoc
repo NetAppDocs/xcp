@@ -15,7 +15,7 @@ summary: Troubleshooting XCP File Analytics errors
 [.lead]
 Review the solutions to troubleshoot your issue.
 
-[cols="40,60"]
+[cols="40,60"options="header"]
 |===
 |Issue |Solution
 
