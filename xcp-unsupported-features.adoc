@@ -34,7 +34,7 @@ a|* The `sync` command does not support the HDFS connector
 |Linux
 |XCP is no longer supported on earlier distributions of Linux that were supported by XCP 1.6.3.
 |Active source support
-|XCP does not support the combination of using Snapshot copies and live source migration.
+|XCP does not support the combination of using a Snapshot copy and live source migration.
 
 |===
 
