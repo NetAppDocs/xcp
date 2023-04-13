@@ -33,6 +33,8 @@ a|* The `sync` command does not support the HDFS connector
 |When the source is a non-NetApp system, XCP does not copy ACLs.
 |Linux
 |XCP is no longer supported on earlier distributions of Linux that were supported by XCP 1.6.3.
+|Active source support
+|XCP does not support the combination of using Snapshot copies and live source migration.
 
 |===
 
@@ -52,8 +54,6 @@ The following features are not supported on XCP SMB:
 |XCP does not currently support Alternate Data Streams
 |XCP Filters
 |The XCP SMB exclude option currently excludes directories based on their pattern in the filter and traverses the filesystem of those directories.
-|Active source support
-|XCP does not support the use of a baseline or an incremental Snapshot copy followed by live source migration for an incremental sync.
 | Live source migration
 | XCP does not support modifying data on the source volume during migration.
 |===
