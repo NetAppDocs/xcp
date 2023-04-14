@@ -38,6 +38,7 @@ members of this group can read files while bypassing the security rules,
 regardless of any permissions that protect those files.
 **	If the user is not part of “Backup Operators” group in source system, the user
 must have read access.
+**  If the copy / sync updates ACL's of files, additional privleges may be required.  Be sure the user is a member of BUILTIN\Administrators
 
 NOTE: Write permission is required in the source storage system for supporting the XCP option `- preserve-atime`.
 
