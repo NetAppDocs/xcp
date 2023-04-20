@@ -96,7 +96,7 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 |`xcp: ERROR: batch 2: child process failed (exit code -6): recv <type 'exceptions.EOFError'>:`
 |Increase your system memory and rerun the test.
 | `xcp:ERROR: invalid path 'IP:/users009/user1/2022-07-01_04:36:52_1489367`
-| If there is a colon (:) in the file path, use three colons (:::) instead.
+|If there is a colon in the NFS server share path, use a double colon (::) to separate the NFS Server IP and NFS server share path instead of a single colon (:).
 |The SnapLock volume does not retain the WORM files after an `xcp copy` operation.
 a|XCP copies the WORM files to the volume successfully but the files are not retained by the SnapLock volume.
 
@@ -127,3 +127,4 @@ NOTE: After migration, if you use the `XCP_CONFIG_DIR` or `XCP_LOG_DIR` environm
 // BURT 1423222 09/13/2021
 // 1483343, 2022-06-17
 // 2023-04-04, OTHERDOC-7
+// 2023-04-20, OTHERDOC-7
