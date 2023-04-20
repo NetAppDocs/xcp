@@ -58,7 +58,7 @@ xcp chown -group-from group1 -group group2 nfs_server01.netapp.com:/export1/
 
 Run the `xcp help chown` command for more information.
 
-=== XCP Estimation
+== XCP Estimation
 
 The XCP estimation feature estimates the time to complete a baseline `copy` operation from the source to the destination. By using all the currently available system resources such as CPU, RAM, Network or other parameters, it calculates the estimated time to complete a baseline `copy` operation. When you use the `-target` option, XCP runs a sample copy operation to find the estimation time.
 
