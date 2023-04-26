@@ -22,7 +22,7 @@ This section details the system requirements and the procedures for the initial 
 |Item |Requirement
 
 |System
-|64-bit Intel or AMD server, minimum 4 cores and 32 GB RAM
+|64-bit Intel or AMD server, minimum 8 cores and 64 GB RAM
 |Operating System & Software
 |RHEL8. See the link:https://mysupport.netapp.com/matrix/[IMT^] for supported operating systems
 |Special Requirements
@@ -184,3 +184,4 @@ XCP activated
 
 //BURT 1391465 05/31/2021
 //BURT 1450816, 2022-01-18
+// 2023-04-26, OTHERDOC-7
