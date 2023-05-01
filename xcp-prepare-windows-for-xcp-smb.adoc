@@ -19,7 +19,7 @@ XCP SMB uses Windows client host systems to generate parallel I/O streams and fu
 
 XCP SMB transitions and migrations have the following user login requirements:
 
-*	XCP host system: An XCP host user must have administrator privilege (the user must be part of "BUILTIN\Administrators" group on the XCP SMB host system).
+*	XCP host system: An XCP host user must have administrator privilege (the user must be part of the "BUILTIN\Administrators" group on the target SMB server).
 *	Add the migration or XCP host user to the audit and security log policy for Active Directory. To locate the 'Manage Auditing and Security Log' Policy on Windows 10, follow these steps:
 +
 .Steps
@@ -38,6 +38,7 @@ members of this group can read files while bypassing the security rules,
 regardless of any permissions that protect those files.
 **	If the user is not part of “Backup Operators” group in source system, the user
 must have read access.
+** If the copy and sync operation updates the ACLs of the files, additional privileges might be required. As a result, the user must be a member of "BUILTIN\Administrators".
 
 NOTE: Write permission is required in the source storage system for supporting the XCP option `- preserve-atime`.
 
@@ -56,3 +57,4 @@ NOTE: Write permission is required in the source storage system for supporting t
 image:xcp_image17.png[sample hosts file]
 
 //BURT 1445538, 2022-02-07
+// 2023-05-01, OTHERDOC-15
