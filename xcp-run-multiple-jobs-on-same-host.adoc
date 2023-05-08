@@ -12,37 +12,42 @@ summary: The POSIX connector gives XCP the capability to access any Linux-mounte
 :imagesdir: ./media/
 
 [.lead]
-Beginning with XCP 1.9.2, the "-minmem" feature supports running multiple XCP jobs and commands on a single host XCP host, provided the host has sufficient resources for each job. With the "-mimmem" feature, XCP uses minimal host memory to complete a job which creates the capacity to run additional jobs on the same host configuration.
+Beginning with XCP 1.9.2, you can use the "-minmem" feature to run multiple XCP jobs and commands on a single host XCP host, provided the host has sufficient resources for each job. With the "-mimmem" feature, XCP uses minimal host memory to complete a job which creates the capacity to run additional jobs on the same host configuration.
 
-== Minimum System Requirements
-Yuo should allow up to 64GB of host memory and eight cores for medium to large migrations for each XCP job.
+== Minimum system requirements
+For each XCP job, you should allow up to 64GB of host memory and eight cores for medium to large migrations. 
 
 == Logging
-By default, each XCP job is logged in a separate log file that is unique to the "JOB ID". This logging mechanism works well while running multiple jobs. Netapp does not recommended to use a single xcp.log(by changing the xcpLogConfig.Json) for logging while running multiple supported xcp jobs on the same host.
+By default, each XCP job is logged in a separate log file that is unique to the job ID. This logging mechanism works well when running multiple jobs configured on individual hosts. However, when running multiple jobs configured on the same host, Netapp does not recommended changing the `xcpLogConfig.Json` file to use a single `xcp.log` file to log each job.
 
-Supported commands:- 
-scan, copy, resume, verify, isync, chmod, chown, delete
+== Supported commands
+The "minmem" feature is supported with the following XCP commands:
 
-Unsupported commands:-
-sync
+* `scan`
+* `copy`
+* `resume`
+* `verify` 
+* `isync`
+* `chmod`
+* `chown`
+* `delete`
 
-Example:
-User must run each job with “-minmem” option.
-xcp copy -newid <id> -minmem src_server:/src_export dst_server:/dst_export
-xcp resume [options] -id -minmem <id used for copy
-xcp verify -minmem src_server:/src_export dst_server:/dst_export
+== Unsupported commands
+The "minmem" feature is not supported with the `sync` command.
 
-HDFS path example:
-xcp copy -minmem hdfs:///user/demo1/data file:///user/demo1/dest
-xcp verify -minmem hdfs:///user/demo1/data file:///user/demo1/dest
+== Command examples
+To use the "-minmem" feature, you must include the "-minmem" option in the job command as shown in the following examples:
 
-POSIX path example:
-xcp copy -minmem -newid <id> file:///mnt/source file:///mnt/dest
-xcp verify -minmem file:///mnt/source file:///mnt/dest
+* `xcp copy -newid _new ID_ -*minmem* src_server:/src_export dst_server:/dst_export`
+* `xcp resume [options] -id -*minmem* _copy ID_`
+* `xcp verify -*minmem* src_server:/src_export dst_server:/dst_export`
 
+*HDFS path examples*:
+* `xcp copy -*minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
+* `xcp verify -*minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
 
-
-
-
+*POSIX path examples*:
+* `xcp copy -*minmem* -newid _new ID_ \file:///mnt/source \file:///mnt/dest`
+* `xcp verify -*minmem* \file:///mnt/source \file:///mnt/dest`
 
 // 2023 MAY 5, OTHERDOC-16
