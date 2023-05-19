@@ -96,7 +96,7 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 |`xcp: ERROR: batch 2: child process failed (exit code -6): recv <type 'exceptions.EOFError'>:`
 |Increase your system memory and rerun the test.
 | `xcp:ERROR: invalid path 'IP:/users009/user1/2022-07-01_04:36:52_1489367`
-| If there is a colon (:) in the file path, use three colons (:::) instead.
+|If there is a colon (:) in the file path, use three colons (:::) instead.
 |===
 
 == Logdump
