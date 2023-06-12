@@ -47,7 +47,7 @@ NOTE: Endpoint usage is mandatory for StorageGRID and ONTAP S3.
 
 * link:https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[ONTAP S3 object storage management^]
 * link:https://docs.netapp.com/us-en/storagegrid-116/tenant/index.html[Use StorageGRID^]
-
++
 NOTE: Before initiating any operation, XCP identifies and connects to the S3 bucket using the `access key`, `secret key`, `ssl-certifcate`, and `endpoint` parameters.
 
 . Install the Amazon Web Services (AWS) CLI packages and run the AWS CLI commands to configure the keys and Secure Sockets Layer (SSL) certificates for S3 accounts:
