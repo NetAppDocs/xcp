@@ -34,8 +34,8 @@ Support for the `sync` command is not available for the S3 connectors.
 .Path Syntax
 The path syntax for the S3 connector is `s3://<bucket in S3>`.
 
-* You can provide an S3 profile for the XCP commands using the `-s3.profile` option.
-* You can use the `s3.endpoint` option to modify the endpoint value.
+* You can provide a specific S3 profile for the XCP commands using the `-s3.profile` option.
+* You can use the `s3.endpoint` option to modify the endpoint value to communicate with S3
 
 NOTE: Endpoint usage is mandatory for StorageGRID and ONTAP S3.
 
@@ -46,191 +46,46 @@ NOTE: Endpoint usage is mandatory for StorageGRID and ONTAP S3.
 . To run the XCP command with the S3 connector, create a bucket in S3 by following the online documentation for the respective platforms:
 
 * link:https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[ONTAP S3 object storage management^]
-* link:https://docs.netapp.com/us-en/storagegrid-116/tenant/index.html[Use StorageGRID^]
+* link:https://docs.netapp.com/us-en/storagegrid-116/tenant/index.html[Use a tenant account: Overview^]
 +
-NOTE: Before initiating any operation, XCP identifies and connects to the S3 bucket using the `access key`, `secret key`, `ssl-certifcate`, and `endpoint` parameters.
+NOTE: Before continuing, you must have the URL for the `access key`, `secret key`, `ssl-certifcate`, and `endpoint` parameters as XCP identifies and connects to the S3 bucket using these parameters before initiating an operation.
 
 . Install the Amazon Web Services (AWS) CLI packages and run the AWS CLI commands to configure the keys and Secure Sockets Layer (SSL) certificates for S3 accounts:
 
 * See link:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html[Installing or updating the latest version of the AWS CLI^] to install the AWS packages.
 * See the link:https://docs.aws.amazon.com/cli/latest/reference/configure/set.html[AWS CLI Command Reference^] for more information.
 
-. Use the `aws configure` command to provide the AWS access and secret key. This command updates the `/root/.aws/credentials` file with the keys.
-
-. Use the `aws configure set` command to provide the SSL certificate. This command updates the `/root/.aws/config` file with the SSL certificate path.
-
+. Use the `aws configure` command to configure your credentials file. By default, the file's location is `/root/.aws/credentials`. The credentials file should specify the access key and secret access key. In the following example, the key and secret key for the account are specified in the default profile:
++
 ----
-[root@scs000075591-2 ~]# aws configure
-AWS Acess Key ID [****************VGWY]: access_key
-AWS Secret Access Key [****************101p]: secreat_key
-Default region name [None]: 
-Default output format [None]:
-[root@scs000075591-2 ~]# aws configure set default.ca_bundle /u/xxxx/s3/ca/ca-aws.pem
-[root@scs000075591-2 ~]# ls -lrt /root/.aws/
-total 8
--rwxr-xr-x 1 root root 77 Jun 6 04:27 credentials
--rw-r--r-- 1 root root 51 Jun 6 04:27 config
-[root@scs000075591-2 ~]#
-[root@scs000075591-2 ~]# cat /root/.aws/credentials
 [default]
-aws_access_key_id = access_key
-aws_secret_access_key = secreat_key
-[root@scs000075591-2 ~]# cat /root/.aws/config
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_KEY
+----
+
+. Use the `aws configure set` command to specify a certificate authority (CA) certificate bundle, which is a file with the `.pem` extension that is used when verifying SSL certificates. By default, the file's location is `/root/.aws/config`. 
++
+----
 [default]
-ca_bundle = /u/xxxx/s3/ca/ca-aws.pem
-[root@scs000075591-2 ~]#
+ca_bundle = /u/app/s3/ca-certs/cabundle-s3.pem
 ----
 
 . Before running the XCP command, ensure that the AWS CLI commands can access the S3 buckets from the Linux client with the required setup configuration:
 `aws s3 ls --endpoint-url <ENDPOINT> s3://bucket-name/`
 +
 `aws s3 ls --profile <profile> --endpoint-url <ENDPOINT> s3://bucket-name`
-
++
 ----
-[root@scs000141560 ~]# aws s3 ls --profile sg --endpoint https://rtplabsg02.eng.netapp.com:443 s3://xxxx-bucket
-                           PRE CR/
-                           PRE CSI/
-                           PRE DFM/
-                           PRE DFMPA/
-                           PRE DPSAS/
-                           PRE EIST/
-                           PRE Example/
-                           PRE FPolicy/
-                           PRE FSG_FST/
-                           PRE FSR/
-                           PRE Filer/
-                           PRE HA/
-                           PRE JETI/
-                           PRE MIG/
-                           PRE MSBU/
-                           PRE MSQA/
-                           PRE Mercury/
-                           PRE Multistore_Nwkg/
-                           PRE NAS_QA/
-                           PRE NDMP/
-                           PRE NDST/
-                           PRE NDU/
-                           PRE NFS/
-                           PRE NFSInterop/
-                           PRE NFS_Interop/
-                           PRE NISST/
-                           PRE Network/
-                           PRE OnCommand/
-                           PRE PopulateDataTool/
-                           PRE SANInterop/
-                           PRE SIT/
-                           PRE SMIS/
-                           PRE SMO/
-                           PRE SSH/
-                           PRE STEP/
-                           PRE SharedTestBed/
-                           PRE TCD/
-                           PRE TCX/
-                           PRE UnitTest/
-                           PRE VSA/
-                           PRE VSim/
-                           PRE WaflFit/
-                           PRE XFUN/
-                           PRE csetup/
-                           PRE csm/
-                           PRE cst/
-                           PRE data_mobility/
-                           PRE dblade/
-                           PRE dense/
-                           PRE diag/
-                           PRE diagnostic/
-                           PRE dp/
-                           PRE drg/
-                           PRE flexcache/
-                           PRE fsg_fst/
-                           PRE host/
-                           PRE howrah.1.1/
-                           PRE http/
-                           PRE kernel/
-                           PRE la/
-                           PRE lib/
-                           PRE license/
-                           PRE metrics/
-                           PRE mhost/
-                           PRE migsas/
-                           PRE mini-xfun/
-                           PRE nblade/
-                           PRE network/
-                           PRE nfs/
-                           PRE nfs_ipv6/
-                           PRE nic-7m/
-                           PRE nic/
-                           PRE nic10m/
-                           PRE nmsdk/
-                           PRE nst/
-                           PRE nstapps/
-                           PRE nwf/
-                           PRE ontap/
-                           PRE os/
-                           PRE otci/
-                           PRE perf/
-                           PRE phoenix/
-                           PRE platform/
-                           PRE platqa/
-                           PRE platqaservice_processor/
-                           PRE platqasystem_firmware/
-                           PRE platval/
-                           PRE platvalNIC/
-                           PRE protocols/
-                           PRE ptefit/
-                           PRE pyant/
-                           PRE raid/
-                           PRE raidgrouptests/
-                           PRE raidqa/
-                           PRE raidsqa/
-                           PRE rcg/
-                           PRE san/
-                           PRE script/
-                           PRE sdx/
-                           PRE sfmod/
-                           PRE smgui/
-                           PRE smtools/
-                           PRE smx/
-                           PRE snapmirror/
-                           PRE snmp/
-                           PRE solutions/
-                           PRE source_vol/
-                           PRE sparse/
-                           PRE storage/
-                           PRE storagev2/
-                           PRE storant/
-                           PRE stress-scale/
-                           PRE supportability/
-                           PRE susqa/
-                           PRE sysmanager/
-                           PRE system_test/
-                           PRE test/
-                           PRE testware/
-                           PRE tools/
-                           PRE transition/
-                           PRE unate/
-                           PRE util/
-                           PRE vfiler/
-                           PRE vim/
-                           PRE volops/
-                           PRE vsa/
-                           PRE vseries/
-                           PRE web/
-                           PRE wex/
-                           PRE wfit/
-                           PRE xant/
-                           PRE xplat/
-2023-06-06 08:59:22      23522 IPv6_RA_Configuration_Of_LLA_In_SK_BSD.thpl
-2023-06-06 08:59:22      12266 IPv6_RA_Default_Route_changes.thpl
-2023-06-06 08:59:22      26433 IPv6_RA_Port_Role_Change.thpl
-2023-06-06 08:59:22      29270 IPv6_RA_processing_And_Default_Route_Installation.thpl
-2023-06-06 08:59:22      22312 IPv6_RA_processing_large_No_Prefix.thpl
-2023-06-06 08:59:22        225 Makefile
-2023-06-06 08:59:22        165 Makefile.template
-2023-06-06 08:59:22         46 P4ENV
-2023-06-06 08:59:22        943 README
-2023-06-06 08:59:22       1748 defs.mk
-2023-06-06 08:59:22        966 rules.mk
+[root@scs000132093-1 linux]# aws s3 ls --profile xx --endpoint https://rtplabsg02.eng.netapp.com:443 s3://xxxx-bucket
+                           PRE 1G/
+                           PRE aws_files/
+                           PRE copied_folders/
+                           PRE d1/
+                           PRE d2/
+                           PRE giant_size_dirs/
+                           PRE medium_size_dirs/
+                           PRE small_size_dirs/
+[root@scs000132093-1 l
 ----
 
 // 2023-06-09, XCP 1.9.2
