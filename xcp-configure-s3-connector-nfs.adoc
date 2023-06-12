@@ -70,7 +70,7 @@ aws_secret_access_key = YOUR_SECRET_KEY
 ca_bundle = /u/app/s3/ca-certs/cabundle-s3.pem
 ----
 
-. Before running the XCP command, ensure that the AWS CLI commands can access the S3 buckets from the Linux client with the required setup configuration:
+. Before running XCP commands, upon completing the required setup configuration above, ensure that the AWS CLI commands can access the S3 buckets from the Linux client with the following:
 `aws s3 ls --endpoint-url <ENDPOINT> s3://bucket-name/`
 +
 `aws s3 ls --profile <profile> --endpoint-url <ENDPOINT> s3://bucket-name`
