@@ -46,9 +46,9 @@ NOTE: Endpoint usage is mandatory for StorageGRID and ONTAP S3.
 . To run the XCP command with the S3 connector, create a bucket in S3 by following the online documentation for the respective platforms:
 
 * link:https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[ONTAP S3 object storage management^]
-* link:https://docs.netapp.com/us-en/storagegrid-116/tenant/index.html[Use a tenant account: Overview^]
+* link:https://docs.netapp.com/us-en/storagegrid-116/tenant/index.html[StorageGRID: Use a tenant account overview^]
 +
-NOTE: Before continuing, you must have the URL for the `access key`, `secret key`, `ssl-certifcate`, and `endpoint` parameters as XCP identifies and connects to the S3 bucket using these parameters before initiating an operation.
+NOTE: Before continuing, you must have the `access key`, `secret key`, certificate authority (CA) certificate bundle, and `endpoint url` information as XCP identifies and connects to the S3 bucket using these parameters before initiating an operation.
 
 . Install the Amazon Web Services (AWS) CLI packages and run the AWS CLI commands to configure the keys and Secure Sockets Layer (SSL) certificates for S3 accounts:
 
@@ -63,7 +63,7 @@ aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
 ----
 
-. Use the `aws configure set` command to specify a certificate authority (CA) certificate bundle, which is a file with the `.pem` extension that is used when verifying SSL certificates. By default, the file's location is `/root/.aws/config`. 
+. Use the `aws configure set` command to specify a CA certificate bundle, which is a file with the `.pem` extension that is used when verifying SSL certificates. By default, the file's location is `/root/.aws/config`. 
 +
 ----
 [default]
