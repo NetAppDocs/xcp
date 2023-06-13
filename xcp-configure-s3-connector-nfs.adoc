@@ -65,6 +65,8 @@ aws_secret_access_key = YOUR_SECRET_KEY
 
 . Use the `aws configure set` command to specify a CA certificate bundle, which is a file with the `.pem` extension that is used when verifying SSL certificates. By default, the file's location is `/root/.aws/config`. 
 +
+*Example:*
++
 ----
 [default]
 ca_bundle = /u/app/s3/ca-certs/cabundle-s3.pem
@@ -74,6 +76,8 @@ ca_bundle = /u/app/s3/ca-certs/cabundle-s3.pem
 `aws s3 ls --endpoint-url <ENDPOINT> s3://bucket-name/`
 +
 `aws s3 ls --profile <profile> --endpoint-url <ENDPOINT> s3://bucket-name`
++
+*Example:*
 +
 ----
 [root@scs000132093-1 linux]# aws s3 ls --profile xx --endpoint https://rtplabsg02.eng.netapp.com:443 s3://xxxx-bucket
