@@ -77,6 +77,8 @@ sidebar:
           url: /xcp-filters.html
         - title: Logging for NFS and SMB (optional)
           url: /xcp-logging-for-nfs-and-smb.html
+        - title: Plan HDFS data migration
+          url: xcp-plan-hdfs-data-migration.html
     - title: Migrate data
       entries:
         - title: Migrate NFS data
