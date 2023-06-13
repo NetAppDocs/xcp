@@ -33,11 +33,14 @@ Example:
 * `xcp scan NFS [server:/export path | \file://<NFS mounted path> | hdfs://<hdfs mounted path> ]`
 * `xcp scan nfs_server01.netapp.com:/export1`
 * `xcp scan \file:///mnt/nfs-source`
-*	`xcp scan hdfs:///demo/user1`
+* `xcp scan hdfs:///demo/user1`
+* `xcp scan s3://my-bucket`
+* `xcp scan -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> s3://my-bucket`
 
 
 Run `xcp help scan` for more details.
 
 Optionally, use File Analytics to view the results graphically.
 
+// 2023-06-13, XCP 1.9.2
 // 2022-05-26, Issue 20

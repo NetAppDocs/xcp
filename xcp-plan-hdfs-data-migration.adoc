@@ -19,7 +19,7 @@ Plan your HDFS data migrations.
 
 The `scan` command recursively scans the entire source paths and prints the statistics for the file structure at the end of the scan. 
 
-* `xcp scan NFS [hdfs://<hdfs mounted path> ]`
+* `xcp scan HDFS [hdfs://<hdfs mounted path> ]`
 * `xcp scan hdfs:///demo/user1`
 * `xcp scan s3://my-bucket`
 * `xcp scan -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> s3://my-bucket`
