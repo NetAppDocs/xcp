@@ -17,16 +17,11 @@ After planning the migration with the `scan` command, you can migrate data.
 
 == Copy
 
-The `copy` command scans and copies the entire source Hadoop Distributed File System (HDFS) data to a HDFS, NFS or Simple Storage Service (S3) bucket. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are displayed at the end of the copy operation.
+The `copy` command scans and copies the entire source Hadoop Distributed File System (HDFS) data to an NFS or Simple Storage Service (S3) bucket. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are displayed at the end of the copy operation.
 
 *NFS path example:*
 ----
 xcp copy -newid <id> hdfs:///demo/user dst_server:/dst_export
-----
-
-*POSIX path example:*
-----
-xcp copy -newid <id> hdfs:///demo/user file:///mnt/dest
 ----
 
 *S3 path example:*
@@ -59,10 +54,6 @@ The `verify` command uses a full byte-by-byte data comparison between source and
 *Example:*
 ----
 xcp verify hdfs:///demo/user dst_server:/dst_export
-----
-*POSIX path example:*
-----
-xcp verify hdfs:///demo/user file:///mnt/dest
 ----
 
 *S3 path example:*
