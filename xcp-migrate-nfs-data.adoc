@@ -34,6 +34,12 @@ xcp copy -newid <id> file:///mnt/source file:///mnt/dest
 xcp copy -newid <id> hdfs:///demo/user file:///mnt/dest
 ----
 
+*S3 path example:*
+----
+xcp copy -newid <id> src_server:/src_export s3://my-bucket
+xcp copy -newid <id> -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
+----
+
 See `xcp help copy` for more details.
 
 == Resume
@@ -76,6 +82,14 @@ xcp verify file:///mnt/source file:///mnt/dest
 ----
 xcp verify hdfs:///user/demo1/data file:///user/demo1/dest
 ----
+
+*S3 path example:*
+----
+xcp verify -newid <id> src_server:/src_export s3://my-bucket
+xcp verify -newid <id> -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
+----
+
 See `xcp help verify` for more details.
 
+// 2023-06-13, XCP 1.9.2
 // 2022-05-26, Issue 20
