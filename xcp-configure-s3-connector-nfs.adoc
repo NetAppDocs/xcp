@@ -70,8 +70,8 @@ Default region name [None]:
 Default output format [None]:
 [root@scs000132093-1 ~]# cat /root/.aws/credentials
 [default]
-aws_access_key_id = AKIARSOFVEOA5EBWTQBY
-aws_secret_access_key = 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
+aws_access_key_id = access_key
+aws_secret_access_key = secret_key
 [root@scs000132093-1 ~]#
 [root@scs000132093-1 ~]# aws configure set default.ca_bundle /u/xxxx/s3/ca/aws_cacert.pem
 [root@scs000132093-1 ~]# cat /root/.aws/config
