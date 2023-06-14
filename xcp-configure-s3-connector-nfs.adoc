@@ -14,7 +14,7 @@ summary: The S3 connector gives XCP the capability to migrate data from an NFS o
 :imagesdir: ./media/
 
 [.lead]
-Beginning with XCP 1.9.2, the Simple Storage Service (S3) connector enhances the scope of XCP data migration by enabling data migration from NFS or Hadoop Distributed File System (HDFS) file systems to  S3 object storage.
+Beginning with XCP 1.9.2, the Simple Storage Service (S3) connector enhances the scope of XCP data migration by enabling data migration from Hadoop Distributed File System (HDFS) file systems to S3 object storage.
 
 .Supported migration use cases
 The following migration use cases are supported for the S3 connectors:
@@ -55,21 +55,28 @@ NOTE: Before continuing, you must have the `access key`, `secret key`, certifica
 * See link:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html[Installing or updating the latest version of the AWS CLI^] to install the AWS packages.
 * See the link:https://docs.aws.amazon.com/cli/latest/reference/configure/set.html[AWS CLI Command Reference^] for more information.
 
-. Use the `aws configure` command to configure your credentials file. By default, the file's location is `/root/.aws/credentials`. The credentials file should specify the access key and secret access key. In the following example, the key and secret key for the account are specified in the default profile:
-+
-----
-[default]
-aws_access_key_id = YOUR_ACCESS_KEY
-aws_secret_access_key = YOUR_SECRET_KEY
-----
+. Use the `aws configure` command to configure your credentials file. By default, the file's location is `/root/.aws/credentials`. The credentials file should specify the access key and secret access key.
 
 . Use the `aws configure set` command to specify a CA certificate bundle, which is a file with the `.pem` extension that is used when verifying SSL certificates. By default, the file's location is `/root/.aws/config`. 
+
 +
 *Example:*
 +
 ----
+[root@scs000132093-1 ~]# aws configure
+AWS Access Key ID [None]: AKIARSOFVEOA5EBWTQBY
+AWS Secret Access Key [None]: gdT+pwCDA85nNT44yj81vK7AjLtmnuRYu29JrR8u
+Default region name [None]:
+Default output format [None]:
+[root@scs000132093-1 ~]# cat /root/.aws/credentials
 [default]
-ca_bundle = /u/app/s3/ca-certs/cabundle-s3.pem
+aws_access_key_id = AKIARSOFVEOA5EBWTQBY
+aws_secret_access_key = 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
+[root@scs000132093-1 ~]#
+[root@scs000132093-1 ~]# aws configure set default.ca_bundle /u/bijaylas/s3/ca/aws_cacert.pem
+[root@scs000132093-1 ~]# cat /root/.aws/config
+[default]
+ca_bundle = /u/bijaylas/s3/ca/aws_cacert.pem
 ----
 
 . Before running XCP commands, upon completing the required setup configuration above, ensure that the AWS CLI commands can access the S3 buckets from the Linux client with the following:

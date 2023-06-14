@@ -32,12 +32,9 @@ The `scan` command recursively scans the entire source NFSv3 exported paths and 
 
 *Example:*
 
-* `xcp scan NFS [server:/export path | \file://<NFS mounted path> | hdfs://<hdfs mounted path> ]`
+* `xcp scan NFS [server:/export path | file:// ]`
 * `xcp scan nfs_server01.netapp.com:/export1`
 * `xcp scan \file:///mnt/nfs-source`
-* `xcp scan hdfs:///demo/user1`
-* `xcp scan s3://my-bucket`
-* `xcp scan -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> s3://my-bucket`
 
 
 Run `xcp help scan` for more details.

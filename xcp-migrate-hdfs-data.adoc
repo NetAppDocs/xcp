@@ -61,6 +61,7 @@ xcp verify hdfs:///demo/user dst_server:/dst_export
 xcp verify hdfs:///user/demo1/data s3://my-bucket
 xcp verify -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
 ----
+
 See `xcp help verify` for more details.
 
 // 2023-06-13, XCP 1.9.2
