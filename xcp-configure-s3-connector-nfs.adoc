@@ -64,8 +64,8 @@ NOTE: Before continuing, you must have the `access key`, `secret key`, certifica
 +
 ----
 [root@scs000132093-1 ~]# aws configure
-AWS Access Key ID [None]: AKIARSOFVEOA5EBWTQBY
-AWS Secret Access Key [None]: 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
+AWS Access Key ID [None]: access_key
+AWS Secret Access Key [None]: secret_key
 Default region name [None]:
 Default output format [None]:
 [root@scs000132093-1 ~]# cat /root/.aws/credentials
