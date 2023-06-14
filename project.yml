@@ -64,6 +64,8 @@ sidebar:
           url: /xcp-plan-nfs-data-migration.html
         - title: Plan SMB data migration
           url: /xcp-plan-smb-data-migration.html
+        - title: Plan HDFS data migration
+          url: /xcp-plan-hdfs-data-migration.html
         - title: Plan using File Analytics
           url: /xcp-using-file-analytics.html
           entries:
@@ -77,18 +79,16 @@ sidebar:
           url: /xcp-filters.html
         - title: Logging for NFS and SMB (optional)
           url: /xcp-logging-for-nfs-and-smb.html
-        - title: Plan HDFS data migration
-          url: /xcp-plan-hdfs-data-migration.html
     - title: Migrate data
       entries:
         - title: Migrate NFS data
           url: /xcp-migrate-nfs-data.html
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
-        - title: Additional NFS features
-          url: /xcp-migrate-nfs-additional-features.html
         - title: Migrate HDFS data
           url: /xcp-migrate-hdfs-data.html
+        - title: Additional NFS features
+          url: /xcp-migrate-nfs-additional-features.html
     - title:  Troubleshoot
       entries:
         - title: Troubleshoot XCP NFS errors
