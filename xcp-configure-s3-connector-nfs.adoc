@@ -73,10 +73,10 @@ Default output format [None]:
 aws_access_key_id = AKIARSOFVEOA5EBWTQBY
 aws_secret_access_key = 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
 [root@scs000132093-1 ~]#
-[root@scs000132093-1 ~]# aws configure set default.ca_bundle /u/bijaylas/s3/ca/aws_cacert.pem
+[root@scs000132093-1 ~]# aws configure set default.ca_bundle /u/xxxx/s3/ca/aws_cacert.pem
 [root@scs000132093-1 ~]# cat /root/.aws/config
 [default]
-ca_bundle = /u/bijaylas/s3/ca/aws_cacert.pem
+ca_bundle = /u/xxxx/s3/ca/aws_cacert.pem
 ----
 
 . Before running XCP commands, upon completing the required setup configuration above, ensure that the AWS CLI commands can access the S3 buckets from the Linux client with the following:
