@@ -29,11 +29,6 @@ xcp copy -newid <id> src_server:/src_export dst_server:/dst_export
 xcp copy -newid <id> file:///mnt/source file:///mnt/dest
 ----
 
-*HDFS path example:*
-----
-xcp copy -newid <id> hdfs:///demo/user file:///mnt/dest
-----
-
 See `xcp help copy` for more details.
 
 == Resume
@@ -70,11 +65,6 @@ xcp verify src_server:/src_export dst_server:/dst_export
 *POSIX path example:*
 ----
 xcp verify file:///mnt/source file:///mnt/dest
-----
-
-*HDFS path example:*
-----
-xcp verify hdfs:///user/demo1/data file:///user/demo1/dest
 ----
 
 See `xcp help verify` for more details.

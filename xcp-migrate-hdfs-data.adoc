@@ -30,6 +30,11 @@ xcp copy -newid <id> hdfs:///demo/user s3://my-bucket
 xcp copy -newid <id> -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
 ----
 
+*POSIX path example:*
+----
+xcp copy -newid <id> hdfs:///demo/user file:///mnt/dest
+----
+
 See `xcp help copy` for more details.
 
 == Resume
@@ -60,6 +65,11 @@ xcp verify hdfs:///demo/user dst_server:/dst_export
 ----
 xcp verify hdfs:///user/demo1/data s3://my-bucket
 xcp verify -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
+----
+
+*POSIX path example:*
+----
+xcp verify hdfs:///user/demo1/data file:///user/demo1/dest
 ----
 
 See `xcp help verify` for more details.
