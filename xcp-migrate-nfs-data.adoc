@@ -5,7 +5,7 @@ keywords: netapp, xcp, migrate, data, nfs, smb, copy, resume, sync, verify
 summary: Migrate NFS data
 ---
 
-= Migrate NFS data
+= Commands to migrate NFS data
 :hardbreaks:
 :nofooter:
 :icons: font

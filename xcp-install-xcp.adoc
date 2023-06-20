@@ -5,7 +5,7 @@ keywords: netapp, xcp, install, installing, download, downloading, license, prep
 summary: Install XCP
 ---
 
-= Install XCP
+= Prepare for XCP installation
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Install XCP
 :imagesdir: ./media/
 
 [.lead]
-Install XCP.
+In preparation for installation, you download XCP, obtain a license, and prepare your system. 
 
 == Install and configure workflow
 
