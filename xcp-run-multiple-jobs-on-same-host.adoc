@@ -1,0 +1,55 @@
+---
+sidebar: sidebar
+permalink: xcp-run-multiple-jobs-on-same-host.html
+keywords: xcp, configure, nfs, posix, connector
+summary: The POSIX connector gives XCP the capability to access any Linux-mounted file system, such as NFSv4, XFS, and Veritas.
+---
+= Run multiple XCP jobs on same XCP host
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Beginning with XCP 1.9.2, you can use the "-minmem" feature to run multiple XCP jobs and commands on a single XCP host, provided the host has sufficient resources for each job. When you run a command that supports the "-minmem" feature, XCP uses minimal host memory to complete the job which creates the capacity to run additional jobs on the same host configuration.
+
+== Minimum system requirements
+For each XCP job, you should allow up to 64GB of host memory and eight cores for medium to large migrations. 
+
+== Logging
+By default, each XCP job is logged in a separate log file that is unique to the job ID. This logging mechanism works well when running multiple jobs configured on individual hosts. However, when running multiple jobs configured on the same host, Netapp does not recommend changing the `xcpLogConfig.Json` file to use a single `xcp.log` file to log each job.
+
+== Supported commands
+The "-minmem" feature is supported with the following XCP commands:
+
+* `scan`
+* `copy`
+* `resume`
+* `verify` 
+* `isync`
+* `chmod`
+* `chown`
+* `delete`
+
+== Unsupported commands
+The "-minmem" feature is not supported with the `sync` command.
+
+== Command examples
+To use the "-minmem" feature, you must include the "-minmem" option in the job command as shown in the following examples:
+
+* `xcp copy -newid _new ID_ *-minmem* src_server:/src_export dst_server:/dst_export`
+* `xcp resume [options] -id *-minmem* _copy ID_`
+* `xcp verify *-minmem* src_server:/src_export dst_server:/dst_export`
+
+*HDFS path examples*:
+
+* `xcp copy *-minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
+* `xcp verify *-minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
+
+*POSIX path examples*:
+
+* `xcp copy *-minmem* -newid _new ID_ \file:///mnt/source \file:///mnt/dest`
+* `xcp verify *-minmem* \file:///mnt/source \file:///mnt/dest`
+
+// 2023 MAY 5, OTHERDOC-16

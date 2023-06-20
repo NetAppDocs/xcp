@@ -13,9 +13,10 @@ sidebar:
     - title: Release Notes
       url: /releasenotes.html
     - title: Get started with XCP
-      url: /index.html
       type: solutions
       entries:
+        - title: Learn about XCP  
+          url: /index.html
         - title: XCP NFS add-on features
           url: /xcp-nfs-add-ons.html
         - title: Unsupported features
@@ -25,8 +26,9 @@ sidebar:
         - title: Ports used by XCP
           url: /xcp-ports-used.html
     - title: Install XCP
-      url: /xcp-install-xcp.html
       entries:
+        - title: Prepare for XCP installation   
+          url: /xcp-install-xcp.html
         - title: Prepare Linux for XCP NFS
           url: /xcp-prepare-linux-for-xcp-nfs.html
         - title: Prepare Windows for XCP SMB
@@ -78,13 +80,17 @@ sidebar:
     - title: Migrate data
       entries:
         - title: Migrate NFS data
-          url: /xcp-migrate-nfs-data.html
+          entries:
+            - title: Commands to migrate NFS data
+              url: /xcp-migrate-nfs-data.html 
+            - title: Run multiple XCP jobs on the same host 
+              url: /xcp-run-multiple-jobs-on-same-host.html
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
         - title: Additional NFS features
           url: /xcp-migrate-nfs-additional-features.html
     - title:  Troubleshoot
-      entries:
+      entries: 
         - title: Troubleshoot XCP NFS errors
           url: /xcp-troubleshoot-xcp-nfs.html
         - title: Troubleshoot XCP SMB Errors
