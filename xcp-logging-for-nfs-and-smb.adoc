@@ -65,7 +65,7 @@ CRITICAL, ERROR, WARNING, INFO, DEBUG
 |Option to configure event log message.
 |“isEnabled”
 |Boolean
-|false
+|true
 |This boolean option is used to enable event messaging. Setting it to `false` will not generate any event messages and no event logs will be published to event log file.
 |“level”
 |String

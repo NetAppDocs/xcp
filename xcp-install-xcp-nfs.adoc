@@ -34,7 +34,7 @@ No other active applications
 |Supported Protocol Version
 |NFSv3 and NFSv4 (POSIX and ACL)
 |Supported browser (File Analytics only)
-|XCP File Analytics supports Google Chrome version 76 and later. See the link:https://mysupport.netapp.com/matrix/[IMT^] matrix for all the supported versions of the browser
+|Refer to the link:https://mysupport.netapp.com/matrix/[IMT^] matrix for all supported browser versions for XCP File Analytics.
 |===
 
 NOTE: The recommended configuration for live source migration is 8 cores and 64 GB RAM.
