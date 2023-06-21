@@ -57,6 +57,8 @@ sidebar:
           url: /xcp-configure-hdfs-connector-nfs.html
         - title: Configure multinode scale-out
           url: /xcp-configure-multinode-scaleout-nfs.html
+        - title: Configure the S3 connector
+          url: /xcp-configure-s3-connector-nfs.html
     - title: Plan data migration
       url: /xcp-plan-data-migration.html
       entries:
@@ -64,6 +66,8 @@ sidebar:
           url: /xcp-plan-nfs-data-migration.html
         - title: Plan SMB data migration
           url: /xcp-plan-smb-data-migration.html
+        - title: Plan HDFS data migration
+          url: /xcp-plan-hdfs-data-migration.html
         - title: Plan using File Analytics
           url: /xcp-using-file-analytics.html
           entries:
@@ -87,6 +91,8 @@ sidebar:
               url: /xcp-run-multiple-jobs-on-same-host.html
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
+        - title: Migrate HDFS data
+          url: /xcp-migrate-hdfs-data.html
         - title: Additional NFS features
           url: /xcp-migrate-nfs-additional-features.html
     - title:  Troubleshoot
