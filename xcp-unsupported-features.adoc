@@ -67,7 +67,7 @@ The following features are not available for Hadoop Distributed File System (HDF
 [cols="40,60"]
 |===
 |Feature Name |Description
-|`Sync` command support
+| Support for the `sync` command 
 |The HDFS connector does not support the `sync` command.
 |Symbolic link (symlink) and hard link support
 |The HDFS file system does not support symlinks, hard links, or special files.

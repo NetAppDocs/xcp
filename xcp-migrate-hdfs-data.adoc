@@ -17,7 +17,7 @@ After planning the migration with the `scan` command, you can migrate data.
 
 == Copy
 
-The `copy` command scans and copies the entire source Hadoop Distributed File System (HDFS) data to an NFS or Simple Storage Service (S3) bucket. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are displayed at the end of the copy operation.
+The `copy` command scans and copies the entire source Hadoop Distributed File System (HDFS) data to an NFS or Simple Storage Service (S3) bucket. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput, speed, and elapsed time details are displayed at the end of the copy operation.
 
 *NFS path example:*
 ----
@@ -39,7 +39,7 @@ See `xcp help copy` for more details.
 
 == Resume
 
-The `resume` command restarts a previously interrupted copy operation by specifying the catalog index name or number. The catalog index name or number of the previous copy operation is stored on the `<catalog path>:/catalog/indexes` directory.
+The `resume` command restarts a previously interrupted copy operation by specifying the catalog index name or number. The catalog index name or number of the previous copy operation is stored in the `<catalog path>:/catalog/indexes` directory.
 
 *Example:*
 
@@ -48,7 +48,7 @@ xcp resume [options] -id <id used for copy>
 xcp resume [options] -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> -id <id used for copy>
 ----
 
-NOTE: By default, the XCP `resume` command takes the S3 endpoint and S3 profile from the copy index that was used during the `copy` command. However, if `-s3.endpoint` and `-s3.profile` are provided during the `resume` command, these new values for the options are used and the values used in the copy `command` are overridden.
+NOTE: By default, the XCP `resume` command uses the S3 endpoint and S3 profile from the copy index that was used during the `copy` command. However, if new `-s3.endpoint` and `-s3.profile` values are provided with the `resume` command, the new values for the options are used and the values used with the copy `command` are overridden.
 
 See `xcp help resume` for more details.
 
