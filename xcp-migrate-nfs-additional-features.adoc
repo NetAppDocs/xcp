@@ -60,7 +60,7 @@ Run the `xcp help chown` command for more information.
 
 == XCP Estimation
 
-The XCP estimation feature estimates the time to complete a baseline `copy` operation from the source to the destination. By using all the currently available system resources such as CPU, RAM, Network or other parameters, it calculates the estimated time to complete a baseline `copy` operation. When you use the `-target` option, XCP runs a sample copy operation to find the estimation time.
+The XCP estimation feature estimates the time to complete a baseline `copy` operation from the source to the destination. It calculates the estimated time to complete a baseline `copy` operation by using all the currently available system resources such as CPU, RAM, network, or other parameters. When you use the `-target` option, XCP runs a sample copy operation to find the estimation time.
 
 *Example*
 ....
