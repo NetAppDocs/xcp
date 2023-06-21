@@ -20,7 +20,7 @@ For each XCP job, you should allow up to 64GB of host memory and eight cores for
 NOTE: The "-minmem" feature is not supported for SMB data migration. 
 
 == Logging
-By default, each XCP job is logged in a separate log file that is unique to the job ID. This logging mechanism works well when running multiple jobs on the same individual host. NetApp does not recommend changing the `xcpLogConfig.Json` file to use a single `xcp.log` file to log multiple XCP jobs on the same host.
+By default, each XCP job is logged in a separate log file that is unique to the job ID. This logging mechanism works well when running multiple jobs on the same individual host. NetApp does not recommend changing the `xcpLogConfig.Json` file to use a single `xcp.log` file to log multiple XCP jobs running in parallel on the same host.
 
 == Supported commands
 The "-minmem" feature is supported with the following XCP commands:
@@ -48,6 +48,7 @@ To use the "-minmem" feature, you must include the "-minmem" option in the XCP c
 
 * `xcp copy *-minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
 * `xcp verify *-minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
+* `xcp copy -minmem hdfs:///user/demo1/data s3://bucket1`
 
 *POSIX path examples*:
 
