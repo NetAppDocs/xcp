@@ -87,12 +87,12 @@ sidebar:
           entries:
             - title: Commands to migrate NFS data
               url: /xcp-migrate-nfs-data.html 
-            - title: Run multiple XCP jobs on the same host 
-              url: /xcp-run-multiple-jobs-on-same-host.html
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
         - title: Migrate HDFS data
           url: /xcp-migrate-hdfs-data.html
+        - title: Run multiple XCP jobs on the same host 
+          url: /xcp-run-multiple-jobs-on-same-host.html
         - title: Additional NFS features
           url: /xcp-migrate-nfs-additional-features.html
     - title:  Troubleshoot
