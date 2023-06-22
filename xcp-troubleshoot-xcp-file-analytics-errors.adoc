@@ -74,7 +74,7 @@ a|
 `service xcp status`
 +
 . Start the XCP listen operation and confirm that there are no errors:
-
++
 `xcp –listen`
 +
 . If you see the following error, install the CodeReady packages using yum, such as `yum install codeready-builder-for-rhel-8-x86_64-rpms`:
