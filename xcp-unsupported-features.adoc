@@ -64,9 +64,10 @@ The following common features are not available for XCP NFS and SMB:
 
 The following features are not available for Hadoop Distributed File System (HDFS) connectors:
 
-[cols="40,60"]
+[cols=2*,options="header,cols="40,60"]
 |===
-|Feature Name |Description
+|Feature Name 
+|Description
 | Support for the `sync` command 
 |The HDFS connector does not support the `sync` command.
 |Symbolic link (symlink) and hard link support
