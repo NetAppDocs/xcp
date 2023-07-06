@@ -96,7 +96,20 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 |`xcp: ERROR: batch 2: child process failed (exit code -6): recv <type 'exceptions.EOFError'>:`
 |Increase your system memory and rerun the test.
 | `xcp:ERROR: invalid path 'IP:/users009/user1/2022-07-01_04:36:52_1489367`
-|If there is a colon (:) in the file path, use three colons (:::) instead.
+|If there is one or more colons in the NFS server share path name, use a double colon (::) instead of a single colon (:) to separate the NFS server IP and NFS server share path.
+
+|The SnapLock volume does not retain the WORM files after an `xcp copy` operation.
+a|XCP copies the WORM files to the volume successfully but the files are not retained by the SnapLock volume.
+
+. Perform the `xcp copy` operation from the source to the destination volume:
+`xcp copy src_server:/src_export dst_server:/dst_export`
+. Use the `xcp chmod` command to change the file permissions on the destination volume to *readonly*:
+`xcp chmod -mode  a-w  dst_server:/dst_export`
+
+When the above steps are complete, the SnapLock volume starts retaining the copied files.
+
+
+NOTE: The retention time of a SnapLock volume is governed by the volume's default retention policy. Check the volume retention settings before starting migration: link:https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html[Set the retention time^]
 |===
 
 == Logdump
@@ -115,3 +128,5 @@ NOTE: After migration, if you use the `XCP_CONFIG_DIR` or `XCP_LOG_DIR` environm
 // BURT 1391465 05/31/2021
 // BURT 1423222 09/13/2021
 // 1483343, 2022-06-17
+// 2023-04-04, OTHERDOC-7
+// 2023-04-20, OTHERDOC-7

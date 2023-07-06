@@ -1,0 +1,102 @@
+---
+sidebar: sidebar
+permalink: xcp-configure-s3-connector-nfs.html
+keywords: xcp, configure, nfs, S3, connector
+summary: The S3 connector gives XCP the capability to migrate data from an NFS or HDFS file system to the S3 object storage
+---
+
+= Configure the S3 connector
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Beginning with XCP 1.9.2, the Simple Storage Service (S3) connector enhances the scope of XCP data migration by enabling data migration from Hadoop Distributed File System (HDFS) file systems to S3 object storage.
+
+.Supported migration use cases
+The following migration use cases are supported for the S3 connectors:
+
+* Migration from HDFS or NFS to NetApp StorageGRID
+* Migration from HDFS or NFS to Amazon S3
+* Migration from HDFS or NFS to NetApp ONTAP S3 
+
+NOTE: Currently MapR is only qualified and supported for HDFS.
+
+.Supported features
+Support for the `scan`, `copy`, `verify`, `resume` and `delete` commands is available for the S3 connectors.
+
+.Unsupported Features
+Support for the `sync` command is not available for the S3 connectors.
+
+.Path Syntax
+The path syntax for the S3 connector is `s3://<bucket in S3>`.
+
+* You can provide a specific S3 profile for the XCP commands using the `-s3.profile` option.
+* You can use the `s3.endpoint` option to modify the endpoint value to communicate with S3
+
+NOTE: Endpoint usage is mandatory for StorageGRID and ONTAP S3.
+
+== Set up an S3 connector
+
+.Steps
+
+. To run the XCP command with the S3 connector, create a bucket in S3 by following the online documentation for the respective platforms:
+
+* link:https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[ONTAP S3 object storage management^]
+* link:https://docs.netapp.com/us-en/storagegrid-116/tenant/index.html[StorageGRID: Use a tenant account overview^]
++
+NOTE: Before continuing, you must have the `access key`, `secret key`, certificate authority (CA) certificate bundle, and `endpoint url` information. XCP identifies and connects to the S3 bucket using these parameters before initiating an operation.
+
+. Install the Amazon Web Services (AWS) CLI packages and run the AWS CLI commands to configure the keys and Secure Sockets Layer (SSL) certificates for S3 accounts:
+
+* See link:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html[Installing or updating the latest version of the AWS CLI^] to install the AWS packages.
+* See the link:https://docs.aws.amazon.com/cli/latest/reference/configure/set.html[AWS CLI Command Reference^] for more information.
+
+. Use the `aws configure` command to configure your credentials file. By default, the file's location is `/root/.aws/credentials`. The credentials file should specify the access key and secret access key.
+
+. Use the `aws configure set` command to specify a CA certificate bundle, which is a file with the `.pem` extension that is used when verifying SSL certificates. By default, the file's location is `/root/.aws/config`. 
+
++
+*Example:*
++
+----
+[root@client1 ~]# aws configure
+AWS Access Key ID [None]: access_key
+AWS Secret Access Key [None]: secret_key
+Default region name [None]:
+Default output format [None]:
+[root@client1 ~]# cat /root/.aws/credentials
+[default]
+aws_access_key_id = access_key
+aws_secret_access_key = secret_key
+[root@client1 ~]#
+[root@client1 ~]# aws configure set default.ca_bundle /u/xxxx/s3/ca/aws_cacert.pem
+[root@client1 ~]# cat /root/.aws/config
+[default]
+ca_bundle = /u/xxxx/s3/ca/aws_cacert.pem
+----
+
+. After the required setup configuration is completed, confirm that the AWS CLI commands can access the S3 buckets from the Linux client before running the XCP commands:
+`aws s3 ls --endpoint-url <endpoint_url> s3://bucket-name/`
++
+`aws s3 ls --profile <profile> --endpoint-url <endpoint_url> s3://bucket-name`
++
+*Example:*
++
+----
+[root@client1 linux]# aws s3 ls --profile <profile> --endpoint <endpoint_url>  s3://<bucket-name>
+                           PRE 1G/
+                           PRE aws_files/
+                           PRE copied_folders/
+                           PRE d1/
+                           PRE d2/
+                           PRE giant_size_dirs/
+                           PRE medium_size_dirs/
+                           PRE small_size_dirs/
+[root@client1 l
+----
+
+// 2023-06-09, XCP 1.9.2

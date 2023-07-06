@@ -51,9 +51,7 @@ The `verify` command reads both source and target shares and compares them, prov
 
 [NOTE]
 ====
-* During the verify operation, you can use the `-preserve-atime` flag with the `verify` command to preserve access time at the source.
-
-* During the verify operation, you can use the `-noatime` flag with the `verify` command to exclude access time differences.
+During the verify operation, you can use the `-preserve-atime` flag with the `verify` command to preserve access time at the source.
 ====
 
 *Example:*
@@ -68,3 +66,4 @@ See `xcp help verify` for more details.
 // 2022-05-26, Issue 20
 // BURT 1450816, 2022-01-18
 // BURT 1450816, 2022-01-26
+// 2023-04-17, OTHERDOC-7

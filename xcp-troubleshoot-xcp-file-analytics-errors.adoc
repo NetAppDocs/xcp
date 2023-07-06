@@ -68,7 +68,37 @@ Check the `xcpfalogs` logs to see if the license needs renewal.
 |The total space for an exported file system on a given file server might show more space compared to the allocated physical storage.
 |This can happen when there are qtree level exports inside the volume.
 For example, if the volume size that is exported as `/vol1` is 10 GB  and there is a qtree inside the volume `/vol1/qtree1`, then the `xcp show` command will show the `vol1` size as `10 GB` and the `qtree1` size as `10 GB`. XCP File Analytics sums the space of both exports and gives the total space, in this case, `20 GB`. It does not understand that `qtree1` is a logical space.
+|The site can’t be reached or user login failed after a successful install.
+a|
+. Check if XCP services are running:
+`service xcp status`
++
+. Start the XCP listen operation and confirm that there are no errors:
++
+`xcp –listen`
++
+. If you see the following error, install the CodeReady packages using yum, such as `yum install codeready-builder-for-rhel-8-x86_64-rpms`:
+----
+Error:
+-------
+Traceback (most recent call last):
+  File "xcp.py", line 1146, in <module>
+  File "xcp.py", line 1074, in main
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "PyInstaller/loader/pyimod03_importers.py", line 495, in exec_module
+  File "rest/routes.py", line 61, in <module>
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "PyInstaller/loader/pyimod03_importers.py", line 495, in exec_module
+  File "onelogin/saml2/auth.py", line 14, in <module>
+xmlsec.Error: (1, 'cannot load crypto library for xmlsec.')
+[23891] Failed to execute script 'xcp' due to unhandled exception!
+----
 |===
 
 // BURT 1391465 06/29/2021
 // 2021-Nov-08, BURT 1423222
+// 2023-04-26, OTHERDOC-7
