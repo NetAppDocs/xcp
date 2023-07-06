@@ -64,14 +64,14 @@ NOTE: Before continuing, you must have the `access key`, `secret key`, certifica
 +
 ----
 [root@client1 ~]# aws configure
-AWS Access Key ID [None]: access_key
-AWS Secret Access Key [None]: secret_key
+AWS Access Key ID [None]: <access_key>
+AWS Secret Access Key [None]: <secret_key>
 Default region name [None]:
 Default output format [None]:
 [root@client1 ~]# cat /root/.aws/credentials
 [default]
-aws_access_key_id = access_key
-aws_secret_access_key = secret_key
+aws_access_key_id = <access_key>
+aws_secret_access_key = <secret_key>
 [root@client1 ~]#
 [root@client1 ~]# aws configure set default.ca_bundle /u/xxxx/s3/ca/aws_cacert.pem
 [root@client1 ~]# cat /root/.aws/config
