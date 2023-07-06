@@ -1,0 +1,77 @@
+---
+sidebar: sidebar
+permalink: xcp-migrate-hdfs-data.html
+keywords: netapp, xcp, migrate, data, nfs, hdfs, smb, copy, resume, verify, posix
+summary: Migrate HDFS data
+---
+
+= Migrate HDFS data
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+After planning the migration with the `scan` command, you can migrate data.
+
+== Copy
+
+The `copy` command scans and copies the entire source Hadoop Distributed File System (HDFS) data to an NFS or Simple Storage Service (S3) bucket. The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput, speed, and elapsed time details are displayed at the end of the copy operation.
+
+*NFS path example:*
+----
+xcp copy -newid <id> hdfs:///demo/user dst_server:/dst_export
+----
+
+*POSIX path example:*
+----
+xcp copy -newid <id> hdfs:///demo/user file:///mnt/dest
+----
+
+*S3 path example:*
+----
+xcp copy -newid <id> hdfs:///demo/user s3://my-bucket
+xcp copy -newid <id> -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
+----
+
+See `xcp help copy` for more details.
+
+== Resume
+
+The `resume` command restarts a previously interrupted copy operation by specifying the catalog index name or number. The catalog index name or number of the previous copy operation is stored in the `<catalog path>:/catalog/indexes` directory.
+
+*Example:*
+
+----
+xcp resume [options] -id <id used for copy>
+xcp resume [options] -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> -id <id used for copy>
+----
+
+NOTE: By default, the XCP `resume` command uses the S3 endpoint and S3 profile from the copy index that was used during the `copy` command. However, if new `-s3.endpoint` and `-s3.profile` values are provided with the `resume` command, the new values for the options are used and the values used with the copy `command` are overridden.
+
+See `xcp help resume` for more details.
+
+== Verify
+
+The `verify` command uses a full byte-by-byte data comparison between source and target directories after the copy operation without using a catalog index number. The command reads the files on both sides and compares the data.
+
+*Example:*
+----
+xcp verify hdfs:///demo/user dst_server:/dst_export
+----
+
+*POSIX path example:*
+----
+xcp verify hdfs:///user/demo1/data file:///user/demo1/dest
+----
+
+*S3 path example:*
+----
+xcp verify hdfs:///user/demo1/data s3://my-bucket
+xcp verify -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
+----
+
+See `xcp help verify` for more details.
+
+// 2023-06-13, XCP 1.9.2
