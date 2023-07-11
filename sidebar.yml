@@ -4,7 +4,7 @@ entries:
   - title: Release Notes
     url: /releasenotes.html
   - title: Get started with XCP
-    url: /index.html
+    url: /xcp-index.html
     type: solutions
     entries:
       - title: XCP NFS add-on features
