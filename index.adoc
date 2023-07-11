@@ -2,7 +2,7 @@
 layout: astra
 sidebar: sidebar
 permalink: index.html
-lead: "Welcome to the XCP Information Library. Here you will find documentation for XCP 1.9.2 software including how to install, configure, and use XCP. Documentation for earlier releases of XCP are available on the NetApp Support Site"
+lead: "Welcome to the NetApp XCP information library. Here you will find documentation for XCP 1.9.2 software including how to install, configure, and use XCP. Documentation for earlier releases of XCP are available on the NetApp Support Site"
 summary: Learn about XCP 1.9.2 software including how to install, configure, and use XCP.
 ---
-= XCP documentation
+= NetApp XCP documentation
