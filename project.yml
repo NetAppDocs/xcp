@@ -105,28 +105,3 @@ sidebar:
           url: /xcp-troubleshoot-xcp-file-analytics-errors.html
     - title: Get more information
       url: /get-more-information.html
-
-homepage:
-  tiles:
-    - title: Get started
-      links:
-        - title: Learn about XCP
-          url: /index.html
-        - title: XCP 1.9.2 Release Notes
-          url: /releasenotes.html
-    - title: Product documentation
-      links:
-        - title: Install XCP
-          url: /xcp-install-xcp.html
-        - title:  Configure XCP
-          url: /xcp-configure-the-ini-file-for-xcp-nfs.html
-        - title: Plan data migration
-          url: /xcp-plan-nfs-data-migration.html
-        - title: Migrate data
-          url: /xcp-migrate-nfs-data.html
-    - title: Troubleshoot
-      links:
-        - title: Troubleshoot XCP 
-          url: /xcp-troubleshoot-xcp-nfs.html
-    - title: Get more information
-      url: /get-more-information.html
