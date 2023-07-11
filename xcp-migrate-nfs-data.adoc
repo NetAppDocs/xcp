@@ -1,6 +1,6 @@
 ---
 permalink: xcp-migrate-nfs-data.html
-redirect: /xcp/xcp-migrate-data.html
+redirect: xcp/xcp-migrate-data.html
 ---
 
 = Commands to migrate NFS data
