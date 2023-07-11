@@ -11,7 +11,7 @@ summary: Installing XCP NFS
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-
+[.lead]
 If you want to upgrade XCP, delete the current installation and replace it with a new installation of the latest version.
 This section details the system requirements and the procedures for the initial setup of XCP on a Linux client and the INI file configuration.
 
