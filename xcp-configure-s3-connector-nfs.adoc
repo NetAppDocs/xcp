@@ -19,9 +19,9 @@ Beginning with XCP 1.9.2, the Simple Storage Service (S3) connector enhances the
 .Supported migration use cases
 The following migration use cases are supported for the S3 connectors:
 
-* Migration from HDFS or NFS to NetApp StorageGRID
-* Migration from HDFS or NFS to Amazon S3
-* Migration from HDFS or NFS to NetApp ONTAP S3 
+* Migration from HDFS to NetApp StorageGRID
+* Migration from HDFS to Amazon S3
+* Migration from HDFS to NetApp ONTAP S3 
 
 NOTE: Currently MapR is only qualified and supported for HDFS.
 
