@@ -27,7 +27,7 @@ Traceback (most recent call last):
   File "xcp\histograms.py", line 387, in calculate_averages
 ZeroDivisionError: division by zero
 ----
-| Use an offline license instead of an online license to avoid this error. 
+| Use an offline license instead of an online license. 
 |`xcp: ERROR`: This license has expired
 |Renew or obtain the new XCP license from the link:https://xcp.netapp.com/[XCP site^].
 |This copy is not licensed
