@@ -19,7 +19,7 @@ Review the solutions to troubleshoot your issue.
 |===
 |Issue |Solution
 
-a| A traceback error might occur if the source and destination is a junction with no directories and an online license is used in migration. If this occurs, the status of the XCP command is passed but the following error is returned at the end of the console output:
+a| A traceback error might occur if the source, destination, or both is a junction with no directories and an online license is used in migration. If this occurs, the status of the XCP command is passed but the following error is returned at the end of the console output:
 ----
 Error in atexit._run_exitfuncs:
 Traceback (most recent call last):
