@@ -62,8 +62,8 @@ Rerun the command with the correct syntax for fallback user/group options
 
 Error message logged in xcp.log file:
 `pywintypes.error`: `(1314, 'GetNamedSecurityInfo', 'A required privilege is not held by the client.')`
-|An issue related to security descriptors because the migration user account does not have the correct privileges. XCP can only get owner, group, and DACL, it cannot get SACL.
-Add your migration user account to the"Manage Audit and Security Log” policy in your Active Directory.
+|An issue related to security descriptors because the migration user account does not have the required privileges. XCP can only get owner, group, and DACL, it cannot get SACL.
+Add your migration user account to the "Manage Audit and Security Log” policy in your Active Directory.
 Reference: link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953%28v%3Dws.11%29[Manage auditing and security log^]
 |===
 
