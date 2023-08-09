@@ -19,6 +19,15 @@ Review the solutions to troubleshoot your issue.
 |===
 |Issue |Solution
 
+a| A traceback error might occur if the source, destination, or both is a junction with no directories and an online license is used in migration. If this occurs, the status of the XCP command is `PASSED` but the following error is returned at the end of the console output:
+----
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "xcp\stats.py", line 214, in call_home
+  File "xcp\histograms.py", line 387, in calculate_averages
+ZeroDivisionError: division by zero
+----
+| Use an offline license instead of an online license. 
 |`xcp: ERROR`: This license has expired
 |Renew or obtain the new XCP license from the link:https://xcp.netapp.com/[XCP site^].
 |This copy is not licensed
@@ -49,11 +58,13 @@ Error messaged logged in xcp.log file:
 `pywintypes.error: (87, 'LookupAccountName', 'The parameter is incorrect.')`
 |Incorrect parameter for fallback user/group option.
 Rerun the command with the correct syntax for fallback user/group options
-|`xcp copy` with acl migration
+|`xcp copy` with ACL migration
 
 Error message logged in xcp.log file:
 `pywintypes.error`: `(1314, 'GetNamedSecurityInfo', 'A required privilege is not held by the client.')`
-|A user is facing an issue related to security descriptors because with the privileges that the migrations user owns, XCP can only get owner, group, and DACL, it cannot get SACL.
-Add your migration user to "Manage Audit and Security Log” policy in your Active Directory.
+|An issue related to security descriptors because the migration user account only has the required privileges for XCP to retrieve owner, group, and DACL. It cannot retrieve SACL.
+Add your migration user account to the "Manage Audit and Security Log” policy in your Active Directory.
 Reference: link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953%28v%3Dws.11%29[Manage auditing and security log^]
 |===
+
+// 2023 Aug 4, OTHERDOC-25
