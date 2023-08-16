@@ -69,8 +69,9 @@ sidebar:
         - title: Plan HDFS data migration
           url: /xcp-plan-hdfs-data-migration.html
         - title: Plan using File Analytics
-          url: /xcp-using-file-analytics.html
           entries:
+            - title: Plan your data migration
+              url: /xcp-file-analytics-plan-data-migration.html
             - title: Access File Analytics
               url: /xcp-access-file-analytics.html
             - title: Add file servers
