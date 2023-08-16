@@ -84,9 +84,7 @@ sidebar:
     - title: Migrate data
       entries:
         - title: Migrate NFS data
-          entries:
-            - title: Commands to migrate NFS data
-              url: /xcp-migrate-nfs-data.html 
+          url: /xcp-migrate-data.html
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
         - title: Migrate HDFS data
@@ -103,37 +101,5 @@ sidebar:
           url: /xcp-troubleshoot-xcp-smb-errors.html
         - title: Troubleshoot XCP File Analytics errors
           url: /xcp-troubleshoot-xcp-file-analytics-errors.html
-    - title: Legal notices
-      url: /legal-notices.html
-homepage:
-  tiles:
-    - title: Get started
-      links:
-        - title: Learn about XCP
-          url: /xcp-index.html
-        - title: Release notes
-          url: /releasenotes.html 
-    - title: Earlier versions
-      links:
-        - title: NetApp XCP 1.9.1
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64637&language=en-US
-        - title: NetApp XCP 1.9
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64493&language=en-US
-        - title: NetApp XCP 1.8.1
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64287&language=en-US
-        - title: NetApp XCP 1.8
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64074&language=en-US
-        - title: NetApp XCP 1.7 and earlier 
-          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064  
-    - title: More resources
-      links:
-        - title: XCP Documentation (including Reference materials)
-          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064
-        - title: NetApp TechCommTV (NetApp XCP videos)
-          url: link:https://www.youtube.com/user/NetAppTechCommTV/search?query=xcp
-        - title: NetApp XCP (including links to get a license)
-          url: https://xcp.netapp.com/ 
-        - title: NetApp resources for XCP
-          url: https://www.netapp.com/search/#q=xcp&sort=relevancy&f:@language=English
-        - title: NetApp Community (forums)
-          url: link:https://community.netapp.com
+    - title: Get more information
+      url: /get-more-information.html
