@@ -2,10 +2,3 @@
 permalink: xcp-using-file-analytics.html
 redirect: xcp/xcp-file-analytics-plan-data-migration.html
 ---
-
-= Plan using File Analytics
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
