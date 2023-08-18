@@ -1,0 +1,4 @@
+---
+permalink: xcp-using-file-analytics.html
+redirect: xcp/xcp-file-analytics-plan-data-migration.html
+---

@@ -1,0 +1,35 @@
+---
+sidebar: sidebar
+permalink: xcp-index.html
+keywords: netapp, xcp, about, migration, file analytics, nfs, smb
+summary: NetApp XCP allows for scalable and high-performance data migrations
+---
+= Learn about XCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+NetApp XCP is designed to scale and achieve greater performance by utilizing all the available system resources to manage high-volume datasets and high-performance data migrations. XCP helps you get complete visibility into the file system with the option to generate customer reports. Thanks to the matching and formatting capabilities, you can customize the reports to match any reporting needs.
+
+Use XCP for NFS or SMB systems as one of the following solutions:
+
+*	Migration solution
+*	File Analytics solution
+
+XCP is command-line software available in a single package supporting NFS and SMB protocols. XCP is available as a Linux binary for NFS datasets and is available as a Windows executable for SMB datasets.
+
+XCP File Analytics is host-based software that detects file shares, runs scans on the file system, and provides a dashboard for file analytics. XCP File Analytics works for both NetApp and third-party systems and runs on Linux or Windows hosts to provide analytics for NFS and SMB exported file systems. The binary for the file analytics GUI is included in the single package supporting NFS and SMB protocols.
+
+NOTE: The XCP binary is code signed. For more details, please refer to the README in `NETAPP_XCP_<version>.tgz`.
+
+The XCP CLI is robust. For more information, download _XCP Reference_ on the link:https://xcp.netapp.com/[XCP site^].
+
+*XCP workflow*
+
+image:xcp_image1.png[XCP workflow image]
+
+// 2023 JULY 11, OTHERDOC-22
+// BURT 1391465 05/31/2021
