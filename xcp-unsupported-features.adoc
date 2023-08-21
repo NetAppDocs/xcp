@@ -17,7 +17,6 @@ The following features are not supported on XCP NFS:
 [cols="40,60"options="header"]
 |===
 |Feature Name |Description
-
 |IPv6
 |Does not support IP version 6 (IPv6)
 |NFSv4 access control lists (ACLs) (third-party)
@@ -32,6 +31,7 @@ a|* The `sync` command does not support the POSIX connector
 |NFS to S3 migration
 |XCP does not support NFS to S3 migration.
 |===
+
 
 The following features are not supported on XCP SMB:
 
