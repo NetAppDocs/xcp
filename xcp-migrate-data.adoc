@@ -5,7 +5,7 @@ keywords: netapp, xcp, migrate, data, nfs, smb, copy, resume, sync, verify
 summary: Migrate data
 ---
 
-= Migrate data
+= Migrate NFS data
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Migrate data
 :imagesdir: ./media/
 
 [.lead]
-After planning the migration with the `show` and `scan` commands, you can migrate data.
+After planning the migration with the `show` and `scan` commands, you can migrate NFS data.
 
 == Copy
 
