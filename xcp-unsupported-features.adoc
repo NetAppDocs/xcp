@@ -24,6 +24,10 @@ The following features are not supported on XCP NFS:
 |POSIX connector
 a|* The `sync` command does not support the POSIX connector 
 * You should not use the `copy` command when the source is active
+|Hadoop Distributed File System (HDFS) connector
+a|* The `sync` command does not support the HDFS connector
+* The HDFS file system does not support symbolic links (symlinks), hard links, or special files
+* You should not use the `copy` command when the source is active
 |Linux
 |XCP is no longer supported on earlier distributions of Linux that were supported by XCP 1.6.3.
 | Active source support
