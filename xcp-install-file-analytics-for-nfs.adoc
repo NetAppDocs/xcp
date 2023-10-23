@@ -47,11 +47,7 @@ If any XCP operations are running, complete the operations before you start conf
 --
 .. Navigate to the `xcp` folder and run `./configure.sh -f`.
 +
-----
-[root@user-1 xcp]# ./configure.sh -f
-Cleanup and re-configure the system.
- Do you wish to continue(y/n):y
-----
+.. At the prompt, enter `y` to clean up and reconfigure the system.
 +
 Once approved, the script cleans up the existing configuration and reconfigures the system. 
 --
