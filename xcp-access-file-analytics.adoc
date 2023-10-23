@@ -33,7 +33,7 @@ There are two ways to log in to the File Analytics GUI:
 +
 [role="tabbed-block"]
 ====
-.Log in with a temporary password
+.Log in using the default user credentials
 --
 .. Log in to the GUI using the username “admin” and the temporary password "admin".
 +
