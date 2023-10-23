@@ -41,9 +41,12 @@ To perform a fresh install of File Analytics for SMB, complete the following ste
 +
 Optionally, if you have a CA certificate, place the certificate in this location with the same name and extensions.
 . Go to your Windows machine and run `xcp listen`, now XCP File Analytics for SMB is configured. Keep the window open to continuously run the service.
-. Launch File Analytics on the Google Chrome browser and refresh the page: `\https://<ip address of linux>/xcp`
+. Launch File Analytics on a supported browser and refresh the page: `\https://<ip address of linux>/xcp`
++
+Refer to link:xcp-install-xcp-smb.html[Install XCP SMB] for information on supported browsers.
 . Select `OK` when the dialog box displays.
-A new tab will open. Enable pop-ups on the browser if they are blocked.
++
+NOTE: A new tab will open. Enable pop-ups on the browser if they are blocked.
 . Accept the privacy policy for the URL. The following message displays: `SMB agent is ready to use. Please refresh the analytics page`
 . Return to the original tab hosting the XCP File Analytics GUI and refresh the page.
 +
@@ -57,9 +60,12 @@ To upgrade the existing File Analytics for SMB, complete the following steps.
 . In Windows, stop the existing XCP service by entering `CTRL-C` on the command line.
 . Replace `xcp.exe` with the latest binary.
 . Go to your Windows machine and run `xcp listen` to configure XCP File Analytics for SMB. Keep the window open to continuously run the service.
-. Launch File Analytics in the Google Chrome browser and refresh the page: `\https://<ip address of linux>/xcp`
+. Launch File Analytics on a supported browser and refresh the page: `\https://<ip address of linux>/xcp`
++
+Refer to link:xcp-install-xcp-smb.html[Install XCP SMB] for information on supported browsers.
 . Select *OK* when the dialog box displays.
-A new tab will open. Enable pop-ups on the browser if they are blocked.
++
+NOTE: A new tab will open. Enable pop-ups on the browser if they are blocked.
 . Accept the privacy policy for the URL. The following message displays: `SMB agent is ready to use. Please refresh the analytics page`
 . Return to the original tab hosting the XCP File Analytics GUI and refresh the page.
 +
