@@ -37,8 +37,6 @@ If any XCP operations are running, complete the operations before you start conf
 .Install File Analytics
 --
 .. Navigate to the `xcp` folder and run the `./configure.sh` script.
-+
-+
 ... Download PostgreSQL packages
 ... Install the PostgreSQL server
 ... Install the HTTPD server

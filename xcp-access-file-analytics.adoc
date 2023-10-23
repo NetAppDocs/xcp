@@ -35,17 +35,17 @@ There are two ways to log in to the File Analytics GUI:
 ====
 .Log in with a temporary password
 --
-. Log in to the GUI using the username “admin” and the temporary password "admin".
+.. Log in to the GUI using the username “admin” and the temporary password "admin".
 +
 image:xcp_image2.png[XCP File Analytics sign in screen]
-. Change the temporary password to your own password. 
-.. Select the user icon in the top right hand side of the screen and select *Change password*, as shown in the following image: 
+.. Change the temporary password to your own password. 
+... Select the user icon in the top right hand side of the screen and select *Change password*, as shown in the following image: 
 image:xcp-fa-changepass.png[]
-.. Enter a new strong password for the account.
+... Enter a new strong password for the account.
 image:xcp-changepassword.png[]
 +
 Your new password must contain at least one number, one upper case letter, one lower case letter and one special character(! @ # $ % ^ & * - _).
-. Sign in using the new password.
+.. Sign in using the new password.
 +
 After changing the password, you are automatically logged out of the GUI and you must sign in again using the new password that you created.
 --
