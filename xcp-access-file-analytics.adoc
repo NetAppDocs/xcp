@@ -78,7 +78,7 @@ The following are the mandatory details that you must share to register with you
 +
 You can also verify these details by logging in to the File Analytics UI:
 +
-.. Log in to the UI using the username “admin” and password set up during installation.
+.. Log in to the UI using the default user “admin” and the default password "admin".
 +
 .. Select the *User* icon on the top right corner of the page, then select *SAML settings*. 
 +
