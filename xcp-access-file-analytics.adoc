@@ -15,6 +15,8 @@ summary: File Analytics provides a graphical view of scan results
 [.lead]
 File Analytics provides a graphical view of scan results.
 
+== Log in to the File Analytics GUI
+
 .About this task 
 
 The XCP File Analytics GUI provides a dashboard with graphs for visualizing File Analytics. The XCP File Analytics GUI is enabled when you configure XCP on a Linux machine.
@@ -78,7 +80,7 @@ The following are the mandatory details that you must share to register with you
 +
 You can also verify these details by logging in to the File Analytics UI:
 +
-.. Log in to the UI using the default user “admin” and the default password "admin".
+.. Log in to the GUI using the steps described in <<Log in to the File Analytics GUI>>.
 +
 .. Select the *User* icon on the top right corner of the page, then select *SAML settings*. 
 +
