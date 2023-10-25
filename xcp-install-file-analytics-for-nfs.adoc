@@ -18,15 +18,13 @@ Install or upgrade File Analytics for NFS.
 .About this task
 For system requirements for NFS, see link:xcp-install-xcp-nfs.html[Install XCP NFS].
 
-The `configure.sh` script installs and enables default configurations of HTTPD and PostgreSQL available for Linux server. You can change or update to a more recent version as needed and to adhere to security guidelines. To learn more about the `configure.sh` script, run `./configure.sh -h`
+The `configure.sh` script installs Postgres Database, Apache HTTPD server, and other required packages on the host Linux machine. You can change or update to a more recent version as needed and to adhere to security guidelines. For information on specific supported Red Hat Enterprise Linux (RHEL) versions, refer to the link:https://mysupport.netapp.com/matrix/[IMT^]. To learn more about the `configure.sh` script, run `./configure.sh -h` on the command line.
 
 .Before you begin
 
-* You cannot run the XCP application and run XCP as service simultaneously on the same host.
-+
-If any XCP operations are running, complete the operations before you start configuration.
+* If any XCP operations are running, NetApp recommends that you complete the operations before you start configuration.
 * Your Linux machine must be connected to the Yum repository server or the internet.
-* If a firewall is configured on the Linux machine, you must change the firewall settings to enable the ports used by XCP, the XCP service, and the services used by XCP File Analytics. For more information, go to xref:xcp-ports-used.html[Ports used by XCP].
+* If a firewall is configured on the Linux machine, you must change the firewall settings to enable port 5030 used by the XCP service. 
 
 .Steps
 
@@ -37,11 +35,15 @@ If any XCP operations are running, complete the operations before you start conf
 .Install File Analytics
 --
 .. Navigate to the `xcp` folder and run the `./configure.sh` script.
-... Download PostgreSQL packages
-... Install the PostgreSQL server
-... Install the HTTPD server
-... Use OpenSSL to create a self-signed certificate (`server.key and server.crt`)
-... Create the XCP File Analytics database
++
+If installation is successful, the following message is displayed:
++
+----
+You can now access XCP file analytics using (<username>:<password>)
+https://<ip_address>/xcp
+----
++
+NOTE: You can use this username and password to log in to the File Analytics GUI.
 --
 .Upgrade File Analytics
 --
@@ -53,11 +55,6 @@ Once approved, the script cleans up the existing configuration and reconfigures 
 --
 ====
 
-. Verify the XCP service.
-+
-Use the following command to verify the XCP service is running:
-+
-`service xcp status`
 . Launch File Analytics in a supported browser: *\https://<ip address of linux>/xcp*.
 +
 Refer to link:xcp-install-xcp-nfs.html[Install XCP NFS] for information on supported browsers.
