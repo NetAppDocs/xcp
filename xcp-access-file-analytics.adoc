@@ -17,8 +17,6 @@ File Analytics provides a graphical view of scan results.
 
 == Log in to the File Analytics GUI
 
-.About this task 
-
 The XCP File Analytics GUI provides a dashboard with graphs for visualizing File Analytics. The XCP File Analytics GUI is enabled when you configure XCP on a Linux machine.
 
 NOTE: To check the supported browsers for accessing File Analytics, see the link:https://mysupport.netapp.com/matrix/[NetApp IMT^].
