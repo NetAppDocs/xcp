@@ -52,6 +52,13 @@ NOTE: You can use this username and password to log in to the File Analytics GUI
 .. At the prompt, enter `y` to clean up and reconfigure the system.
 +
 Once approved, the script cleans up the existing configuration and reconfigures the system. 
++
+If successful, the following message is displayed:
++
+----
+You can now access XCP file analytics using (<username>:<password>)
+https://<ip_address>/xcp
+----
 --
 ====
 
