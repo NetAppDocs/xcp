@@ -33,14 +33,14 @@ There are two ways to log in to the File Analytics GUI:
 +
 [role="tabbed-block"]
 ====
-.Log in using the user credentials provided on installation
+.Log in using the user credentials obtained during installation
 --
-.. Log in to the GUI using the user credentials provided when you installed File Analytics.
+.. Log in to the GUI using the user credentials obtained when you installed File Analytics.
 +
 image:xcp_image2.png[XCP File Analytics sign in screen]
 .. Optionally, change the password to your own password. 
 +
-If you want to change the password provided on installation to your own password,  select the user icon and select *Change password*.
+If you want to change the password obtained during installation to your own password, select the user icon and select *Change password*.
 +
 NOTE: After changing the password, you are automatically logged out of the GUI and you must sign in again using the new password that you created.
 --
