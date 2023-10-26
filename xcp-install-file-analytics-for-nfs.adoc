@@ -18,7 +18,7 @@ Install or upgrade File Analytics for NFS.
 .About this task
 For system requirements for NFS, see link:xcp-install-xcp-nfs.html[Install XCP NFS].
 
-The `configure.sh` script installs XCP File Analytics on a Red Hat Enterprise Linux (RHEL) host machine. As part of the installation, the script installs Postgres Database, Apache HTTPD server, and other required packages on the host Linux machine. For information on specific supported versions, refer to the link:https://mysupport.netapp.com/matrix/[IMT^]. You can change or update to a more recent version as needed and to adhere to security guidelines. To learn more about the `configure.sh` script, run `./configure.sh -h` on the command line.
+The `configure.sh` script installs XCP File Analytics on a Red Hat Enterprise Linux (RHEL) host machine. As part of the installation, the script installs Postgres Database, Apache HTTPD server, and other required packages on the host Linux machine. For information on specific supported RHEL versions, refer to the link:https://mysupport.netapp.com/matrix/[IMT^]. You can change or update to a more recent version as needed and to adhere to security guidelines. To learn more about the `configure.sh` script, run `./configure.sh -h` on the command line.
 
 .Before you begin
 
