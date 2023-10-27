@@ -18,7 +18,7 @@ You can use the `-ads` option with XCP SMB commands to perform NTFS ADS migratio
  
 == Supported use cases
 
-You can use XCP SMB copy and sync commands to migrate data that includes Alternate Data Streams.
+You can use XCP SMB `copy` and `sync` commands to migrate data that includes Alternate Data Streams.
 
 The XCP SMB `scan` command can be used to scan the SMB share for Alternate Data Streams. 
 
@@ -38,6 +38,6 @@ Review the following example commands show how to use the `-ads` option:
 * `xcp scan -ads \\<SMB share>`
 * `xcp copy -ads \\<source SMB share>  \\<destination SB share>`
 * `xcp sync -ads \\<source SMB share>  \\<destination SB share>`
-* `xcp verify -ads ads \\<source SMB share>  \\<destination SB share>`
+* `xcp verify -ads \\<source SMB share>  \\<destination SB share>`
 
 // 2023 27 Oct, OTHERDOC-34
