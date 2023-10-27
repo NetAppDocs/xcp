@@ -1,0 +1,43 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-ads.html
+keywords: netapp, xcp, smb, ads, alternate, data, streams, ntfs
+summary: NTFS Alternate Data Streams (ADS) migration for SMB
+---
+= NTFS Alternate Data Streams (ADS) migration for SMB
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Beginning with XCP 1.9.3, XCP SMB supports NTFS Alternate Data Streams (ADS) migration.
+
+You can use the `-ads` option with XCP SMB commands to perform NTFS ADS migration.
+ 
+== Supported use cases
+
+You can use XCP SMB copy and sync commands to migrate data that includes Alternate Data Streams.
+
+The XCP SMB `scan` command can be used to scan the SMB share for Alternate Data Streams. 
+
+== Supported XCP SMB commands:
+
+The following XCP SMB commands support the `-ads` option:
+
+* `scan`
+* `copy`
+* `verify`
+* `sync`
+
+== Command examples
+
+Review the following example commands show how to use the `-ads` option:
+
+* `xcp scan -ads \\<SMB share>`
+* `xcp copy -ads \\<source SMB share>  \\<destination SB share>`
+* `xcp sync -ads \\<source SMB share>  \\<destination SB share>`
+* `xcp verify -ads ads \\<source SMB share>  \\<destination SB share>`
+
+// 2023 27 Oct, OTHERDOC-34

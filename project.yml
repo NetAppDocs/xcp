@@ -88,6 +88,9 @@ sidebar:
           url: /xcp-migrate-data.html
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
+          entries:
+            - title: NTFS Alternate Data Streams (ADS) migration for SMB
+              url: /xcp-smb-ads.html
         - title: Migrate HDFS data
           url: /xcp-migrate-hdfs-data.html
         - title: Run multiple XCP jobs on the same host 
