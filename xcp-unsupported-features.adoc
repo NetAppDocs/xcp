@@ -50,8 +50,6 @@ The following features are not supported on XCP SMB:
 |ACLs not supported for scan option
 |IPv6
 |Does not support IP version 6 (IPv6)
-|NTFS Alternate Data Streams
-|XCP does not currently support Alternate Data Streams
 |XCP Filters
 |The XCP SMB exclude option currently excludes directories based on their pattern in the filter and traverses the filesystem of those directories.
 | Live source migration
