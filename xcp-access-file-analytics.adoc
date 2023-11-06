@@ -42,6 +42,8 @@ image:xcp_image2.png[XCP File Analytics sign in screen]
 +
 If you want to change the password obtained during installation to your own password, select the user icon and select *Change password*.
 +
+Your new password must be at least eight characters in length and contain at least one number, one upper case letter, one lower case letter, and one special character (! @ # $ % ^ & * - _). 
+
 NOTE: After changing the password, you are automatically logged out of the GUI and you must sign in again using the new password that you created.
 --
 .Configure and enable enterprise-wide single sign-on (SSO) capability.
