@@ -89,9 +89,9 @@ NOTE: To get the access time (atime) graph in SMB scans, check the box for prese
 
 === File Size Accessed/Modified/Created Graph
 
-The File Size Accessed/Modified/Created graph displays the size of files changed over time. The X-axis represents the period of time within which changes were made and the Y- axis represents the size of files changed.
-
 image:xcp-filesize-amc.png[]
+
+The File Size Accessed/Modified/Created graph displays the size of files changed over time. The X-axis represents the period of time within which changes were made and the Y- axis represents the size of files changed.
 
 NOTE: To get the access time (atime) graph in SMB scans, check the box for preserving atime before running a scan.
 
@@ -103,9 +103,9 @@ The File Distribution by Extension graph represents the count of the different f
 
 === File Size Distribution by Extension Graph
 
-The File Size Distribution by Extension graph represents the cumulative size of the different file extensions in a file share. The size of the divisions representing the extensions is based on the size of files with each extension.
-
 image:xcp-filesize-dist-ex.png[]
+
+The File Size Distribution by Extension graph represents the cumulative size of the different file extensions in a file share. The size of the divisions representing the extensions is based on the size of files with each extension.
 
 === File Distribution by Type Graph
 
