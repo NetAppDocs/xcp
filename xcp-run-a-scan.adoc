@@ -83,11 +83,13 @@ The Space Occupied by Users graph displays the space used by users. The Username
 
 image:xcp_image13.png[Files Accessed/Modified/Created Graph]
 
-The Files Accessed/Modified/Created graph displays the count of files changed overtime. The X-axis represents the period of time within which changes were made and the y- axis represents the number of files changed.
+The Files Accessed/Modified/Created graph displays the count of files changed over time. The X-axis represents the period of time within which changes were made and the Y-axis represents the number of files changed.
 
 NOTE: To get the access time (atime) graph in SMB scans, check the box for preserving atime before running a scan.
 
 === File Size Accessed/Modified/Created Graph
+
+The File Size Accessed/Modified/Created graph displays the size of files changed over time. The X-axis represents the period of time within which changes were made and the Y- axis represents the size of files changed.
 
 image:xcp-filesize-amc.png[]
 
@@ -100,6 +102,8 @@ image:xcp_image14.png[File Distribution by Extension Graphic]
 The File Distribution by Extension graph represents the count of the different file extensions in a file share. The size of the divisions representing the extensions is based on the number of files with each extension.
 
 === File Size Distribution by Extension Graph
+
+The File Size Distribution by Extension graph represents the cumulative size of the different file extensions in a file share. The size of the divisions representing the extensions is based on the size of files with each extension.
 
 image:xcp-filesize-dist-ex.png[]
 
