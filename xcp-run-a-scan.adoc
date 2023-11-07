@@ -99,7 +99,7 @@ image:xcp_image14.png[File Distribution by Extension Graphic]
 
 The File Distribution by Extension graph represents the count of the different file extensions in a file share. The size of the divisions representing the extensions is based on the number of files with each extension.
 
-=== File Size Distribution by Extension
+=== File Size Distribution by Extension Graph
 
 image:xcp-filesize-dist-ex.png[]
 
