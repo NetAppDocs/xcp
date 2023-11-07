@@ -87,11 +87,21 @@ The Files Accessed/Modified/Created graph displays the count of files changed ov
 
 NOTE: To get the access time (atime) graph in SMB scans, check the box for preserving atime before running a scan.
 
-=== File Distribution by Extension Graphic
+=== File Size Accessed/Modified/Created Graph
+
+image:xcp-filesize-amc.png[]
+
+NOTE: To get the access time (atime) graph in SMB scans, check the box for preserving atime before running a scan.
+
+=== File Distribution by Extension Graph
 
 image:xcp_image14.png[File Distribution by Extension Graphic]
 
 The File Distribution by Extension graph represents the count of the different file extensions in a file share. The size of the divisions representing the extensions is based on the number of files with each extension.
+
+=== File Size Distribution by Extension
+
+image:xcp-filesize-dist-ex.png[]
 
 === File Distribution by Type Graph
 
