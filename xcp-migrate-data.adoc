@@ -81,6 +81,8 @@ xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
 
 You can use `isync` with the `estimate` option to estimate the time taken for incremental syncs.
 
+NOTE: If you change more than 25% of the data set size used, the `isync estimate` command might not show the expected results. 
+
 *Example*
 
 ----
