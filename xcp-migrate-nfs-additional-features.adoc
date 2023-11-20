@@ -86,6 +86,9 @@ The XCP `indexdelete` command can be used to delete catalog indexes.
 ----
 xcp indexdelete 
 ----
+
+See `xcp help indexdelete` for more details.
+
 // 1455556, 2022-02-11
 // 1483343, 2022-06-17
 // 2023-04-20, OTHERDOC-7

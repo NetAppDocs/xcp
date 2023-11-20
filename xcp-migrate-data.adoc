@@ -87,5 +87,7 @@ You can use `isync` with the `estimate` option to estimate the time taken for in
 xcp isync estimate -id <name>
 ----
 
+See `xcp help isync` for more details.
+
 // 2023-06-13, XCP 1.9.2
 // 2022-05-26, Issue 20
