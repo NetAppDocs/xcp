@@ -77,6 +77,68 @@ xcp live estimation with -t option
 xcp estimate -id <scan id> -t <time for which estimation should run> -target server:/export
 ....
 
+== indexdelete
+
+The XCP `indexdelete` command can be used to delete catalog indexes.
+
+*Example*
+
+----
+[root@client1 linux]# ./xcp indexdelete 
+XCP <version> (c) 2023 NetApp, Inc.; Licensed to xxx [Network Appliance, Inc] until Tue Jul 23 04:32:03 2024
+
+Job ID: Job_2023-11-16_02.41.20.260166_indexdelete
+===========================================================================================
+Name                                    Command   Size      Created      Updated           
+===========================================================================================
+isync_tc1_retry                         copy      996 KiB   15-Nov-2023  15-Nov-2023       
+isync_est_isync                         isync     1012 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_05.56.17.522428   verify    1016 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_06.04.31.693517   verify    1.00 MiB  15-Nov-2023  15-Nov-2023       
+isync_tc1_retry1                        copy      988 KiB   15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_09.02.46.973624   verify    988 KiB   15-Nov-2023  15-Nov-2023       
+est001                                  isync     1012 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_09.37.24.179634   verify    0         15-Nov-2023  15-Nov-2023       
+a1batch_error1                          copy      368 KiB   15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_09.45.53.104055   verify    360 KiB   15-Nov-2023  15-Nov-2023       
+a1batch_error2                          isync     376 KiB   15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_09.48.05.000473   verify    372 KiB   15-Nov-2023  15-Nov-2023       
+b1batch_error1                          copy      4.50 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_12.00.29.214479   verify    4.50 KiB  15-Nov-2023  15-Nov-2023       
+b1batch_error2                          isync     4.50 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_12.00.40.536687   verify    4.50 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_12.27.08.055501   verify    4.50 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_12.27.39.797020   verify    4.50 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_12.52.29.408766   verify    4.50 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_12.53.01.870109   verify    4.50 KiB  15-Nov-2023  15-Nov-2023       
+c1batch_error1                          copy      988 KiB   15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_22.54.11.081944   verify    976 KiB   15-Nov-2023  15-Nov-2023       
+c1batch_error2                          isync     1020 KiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_23.19.44.158263   verify    1.00 MiB  15-Nov-2023  15-Nov-2023       
+XCP_verify_2023-11-15_23.44.01.274732   verify    4.50 KiB  15-Nov-2023  15-Nov-2023       
+c1batch_error132576                     copy      992 KiB   16-Nov-2023  16-Nov-2023       
+c1batch_error227998                     isync     1004 KiB  16-Nov-2023  16-Nov-2023       
+XCP_verify_2023-11-16_01.07.45.824516   verify    1012 KiB  16-Nov-2023  16-Nov-2023       
+S3_index                                copy      52.5 KiB  16-Nov-2023  16-Nov-2023       
+S3_index1                               copy      52.5 KiB  16-Nov-2023  16-Nov-2023       
+c1batch_error14383                      copy      728 KiB   16-Nov-2023  16-Nov-2023       
+
+32 scanned, 941 KiB in (1.04 MiB/s), 48.8 KiB out (55.4 KiB/s), 0s.
+
+WARNING: 31 indexes will be deleted permanently.
+Are you sure you want to delete (yes/no): yes
+
+
+Xcp command : xcp indexdelete
+Stats       : 466 scanned, 31 index deleted
+Speed       : 1.09 MiB in (216 KiB/s), 133 KiB out (25.8 KiB/s)
+Total Time  : 5s.
+Job ID      : Job_2023-11-16_02.41.20.260166_indexdelete
+Log Path    : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.41.20.260166_indexdelete.log
+STATUS      : PASSED
+[root@client1 linux]#
+
+----
 // 1455556, 2022-02-11
 // 1483343, 2022-06-17
 // 2023-04-20, OTHERDOC-7
