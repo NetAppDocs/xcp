@@ -101,7 +101,7 @@ image:xcp_image14.png[File Distribution by Extension Graphic]
 
 The File Distribution by Extension graph represents the count of the different file extensions in a file share. The size of the divisions representing the extensions is based on the number of files with each extension.
 
-In SMB shares, you can get additional Alternate Data Streams (ADS) data by checking the box for *ADS* before running a scan. 
+Additionally, for SMB shares, you can get the number of Alternate Data Streams (ADS) files for each file extension by checking the box for ADS before running a scan. 
 
 image:xcp-file-distribution-ads.png[]
 
@@ -123,7 +123,7 @@ The Distribution by Type graph represents the count of the following types of fi
 *	DIR: Files with directories
 *	Junction: Available in SMB only 
 
-In SMB shares, you can get additional Alternate Data Streams (ADS) data by checking the box for *ADS* before running a scan. 
+Additionally, for SMB shares, you can get the number of Alternate Data Streams (ADS) files for different types extension by checking the box for ADS before running a scan.  
 
 image:xcp-file-distribution-type.png[]
 
