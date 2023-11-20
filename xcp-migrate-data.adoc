@@ -73,10 +73,8 @@ See `xcp help verify` for more details.
 
 The `isync` command syncs changes on a target without indexing. You can use `isync` with the `estimate` option to estimate the time taken for incremental syncs.
 
-*Commmand example for isync*
+*XCP isync example*
 ----
-[10:52 AM] Sahoo, Bijaylaxmi
- 
 [root@client1 linux]# ./xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
 XCP <version> (c) 2023 NetApp, Inc.; Licensed to xxx  [Network Appliance, Inc] until Sat Jul  6 06:53:28 2024
  
@@ -103,7 +101,7 @@ STATUS      : PASSED
 [root@client1 linux]
 ----
  
-*Command example for isync estimate*
+*XCP isync estimate example*
 
 ----
 [root@client1 linux]# ./xcp isync estimate -id aa1batch_error1
