@@ -123,7 +123,7 @@ The Distribution by Type graph represents the count of the following types of fi
 *	DIR: Files with directories
 *	Junction: Available in SMB only 
 
-Additionally, for SMB shares, you can get the number of Alternate Data Streams (ADS) files for different types extension by checking the box for ADS before running a scan.  
+Additionally, for SMB shares, you can get the number of Alternate Data Streams (ADS) files for different types by checking the box for ADS before running a scan.  
 
 image:xcp-file-distribution-type.png[]
 
