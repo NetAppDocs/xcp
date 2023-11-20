@@ -71,15 +71,17 @@ See `xcp help verify` for more details.
 
 == iSync
 
-The `isync` command syncs changes on a target without indexing. You can use `isync` with the `estimate` option to estimate the time taken for incremental syncs.
+The `isync` command syncs changes on a target without indexing. 
 
-*XCP isync example*
+*Example*
 ----
 xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
 
 ----
- 
-*XCP isync estimate example*
+
+You can use `isync` with the `estimate` option to estimate the time taken for incremental syncs.
+
+*Example*
 
 ----
 xcp isync estimate -id <name>
