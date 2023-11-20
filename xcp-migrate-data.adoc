@@ -75,58 +75,14 @@ The `isync` command syncs changes on a target without indexing. You can use `isy
 
 *XCP isync example*
 ----
-[root@client1 linux]# ./xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
-XCP <version> (c) 2023 NetApp, Inc.; Licensed to xxx  [Network Appliance, Inc] until Sat Jul  6 06:53:28 2024
- 
-Job ID: Job_2023-11-20_04.11.03.128824_isync
-41,030 scanned, 935 MiB in (162 MiB/s), 4.23 MiB out (752 KiB/s), 6s
-57,915 scanned, 2.10 GiB in (239 MiB/s), 10.00 MiB out (1.13 MiB/s), 11s
-57,915 scanned, 3.20 GiB in (210 MiB/s), 14.6 MiB out (879 KiB/s), 16s
-92,042 scanned, 4.35 GiB in (196 MiB/s), 21.6 MiB out (1.17 MiB/s), 22s
-123,977 scanned, 5.70 GiB in (257 MiB/s), 29.6 MiB out (1.49 MiB/s), 27s
-137,341 scanned, 6.75 GiB in (212 MiB/s), 36.0 MiB out (1.25 MiB/s), 32s
-154,503 scanned, 8.00 GiB in (226 MiB/s), 43.0 MiB out (1.24 MiB/s), 38s
-181,578 scanned, 36 copied, 8.68 GiB in (132 MiB/s), 49.7 MiB out (1.26 MiB/s), 43s
-target scan completed: 181,656 scanned, 1,477 copied, 1 removed, 8.76 GiB in (200 MiB/s), 123 MiB out (2.75 MiB/s), 44s.
-181,907 scanned, 10,013 copied, 1 removed, 9.17 GiB in (95.3 MiB/s), 545 MiB out (95.2 MiB/s), 49s
- 
- 
-Xcp command : xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
-Stats       : 1 removed, 181,907 scanned, 10,263 copied
-Speed       : 9.17 GiB in (190 MiB/s), 548 MiB out (11.1 MiB/s)
-Total Time  : 49s.
-Job ID      : Job_2023-11-20_04.11.03.128824_isync
-Log Path    : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-20_04.11.03.128824_isync.log
-STATUS      : PASSED
-[root@client1 linux]
+xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
+
 ----
  
 *XCP isync estimate example*
 
 ----
-[root@client1 linux]# ./xcp isync estimate -id aa1batch_error1
-XCP <version> (c) 2023 NetApp, Inc.; Licensed to xxxx  [Network Appliance, Inc] until Sat Jul  6 06:53:28 2024
- 
-Job ID: Job_2023-11-20_04.08.18.967541_isync_estimate
-Index: aa1batch_error1 {source: <source_ip_address>:/src, target: <destination_ip_address>:/dest}
- 
- 
-30,611 scanned, 786 MiB in (141 MiB/s), 3.60 MiB out (661 KiB/s), 5s
-45,958 scanned, 1.92 GiB in (223 MiB/s), 8.48 MiB out (939 KiB/s), 10s
-53,825 scanned, 3.11 GiB in (216 MiB/s), 13.5 MiB out (912 KiB/s), 16s
-67,260 scanned, 4.33 GiB in (231 MiB/s), 18.6 MiB out (961 KiB/s), 22s
-81,328 scanned, 5.57 GiB in (253 MiB/s), 23.8 MiB out (1.05 MiB/s), 27s
-85,697 scanned, 6.85 GiB in (241 MiB/s), 29.2 MiB out (1005 KiB/s), 32s
-85,697 scanned, 8.14 GiB in (262 MiB/s), 34.5 MiB out (1.06 MiB/s), 37s
- 
- 
-Xcp command : xcp isync estimate -id aa1batch_error1
-Estimated Time  : 45.1s
-Job ID      : Job_2023-11-20_04.08.18.967541_isync_estimate
-Log Path    : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-20_04.08.18.967541_isync_estimate.log
-Error Path  : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-20_04.08.18.967541_isync_estimate.error
-STATUS      : PASSED
-[root@scs000058362-3 linux]#
+xcp isync estimate -id <name>
 ----
 
 // 2023-06-13, XCP 1.9.2
