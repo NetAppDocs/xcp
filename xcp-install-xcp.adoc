@@ -31,9 +31,9 @@ You can download XCP from the link:https://mysupport.netapp.com/products/p/xcp.h
 
 NetApp offers a free one year XCP license. You can obtain the license file from the link:https://xcp.netapp.com/[XCP site^]. The licensing portal offers different licensing options. After one year, you can renew the license for another year using the same portal.
 
-To run XCP 1.9.3 and later, you must obtain a new XCP license from the link:https://xcp.netapp.com/[XCP site^]. Licenses used in earlier releases are not supported in XCP 1.9.3 and later. 
-
 The XCP license is available as an offline or online license. If you want to send migration statistics use an online license. The online license requires an internet connection. The offline license does not require an internet connection.
+
+To run XCP 1.9.3 and later, you must obtain a new XCP license from the link:https://xcp.netapp.com/[XCP site^]. Licenses used in earlier releases are not supported in XCP 1.9.3 and later. 
 
 == Prepare your system
 
