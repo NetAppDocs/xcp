@@ -71,7 +71,7 @@ See `xcp help verify` for more details.
 
 == iSync
 
-The `isync` command compares the source and destination and syncs the differences on the target without using the catalog index.
+The `isync` command compares the source and destination and synchronizes the differences on the target without using the catalog index.
 
 *Example*
 ----

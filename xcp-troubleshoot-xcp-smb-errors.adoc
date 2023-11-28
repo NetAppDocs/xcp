@@ -18,7 +18,8 @@ Review the solutions to troubleshoot your issue.
 [options="header"]
 |===
 |Issue |Solution
-a| XCP commands do not show expected results when a junction path is used in the source or destination.
+a| XCP commands do not show the expected results when a junction path is used in the source or destination.
+
 a| Use an SMB share path instead of a junction path when running XCP commands.
 a| A traceback error might occur if the source, destination, or both is a junction with no directories and an online license is used in migration. If this occurs, the XCP command status is `PASSED` but the following error is returned at the end of the console output:
 ----

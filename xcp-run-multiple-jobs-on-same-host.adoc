@@ -12,7 +12,7 @@ summary: The POSIX connector gives XCP the capability to access any Linux-mounte
 :imagesdir: ./media/
 
 [.lead]
-Beginning with XCP 1.9.2, you can run multiple XCP jobs or commands on a single XCP host, provided that the host has sufficient resources for each job. When you run a command that supports the multiple jobs, XCP uses minimal host memory to complete the job which creates the capacity to run additional jobs on the same host configuration.
+Beginning with XCP 1.9.2, you can run multiple XCP jobs or commands on a single XCP host, provided that the host has sufficient resources for each job. When you run a command that supports multiple jobs, XCP uses minimal host memory to complete the job, which creates the capacity to run additional jobs on the same host configuration.
 
 == Minimum system requirements
 For each XCP job, you should allow up to 64GB of host memory and eight cores for medium to large migrations. 

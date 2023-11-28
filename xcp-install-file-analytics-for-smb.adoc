@@ -37,20 +37,25 @@ To perform a fresh install of File Analytics for SMB, complete the following ste
 . In the Windows CLI command prompt, run `xcp configure`.
 
 . When prompted, provide the IP address of the Linux machine where the XCP File Analytics server is configured.
-. Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/` (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP`
+. Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/` (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP`.
+
 +
-Optionally, if you have a CA certificate, place the certificate in this location with the same name and extensions.
+Optionally, if you have a CA certificate, place the certificate in `C:\NetApp\XCP` with the same name and extensions.
+
 . Go to your Windows machine and run `xcp listen`, now XCP File Analytics for SMB is configured. Keep the window open to continuously run the service.
 . Launch File Analytics on a supported browser: `\https://<ip address of linux>/xcp`
 +
 Refer to link:xcp-install-xcp-smb.html[Install XCP SMB] for information on supported browsers.
 . Select `OK` when the dialog box displays.
 +
-NOTE: A new tab will open. Enable pop-ups on the browser if they are blocked.
+NOTE: A new tab opens. Enable pop-ups on the browser if they are blocked.
+
 . Accept the privacy policy for the URL. The following message displays: `SMB agent is ready to use. Please refresh the analytics page`
-. Return to the original tab hosting the XCP File Analytics GUI and refresh the page.
+. . Display the SMB agent under the Agents card by returning to the original tab hosting the XCP File Analytics GUI and refreshing the page.
+
 +
-This displays the SMB agent under the Agents card.
+
+
 
 == Upgrade of File Analytics for SMB
 
@@ -65,10 +70,13 @@ To upgrade the existing File Analytics for SMB, complete the following steps.
 Refer to link:xcp-install-xcp-smb.html[Install XCP SMB] for information on supported browsers.
 . Select *OK* when the dialog box displays.
 +
-NOTE: A new tab will open. Enable pop-ups on the browser if they are blocked.
+NOTE: A new tab opens. Enable pop-ups on the browser if they are blocked.
+
 . Accept the privacy policy for the URL. The following message displays: `SMB agent is ready to use. Please refresh the analytics page`
-. Return to the original tab hosting the XCP File Analytics GUI and refresh the page.
+. Display the SMB agent under the Agents card by returning to the original tab hosting the XCP File Analytics GUI and refreshing the page.
+
 +
-This displays the SMB agent under the Agents card.
+
+
 
 // 23 Oct 2023, OTHERDOC-34

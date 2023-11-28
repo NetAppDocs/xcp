@@ -55,7 +55,8 @@ To set up Security Assertion Markup Language (SAML) based SSO login, see <<Confi
 --
 ====
 
-. After logging in, you can see that the NFS agent; a green tick is present showing minimal system configuration of the Linux system and XCP version.
+. After logging in, you can see the NFS agent; a green tick is present showing minimal system configuration of the Linux system and XCP version.
+
 . If you have configured an SMB agent, you can see the SMB agent added in the same agent card.
 
 == Configure SSO credentials
