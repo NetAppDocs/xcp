@@ -68,4 +68,5 @@ Add your migration user account to the "Manage Audit and Security Log” policy 
 Reference: link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953%28v%3Dws.11%29[Manage auditing and security log^]
 |===
 
+// 23 Oct 2023, OTHERDOC-34
 // 2023 Aug 4, OTHERDOC-25

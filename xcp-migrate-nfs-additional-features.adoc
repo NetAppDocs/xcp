@@ -89,6 +89,7 @@ xcp indexdelete
 
 See `xcp help indexdelete` for more details.
 
+// 23 Oct 2023, OTHERDOC-34
 // 1455556, 2022-02-11
 // 1483343, 2022-06-17
 // 2023-04-20, OTHERDOC-7

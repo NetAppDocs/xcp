@@ -43,4 +43,5 @@ If you are using link:xcp-prepare-linux-for-xcp-nfs.html[XCP NFS on a Linux syst
 
 If you are using link:xcp-prepare-windows-for-xcp-smb.html[XCP SMB on a Microsoft Windows system], you must prepare storage.
 
+// 23 Oct 2023, OTHERDOC-34
 // 2023 Jul 11, OTHERDOC-21
