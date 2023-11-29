@@ -87,7 +87,7 @@ You can use the `indexdelete` command to delete catalog indexes.
 xcp indexdelete 
 ----
 
-See `xcp help indexdelete` for more details.
+Run `xcp help indexdelete` for more details.
 
 // 23 Oct 2023, OTHERDOC-34
 // 1455556, 2022-02-11

@@ -19,8 +19,6 @@ Beginning with XCP 1.9.3, XCP SMB supports migration of NTFS Alternate Data Stre
 
 You can use the XCP SMB `copy` and `sync` commands to migrate data that includes ADS, and the XCP SMB `scan` command to scan the SMB share for ADS. 
 
-
-
 == Supported XCP SMB commands
 
 The following XCP SMB commands support the `-ads` option:

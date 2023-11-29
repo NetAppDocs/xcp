@@ -30,7 +30,7 @@ Run `xcp help show` for more details.
 
 The `scan` command recursively scans the entire source NFSv3 exported paths and prints the statistics of file structure at the end of the scan. NetApp recommends putting the source NFS export mounts in read-only mode during the scan operation.
 
-NOTE: If a file or directory name contains non-UTF-8 characters, they are converted to the UTF-8 format and displayed when the `xcp-scan` command is run. Depending on the translation from the source encoding to UTF-8, the characters might not be displayed as expected.
+NOTE: If a file or directory name contains non-UTF-8 characters, these characters are converted to the UTF-8 format and displayed when you run the `xcp-scan` command. Depending on the translation from the source encoding to UTF-8, the characters might not display as expected.
 
 *Example:*
 
