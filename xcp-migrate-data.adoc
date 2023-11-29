@@ -80,7 +80,7 @@ xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
 
 ----
 
-You can use `isync` with the `estimate` option to estimate the time it takes for the `isync` command to sync the incremental changes. The `-id` parameter specifies the catalog name of a previous copy operation.
+You can use `isync` with the `estimate` option to estimate the time it takes for the `isync` command to synchronize the incremental changes. The `-id` parameter specifies the catalog name of a previous copy operation.
 
 NOTE: If you change more than 25% of the data set size used, the `isync estimate` command might not show the expected results. 
 

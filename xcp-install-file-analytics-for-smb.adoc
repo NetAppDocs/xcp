@@ -38,7 +38,6 @@ To perform a fresh install of File Analytics for SMB, complete the following ste
 
 . When prompted, provide the IP address of the Linux machine where the XCP File Analytics server is configured.
 . Copy the `server.key` and `server.crt` files from `/opt/NetApp/xFiles/xcp/` (in the Linux box where XCP File Analytics is already configured) to `C:\NetApp\XCP`.
-
 +
 Optionally, if you have a CA certificate, place the certificate in `C:\NetApp\XCP` with the same name and extensions.
 
@@ -51,11 +50,7 @@ Refer to link:xcp-install-xcp-smb.html[Install XCP SMB] for information on suppo
 NOTE: A new tab opens. Enable pop-ups on the browser if they are blocked.
 
 . Accept the privacy policy for the URL. The following message displays: `SMB agent is ready to use. Please refresh the analytics page`
-. . Display the SMB agent under the Agents card by returning to the original tab hosting the XCP File Analytics GUI and refreshing the page.
-
-+
-
-
+. Display the SMB agent under the Agents card by returning to the original tab hosting the XCP File Analytics GUI and refreshing the page.
 
 == Upgrade of File Analytics for SMB
 
@@ -74,8 +69,6 @@ NOTE: A new tab opens. Enable pop-ups on the browser if they are blocked.
 
 . Accept the privacy policy for the URL. The following message displays: `SMB agent is ready to use. Please refresh the analytics page`
 . Display the SMB agent under the Agents card by returning to the original tab hosting the XCP File Analytics GUI and refreshing the page.
-
-+
 
 
 
