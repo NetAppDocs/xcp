@@ -77,9 +77,9 @@ xcp live estimation with -t option
 xcp estimate -id <scan id> -t <time for which estimation should run> -target server:/export
 ....
 
-== XCP indexdelete
+== indexdelete
 
-The XCP `indexdelete` command can be used to delete catalog indexes.
+You can use the `indexdelete` command to delete catalog indexes.
 
 *Example*
 
