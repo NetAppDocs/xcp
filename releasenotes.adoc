@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords: release, notes, new, features, fixed, issues, known, xcp
 summary: Describes new features, upgrade notes, fixed issues, known limitations, and known issues.
 ---
-= XCP v1.9.2 Release Notes
+= XCP v1.9.3 Release Notes
 
 [.lead]
-The link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2885805[XCP v1.9.2 Release Notes^] describe new features, upgrade notes, fixed issues, known limitations, and known issues.
+The link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886695[XCP v1.9.3 Release Notes^] describe new features, upgrade notes, fixed issues, known limitations, and known issues.
 
 You are required to sign on to the NetApp Support Site to access the Release Notes.
 
