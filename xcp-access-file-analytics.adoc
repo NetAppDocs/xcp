@@ -82,7 +82,7 @@ You can also verify these details by logging in to the File Analytics UI:
 +
 Check *Service provider settings* in the drop down menu that appears.
 +
-image:xcp_saml_settings.png[SAML settings example]
+image:xcp-saml-settings.png[SAML settings example]
 +
 After registration, you receive the IdP endpoint details for your enterprise. You are required to provide this IdP endpoint metadata to the File Analytics UI. 
 
