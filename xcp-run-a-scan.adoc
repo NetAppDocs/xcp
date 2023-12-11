@@ -83,15 +83,33 @@ The Space Occupied by Users graph displays the space used by users. The Username
 
 image:xcp_image13.png[Files Accessed/Modified/Created Graph]
 
-The Files Accessed/Modified/Created graph displays the count of files changed overtime. The X-axis represents the period of time within which changes were made and the y- axis represents the number of files changed.
+The Files Accessed/Modified/Created graph displays the count of files changed over time. The X-axis represents the period of time within which changes were made and the Y-axis represents the number of files changed.
 
 NOTE: To get the access time (atime) graph in SMB scans, check the box for preserving atime before running a scan.
 
-=== File Distribution by Extension Graphic
+=== File Size Accessed/Modified/Created Graph
+
+image:xcp-filesize-amc.png[]
+
+The File Size Accessed/Modified/Created graph displays the size of files changed over time. The X-axis represents the period of time within which changes were made and the Y- axis represents the size of files changed.
+
+NOTE: To get the access time (atime) graph in SMB scans, check the box for preserving atime before running a scan.
+
+=== File Distribution by Extension Graph
 
 image:xcp_image14.png[File Distribution by Extension Graphic]
 
 The File Distribution by Extension graph represents the count of the different file extensions in a file share. The size of the divisions representing the extensions is based on the number of files with each extension.
+
+Additionally, for SMB shares, you can get the number of Alternate Data Streams (ADS) files for each file extension by checking the box for ADS before running a scan. 
+
+image:xcp-file-distribution-ads.png[]
+
+=== File Size Distribution by Extension Graph
+
+image:xcp-filesize-dist-ex.png[]
+
+The File Size Distribution by Extension graph represents the cumulative size of the different file extensions in a file share. The size of the divisions representing the extensions is based on the size of files with each extension.
 
 === File Distribution by Type Graph
 
@@ -103,4 +121,10 @@ The Distribution by Type graph represents the count of the following types of fi
 *	LNK: Files with links
 *	Specials: Files with device files and character files.
 *	DIR: Files with directories
-*	Junction: Available in SMB only
+*	Junction: Available in SMB only 
+
+Additionally, for SMB shares, you can get the number of Alternate Data Streams (ADS) files for different types by checking the box for ADS before running a scan.  
+
+image:xcp-file-distribution-type.png[]
+
+// 2023 Nov 20, XCP 1.9.3

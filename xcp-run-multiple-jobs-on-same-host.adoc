@@ -12,18 +12,18 @@ summary: The POSIX connector gives XCP the capability to access any Linux-mounte
 :imagesdir: ./media/
 
 [.lead]
-Beginning with XCP 1.9.2, you can use the "-minmem" feature to run multiple XCP jobs or commands on a single XCP host, provided that the host has sufficient resources for each job. When you run a command that supports the "-minmem" feature, XCP uses minimal host memory to complete the job which creates the capacity to run additional jobs on the same host configuration.
+Beginning with XCP 1.9.2, you can run multiple XCP jobs or commands on a single XCP host, provided that the host has sufficient resources for each job. When you run a command that supports multiple jobs, XCP uses minimal host memory to complete the job, which creates the capacity to run additional jobs on the same host configuration.
 
 == Minimum system requirements
 For each XCP job, you should allow up to 64GB of host memory and eight cores for medium to large migrations. 
 
-NOTE: The "-minmem" feature is not supported for SMB data migration. 
+NOTE: Running multiple XCP jobs on the same host is not supported for SMB data migration. 
 
 == Logging
 By default, each XCP job is logged in a separate log file that is unique to the job ID. This logging mechanism works well when running multiple jobs on the same individual host. NetApp does not recommend changing the `xcpLogConfig.Json` file to use a single `xcp.log` file to log multiple XCP jobs running in parallel on the same host.
 
 == Supported commands
-The "-minmem" feature is supported with the following XCP commands:
+Running multiple XCP jobs on the same host is supported with the following XCP commands:
 
 * `scan`
 * `copy`
@@ -35,24 +35,7 @@ The "-minmem" feature is supported with the following XCP commands:
 * `delete`
 
 == Unsupported commands
-The "-minmem" feature is not supported with the `sync` command.
+Running multiple XCP jobs on the same host is not supported with the `sync` command.
 
-== Command examples
-To use the "-minmem" feature, you must include the "-minmem" option in the XCP command as shown in the following examples:
-
-* `xcp copy -newid _new ID_ *-minmem* src_server:/src_export dst_server:/dst_export`
-* `xcp resume [options] -id *-minmem* _copy ID_`
-* `xcp verify *-minmem* src_server:/src_export dst_server:/dst_export`
-
-*HDFS path examples*:
-
-* `xcp copy *-minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
-* `xcp verify *-minmem* hdfs:///user/demo1/data \file:///user/demo1/dest`
-* `xcp copy -minmem hdfs:///user/demo1/data s3://bucket1`
-
-*POSIX path examples*:
-
-* `xcp copy *-minmem* -newid _new ID_ \file:///mnt/source \file:///mnt/dest`
-* `xcp verify *-minmem* \file:///mnt/source \file:///mnt/dest`
-
+// 23 Oct 2023, OTHERDOC-34
 // 2023 MAY 5, OTHERDOC-16
