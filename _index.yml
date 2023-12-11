@@ -25,7 +25,7 @@ indexpage:
     - title: More resources
       links:
         - title: XCP Documentation (including Reference materials)
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=65073&language=en-US
+          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064
         - title: NetApp TechCommTV (NetApp XCP videos)
           url: link:https://www.youtube.com/user/NetAppTechCommTV/search?query=xcp
         - title: NetApp XCP (including links to get a license)
