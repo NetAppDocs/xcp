@@ -35,7 +35,7 @@ xcp copy -newid <id> hdfs:///demo/user s3://my-bucket
 xcp copy -newid <id> -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
 ----
 
-See `xcp help copy` for more details.
+Run `xcp help copy` for more details.
 
 == Resume
 
@@ -50,7 +50,7 @@ xcp resume [options] -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> -
 
 NOTE: By default, the XCP `resume` command uses the S3 endpoint and S3 profile from the copy index that was used during the `copy` command. However, if new `-s3.endpoint` and `-s3.profile` values are provided with the `resume` command, the new values for the options are used and the values used with the copy `command` are overridden.
 
-See `xcp help resume` for more details.
+Run `xcp help resume` for more details.
 
 == Verify
 
@@ -72,6 +72,6 @@ xcp verify hdfs:///user/demo1/data s3://my-bucket
 xcp verify -s3.profile <s3 profile name> -s3.endpoint <endpoint-url> hdfs:///demo/user s3://my-bucket
 ----
 
-See `xcp help verify` for more details.
+Run `xcp help verify` for more details.
 
 // 2023-06-13, XCP 1.9.2

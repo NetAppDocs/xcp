@@ -28,7 +28,7 @@ NOTE: During the copy operation, you can use the `-preserve-atime` flag with the
 C:\xcp>xcp copy \\<source SMB share> \\<destination SMB share>
 ----
 
-See `xcp help copy` for more details.
+Run `xcp help copy` for more details.
 
 == Sync
 
@@ -44,7 +44,7 @@ NOTE: During the sync operation,  you can use the `-preserve-atime` flag with th
 C:\xcp>xcp sync \\<source SMB share> \\<destination SMB share>
 ----
 
-See `xcp help sync` for more details.
+Run `xcp help sync` for more details.
 
 == Verify
 
@@ -61,7 +61,7 @@ During the verify operation, you can use the `-preserve-atime` flag with the `ve
 C:\xcp>xcp verify \\<source SMB share> \\<destination SMB share>
 ----
 
-See `xcp help verify` for more details.
+Run `xcp help verify` for more details.
 
 
 // 2022-05-26, Issue 20

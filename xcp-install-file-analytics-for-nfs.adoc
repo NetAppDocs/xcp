@@ -15,30 +15,59 @@ summary: Install or upgrade File Analytics for NFS
 [.lead]
 Install or upgrade File Analytics for NFS.
 
+.About this task
 For system requirements for NFS, see link:xcp-install-xcp-nfs.html[Install XCP NFS].
-The `configure.sh` script installs and enables default configurations of HTTPD and PostgreSQL available for Linux server. You can change or update to a more recent version as needed and to adhere to security guidelines.
+
+The `configure.sh` script installs XCP File Analytics on a Red Hat Enterprise Linux (RHEL) host machine. As part of the installation, the script installs Postgres Database, Apache HTTPD server, and other required packages on the host Linux machine. For information on specific supported RHEL versions, refer to the link:https://mysupport.netapp.com/matrix/[IMT^]. You can change or update to a more recent version as needed and to adhere to security guidelines. To learn more about the `configure.sh` script, run `./configure.sh -h` on the command line.
 
 .Before you begin
 
-*	You cannot run the XCP application and XCP as service simultaneously on the same host. If any XCP operations are running, complete the operations before you start configuration.
-*	Your Linux machine must be connected to the Yum repository server or the internet.
-* If a firewall is configured on the Linux machine, you must change the firewall settings to enable the ports used by XCP, the XCP service, and the services used by XCP File Analytics. For more information, go to xref:xcp-ports-used.html[Ports used by XCP].
+* If any XCP operations are running, NetApp recommends that you complete the operations before you start the configuration.
+
+* Your Linux machine must be connected to the Yum repository server or the internet.
+* If a firewall is configured on the Linux machine, you must change the firewall settings to enable port 5030, which is used by the XCP service. 
+
 
 .Steps
 
-.	Go to your XCP folder and run the `./configure.sh` script.
-The script takes three to ten minutes to configure the Linux machine and complete the following tasks:
-..	Download PostgreSQL packages
-..	Install the PostgreSQL server
-..	Install the HTTPD
-..	Use the open SSL to create a self-signed certificate (`server.key and server.crt`)
-..	Create the XCP File Analytics database
-.	Select `option 1 Configure client system` from the XCP configuration menu.
-.	For a new install, update the password for the administrator and database users.
-For an upgrade, you are prompted to stop the XCP service. When done, select `option 0`.
-.	Start the XCP service.
-Use the following command to check if the XCP service is running:
-service xcp status
-.	Launch File Analytics in the browser: *\https://<ip address of linux>/xcp*.
+. Install or upgrade File Analytics for NFS.
++
+[role="tabbed-block"]
+====
+.Install File Analytics
+--
+.. Navigate to the `xcp` folder and run the `./configure.sh` script.
++
+If installation is successful, the following message is displayed:
++
+----
+You can now access XCP file analytics using (<username>:<password>)
+https://<ip_address>/xcp
+----
++
+NOTE: You can use this username and password to log in to the File Analytics GUI.
+--
+.Upgrade File Analytics
+--
+.. Navigate to the `xcp` folder and run `./configure.sh -f`.
++
+.. At the prompt, enter `y` to clean up and reconfigure the system.
++
+After the script is approved, it cleans up the existing configuration and reconfigures the system. 
 
++
+If successful, the following message is displayed:
++
+----
+You can now access XCP file analytics using (<username>:<password>)
+https://<ip_address>/xcp
+----
+--
+====
+
+. Launch File Analytics in a supported browser: *\https://<ip address of linux>/xcp*.
++
+Refer to link:xcp-install-xcp-nfs.html[Install XCP NFS] for information on supported browsers.
+
+// 23 Oct 2023, OTHERDOC-34
 // BURT 1391465 06/29/2021
