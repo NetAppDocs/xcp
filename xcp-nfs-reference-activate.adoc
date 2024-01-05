@@ -5,7 +5,7 @@ keywords: netapp, xcp, reference, nfs, command, commands
 summary: XCP NFS command reference
 ---
 
-= Activate
+= activate
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -22,7 +22,8 @@ NOTE: Before running this command, verify that the license file is downloaded an
 [source,cli]
 xcp activate
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====

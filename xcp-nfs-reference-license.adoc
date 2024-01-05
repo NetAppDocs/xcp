@@ -5,7 +5,7 @@ keywords: netapp, xcp, reference, nfs, command, commands
 summary: XCP NFS command reference
 ---
 
-= License
+= license
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -22,10 +22,11 @@ Before running this command, verify that the license file is downloaded and copi
 [source,cli]
 xcp license
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====
 
 .Parameters
 
@@ -40,13 +41,14 @@ The following table lists the `license` parameters and their description.
 
 == Retrieve the latest license from the XCP server
 
-The `license update` command retrieves the latest license from the XCP server. 
+You can retrieve the latest license from the XCP server by using the `license update` parameter. 
 
 .Syntax
 [source,cli]
 `xcp license update`
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====

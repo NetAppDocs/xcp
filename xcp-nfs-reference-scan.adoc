@@ -21,10 +21,11 @@ NetApp recommends that you put the source NFS export mounts in read-only mode du
 [source,cli]
  ./xcp scan <source_nfs_export_path>
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====
 
 .Parameters
 

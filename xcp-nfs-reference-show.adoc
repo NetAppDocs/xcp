@@ -5,7 +5,7 @@ keywords: netapp, xcp, reference, nfs, command, commands
 summary: XCP NFS command reference
 ---
 
-= Show
+= show
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -22,10 +22,11 @@ IMPORTANT: The `show` command requires the host name or IP address of the NFSv3 
 [source,cli]
 xcp show <ip_address_or_host_name>
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====
 
 .Parameters
 
@@ -47,8 +48,9 @@ The `show -v` command returns details about NFS servers using the IP address or 
 [source,cli]
 `xcp show -v`
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====
 

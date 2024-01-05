@@ -19,10 +19,11 @@ The NFS `help` command displays a list of commands, command parameters, and a br
 [source,cli]
 xcp help
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====
 
 .Parameters
 
@@ -44,8 +45,9 @@ The `help info` command
 [source,cli]
 `xcp help info`
 
-.Example
-----
+.Show example
+[%collapsible]
+====
 <enter_example>
-----
+====
 
