@@ -5,7 +5,7 @@ keywords: netapp, xcp, reference, nfs, command, commands
 summary: XCP NFS command reference
 ---
 
-= Help
+= help
 :hardbreaks:
 :nofooter:
 :icons: font

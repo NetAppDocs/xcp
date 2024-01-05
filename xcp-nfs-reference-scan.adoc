@@ -51,8 +51,8 @@ The following table lists the `scan` parameters and their description.
 | `scan -edupe` | Includes the dedupe estimate in reports.
 | `scan -bs <n[k]>` | Specifies the read/write block size for scans that read data using `-md5` or `-edupe` (default: 64k).
 | `scan -parallel <n>` | Specifies the maximum number of concurrent batch processes (default: 7). 
-| `scan -noid` | Disables the creation of a default index (default: false).
-| `scan -subdir-names` | Returns the names of the top-level subdirectories in a directory.
+| `scan -noId` | Disables the creation of a default index (default: false).
+| `scan -subdir-names` | Retrieves the names of the top-level subdirectories in a directory.
 | `scan -acl4` | Processes NFSv4 access control lists (ACLs).
 | `scan -preserve-atime` | Restores all files to the last accessed date on the source.
 | `scan -s3.insecure` | Provides the option to use HTTP instead of HTTPS for S3 bucket communication.
