@@ -334,4 +334,64 @@ When an NFS share is scanned, the access time is modified on the files if the st
 <enter_example>
 ====
 
+== Use HTTP instead of HTTPS for S3 bucket communication
+
+You can use HTTP instead of HTTPS for S3 bucket communication by using the `scan -s3.insecure` parameter. 
+
+.Syntax
+
+[source,cli]
+  ./xcp scan -s3.insecure s3://<bucket_name>
+
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
+== Override the default Amazon Web Services (AWS) endpoint URL with the specified URL for S3 bucket communication
+
+You can override the default AWS endpoint URL with the specified URL for S3 bucket communication by using the `scan -s3.endpoint <s3_endpoint_url>` parameter. 
+
+.Syntax
+
+[source,cli]
+  ./xcp scan -s3.endpoint https://<endpoint_url>: s3://<bucket_name>
+
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
+== Specify a profile from the AWS credential file for S3 bucket communication
+
+You can specify a profile from the AWS credential file for S3 bucket communication by  using the `-s3.profile <profile_name>` parameter. 
+
+.Syntax
+
+[source,cli]
+  ./xcp scan -s3.profile <name> -s3.endpoint https://<endpoint_url>: s3://<bucket_name>
+
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
+== Override the default verification of SSL certification for S3 bucket communication 
+
+You can override the default verification of SSL certification for S3 bucket communication by using the `-s3.noverify` parameter. 
+
+.Syntax
+
+[source,cli]
+  ./xcp scan -s3.noverify s3://<bucket_name>
+
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
 
