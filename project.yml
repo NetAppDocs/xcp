@@ -97,6 +97,28 @@ sidebar:
           url: /xcp-run-multiple-jobs-on-same-host.html
         - title: Additional NFS features
           url: /xcp-migrate-nfs-additional-features.html
+    - title: XCP command reference
+      entries:
+        - title: NFS command reference
+          entries: 
+            - title: NFS command reference overview
+              url: /xcp-nfs-reference.html
+            - title: help
+              url: /xcp-nfs-refernce-help.html
+            - title: license
+              url: /xcp-nfs-reference-license.html
+            - title: activate
+              url: /xcp-nfs-reference-activate.html
+            - title: show
+              url: /xcp-nfs-reference-show.html
+            - title: scan 
+              entries:
+                - title: scan command overview
+                  url: /xcp-nfs-reference-scan.html
+                - title: scan command parameters
+                  url: /xcp-nfs-ref-scan-descriptions.html
+         
+
     - title:  Troubleshoot
       entries: 
         - title: Troubleshoot XCP NFS errors
