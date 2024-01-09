@@ -27,7 +27,7 @@ NetApp recommends that you put the source NFS export mounts in read-only mode du
 <enter_example>
 ====
 
-.Parameters
+== Parameters
 
 The following table lists the `scan` parameters and their description.
 
@@ -35,11 +35,11 @@ The following table lists the `scan` parameters and their description.
 |===
 | Parameter
 | Description
-| `scan -l` | Returns file listing output formats.
-| `scan -q` | Returns file listing output formats.
-| `scan -stats` | Returns tree statistic report formats.
-| `scan -csv` | Returns tree statistic report formats.
-| `scan -html` | Returns tree statistic report formats.
+| `scan -l` | Retrieves file listing output formats.
+| `scan -q` | Retrieves file listing output formats.
+| `scan -stats` | Retrieves tree statistic report formats.
+| `scan -csv` | Retrieves tree statistic report formats.
+| `scan -html` | Retrieves tree statistic report formats.
 | `scan -nonames` | Excludes user and group names for file listings and reports.
 | `scan -newid <name>` | Specifies the catalog name for a new index.
 | `scan -id <name>` | Specifies the catalog name of a previous copy or scan index.

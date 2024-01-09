@@ -25,7 +25,7 @@ xcp help
 <enter_example>
 ====
 
-.Parameters
+== Parameters
 
 The following table lists the `help` parameters and their description.
 
@@ -43,7 +43,7 @@ The `help info` command
 .Syntax
 
 [source,cli]
-`xcp help info`
+xcp help info
 
 .Show example
 [%collapsible]

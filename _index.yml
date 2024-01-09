@@ -24,8 +24,6 @@ indexpage:
           url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064  
     - title: More resources
       links:
-        - title: XCP Documentation (including Reference materials)
-          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064
         - title: NetApp TechCommTV (NetApp XCP videos)
           url: link:https://www.youtube.com/user/NetAppTechCommTV/search?query=xcp
         - title: NetApp XCP (including links to get a license)
@@ -34,3 +32,9 @@ indexpage:
           url: https://www.netapp.com/search/#q=xcp&sort=relevancy&f:@language=English
         - title: NetApp Community (forums)
           url: link:https://community.netapp.com
+    - title: XCP command reference 
+      links:
+        - title: NFS command reference 
+          url: /xcp-nfs-reference.html
+        - title: SMB command reference
+          url: /xcp-smb-reference.html

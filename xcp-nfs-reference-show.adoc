@@ -28,7 +28,7 @@ xcp show <ip_address_or_host_name>
 <enter_example>
 ====
 
-.Parameters
+== Parameters
 
 The following table lists the `show` parameters and their description.
 

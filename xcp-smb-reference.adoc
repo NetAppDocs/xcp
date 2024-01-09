@@ -1,0 +1,17 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB command reference
+---
+
+= XCP SMB command reference overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The XCP SMB command reference provides examples of the available commands for XCP SMB. Each command has additional parameters that can be used alone or in combination as required.
+

@@ -28,7 +28,7 @@ xcp license
 <enter_example>
 ====
 
-.Parameters
+== Parameters
 
 The following table lists the `license` parameters and their description.
 
@@ -45,7 +45,7 @@ You can retrieve the latest license from the XCP server by using the `license up
 
 .Syntax
 [source,cli]
-`xcp license update`
+xcp license update
 
 .Show example
 [%collapsible]
