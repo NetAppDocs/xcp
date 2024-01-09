@@ -46,7 +46,7 @@ The `show -v` command returns details about NFS servers using the IP address or 
 .Syntax
 
 [source,cli]
-`xcp show -v`
+xcp show -v
 
 .Show example
 [%collapsible]
