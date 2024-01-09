@@ -17,10 +17,10 @@ The NFS `show` command queries the RPC services and NFS exports of one or more s
 
 .Syntax
 
-IMPORTANT: The `show` command requires the host name or IP address of the NFSv3 exported system.
-
 [source,cli]
 xcp show <ip_address_or_host_name>
+
+IMPORTANT: The `show` command requires the host name or IP address of the NFSv3 exported system.
 
 .Show example
 [%collapsible]
