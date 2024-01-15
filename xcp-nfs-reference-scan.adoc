@@ -42,7 +42,7 @@ The following table lists the `scan` parameters and their description.
 | `scan -html` | Retrieves tree statistic report formats.
 | `scan -nonames` | Excludes user and group names for file listings and reports.
 | `scan -newid <name>` | Specifies the catalog name for a new index.
-| `scan -id <name>` | Specifies the catalog name of a previous copy or scan index.
+| `scan -id <catalog_name>` | Specifies the catalog name of a previous copy or scan index.
 | `scan -match <filter>` | Only processes files and directories that match the filter.
 | `scan -fmt <string_expression>` | Only processes files and directories that match the format.
 | `scan -du` | Summarizes the space usage of each directory, including subdirectories.
@@ -173,12 +173,12 @@ xcp scan -newid <name> <ip_address_or_hostname>:/<source_vol>
 
 === Specify the catalog name of a previous copy or scan index
 
-You can specify the catalog name of previous copy or scan index by using the `-id <name>` parameter.
+You can specify the catalog name of previous copy or scan index by using the `-id <catalog_name>` parameter.
 
 .Syntax
 
 [source,cli]
-xcp scan -id <name> 
+xcp scan -id <catalog_name> 
 
 .Show example
 [%collapsible]
