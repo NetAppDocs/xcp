@@ -1,0 +1,4 @@
+---
+permalink: home.html
+redirect: xcp/index.html
+---
