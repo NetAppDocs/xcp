@@ -112,11 +112,7 @@ sidebar:
             - title: show
               url: /xcp-nfs-reference-show.html
             - title: scan 
-              entries:
-                - title: scan command overview
-                  url: /xcp-nfs-reference-scan.html
-                - title: Use scan command parameters
-                  url: /xcp-nfs-ref-scan-descriptions.html
+              url: /xcp-nfs-reference-scan.html
         - title: SMB command reference
           entries: 
             - title: SMB command reference overview
