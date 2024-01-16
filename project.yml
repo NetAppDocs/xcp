@@ -117,6 +117,8 @@ sidebar:
               url: /xcp-nfs-reference-copy.html
             - title: sync
               url: /xcp-nfs-reference-sync.html
+            - title: resume
+              url: /xcp-nfs-reference-resume.html
         - title: SMB command reference
           entries: 
             - title: SMB command reference overview
