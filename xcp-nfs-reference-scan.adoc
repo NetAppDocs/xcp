@@ -266,12 +266,12 @@ xcp scan -depth <number> <ip_address_or_hostname>:/<source_vol>
 
 === Specify the request size when reading directories
 
-You can specify the request size when reading directories in a scan by using the `-dircount <number>` parameter. The default value is 64k.
+You can specify the request size when reading directories in a scan by using the `-dircount <n[k]>` parameter. The default value is 64k.
 
 .Syntax
 
 [source,cli]
-xcp scan -dircount 64k <ip_address_or_hostname>:/<source_vol>
+xcp scan -dircount <n[k]> <ip_address_or_hostname>:/<source_vol>
 
 .Show example
 [%collapsible]
@@ -301,7 +301,7 @@ You can specify the read/write block size for scans that read data using the `-m
 .Syntax
 
 [source,cli]
-xcp scan -bs <number> <ip_address_or_hostname>:/<source_vol>
+xcp scan -bs <n[k]> <ip_address_or_hostname>:/<source_vol>
 
 .Show example
 [%collapsible]
@@ -311,12 +311,12 @@ xcp scan -bs <number> <ip_address_or_hostname>:/<source_vol>
 
 === Specify  the maximum number of concurrent batch processes 
 
-You can specify the maximum number of concurrent patch processes by using the `- parallel <number>` parameter. The default value is 7.
+You can specify the maximum number of concurrent patch processes by using the `- parallel <n>` parameter. The default value is 7.
 
 .Syntax
 
 [source,cli]
-xcp scan -parallel <number> <ip_address_or_hostname>:/<source_vol>
+xcp scan -parallel <n> <ip_address_or_hostname>:/<source_vol>
 
 .Show example
 [%collapsible]

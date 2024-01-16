@@ -20,7 +20,7 @@ NOTE: During the sync operation, modified files and directories are copied to th
 
 .Syntax
 [source,cli]
-sync -id <catalog_name>
+xcp sync -id <catalog_name>
 
 .Show example
 [%collapsible]
@@ -68,7 +68,7 @@ xcp sync -id <catalog_name>
 
 === Exclude user and group names for file listings or reports
 
-You can exclude user and group names for file listings or reports by using the `-nonames` parameter.
+You can exclude user and group names for file listings or reports by using the `-id <catalog_name> and `-nonames` parameters.
 
 .Syntax
 
@@ -83,12 +83,12 @@ xcp sync -id <catalog_name> -nonames
 
 === Specify the read/write block size
 
-You can specify the read/write block size using the `-bs <number>` parameter. The default block size is 64k. 
+You can specify the read/write block size using the `-id <catalog_name>` and `-bs <n[k]>` parameters. The default block size is 64k. 
 
 .Syntax
 
 [source,cli]
-xcp sync -id <catalog_name> -bs <number> 
+xcp sync -id <catalog_name> -bs <n[k]>
 
 .Show example
 [%collapsible]
@@ -98,12 +98,12 @@ xcp sync -id <catalog_name> -bs <number>
 
 === Specify the request size when reading directories
 
-You can specify the request size when reading directories by using the `-dircount <number>` parameter. The default value is 64k.
+You can specify the request size when reading directories by using the `-id <catalog_name>` and `-dircount <n[k]>` parameters. The default value is 64k.
 
 .Syntax
 
 [source,cli]
-xcp sync -id <catalog_name> -dircount 32k 
+xcp sync -id <catalog_name> -dircount <n[k]>
 
 .Show example
 [%collapsible]
@@ -113,12 +113,12 @@ xcp sync -id <catalog_name> -dircount 32k
 
 === Specify the maximum number of concurrent batch processes 
 
-You can specify the maximum number of concurrent patch processes by using the `- parallel <number>` parameter. The default value is 7.
+You can specify the maximum number of concurrent patch processes by using the `-id <catalog_name>` and `- parallel <number>` parameters. The default value is 7.
 
 .Syntax
 
 [source,cli]
-xcp sync -id <catalog_name> -parallel <number> 
+xcp sync -id <catalog_name> -parallel <n> 
 
 .Show example
 [%collapsible]
@@ -128,7 +128,7 @@ xcp sync -id <catalog_name> -parallel <number>
 
 === Restore all files to the last accessed date on the source
 
-You can restore all files to the last accessed date on the source by using the `-preserve-atime` parameter. 
+You can restore all files to the last accessed date on the source by using the `-id <catalog_name>` and `-preserve-atime` parameters. 
 
 The `-preserve-atime` option resets the access time to the original value set before the XCP read operation.
 
