@@ -43,4 +43,4 @@ You can retrieve the latest license from the XCP server by using the `license up
 [source,cli]
 xcp license update
 
-include::../_include/ref-example-nfs-help-license-update.adoc[]
+include::../_include/ref-example-nfs-license-update.adoc[]
