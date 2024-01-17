@@ -13,8 +13,7 @@ summary: XCP NFS command reference
 :imagesdir: ./media/
 
 [lead]
-The XCP NFS `sync` command scans for changes and modifications a source NFS directory using a catalog index tag name or the number of a previous copy operation. Incremental changes to the source are
-copied and applied to the target directory. The old catalog index numbers are replaced with new ones after the sync operation.
+The XCP NFS `sync` command scans for changes and modifications a source NFS directory using a catalog index tag name or the number of a previous copy operation. Incremental changes to the source are copied and applied to the target directory. The old catalog index numbers are replaced with new ones after the sync operation.
 
 NOTE: During the sync operation, modified files and directories are copied to the destination NFSv3 export again.
 
