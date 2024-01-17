@@ -2,7 +2,8 @@
 [%collapsible]
 ====
 ----
-[root@client1 linux]# ./xcp help USAGE:
+[root@client1 linux]# ./xcp help
+ USAGE:
 xcp [[help] [command]| -version]
 optional arguments:
 help Show XCP help message and exit

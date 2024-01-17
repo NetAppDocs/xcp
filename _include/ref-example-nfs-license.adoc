@@ -2,6 +2,8 @@
 [%collapsible]
 ====
 ----
+[root@localhost /]# ./xcp license
+
 Licensed to "XXX, NetApp Inc, XXX@netapp.com" until Sun Mar 31 00:00:00 2029 License type: SANDBOX
 License status: ACTIVE
 Customer name: N/A Project number: N/A Offline Host: Yes Send statistics: No
