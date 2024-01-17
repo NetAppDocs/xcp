@@ -41,9 +41,5 @@ The `help info` command
 [source,cli]
 xcp help info
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-help-info.adoc[]
 
