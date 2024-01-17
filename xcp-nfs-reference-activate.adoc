@@ -22,8 +22,4 @@ NOTE: Before running this command, verify that the license file is downloaded an
 [source,cli]
 xcp activate
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-activate.adoc[]

@@ -1,0 +1,9 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp activate
+
+XCP already activated
+----
+====
