@@ -22,11 +22,7 @@ Before running this command, verify that the license file is downloaded and copi
 [source,cli]
 xcp license
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-license.adoc[]
 
 == Parameters
 
@@ -47,8 +43,4 @@ You can retrieve the latest license from the XCP server by using the `license up
 [source,cli]
 xcp license update
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-help-license-update.adoc[]

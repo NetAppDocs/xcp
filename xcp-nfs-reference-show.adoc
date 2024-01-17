@@ -22,11 +22,7 @@ xcp show <ip_address_or_host_name>
 
 IMPORTANT: The `show` command requires the host name or IP address of the NFSv3 exported system.
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-show.adoc[]
 
 == Parameters
 
@@ -48,9 +44,5 @@ The `show -v` command returns details about NFS servers using the IP address or 
 [source,cli]
 xcp show -v
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-show-v.adoc[]
 
