@@ -2,6 +2,8 @@
 [%collapsible]
 ====
 ----
+[root@localhost /]# ./xcp license update
+
 XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Sun Mar 31 00:00:00 2029
 ----
 ====
