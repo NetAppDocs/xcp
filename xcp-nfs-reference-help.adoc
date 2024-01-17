@@ -19,11 +19,7 @@ The NFS `help` command displays a list of commands, command parameters, and a br
 [source,cli]
 xcp help
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-help.adoc[]
 
 == Parameters
 

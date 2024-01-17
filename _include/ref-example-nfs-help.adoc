@@ -1,0 +1,32 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp help USAGE:
+xcp [[help] [command]| -version]
+optional arguments:
+help Show XCP help message and exit
+-version Show XCP version number and exit
+To see help text, you can run:
+xcp help Display this content
+xcp help info Step by step usage of all commands
+xcp help <command> Individual command help
+command:
+activate Activate an XCP license on the current host
+license Show XCP license information
+show Request information from host about NFS exports
+scan Read all the files from export path
+copy Recursively copy everything from source to target
+resume Resume copy operation from the point it was halted
+sync Synchronize increment changes on source to target after copy
+isync Sync changes on target without index
+verify Verify that the target is the same as the source
+delete Delete data on the NFS exported volume
+chown Change the ownership on the NFS exported volume
+chmod Change the permissions on the NFS exported volume
+logdump Collect all logs related to the XCP job and dump those into
+        a zipped folder named <ID>.zip under the current dir
+estimate Estimate the time taken for the copy command to complete
+indexdelete Remove indexes from catalog
+----
+====
