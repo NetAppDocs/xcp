@@ -35,12 +35,12 @@ The following table lists the `scan` parameters and their description.
 |===
 | Parameter
 | Description
-| `scan -l` | Retrieves file listing output formats.
-| `scan -q` | Retrieves file listing output formats.
+| <<scan -l and scan -q,scan -l>> | Retrieves file listing output formats.
+| <<scan -l and scan -q,scan -q>> | Retrieves file listing output formats.
 | `scan -stats` | Retrieves tree statistic report formats.
 | `scan -csv` | Retrieves tree statistic report formats.
-| `scan -html` | Retrieves tree statistic report formats.
-| `scan -nonames` | Excludes user and group names for file listings and reports.
+| `scan -html`| Retrieves tree statistic report formats.
+| <<scan -nonames>> | Excludes user and group names for file listings and reports.
 | `scan -newid <name>` | Specifies the catalog name for a new index.
 | `scan -id <catalog_name>` | Specifies the catalog name of a previous copy or scan index.
 | `scan -match <filter>` | Only processes files and directories that match the filter.
@@ -176,7 +176,7 @@ xcp scan -id <catalog_name>
 ====
 
 
-=== scan -match <filter>
+== scan -match <filter>
 
 Specify that only the files and directories that match a filter are processed.
 
@@ -206,7 +206,7 @@ xcp scan -fmt <string_expression> <ip_address_or_hostname>:/source_vol
 <enter_example>
 ====
 
-=== scan -du
+== scan -du
 
 Summarize the space usage of each directory, including subdirectories.
 
@@ -238,7 +238,7 @@ xcp scan -md5 <ip_address_or_hostname>:/source_vol
 <enter_example>
 ====
 
-=== scan -depth <n>
+== scan -depth <n>
 
 Limit the search depth of a scan. The `-depth <n>` parameter specifies the depth into the subdirectories that XCP can scan files. For example, if the number 2 is specified, XCP will only scan the first two subdirectory levels.
 
@@ -268,7 +268,7 @@ xcp scan -dircount <n[k]> <ip_address_or_hostname>:/source_vol
 <enter_example>
 ====
 
-=== scan -edupe
+== scan -edupe
 
 Include the deduplication estimate in reports.
 
@@ -343,7 +343,7 @@ xcp scan -subdir-names <ip_address_or_hostname>:/source_vol
 <enter_example>
 ====
 
-=== scan -acl4
+== scan -acl4
 
 Process NFSv4 ACLs by using the `-acl4` parameter. 
 
@@ -405,7 +405,7 @@ xcp scan -s3.endpoint https://<endpoint_url>: s3://<bucket_name>
 <enter_example>
 ====
 
-=== scan -s3.profile <name>
+== scan -s3.profile <name>
 
 Specify a profile from the AWS credential file for S3 bucket communication.
 
