@@ -35,11 +35,11 @@ The following table lists the `scan` parameters and their description.
 | Description
 | <<scan -l and scan -q,scan -l>> | Retrieves file listing output formats.
 | <<scan -l and scan -q,scan -q>> | Retrieves file listing output formats.
-| `scan -stats` | Retrieves tree statistic report formats.
-| `scan -csv` | Retrieves tree statistic report formats.
-| `scan -html`| Retrieves tree statistic report formats.
+| <<stats_csv_html,scan -stats>> | Retrieves tree statistic report formats.
+| <<stats_csv_html,scan -csv`>>| Retrieves tree statistic report formats.
+| <<stats_csv_html,scan -html>>| Retrieves tree statistic report formats.
 | <<scan -nonames>> | Excludes user and group names for file listings and reports.
-| `scan -newid <name>` | Specifies the catalog name for a new index.
+| <<scan_newid, scan -newid <name> >> | Specifies the catalog name for a new index.
 | `scan -id <catalog_name>` | Specifies the catalog name of a previous copy or scan index.
 | `scan -match <filter>` | Only processes files and directories that match the filter.
 | `scan -fmt <string_expression>` | Only processes files and directories that match the format.
@@ -87,6 +87,7 @@ xcp scan -q <ip_address_or_hostname>:/source_vol
 <enter_example>
 ====
 
+[[stats_csv_html]]
 == scan -stats, scan -csv, and scan -html
 
 Retrieve tree statistic report formats.
@@ -143,6 +144,7 @@ xcp scan -nonames <ip_address_or_hostname>:/source_vol
 <enter_example>
 ====
 
+[[scan_newid]]
 == scan -newid <name>
 
 Specify the catalog name for a new index when running a scan.
