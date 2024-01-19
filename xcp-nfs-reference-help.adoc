@@ -21,20 +21,9 @@ xcp help
 
 include::../_include/ref-example-nfs-help.adoc[]
 
-== Parameters
+== help info
 
-The following table lists the `help` parameters and their description.
-
-[cols=2*,options="header"]
-|===
-| Parameter
-| Description
-| `help info` | Displays documentation, examples, and tuning recommendations.
-|===
-
-== Display documentation, examples, and tuning recommendations
-
-The `help info` command 
+Display documentation, examples, and tuning recommendations.
 
 .Syntax
 

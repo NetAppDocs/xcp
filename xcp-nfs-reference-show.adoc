@@ -24,20 +24,10 @@ IMPORTANT: The `show` command requires the host name or IP address of the NFSv3 
 
 include::../_include/ref-example-nfs-show.adoc[]
 
-== Parameters
 
-The following table lists the `show` parameters and their description.
+== show -v
 
-[cols=2*,options="header"]
-|===
-| Parameter
-| Description
-| show -v | Returns details about NFS servers using the IP address or host name.
-|===
-
-== Return details about NFS servers using the IP address or host name
-
-The `show -v` command returns details about NFS servers using the IP address or host name.
+Return details about NFS servers using the IP address or host name.
 
 .Syntax
 
