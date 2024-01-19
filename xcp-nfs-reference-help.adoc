@@ -23,7 +23,7 @@ include::../_include/ref-example-nfs-help.adoc[]
 
 == help info
 
-Display documentation, examples, and tuning recommendations.
+Use the `info` parameter with the `help` command to display documentation, examples, and tuning recommendations.
 
 .Syntax
 

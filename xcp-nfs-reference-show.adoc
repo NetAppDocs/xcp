@@ -27,7 +27,7 @@ include::../_include/ref-example-nfs-show.adoc[]
 
 == show -v
 
-Return details about NFS servers using the IP address or host name.
+Use the `-v` parameter with the `show` command to return details about NFS servers using the IP address or host name.
 
 .Syntax
 
