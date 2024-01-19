@@ -36,7 +36,7 @@ The following table lists the `scan` parameters and their description.
 | <<scan -l and scan -q,scan -l>> | Retrieves file listing output formats.
 | <<scan -l and scan -q,scan -q>> | Retrieves file listing output formats.
 | <<stats_csv_html,scan -stats>> | Retrieves tree statistic report formats.
-| <<stats_csv_html,scan -csv`>>| Retrieves tree statistic report formats.
+| <<stats_csv_html,scan -csv>>| Retrieves tree statistic report formats.
 | <<stats_csv_html,scan -html>>| Retrieves tree statistic report formats.
 | <<scan -nonames>> | Excludes user and group names for file listings and reports.
 | <<scan_newid, scan -newid <name> >> | Specifies the catalog name for a new index.

@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-root@client1 linux]# ./xcp help info
+[root@client1 linux]# ./xcp help info
 COMMAND
 info
 
