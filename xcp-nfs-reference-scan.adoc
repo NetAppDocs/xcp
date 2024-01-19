@@ -27,8 +27,6 @@ xcp scan <source_nfs_export_path>
 <enter_example>
 ====
 
-== Parameters
-
 The following table lists the `scan` parameters and their description.
 
 [cols=2*,options="header"]
