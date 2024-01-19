@@ -70,7 +70,7 @@ You can exclude user and group names for file listings or reports by using the `
 .Syntax
 
 [source,cli]
-xcp copy -nonames <source_ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -nonames <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
@@ -85,7 +85,7 @@ You can specify that only the files and directories that match a filter are proc
 .Syntax 
 
 [source,cli]
-xcp copy -match <filter> <source_ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -match <filter> <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
@@ -100,7 +100,7 @@ You can generate checksums for the file listings and save the checksums when ind
 .Syntax
 
 [source,cli]
-xcp copy -md5 <source_ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -md5 <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
@@ -116,7 +116,7 @@ You can specify the request size when reading directories by using the `-dircoun
 .Syntax
 
 [source,cli]
-xcp copy -dircount <n[k]> <source_ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -dircount <n[k]> <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
@@ -131,7 +131,7 @@ You can include the deduplication estimate in reports by using the `-edupe` para
 .Syntax
 
 [source,cli]
-xcp copy -edupe <source_ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -edupe <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
@@ -146,7 +146,7 @@ You can specify the read/write block size using the `-bs <number>` parameter. Th
 .Syntax
 
 [source,cli]
-xcp copy -bs <n[k]> <ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -bs <n[k]> <ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
@@ -161,7 +161,7 @@ You can specify the maximum number of concurrent patch processes by using the `-
 .Syntax
 
 [source,cli]
-xcp copy -parallel <n> <ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -parallel <n> <ip_address_or_hostname>:/source_vol destination_ip_address_or_hostname:/<dest_vol>
 
 .Show example
 [%collapsible]
@@ -176,7 +176,7 @@ You can process NFSv4 ACLs by using the `-acl4` parameter.
 .Syntax
 
 [source,cli]
-xcp copy -acl4 <ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -acl4 <ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
@@ -193,7 +193,7 @@ The `-preserve-atime` option resets the access time to the original value set be
 .Syntax
 
 [source,cli]
-xcp copy -preserve-atime <source_ip_address_or_hostname>:/<source_vol> <destination_ip_address_or_hostname>:/<dest_vol>
+xcp copy -preserve-atime <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
 .Show example
 [%collapsible]
