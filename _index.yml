@@ -11,15 +11,15 @@ indexpage:
     - title: Earlier release notes versions
       links:
         - title: NetApp XCP 1.9.2
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64804&language=en-US
+          url: https://library.netapp.com/ecm/ecm_get_file/ECMLP2885805
         - title: NetApp XCP 1.9.1
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64637&language=en-US
+          url: https://library.netapp.com/ecm/ecm_get_file/ECMLP2884968
         - title: NetApp XCP 1.9
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64493&language=en-US
+          url: https://library.netapp.com/ecm/ecm_get_file/ECMLP2883342
         - title: NetApp XCP 1.8.1
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64287&language=en-US
+          url: https://library.netapp.com/ecm/ecm_get_file/ECMLP2881500
         - title: NetApp XCP 1.8
-          url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=64074&language=en-US
+          url: https://library.netapp.com/ecm/ecm_get_file/ECMLP2880112
         - title: NetApp XCP 1.7 and earlier 
           url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064  
     - title: More resources
