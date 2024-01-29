@@ -1,0 +1,54 @@
+.Show example
+[%collapsible]
+====
+----
+C:\netapp\xcp>xcp scan --help
+XCP SMB <version>(c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until xxx
+usage: xcp scan [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>] [-preserve-atime] [-depth
+<n>] [-loglevel <name>] [-stats] [-l] [-ownership] [-du]
+[-fmt <expression>] [-html] [-csv] [-edupe] [-bs <n>] [-ads] 
+source
+positional arguments: 
+source
+optional arguments:
+-h, --help
+-v
+-parallel <n>
+-match <filter> 
+details)
+-exclude <filter> 
+details)
+-preserve-atime
+-depth <n>
+-loglevel <name>
+-stats
+-l
+-ownership
+-du
+-fmt <expression> 
+details)
+-html
+-csv
+-edupe
+-bs <n>
+-ads
+show this help message and exit 
+increase debug verbosity
+number of concurrent processes (default: <cpu-count>)
+only process files and directories that match the filter (see `xcp help -match` for
+Exclude files and directories that match the filter (see `xcp help -exclude` for
+restore last accessed date on source 
+limit the search depth
+option to set log level filter (default:INFO) 
+print tree statistics report
+detailed file listing output 
+retrieve ownership information
+summarize space usage of each directory including subdirectories
+format file listing according to the python expression (see `xcp help -fmt` for
+Save HTML statistics report 
+Save CSV statistics report
+Include dedupe and sparse data estimate in reports (see documentation for details) 
+read/write block size for scans which read data with -edupe (default: 64k)
+scan NTFS alternate data stream
+----
+====

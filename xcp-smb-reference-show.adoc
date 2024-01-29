@@ -1,0 +1,34 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference-show.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB "show" command reference
+---
+= show
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The SMB `show` command queries the RPC services and NFS exports of one or more storage servers. The command also lists the available services and exports with the used and free capacity of each export, followed by the attributes of the root of each export.
+
+.Syntax
+The `show` command requires the host name or IP address of the NFSv3 exported system:
+[source,cli]
+xcp show \\<IP address or hostname of SMBserver>
+
+.Show example
+include::../_include/ref-example-smb-show-v.adoc[]
+
+The following table lists the `scan` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| show -v | Print verbose details about SMB servers using the IP address or host 
+name.
+| show -h, --help | Show this help message and exit.
+|=== 

@@ -1,0 +1,10 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\Administrator\Desktop\xcp>xcp activate
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029 
+XCP activated
+C:\Users\Administrator\Desktop\xcp>
+----
+====

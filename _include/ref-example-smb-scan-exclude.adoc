@@ -1,0 +1,32 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -exclude "1*month < modified < 1*year" -fmt "'{:>15} {:>7}{}
+{}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname ofSMB server>\localtest\arch\win32\agnostic
+xcp scan -exclude "1*month < modified < 1*year" -fmt "'{:>15} {:>7} {}{}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic
+XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
+2013-03-07_15:39:22.852698 46 regular agnostic\P4ENV
+2013-03-07_15:40:27.093887 8.40KiB regular agnostic\Client_outage.thpl
+2013-03-07_15:40:38.381870 23.0KiB regular agnostic\IPv6_RA_Configuration_Of_LLA_In_SK_BSD.thpl 
+2013-03-07_15:40:38.382876 12.0KiB regular agnostic\IPv6_RA_Default_Route_changes.thpl
+2013-03-07_15:40:38.383870 25.8KiB regular agnostic\IPv6_RA_Port_Role_Change.thpl 
+2013-03-07_15:40:38.385863 28.6KiB regular
+agnostic\IPv6_RA_processing_And_Default_Route_Installation.thpl
+2013-03-07_15:40:38.386865 21.8KiB regular agnostic\IPv6_RA_processing_large_No_Prefix.thpl
+----truncated output ----
+225 regular agnostic\Makefile
+165 regular agnostic\Makefile.template
+0 directory agnostic\tools\limits_finder\vendor\symfony\src
+0 directory agnostic\tools\limits_finder\vendor\symfony
+0 directory agnostic\tools\limits_finder\vendor
+0 directory agnostic\tools\limits_finder
+0 directory agnostic\tools
+0 directory agnostic
+
+xcp scan -exclude 1*month < modified < 1*year -fmt '{:>15} {:>7} {} {}'.format(iso(mtime), humanize_size(size), type, relpath) \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic
+140,856 scanned, 1 excluded, 0 errors 
+Total Time : 46s
+STATUS : PASSED
+----
+====

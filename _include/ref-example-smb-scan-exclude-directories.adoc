@@ -1,0 +1,30 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -exclude "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath, depth]))" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
+xcp scan -exclude "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath,depth]))"
+\\<IP address or hostname of SMBserver>\localtest\arch\win32\agnostic\snapmirror
+XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
+2013-03-07_15:44:53.712271,snapmirror\SMutils.pm,1
+2013-03-07_15:44:53.715270,snapmirror\rsm_init.thpl,1 
+2013-03-07_15:44:53.716268,snapmirror\rsm_quiesce.thpl,1 
+2013-03-07_15:44:53.717263,snapmirror\rsm_release.thpl,1 
+2013-03-07_15:44:53.718260,snapmirror\rsm_resume.thpl,1 
+2013-03-07_15:44:53.720256,snapmirror\rsm_resync.thpl,1 
+2013-03-07_15:44:53.721258,snapmirror\rsm_update.thpl,1 
+2013-03-07_15:44:53.722261,snapmirror\sm_init.thpl,1
+2013-03-07_15:44:53.723257,snapmirror\sm_init_complete.thpl,1 
+2013-03-07_15:44:53.724256,snapmirror\sm_quiesce.thpl,1
+2013-03-07_15:44:53.725254,snapmirror\sm_resync.thpl,1
+2013-03-07_15:44:53.726250,snapmirror\sm_retrieve_complete.thpl,1 
+2013-03-07_15:44:53.727249,snapmirror\sm_store_complete.thpl,1 
+2013-03-07_15:44:53.728256,snapmirror\sm_update.thpl,1
+2013-03-07_15:44:53.729260,snapmirror\sm_update_start.thpl,1
+
+xcp scan -exclude type is directory -fmt ','.join(map(str, [iso(mtime), relpath, depth])) \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
+18 scanned, 1 excluded, 0 errors 
+Total Time : 0s
+STATUS : PASSED
+----
+====

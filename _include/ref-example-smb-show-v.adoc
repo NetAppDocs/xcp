@@ -1,0 +1,37 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\Administrator\Desktop\xcp>xcp show \\<IP address or hostname of SMBserver>
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 
+2029
+Shares Errors Server
+7 0 <IP address or hostname of SMB server>
+== SMB Shares == 
+Space Space Current
+Free Used Connections Share Path Folder Path
+0 0 N/A \\<IP address or hostname of SMB server>\IPC$ N/A
+533GiB 4.72GiB 0 \\<IP address or hostname of SMB server>\ETC$ C:\etc
+533GiB 4.72GiB 0 \\<IP address or hostname of SMB server>\HOME C:\vol\vol0\home 
+533GiB 4.72GiB 0 \\<IP address or hostname of SMB server>\C$ C:\
+972MiB 376KiB 0 \\<IP address or hostname of SMB server>\testsecureC:\vol\testsecure
+12 XCP SMB v1.6 User Guide © 2020 NetApp, Inc. All rights reserved.
+47.8GiB 167MiB 1 \\<IP address or hostname of SMB server>\volxcp C:\vol\volxcp 
+9.50GiB 512KiB 1 \\<IP address or hostname of SMB server>\jl C:\vol\jl
+== Attributes of SMB Shares == 
+Share Types Remark
+IPC$ PRINTQ,IPC,SPECIAL,DEVICE Remote IPC
+ETC$ SPECIAL Remote Administration 
+HOME DISKTREE Default Share
+C$ SPECIAL Remote Administration 
+testsecure DISKTREE for secure copy 
+volxcp DISKTREE for xcpSMB
+jl DISKTREE
+== Permissions of SMB Shares == 
+Share Entity Type
+IPC$ Everyone Allow/Full Control
+ETC$ Administrators Allow/FullControl 
+HOME Everyone Allow/Full Control
+C$ Administrators Allow/Full Control
+----
+====

@@ -1,0 +1,28 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\Administrator\Desktop\xcp>xcp --help
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 
+2029
+usage: xcp [-h] [-version]
+            {scan,show,listen,configure,copy,sync,verify,license,activate,help}
+            ...
+optional arguments:
+  -h, --help       show this help message and exit
+  -version         show program's version number and exit
+
+XCP commands:
+  {scan,show,listen,configure,copy,sync,verify,license,activate,help} 
+    scan           Read all the files in a file tree
+    show           Request information from host about SMB shares
+    listen         Run xcp service
+    configure      Configure xcp.ini file
+    copy           Recursively copy everything from source to target
+    sync           Sync target with source
+    verify         Verify that the target is the same as the source
+    license        Show xcp license info
+    activate       Activate a license on the current host
+    help           Show help for commands
+----
+====

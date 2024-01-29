@@ -123,7 +123,16 @@ sidebar:
           entries: 
             - title: SMB command reference overview
               url: /xcp-smb-reference.html
-
+            - title: help
+              url: /xcp-smb-reference-help.html
+            - title: show
+              url: /xcp-smb-reference-show.html
+            - title: license
+              url: /xcp-smb-reference-activate.html
+            - title: activate
+              url: /xcp-smb-reference-activate.html
+            - title: scan
+              url: /xcp-smb-reference-scan.html
     - title:  Troubleshoot
       entries: 
         - title: Troubleshoot XCP NFS errors
