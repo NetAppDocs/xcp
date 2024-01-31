@@ -27,47 +27,26 @@ xcp sync -id <catalog_name>
 <enter_example>
 ====
 
-== Parameters
-
 The following table lists the `sync` parameters and their description.
 
 [cols=2*,options="header"]
 |===
 | Parameter
 | Description
-| `sync -id <catalog_index>` | Specifies the catalog name of a previous copy index.
-| `sync -nonames` | Excludes user and group names for file listings and reports.
-| `sync -bs <n[k]>` | Specifies the read/write block size (default: 64k).
-| `sync -dircount <n[k]>` | Specifies the request size when reading directories.
-| `sync -parallel <n>` | Specifies the maximum number of concurrent batch processes (default: 7). 
-| `sync -preserve-atime` | Restores all files to the last accessed date on the source.
+| sync -id <catalog_index> | Specifies the catalog name of a previous copy index.
+| <<sync_nonames, sync -nonames>> | Excludes user and group names for file listings and reports.
+| <<sync_bs, sync -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
+| <<sync_dircount, sync -dircount <n[k]> >> | Specifies the request size when reading directories.
+| <<sync_parallel, sync -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
+| <<sync_preserve_atime, sync -preserve-atime>> | Restores all files to the last accessed date on the source.
 
 |===
 
 
-== Use sync command parameters
+[[sync_nonames]]
+== sync -id and sync -nonames
 
-This section provides the parameters, descriptions, and examples for the XCP NFS `sync` command
-
-=== Specify the catalog name of a previous copy index
-
-You can specify the catalog name of previous copy index by using the `-id <catalog_name>` parameter.
-
-.Syntax
-
-[source,cli]
-xcp sync -id <catalog_name> 
-
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
-
-
-=== Exclude user and group names for file listings or reports
-
-You can exclude user and group names for file listings or reports by using the `-id <catalog_name> and `-nonames` parameters.
+Use the the `-id <catalog_name> and `-nonames` parameters with the `sync` command to exclude user and group names for file listings or reports.
 
 .Syntax
 
@@ -80,9 +59,10 @@ xcp sync -id <catalog_name> -nonames
 <enter_example>
 ====
 
-=== Specify the read/write block size
+[[sync_bs]]
+== sync -id <catalog_name> and sync -bs <n[k]>
 
-You can specify the read/write block size using the `-id <catalog_name>` and `-bs <n[k]>` parameters. The default block size is 64k. 
+Use the the `-id <catalog_name> and `-bs <n[k]>` parameters with the `sync` command to  specify the read/write block size. The default block size is 64k. 
 
 .Syntax
 
@@ -95,9 +75,10 @@ xcp sync -id <catalog_name> -bs <n[k]>
 <enter_example>
 ====
 
-=== Specify the request size when reading directories
+[[sync_dircount]]
+== sync -id and sync -dircount <n[k]>
 
-You can specify the request size when reading directories by using the `-id <catalog_name>` and `-dircount <n[k]>` parameters. The default value is 64k.
+Use the the `-id <catalog_name> and `-dircount <n[k]>` parameters with the `sync` command to specify the request size when reading directories. The default value is 64k.
 
 .Syntax
 
@@ -110,9 +91,10 @@ xcp sync -id <catalog_name> -dircount <n[k]>
 <enter_example>
 ====
 
-=== Specify the maximum number of concurrent batch processes 
+[[sync_parallel]]
+== sync -id and sync -parallel 
 
-You can specify the maximum number of concurrent patch processes by using the `-id <catalog_name>` and `- parallel <number>` parameters. The default value is 7.
+Use the the `-id <catalog_name> and `-parallel` parameters with the `sync` command to specify the maximum number of concurrent batch processes. The default value is 7.
 
 .Syntax
 
@@ -125,16 +107,17 @@ xcp sync -id <catalog_name> -parallel <n>
 <enter_example>
 ====
 
-=== Restore all files to the last accessed date on the source
+[[sync_preserve_atime]]
+== sync -preserve-atime
 
-You can restore all files to the last accessed date on the source by using the `-id <catalog_name>` and `-preserve-atime` parameters. 
+Use the the `-preserve-atime` parameter with the `sync` command to restore all files to the last accessed date on the source. 
 
 The `-preserve-atime` option resets the access time to the original value set before the XCP read operation.
 
 .Syntax
 
 [source,cli]
-xcp sync -id <catalog_name> -preserve-atime 
+xcp sync -preserve-atime -id <catalog_name>
 
 .Show example
 [%collapsible]

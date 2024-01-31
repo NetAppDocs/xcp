@@ -95,7 +95,7 @@ xcp resume -id <catalog_name> -dircount <n[k]>
 
 === Specify the maximum number of concurrent batch processes 
 
-You can specify the maximum number of concurrent patch processes by using the `- parallel <n>` parameter. The default value is 7.
+You can specify the maximum number of concurrent batch processes by using the `- parallel <n>` parameter. The default value is 7.
 
 .Syntax
 
