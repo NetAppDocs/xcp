@@ -24,20 +24,9 @@ xcp license
 
 include::../_include/ref-example-nfs-license.adoc[]
 
-== Parameters
+== license update
 
-The following table lists the `license` parameters and their description.
-
-[cols=2*,options="header"]
-|===
-| Parameter
-| Description
-| `license update` | Retrieves the latest license from the XCP server.
-|===
-
-== Retrieve the latest license from the XCP server
-
-You can retrieve the latest license from the XCP server by using the `license update` parameter. 
+Use the `update` parameter with the `license` command to retrieve the latest license from the XCP server.
 
 .Syntax
 [source,cli]
