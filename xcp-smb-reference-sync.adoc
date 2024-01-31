@@ -21,7 +21,7 @@ xcp sync \\<source SMB share> \\<IP address of SMB destination server>
 .Show example
 include::../_include/<filename>.adoc[]
 
-The following table lists the `copy` parameters and their description.
+The following table lists the `sync` parameters and their description.
 
 [cols=2*,options="header"]
 |===
@@ -66,10 +66,7 @@ Use the `-h` and `–-help` parameters with the `sync` command to display detail
 xcp sync -–help
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -v
 Use the `-v` parameter with the `sync` command to provide detailed debug information.
@@ -79,10 +76,7 @@ Use the `-v` parameter with the `sync` command to provide detailed debug informa
 xcp sync -v \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx\warning \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 <<smb_sync_parallel>>
 ==  sync -parallel <n>
@@ -95,10 +89,7 @@ NOTE: The maximum value for n is 61.
 xcp sync -parallel 5 \\<IP address or hostname of SMB server>\volxcp\\<IP address of SMB destination server>\xcp1_test1
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 [[smb_sync_match]]
 == sync -match <filter>
@@ -106,13 +97,10 @@ Use the `-match <filter>` parameter with the `sync` command to scan the source a
 
 .Syntax
 [source,cli]
-xcp sync -match "'gx' in name" \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -match <filter> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -preserve-atime 
 Use the `-preserve-atime` parameter with the `sync` command to reset "atime" to the original value before XCP read the file.
@@ -122,10 +110,7 @@ Use the `-preserve-atime` parameter with the `sync` command to reset "atime" to 
 xcp sync -preserve-atime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -noatime
 Use the `-noatime` parameter with the `sync` command to sync all the differences in the source to the target, excluding files that only have differences in access time.
@@ -135,10 +120,7 @@ Use the `-noatime` parameter with the `sync` command to sync all the differences
 xcp sync -noatime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -noctime
 Use the `-noctime` parameter with the `sync` command to sync all the differences in the source to the target, excluding files that only have differences in creation time.
@@ -148,10 +130,7 @@ Use the `-noctime` parameter with the `sync` command to sync all the differences
 xcp sync -noctime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -nomtime
 Use the `-nomtime` parameter with the `sync` command to sync all the differences in the source to the target, excluding  files that only have differences in modification time. (This option is deprecated. The `sync` command will continue to run without this option.)
@@ -161,23 +140,17 @@ Use the `-nomtime` parameter with the `sync` command to sync all the differences
 xcp sync -nomtime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -noattrs
 Use the `-noattrs` parameter with the `sync` command to sync all the differences in the source to the target, excluding files that only have differences in file attributes. XCP copies a file only when it has different content (the ACLs are transferred).
 
 .Syntax
 [source,cli]
-xcp sync -nomtime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -noattrs \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -noownership
 Use the `-noownership` parameter with the `sync` command to sync all the differences of the source to the target, excluding files that only have differences in ownership.
@@ -187,10 +160,7 @@ Use the `-noownership` parameter with the `sync` command to sync all the differe
 xcp sync -noownership \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 [[sync_smb_atime]]
 == sync -atimewindow <float>
@@ -203,10 +173,7 @@ In the following example, XCP accepts a difference in atime of up to 10 minutes 
 xcp sync -atimewindow 600 \\<IP address or hostname of SMB server>\copy_share2\\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 [[sync_smb_ctime]]
 == sync -ctimewindow <float>
@@ -219,10 +186,7 @@ In the following example, XCP accepts a difference in atime for up to 10 minutes
 xcp sync -ctimewindow 600 \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 [[sync_smb_mtime]]
 == sync -mtimewindow <float>
@@ -233,10 +197,7 @@ Use the `-mtimewindow <float>` parameter with the `sync` command to specify the 
 xcp sync -mtimewindow 600 \\<IP address or hostname of SMB server>\copy_share2\\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 [[sync_smb_scan_acl]]
 == sync -acl, sync -fallback-user, and sync -fallback-group
@@ -250,10 +211,7 @@ NOTE: You cannot use the `-acl` option without the `-fallback-user` and `-fallba
 xcp sync -acl -fallback-user "DOMAIN\gabi" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\performance_SMB_home_dirs \\<IP address of SMB destination server>\performance_SMB_home_dirs
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -l
 Use the `-l` parameter with the `sync` command to provide detailed logging information in the standard output for all actions performed by XCP on the target.
@@ -263,13 +221,7 @@ Use the `-l` parameter with the `sync` command to provide detailed logging infor
 xcp sync -l \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
-
-
-
 
 == sync -onlyacl
 Use the `-onlyacl -fallback-user <user> -fallback-group <group>` parameter with the `sync` command to compare 
@@ -283,10 +235,7 @@ NOTE: You cannot use the `-onlyacl` parameter without the `-fallback-user` and `
 xcp sync -onlyacl -fallback-user SMBUSER1 -fallback-group SMBGRP1 \\<source_IP_address>\source_share \\<IP address of SMB destination server> \dest_sharere
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 [[smb_sync_aclverify]]
 == sync -aclverify{yes,no}
@@ -297,10 +246,8 @@ Use the `-aclverify{yes,no}` parameter with the `sync` command to provide an opt
 xcp>xcp sync -acl -aclverify yes -fallback-user SMBUSER11 -fallback-group SMBGRP1 \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
+
 
 [[smb_sync_bs]]
 == sync -bs <n>
@@ -311,10 +258,7 @@ Use the `-bs <n>` parameter with the `sync` command to provide a read/write bloc
 xcp.exe sync -bs <n> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====
 
 == sync -ads
 Using `-ads` parameter with the `sync` command to scan for changes and modifications to alternate data streams
@@ -326,7 +270,4 @@ the target is identical to the source.
 xcp sync -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share
 
 .Show example
-[%collapsible]
-====
 include::../_include/<filename>.adoc[]
-====

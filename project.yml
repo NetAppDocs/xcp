@@ -128,7 +128,7 @@ sidebar:
             - title: show
               url: /xcp-smb-reference-show.html
             - title: license
-              url: /xcp-smb-reference-activate.html
+              url: /xcp-smb-reference-license.html
             - title: activate
               url: /xcp-smb-reference-activate.html
             - title: scan
@@ -136,7 +136,13 @@ sidebar:
             - title: copy
               url: /xcp-smb-reference-copy.html
             - title: sync
-              url: /xcp-smb-reference-sync.html  
+              url: /xcp-smb-reference-sync.html
+            - title: verify
+              url: /xcp-smb-reference-verify.html
+            - title: configure
+              url: /xcp-smb-reference-configure.html
+            - title: listen
+              url: /xcp-smb-reference-listen.html 
     - title:  Troubleshoot
       entries: 
         - title: Troubleshoot XCP NFS errors
