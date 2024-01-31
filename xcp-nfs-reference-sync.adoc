@@ -21,6 +21,7 @@ NOTE: During the sync operation, modified files and directories are copied to th
 [source,cli]
 xcp sync -id <catalog_name>
 
+[[sync_id]]
 .Show example
 [%collapsible]
 ====
@@ -33,7 +34,7 @@ The following table lists the `sync` parameters and their description.
 |===
 | Parameter
 | Description
-| sync -id <catalog_index> | Specifies the catalog name of a previous copy index.
+| <<sync_id, sync -id <catalog_index> >> | Specifies the catalog name of a previous copy index.
 | <<sync_nonames, sync -nonames>> | Excludes user and group names for file listings and reports.
 | <<sync_bs, sync -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
 | <<sync_dircount, sync -dircount <n[k]> >> | Specifies the request size when reading directories.
