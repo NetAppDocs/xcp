@@ -13,6 +13,10 @@ summary: XCP NFS command reference
 :imagesdir: ./media/
 
 [lead]
+View the descriptions, parameters, and examples for the XCP `sync` command, including when the `sync` command is used with the `dry run` option. 
+
+== sync
+
 The XCP NFS `sync` command scans for changes and modifications a source NFS directory using a catalog index tag name or the number of a previous copy operation. Incremental changes to the source are copied and applied to the target directory. The old catalog index numbers are replaced with new ones after the sync operation.
 
 NOTE: During the sync operation, modified files and directories are copied to the destination NFSv3 export again.
@@ -47,7 +51,7 @@ The following table lists the `sync` parameters and their description.
 
 
 [[sync_nonames]]
-== sync -nonames
+=== sync -nonames
 
 Use the the `-nonames` parameter with the `sync` command to exclude user and group names for file listings or reports.
 
@@ -63,7 +67,7 @@ xcp sync -id <catalog_name> -nonames
 ====
 
 [[sync_bs]]
-== sync -id <catalog_name> and sync -bs <n[k]>
+=== sync -bs <n[k]>
 
 Use the the`-bs <n[k]>` parameter with the `sync` command to  specify the read/write block size. The default block size is 64k. 
 
@@ -79,7 +83,7 @@ xcp sync -id <catalog_name> -bs <n[k]>
 ====
 
 [[sync_dircount]]
-== sync -id and sync -dircount <n[k]>
+=== sync -dircount <n[k]>
 
 Use the the `-dircount <n[k]>` parameter with the `sync` command to specify the request size when reading directories. The default value is 64k.
 
@@ -95,7 +99,7 @@ xcp sync -id <catalog_name> -dircount <n[k]>
 ====
 
 [[sync_parallel]]
-== sync -id and sync -parallel 
+=== sync -parallel 
 
 Use the the `-parallel` parameter with the `sync` command to specify the maximum number of concurrent batch processes. The default value is 7.
 
@@ -111,7 +115,7 @@ xcp sync -id <catalog_name> -parallel <n>
 ====
 
 [[sync_preserve_atime]]
-== -preserve-atime
+=== -preserve-atime
 
 Use the the `-preserve-atime` parameter with the `sync` command to restore all files to the last accessed date on the source. 
 
@@ -127,3 +131,119 @@ xcp sync -preserve-atime -id <catalog_name>
 ====
 <enter_example>
 ====
+
+== sync dry-run
+
+The `sync` command with the `dry-run` option looks for changes or modifications made to the source NFS directory using the previous catalog index number of a copy operation. This command also detects files and directories that are new, moved, deleted, or renamed since the previous copy operation. The command reports the source changes but does not apply them to the target.
+
+
+.Syntax
+[source,cli]
+xcp sync dry-run -id <catalog_name>
+
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync dry-run` command option.
+
+[[sync_dry_run_id]]
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
+The following table lists the `sync dry-run` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<sync_dry_run_id, sync dry-run -id <catalog_name> >> | Specifies the catalog name of a previous copy index. This is a required parameter for the `sync` command.
+| <<sync_dry_run_stats, sync dry-run -stats>> | Performs a deep scan of the modified directories and reports everything that is
+new.
+| <<sync_dry_run_l, sync dry-run -l>> | Prints details about files and directories that changed.
+| <<sync_dry_run_nonames, sync dry-run -nonames>> | Excludes user and group names for file listings and reports.
+| <<sync__dry_run_dircount, sync dry-run -dircount <n[k]> >> | Specifies the request size when reading directories.
+| <<sync__dry_run_parallel, sync dry-run -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
+
+|===
+
+[[sync_dry_run_stats]]
+=== sync dry-run -stats
+
+Use the the `-stats` parameter with `sync dry-run` to perform a deep scan of the modified directories and report everything that is new.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -stats 
+
+.Show example
+[%collapsible]
+====
+<enter_>
+====
+
+[[sync_dry_run_l]]
+=== sync dry-run -l
+
+Use the the `-l` parameter with `sync dry-run` to print details about files and directories that changed
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -l 
+
+.Show example
+[%collapsible]
+====
+<enter_>
+====
+
+[[sync_dry_run_nonames]]
+=== sync dry-run -nonames
+
+Use the the `-nonames` parameter with `sync dry-run` to exclude user and group names for file listings or reports.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -nonames 
+
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
+
+[[sync_dry_run_dircount]]
+=== sync dry-run -dircount <n[k]>
+
+Use the the `-dircount <n[k]>` parameter with `sync dry-run` to specify the request size when reading directories. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -dircount <n[k]>
+
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
+[[sync_dry_run_parallel]]
+=== sync dry-run -parallel 
+
+Use the the `-parallel` parameter with `sync dry-run` to specify the maximum number of concurrent batch processes. The default value is 7.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -parallel <n> 
+
+.Show example
+[%collapsible]
+====
+<enter_example>
+====
+
