@@ -1,0 +1,26 @@
+.Show example
+[%collapsible]
+====
+----
+root@localhost /]# ./xcp scan -l <IP address or hostname of NFSserver>:/source_vol
+
+drwxr-xr-x --- root root 4KiB 4KiB 6s source_vol
+drwxr-xr-x --- root root 4KiB 4KiB 42s source_vol/USER.1
+drwxr-xr-x --- root root 4KiB 4KiB 42s source_vol/USER.2
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.1/FILE_1
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.1/FILE_2
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.1/FILE_3
+rw-r--r-- --- root root 1KiB 4KiB 42ssource_vol/USER.1/FILE_4
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.1/FILE_5
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.2/FILE_1
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.2/FILE_5
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.2/FILE_2
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.2/FILE_3
+rw-r--r-- --- root root 1KiB 4KiB 42s source_vol/USER.2/FILE_4
+Xcp command : xcp scan -l <IP address or hostname of NFS server>:/source_vol
+13 scanned, 0 matched, 0 error
+Speed : 3.73 KiB in (4.89 KiB/s), 756 out (989/s)
+Total Time : 0s.
+STATUS : PASSED
+----
+====

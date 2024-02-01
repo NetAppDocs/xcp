@@ -1,0 +1,55 @@
+.Show example
+[%collapsible]
+====
+----
+root@localhost /]# ./xcp scan -csv <IP address or hostname of NFS server>:/source_vol
+
+scan <IP address or hostname of NFS server>:/source_vol
+options,"{'-csv': True}"
+summary,"13 scanned, 3.73 KiB in (11.3 KiB/s), 756 out (2.23 KiB/s), 0s."
+Maximum Values,Size,Used,Depth,Namelen,Dirsize
+Maximum Values,1024,4096,2,10,5
+Average Values,Namelen,Size,Depth,Dirsize
+Average Values,6,1024,1,4
+Top Space Users,root
+Top Space Users,53248
+Top File Owners,root
+Top File Owners,13
+Top File Extensions,other
+Top File Extensions,10
+Number of files,empty,<8KiB,8-64KiB,64KiB-1MiB,1-10MiB,10-100MiB,>100MiB
+Number of files,0,10,0,0,0,0,0
+Space used,empty,<8KiB,8-64KiB,64KiB-1MiB,1-10MiB,10-100MiB,>100MiB
+Space used,0,40960,0,0,0,0,0
+Directory entries,empty,1-10,10-100,100-1K,1K-10K,>10K
+Directory entries,0,3,0,0,0,0
+Depth,0-5,6-10,11-15,16-20,21-100,>100
+Depth,13,0,0,0,0,0
+Accessed,>1 year,>1 month,1-31 days,1-24 hrs,<1 hour,<15 mins,future
+Accessed,0,0,0,0,0,10,0
+Modified,>1 year,>1 month,1-31 days,1-24 hrs,<1 hour,<15 mins,future
+Modified,0,0,0,0,0,10,0
+Changed,>1 year,>1 month,1-31 days,1-24 hrs,<1 hour,<15 mins,future
+Changed,0,0,0,0,0,10,0
+
+Total count,13
+Directories,3
+Regular files,10
+Symbolic links,0
+Special files,0
+Hard links,0,
+multilink files,0,
+Space Saved by Hard links (KB),0
+Sparse data,N/A
+Dedupe estimate,N/A
+Total space for regular files,size,10240,used,40960
+Total space for symlinks,size,0,used,0
+Total space for directories,size,12288,used,12288
+Total space used,53248
+Xcp command : xcp scan -csv <IP address or hostname of NFS server>:/source_vol
+13 scanned, 0 matched, 0 error
+Speed : 3.73 KiB in (11.2 KiB/s), 756 out (2.22 KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+----
+====

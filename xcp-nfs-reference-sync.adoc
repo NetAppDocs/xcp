@@ -161,7 +161,7 @@ The following table lists the `sync dry-run` parameters and their description.
 new.
 | <<sync_dry_run_l, sync dry-run -l>> | Prints details about files and directories that changed.
 | <<sync_dry_run_nonames, sync dry-run -nonames>> | Excludes user and group names for file listings and reports.
-| <<sync__dry_run_dircount, sync dry-run -dircount <n[k]> >> | Specifies the request size when reading directories.
+| <<sync_dry_run_dircount, sync dry-run -dircount <n[k]> >> | Specifies the request size when reading directories.
 | <<sync__dry_run_parallel, sync dry-run -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
 
 |===

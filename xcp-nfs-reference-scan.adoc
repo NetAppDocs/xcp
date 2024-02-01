@@ -21,11 +21,7 @@ NetApp recommends that you put the source NFS export mounts in read-only mode du
 [source,cli]
 xcp scan <source_nfs_export_path>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-scan.adoc[]
 
 The following table lists the `scan` parameters and their description.
 
@@ -70,22 +66,14 @@ Use the `-l` and `-q` parameters with the `scan` command to retrieve file listin
 [source,cli]
 xcp scan -l <ip_address_or_hostname>:/source_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-scan-l.adoc[]
 
 .Syntax
 
 [source,cli]
 xcp scan -q <ip_address_or_hostname>:/source_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-scan-q.adoc[]
 
 [[stats_csv_html]]
 == scan -stats, scan -csv, and scan -html
@@ -99,33 +87,21 @@ NOTE: XCP reports (.csv, .html) are saved in the catalog location specified in t
 [source,cli]
 xcp scan -stats <ip_address>:/source_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-scan-stats.adoc[]
 
 .Syntax
 
 [source,cli]
 xcp scan -csv <ip_address_or_hostname>:/source_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-scan-csv.adoc[]
 
 .Syntax
 
 [source,cli]
 xcp scan -html <ip_address_or_hostname>:/source_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-scan-html.adoc[]
 
 == scan -nonames
 
@@ -138,11 +114,7 @@ NOTE: When used with the `scan` command, the `-nonames` parameter only applies t
 [source,cli]
 xcp scan -nonames <ip_address_or_hostname>:/source_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-scan-nonames.adoc[]
 
 [[scan_newid]]
 == scan -newid <name>

@@ -1,0 +1,26 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp scan -nonames <IP address or hostname of NFS server>:/source_vol
+
+source_vol
+source_vol/USER.1
+source_vol/USER.2
+source_vol/USER.1/FILE_1
+source_vol/USER.1/FILE_2
+source_vol/USER.1/FILE_3
+source_vol/USER.1/FILE_4
+source_vol/USER.1/FILE_5
+source_vol/USER.2/FILE_1
+source_vol/USER.2/FILE_5
+source_vol/USER.2/FILE_2
+source_vol/USER.2/FILE_3
+source_vol/USER.2/FILE_4
+Xcp command : xcp scan -nonames <IP address or hostname of NFSserver>:/source_vol
+13 scanned, 0 matched, 0 error
+Speed : 3.73 KiB in (4.66 KiB/s), 756 out(944/s)
+Total Time : 0s.
+STATUS : PASSED
+----
+====
