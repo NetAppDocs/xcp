@@ -20,13 +20,13 @@ The XCP NFS `resume` command restarts an interrupted copy operation by specifyin
 [source,cli]
 xcp resume -id <catalog_name>
 
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `resume` command.
+
 .Show example
 [%collapsible]
 ====
 <enter_example>
 ====
-
-IMPORTANT: The `-id <catalog_name>` parameter is a required parameter for the `resume` command.
 
 The following table lists the `resume` parameters and their description.
 
@@ -34,7 +34,7 @@ The following table lists the `resume` parameters and their description.
 |===
 | Parameter
 | Description
-| <<resume_id, resume -id <catalog_name>> | Specifies the catalog name of a previous copy index. This is a required parameter for the resume command. 
+| <<resume_id, resume -id <catalog_name> >> | Specifies the catalog name of a previous copy index. This is a required parameter for the resume command. 
 | <<resume_bs, resume -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
 | <<resume_dircount, resume -dircount <n[k]> >> | Specifies the request size when reading directories.
 | <<resume_parallel,resume -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
@@ -115,7 +115,7 @@ xcp resume -id <catalog_name> -preserve-atime
 [[resume_s3_insecure]]
 == resume -s3.insecure
 
-You can use HTTP instead of HTTPS for S3 bucket communication by using the `-s3.insecure` parameter. 
+Use the `-s3.insecure` parameter with the `resume` command to use HTTP instead of HTTPS for S3 bucket communication.
 
 NOTE: If the `-s3.insecure` parameter is used with the `copy` command, it is ignored on resume. You must specify `-s3.insecure` again to use the option on resume.
 

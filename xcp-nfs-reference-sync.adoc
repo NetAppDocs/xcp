@@ -21,6 +21,8 @@ NOTE: During the sync operation, modified files and directories are copied to th
 [source,cli]
 xcp sync -id <catalog_name>
 
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync` command.
+
 [[sync_id]]
 .Show example
 [%collapsible]
@@ -34,7 +36,7 @@ The following table lists the `sync` parameters and their description.
 |===
 | Parameter
 | Description
-| <<sync_id, sync -id <catalog_index> >> | Specifies the catalog name of a previous copy index.
+| <<sync_id, sync -id <catalog_name> >> | Specifies the catalog name of a previous copy index. This is a required parameter for the `sync` command.
 | <<sync_nonames, sync -nonames>> | Excludes user and group names for file listings and reports.
 | <<sync_bs, sync -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
 | <<sync_dircount, sync -dircount <n[k]> >> | Specifies the request size when reading directories.
@@ -45,9 +47,9 @@ The following table lists the `sync` parameters and their description.
 
 
 [[sync_nonames]]
-== sync -id and sync -nonames
+== sync -nonames
 
-Use the the `-id <catalog_name> and `-nonames` parameters with the `sync` command to exclude user and group names for file listings or reports.
+Use the the `-nonames` parameter with the `sync` command to exclude user and group names for file listings or reports.
 
 .Syntax
 
@@ -63,7 +65,7 @@ xcp sync -id <catalog_name> -nonames
 [[sync_bs]]
 == sync -id <catalog_name> and sync -bs <n[k]>
 
-Use the the `-id <catalog_name> and `-bs <n[k]>` parameters with the `sync` command to  specify the read/write block size. The default block size is 64k. 
+Use the the`-bs <n[k]>` parameter with the `sync` command to  specify the read/write block size. The default block size is 64k. 
 
 .Syntax
 
@@ -79,7 +81,7 @@ xcp sync -id <catalog_name> -bs <n[k]>
 [[sync_dircount]]
 == sync -id and sync -dircount <n[k]>
 
-Use the the `-id <catalog_name> and `-dircount <n[k]>` parameters with the `sync` command to specify the request size when reading directories. The default value is 64k.
+Use the the `-dircount <n[k]>` parameter with the `sync` command to specify the request size when reading directories. The default value is 64k.
 
 .Syntax
 
@@ -95,7 +97,7 @@ xcp sync -id <catalog_name> -dircount <n[k]>
 [[sync_parallel]]
 == sync -id and sync -parallel 
 
-Use the the `-id <catalog_name> and `-parallel` parameters with the `sync` command to specify the maximum number of concurrent batch processes. The default value is 7.
+Use the the `-parallel` parameter with the `sync` command to specify the maximum number of concurrent batch processes. The default value is 7.
 
 .Syntax
 
@@ -109,7 +111,7 @@ xcp sync -id <catalog_name> -parallel <n>
 ====
 
 [[sync_preserve_atime]]
-== sync -preserve-atime
+== -preserve-atime
 
 Use the the `-preserve-atime` parameter with the `sync` command to restore all files to the last accessed date on the source. 
 
