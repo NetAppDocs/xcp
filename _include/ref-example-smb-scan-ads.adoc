@@ -1,0 +1,36 @@
+.Show example
+[%collapsible]
+====
+----
+C:\netapp\xcp>xcp scan -ads \\<source_ip_address>\source_share\src
+
+XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until xxx yyyy
+
+src\file1.txt:ads1 
+src\file1.txt:ads_file1.txt_1697037934.4154522.txt 
+src\file1.txt
+src\file2.txt:ads1 
+src\file2.txt:ads_file2.txt_1697037934.5873265.txt 
+src\file2.txt 
+src\test1.txt:ads_test1.txt_1697037934.7435765.txt 
+src\test1.txt
+src\dir1\dfile1.txt:ads1 
+src\dir1\dfile1.txt:ads_dfile1.txt_1697037934.1185782.txt 
+src\dir1\dfile1.txt:ads_xcp.exe 
+src\dir1\dfile1.txt:ads_tar 
+src\dir1\dfile1.txt:java_exe 
+src\dir1\dfile1.txt:cmdzip 
+src\dir1\dfile1.txt:ads1_2GB
+src\dir1\dfile1.txt 
+src\dir1:ads1
+src\dir1:ads_dir1_1697038504.087317.txt 
+src\dir1 
+src:ads_src_1697038504.7123322.txt 
+src
+
+xcp scan -ads \\<source_ip_address>\source_share\src 
+6 scanned, 0 matched, 0 errors, 15 ads scanned 
+Total Time : 2s
+STATUS : PASSED
+----
+====

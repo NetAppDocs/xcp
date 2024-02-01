@@ -1,0 +1,11 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Netapp\xcp>xcp.exe sync -bs 64k \\101.101.101.10.150\source_share \\101.101.101.10\dest_share XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until Tue Jul 18 01:12:18 2023
+1,136 scanned, 0 copied, 1,135 compared, 0 skipped, 95 removed, 0 errors, 5s
+xcp.exe sync -bs 64k \\101.101.101.10\source_share \\101.101.101.10\dest_share 1,136 scanned, 283 copied, 1,136 compared, 0 skipped, 283 removed, 0 errors 
+Total Time : 10s
+STATUS : PASSED
+----
+====

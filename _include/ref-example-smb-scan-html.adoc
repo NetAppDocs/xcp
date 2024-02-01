@@ -29,24 +29,35 @@ S-1-5-21-1896871423-3211229150-3383017265-4854184 S-1-5-32-544 S-1-5-21-18968714
 S-1-5-21-1896871423-3211229150-3383017265-4854184 S-1-5-32-544 S-1-5-21-1896871423-3211229150-3383017265-3403389
   76.8MiB    69.8MiB           0
 
-== Top File Extensions ==
+= = Top File Extensions ==
+       py	      .rst	     .html  no	extension	    .txt	    .png	    other
+     5418	      3738	      1974	         1197    	630      	336	      1344
 
 == Number of files ==
-
+    empty	     <8KiB	   8-64KiB	   64KiB-1MiB   1-10MiB	 10-100MiB	 >100MiB
+      168	     11466	      2709	          294
+ 
 == Space used ==
+    empty     <8KiB      8-64KiB     64KiB-1MiB   1-10MiB  10-100MiB   >100MiB
+        0     24.4MiB    55.3MiB        66.9MiB
 
-empty   <8KiB 
-24.4MiB
-8-64KiB 64KiB-1MiB 1-10MiB 10-100MiB >100MiB
-55.3MiB 66.9MiB
 == Directory entries == 
-empty 1-10
-42 2690
-10-100
-420
-100-1K 1K-10K >10K
+    empty      1-10       10-100         100-1K    1K-10K       >10K
+       42      2690          420
+
 == Depth ==
+      0-5	     6-10	       11-15	          16-20	   21-100	      >100
+     3832	    12527	        1424	              6		
+ 
+==	Modified ==
+  >1 year	  >1 month	  1-31 days	     1-24 hrs	  <1 hour	   <15 mins	  future	  invalid
+  	11718       2961                                 3110			
 == Created ==
+  >1 year  	>1 month    1-31 days	     1-24 hrs   <1 hour    <15 mins	  future	  invalid
+                                              1    	17788	
+== Accessed ==
+  >1 year 	>1 month	  1-31 days	     1-24 hrs	  <1 hour	   <15 mins	  future	  invalid
+			                                              14624	       3165		
 
 Total count: 17789
 Directories: 3152

@@ -1,0 +1,13 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Netapp\xcp>xcp.exe copy -acl -noownership -fallback-user SMBUSER1 -fallback-group SMBGRP2 \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until Tue Jul 18 01:12:18 2023
+568 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 5s, 0 acls copied
+568 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 10s, 0 acls copied
+568 scanned, 0 matched, 0 skipped, 135 copied, 4.26MiB (872KiB/s), 0 errors, 15s, 137 acls copied xcp.exe copy -acl -noownership -fallback-user SMBUSER1 -fallback-group SMBGRP2 \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+568 scanned, 0 matched, 0 skipped, 567 copied, 17.7MiB (1.01MiB/s), 0 errors, 567 acls copied Total Time : 17s
+STATUS : PASSED
+----
+====

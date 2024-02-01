@@ -1,0 +1,12 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp copy -exclude "'resync' in name" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac
+xcp copy -exclude "'resync' in name" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac
+XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
+xcp copy -exclude 'resync' in name \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac 18 scanned, 2 excluded, 0 skipped, 15 copied, 122KiB (50.5KiB/s), 0 errors Total Time : 2s
+STATUS : PASSED
+----
+====

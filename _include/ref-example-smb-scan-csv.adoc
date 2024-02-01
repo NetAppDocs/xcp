@@ -1,0 +1,77 @@
+.Show example
+[%collapsible]
+====
+----
+Z:\scripts\xcp\windows>xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol
+
+Output:
+Z:\scripts\xcp\windows>xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol
+XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
+1,761 scanned, 0 matched, 0 errors, 6s
+4,949 scanned, 0 matched, 0 errors,11s
+7,500 scanned, 0 matched, 0 errors,16s
+10,175 scanned, 0 matched, 0 errors,21s
+12,371 scanned, 0 matched, 0 errors,26s
+15,330 scanned, 0 matched, 0 errors,31s
+17,501 scanned, 0 matched, 0 errors,36s
+
+== Maximum Values ==
+    Size      Depth	     Namelen     Dirsize
+  535KiB	       16	          33	        45
+
+== Average Values ==
+    Size	    Depth	     Namelen	   Dirsize
+ 10.3KiB	        7	          11	         6
+
+== Top File SIDs ==
+S-1-5-21-1896871423-3211229150-3383017265-4854184 S-1-5-32-544 S-1-5-21-1896871423-3211229150- 3383017265-3403389
+    9318	     8470	           1
+
+== Top Space SIDs ==
+S-1-5-21-1896871423-3211229150-3383017265-4854184 S-1-5-32-544 S-1-5-21-1896871423-3211229150- 3383017265-3403389
+ 76.8MiB	  69.8MiB	           0
+
+== Top File Extensions ==
+	  .py	    .rst	   .html	no extension      .txt       .png	    other
+	 5418	    3738	    1974          1197       630        336	     1344
+
+==	Number of files ==
+  empty     <8KiB	 8-64KiB	  64KiB-1MiB	 1-10MiB	10-100MiB  	>100MiB
+	  168	    11466	    2709           294			
+
+== Space used ==			
+  empty	    <8KiB	 8-64KiB    64KiB-1MiB	 1-10MiB	10-100MiB	  >100MiB
+      0	  24.4MiB  55.3MiB	     66.9MiB	       0          0         0
+
+== Directory entries ==
+	empty	     1-10	  10-100        100-1K    1K-10K       >10K		
+	   42	     2690	     420					
+
+==	Depth ==							
+	  0-5	     6-10	   11-15	       16-20	  21-100       >100		
+	 3832	    12527	    1424             6				
+
+==	Modified ==
+ >1 year	 >1 month   1-31 days	 1-24 hrs  	<1 hour  	<15 mins	future	invalid
+	 11718	     2961		               3110				
+
+== Created ==
+ >1 year	 >1 month   1-31 days	 1-24 hrs  	<1 hour	  <15 mins	future	invalid
+                                    17789
+
+== Accessed ==
+ >1 year	 >1 month   1-31 days	 1-24 hrs	  <1 hour	  <15 mins	future	invalid
+		                                15754	     2035			
+
+Total count: 17789
+Directories: 3152
+Regular files: 14637 Symbolic links:
+Junctions:
+Special files:
+Total space for regular files: 147MiB Total space for directories: 0 Total space used: 147MiB
+Dedupe estimate: N/A Sparse data: N/A
+xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol
+17,789 scanned, 0 matched, 0 errors Total Time : 40s
+STATUS : PASSED
+----
+====

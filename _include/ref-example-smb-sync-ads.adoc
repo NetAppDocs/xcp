@@ -1,0 +1,31 @@
+.Show example
+[%collapsible]
+====
+----
+C:\netapp\xcp>xcp sync -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share XCP SMB <version> (c) 2023 NetApp, Inc.; Licensed to xxx until xx yyyy
+
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	5s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	10s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	15s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	20s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	25s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	30s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	1m0s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	2m50s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	2m55s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	3m0s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	3m55s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	4m0s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	4m55s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	5m0s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	5m5s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	5m10s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	5m55s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	6m0s, 1 ads copied
+13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	6m5s, 1 ads copied
+xcp sync -ads \\<source_IP_address>\source_share\src \\<dest_IP_addess>\dest_share
+13 scanned, 1 copied, 13 compared, 0 skipped, 0 removed, 0 errors, 1 ads copied 
+Total Time : 6m9s
+STATUS : PASSED
+----
+====

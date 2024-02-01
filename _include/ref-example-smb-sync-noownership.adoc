@@ -1,0 +1,24 @@
+.Show example
+[%collapsible]
+====
+----
+>xcp sync -noownership \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 2029
+      Truncated Output 
+302,909 scanned,    301,365 compared,	0	errors,	0	skipped,	0	copied,	0	removed, 9m46s
+307,632	scanned,	303,530	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 9m51s
+308,434	scanned,	305,462	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 9m56s
+310,824	scanned,	307,328	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 10m1s
+313,238	scanned,	310,083	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 10m6s
+314,867	scanned,	313,407	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 10m11s
+318,277	scanned,	315,856	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 10m17s
+321,005	scanned,	318,384	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 10m22s
+322,189	scanned,	321,863	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 10m27s
+323,906	scanned,	323,906	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 10m29s
+
+xcp sync -noownership \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
+323,906 scanned, 0 copied, 323,906 compared, 0 removed, 0 errors 
+Total Time : 10m29s
+STATUS : PASSED   
+----
+====

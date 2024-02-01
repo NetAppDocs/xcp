@@ -1,0 +1,16 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp copy -v \\<IP address of SMB destination server>\src \\<IP address of SMB destination server>\dest\d 1
+XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
+failed to set attributes for "d1": (5, 'CreateDirectory', 'Access is denied.') failed to copy "f1.txt": (5, 'CreateFile', 'Access is denied.')
+failed to set attributes for "": (5, 'SetFileAttributesW', 'Access is denied.') error setting timestamps on "": errno (code: 5) Access is denied.
+H:\p 4\xcp_latest\xcp_cifs\xcp\ main .py copy -v \\<IP address of SMB destination server>\src
+\\<IP address of SMB destination server>\dest\d 1
+3 scanned, 0 matched, 0 skipped, 1 copied, 0 (0/s), 3 
+errors Total Time : 3s
+STATUS : FAILED
+----
+====

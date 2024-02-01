@@ -1,0 +1,35 @@
+.Show example
+[%collapsible]
+====
+----
+C:\xcp>xcp sync -acl -fallback-user "DOMAIN\gabi" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\performance_SMB_home_dirs \\<IP address of SMB destination server>\performance_SMB_home_dirs
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 2029
+10,796	scanned,	4,002	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	s
+15,796	scanned,	8,038	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	0s
+15,796	scanned,	8,505	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	5s
+15,796	scanned,	8,707	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	0s
+15,796	scanned,	8,730	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	5s
+15,796	scanned,	8,749	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	0s
+15,796	scanned,	8,765	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	5s
+15,796	scanned,	8,786	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	0s
+15,796	scanned,	8,956	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	5s
+15,796	scanned,	9,320	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	0s
+15,796	scanned,	9,339	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	5s
+15,796	scanned,	9,363	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	m0s
+15,796	scanned,	10,019	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m5s
+15,796	scanned,	10,042	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m10s
+15,796	scanned,	10,059	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m15s
+15,796	scanned,	10,075	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m20s
+15,796	scanned,	10,091	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m25s
+15,796	scanned,	10,108	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m30s
+15,796	scanned,	10,929	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m35s
+15,796	scanned,	12,443	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m40s
+15,796	scanned,	13,963	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m45s
+15,796	scanned,	15,488	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m50s
+15,796	scanned,	15,796	compared,	0	errors,	0	skipped,     0	copied	0	removed,	1m51s
+
+xcp sync --acl -fallback-user "DOMAIN\gabi" -fallback-group "DOMAIN\Group 15,796 scanned, 0 copied, 15,796 compared, 0 removed, 0 errors
+Total Time : 1m51
+STATUS : PASSED
+----
+====

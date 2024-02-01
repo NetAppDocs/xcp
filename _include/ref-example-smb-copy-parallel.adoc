@@ -1,0 +1,13 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp copy -parallel 7	\\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp copy -parallel 7	\\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
+xcp copy -parallel 7 \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+317 scanned, 0 matched, 316 copied, 0errors Total Time : 2s
+STATUS : PASSED
+----
+====

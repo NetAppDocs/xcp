@@ -1,0 +1,24 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp copy -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share 
+XCP SMB Nightly_dev; (c) 2023 NetApp, Inc.; Licensed to xxx [Network Appliance, Inc] until xxx yyyy
+
+6   scanned, 0 matched, 0 skipped, 3 copied, 13 (2.41/s), 0 errors, 5s, 10 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	10s, 11 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	15s, 12 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	20s, 13 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	25s, 13 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	30s, 13 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	35s, 13 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	40s, 13 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	45s, 13 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	2m15s, 13 ads copied
+6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	3m5s, 13 ads copied
+xcp copy -ads \\<source_IP_address>\source_share\src \\<desination_IP_address>\dest_share
+6 scanned, 0 matched, 0 skipped, 5 copied, 26 (0.137/s), 0 errors, 14 ads copied 
+Total Time : 3m9s
+STATUS : PASSED
+----
+====

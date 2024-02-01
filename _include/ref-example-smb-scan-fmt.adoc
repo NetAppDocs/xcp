@@ -1,0 +1,38 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))"	\\<IP address or hostname of SMB server>\copy_share2
+xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))"	\\<IP address or hostname of SMB server>\copy_share2
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
+copy_share2\ASUP.pm, ASUP.pm, 199239, 1
+copy_share2\ASUP_REST.pm, ASUP_REST.pm, 35506, 1
+copy_share2\Allflavors_v2.pm, Allflavors_v2.pm, 4204, 1
+copy_share2\Armadillo.pm, Armadillo.pm, 39024, 1
+copy_share2\AsupExtractor.pm, AsupExtractor.pm, 3924, 1
+copy_share2\BTS_Config.pm, BTS_Config.pm, 71777, 1
+copy_share2\Backup.pm, Backup.pm, 2714, 1
+copy_share2\Aggregate.pm, Aggregate.pm, 61699, 1
+copy_share2\Burt.pm, Burt.pm, 37780, 1
+copy_share2\CConfig.pm, CConfig.pm, 9195, 1
+copy_share2\CIFS.pm, CIFS.pm, 19779, 1
+copy_share2\CR.pm, CR.pm, 21215, 1
+copy_share2\CRC.pm, CRC.pm, 2337, 1
+copy_share2\agnostic\LunCmds.pm, LunCmds.pm, 30962, 2
+copy_share2\agnostic\ProtocolAccess.pm, ProtocolAccess.pm, 41868, 2
+copy_share2\agnostic\Qtree.pm, Qtree.pm, 16057,2
+copy_share2\agnostic\Quota.pm, Quota.pm, 30018,2
+copy_share2\agnostic\RbacCmdFetcher.pm, RbacCmdFetcher.pm, 14067, 2
+copy_share2\agnostic\RbacCmdFetcher_ReadMe, RbacCmdFetcher_ReadMe, 5685, 2
+copy_share2\agnostic\SFXOD.pm, SFXOD.pm, 4019, 2
+copy_share2\agnostic\Snapmirror.pm, Snapmirror.pm, 36624, 2
+copy_share2\agnostic\VolEfficiency.pm, VolEfficiency.pm, 41344, 2
+copy_share2\agnostic\flatfile.txt, flatfile.txt, 6366, 2
+copy_share2\agnostic, agnostic, 0, 1
+copy_share2, , 0, 0
+xcp scan -fmt ', '.join(map(str, [relpath, name, size, depth])) \\<IP address or hostname of SMB server>\copy_share2
+317 scanned, 0 matched, 0 errors Total Time : 0s
+STATUS : PASSED
+----
+====
