@@ -170,7 +170,7 @@ Use the `-s3.insecure` parameter with the `copy` command to use HTTP instead of 
 [source,cli]
 xcp copy -s3.insecure s3://<bucket_name>
 
-include::../_include/ref-example-nfs-copy-s3-insecure.adoc[]=
+include::../_include/ref-example-nfs-copy-s3-insecure.adoc[]
 
 [[copy_s3_endpoint]]
 == copy -s3.endpoint <s3_endpoint_url>

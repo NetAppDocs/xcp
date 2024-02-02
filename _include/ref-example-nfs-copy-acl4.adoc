@@ -1,6 +1,7 @@
 .Show example
 [%collapsible]
 ====
+----
 [root@localhost /]# ./xcp copy -acl4 <IP address or hostname of NFS server>:/source_vol <IP
 address of destination NFS server>:/dest_vol
 
