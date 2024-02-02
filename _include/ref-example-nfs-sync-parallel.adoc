@@ -1,6 +1,7 @@
 .Show example
 [%collapsible]
 ====
+----
 [root@localhost /]# ./xcp sync -id ID001 -parallel 4
 
 xcp: Index: {source: <IP address or hostname of NFS server>:/source_vol, target: <IP address of
@@ -10,4 +11,5 @@ Xcp command : xcp sync -id ID001 -parallel 4
 Speed : 25.3 KiB in (20.6 KiB/s), 21.0 KiB out (17.1 KiB/s)
 Total Time : 1s.
 STATUS : PASSED
+----
 ====

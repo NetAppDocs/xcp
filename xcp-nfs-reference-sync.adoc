@@ -186,7 +186,7 @@ Use the the `-nonames` parameter with `sync dry-run` to exclude user and group n
 [source,cli]
 xcp sync dry-run -id <catalog_name> -nonames 
 
-include::../_include/ref-example-nfs-sync-dry-run-id.adoc[]
+include::../_include/ref-example-nfs-sync-dry-run-noname.adoc[]
 
 
 [[sync_dry_run_dircount]]
