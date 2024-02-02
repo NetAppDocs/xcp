@@ -1,0 +1,39 @@
+.Show example
+[%collapsible]
+====
+----
+root@client1 linux]# ./xcp copy -s3.profile sg -s3.endpoint https://<endpoint_url>:hdfs:///user/test s3://bucket
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_copy_2023-06-
+08_09.03.52.437118
+Job ID: Job_XCP_copy_2023-06-08_09.03.52.437118_copy
+1 scanned, 9.55 KiB in (1.89 KiB/s), 12.4 KiB out (2.46 KiB/s), 5s
+8 scanned, 0 in (-1945.053/s), 0 out (-2524.989/s), 10s
+Xcp command : xcp copy -s3.profile sg -s3.endpoint https://<endpoint_url>: hdfs:///user/test
+s3://bucket
+Stats : 8 scanned, 5 copied, 8 indexed, 5 KiB s3.data.uploaded, 5
+s3.copied.single.key.file, 5 s3.copied.file
+Speed : 6.78 KiB in (639/s), 83.6 KiB out (7.69 KiB/s)
+Total Time : 10s.
+Migration ID: XCP_copy_2023-06-08_09.03.52.437118
+Job ID : Job_XCP_copy_2023-06-08_09.03.52.437118_copy
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2023-06-08_09.03.52.437118_copy.log
+STATUS : PASSED
+[root@client1 linux]# ./xcp copy -s3.profile sg -s3.endpoint https//<endpoint_url> hdfs:///user/demo s3://bucket
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_copy_2023-06-
+08_09.18.48.105804
+Job ID: Job_XCP_copy_2023-06-08_09.18.48.105804_copy
+1 scanned, 9.95 KiB in (1.98 KiB/s), 12.8 KiB out (2.55 KiB/s), 5s
+Xcp command : xcp copy -s3.profile sg -s3.endpoint https://<endpoint_url> hdfs:///user/demo
+s3://bucket
+Stats : 8 scanned, 5 copied, 8 indexed, 5 KiB s3.data.uploaded, 5
+s3.copied.single.key.file, 5 s3.copied.file
+Speed : 10.4 KiB in (1.58 KiB/s), 85.6 KiB out (13.0 KiB/s)
+Total Time : 6s.
+Migration ID: XCP_copy_2023-06-08_09.18.48.105804
+Job ID : Job_XCP_copy_2023-06-08_09.18.48.105804_copy
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2023-06-08_09.18.48.105804_copy.log
+STATUS : PASSED
+----
+====

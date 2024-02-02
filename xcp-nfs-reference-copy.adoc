@@ -27,11 +27,7 @@ The `copy` command requires having source and destination paths as variables. Th
 [source,cli]
 xcp copy <source_nfs_export_path> <destination_nfs_export_path>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy.adoc[]
 
 The following table lists the `copy` parameters and their description.
 
@@ -64,11 +60,7 @@ Use the `-nonames` parameter with the `copy` command to exclude user and group n
 [source,cli]
 xcp copy -nonames <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-nonames.adoc[]
 
 [[copy_match]]
 == copy -match <filter>
@@ -80,11 +72,7 @@ Use the `-match <filter>` parameter with the `copy` command to specify that only
 [source,cli]
 xcp copy -match <filter> <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-match.adoc[]
 
 [[copy_md5]]
 == copy -md5 <string_expression>
@@ -96,11 +84,7 @@ Use the `-md5` parameter with the `copy` command to generate checksums for the f
 [source,cli]
 xcp copy -md5 <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-md5.adoc[]
 
 [[copy_dircount]]
 == copy -dircount <n[k]>
@@ -112,11 +96,7 @@ Use the `-dircount <n[k]>` parameter with the `copy` command to specify the requ
 [source,cli]
 xcp copy -dircount <n[k]> <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-dircount.adoc[]
 
 [[copy_edupe]]
 == copy -edupe
@@ -128,11 +108,7 @@ Use the `-edupe` parameter with the `copy` command to include the deduplication 
 [source,cli]
 xcp copy -edupe <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-edupe.adoc[]
 
 [[copy_bs]]
 == copy -bs <n[k]>
@@ -144,11 +120,7 @@ Use the `-bs <n[k]>` parameter with the `copy` command to specify the read/write
 [source,cli]
 xcp copy -bs <n[k]> <ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-bs.adoc[]
 
 [[copy_parallel]]
 == copy -parallel <n> 
@@ -160,11 +132,7 @@ Use the `-parallel <n>` parameter with the `copy` command to specify the maximum
 [source,cli]
 xcp copy -parallel <n> <ip_address_or_hostname>:/source_vol destination_ip_address_or_hostname:/<dest_vol>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-parallel.adoc[]
 
 [[copy_acl4]]
 == copy -acl4
@@ -176,11 +144,7 @@ Use the `-acl4` parameter with the `copy` command to process NFSv4 ACLs.
 [source,cli]
 xcp copy -acl4 <ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-acl4.adoc[]
 
 [[copy_preserve_atime]]
 == copy -preserve-atime
@@ -194,11 +158,7 @@ The `-preserve-atime` option resets the access time to the original value set be
 [source,cli]
 xcp copy -preserve-atime <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-preserveatime.adoc[]
 
 [[copy_s3_insecure]]
 == copy -s3.insecure
@@ -210,11 +170,7 @@ Use the `-s3.insecure` parameter with the `copy` command to use HTTP instead of 
 [source,cli]
 xcp copy -s3.insecure s3://<bucket_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-s3-insecure.adoc[]=
 
 [[copy_s3_endpoint]]
 == copy -s3.endpoint <s3_endpoint_url>
@@ -226,11 +182,7 @@ Use the `-s3.endpoint <s3_endpoint_url>` parameter with the `copy` command to ov
 [source,cli]
 xcp copy -s3.endpoint https://<endpoint_url>: s3://<bucket_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-s3-endpoint.adoc[]
 
 [[copy_s3_profile]]
 == copy -s3.profile <name>
@@ -242,11 +194,7 @@ Use the `s3.profile` parameter with the `copy` command to specify a profile from
 [source,cli]
 xcp copy -s3.profile <name> -s3.endpoint https://<endpoint_url>: s3://<bucket_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-s3-endpoint.adoc[]
 
 [[copy_s3_noverify]]
 == copy -s3.noverify
@@ -258,9 +206,5 @@ Use the `-s3.noverify` parameter with the `copy` command to override the default
 [source,cli]
 xcp copy -s3.noverify s3://<bucket_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-copy-s3-noverify.adoc[]
 
