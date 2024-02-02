@@ -21,13 +21,13 @@ The XCP NFS `sync` command scans for changes and modifications a source NFS dire
 
 NOTE: During the sync operation, modified files and directories are copied to the destination NFSv3 export again.
 
+[[sync_id]]
 .Syntax
 [source,cli]
 xcp sync -id <catalog_name>
 
 IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync` command.
 
-[[sync_id]]
 include::../_include/ref-example-nfs-sync.adoc[]
 
 The following table lists the `sync` parameters and their description.
@@ -134,11 +134,11 @@ new.
 | <<sync_dry_run_l, sync dry-run -l>> | Prints details about files and directories that changed.
 | <<sync_dry_run_nonames, sync dry-run -nonames>> | Excludes user and group names for file listings and reports.
 | <<sync_dry_run_dircount, sync dry-run -dircount <n[k]> >> | Specifies the request size when reading directories.
-| <<sync__dry_run_parallel, sync dry-run -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
+| <<sync_dry_run_parallel, sync dry-run -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
 
 |===
 
-[[sync_dry_run_stats]]
+[[sync_dry_run_id]]
 === sync dry-run -id <catalog_name>
 
 Use the the `-id <catalog_name>` parameter with `sync dry-run` to specify the catalog name of a previous copy index.

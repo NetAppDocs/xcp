@@ -57,7 +57,7 @@ include::../_include/ref-example-nfs-resume-bs.adoc[]
 [[resume_dircount]]
 == resume -dircount <n[k]>
 
-Use the`-dircount <n[k]>` parameter with the `resume` command to  specify the request size when reading directories. The default value is 64k.
+Use the `-dircount <n[k]>` parameter with the `resume` command to  specify the request size when reading directories. The default value is 64k.
 
 .Syntax
 
