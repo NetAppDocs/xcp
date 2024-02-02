@@ -1,0 +1,64 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp scan -noId <IP address or hostname of NFS server>:/source_vol
+
+source_vol
+source_vol/USER.1/FILE_1
+source_vol/USER.1/FILE_2
+source_vol/USER.1/FILE_3
+source_vol/USER.1/FILE_4
+source_vol/USER.1/FILE_5
+source_vol/USER.1/file1.txt
+source_vol/USER.1/file2.txt
+source_vol/USER.1/logfile.txt
+source_vol/USER.1/log1.txt
+source_vol/r1.txt
+source_vol/USER.1
+source_vol/USER.2
+source_vol/USER.2/FILE_1
+source_vol/USER.2/FILE_5
+source_vol/USER.2/FILE_2
+source_vol/USER.2/FILE_3
+source_vol/USER.2/FILE_4
+Xcp command : xcp scan -noId <IP address or hostname of NFSserver>:/source_vol
+18 scanned, 0 matched, 0 error
+Speed : 4.59 KiB in (5.84 KiB/s), 756 out(963/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@localhost /]# ./xcp scan -subdir-names <IP address or hostname of NFS server>:/source_vol
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+source_vol
+Xcp command : xcp scan -subdir-names <IP address or hostname of NFS server>:/source_vol
+7 scanned, 0 matched, 0 error
+Speed : 1.30 KiB in (1.21 KiB/s), 444 out(414/s)
+Total Time : 1s.
+STATUS : PASSED
+[root@localhost /]# ./xcp scan -acl4 <IP address or hostname of NFS server>:/source_vol
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+source_vol
+source_vol/USER.1/FILE_1
+source_vol/USER.1/FILE_2
+source_vol/USER.1/FILE_3
+source_vol/USER.1/FILE_4
+source_vol/USER.1/FILE_5
+source_vol/USER.1/file1.txt
+source_vol/USER.1/file2.txt
+source_vol/USER.1/logfile.txt
+source_vol/USER.1/log1.txt
+source_vol/r1.txt
+source_vol/USER.1
+source_vol/USER.2
+source_vol/USER.2/FILE_1
+source_vol/USER.2/FILE_5
+source_vol/USER.2/FILE_2
+source_vol/USER.2/FILE_3
+source_vol/USER.2/FILE_4
+Xcp command : xcp scan -acl4 <IP address or hostname of NFSserver>:/source_vol
+18 scanned, 0 matched, 0 error
+Speed : 4.59 KiB in (9.12 KiB/s), 756 out (1.47 KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+----
+====

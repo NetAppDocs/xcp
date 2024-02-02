@@ -1,0 +1,51 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp scan -fmt "'{}, {}, {}, {}, {}'.format(name, x, ctime, atime, mtime)"
+<IP address or hostname of NFS server>:/source_vol
+
+source_vol, <IP address or hostname of NFS server>:/source_vol, 1583294484.46, 1583294492.63,
+1583294484.46
+ILE_1, <IP address or hostname of NFS server>:/source_vol/USER.1/FILE_1, 1583293637.88,
+1583293637.83, 1583293637.83
+FILE_2, <IP address or hostname of NFS server>:/source_vol/USER.1/FILE_2, 1583293637.88,
+1583293637.83, 1583293637.84
+FILE_3, <IP address or hostname of NFS server>:/source_vol/USER.1/FILE_3, 1583293637.88,
+1583293637.84, 1583293637.84
+FILE_4, <IP address or hostname of NFS server>:/source_vol/USER.1/FILE_4, 1583293637.88,
+1583293637.84, 1583293637.84
+FILE_5, <IP address or hostname of NFS server>:/source_vol/USER.1/FILE_5, 1583293637.88,
+1583293637.84, 1583293637.84
+file1.txt, <IP address or hostname of NFS server>:/source_vol/USER.1/file1.txt, 1583294284.78,
+1583294284.78, 1583294284.78
+file2.txt, <IP address or hostname of NFS server>:/source_vol/USER.1/file2.txt, 1583294284.78,
+1583294284.78, 1583294284.78
+logfile.txt, <IP address or hostname of NFS server>:/source_vol/USER.1/logfile.txt,
+1583294295.79, 1583294295.79, 1583294295.79
+log1.txt, <IP address or hostname of NFS server>:/source_vol/USER.1/log1.txt, 1583294295.8,
+1583294295.8, 1583294295.8
+r1.txt, <IP address or hostname of NFS server>:/source_vol/r1.txt, 1583294484.46, 1583294484.45,
+1583294484.45
+USER.1, <IP address or hostname of NFS server>:/source_vol/USER.1, 1583294295.8, 1583294492.63,
+1583294295.8
+USER.2, <IP address or hostname of NFS server>:/source_vol/USER.2, 1583293637.95, 1583294492.63,
+1583293637.95
+FILE_1, <IP address or hostname of NFS server>:/source_vol/USER.2/FILE_1, 1583293637.95,
+1583293637.94, 1583293637.94
+FILE_5, <IP address or hostname of NFS server>:/source_vol/USER.2/FILE_5, 1583293637.96,
+1583293637.94, 1583293637.94
+FILE_2, <IP address or hostname of NFS server>:/source_vol/USER.2/FILE_2, 1583293637.96,
+1583293637.95, 1583293637.95
+FILE_3, <IP address or hostname of NFS server>:/source_vol/USER.2/FILE_3, 1583293637.96,
+1583293637.95, 1583293637.95
+FILE_4, <IP address or hostname of NFS server>:/source_vol/USER.2/FILE_4, 1583293637.96,
+1583293637.95, 1583293637.96
+Xcp command : xcp scan -fmt '{}, {}, {}, {}, {}'.format(name, x, ctime, atime, mtime) <IP address
+or hostname of NFS server>:/source_vol
+18 scanned, 0 matched, 0 error
+Speed : 4.59 KiB in (4.14 KiB/s), 756 out (683/s)
+Total Time : 1s.
+STATUS : PASSED
+----
+====

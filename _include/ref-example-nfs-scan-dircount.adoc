@@ -1,0 +1,23 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp scan -dircount 64k <IP address or hostname of NFS server>:/source_vol
+
+source_vol
+source_vol/USER.1/FILE_1
+source_vol/USER.1/FILE_2
+source_vol/USER.1/FILE_3
+source_vol/USER.1/FILE_4
+source_vol/USER.1/FILE_5
+source_vol/USER.1/file1.txt
+source_vol/USER.1/file2.txt
+source_vol/USER.1/logfile.txt
+source_vol/USER.1/log1.txt
+source_vol/r1.txt
+source_vol/USER.1
+source_vol/USER.2
+source_vol/USER.2/FILE_1
+source_vol/USER.2/FILE_5
+----
+====

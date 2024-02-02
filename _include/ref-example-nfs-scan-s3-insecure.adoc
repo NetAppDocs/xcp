@@ -1,0 +1,22 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp scan -s3.insecure s3://bucket1
+XCP <version>; (c) 2023 NetApp, Inc.; Licensed to xxx[Network Appliance, Inc] until xxx yyyy
+Job ID: Job_2023-06-08_08.16.31.345201_scan
+file5g_1
+USER1/FILE_USER1_1024_1
+USER1/FILE_USER1_1024_2
+USER1/FILE_USER1_1024_3
+USER1/FILE_USER1_1024_4
+USER1/FILE_USER1_1024_5
+Xcp command : xcp scan -s3.insecure s3:// -bucket1
+Stats : 8 scanned, 6 s3.objects
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 2s.
+Job ID : Job_2023-06-08_08.16.31.345201_scan
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-08_08.16.31.345201_scan.log
+STATUS : PASSED
+----
+====

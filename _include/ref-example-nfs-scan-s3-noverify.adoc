@@ -1,0 +1,21 @@
+.Show example
+[%collapsible]
+====
+----
+root@client1 linux]# ./xcp scan -s3.noverify s3:// bucket1
+
+Job ID: Job_2023-06-13_11.00.59.742237_scan
+aws_files/USER1/FILE_USER1_1024_1
+aws_files/USER1/FILE_USER1_1024_2
+aws_files/USER1/FILE_USER1_1024_3
+aws_files/USER1/FILE_USER1_1024_4
+aws_files/USER1/FILE_USER1_1024_5
+Xcp command : xcp scan -s3.noverify s3://bucket1
+Stats : 8 scanned, 5 s3.objects
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 2s.
+Job ID : Job_2023-06-13_11.00.59.742237_scan
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_11.00.59.742237_scan.log
+STATUS : PASSED
+----
+====

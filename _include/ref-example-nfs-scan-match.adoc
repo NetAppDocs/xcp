@@ -1,0 +1,32 @@
+.Show example
+[%collapsible]
+====
+----
+root@localhost /]# ./xcp scan -match bin <IP address or hostname of NFS server>:/source_vol
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+source_vol
+source_vol/USER.1/FILE_1
+source_vol/USER.1/FILE_2
+source_vol/USER.1/FILE_3
+source_vol/USER.1/FILE_4
+source_vol/USER.1/FILE_5
+source_vol/USER.1/file1.txt
+source_vol/USER.1/file2.txt
+source_vol/USER.1/logfile.txt
+source_vol/USER.1/log1.txt
+source_vol/r1.txt
+source_vol/USER.1
+source_vol/USER.2
+source_vol/USER.2/FILE_1
+source_vol/USER.2/FILE_5
+source_vol/USER.2/FILE_2
+source_vol/USER.2/FILE_3
+source_vol/USER.2/FILE_4
+Filtered: 0 did not match
+Xcp command : xcp scan -match bin <IP address or hostname of NFSserver>:/source_vol
+18 scanned, 18 matched, 0 error
+Speed : 4.59 KiB in (6.94 KiB/s), 756 out (1.12KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+----
+====
