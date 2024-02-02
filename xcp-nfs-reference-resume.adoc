@@ -22,11 +22,7 @@ xcp resume -id <catalog_name>
 
 IMPORTANT: The `-id <catalog_name>` parameter is required with the `resume` command.
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume.adoc[]
 
 The following table lists the `resume` parameters and their description.
 
@@ -56,11 +52,7 @@ Use the `-bs <n[k]>` parameter with the `resume` command to specify the read/wri
 [source,cli]
 xcp resume -id <catalog_name> -bs <n[k]> 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-bs.adoc[]
 
 [[resume_dircount]]
 == resume -dircount <n[k]>
@@ -72,11 +64,7 @@ Use the`-dircount <n[k]>` parameter with the `resume` command to  specify the re
 [source,cli]
 xcp resume -id <catalog_name> -dircount <n[k]> 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-dircount.adoc[]
 
 [[resume_parallel]]
 == resume -parallel <n> 
@@ -88,11 +76,7 @@ Use the `- parallel <n>` parameter with the `resume` command to specify the maxi
 [source,cli]
 xcp resume -id <catalog_name> -parallel <n> 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-parallel.adoc[]
 
 [[resume_preseve_atime]]
 == resume -preserve-atime
@@ -106,11 +90,7 @@ The `-preserve-atime` parameter resets the access time to the original value set
 [source,cli]
 xcp resume -id <catalog_name> -preserve-atime 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-preserveatime.adoc[]
 
 [[resume_s3_insecure]]
 == resume -s3.insecure
@@ -124,11 +104,7 @@ NOTE: If the `-s3.insecure` parameter is used with the `copy` command, it is ign
 [source,cli]
 xcp resume -s3.insecure -id <catalog_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-s3-insecure.adoc[]
 
 [[resume_s3_endpoint]]
 == resume -s3.endpoint <s3_endpoint_url>
@@ -142,11 +118,7 @@ NOTE: By default, resume uses the S3 profile and S3 endpoint specified during th
 [source,cli]
 xcp resume -s3.profile <profile_name> -s3.endpoint https://<endpoint_url>: -id <catalog_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-s3-endpoint.adoc[]
 
 [[resume_s3_profile]]
 == resume s3.profile <profile_name>
@@ -160,11 +132,7 @@ NOTE: By default, resume uses the S3 profile and S3 endpoint specified during th
 [source,cli]
 xcp resume -s3.profile <name> -s3.endpoint -id <catalog_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-s3-profile.adoc[]
 
 [[resume_s3_noverify]]
 == resume -s3.noverify 
@@ -176,9 +144,5 @@ Use the `-s3.noverify` parameter with the `resume` command to override the defau
 [source,cli]
 xcp resume -s3.noverify -id <catalog_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-resume-s3-noverify.adoc[]
 

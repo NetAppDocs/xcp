@@ -1,0 +1,23 @@
+.Show example
+[%collapsible]
+====
+----
+root@client1 linux]# ./xcp resume -preserve-atime -id XCP_copy_2022-06-30_14.22.53.742272 
+
+xcp: Job ID: Job_XCP_copy_2022-06-30_14.22.53.742272_2022-06-30_14.37.07.746208_resume
+xcp: Index: {source: 101.10.10.12:/source_vol, target: 10.102.102.70:/dest_vol}
+xcp: Tune: Previous operation on id 'XCP_copy_2022-06-30_14.22.53.742272' already completed;
+nothing to resume
+0 in (0/s), 0 out (0/s), 6s
+Xcp command : xcp resume -preserve-atime -id XCP_copy_2022-06-30_14.22.53.742272
+Stats :
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 6s.
+Migration ID: XCP_copy_2022-06-30_14.22.53.742272
+Job ID : Job_XCP_copy_2022-06-30_14.22.53.742272_2022-06-30_14.37.07.746208_resume
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2022-06-30_14.22.53.742272_2022-06-
+30_14.37.07.746208_resume.log
+STATUS : PASSED
+[root@client1 linux]#
+----
+====
