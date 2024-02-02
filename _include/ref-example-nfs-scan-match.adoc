@@ -3,7 +3,7 @@
 ====
 ----
 root@localhost /]# ./xcp scan -match bin <IP address or hostname of NFS server>:/source_vol
-XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
 source_vol
 source_vol/USER.1/FILE_1
 source_vol/USER.1/FILE_2

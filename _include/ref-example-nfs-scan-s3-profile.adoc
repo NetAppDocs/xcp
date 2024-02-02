@@ -1,6 +1,7 @@
 .Show example
 [%collapsible]
 ====
+----
 [root@client1 linux]# ./xcp scan -s3.profile sg -s3.endpoint https://<endpoint_url>:
 s3://bucket1
 
@@ -19,4 +20,5 @@ Job ID : Job_2023-06-08_08.47.11.963479_scan
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-08_08.47.11.963479_scan.log
 STATUS : PASSED
 [root@client1 linux]#
+----
 ====
