@@ -1,0 +1,19 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp sync dry-run -id ID001 -stats
+
+xcp: Index: {source: <IP address or hostname of NFS server>:/source_vol, target: <IP address of
+destination NFS server>:/dest_vol}
+4,895 reviewed, 43,163 checked at source, 12.8 MiB in (2.54 MiB/s), 5.49 MiB out (1.09 MiB/s),
+5s
+4,895 reviewed, 101,396 checked at source, 19.2 MiB in (1.29 MiB/s), 12.8 MiB out (1.47 MiB/s),
+10s
+Xcp command : xcp sync dry-run -id ID001 -stats
+0 matched, 0 error
+Speed : 22.9 MiB in (1.74 MiB/s), 17.0 MiB out (1.29 MiB/s)
+Total Time : 13s.
+STATUS : PASSED
+----
+====

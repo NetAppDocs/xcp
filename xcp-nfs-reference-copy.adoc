@@ -72,7 +72,7 @@ Use the `-match <filter>` parameter with the `copy` command to specify that only
 [source,cli]
 xcp copy -match <filter> <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-include::../_include/ref-example-nfs-match.adoc[]
+include::../_include/ref-example-nfs-copy-match.adoc[]
 
 [[copy_md5]]
 == copy -md5 <string_expression>
@@ -84,7 +84,7 @@ Use the `-md5` parameter with the `copy` command to generate checksums for the f
 [source,cli]
 xcp copy -md5 <source_ip_address_or_hostname>:/source_vol <destination_ip_address_or_hostname>:/dest_vol
 
-include::../_include/ref-example-nfs-md5.adoc[]
+include::../_include/ref-example-nfs-copy-md5.adoc[]
 
 [[copy_dircount]]
 == copy -dircount <n[k]>

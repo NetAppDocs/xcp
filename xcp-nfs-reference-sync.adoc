@@ -28,11 +28,7 @@ xcp sync -id <catalog_name>
 IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync` command.
 
 [[sync_id]]
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync.adoc[]
 
 The following table lists the `sync` parameters and their description.
 
@@ -60,11 +56,7 @@ Use the the `-nonames` parameter with the `sync` command to exclude user and gro
 [source,cli]
 xcp sync -id <catalog_name> -nonames 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-nonames.adoc[]
 
 [[sync_bs]]
 === sync -bs <n[k]>
@@ -76,11 +68,8 @@ Use the the`-bs <n[k]>` parameter with the `sync` command to  specify the read/w
 [source,cli]
 xcp sync -id <catalog_name> -bs <n[k]>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-bs.adoc[]
+
 
 [[sync_dircount]]
 === sync -dircount <n[k]>
@@ -92,11 +81,7 @@ Use the the `-dircount <n[k]>` parameter with the `sync` command to specify the 
 [source,cli]
 xcp sync -id <catalog_name> -dircount <n[k]>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-dircount.adoc[]
 
 [[sync_parallel]]
 === sync -parallel 
@@ -108,11 +93,7 @@ Use the the `-parallel` parameter with the `sync` command to specify the maximum
 [source,cli]
 xcp sync -id <catalog_name> -parallel <n> 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-parallel.adoc[]
 
 [[sync_preserve_atime]]
 === -preserve-atime
@@ -126,11 +107,7 @@ The `-preserve-atime` option resets the access time to the original value set be
 [source,cli]
 xcp sync -preserve-atime -id <catalog_name>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-preserveatime.adoc[]
 
 == sync dry-run
 
@@ -143,12 +120,7 @@ xcp sync dry-run -id <catalog_name>
 
 IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync dry-run` command option.
 
-[[sync_dry_run_id]]
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-dry-run.adoc[]
 
 The following table lists the `sync dry-run` parameters and their description.
 
@@ -167,6 +139,20 @@ new.
 |===
 
 [[sync_dry_run_stats]]
+=== sync dry-run -id <catalog_name>
+
+Use the the `-id <catalog_name>` parameter with `sync dry-run` to specify the catalog name of a previous copy index.
+
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync dry-run` command option.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> 
+
+include::../_include/ref-example-nfs-sync-dry-run-id.adoc[]
+
+[[sync_dry_run_stats]]
 === sync dry-run -stats
 
 Use the the `-stats` parameter with `sync dry-run` to perform a deep scan of the modified directories and report everything that is new.
@@ -176,11 +162,7 @@ Use the the `-stats` parameter with `sync dry-run` to perform a deep scan of the
 [source,cli]
 xcp sync dry-run -id <catalog_name> -stats 
 
-.Show example
-[%collapsible]
-====
-<enter_>
-====
+include::../_include/ref-example-nfs-sync-dry-run-stats.adoc[]
 
 [[sync_dry_run_l]]
 === sync dry-run -l
@@ -192,11 +174,7 @@ Use the the `-l` parameter with `sync dry-run` to print details about files and 
 [source,cli]
 xcp sync dry-run -id <catalog_name> -l 
 
-.Show example
-[%collapsible]
-====
-<enter_>
-====
+include::../_include/ref-example-nfs-sync-dry-run-l.adoc[]
 
 [[sync_dry_run_nonames]]
 === sync dry-run -nonames
@@ -208,11 +186,7 @@ Use the the `-nonames` parameter with `sync dry-run` to exclude user and group n
 [source,cli]
 xcp sync dry-run -id <catalog_name> -nonames 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-dry-run-id.adoc[]
 
 
 [[sync_dry_run_dircount]]
@@ -225,11 +199,8 @@ Use the the `-dircount <n[k]>` parameter with `sync dry-run` to specify the requ
 [source,cli]
 xcp sync dry-run -id <catalog_name> -dircount <n[k]>
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-dry-run-dircount.adoc[]
+
 
 [[sync_dry_run_parallel]]
 === sync dry-run -parallel 
@@ -241,9 +212,5 @@ Use the the `-parallel` parameter with `sync dry-run` to specify the maximum num
 [source,cli]
 xcp sync dry-run -id <catalog_name> -parallel <n> 
 
-.Show example
-[%collapsible]
-====
-<enter_example>
-====
+include::../_include/ref-example-nfs-sync-dry-run-parallel.adoc[]
 
