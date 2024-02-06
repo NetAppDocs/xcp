@@ -21,7 +21,7 @@ xcp --help
 .Show example
 include::../_include/ref-example-smb-help.adoc[]
 
-== help <command>
+== "help <command>"
 
 Use <command> with `help` to display examples and option details for the specified <command>.
 

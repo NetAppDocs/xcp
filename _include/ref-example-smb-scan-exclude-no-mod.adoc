@@ -2,13 +2,22 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp scan -exclude "modified > 3*month and size > 5650" -fmt "'{}, {},
-{}'.format(iso(mtime), humanize_size(size), relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
-xcp scan -exclude "modified > 3*month and size > 5650" -fmt "'{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
+c:\netapp\xcp>xcp scan -exclude "modified > 3*month and size > 5650" -fmt "'{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
+xcp scan -exclude "modified > 3*month and size > 5650" -fmt "'{}, {}, {}'.format(iso(mtime), humanize_size(size) relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
 XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
-2013-03-07_15:44:53.713279, 4.31KiB, snapmirror\rsm_abort.thpl 2013-03-07_15:44:53.714269, 3.80KiB, snapmirror\rsm_break.thpl 2013-03-07_15:44:53.715270, 3.99KiB, snapmirror\rsm_init.thpl 2013-03-07_15:44:53.716268, 2.41KiB, snapmirror\rsm_quiesce.thpl 2013-03-07_15:44:53.717263, 2.70KiB, snapmirror\rsm_release.thpl 2013-03-07_15:44:53.718260, 4.06KiB, snapmirror\rsm_resume.thpl 2013-03-07_15:44:53.720256, 4.77KiB, snapmirror\rsm_resync.thpl 2013-03-07_15:44:53.721258, 3.83KiB, snapmirror\rsm_update.thpl 2013-03-07_15:44:53.724256, 4.74KiB, snapmirror\sm_quiesce.thpl 2013-03-07_15:44:53.725254, 4.03KiB, snapmirror\sm_resync.thpl
-2013-03-07_15:44:53.727249, 4.30KiB, snapmirror\sm_store_complete.thpl 2013-03-07_15:44:53.729250, 0, snapmirror
+2013-03-07_15:44:53.713279, 4.31KiB, snapmirror\rsm_abort.thpl 
+2013-03-07_15:44:53.714269, 3.80KiB, snapmirror\rsm_break.thpl 
+2013-03-07_15:44:53.715270, 3.99KiB, snapmirror\rsm_init.thpl 
+2013-03-07_15:44:53.716268, 2.41KiB, snapmirror\rsm_quiesce.thpl 
+2013-03-07_15:44:53.717263, 2.70KiB, snapmirror\rsm_release.thpl 
+2013-03-07_15:44:53.718260, 4.06KiB, snapmirror\rsm_resume.thpl 
+2013-03-07_15:44:53.720256, 4.77KiB, snapmirror\rsm_resync.thpl 
+2013-03-07_15:44:53.721258, 3.83KiB, snapmirror\rsm_update.thpl 
+2013-03-07_15:44:53.724256, 4.74KiB, snapmirror\sm_quiesce.thpl 
+2013-03-07_15:44:53.725254, 4.03KiB, snapmirror\sm_resync.thpl
+2013-03-07_15:44:53.727249, 4.30KiB, snapmirror\sm_store_complete.thpl 
+2013-03-07_15:44:53.729250, 0, snapmirror
 
 xcp scan -exclude modified > 3*month and size > 5650 -fmt '{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath) \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
 18 scanned, 6 excluded, 0 errors Total Time : 0s

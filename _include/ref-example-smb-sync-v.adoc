@@ -29,6 +29,7 @@ ERROR failed to remove from target "assembly\GAC_MSIL\System.IdentityModel.Selec
 "assembly\GAC_MSIL\System.Web.DataVisualization\v4.0_4.0.0.0 31bf3856ad364e35\System.Web.DataVis ualization.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination server>\\vol_c
 rget_xxxxxx\\assembly\\GAC_MSIL\\System.Web.DataVisualization\\v4.0_4.0.0.0 31bf3856ad364e35\\Sy stem.Web.DataVisualization.dll'
 cp sync -v \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx\warning \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
-2,831 scanned, 0 copied, 2,831 compared, 0 removed, 10 errors Total Time : 10s STATUS : PASSED
+2,831 scanned, 0 copied, 2,831 compared, 0 removed, 10 errors Total Time : 10s 
+STATUS : PASSED
 ----
 ====

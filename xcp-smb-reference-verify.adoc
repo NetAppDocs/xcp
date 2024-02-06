@@ -28,7 +28,7 @@ The following table lists the `verify` parameters and their description.
 | Parameter | Description
 
 | <<smb_verify_help, verify -h, --help>> | Show this help message and exit.
-| <<verify -v>> | Provide detailed debug information.
+| <<verify -v>> | Increase debug verbosity.
 | <<smb_verify_parallel, verify -parallel <n> >> | Number of concurrent processes (default: <cpu-count>).
 | <<smb_verify_match, verify -match <filter> >> | Only process files and directories that match the filter (see `xcp help - match` for details).
 | verify -exclude <filter> | Only exclude files and directories in the filter
@@ -39,7 +39,7 @@ The following table lists the `verify` parameters and their description.
 | <<verify -nomtime>> | Do not check file modification time.
 | <<verify -noattrs>> | Do not check attributes.
 | <<verify -noownership>> | Do not check ownership.
-| <<verify -ads>> | Use the `sync` command with the `-ads` flag to scan for changes and modifications of Alternate Data Streams in the source and target SMB share. If there are changes, it applies the change to the target to 
+| <<verify -ads>> | Use the `sync` command with the `-ads` flag to scan for changes and modifications of alternate data streams in the source and target SMB share. If there are changes, it applies the change to the target to 
 make sure that the target is identical to the source.
 | <<verify -noacls>> | Do not check ACLs.
 | <<verify_smb_atime, verify -atimewindow <float> >> | Acceptable access time difference, in seconds.
@@ -48,11 +48,9 @@ make sure that the target is identical to the source.
 | <<verify -stats>> | Scan source and target trees in parallel and compare tree statistics.
 | <<verify -l>> | Increases output detail.
 | <<verify -ll>> | Increases output detail (git diff format).
-| <<verify_smb_scan_acl,verify -fallback-user>> 
-FALLBACK_USER
+| <<verify_smb_acl, verify -fallback-user <fallback_user> >> 
 | Active Directory user or local(non-domain) user on the target machine to receive the permissions of local (non-domain) source machine users (example: domain\administrator).
-| <<verify_smb_scan_acl,verify -fallback-group>>
-FALLBACK_GROUP
+| <<verify_smb_acl, verify -fallback-group <fallback_group> >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | verify -root | Sync ACL for root directory.
 | <<verify -onlyacl>> | Copy only the security information.
@@ -80,7 +78,7 @@ xcp verify -v \\<IP address of SMB source server>\source_share address of SMB de
 .Show example
 include::../_include/ref-example-smb-verify-v.adoc[]
 
-<<smb_verify_parallel>>
+[[smb_verify_parallel]]
 ==  verify -parallel <n>
 Use the `-parallel <n>` parameter with the `verify` command to set a higher or lower number of XCP concurrent processes. The `verify -parallel <n>` command verifies with the number of concurrent processes (default: <cpu-count>).
 
@@ -99,13 +97,13 @@ Use the `-match <filter>` parameter with the `verify` command to scan the source
 
 .Syntax
 [source,cli]
-xcp verify -v -match <filter> \\<IP address of SMB source server>\source_share	\\<IP address of SMB destination server>\dest_share
+xcp verify -v -match <filter> \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::../_include/ref-example-smb-verify-match.adoc[]
 
 == verify -preserve-atime 
-Use the `-preserve-atime` parameter with the `verify` command to reset "atime" to the original value before XCP read the file.
+Use the `-preserve-atime` parameter with the `verify` command to reset `atime` to the original value before XCP read the file.
 
 .Syntax
 [source,cli]
@@ -125,14 +123,14 @@ xcp verify -nodata \\<IP address of SMB source server>\source_share \\<IP addres
 include::../_include/ref-example-smb-verify-nodata.adoc[]
 
 == verify -atime
-Use the `--atime` parameter with the `verify` command to compare file access time stamps from the source to destination.
+Use the `-atime` parameter with the `verify` command to compare file access time stamps from the source to destination.
 
 .Syntax
 [source,cli]
 xcp verify -ll -atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/<ref-example-smb-verify-atime>.adoc[]
+include::../_include/ref-example-smb-verify-atime.adoc[]
 
 == verify -noctime
 Use the `-noctime` parameter with the `verify` command to not compare file creation time stamps from the source to destination.
@@ -196,7 +194,7 @@ include::../_include/ref-example-smb-verify-noacls.adoc[]
 
 [[verify_smb_atime]]
 == verify -atimewindow <float>
-Use the `-atimewindow <float>` parameter with the `verify` command to specify the acceptable difference, in seconds, for the `atime` of a file from the source to the destination. XCP does not report files as being different if the difference in `atime` is less than the <value>. The `verify - atimewindow` command can only be used with the `-atime` flag.
+Use the `-atimewindow <float>` parameter with the `verify` command to specify the acceptable difference, in seconds, for the `atime` of a file from the source to the destination. XCP does not report files as being different if the difference in `atime` is less than <value>. The `verify - atimewindow` command can only be used with the `-atime` flag.
 
 .Syntax
 [source,cli]
@@ -207,7 +205,7 @@ include::../_include/ref-example-smb-verify-atimewindow.adoc[]
 
 [[verify_smb_ctime]]
 == verify -ctimewindow <float>
-Use the `-ctimewindow <float>` parameter with the `verify` command to specify the acceptable difference, in seconds, for the `ctime` of a file from the source to the destination. XCP does not report files as being different when the difference in `ctime` is less than the <value>.
+Use the `-ctimewindow <float>` parameter with the `verify` command to specify the acceptable difference, in seconds, for the `ctime` of a file from the source to the destination. XCP does not report files as being different when the difference in `ctime` is less than <value>.
 
 .Syntax
 [source,cli]
@@ -218,11 +216,11 @@ include::../_include/ref-example-smb-verify-ctimewindow.adoc[]
 
 [[verify_smb_mtime]]
 == verify -mtimewindow <float>
-Use the `-mtimewindow <float>` parameter with the `verify` command to specify the acceptable difference, in seconds, for the `mtime` of a file from the source to the destination. XCP does not report files as being different when the difference in `mtime` is less than the <value>.
+Use the `-mtimewindow <float>` parameter with the `verify` command to specify the acceptable difference, in seconds, for the `mtime` of a file from the source to the destination. XCP does not report files as being different when the difference in `mtime` is less than <value>.
 
 .Syntax
 [source,cli]
-xcp verify -mtimewindow <float> \\<IP address of SMB sourceserver>\source_share	\\<IP address of SMB destination server>\dest_share
+xcp verify -mtimewindow <float> \\<IP address of SMB sourceserver>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::../_include/ref-example-smb-verify-mtimewindow.adoc[]
@@ -260,37 +258,31 @@ xcp verify -ll \\<IP address of SMB source server>\source_share \\<IP address of
 .Show example
 include::../_include/ref-example-smb-verify-ll.adoc[]
 
-[[smb_verify_acl]]
+[[verify_smb_acl]]
 == -noacls, -fallback-user, and -fallback-group
 
 === -fallback-user and -fallback-group
 Use the `-fallback-user` and `-fallback-group` parameters with the `verify` command to list the ACL and ownership differences between files and directories on the source and destination.
 
-NOTE: If you use fallback-user and fallback-group with a copy or sync operation, NetApp recommends that you also use the fallback-user and fallback-group parameters with the verify operation.
+NOTE: If you use `fallback-user` and `fallback-group` with a copy or sync operation, NetApp recommends that you also use the `fallback-user` and `fallback-group` parameters with the verify operation.
 
 .Syntax
 [source,cli]
-xcp verify -fallback-user <user> -fallback-group <group> <source><target>
+xcp verify -fallback-user <fallback_user> -fallback-group <fallback_group> <source><target>
 
-For example, <user> is "Domain\User1" and <group> is "Domain\group1".
-
-=== -noownership -fallback-user -fallback-group
+=== -noownership, -fallback-user, and -fallback-group
 Use the `-noownership,` `-fallback-user`, and `-fallback-group` parameters with the `verify` command to list the ACL differences and skip verification of ownership between files and directories on the source and destination
 
 .Syntax
 [source,cli]
-xcp verify -noownership -fallback-user <user> -fallback-group <group> <source><target>
+xcp verify -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> <source><target>
 
-For example, <user> is "Domain\User1" and <group> is "Domain\group1".
-
-=== -noacls -fallback-user -fallback-group
+=== -noacls, -fallback-user, and -fallback-group
 Use the `-noacls`, `-fallback-user`, and `-fallback-group` parameters with the `verify` command to skip verification of ACLs and verify ownership between files and directories on the source and destination.
 
 .Syntax
 [source,cli]
-xcp verify -noacls -fallback-user <user>" -fallback-group <group><source><target>
-
-For example, <user> is "Domain\User1" and <group> is "Domain\group1".
+xcp verify -noacls -fallback-user <fallback_user>" -fallback-group <fallback_group><source><target>
 
 === -noacls -noownership
 <Missing description>
@@ -300,12 +292,12 @@ For example, <user> is "Domain\User1" and <group> is "Domain\group1".
 xcp verify -noacls -noownership <source> <target>
 
 == verify -onlyacl
-Use the `-onlyacl`, `-fallback-user <user>` and `-fallback-group <group>` parameter with the `sync` command to compare only 
+Use the `-onlyacl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare only 
 the security information between the source and destination.
 
 .Syntax
 [source,cli]
-xcp verify -onlyacl -preserve-atime -fallback-user <user> -fallback- group <group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+xcp verify -onlyacl -preserve-atime -fallback-user <fallback_user> -fallback- group <fallback_group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::../_include/ref-example-smb-verify-onlyacl.adoc[]

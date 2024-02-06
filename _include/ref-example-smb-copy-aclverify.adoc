@@ -3,21 +3,21 @@
 ====
 ----
 C:\NetApp\xcp>xcp copy -acl -aclverify yes -fallback-user SMBUSER11 -fallback-group SMBGRP1
-\\10.237.161.217\source_share \\10.237.161.237\dest_share
+\\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
 XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until Tue Apr 18 04:47:35 2023
 
 12 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 5s, 0 acls copied
 12 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 10s, 0 acls copied
-12 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 15s, 0 acls copied xcp copy -acl -aclverify yes -fallback-user SMBUSER11 -fallback-group SMBGRP1
-\\10.237.161.217\source_share \\10.237.161.237\dest_share
-12 scanned, 0 matched, 0 skipped, 11 copied, 10KiB (634/s), 0 errors, 11 acls copied Total Time : 16s
+12 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 15s, 0 acls copied xcp copy -acl -aclverify yes -fallback-user SMBUSER11 -fallback-group SMBGRP1 \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+12 scanned, 0 matched, 0 skipped, 11 copied, 10KiB (634/s), 0 errors, 11 acls copied 
+Total Time : 16s
 STATUS : PASSED
 
-C:\NetApp\xcp>xcp copy -acl -aclverify no \\10.237.161.217\source_share
-\\10.237.161.237\dest_share
+C:\NetApp\xcp>xcp copy -acl -aclverify no \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
 XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxx [Network Appliance, Inc] until Tue Apr 18 04:47:35 2023
-xcp copy -acl -aclverify no \\10.237.161.217\source_share \\10.237.161.237\dest_share
-12 scanned, 0 matched, 0 skipped, 11 copied, 10KiB (5.61KiB/s), 0 errors, 11 acls copied Total Time : 1s
+xcp copy -acl -aclverify no \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+12 scanned, 0 matched, 0 skipped, 11 copied, 10KiB (5.61KiB/s), 0 errors, 11 acls copied 
+Total Time : 1s
 STATUS : PASSED
 ----
 ====

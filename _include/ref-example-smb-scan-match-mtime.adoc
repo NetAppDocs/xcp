@@ -5,6 +5,7 @@
 c:\netapp\xcp>xcp scan -match "type is not directory" -fmt "'{}{:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMB server>\copy_share2
 xcp scan -match "type is not directory" -fmt "'{} {:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMB server>\copy_share2
 XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
 --truncated output--
 \\<IP address or hostname of SMB server>\copy_share2\ASUP.pm 
 1362688899.238098
@@ -46,6 +47,7 @@ XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec
 1362688900.375077
 \\<IP address or hostname of SMB server>\copy_share2\agnostic\flatfile.txt 
 1362688900.376076
+
 xcp scan -match type is not directory -fmt '{} {:>70}'.format(abspath, mtime) \\<IP address or hostname of SMB server>\copy_share2
 317 scanned, 315 matched, 0 errors 
 Total Time : 0s

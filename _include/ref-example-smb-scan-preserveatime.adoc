@@ -5,6 +5,7 @@
 c:\netapp\xcp>xcp scan -preserve-atime \\<IP address or hostname of SMB server>\copy_share2 
 xcp scan -preserve-atime \\<IP address or hostname of SMB server>\copy_share2
 XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
 copy_share2\ASUP.pm 
 copy_share2\ASUP_REST.pm 
 copy_share2\Allflavors_v2.pm 

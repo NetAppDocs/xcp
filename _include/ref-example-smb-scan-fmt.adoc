@@ -32,7 +32,8 @@ copy_share2\agnostic\flatfile.txt, flatfile.txt, 6366, 2
 copy_share2\agnostic, agnostic, 0, 1
 copy_share2, , 0, 0
 xcp scan -fmt ', '.join(map(str, [relpath, name, size, depth])) \\<IP address or hostname of SMB server>\copy_share2
-317 scanned, 0 matched, 0 errors Total Time : 0s
+317 scanned, 0 matched, 0 errors 
+Total Time : 0s
 STATUS : PASSED
 ----
 ====

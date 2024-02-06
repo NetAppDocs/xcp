@@ -34,9 +34,9 @@ The following table lists the `scan` parameters and their description.
 | <<smb_scan_parallel, scan -parallel <n> >> 
 | Number of concurrent processes (default: <cpu-count>).
 | <<smb_scan_match_filter, scan -match <filter> >> 
-| Only process files and directories that match the filter
+| Only process files and directories that match the filter.
 | <<smb_scan_exclude_filter, scan -exclude <filter> >>
-| Only exclude files and directories in the filter
+| Only exclude files and directories in the filter.
 | <<scan -preserve-atime>> 
 | Restore last accessed date on source.
 | <<smb_scan_depth, scan -depth <n> >> 
@@ -55,13 +55,10 @@ system.
 | <<scan -du>> 
 | Summarize space usage of each directory including subdirectories.
 | <<smb_scan_fmt, scan -fmt <expression> >> 
-| Format file listing according to the Python expression (see `xcp help -
-fmt` for details).
+| Format file listing according to the Python expression (see `xcp help -fmt` for details).
 | <<scan -ads>> 
-| The `scan` command with the `-ads` flag recursively scans the entire 
-SMB share and lists all files and any associated Alternate Data 
-Streams
-|=== 
+| The `scan` command with the `-ads` flag recursively scans the entire SMB share and lists all files and any associated alternate data streams.
+|===
 
 [[smb_scan_help]]
 == scan -h, –-help
@@ -105,7 +102,7 @@ Use the `-match <filter>` parameter with the `scan` command to only process file
 
 .Syntax
 [source,cli]
-xcp>xcp scan -match <filter> \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -match <filter> \\<IP address or hostname of SMB server>\copy_share2
 
 In the following example, `scan -match` scans all files that have changed between one month and one year and prints a line to the console for each file found. The ISO format of its last modification time, a human-readable size of the file, its type, and its relative path are returned for each file.
 
@@ -117,7 +114,7 @@ In the following example, `scan -match` lists the files that have not been modif
 .Show example
 include::../_include/ref-example-smb-scan-match-no-mod.adoc[]
 
-The first of the following two examples only matches the directories and the formatting adds a comma between the variables mtime relative path and depth.
+The first of the following two examples only matches the directories and the formatting adds a comma between the variables "mtime", "relative path", and "depth". 
 
 The second example redirects the same output to "name.csv".
 
@@ -163,7 +160,7 @@ include::../_include/ref-example-smb-scan-exclude-mtime.adoc[]
 == scan -preserve-atime
 Use the `-preserve-atime` parameter with the `scan` command to restore the last accessed date of all the files on the source and reset the `atime` to the original value before XCP read the file.
 
-When you scan an SMB share, the access time is modified on the files (if the storage system is configured to modify `atime` on read) because XCP is reading the files one by one. XCP never changes the `atime`. it just reads the file, which triggers an update on `atime`.
+When you scan an SMB share, the access time is modified on the files (if the storage system is configured to modify `atime` on read) because XCP is reading the files one by one. XCP never changes the `atime`, it just reads the file, which triggers an update on `atime`.
 
 .Syntax
 [source,cli]
@@ -198,7 +195,7 @@ xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share
 include::../_include/ref-example-smb-scan-stats.adoc[]
 
 == scan -html
-Use the `-html` parameter with the `scan` command to retrieve tree statistics report formats.
+Use the `-html` parameter with the `scan` command to save a HTML statistics report.
 
 NOTE: XCP reports (.csv, .html) are saved in the same location as the XCP binary. The file name is in the format <xcp_process_id>_<time_stamp>.html. When XCP cannot map security identifiers (SIDs) to owner names, it uses the last few digits after the final “–” in the SID to represent the owner. For example, when XCP is unable to map the SID S-1-5-21-1896871423-3211229150-3383017265-4854184 to its owner, it represents the owner by using 4854184. To view .csv and .html example reports, see link:<TBD>[Sample XCP NFS and SMB Reports].
 
@@ -210,7 +207,7 @@ xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SM
 include::../_include/ref-example-smb-scan-html.adoc[]
 
 == scan -csv
-Use the `-csv` parameter with the `scan` command to retrieve tree statistics report formats.
+Use the `-csv` parameter with the `scan` command to save a CSV statistics report.
 
 .Syntax
 [source,cli]
@@ -246,7 +243,7 @@ Use the `-du` parameter with the `scan` command to summarize the space usage of 
 
 .Syntax
 [source,cli]
-xcp>xcp scan -du \\<IP address or hostname of SMB server>\copy_share2 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -du \\<IP address or hostname of SMB server>\copy_share2 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2
 
 .Show example
 include::../_include/ref-example-smb-scan-du.adoc[]

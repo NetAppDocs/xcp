@@ -28,10 +28,10 @@ The following table lists the `sync` parameters and their description.
 | Parameter | Description
 
 | <<smb_sync_help, sync -h, --help>> | Show this help message and exit.
-| <<sync -v>> | Provide detailed debug information.
+| <<sync -v>> | Increase debug verbosity.
 | <<smb_sync_parallel, sync -parallel <n> >> | Number of concurrent processes (default: <cpu-count>).
 | <<smb_sync_match, sync -match <filter> >> | Only process files and directories that match the filter (see `xcp help - match` for details).
-| sync -exclude <filter> | Only exclude files and directories in the filter
+| sync -exclude <filter> | Only exclude files and directories in the filter.
 | <<sync -preserve-atime>> | Restore last accessed date on source.
 | <<sync -noatime>> | Do not check file access time.
 | <<sync -noctime>> | Do not check file creation time.
@@ -42,18 +42,16 @@ The following table lists the `sync` parameters and their description.
 | <<sync_smb_ctime, sync -ctimewindow <float> >> | Acceptable creation time difference, in seconds.
 | <<sync_smb_mtime, sync -mtimewindow <float> >> | Acceptable modification time difference, in seconds,
 | <<sync_smb_scan_acl, sync -acl>> | Copy security information.
-| <<sync_smb_scan_acl,sync -fallback-user>> 
-FALLBACK_USER
+| <<sync_smb_scan_acl,sync -fallback-user <fallback_user> >> 
 | Active Directory user or local(non-domain) user on the target machine to receive the permissions of local (non-domain) source machine users (example: domain\administrator).
-| <<sync_smb_scan_acl,sync -fallback-group>>
-FALLBACK_GROUP
+| <<sync_smb_scan_acl,sync -fallback-group <fallback_group> >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | <<sync -l>> | Increases output detail.
 | sync -root | Sync ACL for root directory.
 | <<sync -onlyacl>> | Copy only the security information.
 | <<smb_sync_aclverify, sync -aclverify{yes,no} >> | Provide an option to include or skip ACL verification during the ACL sync operation.
-| <<smb_sync_bs, sync -bs <n> >> | Read/Write blocksize (default:1M)
-| <<sync -ads>> | Use the `sync` command with the `-ads` flag to scan for changes and modifications of Alternate Data Streams in the source and target SMB share. If there are changes, it applies the change to the target to 
+| <<smb_sync_bs, sync -bs <n> >> | Read/Write blocksize (default:1M).
+| <<sync -ads>> | Use the `sync` command with the `-ads` flag to scan for changes and modifications of alternate data streams in the source and target SMB share. If there are changes, it applies the change to the target to 
 make sure that the target is identical to the source.
 |=== 
 
@@ -78,8 +76,8 @@ xcp sync -v \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx\warni
 .Show example
 include::../_include/ref-example-smb-sync-v.adoc[]
 
-<<smb_sync_parallel>>
-==  sync -parallel <n>
+[[smb_sync_parallel]]
+== sync -parallel <n>
 Use the `-parallel <n>` parameter with the `sync` command to set a higher or lower number of XCP concurrent processes. The `sync -parallel <n>` command syncs with the number of concurrent processes (default: <cpu-count>).
 
 NOTE: The maximum value for n is 61. 
@@ -164,51 +162,51 @@ include::../_include/ref-example-smb-sync-noownership.adoc[]
 
 [[sync_smb_atime]]
 == sync -atimewindow <float>
-Use the `-atimewindow <float>` parameter with the `sync` command to specify the acceptable difference, in seconds, for the atime of a file from the source to the destination. XCP does not report files as being different if the difference in atime is less than the <value>.
-
-In the following example, XCP accepts a difference in atime of up to 10 minutes between the source and the destination files, and it does not update the atime on the target.
+Use the `-atimewindow <float>` parameter with the `sync` command to specify the acceptable difference, in seconds, for the atime of a file from the source to the destination. XCP does not report files as being different if the difference in atime is less than <value>.
 
 .Syntax
 [source,cli]
 xcp sync -atimewindow <float> \\<IP address or hostname of SMB server>\copy_share2\\<IP address of SMB destination server>\source_share
+
+In the following example, XCP accepts a difference in atime of up to 10 minutes between the source and the destination files, and it does not update the atime on the target.
 
 .Show example
 include::../_include/ref-example-smb-sync-atimewindow.adoc[]
 
 [[sync_smb_ctime]]
 == sync -ctimewindow <float>
-Use the `-ctimewindow <float>` parameter with the `sync` command to specify the acceptable difference, in seconds, for the ctime of a file from the source to the destination. XCP does not report files as being different when the difference in ctime is less than the <value>.
-
-In the following example, XCP accepts a difference in atime for up to 10 minutes between the source and the destination files, and it does not update the ctime on the target.
+Use the `-ctimewindow <float>` parameter with the `sync` command to specify the acceptable difference, in seconds, for the ctime of a file from the source to the destination. XCP does not report files as being different when the difference in ctime is less than <value>.
 
 .Syntax
 [source,cli]
 xcp sync -ctimewindow <float> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+
+In the following example, XCP accepts a difference in atime for up to 10 minutes between the source and the destination files, and it does not update the ctime on the target.
 
 .Show example
 include::../_include/ref-example-smb-sync-ctimewindow.adoc[]
 
 [[sync_smb_mtime]]
 == sync -mtimewindow <float>
-Use the `-mtimewindow <float>` parameter with the `sync` command to specify the acceptable difference, in seconds, for the mtime of a file from the source to the destination. XCP does not report files as being different when the difference in mtime is less than the <value>.
+Use the `-mtimewindow <float>` parameter with the `sync` command to specify the acceptable difference, in seconds, for the mtime of a file from the source to the destination. XCP does not report files as being different when the difference in mtime is less than <value>.
 
 .Syntax
 [source,cli]
-xcp sync -mtimewindow 600 \\<IP address or hostname of SMB server>\copy_share2\\<IP address of SMB destination server>\source_share
+xcp sync -mtimewindow <float> \\<IP address or hostname of SMB server>\copy_share2\\<IP address of SMB destination server>\source_share
 
 .Show example
 include::../_include/ref-example-smb-sync-mtimewindow.adoc[]
 
 [[sync_smb_scan_acl]]
-== sync -acl, sync -fallback-user, and sync -fallback-group
-Use the `-acl -fallback-user <user>` and `-fallback-group <group>` parameters with the `sync` command to compare the data and the security information from the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` options are a user or group on the target machine or in the Active Directory that 
+== sync -acl, -fallback-user, and -fallback-group
+Use the `-acl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare the data and the security information from the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` options are a user or group on the target machine or in the Active Directory that 
 receive the permissions of the local (non-domain) source users or groups.
 
 NOTE: You cannot use the `-acl` option without the `-fallback-user` and `-fallback-group` options.
 
 .Syntax
 [source,cli]
-xcp sync -acl -fallback-user <user> -fallback-group <group> \\<IP address or hostname of SMB server>\performance_SMB_home_dirs \\<IP address of SMB destination server>\performance_SMB_home_dirs
+xcp sync -acl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address or hostname of SMB server>\performance_SMB_home_dirs \\<IP address of SMB destination server>\performance_SMB_home_dirs
 
 .Show example
 include::../_include/ref-example-smb-sync-acl.adoc[]
@@ -223,16 +221,14 @@ xcp sync -l \\<IP address or hostname of SMB server>\copy_share2 \\<IP address o
 .Show example
 include::../_include/ref-example-smb-sync-l.adoc[]
 
-== sync -onlyacl
-Use the `-onlyacl -fallback-user <user> -fallback-group <group>` parameter with the `sync` command to compare 
-the security information between the source with the target and apply the required actions on the target. The
-`-fallback-user` and `-fallback-group` are a user or group on the target machine or in the Active Directory that receive the permissions of the local (non-domain) source users or groups.
+== sync -onlyacl, -fallback-user, and -fallback-group
+Use the `-onlyacl`, `-fallback-user, and `-fallback-group` parameters with the `sync` command to compare the security information between the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` are a user or group on the target machine or in the Active Directory that receive the permissions of the local (non-domain) source users or groups.
 
 NOTE: You cannot use the `-onlyacl` parameter without the `-fallback-user` and `-fallback-group` options.
 
 .Syntax
 [source,cli]
-xcp sync -onlyacl -fallback-user <user> -fallback-group <group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+xcp sync -onlyacl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::../_include/ref-example-smb-sync-onlyacl.adoc[]
@@ -243,7 +239,7 @@ Use the `-aclverify{yes,no}` parameter with the `sync` command to provide an opt
 
 .Syntax
 [source,cli]
-xcp>xcp sync -acl -aclverify yes -fallback-user <user> -fallback-group <group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+xcp sync -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::../_include/ref-example-smb-sync-aclverify.adoc[]

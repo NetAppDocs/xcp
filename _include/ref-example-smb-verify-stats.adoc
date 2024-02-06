@@ -37,8 +37,7 @@ Symbolic links:
 Junctions:
 Special files:
 xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
-635 scanned, 0 errors Total Time : 
-1s 
+635 scanned, 0 errors Total Time : 1s 
 STATUS : PASSED
 ----
 ====

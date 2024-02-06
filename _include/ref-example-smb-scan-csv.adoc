@@ -36,12 +36,12 @@ S-1-5-21-1896871423-3211229150-3383017265-4854184 S-1-5-32-544 S-1-5-21-18968714
 	 5418	    3738	    1974          1197       630        336	     1344
 
 ==	Number of files ==
-  empty     <8KiB	 8-64KiB	  64KiB-1MiB	 1-10MiB	10-100MiB  	>100MiB
-	  168	    11466	    2709           294			
+    empty      <8KiB	     8-64KiB    64KiB-1MiB	  1-10MiB	10-100MiB  	>100MiB
+	  168	   11466	        2709           294			
 
 == Space used ==			
-  empty	    <8KiB	 8-64KiB    64KiB-1MiB	 1-10MiB	10-100MiB	  >100MiB
-      0	  24.4MiB  55.3MiB	     66.9MiB	       0          0         0
+   empty	   <8KiB	    8-64KiB    64KiB-1MiB	 1-10MiB	10-100MiB	  >100MiB
+      0	     24.4MiB        55.3MiB	      66.9MiB	       0          0         0
 
 == Directory entries ==
 	empty	     1-10	  10-100        100-1K    1K-10K       >10K		
@@ -53,11 +53,11 @@ S-1-5-21-1896871423-3211229150-3383017265-4854184 S-1-5-32-544 S-1-5-21-18968714
 
 ==	Modified ==
  >1 year	 >1 month   1-31 days	 1-24 hrs  	<1 hour  	<15 mins	future	invalid
-	 11718	     2961		               3110				
+	 11718	     2961		             3110				
 
 == Created ==
  >1 year	 >1 month   1-31 days	 1-24 hrs  	<1 hour	  <15 mins	future	invalid
-                                    17789
+                                        17789
 
 == Accessed ==
  >1 year	 >1 month   1-31 days	 1-24 hrs	  <1 hour	  <15 mins	future	invalid

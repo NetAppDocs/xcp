@@ -17,7 +17,7 @@ The SMB `show` command queries the RPC services and NFS exports of one or more s
 .Syntax
 The `show` command requires the host name or IP address of the NFSv3 exported system:
 [source,cli]
-xcp show \\<IP address or hostname of SMBserver>
+xcp show \\<IP address or hostname of SMB server>
 
 .Show example
 include::../_include/ref-example-smb-show-v.adoc[]

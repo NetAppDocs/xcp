@@ -5,10 +5,12 @@
 c:\netapp\xcp>xcp scan -du \\<IP address or hostname of SMB server>\copy_share2 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2
 XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
-569KiB copy_share2\agnostic 19.8MiB copy_share2
+   569KiB copy_share2\agnostic 
+  19.8MiB copy_share2
 
 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2
-317 scanned, 0 matched, 0 errors Total Time : 0s
+317 scanned, 0 matched, 0 errors 
+Total Time : 0s
 STATUS : PASSED
 ----
 ====

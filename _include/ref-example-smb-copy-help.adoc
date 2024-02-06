@@ -15,22 +15,22 @@ positional arguments:
    target
 
 optional arguments:
--h, --help	          show this help message and exit
--v	                   increase debug verbosity
--parallel <n>	       number of concurrent processes (default: <cpu-count>)
--match <filter>	    only process files and directories that match the filter (see `xcp help -match` for details)
+-h, --help            show this help message and exit
+-v                    increase debug verbosity
+-parallel <n>         number of concurrent processes (default: <cpu-count>)
+-match <filter>       only process files and directories that match the filter (see `xcp help -match` for details)
 -exclude <filter>     Exclude files and directories that match the filter (see `xcp help - exclude` for details)
--preserve-atime	    restore last accessed date on source
--acl	                copy security information
+-preserve-atime       restore last accessed date on source
+-acl                  copy security information
 -fallback-user FALLBACK_USER
                       the name of the user on the target machine to receive the permissions of local (non-domain) source machine users (eg. domain\administrator)
 -fallback-group FALLBACK_GROUP
                       the name of the group on the target machine to receive the permissions of local (non-domain) source machine groups (eg. domain\administrators)
 -loglevel <name>      option to set log level filter (default:INFO)
--root	                copy acl for root directory
--noownership	       do not copy ownership
--aclverify {yes,no}	 choose whether you need to skip acl verification
--bs <n>	             read/write block size for copy (default: 1M)
--ads	                copy NTFS alternate data streams.
+-root                 copy acl for root directory
+-noownership          do not copy ownership
+-aclverify {yes,no}   choose whether you need to skip acl verification
+-bs <n>               read/write block size for copy (default: 1M)
+-ads                  copy NTFS alternate data streams.
 ----
 ====
