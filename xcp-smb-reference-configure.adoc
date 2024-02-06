@@ -20,5 +20,5 @@ The `configure` command configures the SMB system and connects to the system whe
 xcp.exe configure
 
 .Show example
-include::../_include/ref-example-smb-help-command.adoc[]
+include::../_include/ref-example-smb-verify-configure.adoc[]
 

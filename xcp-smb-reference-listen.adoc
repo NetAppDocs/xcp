@@ -20,4 +20,4 @@ The `listen` command reads the XCP binary and starts the XCP services.
 xcp.exe listen
 
 .Show example
-include::../_include/ref-example-smb-help-command.adoc[]
+include::../_include/ref-example-smb-verify-listen.adoc[]
