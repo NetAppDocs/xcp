@@ -41,14 +41,14 @@ The following table lists the `sync` parameters and their description.
 | <<sync_smb_atime, sync -atimewindow <float> >> | Acceptable access time difference, in seconds.
 | <<sync_smb_ctime, sync -ctimewindow <float> >> | Acceptable creation time difference, in seconds.
 | <<sync_smb_mtime, sync -mtimewindow <float> >> | Acceptable modification time difference, in seconds,
-| <<sync_smb_scan_acl, sync -acl>> | Copy security information.
-| <<sync_smb_scan_acl,sync -fallback-user <fallback_user> >> 
+| <<sync_smb_acl, sync -acl>> | Copy security information.
+| <<sync_smb_acl,sync -fallback-user FALLBACK_USER >> 
 | Active Directory user or local(non-domain) user on the target machine to receive the permissions of local (non-domain) source machine users (example: domain\administrator).
-| <<sync_smb_scan_acl,sync -fallback-group <fallback_group> >>
+| <<sync_smb_acl,sync -fallback-group FALLBACK_GROUP >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | <<sync -l>> | Increases output detail.
 | sync -root | Sync ACL for root directory.
-| <<sync -onlyacl>> | Copy only the security information.
+| <<smb_sync_onlyacl, sync -onlyacl>> | Copy only the security information.
 | <<smb_sync_aclverify, sync -aclverify{yes,no} >> | Provide an option to include or skip ACL verification during the ACL sync operation.
 | <<smb_sync_bs, sync -bs <n> >> | Read/Write blocksize (default:1M).
 | <<sync -ads>> | Use the `sync` command with the `-ads` flag to scan for changes and modifications of alternate data streams in the source and target SMB share. If there are changes, it applies the change to the target to 
@@ -197,10 +197,9 @@ xcp sync -mtimewindow <float> \\<IP address or hostname of SMB server>\copy_shar
 .Show example
 include::../_include/ref-example-smb-sync-mtimewindow.adoc[]
 
-[[sync_smb_scan_acl]]
-== sync -acl, -fallback-user, and -fallback-group
-Use the `-acl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare the data and the security information from the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` options are a user or group on the target machine or in the Active Directory that 
-receive the permissions of the local (non-domain) source users or groups.
+[[sync_smb_acl]]
+== sync -acl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+Use the `-acl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare the data and the security information from the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` options are a user or group on the target machine or in the Active Directory that receive the permissions of the local (non-domain) source users or groups.
 
 NOTE: You cannot use the `-acl` option without the `-fallback-user` and `-fallback-group` options.
 
@@ -221,8 +220,9 @@ xcp sync -l \\<IP address or hostname of SMB server>\copy_share2 \\<IP address o
 .Show example
 include::../_include/ref-example-smb-sync-l.adoc[]
 
-== sync -onlyacl, -fallback-user, and -fallback-group
-Use the `-onlyacl`, `-fallback-user, and `-fallback-group` parameters with the `sync` command to compare the security information between the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` are a user or group on the target machine or in the Active Directory that receive the permissions of the local (non-domain) source users or groups.
+[[smb_sync_onlyacl]]
+== sync -onlyacl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+Use the `-onlyacl`, `-fallback-user`, and `-fallback-group` parameters with the `sync` command to compare the security information between the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` are a user or group on the target machine or in the Active Directory that receive the permissions of the local (non-domain) source users or groups.
 
 NOTE: You cannot use the `-onlyacl` parameter without the `-fallback-user` and `-fallback-group` options.
 

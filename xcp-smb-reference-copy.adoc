@@ -40,9 +40,9 @@ The following table lists the `copy` parameters and their description.
 | <<smb_copy_exclude, copy -exclude <filter> >> | Only exclude files and directories in the filter
 | <<copy -preserve-atime>> | Restore last accessed date on source.
 | <<smb_copy_acl, copy -acl>> | Copy security information.
-| <<smb_copy_acl, copy -fallback-user <fallback_user> >> 
+| <<smb_copy_acl, copy -fallback-user FALLBACK_USER >> 
 | Active Directory user or local (non-domain) user on the target machine that receives the permissions of local (non-domain) source machine users. For example, domain\administrator.
-| <<smb_copy_acl, copy -fallback-group <fallback group> >> 
+| <<smb_copy_acl, copy -fallback-group FALLBACK_GROUP> >> 
 | Active Directory group or local (non-domain) group on the target machine that receives the permissions of local (non-domain) source machine groups. For example, domain\administrators.
 | copy -root | Copy the ACL for a root directory.
 | <<smb_copy_aclverify, copy -aclverify {yes,no}>> | Provide an option to skip or include ACL verification during the copy -acl operation.
@@ -121,10 +121,14 @@ xcp copy -preserve-atime \\<IP address or hostname of SMB server>\copy_share2 \\
 include::../_include/ref-example-smb-copy-preserveatime.adoc[]
 
 [[smb_copy_acl]]
-== copy -acl, -fallback-user, and -fallback-group
+== copy -acl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
 Use the `-acl` parameter with the `copy` command to activate the transfer of the security descriptors (ACLs).
 
 Use the `-acl` parameter with the `-fallback-user` and `-fallback-group` options to specify a user and a group on the target machine or from Active Directory to receive the permissions of local (non-domain) source machine users or groups. This does not refer to unmatched users from an Active Directory.
+
+.Syntax
+[source,cli]
+xcp copy -acl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
 
 [[smb_copy_aclverify]]
 == copy -aclverify {yes,no}
@@ -144,7 +148,7 @@ Use the `-noownership` parameter with the `copy` command to not copy the ownersh
 
 .Syntax
 [source,cli]
-xcp.exe copy -acl -noownership -fallback-user <SMB_user> -fallback-group <SMB_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+xcp.exe copy -acl -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
 
 .Show example
 include::../_include/ref-example-smb-copy-noownership.adoc[]

@@ -48,9 +48,9 @@ make sure that the target is identical to the source.
 | <<verify -stats>> | Scan source and target trees in parallel and compare tree statistics.
 | <<verify -l>> | Increases output detail.
 | <<verify -ll>> | Increases output detail (git diff format).
-| <<verify_smb_acl, verify -fallback-user <fallback_user> >> 
+| <<verify_smb_acl, verify -fallback-user FALLBACK_USER >> 
 | Active Directory user or local(non-domain) user on the target machine to receive the permissions of local (non-domain) source machine users (example: domain\administrator).
-| <<verify_smb_acl, verify -fallback-group <fallback_group> >>
+| <<verify_smb_acl, verify -fallback-group FALLBACK_GROUP >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | verify -root | Sync ACL for root directory.
 | <<verify -onlyacl>> | Copy only the security information.
@@ -192,6 +192,13 @@ xcp verify -noacls -noownership \\<IP address or hostname of SMB server>\copy_sh
 .Show example
 include::../_include/ref-example-smb-verify-noacls.adoc[]
 
+=== verify -noacls -noownership
+<Missing description>
+
+.Syntax
+[source,cli]
+xcp verify -noacls -noownership <source> <target>
+
 [[verify_smb_atime]]
 == verify -atimewindow <float>
 Use the `-atimewindow <float>` parameter with the `verify` command to specify the acceptable difference, in seconds, for the `atime` of a file from the source to the destination. XCP does not report files as being different if the difference in `atime` is less than <value>. The `verify - atimewindow` command can only be used with the `-atime` flag.
@@ -259,9 +266,7 @@ xcp verify -ll \\<IP address of SMB source server>\source_share \\<IP address of
 include::../_include/ref-example-smb-verify-ll.adoc[]
 
 [[verify_smb_acl]]
-== -noacls, -fallback-user, and -fallback-group
-
-=== -fallback-user and -fallback-group
+== verify -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
 Use the `-fallback-user` and `-fallback-group` parameters with the `verify` command to list the ACL and ownership differences between files and directories on the source and destination.
 
 NOTE: If you use `fallback-user` and `fallback-group` with a copy or sync operation, NetApp recommends that you also use the `fallback-user` and `fallback-group` parameters with the verify operation.
@@ -270,30 +275,22 @@ NOTE: If you use `fallback-user` and `fallback-group` with a copy or sync operat
 [source,cli]
 xcp verify -fallback-user <fallback_user> -fallback-group <fallback_group> <source><target>
 
-=== -noownership, -fallback-user, and -fallback-group
+=== verify -noownership -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
 Use the `-noownership,` `-fallback-user`, and `-fallback-group` parameters with the `verify` command to list the ACL differences and skip verification of ownership between files and directories on the source and destination
 
 .Syntax
 [source,cli]
 xcp verify -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> <source><target>
 
-=== -noacls, -fallback-user, and -fallback-group
+=== verify -noacls -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
 Use the `-noacls`, `-fallback-user`, and `-fallback-group` parameters with the `verify` command to skip verification of ACLs and verify ownership between files and directories on the source and destination.
 
 .Syntax
 [source,cli]
-xcp verify -noacls -fallback-user <fallback_user>" -fallback-group <fallback_group><source><target>
+xcp verify -noacls -fallback-user <fallback_user> -fallback-group <fallback_group><source><target>
 
-=== -noacls -noownership
-<Missing description>
-
-.Syntax
-[source,cli]
-xcp verify -noacls -noownership <source> <target>
-
-== verify -onlyacl
-Use the `-onlyacl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare only 
-the security information between the source and destination.
+=== verify -onlyacl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+Use the `-onlyacl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare only the security information between the source and destination.
 
 .Syntax
 [source,cli]
