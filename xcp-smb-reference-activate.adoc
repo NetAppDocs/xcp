@@ -19,4 +19,4 @@ The SMB `activate` command activates the XCP license. Before running this comman
 xcp activate
 
 .Show example
-include::../_include/ref-example-smb-activate.adoc[]
+include::./_include/ref-example-smb-activate.adoc[]

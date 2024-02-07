@@ -19,7 +19,7 @@ The `verify` command reads and compares the source and target shares and provide
 xcp verify \\<source SMB share> \\<IP address of SMB destination server>
 
 .Show example
-include::../_include/ref-example-smb-verify.adoc[]
+include::./_include/ref-example-smb-verify.adoc[]
 
 The following table lists the `verify` parameters and their description.
 
@@ -66,7 +66,7 @@ Use the `-h` and `–-help` parameters with the `verify` command to display deta
 xcp verify –help
 
 .Show example
-include::../_include/ref-example-smb-verify-help.adoc[]
+include::./_include/ref-example-smb-verify-help.adoc[]
 
 == verify -v
 Use the `-v` parameter with the `verify` command to provide detailed debug information.
@@ -76,7 +76,7 @@ Use the `-v` parameter with the `verify` command to provide detailed debug infor
 xcp verify -v \\<IP address of SMB source server>\source_share address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-v.adoc[]
+include::./_include/ref-example-smb-verify-v.adoc[]
 
 [[smb_verify_parallel]]
 ==  verify -parallel <n>
@@ -89,7 +89,7 @@ NOTE: The maximum value for n is 61.
 xcp verify -v -parallel <n> \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-parallel.adoc[]
+include::./_include/ref-example-smb-verify-parallel.adoc[]
 
 [[smb_verify_match]]
 == verify -match <filter>
@@ -100,7 +100,7 @@ Use the `-match <filter>` parameter with the `verify` command to scan the source
 xcp verify -v -match <filter> \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-match.adoc[]
+include::./_include/ref-example-smb-verify-match.adoc[]
 
 == verify -preserve-atime 
 Use the `-preserve-atime` parameter with the `verify` command to reset `atime` to the original value before XCP read the file.
@@ -110,7 +110,7 @@ Use the `-preserve-atime` parameter with the `verify` command to reset `atime` t
 xcp verify -preserve-atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-preserveatime.adoc[]
+include::./_include/ref-example-smb-verify-preserveatime.adoc[]
 
 == verify -nodata
 Use the `-nodata` parameter with the `verify` command to not compare data.
@@ -120,7 +120,7 @@ Use the `-nodata` parameter with the `verify` command to not compare data.
 xcp verify -nodata \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-nodata.adoc[]
+include::./_include/ref-example-smb-verify-nodata.adoc[]
 
 == verify -atime
 Use the `-atime` parameter with the `verify` command to compare file access time stamps from the source to destination.
@@ -130,7 +130,7 @@ Use the `-atime` parameter with the `verify` command to compare file access time
 xcp verify -ll -atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-atime.adoc[]
+include::./_include/ref-example-smb-verify-atime.adoc[]
 
 == verify -noctime
 Use the `-noctime` parameter with the `verify` command to not compare file creation time stamps from the source to destination.
@@ -140,7 +140,7 @@ Use the `-noctime` parameter with the `verify` command to not compare file creat
 xcp verify -noctime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-noctime.adoc[]
+include::./_include/ref-example-smb-verify-noctime.adoc[]
 
 == verify -nomtime
 Use the `-nomtime` parameter with the `verify` command to not compare file modification time stamps from the source to destination.
@@ -150,7 +150,7 @@ Use the `-nomtime` parameter with the `verify` command to not compare file modif
 xcp verify -nomtime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-nomtime.adoc[]
+include::./_include/ref-example-smb-verify-nomtime.adoc[]
 
 == verify -noattrs
 Use the `-noattrs` parameter with the `verify` command to not check attributes.
@@ -160,7 +160,7 @@ Use the `-noattrs` parameter with the `verify` command to not check attributes.
 xcp verify -noattrs \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-noattrs.adoc[]
+include::./_include/ref-example-smb-verify-noattrs.adoc[]
 
 == verify -noownership
 Use the `-noownership` parameter with the `verify` command to not check ownership.
@@ -170,7 +170,7 @@ Use the `-noownership` parameter with the `verify` command to not check ownershi
 xcp verify -noownership \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-noownership.adoc[]
+include::./_include/ref-example-smb-verify-noownership.adoc[]
 
 == verify -ads
 Using `-ads` parameter with the `verify` command to read if there are any alternate data streams on the source and destination and display any differences.
@@ -180,7 +180,7 @@ Using `-ads` parameter with the `verify` command to read if there are any altern
 xcp verify -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share 
 
 .Show example
-include::../_include/ref-example-smb-verify-ads.adoc[]
+include::./_include/ref-example-smb-verify-ads.adoc[]
 
 == verify -noacls
 Use the `-noacls` parameter with the `verify` command to not check ACLs.
@@ -190,7 +190,7 @@ Use the `-noacls` parameter with the `verify` command to not check ACLs.
 xcp verify -noacls -noownership \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-include::../_include/ref-example-smb-verify-noacls.adoc[]
+include::./_include/ref-example-smb-verify-noacls.adoc[]
 
 === verify -noacls -noownership
 <Missing description>
@@ -208,7 +208,7 @@ Use the `-atimewindow <float>` parameter with the `verify` command to specify th
 xcp verify -atimewindow <float> \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-atimewindow.adoc[]
+include::./_include/ref-example-smb-verify-atimewindow.adoc[]
 
 [[verify_smb_ctime]]
 == verify -ctimewindow <float>
@@ -219,7 +219,7 @@ Use the `-ctimewindow <float>` parameter with the `verify` command to specify th
 xcp verify -ctimewindow <float> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-include::../_include/ref-example-smb-verify-ctimewindow.adoc[]
+include::./_include/ref-example-smb-verify-ctimewindow.adoc[]
 
 [[verify_smb_mtime]]
 == verify -mtimewindow <float>
@@ -230,7 +230,7 @@ Use the `-mtimewindow <float>` parameter with the `verify` command to specify th
 xcp verify -mtimewindow <float> \\<IP address of SMB sourceserver>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-mtimewindow.adoc[]
+include::./_include/ref-example-smb-verify-mtimewindow.adoc[]
 
 == verify -stats
 Use the `-stats` parameter with the `verify` command to scan the source and the destination and print a tree statistics report showing similarities or differences between the two shares.
@@ -240,7 +240,7 @@ Use the `-stats` parameter with the `verify` command to scan the source and the 
 xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-include::../_include/ref-example-smb-verify-stats.adoc[]
+include::./_include/ref-example-smb-verify-stats.adoc[]
 
 == verify -l
 Use the `-l` parameter with the `verify` command to list the differences between files and directories on the source and destination. 
@@ -252,7 +252,7 @@ xcp verify -l \\<IP address of SMB source server>\source_share \\<IP address of 
 In the following example, during copy, the ownership information was not transferred, and you can see the differences in the command output.
 
 .Show example
-include::../_include/ref-example-smb-verify-l.adoc[]
+include::./_include/ref-example-smb-verify-l.adoc[]
 
 == verify -ll
 
@@ -263,7 +263,7 @@ Use the `-ll` parameter with the `verify` command to list the detailed differenc
 xcp verify -ll \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-ll.adoc[]
+include::./_include/ref-example-smb-verify-ll.adoc[]
 
 [[verify_smb_acl]]
 == verify -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
@@ -298,4 +298,4 @@ Use the `-onlyacl`, `-fallback-user` and `-fallback-group` parameters with the `
 xcp verify -onlyacl -preserve-atime -fallback-user <fallback_user> -fallback- group <fallback_group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-verify-onlyacl.adoc[]
+include::./_include/ref-example-smb-verify-onlyacl.adoc[]

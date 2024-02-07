@@ -20,7 +20,7 @@ The `show` command requires the host name or IP address of the NFSv3 exported sy
 xcp show \\<IP address or hostname of SMB server>
 
 .Show example
-include::../_include/ref-example-smb-show-v.adoc[]
+include::./_include/ref-example-smb-show-v.adoc[]
 
 The following table lists the `scan` parameters and their description.
 

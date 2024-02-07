@@ -19,7 +19,7 @@ The SMB `help` command displays a list of commands, command parameters, and a br
 xcp --help
 
 .Show example
-include::../_include/ref-example-smb-help.adoc[]
+include::./_include/ref-example-smb-help.adoc[]
 
 == "help <command>"
 
@@ -33,5 +33,5 @@ xcp help <command>
 The following example output shows the details, usage, arguments, and optional arguments for the `sync` command.
 
 .Show example
-include::../_include/ref-example-smb-help-command.adoc[]
+include::./_include/ref-example-smb-help-command.adoc[]
 

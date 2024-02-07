@@ -25,7 +25,7 @@ The `copy` command scans and copies the entire source directory structure to a d
 xcp copy \\<source SMB share> \\<IP address of SMB destination server>
 
 .Show example
-include::../_include/ref-example-smb-copy.adoc[]
+include::./_include/ref-example-smb-copy.adoc[]
 
 The following table lists the `copy` parameters and their description.
 
@@ -60,7 +60,7 @@ Use the `-h` and `–-help` parameters with the `copy` command to display detail
 xcp copy –help
 
 .Show example
-include::../_include/ref-example-smb-copy-help.adoc[]
+include::./_include/ref-example-smb-copy-help.adoc[]
 
 == copy -v
 Use the `-v` parameter with the `copy` command to provide detailed debug information.
@@ -70,7 +70,7 @@ Use the `-v` parameter with the `copy` command to provide detailed debug informa
 xcp copy -v \\<IP address of SMB destination server>\src \\<IP address of SMB destination server>\dest\d 1
 
 .Show example
-include::../_include/ref-example-smb-copy-v.adoc[]
+include::./_include/ref-example-smb-copy-v.adoc[]
 
 [[smb_copy_parallel]]
 == copy -parallel <n>
@@ -83,7 +83,7 @@ NOTE: The maximum value for n is 61.
 xcp copy -parallel <n> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-include::../_include/ref-example-smb-copy-parallel.adoc[]
+include::./_include/ref-example-smb-copy-parallel.adoc[]
 
 [[smb_copy_match]]
 == copy -match <filter>
@@ -94,7 +94,7 @@ Use the `-match <filter>` parameter with the `copy` command to copy only the dat
 xcp copy -match <filter> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-include::../_include/ref-example-smb-copy-match.adoc[]
+include::./_include/ref-example-smb-copy-match.adoc[]
 
 
 [[smb_copy_exclude]]
@@ -108,7 +108,7 @@ xcp copy -exclude <filter> \\<IP address or hostname of SMB server>\localtest\ar
 In the following example, the files and directories that have the string "resync" in their name have been excluded for copy.
 
 .Show example
-include::../_include/ref-example-smb-copy-exclude.adoc[]
+include::./_include/ref-example-smb-copy-exclude.adoc[]
 
 == copy -preserve-atime
 Use the `-preserve-atime` parameter with the `copy` command to reset the "atime" to the original value before XCP read the file.
@@ -118,7 +118,7 @@ Use the `-preserve-atime` parameter with the `copy` command to reset the "atime"
 xcp copy -preserve-atime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
 
 .Show example
-include::../_include/ref-example-smb-copy-preserveatime.adoc[]
+include::./_include/ref-example-smb-copy-preserveatime.adoc[]
 
 [[smb_copy_acl]]
 == copy -acl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
@@ -141,7 +141,7 @@ You must use the `-aclverify {yes,no}` parameter parameter with the `copy -acl` 
 xcp copy -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-copy-aclverify.adoc[]
+include::./_include/ref-example-smb-copy-aclverify.adoc[]
 
 == copy -noownership
 Use the `-noownership` parameter with the `copy` command to not copy the ownership from the source to the destination. You must use `-noownership` with the `-acl` option and it requires `fallback-user` and `fallback-group` as mandatory parameters.
@@ -151,7 +151,7 @@ Use the `-noownership` parameter with the `copy` command to not copy the ownersh
 xcp.exe copy -acl -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-copy-noownership.adoc[]
+include::./_include/ref-example-smb-copy-noownership.adoc[]
 
 [[smb_copy_bs]]
 == copy -bs <n>
@@ -162,7 +162,7 @@ Use the `-bs <n>` parameter with the `copy` command to provide a read/write bloc
 xcp.exe copy -bs <n> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-copy-bs.adoc[]
+include::./_include/ref-example-smb-copy-bs.adoc[]
 
 == copy -ads
 Use the `-ads` parameter with the `copy` command to copy NTFS alternate data streams from the source SMB share to destination SMB share.
@@ -172,4 +172,4 @@ Use the `-ads` parameter with the `copy` command to copy NTFS alternate data str
 xcp copy -ads \\<source_IP_address>\source_share\src \\destination_IP_address>\dest_share
 
 .Show example
-include::../_include/ref-example-smb-copy-ads.adoc[]
+include::./_include/ref-example-smb-copy-ads.adoc[]

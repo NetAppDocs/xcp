@@ -19,7 +19,7 @@ The SMB `scan` command recursively scans the entire SMB share and lists all the 
 xcp scan \\<SMB share path>
 
 .Show example
-include::../_include/ref-example-smb-scan.adoc[]
+include::./_include/ref-example-smb-scan.adoc[]
 
 The following table lists the `scan` parameters and their description.
 
@@ -69,7 +69,7 @@ Use the -h and –-help parameters with the `scan` command to display detailed i
 xcp scan --help
 
 .Show example
-include::../_include/ref-example-smb-scan-help.adoc[]
+include::./_include/ref-example-smb-scan-help.adoc[]
 
 == scan -v
 
@@ -80,7 +80,7 @@ Use the `-v` parameter with the `scan` command to provide detailed logging infor
 xcp scan -v \\<IP address or hostname of SMB server>\copy_share2 
 
 .Show example
-include::../_include/ref-example-smb-scan-v.adoc[]
+include::./_include/ref-example-smb-scan-v.adoc[]
 
 [[smb_scan_parallel]]
 == scan -parallel <n>
@@ -93,7 +93,7 @@ NOTE: The maximum value for n is 61.
 xcp scan -parallel <n> \\<IP address or hostname of SMB server>\copy_share2  
 
 .Show example
-include::../_include/ref-example-smb-scan-paralllel.adoc[]
+include::./_include/ref-example-smb-scan-paralllel.adoc[]
 
 
 [[smb_scan_match_filter]]
@@ -107,27 +107,27 @@ xcp scan -match <filter> \\<IP address or hostname of SMB server>\copy_share2
 In the following example, `scan -match` scans all files that have changed between one month and one year and prints a line to the console for each file found. The ISO format of its last modification time, a human-readable size of the file, its type, and its relative path are returned for each file.
 
 .Show example
-include::../_include/ref-example-smb-scan-match.adoc[]
+include::./_include/ref-example-smb-scan-match.adoc[]
 
 In the following example, `scan -match` lists the files that have not been modified for more than 3 months and have a size bigger than 4MB.
 
 .Show example
-include::../_include/ref-example-smb-scan-match-no-mod.adoc[]
+include::./_include/ref-example-smb-scan-match-no-mod.adoc[]
 
 The first of the following two examples only matches the directories and the formatting adds a comma between the variables "mtime", "relative path", and "depth". 
 
 The second example redirects the same output to "name.csv".
 
 .Show example
-include::../_include/ref-example-smb-scan-match-direct-only.adoc[]
+include::./_include/ref-example-smb-scan-match-direct-only.adoc[]
 
 .Show example
-include::../_include/ref-example-smb-scan-match-redirect.adoc[]
+include::./_include/ref-example-smb-scan-match-redirect.adoc[]
 
 The following example prints the full path and the raw `mtime` value of all the files that are not directories. The `mtime` value is padded with 70 characters to facilitate a readable console report.
 
 .Show example
-include::../_include/ref-example-smb-scan-match-mtime.adoc[]
+include::./_include/ref-example-smb-scan-match-mtime.adoc[]
 
 [[smb_scan_exclude_filter]]
 == scan -exclude <filter>
@@ -140,22 +140,22 @@ xcp scan -exclude <filter>> \\<IP address or hostname of SMB server>\localtest\a
 In the following example, `scan -exclude` excludes any file that has changed between one month and one year, and prints a line to the console for each file that is not excluded. The details printed for each file are the ISO format of its last modification time, a human-readable size of the file, its type, and its relative path.
 
 .Show example
-include::../_include/ref-example-smb-scan-exclude.adoc[]
+include::./_include/ref-example-smb-scan-exclude.adoc[]
 
 In the following example, `scan -exclude` lists the not excluded files that have not been modified for more than three months and have a size greater than 5.5 KB. The details that are printed for each file are the ISO format of its last modification time, a human-readable size of the file, its type, and its relative path.
 
 .Show example
-include::../_include/ref-example-smb-scan-exclude-no-mod.adoc[]
+include::./_include/ref-example-smb-scan-exclude-no-mod.adoc[]
 
 This following example excludes directories. It lists the not excluded files with formatting that adds a comma between the variables `mtime`, `relpath`, and `depth`.
 
 .Show example
-include::../_include/ref-example-smb-scan-exclude-directories.adoc[]
+include::./_include/ref-example-smb-scan-exclude-directories.adoc[]
 
 This following example prints the complete file path and the raw `mtimevalue` of all files that are not directories. The `mtimevalue` is padded with 70 characters to facilitate a readable console report.
 
 .Show example
-include::../_include/ref-example-smb-scan-exclude-mtime.adoc[]
+include::./_include/ref-example-smb-scan-exclude-mtime.adoc[]
 
 == scan -preserve-atime
 Use the `-preserve-atime` parameter with the `scan` command to restore the last accessed date of all the files on the source and reset the `atime` to the original value before XCP read the file.
@@ -167,7 +167,7 @@ When you scan an SMB share, the access time is modified on the files (if the sto
 xcp scan -preserve-atime \\<IP address or hostname of SMB server>\copy_share2
 
 .Show example
-include::../_include/ref-example-smb-scan-preserveatime.adoc[]
+include::./_include/ref-example-smb-scan-preserveatime.adoc[]
 
 
 [[smb_scan_depth]]
@@ -182,7 +182,7 @@ NOTE: The `–depth` option specifies how deep XCP can scan the files into the s
 xcp scan -depth <2> \\<IP address or hostname of SMB server>\copy_share2
 
 .Show example
-include::../_include/ref-example-smb-scan-depth-n.adoc[]
+include::./_include/ref-example-smb-scan-depth-n.adoc[]
 
 == scan -stats
 Use the `-stats` parameter with the `scan` command to print tree statistics report formats.
@@ -192,7 +192,7 @@ Use the `-stats` parameter with the `scan` command to print tree statistics repo
 xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share 
 
 .Show example
-include::../_include/ref-example-smb-scan-stats.adoc[]
+include::./_include/ref-example-smb-scan-stats.adoc[]
 
 == scan -html
 Use the `-html` parameter with the `scan` command to save a HTML statistics report.
@@ -204,7 +204,7 @@ NOTE: XCP reports (.csv, .html) are saved in the same location as the XCP binary
 xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol 
 
 .Show example
-include::../_include/ref-example-smb-scan-html.adoc[]
+include::./_include/ref-example-smb-scan-html.adoc[]
 
 == scan -csv
 Use the `-csv` parameter with the `scan` command to save a CSV statistics report.
@@ -214,7 +214,7 @@ Use the `-csv` parameter with the `scan` command to save a CSV statistics report
 xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol 
 
 .Show example
-include::../_include/ref-example-smb-scan-csv.adoc[]
+include::./_include/ref-example-smb-scan-csv.adoc[]
 
 == scan -l
 Use the `-l` parameter with the `scan` command to retrieve a detailed file listing output.
@@ -224,7 +224,7 @@ Use the `-l` parameter with the `scan` command to retrieve a detailed file listi
 xcp scan -l \\<IP address or hostname of SMB server>\copy_share2 
 
 .Show example
-include::../_include/ref-example-smb-scan-l.adoc[]
+include::./_include/ref-example-smb-scan-l.adoc[]
 
 == scan -ownership
 Use the `-ownership` parameter with the `scan` command to retrieve ownership information for files.
@@ -236,7 +236,7 @@ NOTE: You can only use `-ownership` with the `-l`, `-match`, `-fmt`, or `-stats`
 xcp scan -l -ownership \\<IP address or hostname of SMB server>\copy_share2 xcp scan -l -ownership \\<IP address or hostname of SMB server>\copy_share2
 
 .Show example
-include::../_include/ref-example-smb-scan-ownership.adoc[]
+include::./_include/ref-example-smb-scan-ownership.adoc[]
 
 == scan -du
 Use the `-du` parameter with the `scan` command to summarize the space usage of each directory, including subdirectories.
@@ -246,7 +246,7 @@ Use the `-du` parameter with the `scan` command to summarize the space usage of 
 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2
 
 .Show example
-include::../_include/ref-example-smb-scan-du.adoc[]
+include::./_include/ref-example-smb-scan-du.adoc[]
 
 [[smb_scan_fmt]]
 == scan -fmt <expression>
@@ -257,7 +257,7 @@ Use the `-fmt <expression>` parameter with the `scan` command to format a file l
 xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))" \\<IPaddress or hostname of SMB server>\copy_share2
 
 .Show example
-include::../_include/ref-example-smb-scan-fmt.adoc[]
+include::./_include/ref-example-smb-scan-fmt.adoc[]
 
 == scan -ads
 
@@ -268,4 +268,4 @@ Use the `-ads` flag parameter with the `scan` command with to recursively scan t
 xcp scan -ads \\<source_ip_address>\source_share\src
 
 .Show example
-include::../_include/ref-example-smb-scan-ads.adoc[]
+include::./_include/ref-example-smb-scan-ads.adoc[]

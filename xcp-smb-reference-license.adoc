@@ -19,4 +19,4 @@ The SMB `license` command displays XCP license information.
 xcp license
 
 .Show example
-include::../_include/ref-example-smb-license.adoc[]
+include::./_include/ref-example-smb-license.adoc[]
