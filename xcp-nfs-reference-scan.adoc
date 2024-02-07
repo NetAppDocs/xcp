@@ -21,7 +21,7 @@ NetApp recommends that you put the source NFS export mounts in read-only mode du
 [source,cli]
 xcp scan <source_nfs_export_path>
 
-include::../_include/ref-example-nfs-scan.adoc[]
+include::./_include/ref-example-nfs-scan.adoc[]
 
 The following table lists the `scan` parameters and their description.
 
