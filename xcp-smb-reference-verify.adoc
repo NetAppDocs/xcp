@@ -53,7 +53,7 @@ make sure that the target is identical to the source.
 | <<verify_smb_acl, verify -fallback-group FALLBACK_GROUP >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | verify -root | Sync ACL for root directory.
-| <<verify -onlyacl>> | Copy only the security information.
+| <<verify_smb_onlyacl, verify -onlyacl>> | Copy only the security information.
 
 |=== 
 
@@ -289,6 +289,7 @@ Use the `-noacls`, `-fallback-user`, and `-fallback-group` parameters with the `
 [source,cli]
 xcp verify -noacls -fallback-user <fallback_user> -fallback-group <fallback_group><source><target>
 
+[[verify_smb_onlyacl]]
 === verify -onlyacl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
 Use the `-onlyacl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare only the security information between the source and destination.
 

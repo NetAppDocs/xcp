@@ -42,7 +42,7 @@ The following table lists the `copy` parameters and their description.
 | <<smb_copy_acl, copy -acl>> | Copy security information.
 | <<smb_copy_acl, copy -fallback-user FALLBACK_USER >> 
 | Active Directory user or local (non-domain) user on the target machine that receives the permissions of local (non-domain) source machine users. For example, domain\administrator.
-| <<smb_copy_acl, copy -fallback-group FALLBACK_GROUP> >> 
+| <<smb_copy_acl, copy -fallback-group FALLBACK_GROUP >> 
 | Active Directory group or local (non-domain) group on the target machine that receives the permissions of local (non-domain) source machine groups. For example, domain\administrators.
 | copy -root | Copy the ACL for a root directory.
 | <<smb_copy_aclverify, copy -aclverify {yes,no}>> | Provide an option to skip or include ACL verification during the copy -acl operation.
