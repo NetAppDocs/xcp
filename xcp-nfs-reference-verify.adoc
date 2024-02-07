@@ -21,7 +21,7 @@ IMPORTANT: The `verify` command is useful when the source and target directory t
 [source,cli]
 xcp verify <source NFS export path> <destination NFS exportpath>
 
-include::../_include/ref-example-nfs-verify.adoc[]
+include::./_include/ref-example-nfs-verify.adoc[]
 
 The following table lists the `verify` parameters and their description.
 
@@ -66,14 +66,14 @@ Use the `-l` and `-q` parameters with the `scan` command to retrieve file listin
 [source,cli]
 xcp scan -l <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-l.adoc[]
+include::./_include/ref-example-nfs-scan-l.adoc[]
 
 .Syntax
 
 [source,cli]
 xcp scan -q <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-q.adoc[]
+include::./_include/ref-example-nfs-scan-q.adoc[]
 
 [[stats_csv_html]]
 == scan -stats, scan -csv, and scan -html
@@ -87,21 +87,21 @@ NOTE: XCP reports (.csv, .html) are saved in the catalog location specified in t
 [source,cli]
 xcp scan -stats <ip_address>:/source_vol
 
-include::../_include/ref-example-nfs-scan-stats.adoc[]
+include::./_include/ref-example-nfs-scan-stats.adoc[]
 
 .Syntax
 
 [source,cli]
 xcp scan -csv <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-csv.adoc[]
+include::./_include/ref-example-nfs-scan-csv.adoc[]
 
 .Syntax
 
 [source,cli]
 xcp scan -html <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-html.adoc[]
+include::./_include/ref-example-nfs-scan-html.adoc[]
 
 == scan -nonames
 
@@ -114,7 +114,7 @@ NOTE: When used with the `scan` command, the `-nonames` parameter only applies t
 [source,cli]
 xcp scan -nonames <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-nonames.adoc[]
+include::./_include/ref-example-nfs-scan-nonames.adoc[]
 
 [[scan_newid]]
 == scan -newid <name>
@@ -126,7 +126,7 @@ Use the `-newid <name>` parameter with the `scan` command to specify the catalog
 [source,cli]
 xcp scan -newid <name> <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-newid.adoc[]
+include::./_include/ref-example-nfs-scan-newid.adoc[]
 
 [[scan_id]]
 == scan -id <catalog_name>
@@ -138,7 +138,7 @@ Use the `-id` parameter with the `scan` command to specify the catalog name of p
 [source,cli]
 xcp scan -id <catalog_name> 
 
-include::../_include/ref-example-nfs-scan-id.adoc[]
+include::./_include/ref-example-nfs-scan-id.adoc[]
 
 [[scan_match]]
 == scan -match <filter>
@@ -150,7 +150,7 @@ Use the `-match <filter>` parameter with the `scan` command to specify that only
 [source,cli]
 xcp scan -match <filter> <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-match.adoc[]
+include::./_include/ref-example-nfs-scan-match.adoc[]
 
 [[scan_fmt]]
 == scan -fmt <string_expression>
@@ -162,7 +162,7 @@ Use the `-fmt` parameter with the `scan` command to specify that only files and 
 [source,cli]
 xcp scan -fmt <string_expression> <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-fmt.adoc[]
+include::./_include/ref-example-nfs-scan-fmt.adoc[]
 
 
 [[scan_du]]
@@ -175,7 +175,7 @@ Use the `-du` parameter with the `scan` command to summarize the space usage of 
 [source,cli]
 xcp scan -du <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-du.adoc[]
+include::./_include/ref-example-nfs-scan-du.adoc[]
 
 [[scan_md5]]
 == scan -md5 <string_expression>
@@ -189,7 +189,7 @@ NOTE: The checksums are not used for file verification; they are only used for f
 [source,cli]
 xcp scan -md5 <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-md5.adoc[]
+include::./_include/ref-example-nfs-scan-md5.adoc[]
 
 [[scan_depth]]
 == scan -depth <n>
@@ -201,7 +201,7 @@ Use the `-depth <n>` parameter with the `scan` command to limit the search depth
 [source,cli]
 xcp scan -depth <n> <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-depth.adoc[]
+include::./_include/ref-example-nfs-scan-depth.adoc[]
 
 [[scan_dircount]]
 == scan -dircount <n[k]>
@@ -213,7 +213,7 @@ Use the `-dircount <n[k]>` parameter with the `scan` command to specify the requ
 [source,cli]
 xcp scan -dircount <n[k]> <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-dircount.adoc[]
+include::./_include/ref-example-nfs-scan-dircount.adoc[]
 
 [[scan_edupe]]
 == scan -edupe
@@ -225,7 +225,7 @@ Use the `-edupe` parameter with the `scan` command to include the deduplication 
 [source,cli]
 xcp scan -edupe <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-edupe.adoc[]
+include::./_include/ref-example-nfs-scan-edupe.adoc[]
 
 [[scan_bs]]
 == scan -bs <n[k]>
@@ -237,7 +237,7 @@ Use the `-bs <n[k]>` parameter with the `scan` command to specify the read/write
 [source,cli]
 xcp scan -bs <n[k]> <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-bs.adoc[]
+include::./_include/ref-example-nfs-scan-bs.adoc[]
 
 [[scan_parallel]]
 == scan -parallel <n> 
@@ -249,7 +249,7 @@ Use the `-parallel` parameter with the `scan` command to specify the maximum num
 [source,cli]
 xcp scan -parallel <n> <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-parallel.adoc[]
+include::./_include/ref-example-nfs-scan-parallel.adoc[]
 
 [[scan_noid]]
 == scan -noId
@@ -261,7 +261,7 @@ Use the ` -noId` parameter with the `scan` command to disable the creation of a 
 [source,cli]
 xcp scan -noId <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-noid.adoc[]
+include::./_include/ref-example-nfs-scan-noid.adoc[]
 
 [[scan_subdir]]
 == scan -subdir-names
@@ -273,7 +273,7 @@ Use the `-subdir-names` parameter with the `scan` command to retrieve the names 
 [source,cli]
 xcp scan -subdir-names <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-subdir-names.adoc[]
+include::./_include/ref-example-nfs-scan-subdir-names.adoc[]
 
 == scan -acl4
 
@@ -284,7 +284,7 @@ Use the `-acl4` parameter with the `scan` command to process NFSv4 ACLs.
 [source,cli]
 xcp scan -acl4 <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-acl4.adoc[]
+include::./_include/ref-example-nfs-scan-acl4.adoc[]
 
 == scan -preserve-atime 
 
@@ -297,7 +297,7 @@ When an NFS share is scanned, the access time is modified on the files if the st
 [source,cli]
 xcp scan -preserve-atime <ip_address_or_hostname>:/source_vol
 
-include::../_include/ref-example-nfs-scan-preserveatime.adoc[]
+include::./_include/ref-example-nfs-scan-preserveatime.adoc[]
 
 == scan -s3.insecure
 
@@ -308,7 +308,7 @@ Use the `-s3.insecure` parameter with the `scan` command to use HTTP instead of 
 [source,cli]
 xcp scan -s3.insecure s3://<bucket_name>
 
-include::../_include/ref-example-nfs-scan-s3-insecure.adoc[]
+include::./_include/ref-example-nfs-scan-s3-insecure.adoc[]
 
 [[scan_endpoint]]
 == scan -s3.endpoint <s3_endpoint_url>
@@ -320,7 +320,7 @@ Use the `-s3.endpoint <s3_endpoint_url>` parameter with the `scan` command to ov
 [source,cli]
 xcp scan -s3.endpoint https://<endpoint_url>: s3://<bucket_name>
 
-include::../_include/ref-example-nfs-scan-s3-endpoint.adoc[]
+include::./_include/ref-example-nfs-scan-s3-endpoint.adoc[]
 
 [[scan_s3_profile]]
 == scan -s3.profile <name>
@@ -332,7 +332,7 @@ Use the `s3.profile` parameter with the `scan` command to specify a profile from
 [source,cli]
 xcp scan -s3.profile <name> -s3.endpoint https://<endpoint_url>: s3://<bucket_name>
 
-include::../_include/ref-example-nfs-scan-s3-profile.adoc[]
+include::./_include/ref-example-nfs-scan-s3-profile.adoc[]
 
 == scan -s3.noverify
 
@@ -343,5 +343,5 @@ Use the `-s3.noverify` parameter with the `scan` command to override the default
 [source,cli]
 xcp scan -s3.noverify s3://<bucket_name>
 
-include::../_include/ref-example-nfs-scan-s3-noverify.adoc[]
+include::./_include/ref-example-nfs-scan-s3-noverify.adoc[]
 

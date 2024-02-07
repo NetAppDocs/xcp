@@ -22,4 +22,4 @@ NOTE: Before running this command, verify that the license file is downloaded an
 [source,cli]
 xcp activate
 
-include::../_include/ref-example-nfs-activate.adoc[]
+include::./_include/ref-example-nfs-activate.adoc[]

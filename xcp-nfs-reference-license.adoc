@@ -22,7 +22,7 @@ Before running this command, verify that the license file is downloaded and copi
 [source,cli]
 xcp license
 
-include::../_include/ref-example-nfs-license.adoc[]
+include::./_include/ref-example-nfs-license.adoc[]
 
 == license update
 
@@ -32,4 +32,4 @@ Use the `update` parameter with the `license` command to retrieve the latest lic
 [source,cli]
 xcp license update
 
-include::../_include/ref-example-nfs-license-update.adoc[]
+include::./_include/ref-example-nfs-license-update.adoc[]

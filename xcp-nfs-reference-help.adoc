@@ -30,5 +30,5 @@ Use the `info` parameter with the `help` command to display documentation, examp
 [source,cli]
 xcp help info
 
-include::../_include/ref-example-nfs-help-info.adoc[]
+include::./_include/ref-example-nfs-help-info.adoc[]
 
