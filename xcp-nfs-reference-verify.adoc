@@ -197,7 +197,7 @@ Use the `-acl4` parameter with the `verify` command to process NFS4 ACLs.
 .Syntax
 
 [source,cli]
-xcp/linux/xcp verify -acl4 -noid  <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+xcp verify -acl4 -noid  <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-verify-acl4.adoc[]
 

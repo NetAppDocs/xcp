@@ -1,0 +1,19 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp verify -preserve-atime
+<IP_address>:/source_vol <destination_IP_address>:/dest_vol
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2022-06-
+30_15.29.03.686503
+xcp: Job ID: Job_2022-06-30_15.29.03.723260_verify
+Xcp command : xcp verify -preserve-atime <IP_address>:/source_vol <destination_IP_address>:/dest_vol Stats :
+110 scanned, 110 indexed, 100% found (96 have data), 96 compared, 100% verified (data, attrs,
+mods)
+Speed : 4.87 MiB in (3.02 MiB/s), 160 KiB out (99.4 KiB/s) Total Time : 1s.
+Job ID : Job_2022-06-30_15.29.03.723260_verify
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2022-06-30_15.29.03.723260_verify.log STATUS :
+PASSED
+----
+====

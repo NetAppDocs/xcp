@@ -1,0 +1,21 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp verify -nodata <IP address of source NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+
+xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-
+05_02.18.01.159115
+70,052 scanned, 29,795 indexed, 43,246 found, 25.8 MiB in (5.14 MiB/s), 9.39 MiB out
+(1.87 MiB/s), 5s
+117,136 scanned, 94,723 indexed, 101,434 found, 50.3 MiB in (4.90 MiB/s), 22.4 MiB out (2.60
+MiB/s), 10s
+Xcp command : xcp verify -nodata <IP address of source NFS server>:/source_vol <IP address of
+destination NFS server>:/dest_vol
+134,630 scanned, 0 matched, 100% found (121,150 have data), 100% verified (attrs, mods), 0
+different item, 0 error
+Speed : 62.7 MiB in (4.65 MiB/s), 30.2 MiB out (2.24MiB/s)
+Total Time : 13s.
+STATUS : PASSED
+----
+====

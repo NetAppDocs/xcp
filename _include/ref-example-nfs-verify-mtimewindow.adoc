@@ -1,0 +1,41 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp verify -mtimewindow 2 <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+
+xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-
+06_02.26.03.797492
+27,630 scanned, 9,430 found, 5,630 compared, 5,630 same data, 322 MiB in (64.1 MiB/s), 3.91 MiB
+out (798 KiB/s), 5s
+38,478 scanned, 19,840 found, 14,776 compared, 14,776 same data, 811 MiB in (97.8 MiB/s), 8.86
+MiB out (1012 KiB/s), 10s
+55,304 scanned, 14,660 indexed, 29,893 found, 23,904 compared, 23,904 same data, 1.33 GiB in
+(109 MiB/s), 14.6 MiB out (1.14 MiB/s), 15s
+64,758 scanned, 24,700 indexed, 43,133 found, 36,532 compared, 36,532 same data, 1.65 GiB in
+(65.3 MiB/s), 21.0 MiB out (1.28 MiB/s), 20s
+75,317 scanned, 34,655 indexed, 56,020 found, 48,942 compared, 48,942 same data, 2.01 GiB in
+(72.5 MiB/s), 27.4 MiB out (1.25 MiB/s), 25s
+95,024 scanned, 54,533 indexed, 70,675 found, 61,886 compared, 61,886 same data, 2.41 GiB in
+(81.3 MiB/s), 34.9 MiB out (1.49 MiB/s), 30s
+102,407 scanned, 64,598 indexed, 85,539 found, 76,158 compared, 76,158 same data, 2.74 GiB in
+(67.3 MiB/s), 42.0 MiB out (1.42 MiB/s), 35s
+113,209 scanned, 74,661 indexed, 97,126 found, 86,525 compared, 86,525 same data, 3.09 GiB in
+(72.6 MiB/s), 48.0 MiB out (1.19 MiB/s), 40s
+125,040 scanned, 84,710 indexed, 108,480 found, 96,253 compared, 96,253 same data, 3.51 GiB in
+(84.0 MiB/s), 53.6 MiB out (1.10 MiB/s), 45s
+132,726 scanned, 99,775 indexed, 117,252 found, 103,740 compared, 103,740 same data, 4.04 GiB in
+(108 MiB/s), 58.4 MiB out (986 KiB/s), 50s
+134,633 scanned, 109,756 indexed, 126,700 found, 112,978 compared, 112,978 same data, 4.52 GiB
+in (97.6 MiB/s), 63.6 MiB out (1.03 MiB/s), 55s
+134,633 scanned, 129,807 indexed, 134,302 found, 120,779 compared, 120,779 same data, 4.95 GiB
+in (86.5 MiB/s), 68.8 MiB out (1.02 MiB/s), 1m0s
+Xcp command : xcp verify -mtimewindow 2 <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+134,633 scanned, 0 matched, 100% found (121,150 have data), 100% verified (data, attrs, mods), 0
+different item, 0 error
+Speed : 4.95 GiB in (83.6 MiB/s), 69.2 MiB out (1.14 MiB/s)
+Total Time : 1m0s.
+STATUS : PASSED
+
+----
+====

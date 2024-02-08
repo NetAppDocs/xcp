@@ -1,0 +1,38 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp verify -bs 32k <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+
+xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-
+05_04.20.19.266399
+29,742 scanned, 9,939 found, 5,820 compared, 5,820 same data, 312 MiB in (62.3 MiB/s), 4.58 MiB
+out (938 KiB/s), 5s
+40,156 scanned, 20,828 found, 15,525 compared, 15,525 same data, 742 MiB in (85.0 MiB/s), 10.2
+MiB out (1.10 MiB/s), 10s
+41,906 scanned, 9,846 indexed, 30,731 found, 25,425 compared, 25,425 same data, 1.14 GiB in
+(85.6 MiB/s), 16.1 MiB out (1.18 MiB/s), 15s
+66,303 scanned, 29,712 indexed, 42,861 found, 36,708 compared, 36,708 same data, 1.61 GiB in
+(94.9 MiB/s), 23.7 MiB out (1.53 MiB/s), 20s
+70,552 scanned, 34,721 indexed, 58,157 found, 51,528 compared, 51,528 same data, 1.96 GiB in
+(73.0 MiB/s), 31.4 MiB out (1.53 MiB/s), 25s
+100,135 scanned, 59,611 indexed, 76,047 found, 66,811 compared, 66,811 same data, 2.29 GiB in
+(66.3 MiB/s), 40.7 MiB out (1.82 MiB/s), 30s
+105,951 scanned, 69,665 indexed, 90,022 found, 80,330 compared, 80,330 same data, 2.71 GiB in
+(85.3 MiB/s), 48.1 MiB out (1.49 MiB/s), 35s
+113,440 scanned, 89,486 indexed, 101,634 found, 91,152 compared, 91,152 same data, 3.19 GiB in
+(97.8 MiB/s), 55.4 MiB out (1.45 MiB/s), 40s
+128,693 scanned, 94,484 indexed, 109,999 found, 97,319 compared, 97,319 same data, 3.59 GiB in
+(82.6 MiB/s), 60.2 MiB out (985 KiB/s), 45s
+134,630 scanned, 94,484 indexed, 119,203 found, 105,402 compared, 105,402 same data, 3.98 GiB in
+(78.3 MiB/s), 65.1 MiB out (986 KiB/s), 50s
+134,630 scanned, 104,656 indexed, 127,458 found, 113,774 compared, 113,774 same data, 4.49 GiB
+in (103 MiB/s), 70.8 MiB out (1.15 MiB/s), 55s
+Xcp command : xcp verify -bs 32k <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+134,630 scanned, 0 matched, 100% found (121,150 have data), 100% verified (data, attrs, mods), 0
+different item, 0 error
+Speed : 4.96 GiB in (84.5 MiB/s), 77.5 MiB out (1.29 MiB/s)
+Total Time : 1m0s.
+STATUS : PASSED
+----
+====

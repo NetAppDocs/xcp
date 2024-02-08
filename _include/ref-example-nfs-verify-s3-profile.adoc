@@ -1,0 +1,31 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp verify -s3.profile sg -s3.endpoint https://<endpoint_url>: hdfs:///user/test s3://bucket
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
+08_09.05.22.412914
+Job ID: Job_2023-06-08_09.05.22.412914_verify
+Xcp command : xcp verify -s3.profile sg -s3.endpoint https://<endpoint_url>: hdfs://user/test s3://bucket
+Stats : 8 scanned, 8 indexed, 100% found (5 have data), 5 compared, 100% verified (data)
+Speed : 21.3 KiB in (6.52 KiB/s), 91.2 KiB out (27.9 KiB/s)
+Total Time : 3s.
+Job ID : Job_2023-06-08_09.05.22.412914_verify
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-08_09.05.22.412914_verify.log
+STATUS : PASSED
+[root@client1 linux]# ./xcp verify -s3.profile sg -s3.endpoint https://<endpoint_url>:hdfs:///user/demo s3://bucket
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
+08_09.20.53.763772
+Job ID: Job_2023-06-08_09.20.53.763772_verify
+Xcp command : xcp verify -s3.profile sg -s3.endpoint https://<endpoint_url>:
+hdfs:///user/demo s3://bucket
+Stats : 8 scanned, 8 indexed, 100% found (5 have data), 5 compared, 100% verified (data)
+Speed : 25.3 KiB in (14.5 KiB/s), 93.7 KiB out (53.8 KiB/s)
+Total Time : 1s.
+Job ID : Job_2023-06-08_09.20.53.763772_verify
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-08_09.20.53.763772_verify.log
+STATUS : PASSED
+----
+====

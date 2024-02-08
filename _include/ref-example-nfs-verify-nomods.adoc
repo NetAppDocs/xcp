@@ -1,0 +1,40 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost /]# ./xcp verify -nomods <IP address of NFS server>:/source_vol <IP address of
+destination NFS server>:/dest_vol
+
+xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-
+05_02.22.33.738593
+40,371 scanned, 10,859 found, 5,401 compared, 5,401 same data, 296 MiB in (59.1 MiB/s), 4.29 MiB
+out (876 KiB/s), 5s
+40,371 scanned, 22,542 found, 17,167 compared, 17,167 same data, 743 MiB in (88.9 MiB/s), 9.67
+MiB out (1.07 MiB/s), 10s
+43,521 scanned, 4,706 indexed, 32,166 found, 26,676 compared, 26,676 same data, 1.17 GiB in
+(91.3 MiB/s), 14.5 MiB out (996 KiB/s), 15s
+70,260 scanned, 29,715 indexed, 43,680 found, 37,146 compared, 37,146 same data, 1.64 GiB in
+(96.0 MiB/s), 21.5 MiB out (1.38 MiB/s), 20s
+75,160 scanned, 34,722 indexed, 60,079 found, 52,820 compared, 52,820 same data, 2.01 GiB in
+(74.4 MiB/s), 29.1 MiB out (1.51 MiB/s), 25s
+102,874 scanned, 69,594 indexed, 77,322 found, 67,907 compared, 67,907 same data, 2.36 GiB in
+(71.2 MiB/s), 38.3 MiB out (1.85 MiB/s), 30s
+110,284 scanned, 69,594 indexed, 89,143 found, 78,952 compared, 78,952 same data, 2.82 GiB in
+(92.8 MiB/s), 43.9 MiB out (1.08 MiB/s), 35s
+112,108 scanned, 79,575 indexed, 100,228 found, 89,856 compared, 89,856 same data, 3.25 GiB in
+(89.3 MiB/s), 49.6 MiB out (1.15 MiB/s), 40s
+128,122 scanned, 99,743 indexed, 111,358 found, 98,663 compared, 98,663 same data, 3.80 GiB in
+(112 MiB/s), 55.8 MiB out (1.24 MiB/s), 45s
+134,630 scanned, 104,738 indexed, 123,253 found, 109,472 compared, 109,472 same data, 4.36 GiB
+in (114 MiB/s), 61.7 MiB out (1.16 MiB/s), 50s
+134,630 scanned, 119,809 indexed, 133,569 found, 120,008 compared, 120,008 same data, 4.94 GiB
+in (115 MiB/s), 67.8 MiB out (1.20 MiB/s), 55s]
+
+Xcp command : xcp verify -nomods <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+134,630 scanned, 0 matched, 100% found (121,150 have data), 100% verified (data, attrs), 0
+different item, 0 error
+Speed : 4.95 GiB in (90.5 MiB/s), 69.2 MiB out (1.24 MiB/s)
+Total Time : 56s.
+STATUS : PASSED
+----
+====
