@@ -2,6 +2,21 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp delete -force -exclude "fnm('USER5')" 10.101.10.101:/temp7/user2/
 
+Job ID: Job_2023-04-25_07.54.25.241216_delete
+WARNING: You have selected 10.101.10.101:/temp7/user2 for removing data. Data in this path
+/temp7/user2 will be deleted.
+Recursively removing data in 10.101.10.101:/temp7/user2 ...
+29,946 scanned, 1 excluded, 6,492 removes, 977 rmdirs, 7.42 MiB in (1.48 MiB/s), 1.54 MiB out
+(316 KiB/s), 5s
+Xcp command : xcp delete -force -exclude fnm('USER5') 10.101.10.101:/temp7/user2/
+Stats : 29,946 scanned, 1 excluded, 28,160 removes, 1,785 rmdirs
+Speed : 10.6 MiB in (1.18 MiB/s), 5.03 MiB out (574 KiB/s)
+Total Time : 8s.
+Job ID : Job_2023-04-25_07.54.25.241216_delete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-25_07.54.25.241216_delete.log
+STATUS : PASSED
+[root@client1 linux]#
 ----
 ====

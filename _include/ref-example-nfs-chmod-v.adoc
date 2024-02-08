@@ -1,0 +1,21 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chmod -mode 111 -v file:///mnt/s_v1/D1/
+
+mode of 'file:///mnt/s_v1/D1' changed from 0777 to 0111
+mode of 'file:///mnt/s_v1/D1/1.txt' changed from 0777 to 0111
+mode of 'file:///mnt/s_v1/D1/softlink_1.img' changed from 0777 to 0111
+mode of 'file:///mnt/s_v1/D1/softlink_to_hardlink_1.img' changed from 0777 to 0111 mode
+of 'file:///mnt/s_v1/D1/1.img' changed from 0777 to 0111
+mode of 'file:///mnt/s_v1/D1/hardlink_1.img' changed from 0777 to 0111 mode of
+'file:///mnt/s_v1/D1/1.img1' changed from 0777 to 0111
+Xcp command : xcp chmod -mode 111 -v file:///mnt/s_v1/D1/ Stats : 7 scanned, 7
+changed mode
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@user-1 linux]#
+----
+====

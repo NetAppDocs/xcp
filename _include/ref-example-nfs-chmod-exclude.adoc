@@ -1,0 +1,16 @@
+.Show example
+[%collapsible]
+====
+----
+70
+[root@user-1 linux]# ./xcp chmod -exclude "fnm('3.img')" -mode 770 101.11.10.10:/s_v1/D3/
+
+Excluded: 1 excluded, 0 did not match exclude criteria
+Xcp command : xcp chmod -exclude fnm('3.img') -mode 770 101.11.10.10:/s_v1/D3/
+Stats : 5 scanned, 1 excluded, 5 changed mode
+Speed : 2.10 KiB in (7.55 KiB/s), 976 out (3.43 KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@user-1 linux]#
+----
+====

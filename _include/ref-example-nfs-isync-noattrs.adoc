@@ -2,6 +2,28 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp isync -noattrs <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
 
+Job ID: Job_2023-11-16_22.49.22.056646_isync
+18,036 scanned, 940 MiB in (168 MiB/s), 2.67 MiB out (488 KiB/s), 5s
+30,617 scanned, 285 removed, 4.23 GiB in (666 MiB/s), 12.0 MiB out (1.82 MiB/s), 10s
+32,975 scanned, 746 removed, 6.71 GiB in (505 MiB/s), 18.3 MiB out (1.25 MiB/s), 15s
+34,354 scanned, 1,000 removed, 9.39 GiB in (543 MiB/s), 24.9 MiB out (1.32 MiB/s), 20s
+34,594 scanned, 1,000 removed, 12.1 GiB in (540 MiB/s), 31.2 MiB out (1.24 MiB/s), 26s
+36,142 scanned, 722 copied, 1,000 removed, 14.9 GiB in (540 MiB/s), 73.7 MiB out (7.93 MiB/s),
+31s
+.
+.
+.
+42,496 scanned, 1,000 copied, 1,000 removed, 234 GiB in (716 MiB/s), 582 MiB out (1.55 MiB/s),
+7m22s
+Xcp command : xcp isync -noattrs <<source_ip_address>>:/testvol_flex <destination_ip_address>:/dest_vol
+Stats : 1,000 removed, 42,496 scanned, 1,000 copied
+Speed : 234 GiB in (542 MiB/s), 583 MiB out (1.32 MiB/s)
+Total Time : 7m22s.
+Job ID : Job_2023-11-16_22.49.22.056646_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_22.49.22.056646_isync.log
+Error Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_22.49.22.056646_isync.error
+STATUS : PASSED
 ----
 ====

@@ -1,0 +1,16 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chown -group-from group1 -group group2
+101.101.10.210:/s_v1/smaple_set/D1
+
+Xcp command : xcp chown -group-from group1 -group group2
+101.101.10.210:/s_v1/smaple_set/D1
+Stats : 6 scanned, 6 changed ownership
+Speed : 2.25 KiB in (4.99 KiB/s), 1.11 KiB out (2.47 KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@user-1 linux]#
+----
+====

@@ -2,6 +2,19 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp delete -force -preserve-atime <IP_address>:/temp7/user2/
 
+Job ID: Job_2023-04-25_07.55.30.972162_delete
+WARNING: You have selected <IP_address>:/temp7/user2 for removing data. Data in this path
+/temp7/user2 will be deleted.
+Recursively removing data in <IP_address>:/temp7/user2 ...
+Xcp command : xcp delete -force -preserve-atime <IP_address>:/temp7/user2/
+Stats : 256 scanned, 255 rmdirs
+Speed : 199 KiB in (108 KiB/s), 75.7 KiB out (41.1 KiB/s)
+Total Time : 1s.
+Job ID : Job_2023-04-25_07.55.30.972162_delete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-25_07.55.30.972162_delete.log
+STATUS : PASSED
+[root@client-1 linux]#
 ----
 ====

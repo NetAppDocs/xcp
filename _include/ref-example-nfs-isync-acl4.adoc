@@ -2,6 +2,18 @@
 [%collapsible]
 ====
 ----
+/xcp/linux/xcp isync -newid Index_isync_1448722 -acl4 <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
+Job ID: Job_2023-11-14_01.09.57.595876_isync
+target scan completed: 6 scanned, 1 indexed, 13.9 KiB in (6.80 KiB/s), 18.8 KiB out (9.15
+KiB/s), 2s.
+Xcp command : xcp isync -newid Index_isync_1448722 -acl4 <source_ip_address>:/source_vol
+<destination_ip_address>:/dest_vol
+Stats : 6 scanned, 3 indexed
+Speed : 14.3 KiB in (6.93 KiB/s), 23.6 KiB out (11.5 KiB/s)
+Total Time : 2s.
+Job ID : Job_2023-11-14_01.09.57.595876_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-14_01.09.57.595876_isync.log
+STATUS : PASSED
 ----
 ====

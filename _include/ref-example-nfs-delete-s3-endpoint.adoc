@@ -2,6 +2,19 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp delete -s3.endpoint https://<endpoint_url>: s3://xcp-testing
 
+Job ID: Job_2023-06-13_11.39.33.042545_delete
+WARNING: You have selected s3://xcp-testing for removing data. Data in this path //xcp-testing
+will be deleted.
+Are you sure you want to delete (yes/no): yes
+Recursively removing data in s3://xcp-testing ...
+Xcp command : xcp delete -s3.endpoint https://<endpoint_url>: s3://xcp-testing
+Stats : 8 scanned, 5 s3.objects, 5 s3.removed
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 4s.
+Job ID : Job_2023-06-13_11.39.33.042545_delete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_11.39.33.042545_delete.log
+STATUS : PASSED
 ----
 ====

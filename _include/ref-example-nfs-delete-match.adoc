@@ -2,6 +2,20 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp delete -match "fnm('XCP_copy_2023-04-25_05.51.28.315997')" 10.101.10.101:/xcp_catalog
 
+Job ID: Job_2023-04-25_06.10.29.637371_delete
+WARNING: You have selected 10.101.10.101:/xcp_catalog for removing data. Data in this path
+/xcp_catalog will be deleted.
+Are you sure you want to delete (yes/no): yes
+Recursively removing data in 10.234.94.159:/xcp_catalog ...
+Xcp command : xcp delete -match fnm('XCP_copy_2023-04-25_05.51.28.315997')
+10.101.10.101:/xcp_catalog
+Stats : 209 scanned, 14 matched, 12 removes, 2 rmdirs
+Speed : 58.9 KiB in (18.6 KiB/s), 8.25 KiB out (2.60 KiB/s)
+Total Time : 3s.
+Job ID : Job_2023-04-25_06.10.29.637371_delete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-25_06.10.29.637371_delete.log
+STATUS : PASSED
 ----
 ====

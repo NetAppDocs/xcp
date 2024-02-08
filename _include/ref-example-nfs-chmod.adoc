@@ -1,0 +1,14 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chmod -mode <IP address>:/source_vol
+
+Xcp command : xcp chmod -mode <IP address>://source_vol
+Stats : 6 scanned, 4 changed mode
+Speed : 1.96 KiB in (2.13 KiB/s), 812 out (882/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@user-1 linux] #
+----
+====

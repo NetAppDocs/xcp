@@ -2,6 +2,23 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp indexdelete -match "fnm('S3_index12')"
 
+Job ID: Job_2023-11-16_02.44.39.862423_indexdelete
+=========================================================================
+Name Command Size Created Updated
+=========================================================================
+S3_index12 copy 52.5 KiB 16-Nov-2023 16-Nov-2023
+5 scanned, 1 matched, 141 KiB in (121 KiB/s), 6.05 KiB out (5.20 KiB/s), 1s.
+WARNING: 1 matched index will be deleted permanently.
+Are you sure you want to delete (yes/no): yes
+Xcp command : xcp indexdelete -match fnm('S3_index12')
+Stats : 19 scanned, 1 matched, 1 index deleted
+Speed : 146 KiB in (29.3 KiB/s), 8.59 KiB out (1.72 KiB/s)
+Total Time : 4s.
+Job ID : Job_2023-11-16_02.44.39.862423_indexdelete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.44.39.862423_indexdelete.log
+STATUS : PASSED
+[root@client1 linux]#
 ----
 ====

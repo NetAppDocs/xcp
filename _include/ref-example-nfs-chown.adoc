@@ -1,0 +1,22 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chown -user user2 -v 101.101.10.110:/s_v1/smaple_set/D1
+
+Sat Apr 2 23:06:05 2022
+changed ownership of 101.101.10.110:/s_v1/smaple_set/D1 from 1001:0 to 1004:0
+changed ownership of 101.101.10.110:/s_v1/smaple_set/D1/1.txt from 1001:0 to 1004:0
+changed ownership of 101.101.10.110:/s_v1/smaple_set/D1/softlink_1.img from 1001:0 to 1004:0
+changed ownership of 101.101.10.110:/s_v1/smaple_set/D1/1.img from 1001:0 to 1004:0
+changed ownership of 101.101.10.110:/s_v1/smaple_set/D1/hardlink_1.img from 1001:0 to 1004:0
+changed ownership of 101.101.10.110:/s_v1/smaple_set/D1/softlink_to_hardlink_1.img from 1001:0 to
+1004:0
+Xcp command : xcp chown -user user2 -v 101.101.10.110:/s_v1/smaple_set/D1
+Stats : 6 scanned, 6 changed ownership
+Speed : 2.25 KiB in (1.82 KiB/s), 1.11 KiB out (923/s)
+Total Time : 1s.
+STATUS : PASSED
+[root@user-1 linux]#
+----
+====

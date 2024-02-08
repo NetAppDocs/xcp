@@ -2,6 +2,23 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp isync estimate -id <name>
 
+Job ID: Job_2023-11-20_04.08.18.967541_isync_estimate
+Index: aa1batch_error1 {source: <source_ip_address>:/src, target: <destination_ip_address>:/dest}
+30,611 scanned, 786 MiB in (141 MiB/s), 3.60 MiB out (661 KiB/s), 5s
+45,958 scanned, 1.92 GiB in (223 MiB/s), 8.48 MiB out (939 KiB/s), 10s
+53,825 scanned, 3.11 GiB in (216 MiB/s), 13.5 MiB out (912 KiB/s), 16s
+67,260 scanned, 4.33 GiB in (231 MiB/s), 18.6 MiB out (961 KiB/s), 22s
+81,328 scanned, 5.57 GiB in (253 MiB/s), 23.8 MiB out (1.05 MiB/s), 27s
+85,697 scanned, 6.85 GiB in (241 MiB/s), 29.2 MiB out (1005 KiB/s), 32s
+85,697 scanned, 8.14 GiB in (262 MiB/s), 34.5 MiB out (1.06 MiB/s), 37s
+Xcp command : xcp isync estimate -id <name>
+Estimated Time : 45.1s
+Job ID : Job_2023-11-20_04.08.18.967541_isync_estimate
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-20_04.08.18.967541_isync_estimate.log
+Error Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-20_04.08.18.967541_isync_estimate.error
+STATUS : PASSED
+[root@client1 linux]#
 ----
 ====

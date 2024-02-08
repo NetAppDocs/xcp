@@ -2,6 +2,19 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp delete -force -parallel 8 -match "fnm('2023-04-25_05.49.26.733160*')" 10.101.10.101:/xcp_catalog/
 
+Job ID: Job_2023-04-25_06.15.27.024987_delete
+WARNING: You have selected 10.101.10.101:/xcp_catalog for removing data. Data in this path /xcp_catalog will be deleted.
+Recursively removing data in 10.101.10.101:/xcp_catalog ...
+Xcp command : xcp delete -force -parallel 8 -match fnm('2023-04-25_05.49.26.733160*')
+10.101.10.101:/xcp_catalog/
+Stats : 182 scanned, 1 matched, 1 remove
+Speed : 50.0 KiB in (115 KiB/s), 5.45 KiB out (12.5 KiB/s)
+Total Time : 0s.
+Job ID : Job_2023-04-25_06.15.27.024987_delete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-25_06.15.27.024987_delete.log
+STATUS : PASSED
+[root@client1 linux]#
 ----
 ====

@@ -2,6 +2,38 @@
 [%collapsible]
 ====
 ----
+[root@localhost dest_vol]# /xcp/linux/xcp delete <IP address of destination NFSserver>:/dest_vol
 
+WARNING: You have selected <IP address of destination NFS server>:/dest_vol for
+removing data.Data in this path /dest_vol will be deleted.
+Are you sure you want to delete (yes/no): yes
+Recursively removing data in <IP address of destination NFS server>:/dest_vol ...
+31,996 scanned, 5,786 removes, 3 rmdirs, 8.27 MiB in (1.65 MiB/s), 1.52 MiB out (312
+KiB/s), 5s
+40,324 scanned, 19,829 removes, 22 rmdirs, 12.2 MiB in (799 KiB/s), 3.89 MiB out
+(485 KiB/s),10s
+54,281 scanned, 32,194 removes, 2,365 rmdirs, 17.0 MiB in (991 KiB/s), 6.15 MiB out
+(463 KiB/s),15s
+75,869 scanned, 44,903 removes, 4,420 rmdirs, 23.4 MiB in (1.29 MiB/s), 8.60
+MiB out (501KiB/s), 20s
+85,400 scanned, 59,728 removes, 5,178 rmdirs, 27.8 MiB in (881 KiB/s), 11.1 MiB out
+(511 KiB/s),25s
+106,391 scanned, 76,229 removes, 6,298 rmdirs, 34.7 MiB in (1.39 MiB/s), 14.0
+MiB out (590KiB/s), 30s
+122,107 scanned, 93,203 removes, 7,448 rmdirs, 40.9 MiB in (1.24 MiB/s), 16.9
+MiB out (606KiB/s), 35s
+134,633 scanned, 109,815 removes, 9,011 rmdirs, 46.5 MiB in (1.12 MiB/s), 20.0
+MiB out (622KiB/s), 40s
+134,633 scanned, 119,858 removes, 9,051 rmdirs, 47.9 MiB in (288 KiB/s), 21.4
+MiB out (296KiB/s), 45s
+134,633 scanned, 119,858 removes, 9,051 rmdirs, 47.9 MiB in (0/s), 21.4 MiB out (0/s), 50s
+134,633 scanned, 121,524 removes, 9,307 rmdirs, 48.2 MiB in (51.7 KiB/s), 21.7
+MiB out (49.5KiB/s), 55s
+Xcp command : xcp delete <IP address of destination NFS
+server>:/dest_vol134,633 scanned, 0 matched, 134,632 delete
+items, 0 error
+Speed : 48.7 MiB in (869 KiB/s), 22.2 MiB out
+(396 KiB/s)Total Time : 57s.
+STATUS : PASSED
 ----
 ====
