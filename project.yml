@@ -119,6 +119,8 @@ sidebar:
               url: /xcp-nfs-reference-sync.html
             - title: resume
               url: /xcp-nfs-reference-resume.html
+            - title: verify
+              url: /xcp-nfs-reference-verify.html
         - title: SMB command reference
           entries: 
             - title: SMB command reference overview

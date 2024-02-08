@@ -2,9 +2,10 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp verify -stats <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
-
-228,609 scanned, 49.7 MiB in (9.93 MiB/s), 3.06 MiB out (625 KiB/s), 5s
+[root@localhost /]# ./xcp verify -stats -csv <IP address of source NFS server>:/source_vol <IP
+address of destination NFS server>:/dest_vol
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+224,618 scanned, 48.7 MiB in (9.54 MiB/s), 2.98 MiB out (597 KiB/s), 5s
 == Number of files ==
 empty <8KiB 8-64KiB 64KiB-1MiB 1-10MiB 10-100MiB >100MiB
 235 73,916 43,070 4,020 129 15
@@ -34,8 +35,7 @@ same
 == Modified ==
 >1 year >1 month 1-31 days 1-24 hrs <1 hour <15 mins future
 15
-same 116,121
-same 5,249
+same 121,370
 same
 Total count: 134,630 / same
 Directories: 13,108 / same
@@ -43,11 +43,11 @@ Regular files: 121,385 / same
 Symbolic links: 137 / same
 Special files: None / same
 Hard links: None / same, Multilink files: None / same
-Xcp command : xcp verify -stats <source_ip_address>:/source_vol <<destination_ip_address>:/dest_vol
+Xcp command : xcp verify -stats -csv <IP address of source NFS server>:/source_vol <IP
+address of destination NFS server>:/dest_vol
 269,260 scanned, 0 matched, 0 error
-Speed : 59.5 MiB in (7.44 MiB/s), 3.94 MiB out (506 KiB/s)
+Speed : 59.5 MiB in (7.49 MiB/s), 3.94 MiB out (509 KiB/s)
 Total Time : 7s.
 STATUS : PASSED
 ----
 ====
-
