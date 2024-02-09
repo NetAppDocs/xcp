@@ -4,7 +4,6 @@
 ----
 c:\netapp\xcp>xcp verify -preserve-atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 xcp verify -preserve-atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
 374 scanned, 179 compared, 179 same, 0 different, 0 missing, 0 errors, 5s
 xcp verify -preserve-atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share

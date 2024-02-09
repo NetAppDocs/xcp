@@ -3,8 +3,6 @@
 ====
 ----
 C:\Users\Administrator\Desktop\xcp>xcp --help
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 
-2029
 usage: xcp [-h] [-version]
             {scan,show,listen,configure,copy,sync,verify,license,activate,help}
             ...

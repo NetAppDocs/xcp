@@ -4,7 +4,6 @@
 ----
 c:\netapp\xcp>xcp scan -match "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath, depth]))" \\<IP address or hostname of SMB server>\copy_share2
 xcp scan -match "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath, depth]))" \\<IP address or hostname of SMB server>\copy_share2
-XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
 2013-03-07_15:41:40.376072,copy_share2\agnostic,1 
 2020-03-05_04:15:07.769268,copy_share2,0

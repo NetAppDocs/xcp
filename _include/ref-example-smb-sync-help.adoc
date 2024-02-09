@@ -3,7 +3,6 @@
 ====
 ----
 C:\Netapp\xcp>xcp sync --help
-XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxxx[Network Appliance, Inc] until Tue Jul Xx yyyy
 usage: xcp sync [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>] [-preserve-atime] [-noatime] [-noctime] [-nomtime] [-noattrs] [-atimewindow <float>]
 [-ctimewindow <float>] [-mtimewindow <float>] [-acl] [-fallback-user FALLBACK_USER] [-fallback-group FALLBACK_GROUP] [-loglevel <name>] [-l] [-root]
 [-noownership] [-onlyacl] [-aclverify {yes,no}] [-bs <n>] [-ads] source target

@@ -3,8 +3,6 @@
 ====
 ----
 C:\Users\Administrator\Desktop\xcp>xcp show \\<IP address or hostname of SMB server>
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 
-2029
 Shares Errors Server
 7 0 <IP address or hostname of SMB server>
 == SMB Shares == 

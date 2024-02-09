@@ -3,7 +3,6 @@
 ====
 ----
 c:\netapp\xcp>xcp scan -l \\<IP address or hostname of SMB server>\copy_share2 xcp scan -l \\<IP address or hostname of SMB server>\copy_share2
-XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
 f   195KiB   7y0d copy_share2\ASUP.pm
 f  34.7KiB   7y0d copy_share2\ASUP_REST.pm

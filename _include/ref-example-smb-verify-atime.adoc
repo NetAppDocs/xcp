@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-c:\Netapp\xcp> xcp verify -ll -atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share XCP SMB 1.9.2(c) 2023 NetApp, Inc.; Licensed to xxx [Network Appliance, Inc] until Tue Apr 18 04:47:35 2023
+c:\Netapp\xcp> xcp verify -ll -atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share 
 
 WARNING: your license will expire in less than one week! You can renew your license at https://xcp.netapp.com
 dir1: Changed (atime)

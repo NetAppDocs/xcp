@@ -4,8 +4,7 @@
 ----
 C:\Users\Administrator\Desktop\xcp>xcp license 
 xcp license
-XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
-Licensed to "XXX (xxxx), NetApp Inc, xxxxxxxxx@netapp.com" until Mon Dec 31 00:00:00 2029 
+XCP <version>; (c) yyyy NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 yyyy
 License type: SANDBOX
 License status: ACTIVE 
 Customer name: N/A 

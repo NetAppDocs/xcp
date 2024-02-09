@@ -3,7 +3,7 @@
 ====
 ----
 C:\Netapp\xcp>xcp verify –help
-SMB <version>; (c) 2023 NetApp, Inc.; Licensed to XXX[Network Appliance, Inc] until xx yyyy usage: xcp verify [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>][-preserve-atime]
+usage: xcp verify [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>][-preserve-atime]
 [-loglevel <name>] [-fallback-user FALLBACK_USER]
 [-fallback-group FALLBACK_GROUP] [-noacls] [-nodata] [-stats] [-l] [-root] [-noownership] [-onlyacl] [-noctime] [-nomtime] [-noattrs] [-atime]
 [-atimewindow <float>] [-ctimewindow <float>] [-mtimewindow <float>] [-ads] source target
