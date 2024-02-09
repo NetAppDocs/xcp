@@ -133,6 +133,8 @@ sidebar:
               url: /xcp-nfs-reference-estimate.html
             - title: indexdelete
               url: /xcp-nfs-reference-indexdelete.html
+            - title: isync
+              url: /xcp-nfs-reference-isync.html
             
         - title: SMB command reference
           entries: 
