@@ -126,9 +126,14 @@ sidebar:
             - title: chown
               url: /xcp-nfs-reference-chown.html
             - title: logdump
-               url: /xcp-nfs-reference-logdump.html
-            - titel: delete
-               url: /xcp-nfs-reference-delete.html
+              url: /xcp-nfs-reference-logdump.html
+            - title: delete
+              url: /xcp-nfs-reference-delete.html
+            - title: estimate
+              url: /xcp-nfs-reference-estimate.html
+            - title: indexdelete
+              url: /xcp-nfs-reference-indexdelete.html
+            
         - title: SMB command reference
           entries: 
             - title: SMB command reference overview

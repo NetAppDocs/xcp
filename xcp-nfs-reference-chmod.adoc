@@ -13,8 +13,7 @@ summary: XCP NFS command reference
 :imagesdir: ./media/
 
 [lead]
-The XCP NFS `chmod` command scans and changes the file permission of all the files for the given directory structure. The 'chmod' command requires mode or reference, NFS share, or the POSIX path as a
-variable. The XCP `chmod` command recursively changes the permissions for a given path. The command output displays the total files scanned and the permissions changed in the output.
+The XCP NFS `chmod` command scans and changes the file permission of all the files for the given directory structure. The 'chmod' command requires mode or reference, NFS share, or the POSIX path as a variable. The XCP `chmod` command recursively changes the permissions for a given path. The command output displays the total files scanned and the permissions changed in the output.
 
 
 .Syntax
