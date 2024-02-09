@@ -2,6 +2,27 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# xcp isync -parallel 16 <source_ip_address>:/testvol_flex
+<destination_ip_address>:/dest_vol
 
+Job ID: Job_2023-11-16_23.25.57.058655_isync
+21,279 scanned, 765 MiB in (104 MiB/s), 2.43 MiB out (337 KiB/s), 7s
+30,208 scanned, 126 removed, 3.00 GiB in (461 MiB/s), 9.11 MiB out (1.33 MiB/s), 12s
+35,062 scanned, 592 removed, 6.01 GiB in (615 MiB/s), 17.2 MiB out (1.61 MiB/s), 17s
+35,062 scanned, 592 removed, 7.35 GiB in (272 MiB/s), 20.3 MiB out (642 KiB/s), 22s
+.
+.
+.
+42,496 scanned, 1,027 copied, 1,027 removed, 231 GiB in (602 MiB/s), 576 MiB out (1.31 MiB/s),
+7m40s
+Xcp command : xcp isync -parallel 16 <source_ip_address>:/testvol_flex
+<destination_ip_address>:/dest_vol
+Stats : 1,027 removed, 42,496 scanned, 1,027 copied
+Speed : 234 GiB in (515 MiB/s), 584 MiB out (1.26 MiB/s)
+Total Time : 7m45s.
+Job ID : Job_2023-11-16_23.25.57.058655_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_23.25.57.058655_isync.log
+Error Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_23.25.57.058655_isync.error
+STATUS : PASSED
 ----
 ====

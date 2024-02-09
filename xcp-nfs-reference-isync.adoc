@@ -93,7 +93,7 @@ include::./_include/ref-example-nfs-isync-nomods.adoc[]
 [[nfs_isync_mtimewindow]]
 === isync -mtimewindow <s>
 
-Use the the`-mtimewindow <s>` parameter with the `isync` command to  specify the acceptable modification time difference for verification.
+Use the the `-mtimewindow <s>` parameter with the `isync` command to  specify the acceptable modification time difference for verification.
 
 .Syntax
 
@@ -105,7 +105,7 @@ include::./_include/ref-example-nfs-isync-mtimewindow.adoc[]
 [[nfs_isync_acl4]]
 === isync -acl4
 
-Use the the`-acl4` parameter with the `isync` command to process NFSv4 access control lists (ACLs). 
+Use the the `-acl4` parameter with the `isync` command to process NFSv4 access control lists (ACLs). 
 
 .Syntax
 
@@ -117,7 +117,7 @@ include::./_include/ref-example-nfs-isync-acl4.adoc[]
 [[nfs_isync_acl4_threads]]
 === isync -acl4.threads <n>
 
-Use the the`-acl4.threads <n>` parameter with the `isync` command to specify the per-process thread pool size (default: 100).
+Use the the `-acl4.threads <n>` parameter with the `isync` command to specify the per-process thread pool size (default: 100).
 
 .Syntax
 
@@ -129,7 +129,7 @@ include::./_include/ref-example-nfs-isync-acl4-threads.adoc[]
 [[nfs_isync_acl4_alwaysset]]
 === isync -acl4.alwaysset
 
-Use the the`-acl4.alwaysset` parameter with the `isync` command to use "setacl" for all ACL-capable files and directories.
+Use the the `-acl4.alwaysset` parameter with the `isync` command to use "setacl" for all ACL-capable files and directories.
 
 .Syntax
 
@@ -365,7 +365,7 @@ include::./_include/ref-example-nfs-isync-nomods.adoc[]
 [[nfs_isync_estimate_mtimewindow]]
 === isync estimate -mtimewindow <s>
 
-Use the the`-mtimewindow <s>` parameter with `isync estimate` to specify the acceptable modification time difference for verification.
+Use the the `-mtimewindow <s>` parameter with `isync estimate` to specify the acceptable modification time difference for verification.
 
 .Syntax
 
@@ -377,7 +377,7 @@ include::./_include/ref-example-nfs-isync-estimate-mtimewindow.adoc[]
 [[nfs_isync_estimate_acl4]]
 === isync estimate -acl4
 
-Use the the`-acl4` parameter with `isync estimate` to process NFSv4 access control lists (ACLs). 
+Use the the `-acl4` parameter with `isync estimate` to process NFSv4 access control lists (ACLs). 
 
 .Syntax
 
@@ -389,7 +389,7 @@ include::./_include/ref-example-nfs-isync-estimate-acl4.adoc[]
 [[nfs_isync_estimate_acl4_threads]]
 === isync estimate -acl4.threads <n>
 
-Use the the`-acl4.threads <n>` parameter with `isync estimate` to specify the per-process thread pool size (default: 100).
+Use the the `-acl4.threads <n>` parameter with `isync estimate` to specify the per-process thread pool size (default: 100).
 
 .Syntax
 
@@ -401,7 +401,7 @@ include::./_include/ref-example-nfs-isync-estimate-acl4-threads.adoc[]
 [[nfs_isync_estimate_acl4_alwaysset]]
 === isync estimate -acl4.alwaysset
 
-Use the the`-acl4.alwaysset` parameter with `isync estimate` to use "setacl" for all ACL-capable files and directories.
+Use the the `-acl4.alwaysset` parameter with `isync estimate` to use "setacl" for all ACL-capable files and directories.
 
 .Syntax
 
@@ -481,7 +481,7 @@ Use the the `-id <name>` parameter with `isync estimate` to specify the catalog 
 [source,cli]
 xcp isync estimate -id <name>
 
-include::./_include/ref-example-nfs-isync-estimate-newid.adoc[]
+include::./_include/ref-example-nfs-isync-estimate-id.adoc[]
 
 [[nfs_isync_estimate_loglevel]]
 === isync estimate -loglevel <name>
