@@ -30,7 +30,7 @@ The following table lists the `estimate` parameters and their description.
 | <<nfs_estimate_id, estimate -id <name>  >> | Specifies the catalog name of a previous copy or scan index.
 | <<nfs_estimate_gbit, estimate -gbit <n>  >> | Uses gigabits of bandwidth to estimate best-case time (default: 1).
 | <<nfs_estimate_target, estimate -target <path>  >> | Specifies the target to use for live test copy.
-| <<nfs_estimate_t, estimate --t <n[s|m|h]> >> | Specifies the duration of live test copy (default: 5m).
+| <<nfs_estimate_t, estimate -t <n/s/m/h]> >> | Specifies the duration of live test copy (default: 5m).
 | <<nfs_estimate_bs, estimate -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
 | <<nfs_estimate_dircount, estimate -dircount <n[k]>  >> |Specifies the request size for reading directories (default: 64k).
 | <<nfs_estimate_preserveatime, estimate -preserve-atime >> | Preserves access time of the file or directory (default: False).
