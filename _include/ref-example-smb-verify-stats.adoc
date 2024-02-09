@@ -1,0 +1,43 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
+       == Number of files ==
+	            empty    <8KiB    8-64KiB    64KiB-1MiB   1-10MiB   10-100MiB   >100MiB
+                               81        170            62         2
+on-target                    same       same          same      same
+on-source                    same       same          same      same	
+
+       == Directory entries ==
+	            empty	  1-10     10-100	     100-1K	   1K-10K	     >10K
+        		                       1             1
+on-target                                same          same		
+on-source			             same	      same		
+
+       == Depth ==
+                  0-5	  6-10	    11-15	      16-20	   21-100	     >100
+	              317
+on-target           same					
+on-source	      same					
+
+       == Modified ==
+              >1 year	>1 month  1-31 days    1-24 hrs   <1 hour   <15 mins     future    invalid
+                  315                                    2
+on-target        same                                 same
+on-source        same                                 same
+ 
+Total count: 317 / same / same 
+Directories: 2 / same / same 
+Regular files: 315 / same / same 
+Symbolic links:
+Junctions:
+Special files:
+xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+635 scanned, 0 errors Total Time : 1s 
+STATUS : PASSED
+----
+====

@@ -1,0 +1,28 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\ctladmin\Desktop>xcp sync -onlyacl -fallback-user SMBUSER1 -fallback-group SMBGRP1 \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+XCP SMB <version ; (c) 2022 NetApp, Inc.; Li e sed to X X [Network A pliance Inc] until Sat Apr 16 23:57 5 2022
+
+8,814 scanned,	0	copied,	620	compared,	0	skipped,	0	removed,	0	errors,	6s
+9,294 scanned,	0	copied,	2,064	compared,	0	skipped,	0	removed,	0	errors,	11s
+12,614 scanned,	0	copied,	3,729	compared,	0	skipped,	0	removed,	0	errors,	16s
+13,034 scanned,	0	copied,	5,136	compared,	0	skipped,	0	removed,	0	errors,	21s
+14,282 scanned,	0	copied,	7,241	compared,	0	skipped,	0	removed,	0	errors,	26s
+14,282 scanned,	0	copied,	8,101	compared,	0	skipped,	0	removed,	0	errors,	31s
+14,282 scanned,	0	copied,	8,801	compared,	0	skipped,	0	removed,	0	errors,	36s
+14,282 scanned,	0	copied,	9,681	compared,	0	skipped,	0	removed,	0	errors,	41s
+14,282 scanned,	0	copied,	10,405	compared,	0	skipped,	0	removed,	0	errors,	46s
+14,282 scanned,	0	copied,	11,431	compared,	0	skipped,	0	removed,	0	errors,	51s
+14,282 scanned,	0	copied,	12,471	compared,	0	skipped,	0	removed,	0	errors,	56s
+14,282 scanned,	0	copied,	13,495	compared,	0	skipped,	0	removed,	0	errors,	1m1s
+14,282 scanned,	0	copied,	14,282	compared,	0	skipped,	0	removed,	0	errors,	1m6s
+
+xcp sync -onlyacl -preserve-atime -fallback-user SMBUSER1 -fallback-group SMBGRP1 \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+14,282 scanned, 0 copied, 14,282 compared, 0 skipped, 0 removed, 0 errors 
+Total Time : 1m7s
+STATUS : PASSED
+
+----
+====

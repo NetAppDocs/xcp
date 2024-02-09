@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference-help.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB "help" command reference
+---
+= help
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The SMB `help` command displays a list of commands, command parameters, and a brief description of each. This command is very useful for beginners who are new to XCP.
+
+.Syntax
+[source,cli]
+xcp --help
+
+.Show example
+include::./_include/ref-example-smb-help.adoc[]
+
+== "help <command>"
+
+Use <command> with `help` to display examples and option details for the specified <command>.
+
+.Syntax
+
+[source,cli]
+xcp help <command>
+
+The following example output shows the details, usage, arguments, and optional arguments for the `sync` command.
+
+.Show example
+include::./_include/ref-example-smb-help-command.adoc[]
+

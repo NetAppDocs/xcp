@@ -1,0 +1,22 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference-license.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB "license" command reference
+---
+= license
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The SMB `license` command displays XCP license information.
+
+.Syntax
+[source,cli]
+xcp license
+
+.Show example
+include::./_include/ref-example-smb-license.adoc[]

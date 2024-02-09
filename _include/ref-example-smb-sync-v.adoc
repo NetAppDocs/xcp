@@ -1,0 +1,35 @@
+.Show example
+[%collapsible]
+====
+----
+C:\XCP>xcp sync -v \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx\warning \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 2029
+ERROR failed to remove from target "assembly\GAC_32\Microsoft.CertificateServices.PKIClient.Cmdlets\v4.0_6.3.0.0 31bf3856ad364e35\p ki.psd1": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination server>\\vol_SMB_tar shil\\assembly\\GAC_32\\Microsoft.CertificateServices.PKIClient.Cmdlets\\v4.0_6.3.0.0 31bf3856ad 364e35\\pki.psd1'
+ERROR failed to remove from target "assembly\GAC_64\Microsoft.GroupPolicy.AdmTmplEditor\v4.0_6.3.0.0 31bf3856ad364e35\Microsoft.Gro upPolicy.AdmTmplEditor.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\10.61.
+\vol_SMB_target_xxxxxx\\assembly\\GAC_64\\Microsoft.GroupPolicy.AdmTmplEditor\\v4.0_6.3.0.0 31bf 3856ad364e35\\Microsoft.GroupPolicy.AdmTmplEditor.dll'
+1,933 scanned, 1,361 compared, 2 errors, 0 skipped, 0 copied, 1,120 removed, 5s ERROR failed to remove from target
+"assembly\GAC_64\System.Printing\v4.0_4.0.0.0 31bf3856ad364e35\System.Printing.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination server>\\vol_SMB_target_xxxxxx\\assembly\
+4\\System.Printing\\v4.0_4.0.0.0 31bf3856ad364e35\\System.Printing.dll'
+ERROR failed to remove from target "assembly\GAC_MSIL\Microsoft.PowerShell.Workflow.ServiceCore\v4.0_3.0.0.0 31bf3856ad364e35\Micro soft.PowerShell.Workflow.ServiceCore.dll": [Errno 13] Access is denied: '\\\\
+\\<IP address of SMB destination server>\\vol_SMB_target_xxxxxx\\assembly\\GAC_MSIL\\Microsoft.PowerShell.Workflow.ServiceCore\\v4
+.0_3.0.0.0  31bf3856ad364e35\\Microsoft.PowerShell.Workflow.ServiceCore.dll' ERROR failed to remove from target "assembly\GAC_MSIL\Microsoft.RightsManagementServices.ServerManager.DeploymentPlugin\v4.0_6.3.0.0
+31bf3856ad364e35\Microsoft.RightsManagementServices.ServerManager.Deploymen n.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination
+server>\\vol_SMB_target_xxxxxx\\assembly\\GAC_MSIL\\Microsoft.RightsManagementServices.ServerMana ger.DeploymentPlugin\\v4.0_6.3.0.0 31bf3856ad364e35\\Mic
+.RightsManagementServices.ServerManager.DeploymentPlugin.dll'
+ERROR failed to remove from target
+"assembly\GAC_MSIL\Microsoft.WSMan.Management\v4.0_3.0.0.0 31bf3856ad364e35\Microsoft.WSMan.Mana gement.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination server>\\vol_SMB_
+_xxxxxx\\assembly\\GAC_MSIL\\Microsoft.WSMan.Management\\v4.0_3.0.0.0 31bf3856ad364e35\\Microsof t.WSMan.Management.dll'
+ERROR failed to remove from target
+"assembly\GAC_MSIL\PresentationUI\v4.0_4.0.0.0 31bf3856ad364e35\PresentationUI.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination server>\\vol_SMB_target_xxxxxx\\assembly\
+SIL\\PresentationUI\\v4.0_4.0.0.0 31bf3856ad364e35\\PresentationUI.dll'
+ERROR failed to remove from target "assembly\GAC_MSIL\System.IO.Compression.FileSystem\v4.0_4.0.0.0 b77a5c561934e089\System.IO.Comp ression.FileSystem.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\10.61.71.5
+_SMB_target_xxxxxx\\assembly\\GAC_MSIL\\System.IO.Compression.FileSystem\\v4.0_4.0.0.0 b77a5c561 934e089\\System.IO.Compression.FileSystem.dll'
+ERROR failed to remove from target "assembly\GAC_MSIL\System.IdentityModel.Selectors\v4.0_4.0.0.0 b77a5c561934e089\System.IdentityM odel.Selectors.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination server>\\v s_target_xxxxxx\\assembly\\GAC_MSIL\\System.IdentityModel.Selectors\\v4.0_4.0.0.0 b77a5c561934e0 89\\System.IdentityModel.Selectors.dll'
+2,747 scanned, 2,675 compared, 9 errors, 0 skipped, 0 copied, 2,624 removed, 10s ERROR failed to remove from target
+"assembly\GAC_MSIL\System.Web.DataVisualization\v4.0_4.0.0.0 31bf3856ad364e35\System.Web.DataVis ualization.dll": [Errno 13] Access is denied: '\\\\?\\UNC\\<IP address of SMB destination server>\\vol_c
+rget_xxxxxx\\assembly\\GAC_MSIL\\System.Web.DataVisualization\\v4.0_4.0.0.0 31bf3856ad364e35\\Sy stem.Web.DataVisualization.dll'
+cp sync -v \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx\warning \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
+2,831 scanned, 0 copied, 2,831 compared, 0 removed, 10 errors Total Time : 10s 
+STATUS : PASSED
+----
+====

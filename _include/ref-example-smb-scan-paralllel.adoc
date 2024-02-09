@@ -1,0 +1,42 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -parallel 8 \\<IP address or hostname of SMB server>\copy_share2 
+xcp scan -parallel 8 \\<IP address or hostname of SMB server>\copy_share2
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
+copy_share2\ASUP.pm 
+copy_share2\ASUP_REST.pm 
+copy_share2\Allflavors_v2.pm 
+copy_share2\Armadillo.pm 
+copy_share2\AsupExtractor.pm 
+copy_share2\BTS_Config.pm 
+copy_share2\Backup.pm 
+copy_share2\Aggregate.pm 
+copy_share2\agnostic\CifsAccess.pm 
+copy_share2\agnostic\DU_Cmode.pm 
+copy_share2\agnostic\Flexclone.pm 
+copy_share2\agnostic\HyA_Clone_Utils.pm 
+copy_share2\agnostic\Fileclone.pm 
+copy_share2\agnostic\Jobs.pm 
+copy_share2\agnostic\License.pm 
+copy_share2\agnostic\Panamax_Clone_Utils.pm 
+copy_share2\agnostic\LunCmds.pm 
+copy_share2\agnostic\ProtocolAccess.pm 
+copy_share2\agnostic\Qtree.pm 
+copy_share2\agnostic\Quota.pm 
+copy_share2\agnostic\RbacCmdFetcher.pm 
+copy_share2\agnostic\RbacCmdFetcher_ReadMe 
+copy_share2\agnostic\SFXOD.pm 
+copy_share2\agnostic\Snapmirror.pm 
+copy_share2\agnostic\VolEfficiency.pm 
+copy_share2\agnostic\flatfile.txt 
+copy_share2\agnostic
+copy_share2
+xcp scan -parallel 8 \\<IP address or hostname of SMB server>\copy_share2
+317 scanned, 0 matched, 0 errors 
+Total Time : 0s
+STATUS : PASSED
+----
+====

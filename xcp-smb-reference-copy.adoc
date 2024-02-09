@@ -1,0 +1,175 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference-copy.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB "copy" command reference
+---
+= copy
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The `copy` command scans and copies the entire source directory structure to a destination SMB share. The `copy` command requires source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are printed to the console once every five seconds.
+
+[NOTE]
+====
+* The run-time log file is stored under "C:\NetApp\XCP".
+* This `copy` command copies data without an access control list (ACL).
+====
+
+.Syntax
+[source,cli]
+xcp copy \\<source SMB share> \\<IP address of SMB destination server>
+
+.Show example
+include::./_include/ref-example-smb-copy.adoc[]
+
+The following table lists the `copy` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter | Description
+
+| <<smb_copy_help, copy -h, --help>> | Show this help message and exit.
+| <<copy -v>> | Increase debug verbosity.
+| <<smb_copy_parallel, copy -parallel <n> >> | Number of concurrent processes (default: <cpu-count>).
+| <<smb_copy_match, copy -match <filter> >> | Only process files and directories that match the filter (see `xcp help - match` for details).
+| <<smb_copy_exclude, copy -exclude <filter> >> | Only exclude files and directories in the filter
+| <<copy -preserve-atime>> | Restore last accessed date on source.
+| <<smb_copy_acl, copy -acl>> | Copy security information.
+| <<smb_copy_acl, copy -fallback-user FALLBACK_USER >> 
+| Active Directory user or local (non-domain) user on the target machine that receives the permissions of local (non-domain) source machine users. For example, domain\administrator.
+| <<smb_copy_acl, copy -fallback-group FALLBACK_GROUP >> 
+| Active Directory group or local (non-domain) group on the target machine that receives the permissions of local (non-domain) source machine groups. For example, domain\administrators.
+| copy -root | Copy the ACL for a root directory.
+| <<smb_copy_aclverify, copy -aclverify {yes,no}>> | Provide an option to skip or include ACL verification during the copy -acl operation.
+| <<copy -noownership>> | Do not copy ownership.
+| <<smb_copy_bs, copy -bs <n> >> | Read/Write blocksize (default:1M)
+| <<copy -ads>> | Uses the copy command with the `-ads` option to copy NTFS alternate data streams from the source SMB share to the destination SMB share.
+|=== 
+
+[[smb_copy_help]]
+== copy -h, --help
+Use the `-h` and `–-help` parameters with the `copy` command to display detailed information about the `copy` command
+
+.Syntax
+[source,cli]
+xcp copy –help
+
+.Show example
+include::./_include/ref-example-smb-copy-help.adoc[]
+
+== copy -v
+Use the `-v` parameter with the `copy` command to provide detailed debug information.
+
+.Syntax
+[source,cli]
+xcp copy -v \\<IP address of SMB destination server>\src \\<IP address of SMB destination server>\dest\d 1
+
+.Show example
+include::./_include/ref-example-smb-copy-v.adoc[]
+
+[[smb_copy_parallel]]
+== copy -parallel <n>
+Use the `-parallel <n>` parameter with the `copy` command to set a higher or lower number of XCP concurrent processes. The default value for `-parallel` is equal to the CPU count. 
+
+NOTE: The maximum value for n is 61.
+
+.Syntax
+[source,cli]
+xcp copy -parallel <n> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+
+.Show example
+include::./_include/ref-example-smb-copy-parallel.adoc[]
+
+[[smb_copy_match]]
+== copy -match <filter>
+Use the `-match <filter>` parameter with the `copy` command to copy only the data that matches the argument passed.
+
+.Syntax
+[source,cli]
+xcp copy -match <filter> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+
+.Show example
+include::./_include/ref-example-smb-copy-match.adoc[]
+
+
+[[smb_copy_exclude]]
+== copy -exclude <filter>
+Use the `-exclude <filter>` parameter with the `copy` command to only copy excluded data. 
+
+.Syntax
+[source,cli]
+xcp copy -exclude <filter> \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac
+
+In the following example, the files and directories that have the string "resync" in their name have been excluded for copy.
+
+.Show example
+include::./_include/ref-example-smb-copy-exclude.adoc[]
+
+== copy -preserve-atime
+Use the `-preserve-atime` parameter with the `copy` command to reset the "atime" to the original value before XCP read the file.
+
+.Syntax
+[source,cli]
+xcp copy -preserve-atime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+
+.Show example
+include::./_include/ref-example-smb-copy-preserveatime.adoc[]
+
+[[smb_copy_acl]]
+== copy -acl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+Use the `-acl` parameter with the `copy` command to activate the transfer of the security descriptors (ACLs).
+
+Use the `-acl` parameter with the `-fallback-user` and `-fallback-group` options to specify a user and a group on the target machine or from Active Directory to receive the permissions of local (non-domain) source machine users or groups. This does not refer to unmatched users from an Active Directory.
+
+.Syntax
+[source,cli]
+xcp copy -acl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+
+[[smb_copy_aclverify]]
+== copy -aclverify {yes,no}
+Use the `-aclverify {yes,no}` parameter with the `copy` command to provides an option to skip or include ACL verification during an ACL copy operation. 
+
+You must use the `-aclverify {yes,no}` parameter parameter with the `copy -acl` command. By default, the ACL copy operation verifies the ACLs. If you set the `-aclverify` option to `no`, you can skip ACL verification and the `fallback-user` and `fallback-group` options are not required. If you set `-aclverify` to `yes`, it requires the `fallback-user` and `fallback-group` options, as shown in the following example.  
+
+.Syntax
+[source,cli]
+xcp copy -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+
+.Show example
+include::./_include/ref-example-smb-copy-aclverify.adoc[]
+
+== copy -noownership
+Use the `-noownership` parameter with the `copy` command to not copy the ownership from the source to the destination. You must use `-noownership` with the `-acl` option and it requires `fallback-user` and `fallback-group` as mandatory parameters.
+
+.Syntax
+[source,cli]
+xcp.exe copy -acl -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+
+.Show example
+include::./_include/ref-example-smb-copy-noownership.adoc[]
+
+[[smb_copy_bs]]
+== copy -bs <n>
+Use the `-bs <n>` parameter with the `copy` command to provide a read/write block size. The default value is 1M.
+
+.Syntax
+[source,cli]
+xcp.exe copy -bs <n> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+
+.Show example
+include::./_include/ref-example-smb-copy-bs.adoc[]
+
+== copy -ads
+Use the `-ads` parameter with the `copy` command to copy NTFS alternate data streams from the source SMB share to destination SMB share.
+
+.Syntax
+[source,cli]
+xcp copy -ads \\<source_IP_address>\source_share\src \\destination_IP_address>\dest_share
+
+.Show example
+include::./_include/ref-example-smb-copy-ads.adoc[]

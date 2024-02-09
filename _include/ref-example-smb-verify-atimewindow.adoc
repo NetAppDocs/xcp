@@ -1,0 +1,12 @@
+.Show example
+[%collapsible]
+====
+----
+c:\Netapp\xcp> xcp verify -atimewindow 600 -atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
+XCP SMB 1.9.2; (c) 2023 NetApp, Inc.; Licensed to xxxxx[Network Appliance, Inc] until Tue Apr 18 04:47:35 2023
+WARNING: your license will expire in less than one week! You can renew your license at https://xcp.netapp.com
+xcp verify -atimewindow 600 -atime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
+
+14 scanned, 13 compared, 13 same, 0 different, 0 missing, 0 errors
+----
+====

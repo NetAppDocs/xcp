@@ -1,0 +1,271 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference-scan.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB "scan" command reference
+---
+= scan
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The SMB `scan` command recursively scans the entire SMB share and lists all the files by the end of the `scan` command.
+
+.Syntax
+[source,cli]
+xcp scan \\<SMB share path>
+
+.Show example
+include::./_include/ref-example-smb-scan.adoc[]
+
+The following table lists the `scan` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter | Description
+
+| <<smb_scan_help,scan -h, –-help>> 
+| Show this help message and exit.
+| <<scan -v>> 
+| Increase debug verbosity.
+| <<smb_scan_parallel, scan -parallel <n> >> 
+| Number of concurrent processes (default: <cpu-count>).
+| <<smb_scan_match_filter, scan -match <filter> >> 
+| Only process files and directories that match the filter.
+| <<smb_scan_exclude_filter, scan -exclude <filter> >>
+| Only exclude files and directories in the filter.
+| <<scan -preserve-atime>> 
+| Restore last accessed date on source.
+| <<smb_scan_depth, scan -depth <n> >> 
+| Limit the search depth to n levels.
+| <<scan -stats>> 
+| Print tree statistics report.
+| <<scan -html>> 
+| Tree statistics report formats
+| <<scan -csv>> 
+| Tree statistics report formats
+| <<scan -l>> 
+| File listing output formats
+| <<scan -ownership>> 
+| Retrieve ownership information of files and directories on the source 
+system.
+| <<scan -du>> 
+| Summarize space usage of each directory including subdirectories.
+| <<smb_scan_fmt, scan -fmt <expression> >> 
+| Format file listing according to the Python expression (see `xcp help -fmt` for details).
+| <<scan -ads>> 
+| The `scan` command with the `-ads` flag recursively scans the entire SMB share and lists all files and any associated alternate data streams.
+|===
+
+[[smb_scan_help]]
+== scan -h, –-help
+Use the -h and –-help parameters with the `scan` command to display detailed information about how to use the scan command.
+
+.Syntax
+[source,cli]
+xcp scan --help
+
+.Show example
+include::./_include/ref-example-smb-scan-help.adoc[]
+
+== scan -v
+
+Use the `-v` parameter with the `scan` command to provide detailed logging information to troubleshoot or debug when an error or warning is reported.
+
+.Syntax
+[source,cli]
+xcp scan -v \\<IP address or hostname of SMB server>\copy_share2 
+
+.Show example
+include::./_include/ref-example-smb-scan-v.adoc[]
+
+[[smb_scan_parallel]]
+== scan -parallel <n>
+Use the `-parallel <n>` parameter with the `scan` command to set a higher or lower number of XCP concurrent processes.
+
+NOTE: The maximum value for n is 61.
+
+.Syntax
+[source,cli]
+xcp scan -parallel <n> \\<IP address or hostname of SMB server>\copy_share2  
+
+.Show example
+include::./_include/ref-example-smb-scan-paralllel.adoc[]
+
+
+[[smb_scan_match_filter]]
+== scan -match <filter>
+Use the `-match <filter>` parameter with the `scan` command to only process files and directories that match the filter.
+
+.Syntax
+[source,cli]
+xcp scan -match <filter> \\<IP address or hostname of SMB server>\copy_share2
+
+In the following example, `scan -match` scans all files that have changed between one month and one year and prints a line to the console for each file found. The ISO format of its last modification time, a human-readable size of the file, its type, and its relative path are returned for each file.
+
+.Show example
+include::./_include/ref-example-smb-scan-match.adoc[]
+
+In the following example, `scan -match` lists the files that have not been modified for more than 3 months and have a size bigger than 4MB.
+
+.Show example
+include::./_include/ref-example-smb-scan-match-no-mod.adoc[]
+
+The first of the following two examples only matches the directories and the formatting adds a comma between the variables "mtime", "relative path", and "depth". 
+
+The second example redirects the same output to "name.csv".
+
+.Show example
+include::./_include/ref-example-smb-scan-match-direct-only.adoc[]
+
+.Show example
+include::./_include/ref-example-smb-scan-match-redirect.adoc[]
+
+The following example prints the full path and the raw `mtime` value of all the files that are not directories. The `mtime` value is padded with 70 characters to facilitate a readable console report.
+
+.Show example
+include::./_include/ref-example-smb-scan-match-mtime.adoc[]
+
+[[smb_scan_exclude_filter]]
+== scan -exclude <filter>
+Use the `-exclude <filter>` with the `scan` command to excludes directories and files based on the pattern in the filter.
+
+.Syntax
+[source,cli]
+xcp scan -exclude <filter>> \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic
+
+In the following example, `scan -exclude` excludes any file that has changed between one month and one year, and prints a line to the console for each file that is not excluded. The details printed for each file are the ISO format of its last modification time, a human-readable size of the file, its type, and its relative path.
+
+.Show example
+include::./_include/ref-example-smb-scan-exclude.adoc[]
+
+In the following example, `scan -exclude` lists the not excluded files that have not been modified for more than three months and have a size greater than 5.5 KB. The details that are printed for each file are the ISO format of its last modification time, a human-readable size of the file, its type, and its relative path.
+
+.Show example
+include::./_include/ref-example-smb-scan-exclude-no-mod.adoc[]
+
+This following example excludes directories. It lists the not excluded files with formatting that adds a comma between the variables `mtime`, `relpath`, and `depth`.
+
+.Show example
+include::./_include/ref-example-smb-scan-exclude-directories.adoc[]
+
+This following example prints the complete file path and the raw `mtimevalue` of all files that are not directories. The `mtimevalue` is padded with 70 characters to facilitate a readable console report.
+
+.Show example
+include::./_include/ref-example-smb-scan-exclude-mtime.adoc[]
+
+== scan -preserve-atime
+Use the `-preserve-atime` parameter with the `scan` command to restore the last accessed date of all the files on the source and reset the `atime` to the original value before XCP read the file.
+
+When you scan an SMB share, the access time is modified on the files (if the storage system is configured to modify `atime` on read) because XCP is reading the files one by one. XCP never changes the `atime`, it just reads the file, which triggers an update on `atime`.
+
+.Syntax
+[source,cli]
+xcp scan -preserve-atime \\<IP address or hostname of SMB server>\copy_share2
+
+.Show example
+include::./_include/ref-example-smb-scan-preserveatime.adoc[]
+
+
+[[smb_scan_depth]]
+== scan -depth <n>
+
+Use the `-depth <n>` parameter with the `scan` command to limit the search depth of directories inside an SMB share.
+
+NOTE: The `–depth` option specifies how deep XCP can scan the files into the subdirectories.
+
+.Syntax
+[source,cli]
+xcp scan -depth <2> \\<IP address or hostname of SMB server>\copy_share2
+
+.Show example
+include::./_include/ref-example-smb-scan-depth-n.adoc[]
+
+== scan -stats
+Use the `-stats` parameter with the `scan` command to print tree statistics report formats.
+
+.Syntax
+[source,cli]
+xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share 
+
+.Show example
+include::./_include/ref-example-smb-scan-stats.adoc[]
+
+== scan -html
+Use the `-html` parameter with the `scan` command to save a HTML statistics report.
+
+NOTE: XCP reports (.csv, .html) are saved in the same location as the XCP binary. The file name is in the format <xcp_process_id>_<time_stamp>.html. When XCP cannot map security identifiers (SIDs) to owner names, it uses the last few digits after the final “–” in the SID to represent the owner. For example, when XCP is unable to map the SID S-1-5-21-1896871423-3211229150-3383017265-4854184 to its owner, it represents the owner by using 4854184. To view .csv and .html example reports, see link:<TBD>[Sample XCP NFS and SMB Reports].
+
+.Syntax
+[source,cli]
+xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol 
+
+.Show example
+include::./_include/ref-example-smb-scan-html.adoc[]
+
+== scan -csv
+Use the `-csv` parameter with the `scan` command to save a CSV statistics report.
+
+.Syntax
+[source,cli]
+xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol 
+
+.Show example
+include::./_include/ref-example-smb-scan-csv.adoc[]
+
+== scan -l
+Use the `-l` parameter with the `scan` command to retrieve a detailed file listing output.
+
+.Syntax
+[source,cli]
+xcp scan -l \\<IP address or hostname of SMB server>\copy_share2 
+
+.Show example
+include::./_include/ref-example-smb-scan-l.adoc[]
+
+== scan -ownership
+Use the `-ownership` parameter with the `scan` command to retrieve ownership information for files.
+
+NOTE: You can only use `-ownership` with the `-l`, `-match`, `-fmt`, or `-stats` parameters.
+
+.Syntax
+[source,cli]
+xcp scan -l -ownership \\<IP address or hostname of SMB server>\copy_share2 xcp scan -l -ownership \\<IP address or hostname of SMB server>\copy_share2
+
+.Show example
+include::./_include/ref-example-smb-scan-ownership.adoc[]
+
+== scan -du
+Use the `-du` parameter with the `scan` command to summarize the space usage of each directory, including subdirectories.
+
+.Syntax
+[source,cli]
+xcp scan -du \\<IP address or hostname of SMB server>\copy_share2 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2
+
+.Show example
+include::./_include/ref-example-smb-scan-du.adoc[]
+
+[[smb_scan_fmt]]
+== scan -fmt <expression>
+Use the `-fmt <expression>` parameter with the `scan` command to format a file listing according to a defined expression.
+
+.Syntax
+[source,cli]
+xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))" \\<IPaddress or hostname of SMB server>\copy_share2
+
+.Show example
+include::./_include/ref-example-smb-scan-fmt.adoc[]
+
+== scan -ads
+
+Use the `-ads` flag parameter with the `scan` command with to recursively scan the entire SMB share and lis all files and any associated alternate data streams.
+
+.Syntax
+[source,cli]
+xcp scan -ads \\<source_ip_address>\source_share\src
+
+.Show example
+include::./_include/ref-example-smb-scan-ads.adoc[]

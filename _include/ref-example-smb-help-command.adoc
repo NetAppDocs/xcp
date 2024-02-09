@@ -1,0 +1,45 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\Administrator\Desktop\xcp>xcp help sync
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 
+2029
+usage: xcp sync [-h] [-v] [-parallel <n>] [-match <filter>] [-preserve-atime] 
+[-noatime] [-noctime] [-nomtime] [-noattrs]
+[-noownership] [-atimewindow <float>] [-ctimewindow <float>] 
+[-mtimewindow <float>] [-acl] [-fallback-user FALLBACK_USER] 
+[-fallback-group FALLBACK_GROUP] [-l]
+source target
+Note: ONTAP does not let a SMB client modify COMPRESSED or ENCRYPTED attributes. 
+XCP sync will ignore these file attributes.
+positional arguments:
+source 
+target
+optional arguments:
+-h, --help            show this help message and exit
+-v                    increase debug verbosity
+-parallel <n>         number of concurrent processes (default: <cpu-count>)
+-match <filter>       only process files and directories that match the filter 
+                      see `xcp help -match` for details)
+-preserve-atime       restore last accessed date on source
+-noatime              do not check file access time
+-noctime              do not check file creation time
+-nomtime              do not check file modification time
+-noattrs              do not check attributes
+-noownership          do not check ownership
+-atimewindow <float>  acceptable access time difference in seconds
+-ctimewindow <float>  acceptable creation time difference in seconds
+-mtimewindow <float>  acceptable modification time difference in seconds
+-acl                  copy security information
+-fallback-user FALLBACK_USER
+                      a user on the target machine to receive the permissions of local 
+(nondomain)source machine users (eg. domain\administrator)
+-fallback-group       FALLBACK_GROUP
+                      a group on the target machine to receive the permissions oflocal 
+(non-domain) source machine groups (eg. domain\administrators)
+-l                    increase output
+-root                 sync acl for root directory 
+C:\Users\Administrator\Desktop\xcp>
+----
+====

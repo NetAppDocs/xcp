@@ -1,0 +1,18 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\Administrator\Desktop\xcp>xcp license 
+xcp license
+XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+Licensed to "XXX (xxxx), NetApp Inc, xxxxxxxxx@netapp.com" until Mon Dec 31 00:00:00 2029 
+License type: SANDBOX
+License status: ACTIVE 
+Customer name: N/A 
+Project number: N/A 
+Offline Host: Yes 
+Send statistics: No
+Host activation date: N/A
+License management URL: https://xcp.netapp.com
+----
+====

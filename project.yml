@@ -89,7 +89,7 @@ sidebar:
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
           entries:
-            - title: NTFS Alternate Data Streams migration for SMB
+            - title: NTFS alternate data streams migration for SMB
               url: /xcp-smb-ads.html
         - title: Migrate HDFS data
           url: /xcp-migrate-hdfs-data.html
@@ -140,7 +140,26 @@ sidebar:
           entries: 
             - title: SMB command reference overview
               url: /xcp-smb-reference.html
-
+            - title: help
+              url: /xcp-smb-reference-help.html
+            - title: show
+              url: /xcp-smb-reference-show.html
+            - title: license
+              url: /xcp-smb-reference-license.html
+            - title: activate
+              url: /xcp-smb-reference-activate.html
+            - title: scan
+              url: /xcp-smb-reference-scan.html
+            - title: copy
+              url: /xcp-smb-reference-copy.html
+            - title: sync
+              url: /xcp-smb-reference-sync.html
+            - title: verify
+              url: /xcp-smb-reference-verify.html
+            - title: configure
+              url: /xcp-smb-reference-configure.html
+            - title: listen
+              url: /xcp-smb-reference-listen.html 
     - title:  Troubleshoot
       entries: 
         - title: Troubleshoot XCP NFS errors
