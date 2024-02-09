@@ -3,7 +3,7 @@
 ====
 ----
 [root@localhost /]# ./xcp sync -id ID001 -nonames
-XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
 xcp: Index: {source: <IP address or hostname of NFS server>:/source_vol, target: <IP address of
 destination NFS server>:/dest_vol}
 Xcp command : xcp sync -id ID001 -nonames

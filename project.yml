@@ -121,6 +121,10 @@ sidebar:
               url: /xcp-nfs-reference-resume.html
             - title: verify
               url: /xcp-nfs-reference-verify.html
+            - title: chmod
+              url: /xcp-nfs-reference-chmod.html
+            - title: chown
+              url: /xcp-nfs-reference-chown.html
         - title: SMB command reference
           entries: 
             - title: SMB command reference overview

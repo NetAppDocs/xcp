@@ -1,0 +1,136 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-chown.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= chown
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The XCP NFS `chown` command scans and changes the ownership of all the files for the given directory structure. The `chown` command requires an NFS share or the POSIX path as a variable. XCP chown recursively changes the ownership for a given path. The `chown` command displays the changed user ID (UID) for a file.
+
+.Syntax
+[source,cli]
+xcp chown -user/-group <user-name/group-name> <source NFS export path>
+
+include::./_include/ref-example-nfs-chown.adoc[]
+
+The following table lists the `chown` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<nfs_chown_exclude, chown -exclude <filter>  >> | Excludes the files and directories that match the filter. 
+| <<nfs_chown_match, chown -match <filter>  >> | Only processes the files and directories that match the filter.
+| <<nfs_chown_group, chown -group <group>  >> | Sets the Linux group ID (GID) at the source.
+| <<nfs_chown_user, chown -user <user> >> | Sets the Linux UID at the source.
+| <<nfs_chown_user_from, chown -user-from <user_from> >> | Changes the UID.
+| <<nfs_chown_group_from, chown -group-from <group_from>  >> | Changes the GID.
+| <<nfs_chown_reference, chown -reference <reference> >> | Specifies the referenced file or directory point.
+| <<nfs_chown_v,chown -v >> | Reports the output for every object processed.
+
+|===
+
+[[nfs_chown_exclude]]
+== chown -exclude <filter>
+
+Use the `-exclude <filter>` parameter with the `chown` command to exclude the files and directories that match the filter. 
+
+.Syntax
+
+[source,cli]
+xcp chown -exclude "fnm('1.img')" -user user2
+
+include::./_include/ref-example-nfs-chown-exclude.adoc[]
+
+[[nfs_chown_match]]
+== chown -match <filter>
+
+Use the `-match <filter>` parameter with the `chown` command to only process the files and directories that match the filter.
+
+.Syntax
+
+[source,cli]
+xcp chown -match "fnm('1.img')" -user user1
+
+include::./_include/ref-example-nfs-chown-match.adoc[]
+
+[[nfs_chown_group]]
+== chown -group <group>
+
+Use the `-group <group>` parameter with the `chown` command to set the Linux GID at the source.
+
+.Syntax
+
+[source,cli]
+xcp chown -match "fnm('1.img')" -user user1
+
+include::./_include/ref-example-nfs-chown-group.adoc[]
+
+[[nfs_chown_user]]
+== chown -user <user>
+
+Use the `-user <user>` parameter with the `chown` command to set the Linux UID at the source.
+
+.Syntax
+
+[source,cli]
+xcp chown -user user1 102.101.10.210:/s_v1/smaple_set/D1
+
+include::./_include/ref-example-nfs-chown-user.adoc[]
+
+[[nfs_chown_user_from]]
+== chown -user-from <user_from>
+
+Use the `-user-from <user_from>` parameter with the `chown` command to change the UID.
+
+.Syntax
+
+[source,cli]
+xcp chown -user-from user1 -user user2
+
+include::./_include/ref-example-nfs-chown-user-from.adoc[]
+
+[[nfs_chown_user_from]]
+== chown -group-from <group_from>
+
+Use the `-group-from <group_from>` parameter with the `chown` command to change the GID.
+
+.Syntax
+
+[source,cli]
+xcp chown -group-from group1 -group group2
+
+include::./_include/ref-example-nfs-chown-group-from.adoc[]
+
+[[nfs_chown_reference]]
+== chown -reference <reference> 
+
+Use the `-reference <reference>` parameter with the `chown` command to specify the referenced file or directory point.
+
+.Syntax
+
+[source,cli]
+xcp chown -reference 101.101.10.210:/s_v1/smaple_set/D2/2.img
+
+include::./_include/ref-example-nfs-chown-reference.adoc[]
+
+[[nfs_chown_v]]
+== chown -v
+
+Use the `-v` parameter with the `chown` command to report the output for every object processed.
+
+.Syntax
+
+[source,cli]
+xcp chown -user-from user2 -v -user user1
+
+include::./_include/ref-example-nfs-chown-v.adoc[]
+

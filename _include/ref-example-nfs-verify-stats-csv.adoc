@@ -4,7 +4,7 @@
 ----
 [root@localhost /]# ./xcp verify -stats -csv <IP address of source NFS server>:/source_vol <IP
 address of destination NFS server>:/dest_vol
-XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+
 224,618 scanned, 48.7 MiB in (9.54 MiB/s), 2.98 MiB out (597 KiB/s), 5s
 == Number of files ==
 empty <8KiB 8-64KiB 64KiB-1MiB 1-10MiB 10-100MiB >100MiB

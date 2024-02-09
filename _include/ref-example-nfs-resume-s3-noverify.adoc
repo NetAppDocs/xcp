@@ -3,7 +3,7 @@
 ====
 ----
 [root@client1 linux]# ./xcp resume -s3.noverify -id XCP_copy_2023-06-13_11.32.47.743708
-XCP <version>; (c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until xx yyyy
+
 Job ID: Job_XCP_copy_2023-06-13_11.32.47.743708_2023-06-13_11.33.41.388541_resume
 Index: {source: hdfs:///user/demo, target: s3://bucket/
 Reviewing the incomplete index...

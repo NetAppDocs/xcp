@@ -1,0 +1,20 @@
+.Show example
+[%collapsible]
+====
+----
+114
+[root@client1linux]# ./xcp isync estimate -s3.profile s3_profile -id S3_index
+
+Job ID: Job_2023-11-16_02.25.57.045692_isync_estimate
+Index: S3_index {source: <source_ip_address>:/testvol_flex/USER5, target: s3://
+xcptesting/test_ankit/}
+2,002 scanned, 432 KiB in (84.9 KiB/s), 5.53 KiB out (1.09 KiB/s), 5s
+2,002 scanned, 432 KiB in (0/s), 5.53 KiB out (0/s), 10s
+Xcp command : xcp isync estimate -s3.profile s3_profile -id S3_index
+Estimated Time : 9.7s
+Job ID : Job_2023-11-16_02.25.57.045692_isync_estimate
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.25.57.045692_isync_estimate.log
+STATUS : PASSED
+[root@client1linux]#
+----
+====
