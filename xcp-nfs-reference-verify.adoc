@@ -35,8 +35,8 @@ The following table lists the `verify` parameters and their description.
 | <<nfs_verify_noatts,verify -noattrs>>| Does not check attributes.
 | <<nfs_verify_nomods,verify -nomods >>| Does not check file modification times.
 | <<nfs_verify_mtimewindow,verify -mtimewindow <s> >> | Specifies the acceptable modification time difference for verification.
-| <<nfs_verify_v, verify -v >> | Specifies output formats to list any differences found.
-| <<nfs_verify_l, verify -l >> | Specifies output formats to list any differences found.
+| <<nfs_verify_v, verify -v >> | Retrieves output formats to list any differences found.
+| <<nfs_verify_l, verify -l >> | Retrieves output formats to list any differences found.
 | <<nfs_verify_nonames, verify -nonames >> | Excludes user and group names for file listings or reports.
 | <<nfs_verify_match, verify -match <filter> >> | Only processes files and directories that match the format.
 | <<nfs_verify_bs,verify -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
@@ -129,7 +129,7 @@ include::./_include/ref-example-nfs-verify-mtimewindow.adoc[]
 [[nfs_verify_v]]
 == verify -v 
 
-Use the `-v` and `l` parameters with the `verify` command to specify output formats to list any differences found.
+Use the `-v` and `l` parameters with the `verify` command to retrieve output formats and list any differences found.
 
 .Syntax
 
