@@ -29,11 +29,11 @@ The following table lists the `scan` parameters and their description.
 |===
 | Parameter
 | Description
-| <<scan -l and scan -q,scan -l>> | Specifies file listing output formats.
-| <<scan -l and scan -q,scan -q>> | Specifies file listing output formats.
-| <<stats_csv_html,scan -stats>> | Specifies tree statistic report formats.
-| <<nfs_scan_stats_csv_html,scan -csv>>| Specifies tree statistic report formats.
-| <<nfs_scan_stats_csv_html,scan -html>>| Specifies tree statistic report formats.
+| <<scan -l and scan -q,scan -l>> | Retrieves file listing output formats.
+| <<scan -l and scan -q,scan -q>> | Retrieves file listing output formats.
+| <<stats_csv_html,scan -stats>> | Retrieves tree statistic report formats.
+| <<nfs_scan_stats_csv_html,scan -csv>>| Retrieves tree statistic report formats.
+| <<nfs_scan_stats_csv_html,scan -html>>| Retrieves tree statistic report formats.
 | <<scan -nonames>> | Excludes user and group names for file listings and reports.
 | <<nfs_scan_newid, scan -newid <name> >> | Specifies the catalog name for a new index.
 | <<nfs_scan_id, scan -id <catalog_name> >> | Specifies the catalog name of a previous copy or scan index.
@@ -59,7 +59,7 @@ The following table lists the `scan` parameters and their description.
 
 == scan -l and scan -q
 
-Use the `-l` and `-q` parameters with the `scan` command to specify file listing output formats.
+Use the `-l` and `-q` parameters with the `scan` command to retrieve file listing output formats.
 
 .Syntax
 
@@ -78,7 +78,7 @@ include::./_include/ref-example-nfs-scan-q.adoc[]
 [[nfs_scan_stats_csv_html]]
 == scan -stats, scan -csv, and scan -html
 
-Use the `-stats`, `-csv`, and `-html` parameters with the `scan` command to specify tree statistic report formats.
+Use the `-stats`, `-csv`, and `-html` parameters with the `scan` command to retrieve tree statistic report formats.
 
 NOTE: XCP reports (.csv, .html) are saved in the catalog location specified in the `xcp.ini` file. The files are stored in the `<catalog path>/catalog/indexes/1/reports` folder. You can view sample reports in the appendix.
 
