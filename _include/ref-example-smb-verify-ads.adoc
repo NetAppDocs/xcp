@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp verify -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share XCP SMB Nightly_dev; (c) 2023 NetApp, Inc.; Licensed to xx [Network Appliance, Inc] until xx yyyy
+c:\netapp\xcp>xcp verify -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share
 
 7	scanned,	5	compared,	5	same,	0	different,	0	missing,	0	errors,	5s
 7	scanned,	5	compared,	5	same,	0	different,	0	missing,	0	errors,	10s

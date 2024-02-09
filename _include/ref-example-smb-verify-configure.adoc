@@ -3,7 +3,6 @@
 ====
 ----
 C:\NetApp\XCP>xcp.exe configure
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
 Please choose the menu you want to start:
 1. Configure xcp.ini file

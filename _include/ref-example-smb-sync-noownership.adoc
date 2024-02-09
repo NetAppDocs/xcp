@@ -3,7 +3,6 @@
 ====
 ----
 >xcp sync -noownership \\<IP address or hostname of SMB server>\vol_SMB_source_xxxxxx \\<IP address of SMB destination server>\vol_SMB_target_xxxxxx
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 2029
       Truncated Output 
 302,909 scanned,    301,365 compared,	0	errors,	0	skipped,	0	copied,	0	removed, 9m46s
 307,632	scanned,	303,530	compared,	0	errors,	0	skipped,	0	copied,	0	removed, 9m51s

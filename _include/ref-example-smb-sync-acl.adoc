@@ -3,7 +3,6 @@
 ====
 ----
 C:\xcp>xcp sync -acl -fallback-user "DOMAIN\gabi" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\performance_SMB_home_dirs \\<IP address of SMB destination server>\performance_SMB_home_dirs
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 2029
 10,796	scanned,	4,002	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	s
 15,796	scanned,	8,038	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	0s
 15,796	scanned,	8,505	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	5s

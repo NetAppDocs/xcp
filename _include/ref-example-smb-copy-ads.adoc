@@ -3,7 +3,6 @@
 ====
 ----
 c:\netapp\xcp>xcp copy -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share 
-XCP SMB Nightly_dev; (c) 2023 NetApp, Inc.; Licensed to xxx [Network Appliance, Inc] until xxx yyyy
 
 6   scanned, 0 matched, 0 skipped, 3 copied, 13 (2.41/s), 0 errors, 5s, 10 ads copied
 6	scanned,	0	matched,	0	skipped,	3	copied,	13	(0/s),	0	errors,	10s, 11 ads copied

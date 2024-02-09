@@ -4,8 +4,6 @@
 ----
 C:\netapp\xcp>xcp copy –help
 
-XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxx [Network Appliance, Inc] until xxx yyyy
-
 usage: xcp copy [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>] [-preserve- atime] [-acl] [-fallback-user FALLBACK_USER]
 [-fallback-group FALLBACK_GROUP] [-loglevel <name>] [-root] [-noownership] [- aclverify {yes,no}] [-bs <n>] [-ads]
          source target

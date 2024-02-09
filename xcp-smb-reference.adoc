@@ -19,8 +19,6 @@ The XCP SMB command reference provides examples of the available commands for XC
 You can redirect an XCP command output by using the “>” operator, as shown in the following example:
 ----
 C:\xcp>xcp --help > help-output.txt
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 2029
-C:\xcp>
 ----
 ====
 

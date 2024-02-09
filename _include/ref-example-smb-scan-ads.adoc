@@ -4,8 +4,6 @@
 ----
 C:\netapp\xcp>xcp scan -ads \\<source_ip_address>\source_share\src
 
-XCP SMB <version>; (c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until xxx yyyy
-
 src\file1.txt:ads1 
 src\file1.txt:ads_file1.txt_1697037934.4154522.txt 
 src\file1.txt

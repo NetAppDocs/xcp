@@ -4,7 +4,6 @@
 ----
 c:\netapp\xcp>xcp scan -exclude "modified > 3*month and size > 5650" -fmt "'{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
 xcp scan -exclude "modified > 3*month and size > 5650" -fmt "'{}, {}, {}'.format(iso(mtime), humanize_size(size) relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
-XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
 2013-03-07_15:44:53.713279, 4.31KiB, snapmirror\rsm_abort.thpl 
 2013-03-07_15:44:53.714269, 3.80KiB, snapmirror\rsm_break.thpl 

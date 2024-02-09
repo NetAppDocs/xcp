@@ -4,7 +4,6 @@
 ----
 c:\netapp\xcp>xcp scan -exclude "type is not directory" -fmt "'{} {:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMBserver>\localtest\arch\win32\agnostic\snapmirror
 xcp scan -exclude "type is not directory" -fmt "'{} {:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
-XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
 \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror 
 1362689093.72925
 

@@ -3,8 +3,6 @@
 ====
 ----
 C:\Users\Administrator\Desktop\xcp>xcp help sync
-XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon Dec 31 00:00:00 
-2029
 usage: xcp sync [-h] [-v] [-parallel <n>] [-match <filter>] [-preserve-atime] 
 [-noatime] [-noctime] [-nomtime] [-noattrs]
 [-noownership] [-atimewindow <float>] [-ctimewindow <float>] 

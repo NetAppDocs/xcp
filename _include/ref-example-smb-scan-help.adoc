@@ -3,7 +3,6 @@
 ====
 ----
 C:\netapp\xcp>xcp scan --help
-XCP SMB <version>(c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until xxx
 
 usage: xcp scan [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>] [-preserve-atime] [-depth
 <n>] [-loglevel <name>] [-stats] [-l] [-ownership] [-du]

@@ -5,7 +5,6 @@
 c:\netapp\xcp>xcp scan -exclude "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath, depth]))" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror
 xcp scan -exclude "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath,depth]))"
 \\<IP address or hostname of SMBserver>\localtest\arch\win32\agnostic\snapmirror
-XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
 2013-03-07_15:44:53.712271,snapmirror\SMutils.pm,1
 2013-03-07_15:44:53.713279,snapmirror\rsm_abort.pm,1
 2013-03-07_15:44:53.714269,snapmirror\rsm_break.pm,1

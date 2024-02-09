@@ -5,7 +5,6 @@
 c:\netapp\xcp>xcp scan -exclude "1*month < modified < 1*year" -fmt "'{:>15} {:>7}{}
 {}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname ofSMB server>\localtest\arch\win32\agnostic
 xcp scan -exclude "1*month < modified < 1*year" -fmt "'{:>15} {:>7} {}{}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic
-XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
 2013-03-07_15:39:22.852698 46 regular agnostic\P4ENV
 2013-03-07_15:40:27.093887 8.40KiB regular agnostic\Client_outage.thpl
 2013-03-07_15:40:38.381870 23.0KiB regular agnostic\IPv6_RA_Configuration_Of_LLA_In_SK_BSD.thpl 

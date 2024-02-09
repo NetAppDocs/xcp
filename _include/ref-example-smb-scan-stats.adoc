@@ -3,8 +3,6 @@
 ====
 ----
 C:\netapp\xcp>xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share
-XCP<version>; (c) 2023 NetApp, Inc.; Licensed to xxxx [Network Appliance, Inc] until Fri Nov 22 
-23:08:36 2024
 
 == Maximum Values ==
         Size      Depth      Namelen     Dirsize

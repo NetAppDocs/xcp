@@ -3,7 +3,6 @@
 ====
 ----
 c:\netapp\xcp>xcp copy -v \\<IP address of SMB destination server>\src \\<IP address of SMB destination server>\dest\d 1
-XCP SMB <version>; (c) 2021 NetApp, Inc.; Licensed to Calin Salagean [NetApp Inc] until Mon Dec 31 00:00:00 2029
 
 failed to set attributes for "d1": (5, 'CreateDirectory', 'Access is denied.') 
 failed to copy "f1.txt": (5, 'CreateFile', 'Access is denied.')

@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-C:\netapp\xcp>xcp sync -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share XCP SMB <version> (c) 2023 NetApp, Inc.; Licensed to xxx until xx yyyy
+C:\netapp\xcp>xcp sync -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share
 
 13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	5s, 1 ads copied
 13	scanned,	1	copied,	12	compared,	0	skipped,	0	removed,	0	errors,	10s, 1 ads copied

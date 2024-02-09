@@ -4,7 +4,6 @@
 ----
 C:\Users\Administrator\Desktop\xcp>xcp scan \\<IP address or hostname of SMB server>\volxcp 
 c:\netapp\xcp\xcp scan \\<IP address of SMB destination server>\source_share
-XCP <version>; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029 
 volxcp\3333.txt
 volxcp\SMB.txt 
 volxcp\SMB1.txt 
