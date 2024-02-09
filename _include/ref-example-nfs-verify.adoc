@@ -2,6 +2,38 @@
 [%collapsible]
 ====
 ----
+[root@localhost /]# ./xcp verify <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
 
+xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-
+04_23.54.40.893449
+32,493 scanned, 11,303 found, 7,100 compared, 7,100 same data, 374 MiB in (74.7 MiB/s), 4.74 MiB
+out (971 KiB/s), 5s
+40,109 scanned, 24,208 found, 18,866 compared, 18,866 same data, 834 MiB in (91.5 MiB/s), 10.5
+MiB out (1.14 MiB/s), 10s
+56,030 scanned, 14,623 indexed, 33,338 found, 27,624 compared, 27,624 same data, 1.31 GiB in
+(101 MiB/s), 15.9 MiB out (1.07 MiB/s), 15s
+73,938 scanned, 34,717 indexed, 45,583 found, 38,909 compared, 38,909 same data, 1.73 GiB in
+(86.3 MiB/s), 22.8 MiB out (1.38 MiB/s), 20s
+76,308 scanned, 39,719 indexed, 61,810 found, 54,885 compared, 54,885 same data, 2.04 GiB in
+(62.8 MiB/s), 30.2 MiB out (1.48 MiB/s), 25s
+103,852 scanned, 64,606 indexed, 77,823 found, 68,301 compared, 68,301 same data, 2.31 GiB in
+(56.0 MiB/s), 38.2 MiB out (1.60 MiB/s), 30s
+110,047 scanned, 69,579 indexed, 89,082 found, 78,794 compared, 78,794 same data, 2.73 GiB in
+(85.6 MiB/s), 43.6 MiB out (1.06 MiB/s), 35s
+113,871 scanned, 79,650 indexed, 99,657 found, 89,093 compared, 89,093 same data, 3.23 GiB in
+(103 MiB/s), 49.3 MiB out (1.14 MiB/s), 40s
+125,092 scanned, 94,616 indexed, 110,406 found, 98,369 compared, 98,369 same data, 3.74 GiB in
+(103 MiB/s), 55.0 MiB out (1.15 MiB/s), 45s
+134,630 scanned, 104,764 indexed, 120,506 found, 106,732 compared, 106,732 same data, 4.23 GiB
+in (99.9 MiB/s), 60.4 MiB out (1.05 MiB/s), 50s
+134,630 scanned, 114,823 indexed, 129,832 found, 116,198 compared, 116,198 same data, 4.71 GiB
+in (97.2 MiB/s), 65.5 MiB out (1.04 MiB/s), 55s
+Xcp command : xcp verify <IP address of NFS server>:/source_vol <IP address of destination NFS
+server>:/dest_vol
+134,630 scanned, 0 matched, 100% found (121,150 have data), 100% verified (data, attrs, mods), 0
+different item, 0 error
+Speed : 4.95 GiB in (86.4 MiB/s), 69.2 MiB out (1.18 MiB/s)
+Total Time : 58s.
+STATUS : PASSED
 ----
 ====

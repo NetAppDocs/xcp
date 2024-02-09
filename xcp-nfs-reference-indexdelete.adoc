@@ -22,7 +22,7 @@ xcp indexdelete
 
 include::./_include/ref-example-nfs-indexdelete.adoc[]
 
-he following table lists the `indexdelete` parameters and their description.
+The following table lists the `indexdelete` parameters and their description.
 
 [cols=2*,options="header"]
 |===
@@ -48,7 +48,7 @@ include::./_include/ref-example-nfs-indexdelete-match.adoc[]
 [[nfs_indexdelete_loglevel]]
 == indexdelete -loglevel <name>
 
-Use the `-loglevel <name>` parameter with the `indexdelete` command  to set the log level; available levels are INFO, DEBUG. the default level is INFO.
+Use the `-loglevel <name>` parameter with the `indexdelete` command  to set the log level; available levels are INFO, DEBUG. The default level is INFO.
 
 .Syntax
 
