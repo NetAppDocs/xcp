@@ -2,7 +2,6 @@
 [%collapsible]
 ====
 ----
-70
 [root@user-1 linux]# ./xcp chmod -exclude "fnm('3.img')" -mode 770 101.11.10.10:/s_v1/D3/
 
 Excluded: 1 excluded, 0 did not match exclude criteria

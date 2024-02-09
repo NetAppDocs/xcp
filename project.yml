@@ -125,6 +125,10 @@ sidebar:
               url: /xcp-nfs-reference-chmod.html
             - title: chown
               url: /xcp-nfs-reference-chown.html
+            - title: logdump
+               url: /xcp-nfs-reference-logdump.html
+            - titel: delete
+               url: /xcp-nfs-reference-delete.html
         - title: SMB command reference
           entries: 
             - title: SMB command reference overview

@@ -2,8 +2,6 @@
 [%collapsible]
 ====
 ----
-74
-Group to be changed
 [root@user-1 linux]# ./xcp chown -reference 101.101.10.210:/s_v1/smaple_set/D2/2.img 101.101.10.210:/s_v1/smaple_set/D1
 
 Xcp command : xcp chown -reference 101.101.10.210:/s_v1/smaple_set/D2/2.img

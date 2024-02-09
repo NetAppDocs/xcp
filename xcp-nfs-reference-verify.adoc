@@ -33,7 +33,7 @@ The following table lists the `verify` parameters and their description.
 | <<nfs_verify_stats_csv,verify -csv>> | Scans the source and target trees in parallel and compares tree statistics.
 | <<nfs_verify_nodata,verify -nodata>> | Does not check data.
 | <<nfs_verify_noatts,verify -noattrs>>| Does not check attributes.
-| <nfs_verify_nomods,verify -nomods>>| Does not check file modification times.
+| <<nfs_verify_nomods,verify -nomods >>| Does not check file modification times.
 | <<nfs_verify_mtimewindow,verify -mtimewindow <s> >> | Specifies the acceptable modification time difference for verification.
 | <<nfs_verify_v, verify -v >> | Specifies output formats to list any differences found.
 | <<nfs_verify_l, verify -l >> | Specifies output formats to list any differences found.

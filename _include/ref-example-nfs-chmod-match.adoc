@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-root@user-1 linux]# ./xcp chmod -match "fnm('2.img')" -mode 777 101.11.10.10:/s_v1/D2/
+[root@user-1 linux]# ./xcp chmod -match "fnm('2.img')" -mode 777 101.11.10.10:/s_v1/D2/
 
 Filtered: 1 matched, 5 did not match
 Xcp command : xcp chmod -match fnm('2.img') -mode 101.11.10.10:/s_v1/D2/
