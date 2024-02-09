@@ -22,7 +22,7 @@ xcp show \\<IP address or hostname of SMB server>
 .Show example
 include::./_include/ref-example-smb-show-v.adoc[]
 
-The following table lists the `scan` parameters and their description.
+The following table lists the `show` parameters and their description.
 
 [cols=2*,options="header"]
 |===
