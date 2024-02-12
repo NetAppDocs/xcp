@@ -17,7 +17,7 @@ Recursively removing data in 10.101.10.101:/temp7/user9 ...
 1.01M scanned, 999,771 removes, 1,925 rmdirs, 324 MiB in (1.42 MiB/s), 153 MiB out (922
 KiB/s), 3m6s
 
-Xcp command : xcp delete -force -loglevel DEBUG -removetopdir 10.231.42.181:/temp7/user9
+Xcp command : xcp delete -force -loglevel DEBUG -removetopdir 10.101.10.101:/temp7/user9
 Stats : 1.01M scanned, 1.01M removes, 2,041 rmdirs
 Speed : 326 MiB in (1.73 MiB/s), 155 MiB out (842 KiB/s)
 Total Time : 3m8s.

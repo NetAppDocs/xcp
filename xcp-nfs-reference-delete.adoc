@@ -49,7 +49,7 @@ Use the `-match <filter>` parameter with the `delete` command to only process th
 
 [source,cli]
 xcp delete -match "fnm('XCP_copy_2023-04-25_05.51.28.315997')"
-10.234.94.159:/xcp_catalog
+<ip_address>:/xcp_catalog
 
 include::./_include/ref-example-nfs-delete-match.adoc[]
 
@@ -85,7 +85,7 @@ Use the `-exclude <filter>` parameter with the `delete` command to exclude the f
 .Syntax
 
 [source,cli]
-xcp delete -force -exclude "fnm('preserve-atime5')" 10.101.10.101:/temp7/preserve-atime2/
+xcp delete -force -exclude "fnm('preserve-atime5')" <ip_address>:/temp7/preserve-atime2/
 
 include::./_include/ref-example-nfs-delete-exclude.adoc[]
 
@@ -99,7 +99,7 @@ Use the `-parallel <n>` parameter with the `delete` command to specify the maxim
 
 [source,cli]
 xcp delete -force -parallel 8 -match fnm('2023-04-
-25_05.49.26.733160*')" 10.234.94.159:/xcp_catalog/
+25_05.49.26.733160*')" <ip_address>:/xcp_catalog/
 
 include::./_include/ref-example-nfs-delete-parallel.adoc[]
 
@@ -111,7 +111,7 @@ Use the `-preserve-atime <preserve-atime>` parameter with the `delete` command t
 .Syntax
 
 [source,cli]
-xcp delete -force -preserve-atime <IP_address>:/temp7/user2/
+xcp delete -force -preserve-atime <ip_address>:/temp7/user2/
 
 include::./_include/ref-example-nfs-delete-preserveatime.adoc[]
 
@@ -123,7 +123,7 @@ Use the `-loglevel <name>` parameter with the `delete` command to set the log le
 .Syntax
 
 [source,cli]
-xcp delete -force -loglevel DEBUG -removetopdir 10.231.42.181:/temp7/user9
+xcp delete -force -loglevel DEBUG -removetopdir <ip_address>:/temp7/user9
 
 include::./_include/ref-example-nfs-delete-loglevel.adoc[]
 
@@ -135,7 +135,7 @@ Use the `-s3.insecure` parameter with the `delete` command to use HTTP instead o
 .Syntax
 
 [source,cli]
-xcp delete -s3.insecure s3:// bucket1
+xcp delete -s3.insecure s3://bucket1
 
 include::./_include/ref-example-nfs-delete-s3-insecure.adoc[]
 
