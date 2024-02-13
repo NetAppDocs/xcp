@@ -2,7 +2,6 @@
 [%collapsible]
 ====
 ----
-38
 [root@client1 linux]# ./xcp copy -s3.noverify hdfs://user/test s3:// bucket1
 
 xcp: WARNING: No index name has been specified, creating one with name: XCP_copy_2023-06-
