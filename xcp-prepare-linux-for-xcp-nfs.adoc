@@ -56,6 +56,7 @@ A non-root user is required to have the following permissions on a mounted volum
 * Read/write permission access to the mounted destination volume
 * Read/write permission access to the catalog volume
 
+// 2023 Feb 13, GH issue 51
 // BURT 1448943, 2022-02-01
 // BURT 1455348, 2022-02-07
 // BURT 1483365, 2022-06-29
