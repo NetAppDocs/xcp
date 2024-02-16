@@ -49,12 +49,14 @@ XCP NFS transitions and migrations have the following source and target storage 
 A root user on a Linux machine has the permissions to mount the source, destination, and catalog volumes.
 
 == Non-root user
-A non-root user has the following permissions on a mounted volume:
+
+A non-root user is required to have the following permissions on a mounted volume:
 
 * Read permission access to the source volume
 * Read/write permission access to the mounted destination volume
 * Read/write permission access to the catalog volume
 
+// 2023 Feb 13, GH issue 51
 // BURT 1448943, 2022-02-01
 // BURT 1455348, 2022-02-07
 // BURT 1483365, 2022-06-29
