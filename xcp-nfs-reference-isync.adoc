@@ -423,7 +423,7 @@ xcp isync estimate -match "fnm('FILE_*')" -id <name>
 include::./_include/ref-example-nfs-isync-estimate-match.adoc[]
 
 
-[[nfs_isync_estimate_isync_bs]]
+[[nfs_isync_estimate_bs]]
 === isync estimate -bs <n[k]>
 
 Use the the`-bs <n[k]>` parameter with `isync estimate` to specify the read/write block size. The default block size is 64k. 
