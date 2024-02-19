@@ -31,7 +31,7 @@ The following table lists the `scan` parameters and their description.
 | Description
 | <<scan -l and scan -q,scan -l>> | Retrieves file listing output formats.
 | <<scan -l and scan -q,scan -q>> | Retrieves file listing output formats.
-| <<stats_csv_html,scan -stats>> | Retrieves tree statistic report formats.
+| <<nfs_scan_stats_csv_html,scan -stats>> | Retrieves tree statistic report formats.
 | <<nfs_scan_stats_csv_html,scan -csv>>| Retrieves tree statistic report formats.
 | <<nfs_scan_stats_csv_html,scan -html>>| Retrieves tree statistic report formats.
 | <<scan -nonames>> | Excludes user and group names for file listings and reports.
@@ -43,7 +43,7 @@ The following table lists the `scan` parameters and their description.
 | <<nfs_scan_md5, scan -md5 <string_expression> >> | Generates checksums on the files and saves the checksums when indexing (default: false). 
 | <<nfs_scan_depth,scan -depth <n> >> | Limits the search depth.
 | <<nfs_scan_dircount, scan -dircount <n[k]> >> | Specifies the request size when reading directories.
-| <<nfs_scan_edup, scan -edupe>> | Includes the dedupe estimate in reports.
+| <<nfs_scan_edupe, scan -edupe>> | Includes the dedupe estimate in reports.
 | <<nfs_scan_bs, scan -bs <n[k]> >> | Specifies the read/write block size for scans that read data using `-md5` or `-edupe` (default: 64k).
 | <<nfs_scan_parallel, scan -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
 | <<nfs_scan_noid,scan -noId >>| Disables the creation of a default index (default: false).

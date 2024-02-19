@@ -98,7 +98,7 @@ xcp chown -user-from user1 -user user2
 
 include::./_include/ref-example-nfs-chown-user-from.adoc[]
 
-[[nfs_chown_user_from]]
+[[nfs_chown_group_from]]
 == chown -group-from <group_from>
 
 Use the `-group-from <group_from>` parameter with the `chown` command to change the GID.

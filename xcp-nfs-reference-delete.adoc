@@ -32,7 +32,7 @@ The following table lists the `delete` parameters and their description.
 | <<nfs_delete_removetopdir, delete -removetopdir >> | Removes the directory, including child directories.
 | <<nfs_delete_exclude, delete -exclude <filter>  >> | Excludes the files and directories that match the filter. 
 | <<nfs_delete_parallel, delete -parallel <n>  >> | Specifies the maximum concurrent batch processes (default: 7).
-| <<nfs_delete_preserveatime, delete -preserveatime >> | Preserves access time of the file or directory (default: false).
+| <<nfs_delete_preserveatime, delete -preserve-atime >> | Preserves access time of the file or directory (default: false).
 | <<nfs_delete_loglevel,delete -loglevel <name> >> | Sets the log level; available levels are INFO, DEBUG (default: INFO).
 |  <<nfs_delete_s3_insecure,delete -s3.insecure>> | Provides the option to use HTTP instead of HTTPS for S3 bucket communication.
 | <<nfs_delete_endpoint, delete -s3.endpoint <s3_endpoint_url> >> | Overrides the default Amazon Web Services (AWS) endpoint URL with the specified URL for S3 bucket communication.
@@ -151,7 +151,7 @@ xcp delete -s3.endpoint https://<endpoint_url>: s3://xcp-testing
 
 include::./_include/ref-example-nfs-delete-s3-endpoint.adoc[]
 
-[[delete_s3_profile]]
+[[nfs_delete_s3_profile]]
 == delete -s3.profile <name>
 
 Use the `s3.profile` parameter with the `delete` command to specify a profile from the AWS credential file for S3 bucket communication.
@@ -164,6 +164,7 @@ s3://bucket
 
 include::./_include/ref-example-nfs-delete-s3-profile.adoc[]
 
+[[nfs_delete_s3_noverify]]
 == delete -s3.noverify
 
 Use the `-s3.noverify` parameter with the `delete` command to override the default verification of SSL certification for S3 bucket communication. 

@@ -78,7 +78,7 @@ xcp resume -id <catalog_name> -parallel <n>
 
 include::./_include/ref-example-nfs-resume-parallel.adoc[]
 
-[[resume_preseve_atime]]
+[[resume_preserve_atime]]
 == resume -preserve-atime
 
 Use the `-preserve-atime` parameter with the `resume` command to restore all files to the last accessed date on the source. 
