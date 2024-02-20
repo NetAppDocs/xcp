@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-migrate-acl4.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS use cases
+---
+= How to migrate ACLv4 from NetApp 7-Mode to a NetApp Storage System
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+This section covers the step-by-step procedure for transitioning a source NFSv4 export to an ONTAP system.
+
+NOTE: NetApp assumes that the source NFSv4 volume is exported and mounted on the client system and that XCP is already installed on a Linux system. The source should be a NetApp 7-Mode system that support ACLs. ACL migration is supported from NetApp to NetApp only. To copy files with a special character in the name, make sure the source and destination support UTF-8 encoded language.
+
+.Prerequisites for migrating a source NFSv4 export to ONTAP..
