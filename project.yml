@@ -173,6 +173,10 @@ sidebar:
              url: /xcp-smb-reference-transition-ontap.html
            - title: How to migrate CIFS data with ACLs from a Source Storage Box to ONTAP
              url: /xcp-smb-reference-migrate-cifs-acls.html
+        - title: XCP logging
+          entries:
+           - title: XCP logging overview
+             url: /xcp-reference-logging.html
     - title:  Troubleshoot
       entries: 
         - title: Troubleshoot XCP NFS errors
