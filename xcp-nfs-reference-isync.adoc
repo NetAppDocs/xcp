@@ -86,7 +86,7 @@ Use the the `-nomods` parameter with the `isync` command to specify not to check
 .Syntax
 
 [source,cli]
-isync -nomodes <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol 
+isync -nomods <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol 
 
 include::./_include/ref-example-nfs-isync-nomods.adoc[]
 
@@ -98,7 +98,7 @@ Use the the `-mtimewindow <s>` parameter with the `isync` command to  specify th
 .Syntax
 
 [source,cli]
-xcp isync -noattrs <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+xcp isync -mtimewindow <s> <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-mtimewindow.adoc[]
 
@@ -146,7 +146,7 @@ Use the `-match <filter>` parameter with the `isync` command to only process the
 .Syntax
 
 [source,cli]
-xcp isync estimate -match "fnm('FILE_*')" -id <name>
+xcp isync  -match "fnm('FILE_*')" -id <name>
 
 include::./_include/ref-example-nfs-isync-match.adoc[]
 
