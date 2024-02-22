@@ -227,8 +227,7 @@ include::./_include/ref-example-nfs-verify-acl4.adoc[]
 [[nfs_verify_preserveatime]]
 == verify -preserve-atime
 
-Use the `-preserve-atime` parameter with the `verify` command to restore all files to the last accessed date on the source. The `-preserve-atime` parameter resets the access time to
-the original value set before the XCP read operation.
+Use the `-preserve-atime` parameter with the `verify` command to restore all files to the last accessed date on the source. The `-preserve-atime` parameter resets the access time to the original value set before the XCP read operation.
 
 .Syntax
 

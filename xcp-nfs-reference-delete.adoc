@@ -68,7 +68,7 @@ include::./_include/ref-example-nfs-delete-force.adoc[]
 [[nfs_delete_removetopdir]]
 == delete -removetopdir
 
-Use the `-force` parameter with the `delete` command to remove the directory, including child directories.
+Use the `-removetopdir` parameter with the `delete` command to remove the directory, including child directories.
 
 .Syntax
 
