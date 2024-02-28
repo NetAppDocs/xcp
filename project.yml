@@ -97,6 +97,14 @@ sidebar:
           url: /xcp-run-multiple-jobs-on-same-host.html
         - title: Additional NFS features
           url: /xcp-migrate-nfs-additional-features.html
+    - title:  Troubleshoot
+      entries: 
+        - title: Troubleshoot XCP NFS errors
+          url: /xcp-troubleshoot-xcp-nfs.html
+        - title: Troubleshoot XCP SMB errors
+          url: /xcp-troubleshoot-xcp-smb-errors.html
+        - title: Troubleshoot XCP File Analytics errors
+          url: /xcp-troubleshoot-xcp-file-analytics-errors.html
     - title: XCP command reference
       entries:
         - title: NFS command reference
@@ -177,13 +185,5 @@ sidebar:
           entries:
            - title: XCP logging overview
              url: /xcp-reference-logging.html
-    - title:  Troubleshoot
-      entries: 
-        - title: Troubleshoot XCP NFS errors
-          url: /xcp-troubleshoot-xcp-nfs.html
-        - title: Troubleshoot XCP SMB errors
-          url: /xcp-troubleshoot-xcp-smb-errors.html
-        - title: Troubleshoot XCP File Analytics errors
-          url: /xcp-troubleshoot-xcp-file-analytics-errors.html
     - title: Legal notices
       url: /legal-notices.html

@@ -17,7 +17,7 @@ The XCP NFS `estimate` command is used to estimate the time to complete a baseli
 
 .Syntax
 [source,cli]
-xcp estimate -id <newid>
+xcp estimate -id <name>
 
 include::./_include/ref-example-nfs-estimate.adoc[]
 
