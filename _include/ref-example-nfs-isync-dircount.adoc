@@ -16,7 +16,7 @@ Job ID: Job_2023-11-16_23.33.45.854686_isync
 7m3s
 42,496 scanned, 1,000 copied, 1,000 removed, 232 GiB in (549 MiB/s), 578 MiB out (1.20 MiB/s),
 7m8s
-Xcp command : xcp isync -dircount 32k <source_ip_address>:/testvol_flex
+Xcp command : xcp isync -dircount 32k <source_ip_address>:/source_vol
 <destination_ip_address>:/dest_vol
 Stats : 1,000 removed, 42,496 scanned, 1,000 copied
 Speed : 234 GiB in (555 MiB/s), 583 MiB out (1.35 MiB/s)

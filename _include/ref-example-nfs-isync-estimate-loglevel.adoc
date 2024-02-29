@@ -5,7 +5,7 @@
 [root@client1 linux]# ./xcp isync estimate -loglevel DEBUG -id <name>
 
 Job ID: Job_2023-11-16_02.16.58.212518_isync_estimate
-Index: <name> {source: <source_ip_address>:/testvol_flex, target:
+Index: <name> {source: <source_ip_address>:/source_vol, target:
 <destination_ip_address>:/dest_vol}
 Xcp command : xcp isync estimate -loglevel DEBUG -id <name>
 Estimated Time : 8m18s

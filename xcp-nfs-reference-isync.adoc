@@ -35,9 +35,6 @@ The following table lists the `isync` parameters and their description.
 | <<nfs_isync_noattrs, isync -noattrs>> | Does not check attributes.
 | <<nfs_isync_nomods, isync -nomods >> | Does not check file modification times.
 | <<nfs_isync_mtimewindow, isync -mtimewindow <s> >> | Specifies the acceptable modification time difference for verification.
-| <<nfs_isync_acl4, isync -acl4 >> | Processes NFSv4 access control lists (ACLs).
-| <<nfs_isync_acl4_threads, isync -acl4.threads <n> >> | Specifies the per-process thread pool size (default: 100).
-| <<nfs_isync_alwaysset, isync -acl4.alwaysset >> | Uses "setacl" for all ACL-capable files and directories.
 | <<nfs_isync_match, isync -match <filter>  >> | Only processes the files and directories that match the filter.
 | <<nfs_isync_bs, isync -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
 | <<nfs_isync_parallel, isync -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7).
@@ -61,7 +58,7 @@ Use the the `-nodata` parameter with the `isync` command to specify not to check
 .Syntax
 
 [source,cli]
-xcp isync -nodata <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol  
+xcp isync -nodata <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol  
 
 include::./_include/ref-example-nfs-isync-nodata.adoc[]
 
@@ -73,7 +70,7 @@ Use the the `-noattrs` parameter with the `isync` command to specify not to chec
 .Syntax
 
 [source,cli]
-xcp isync -noattrs <source_ip_address>:/testvol_flex
+xcp isync -noattrs <source_ip_address>:/source_vol 
 <destination_ip_address>:/dest_vol 
 
 include::./_include/ref-example-nfs-isync-noattrs.adoc[]
@@ -86,7 +83,7 @@ Use the the `-nomods` parameter with the `isync` command to specify not to check
 .Syntax
 
 [source,cli]
-isync -nomods <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol 
+isync -nomods <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
 
 include::./_include/ref-example-nfs-isync-nomods.adoc[]
 
@@ -98,45 +95,10 @@ Use the the `-mtimewindow <s>` parameter with the `isync` command to  specify th
 .Syntax
 
 [source,cli]
-xcp isync -mtimewindow <s> <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+xcp isync -mtimewindow <s> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-mtimewindow.adoc[]
 
-[[nfs_isync_acl4]]
-=== isync -acl4
-
-Use the the `-acl4` parameter with the `isync` command to process NFSv4 access control lists (ACLs). 
-
-.Syntax
-
-[source,cli]
-xcp isync -newid <name> -acl4 <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
-
-include::./_include/ref-example-nfs-isync-acl4.adoc[]
-
-[[nfs_isync_acl4_threads]]
-=== isync -acl4.threads <n>
-
-Use the the `-acl4.threads <n>` parameter with the `isync` command to specify the per-process thread pool size (default: 100).
-
-.Syntax
-
-[source,cli]
-xcp isync -acl4.threads 200 -loglevel DEBUG <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
-
-include::./_include/ref-example-nfs-isync-acl4-threads.adoc[]
-
-[[nfs_isync_alwaysset]]
-=== isync -acl4.alwaysset
-
-Use the the `-acl4.alwaysset` parameter with the `isync` command to use "setacl" for all ACL-capable files and directories.
-
-.Syntax
-
-[source,cli]
-xcp isync -acl4.alwaysset -loglevel DEBUG <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
-
-include::./_include/ref-example-nfs-isync-alwaysset.adoc[]
 
 [[nfs_isync_match]]
 === isync -match <filter> 
@@ -159,7 +121,7 @@ Use the the`-bs <n[k]>` parameter with the `isync` command to  specify the read/
 .Syntax
 
 [source,cli]
-xcp isync -loglevel DEBUG -bs 32k <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+xcp isync -loglevel DEBUG -bs 32k <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-bs.adoc[]
 
@@ -171,7 +133,7 @@ Use the the `-parallel` parameter with the `isync` command to specify the maximu
 .Syntax
 
 [source,cli]
-xcp isync -parallel 16 <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol 
+xcp isync -parallel 16 <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
 
 include::./_include/ref-example-nfs-isync-parallel.adoc[]
 
@@ -183,7 +145,7 @@ Use the the `-dircount <n[k]>` parameter with the `isync` command to specify the
 .Syntax
 
 [source,cli]
-xcp isync -dircount 32k <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+xcp isync -dircount 32k <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-dircount.adoc[]
 
@@ -195,7 +157,7 @@ Use the the `-exclude <filter>` parameter with the `isync` command to exclude th
 .Syntax
 
 [source,cli]
-xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-exclude.adoc[]
 
@@ -219,7 +181,7 @@ Use the the `-loglevel <name>` parameter with the `isync` command to set the log
 .Syntax
 
 [source,cli]
-xcp isync -loglevel DEBUG -bs 32k <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+xcp isync -loglevel DEBUG -bs 32k <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-loglevel.adoc[]
 
@@ -232,7 +194,7 @@ Use the the `-preserve-atime` parameter with the `isync` command to restore all 
 .Syntax
 
 [source,cli]
-xcp isync -preserve-atime <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+xcp isync -preserve-atime <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-preserveatime.adoc[]
 
@@ -308,9 +270,6 @@ The following table lists the `isync estimate` parameters and their description.
 | <<nfs_isync_estimate_noattrs, isync estimate -noattrs>> | Does not check attributes.
 | <<nfs_isync_estimate_nomods, isync estimate -nomods >> | Does not check file modification times.
 | <<nfs_isync_estimate_mtimewindow, isync estimate -mtimewindow <s> >> | Specifies the acceptable modification time difference for verification.
-| <<nfs_isync_estimate_acl4, isync estimate -acl4 >> | Processes NFSv4 access control lists (ACLs).
-| <<nfs_isync_estimate_acl4_threads, isync estimate -acl4.threads <n> >> | Specifies the per-process thread pool size (default: 100).
-| <<nfs_isync_estimate_alwaysset, isync estimate -acl4.alwaysset >> | Uses "setacl" for all ACL-capable files and directories.
 | <<nfs_isync_estimate_match, isync estimate -match <filter>  >> | Only processes the files and directories that match the filter.
 | <<nfs_isync_estimate_bs, isync estimate -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
 | <<nfs_isync_estimate_parallel, isync estimate -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7).
@@ -373,42 +332,6 @@ Use the the `-mtimewindow <s>` parameter with `isync estimate` to specify the ac
 xcp isync estimate -mtimewindow 10 -id <name>
 
 include::./_include/ref-example-nfs-isync-estimate-mtimewindow.adoc[]
-
-[[nfs_isync_estimate_acl4]]
-=== isync estimate -acl4
-
-Use the the `-acl4` parameter with `isync estimate` to process NFSv4 access control lists (ACLs). 
-
-.Syntax
-
-[source,cli]
-xcp isync estimate -acl4 -id <name>
-
-include::./_include/ref-example-nfs-isync-estimate-acl4.adoc[]
-
-[[nfs_isync_estimate_acl4_threads]]
-=== isync estimate -acl4.threads <n>
-
-Use the the `-acl4.threads <n>` parameter with `isync estimate` to specify the per-process thread pool size (default: 100).
-
-.Syntax
-
-[source,cli]
-xcp isync estimate -acl4.threads 120 -id <name>
-
-include::./_include/ref-example-nfs-isync-estimate-acl4-threads.adoc[]
-
-[[nfs_isync_estimate_alwaysset]]
-=== isync estimate -acl4.alwaysset
-
-Use the the `-acl4.alwaysset` parameter with `isync estimate` to use "setacl" for all ACL-capable files and directories.
-
-.Syntax
-
-[source,cli]
-xcp isync estimate -acl4.alwaysset -id <name>
-
-include::./_include/ref-example-nfs-isync-estimate-alwaysset.adoc[]
 
 [[nfs_isync_estimate_match]]
 === isync estimate -match <filter> 

@@ -43,7 +43,6 @@ The following table lists the `verify` parameters and their description.
 | <<nfs_verify_parallel, verify -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7).
 | <<nfs_verify_dircount,verify -dircount <n[k]> >> | Specifies the request size when reading directories.
 | <<nfs_verify_noid, verify -noId >> | Disables the creation of a default index (default: False).
-| <<nfs_verify_acl4, verify -acl4 >> | Processes NFS4 ACLs.
 | <<nfs_verify_preserveatime, verify -preserve-atime >> | Restores all files to the last accessed date on the source.
 | <<nfs_verify_s3_insecure, verify -s3.insecure >> | Provides the option to use HTTP instead of HTTPS for S3 bucket communication. 
 | <<nfs_verify_s3_endpoint, verify -s3.endpoint <s3_endpoint_url> >> | Overrides the default Amazon Web Services (AWS) endpoint URL with the specified URL for S3 bucket communication.
@@ -211,18 +210,6 @@ Use the `-dircount <n[k]>` parameter with the `verify` command to specify the re
 xcp verify -dircount <n[k]> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-verify-dircount.adoc[]
-
-[[nfs_verify_acl4]]
-== verify -acl4
-
-Use the `-acl4` parameter with the `verify` command to process NFS4 ACLs.
-
-.Syntax
-
-[source,cli]
-xcp verify -acl4 -noid  <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
-
-include::./_include/ref-example-nfs-verify-acl4.adoc[]
 
 [[nfs_verify_preserveatime]]
 == verify -preserve-atime

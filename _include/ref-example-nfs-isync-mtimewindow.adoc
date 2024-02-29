@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client1 linux]# ./xcp isync -mtimewindow 10 10.101.101.101:/testvol_flex 10.101.101.101:/dest_vol 
+[root@client1 linux]# ./xcp isync -mtimewindow 10 10.101.101.101:/source_vol 10.101.101.101:/dest_vol 
 
 
 Job ID: Job_2023-11-16_23.03.41.617300_isync 
@@ -28,7 +28,7 @@ Job ID: Job_2023-11-16_23.03.41.617300_isync
 42,496 scanned, 1,000 copied, 1,000 removed, 233 GiB in (655 MiB/s), 581 MiB out (1.43 MiB/s), 7m11s 
 
 
-Xcp command : xcp isync -mtimewindow 10 -loglevel DEBUG 10.101.101.101:/testvol_flex 10.101.101.101:/dest_vol 
+Xcp command : xcp isync -mtimewindow 10 -loglevel DEBUG 10.101.101.101:/source_vol 10.101.101.101:/dest_vol 
 
 Stats       : 1,000 removed, 42,496 scanned, 1,000 copied 
 

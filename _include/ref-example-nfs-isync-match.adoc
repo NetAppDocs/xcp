@@ -13,7 +13,7 @@ target scan completed: 41,125 scanned, 1,055 matched, 1.88 GiB in (48.9 MiB/s), 
 (117 KiB/s), 39s.
 42,372 scanned, 1,206 matched, 4.26 GiB in (445 MiB/s), 9.92 MiB out (1013 KiB/s), 43s
 Filtered: 1206 matched, 41290 did not match
-Xcp command : xcp isync -match fnm("FILE_USER5*") <source_ip_address>:/testvol_flex
+Xcp command : xcp isync -match fnm("FILE_USER5*") <source_ip_address>:/source_vol
 <destination_ip_address>:/dest_vol
 Stats : 42,496 scanned, 1,206 matched
 Speed : 6.70 GiB in (145 MiB/s), 15.4 MiB out (332 KiB/s)

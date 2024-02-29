@@ -5,7 +5,7 @@
 [root@client1linux]# ./xcp isync estimate -s3.endpoint <S3_endpoint_url> -id S3_index1
 
 Job ID: Job_2023-11-16_02.35.49.911194_isync_estimate
-Index: S3_index1 {source: <source_ip_address>:/testvol_flex/USER5, target: s3://isyncestimate/}
+Index: S3_index1 {source: <source_ip_address>:/source_vol/USER5, target: s3://isyncestimate/}
 2,002 scanned, 432 KiB in (85.6 KiB/s), 5.54 KiB out (1.10 KiB/s), 5s
 2,002 scanned, 432 KiB in (0/s), 5.54 KiB out (0/s), 10s
 Xcp command : xcp isync estimate -s3.endpoint <S3_endpoint_url> -id S3_index1

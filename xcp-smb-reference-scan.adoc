@@ -42,13 +42,13 @@ The following table lists the `scan` parameters and their description.
 | <<smb_scan_depth, scan -depth <n> >> 
 | Limit the search depth to n levels.
 | <<scan -stats>> 
-| Print tree statistics report.
+| Lists files in the tree statistic report format.
 | <<scan -html>> 
-| Tree statistics report formats
+| Lists files in the tree statistic report format.
 | <<scan -csv>> 
-| Tree statistics report formats
+| Lists files in the tree statistic report format.
 | <<scan -l>> 
-| File listing output formats
+| List files in the long listing output format.
 | <<scan -ownership>> 
 | Retrieve ownership information of files and directories on the source 
 system.
@@ -185,7 +185,7 @@ xcp scan -depth <2> \\<IP address or hostname of SMB server>\copy_share2
 include::./_include/ref-example-smb-scan-depth-n.adoc[]
 
 == scan -stats
-Use the `-stats` parameter with the `scan` command to print tree statistics report formats.
+Use the `-stats` parameter with the `scan` command to  to list files in a tree statistics report format.
 
 .Syntax
 [source,cli]
@@ -195,7 +195,7 @@ xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share
 include::./_include/ref-example-smb-scan-stats.adoc[]
 
 == scan -html
-Use the `-html` parameter with the `scan` command to save a HTML statistics report.
+Use the `-html` parameter with the `scan` command  to list files in a HTML statistics report.
 
 NOTE: XCP reports (.csv, .html) are saved in the same location as the XCP binary. The file name is in the format <xcp_process_id>_<time_stamp>.html. When XCP cannot map security identifiers (SIDs) to owner names, it uses the last few digits after the final “–” in the SID to represent the owner. For example, when XCP is unable to map the SID S-1-5-21-1896871423-3211229150-3383017265-4854184 to its owner, it represents the owner by using 4854184. To view .csv and .html example reports, see link:<TBD>[Sample XCP NFS and SMB Reports].
 
@@ -207,7 +207,7 @@ xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SM
 include::./_include/ref-example-smb-scan-html.adoc[]
 
 == scan -csv
-Use the `-csv` parameter with the `scan` command to save a CSV statistics report.
+Use the `-csv` parameter with the `scan` command to list files in a CSV tree statistics report.
 
 .Syntax
 [source,cli]
@@ -217,7 +217,7 @@ xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB
 include::./_include/ref-example-smb-scan-csv.adoc[]
 
 == scan -l
-Use the `-l` parameter with the `scan` command to retrieve a detailed file listing output.
+Use the `-l` parameter with the `scan` command to list files in the long listing output format.
 
 .Syntax
 [source,cli]

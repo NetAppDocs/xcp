@@ -17,7 +17,7 @@ MiB/s), 20s
 41,316 scanned, 1,000 copied, 1,206 excluded, 1,000 removed, 225 GiB in (616 MiB/s), 563 MiB
 out (1.36 MiB/s), 6m35s
 Excluded: 1206 excluded, 0 did not match exclude criteria
-Xcp command : xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+Xcp command : xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 Stats : 1,000 removed, 41,316 scanned, 1,000 copied, 1,206 excluded
 Speed : 227 GiB in (584 MiB/s), 568 MiB out (1.42 MiB/s)
 Total Time : 6m38s.

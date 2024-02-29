@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client1 linux]# ./xcp isync -noattrs <source_ip_address>:/testvol_flex <destination_ip_address>:/dest_vol
+[root@client1 linux]# ./xcp isync -noattrs <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 Job ID: Job_2023-11-16_22.49.22.056646_isync
 18,036 scanned, 940 MiB in (168 MiB/s), 2.67 MiB out (488 KiB/s), 5s
@@ -17,7 +17,7 @@ Job ID: Job_2023-11-16_22.49.22.056646_isync
 .
 42,496 scanned, 1,000 copied, 1,000 removed, 234 GiB in (716 MiB/s), 582 MiB out (1.55 MiB/s),
 7m22s
-Xcp command : xcp isync -noattrs <<source_ip_address>>:/testvol_flex <destination_ip_address>:/dest_vol
+Xcp command : xcp isync -noattrs <<source_ip_address>>:/source_vol <destination_ip_address>:/dest_vol
 Stats : 1,000 removed, 42,496 scanned, 1,000 copied
 Speed : 234 GiB in (542 MiB/s), 583 MiB out (1.32 MiB/s)
 Total Time : 7m22s.

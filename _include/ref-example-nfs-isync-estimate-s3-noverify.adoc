@@ -5,7 +5,7 @@
 [root@client1 linux]# ./xcp isync estimate -s3.noverify -id S3_index
 
 Job ID: Job_2023-11-16_02.23.36.515890_isync_estimate
-Index: S3_index {source: <source_ip_address>:/testvol_flex/USER5, target: s3://
+Index: S3_index {source: <source_ip_address>:/source_vol/USER5, target: s3://
 xcptesting/test_ankit/}
 2,002 scanned, 432 KiB in (85.7 KiB/s), 5.53 KiB out (1.10 KiB/s), 5s
 2,002 scanned, 432 KiB in (0/s), 5.53 KiB out (0/s), 10s

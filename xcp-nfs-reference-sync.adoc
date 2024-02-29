@@ -167,7 +167,7 @@ include::./_include/ref-example-nfs-sync-dry-run-stats.adoc[]
 [[sync_dry_run_l]]
 === sync dry-run -l
 
-Use the the `-l` parameter with `sync dry-run` to print details about files and directories that changed
+Use the the `-l` parameter with `sync dry-run` to print details about files and directories that changed.
 
 .Syntax
 
