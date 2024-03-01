@@ -143,14 +143,6 @@ sidebar:
               url: /xcp-nfs-reference-indexdelete.html
             - title: isync
               url: /xcp-nfs-reference-isync.html
-        - title: NFS use cases
-          entries:
-           - title: How to transition 7-Mode NFSv3 Storage to ONTAP
-             url: /xcp-nfs-reference-transition-ontap.html
-           - title: How to transition 7-Mode volume Snapshot copies to ONTAP
-             url: /xcp-nfs-reference-transition-snapchat.html
-           - title: How to migrate ACLv4 from NetApp 7-Mode to a NetApp Storage System
-             url: /xcp-nfs-reference-migrate-acl4.html
         - title: SMB command reference
           entries: 
             - title: SMB command reference overview
@@ -175,12 +167,10 @@ sidebar:
               url: /xcp-smb-reference-configure.html
             - title: listen
               url: /xcp-smb-reference-listen.html 
-        - title: SMB use cases
+        - title: XCP use cases
           entries:
-           - title: How to transition 7-Mode SMB Storage to ONTAP
-             url: /xcp-smb-reference-transition-ontap.html
-           - title: How to migrate CIFS data with ACLs from a Source Storage Box to ONTAP
-             url: /xcp-smb-reference-migrate-cifs-acls.html
+           - title: XCP use cases
+             url: /xcp-reference-use-cases.html
         - title: XCP logging
           entries:
            - title: XCP logging overview
