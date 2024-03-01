@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: xcp-nfs-reference-logging-eventlog.html
+permalink: xcp-nfs-reference-logging-syslog.html
 keywords: netapp, xcp, reference, event, logging
 summary: XCP logging
 ---
