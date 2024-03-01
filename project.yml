@@ -175,5 +175,11 @@ sidebar:
           entries:
            - title: XCP logging overview
              url: /xcp-reference-logging.html
+           - title: Set the logConfig option 
+             url: /xcp-nfs-reference-logging-logconfig.html
+           - title: Set the eventlog option
+             url: /xcp-nfs-reference-logging-eventlog.html
+           - title: Enable the syslog client
+             url: /xcp-nfs-reference-logging-syslog.html
     - title: Legal notices
       url: /legal-notices.html

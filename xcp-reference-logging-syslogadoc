@@ -1,0 +1,138 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-logging-eventlog.html
+keywords: netapp, xcp, reference, event, logging
+summary: XCP logging
+---
+
+= Enable the syslog client
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+XCP supports a syslog client to send XCP event log messages to a remote syslog receiver for NFS and SMB. It supports the UDP protocol using the default port 514.
+
+== Configure the syslog client for NFS and SMB
+
+Enabling the syslog client requires configuring the `syslog` option in the the `xcpLogConfig.json` configuration file for NFS and SMB.
+
+The following example configuration for the syslog client for NFS and SMB:
+
+----
+{
+"syslog":{
+"isEnabled":true,
+"level":"INFO",
+"serverIp":"10.101.101.d",
+"port":514
+},
+"sanitize":false
+}
+----
+
+== Syslog options
+
+
+
+The following table shows the syslog sub options and their description:
+
+[cols="1,1,1,3"] 
+|=== 
+|Sub option |JSON data type |Default value |Description
+
+|`isEnabled` 
+|Boolean
+|False
+|This Boolean option enables the syslog client in XCP. Setting it to
+false will ignore the syslog configuration.
+
+|`level` 
+|String
+|INFO
+| Event message severity filter level. Event messaging support five severity levels in order of decreasing severity: CRITICAL, ERROR, WARNING, INFO, and DEBUG
+
+|`serverIp` 
+|String
+|None
+|This option lists the remote syslog server IP addresses or hostnames.
+
+|`port` 
+|Integar
+|514
+| This option is the remote syslog receiver port. You can configure syslog receivers to accept syslog datagrams on a different port with this option.The default UDP port is 514.
+|=== 
+
+IMPORTANT: The `sanitize` option should not be specified within “syslog” configuration. This option has a global scope and is common to logging, event log, and syslog within JSON config. Setting this value to “true” will hide sensitive information in syslog messages posted to the syslog server.
+
+.Syslog message format
+
+Every syslog messages sent to the remote syslog server over UDP is formatted as per the RFC 5424 format for NFS and SMB.
+
+The following table shows the severity level as per RFC 5424 supported for syslog messages for XCP:
+
+|=== 
+|Severity values | Severity level
+
+|3 | Error: error conditions
+|4 | Warning: warning conditions
+|6 | Informational: informational messages
+|7 | Debug: debug-level messages
+
+|===
+
+In the syslog header for NFS and SMB, version has a value of 1 and the facility value for all messages for XCP is set to 1 (user-level messages):
+`<PRI> = syslog facility * 8 + severity value`
+
+.XCP application syslog message format with syslog header for NFS:
+
+|=== 
+|Template |Example
+
+a|
+`<PRI><version> <Time stamp> <hostname> xcp_nfs - - - <XCP message>`
+a|
+`<14>1 2020-07-08T06:30:34.341Z netapp xcp_nfs - - - INFO {"Event ID": 14,
+"Event Category": "XCP job status", "Event Type": "XCP scan completion",
+"Event Source": "netapp", "Description": "XCP scan is completed by scanning 8
+items"}`
+
+|=== 
+
+.XCP application message without syslog header for NFS
+|=== 
+|Template |Example
+
+a|
+`<message severity level i.e CRITICAL, ERROR, WARNING, INFO, DEBUG> <XCP event log message>`
+a|
+`INFO {"Event ID": 14, "Event Category": "XCP job status", "Event Type": "XCP scan completion", "Event Source": "netapp", "Description": "XCP scan is completed by scanning 8 items"}`
+
+|=== 
+
+.XCP application syslog message format with syslog header for SMB
+
+|=== 
+|Template |Example
+
+a|
+`<PRI><version> <Time stamp> <hostname> xcp_smb - - - <XCP message`
+a|
+`<14>1 2020-07-10T10:37:18.452Z bansala01 xcp_smb - - - INFO {"Event ID": 14, "Event Category": "XCP job status", "Event Type": "XCP scan completion", "Event Source": "NETAPP-01", "Description": "XCP scan is completed by scanning 17 items"}`
+
+|=== 
+
+.XCP application message without syslog header for SMB
+
+|=== 
+|Template |Example
+
+a|
+`<message severity level i.e CRITICAL, ERROR, WARNING, INFO, DEBUG> <XCP event log message>`
+a|
+`NFO {"Event ID": 14, "Event Category": "XCP job status", "Event Type": "XCP scan completion", "Event Source": "NETAPP-01", "Description": "XCP scan is completed by scanning 17items"}`
+
+|=== 
+
