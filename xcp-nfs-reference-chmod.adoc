@@ -43,7 +43,7 @@ Use the `-exclude <filter>` parameter with the `chmod` command to exclude the fi
 .Syntax
 
 [source,cli]
-xcp chmod -exclude "fnm('3.img')" -mode 770 101.11.10.10:/s_v1/D3/ 
+xcp chmod -exclude <filter> -mode 770 101.11.10.10:/s_v1/D3/ 
 
 include::./_include/ref-example-nfs-chmod-exclude.adoc[]
 
@@ -55,7 +55,7 @@ Use the `-match <filter>` parameter with the `chmod` command to only process the
 .Syntax
 
 [source,cli]
-xcp chmod -match "fnm('2.img')" -mode 777 101.11.10.10:/s_v1/D2/ 
+xcp chmod -match <filter>  -mode 777 101.11.10.10:/s_v1/D2/ 
 
 include::./_include/ref-example-nfs-chmod-match.adoc[]
 
@@ -67,7 +67,7 @@ Use the `-reference <reference>` parameter with the `chmod` command to specify t
 .Syntax
 
 [source,cli]
-xcp chmod -reference 101.11.10.10:/s_v1/D1/1.txt 102.21.10.10:/s_v1/D2/
+xcp chmod -reference <reference>
 
 include::./_include/ref-example-nfs-chmod-reference.adoc[]
 

@@ -48,7 +48,7 @@ Use the `-match <filter>` parameter with the `delete` command to only process th
 .Syntax
 
 [source,cli]
-xcp delete -match "fnm('XCP_copy_2023-04-25_05.51.28.315997')"
+xcp delete -match <filter> 
 <ip_address>:/xcp_catalog
 
 include::./_include/ref-example-nfs-delete-match.adoc[]
@@ -85,7 +85,7 @@ Use the `-exclude <filter>` parameter with the `delete` command to exclude the f
 .Syntax
 
 [source,cli]
-xcp delete -force -exclude "fnm('preserve-atime5')" <ip_address>:/temp7/preserve-atime2/
+xcp delete -force -exclude <filter>  <ip_address>:/temp7/preserve-atime2/
 
 include::./_include/ref-example-nfs-delete-exclude.adoc[]
 

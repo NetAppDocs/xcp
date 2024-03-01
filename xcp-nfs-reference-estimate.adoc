@@ -117,7 +117,7 @@ Use the `-parallel <n>` parameter with the `estimate` command to specify the max
 .Syntax
 
 [source,cli]
-xcp estimate -loglevel DEBUG -parallel 8 -id estimate1
+xcp estimate -loglevel DEBUG -parallel <n> -id estimate1
 
 include::./_include/ref-example-nfs-estimate-parallel.adoc[]
 

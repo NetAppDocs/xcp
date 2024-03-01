@@ -46,7 +46,7 @@ Use the `-exclude <filter>` parameter with the `chown` command to exclude the fi
 .Syntax
 
 [source,cli]
-xcp chown -exclude "fnm('1.img')" -user user2
+xcp chown -exclude <filter> -user user2
 
 include::./_include/ref-example-nfs-chown-exclude.adoc[]
 
@@ -58,7 +58,7 @@ Use the `-match <filter>` parameter with the `chown` command to only process the
 .Syntax
 
 [source,cli]
-xcp chown -match "fnm('1.img')" -user user1
+xcp chown -match <filter>  -user user1
 
 include::./_include/ref-example-nfs-chown-match.adoc[]
 
@@ -70,7 +70,7 @@ Use the `-group <group>` parameter with the `chown` command to set the Linux GID
 .Syntax
 
 [source,cli]
-xcp chown -match "fnm('1.img')" -user user1
+xcp chown -match <filter> -user user1
 
 include::./_include/ref-example-nfs-chown-group.adoc[]
 

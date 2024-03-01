@@ -41,7 +41,7 @@ Use the `-match <filter>` parameter with the `indexdelete` command to only proce
 .Syntax
 
 [source,cli]
-xcp indexdelete -match "fnm('S3_index12')"
+xcp indexdelete -match <filter> 
 
 include::./_include/ref-example-nfs-indexdelete-match.adoc[]
 
@@ -53,7 +53,7 @@ Use the `-loglevel <name>` parameter with the `indexdelete` command  to set the 
 .Syntax
 
 [source,cli]
-xcp indexdelete -loglevel DEBUG -match "fnm('test*')"
+xcp indexdelete -loglevel DEBUG -match <filter> 
 
 include::./_include/ref-example-nfs-indexdelete-loglevel.adoc[]
 
