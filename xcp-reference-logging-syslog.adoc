@@ -35,8 +35,6 @@ The following example configuration for the syslog client for NFS and SMB:
 
 == Syslog options
 
-
-
 The following table shows the syslog sub options and their description:
 
 [cols="1,1,1,3"] 
@@ -67,7 +65,7 @@ false will ignore the syslog configuration.
 
 IMPORTANT: The `sanitize` option should not be specified within “syslog” configuration. This option has a global scope and is common to logging, event log, and syslog within JSON config. Setting this value to “true” will hide sensitive information in syslog messages posted to the syslog server.
 
-.Syslog message format
+== Syslog message format
 
 Every syslog messages sent to the remote syslog server over UDP is formatted as per the RFC 5424 format for NFS and SMB.
 
@@ -86,7 +84,9 @@ The following table shows the severity level as per RFC 5424 supported for syslo
 In the syslog header for NFS and SMB, version has a value of 1 and the facility value for all messages for XCP is set to 1 (user-level messages):
 `<PRI> = syslog facility * 8 + severity value`
 
-.XCP application syslog message format with syslog header for NFS:
+.XCP application syslog message format with a syslog header for NFS:
+
+The following table shows a template and example of the syslog message format with a syslog header for NFS: 
 
 |=== 
 |Template |Example
@@ -102,6 +102,9 @@ items"}`
 |=== 
 
 .XCP application message without syslog header for NFS
+
+The following table shows a template and example of the syslog message format without a syslog header for NFS: 
+
 |=== 
 |Template |Example
 
@@ -114,6 +117,8 @@ a|
 
 .XCP application syslog message format with syslog header for SMB
 
+The following table shows a template and example of the syslog message format with a syslog header for SMB: 
+
 |=== 
 |Template |Example
 
@@ -125,6 +130,8 @@ a|
 |=== 
 
 .XCP application message without syslog header for SMB
+
+The following table shows a template and example of the syslog message format without a syslog header for SMB: 
 
 |=== 
 |Template |Example
