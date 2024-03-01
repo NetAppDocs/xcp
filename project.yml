@@ -105,7 +105,7 @@ sidebar:
           url: /xcp-troubleshoot-xcp-smb-errors.html
         - title: Troubleshoot XCP File Analytics errors
           url: /xcp-troubleshoot-xcp-file-analytics-errors.html
-    - title: XCP command reference
+    - title: XCP reference
       entries:
         - title: NFS command reference
           entries: 
