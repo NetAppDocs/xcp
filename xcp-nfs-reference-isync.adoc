@@ -108,7 +108,7 @@ Use the `-match <filter>` parameter with the `isync` command to only process the
 .Syntax
 
 [source,cli]
-xcp isync  -match "fnm('FILE_*')" -id <name>
+xcp isync  -match <filter> -id <name>
 
 include::./_include/ref-example-nfs-isync-match.adoc[]
 
@@ -121,19 +121,19 @@ Use the the`-bs <n[k]>` parameter with the `isync` command to  specify the read/
 .Syntax
 
 [source,cli]
-xcp isync -loglevel DEBUG -bs 32k <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+xcp isync -loglevel DEBUG -bs <n[k]> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-bs.adoc[]
 
 [[nfs_isync_parallel]]
 === isync -parallel 
 
-Use the the `-parallel` parameter with the `isync` command to specify the maximum number of concurrent batch processes. The default value is 7.
+Use the the `-parallel <n>` parameter with the `isync` command to specify the maximum number of concurrent batch processes. The default value is 7.
 
 .Syntax
 
 [source,cli]
-xcp isync -parallel 16 <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
+xcp isync -parallel <n> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
 
 include::./_include/ref-example-nfs-isync-parallel.adoc[]
 
@@ -145,7 +145,7 @@ Use the the `-dircount <n[k]>` parameter with the `isync` command to specify the
 .Syntax
 
 [source,cli]
-xcp isync -dircount 32k <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+xcp isync -dircount <n[k]> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-dircount.adoc[]
 
@@ -157,7 +157,7 @@ Use the the `-exclude <filter>` parameter with the `isync` command to exclude th
 .Syntax
 
 [source,cli]
-xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+xcp isync -exclude <filter> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-exclude.adoc[]
 
@@ -169,7 +169,7 @@ Use the the `-newid <name>` parameter with the `isync` command to specify the ca
 .Syntax
 
 [source,cli]
-xcp isync -newid testing -s3.endpoint <S3_endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+xcp isync -newid <name> -s3.endpoint <S3_endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
 
 include::./_include/ref-example-nfs-isync-newid.adoc[]
 
@@ -181,7 +181,7 @@ Use the the `-loglevel <name>` parameter with the `isync` command to set the log
 .Syntax
 
 [source,cli]
-xcp isync -loglevel DEBUG -bs 32k <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+xcp isync -loglevel <name> -bs <n[k]> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 include::./_include/ref-example-nfs-isync-loglevel.adoc[]
 
@@ -206,7 +206,7 @@ Use the `-s3.insecure` parameter with the `isync` command to use HTTP instead of
 .Syntax
 
 [source,cli]
-xcp isync -newid testing2 -s3.insecure -s3.endpoint <S3_endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+xcp isync -newid <name> -s3.insecure -s3.endpoint <S3_endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
 
 include::./_include/ref-example-nfs-isync-s3-insecure.adoc[]
 
@@ -218,7 +218,7 @@ Use the `-s3.endpoint <s3_endpoint_url>` parameter with the `isync` command to o
 .Syntax
 
 [source,cli]
-xcp isync -newid testing5 -s3.noverify -s3.endpoint <endpoint_url>
+xcp isync -newid <name> -s3.noverify -s3.endpoint <endpoint_url>
 <source_ip_address>:/src/USER4 s3://isyncestimate/
 
 include::./_include/ref-example-nfs-isync-s3-endpoint.adoc[]
@@ -231,7 +231,7 @@ Use the `s3.profile` parameter with the `isync` command to specify a profile fro
 .Syntax
 
 [source,cli]
-xcp isync -s3.profile s3_profile -s3.endpoint <S3-endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate
+xcp isync -s3.profile <name> -s3.endpoint <S3-endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate
 
 include::./_include/ref-example-nfs-isync-s3-profile.adoc[]
 
@@ -243,7 +243,7 @@ Use the `-s3.noverify` parameter with the `isync` command to override the defaul
 .Syntax
 
 [source,cli]
-xcp isync -newid testing5 -s3.noverify -s3.endpoint <endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+xcp isync -newid <name> -s3.noverify -s3.endpoint <endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
 
 include::./_include/ref-example-nfs-isync-s3-noverify.adoc[]
 
@@ -329,7 +329,7 @@ Use the the `-mtimewindow <s>` parameter with `isync estimate` to specify the ac
 .Syntax
 
 [source,cli]
-xcp isync estimate -mtimewindow 10 -id <name>
+xcp isync estimate -mtimewindow <s> -id <name>
 
 include::./_include/ref-example-nfs-isync-estimate-mtimewindow.adoc[]
 
@@ -341,7 +341,7 @@ Use the `-match <filter>` parameter with `isync estimate` to only process the fi
 .Syntax
 
 [source,cli]
-xcp isync estimate -match "fnm('FILE_*')" -id <name>
+xcp isync estimate -match <filter> -id <name>
 
 include::./_include/ref-example-nfs-isync-estimate-match.adoc[]
 
@@ -354,19 +354,19 @@ Use the the`-bs <n[k]>` parameter with `isync estimate` to specify the read/writ
 .Syntax
 
 [source,cli]
-xcp isync estimate -bs 128k -id <name>
+xcp isync estimate -bs <n[k]> -id <name>
 
 include::./_include/ref-example-nfs-isync-estimate-bs.adoc[]
 
 [[nfs_isync_estimate_parallel]]
 === isync estimate -parallel 
 
-Use the the `-parallel` parameter with `isync estimate` to specify the maximum number of concurrent batch processes. The default value is 7.
+Use the the `-parallel <n>` parameter with `isync estimate` to specify the maximum number of concurrent batch processes. The default value is 7.
 
 .Syntax
 
 [source,cli]
-xcp isync estimate -parallel 10 -id <name> 
+xcp isync estimate -parallel <n> -id <name> 
 
 include::./_include/ref-example-nfs-isync-estimate-parallel.adoc[]
 
@@ -378,7 +378,7 @@ Use the the `-dircount <n[k]>` parameter with `isync estimate` to specify the re
 .Syntax
 
 [source,cli]
-xcp isync estimate -dircount 128k -id <name>
+xcp isync estimate -dircount <n[k]> -id <name>
 
 include::./_include/ref-example-nfs-isync-estimate-dircount.adoc[]
 
@@ -390,7 +390,7 @@ Use the the `-exclude <filter>` parameter with `isync estimate` to exclude the f
 .Syntax
 
 [source,cli]
-xcp isync estimate -exclude "fnm('DIR1*')" -id <name>
+xcp isync estimate -exclude <filter> -id <name>
 
 include::./_include/ref-example-nfs-isync-estimate-exclude.adoc[]
 
@@ -414,7 +414,7 @@ Use the the `-loglevel <name>` parameter with `isync estimate` to set the log le
 .Syntax
 
 [source,cli]
-xcp isync estimate -loglevel DEBUG -id <name>
+xcp isync estimate -loglevel <name> -id <name>
 
 include::./_include/ref-example-nfs-isync-estimate-loglevel.adoc[]
 

@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client1linux]# ./xcp isync estimate -match "fnm('FILE_*')" -id <name>
+[root@client1linux]# ./xcp isync estimate -match <filter> -id <name>
 
 Job ID: Job_2023-11-16_02.13.34.904794_isync_estimate
 Index: <name> {source: <source_ip_address>:/source_vol, target:
