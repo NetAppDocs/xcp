@@ -48,8 +48,7 @@ Use the `-match <filter>` parameter with the `delete` command to only process th
 .Syntax
 
 [source,cli]
-xcp delete -match <filter> 
-<ip_address>:/xcp_catalog
+xcp delete -match <filter> <ip_address>:/xcp_catalog
 
 include::./_include/ref-example-nfs-delete-match.adoc[]
 
@@ -73,7 +72,7 @@ Use the `-removetopdir` parameter with the `delete` command to remove the direct
 .Syntax
 
 [source,cli]
-xcp delete -force -loglevel DEBUG -removetopdir
+xcp delete -force -loglevel <name> -removetopdir
 
 include::./_include/ref-example-nfs-delete-removetopdir.adoc[]
 
@@ -98,8 +97,7 @@ Use the `-parallel <n>` parameter with the `delete` command to specify the maxim
 .Syntax
 
 [source,cli]
-xcp delete -force -parallel 8 -match fnm('2023-04-
-25_05.49.26.733160*')" <ip_address>:/xcp_catalog/
+xcp delete -force -parallel <n> -match <filter> <ip_address>:/xcp_catalog/
 
 include::./_include/ref-example-nfs-delete-parallel.adoc[]
 

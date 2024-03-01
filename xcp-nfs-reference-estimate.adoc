@@ -57,7 +57,7 @@ Use the `-gbit <n>` parameter with the `estimate` command to estimate best-case 
 .Syntax
 
 [source,cli]
-xcp estimate -gbit 10 -id estimate01
+xcp estimate -gbit <n> -id <name>
 
 include::./_include/ref-example-nfs-estimate-gbit.adoc[]
 
@@ -69,7 +69,7 @@ Use the `-target <path>` parameter with the `estimate` command to specify target
 .Syntax
 
 [source,cli]
-xcp estimate -t 100 -id estimate01 -target 10.101.12.11:/temp8
+xcp estimate -t 100 -id <name> -target <path>
 
 include::./_include/ref-example-nfs-estimate-target.adoc[]
 
@@ -81,7 +81,7 @@ Use the `-t <n[s|m|h]>` parameter with the `estimate` command to specify the dur
 .Syntax
 
 [source,cli]
-xcp estimate -t 100 -id estimate01 -target 10.101.12.11:/temp8
+xcp estimate -t <n[s|m|h]> -id <name> -target <path>
 
 include::./_include/ref-example-nfs-estimate-t.adoc[]
 
@@ -93,7 +93,7 @@ Use the `-bs <n[k]>` parameter with the `estimate` command to specify the read/w
 .Syntax
 
 [source,cli]
-xcp estimate -id estimate01 -bs 128k
+xcp estimate -id <name> -bs <n[k]>
 
 include::./_include/ref-example-nfs-estimate-bs.adoc[]
 
@@ -105,7 +105,7 @@ Use the `-dircount <n[k]>` parameter with the `estimate` command to specify the 
 .Syntax
 
 [source,cli]
-xcp estimate -id csdata01 -dircount 128k -t 300 -target <path>
+xcp estimate -id <name> -dircount <n[k]> -t <n> -target <path>
 
 include::./_include/ref-example-nfs-estimate-dircount.adoc[]
 
@@ -117,7 +117,7 @@ Use the `-parallel <n>` parameter with the `estimate` command to specify the max
 .Syntax
 
 [source,cli]
-xcp estimate -loglevel DEBUG -parallel <n> -id estimate1
+xcp estimate -loglevel <name> -parallel <n> -id <name>
 
 include::./_include/ref-example-nfs-estimate-parallel.adoc[]
 
@@ -129,7 +129,7 @@ Use the `-preserve-atime` parameter with the `estimate` command to preserve the 
 .Syntax
 
 [source,cli]
-xcp estimate -loglevel DEBUG -preserve-atime -id estimate1
+xcp estimate -loglevel <name> -preserve-atime -id <name>
 
 include::./_include/ref-example-nfs-estimate-preserveatime.adoc[]
 
@@ -141,6 +141,6 @@ Use the `-loglevel <name>` parameter with the `estimate` command to set the log 
 .Syntax
 
 [source,cli]
-xcp estimate -loglevel DEBUG -id estimate01
+xcp estimate -loglevel <name> -id <name>
 
 include::./_include/ref-example-nfs-estimate-loglevel.adoc[]

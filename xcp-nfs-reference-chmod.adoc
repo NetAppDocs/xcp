@@ -18,7 +18,7 @@ The XCP NFS `chmod` command scans and changes the file permission of all the fil
 
 .Syntax
 [source,cli]
-xcp chmod -mode 777 <source NFS export path>
+xcp chmod -mode <value> <source NFS export path>
 
 include::./_include/ref-example-nfs-chmod.adoc[]
 
@@ -43,7 +43,7 @@ Use the `-exclude <filter>` parameter with the `chmod` command to exclude the fi
 .Syntax
 
 [source,cli]
-xcp chmod -exclude <filter> -mode 770 101.11.10.10:/s_v1/D3/ 
+xcp chmod -exclude <filter> -mode <value> <source NFS export path>
 
 include::./_include/ref-example-nfs-chmod-exclude.adoc[]
 
@@ -55,7 +55,7 @@ Use the `-match <filter>` parameter with the `chmod` command to only process the
 .Syntax
 
 [source,cli]
-xcp chmod -match <filter>  -mode 777 101.11.10.10:/s_v1/D2/ 
+xcp chmod -match <filter>  -mode <value> <source NFS export path>
 
 include::./_include/ref-example-nfs-chmod-match.adoc[]
 
@@ -67,7 +67,7 @@ Use the `-reference <reference>` parameter with the `chmod` command to specify t
 .Syntax
 
 [source,cli]
-xcp chmod -reference <reference>
+xcp chmod -reference <reference> <source NFS export path>
 
 include::./_include/ref-example-nfs-chmod-reference.adoc[]
 

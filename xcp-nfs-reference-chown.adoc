@@ -46,7 +46,7 @@ Use the `-exclude <filter>` parameter with the `chown` command to exclude the fi
 .Syntax
 
 [source,cli]
-xcp chown -exclude <filter> -user user2
+xcp chown -exclude <filter> -user <user_name> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-exclude.adoc[]
 
@@ -58,7 +58,7 @@ Use the `-match <filter>` parameter with the `chown` command to only process the
 .Syntax
 
 [source,cli]
-xcp chown -match <filter>  -user user1
+xcp chown -match <filter>  -user <user_name> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-match.adoc[]
 
@@ -70,7 +70,7 @@ Use the `-group <group>` parameter with the `chown` command to set the Linux GID
 .Syntax
 
 [source,cli]
-xcp chown -match <filter> -user user1
+xcp chown -match <filter> -user <user_name> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-group.adoc[]
 
@@ -82,7 +82,7 @@ Use the `-user <user>` parameter with the `chown` command to set the Linux UID a
 .Syntax
 
 [source,cli]
-xcp chown -user user1 102.101.10.210:/s_v1/smaple_set/D1
+xcp chown -user -user <user_name> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-user.adoc[]
 
@@ -94,7 +94,7 @@ Use the `-user-from <user_from>` parameter with the `chown` command to change th
 .Syntax
 
 [source,cli]
-xcp chown -user-from user1 -user user2
+xcp chown -user-from user1 -user <user_name> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-user-from.adoc[]
 
@@ -106,7 +106,7 @@ Use the `-group-from <group_from>` parameter with the `chown` command to change 
 .Syntax
 
 [source,cli]
-xcp chown -group-from group1 -group group2
+xcp chown -group-from <group_name> -group <group_name> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-group-from.adoc[]
 
@@ -118,7 +118,7 @@ Use the `-reference <reference>` parameter with the `chown` command to specify t
 .Syntax
 
 [source,cli]
-xcp chown -reference 101.101.10.210:/s_v1/smaple_set/D2/2.img
+xcp chown -reference <reference> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-reference.adoc[]
 
@@ -130,7 +130,7 @@ Use the `-v` parameter with the `chown` command to report the output for every o
 .Syntax
 
 [source,cli]
-xcp chown -user-from user2 -v -user user1
+xcp chown -user-from <user_name> -v -user <user_name> <source NFS export path>
 
 include::./_include/ref-example-nfs-chown-v.adoc[]
 
