@@ -79,7 +79,7 @@ Use the `-v` parameter with the `chmod` command to report the output for every o
 .Syntax
 
 [source,cli]
-chmod -mode 111 -v file:///mnt/s_v1/D1/
+chmod -mode <value> -v <source NFS export path>
 
 include::./_include/ref-example-nfs-chmod-v.adoc[]
 

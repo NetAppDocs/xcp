@@ -70,8 +70,7 @@ Use the the `-noattrs` parameter with the `isync` command to specify not to chec
 .Syntax
 
 [source,cli]
-xcp isync -noattrs <source_ip_address>:/source_vol 
-<destination_ip_address>:/dest_vol 
+xcp isync -noattrs <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
 
 include::./_include/ref-example-nfs-isync-noattrs.adoc[]
 
@@ -218,8 +217,7 @@ Use the `-s3.endpoint <s3_endpoint_url>` parameter with the `isync` command to o
 .Syntax
 
 [source,cli]
-xcp isync -newid <name> -s3.noverify -s3.endpoint <endpoint_url>
-<source_ip_address>:/src/USER4 s3://isyncestimate/
+xcp isync -newid <name> -s3.noverify -s3.endpoint <endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
 
 include::./_include/ref-example-nfs-isync-s3-endpoint.adoc[]
 

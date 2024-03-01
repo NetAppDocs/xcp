@@ -45,7 +45,7 @@ Use the `-id <name>` parameter with the `estimate` command to exclude the files 
 .Syntax
 
 [source,cli]
-xcp estimate -id <name>>
+xcp estimate -id <name>
 
 include::./_include/ref-example-nfs-estimate-id.adoc[]
 

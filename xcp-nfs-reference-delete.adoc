@@ -48,7 +48,7 @@ Use the `-match <filter>` parameter with the `delete` command to only process th
 .Syntax
 
 [source,cli]
-xcp delete -match <filter> <ip_address>:/xcp_catalog
+xcp delete -match <filter> <NFS export path>
 
 include::./_include/ref-example-nfs-delete-match.adoc[]
 
@@ -60,7 +60,7 @@ Use the `-force` parameter with the `delete` command to delete without confirmat
 .Syntax
 
 [source,cli]
-xcp delete -force
+xcp delete -force <NFS export path>
 
 include::./_include/ref-example-nfs-delete-force.adoc[]
 
@@ -72,7 +72,7 @@ Use the `-removetopdir` parameter with the `delete` command to remove the direct
 .Syntax
 
 [source,cli]
-xcp delete -force -loglevel <name> -removetopdir
+xcp delete -force -loglevel <name> -removetopdir <NFS export path>
 
 include::./_include/ref-example-nfs-delete-removetopdir.adoc[]
 
@@ -84,7 +84,7 @@ Use the `-exclude <filter>` parameter with the `delete` command to exclude the f
 .Syntax
 
 [source,cli]
-xcp delete -force -exclude <filter>  <ip_address>:/temp7/preserve-atime2/
+xcp delete -force -exclude <filter>  <NFS export path>
 
 include::./_include/ref-example-nfs-delete-exclude.adoc[]
 
@@ -97,7 +97,7 @@ Use the `-parallel <n>` parameter with the `delete` command to specify the maxim
 .Syntax
 
 [source,cli]
-xcp delete -force -parallel <n> -match <filter> <ip_address>:/xcp_catalog/
+xcp delete -force -parallel <n> -match <filter> <NFS export path>
 
 include::./_include/ref-example-nfs-delete-parallel.adoc[]
 
@@ -109,7 +109,7 @@ Use the `-preserve-atime <preserve-atime>` parameter with the `delete` command t
 .Syntax
 
 [source,cli]
-xcp delete -force -preserve-atime <ip_address>:/temp7/user2/
+xcp delete -force -preserve-atime <NFS export path>
 
 include::./_include/ref-example-nfs-delete-preserveatime.adoc[]
 
@@ -121,7 +121,7 @@ Use the `-loglevel <name>` parameter with the `delete` command to set the log le
 .Syntax
 
 [source,cli]
-xcp delete -force -loglevel DEBUG -removetopdir <ip_address>:/temp7/user9
+xcp delete -force -loglevel DEBUG -removetopdir <NFS export path>
 
 include::./_include/ref-example-nfs-delete-loglevel.adoc[]
 
@@ -145,7 +145,7 @@ Use the `-s3.endpoint <s3_endpoint_url>` parameter with the `delete` command to 
 .Syntax
 
 [source,cli]
-xcp delete -s3.endpoint https://<endpoint_url>: s3://xcp-testing
+xcp delete -s3.endpoint https://<endpoint_url>: s3://bucket
 
 include::./_include/ref-example-nfs-delete-s3-endpoint.adoc[]
 

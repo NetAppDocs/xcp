@@ -53,7 +53,7 @@ Use the `-loglevel <name>` parameter with the `indexdelete` command  to set the 
 .Syntax
 
 [source,cli]
-xcp indexdelete -loglevel DEBUG -match <filter> 
+xcp indexdelete -loglevel <name> -match <filter> 
 
 include::./_include/ref-example-nfs-indexdelete-loglevel.adoc[]
 

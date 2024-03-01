@@ -15,7 +15,10 @@ summary: XCP logging
 [lead]
 XCP supports event messaging which you can enable using the `eventlog` option in the `xcpLogConfig.json` JSON config file.
 
-For NFS, all events messages are written to the `xcp_event.log` file located in either the default location `/opt/NetApp/xFiles/xcp/`or a custom location configured using the following environment variable: `Error! Reference source not found.or Error! Reference source not found. `
+For NFS, all events messages are written to the `xcp_event.log` file located in either the default location `/opt/NetApp/xFiles/xcp/` or a custom location configured using the following environment variable:
+
+`Error! Reference source not found.`
+
 NOTE: When both locations are set, `XCP_LOG_DIR` is used.
 
 For SMB, all events messages are written to the file `xcp_event.log` located in the default location `C:\NetApp\XCP\`.
