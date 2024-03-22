@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: xcp-smb-reference.html
-keywords: netapp, xcp, reference, smb, command, commands
+permalink: xcp-reference-overview.html
+keywords: netapp, xcp, reference, smb, nfs, logging, use case, commands
 summary: XCP SMB command reference
 ---
 = XCP command reference overview
