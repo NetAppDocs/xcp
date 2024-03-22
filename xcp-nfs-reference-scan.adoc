@@ -83,7 +83,7 @@ include::./_include/ref-example-nfs-scan-q.adoc[]
 [[nfs_scan_stats_csv_html]]
 == scan -stats, scan -csv, and scan -html
 
-Use the `-stats`, `-csv`, and `-html` parameters with the `scan` command to list files in the tree statistic report formats
+Use the `-stats`, `-csv`, and `-html` parameters with the `scan` command to list files in the tree statistic report format.
 
 NOTE: XCP reports (.csv, .html) are saved in the catalog location specified in the `xcp.ini` file. The files are stored in the `<catalog path>/catalog/indexes/1/reports` folder. You can view sample reports in the appendix.
 

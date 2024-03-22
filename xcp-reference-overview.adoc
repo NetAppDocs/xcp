@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB command reference
+---
+= XCP command reference overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+The XCP command reference provides examples of the available commands for XCP NFS and SMB. Each command has additional parameters that you can use alone or in combination, as required. XCP supports log file rotation and log filtering based on the severity level.
+
+[NOTE]
+====
+IN XCP SMB, you can redirect an XCP command output by using the “>” operator, as shown in the following example:
+----
+C:\xcp>xcp --help > help-output.txt
+----
+====
