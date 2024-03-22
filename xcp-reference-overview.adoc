@@ -16,7 +16,7 @@ The XCP command reference provides examples of the available commands for XCP NF
 
 [NOTE]
 ====
-IN XCP SMB, you can redirect an XCP command output by using the “>” operator, as shown in the following example:
+In XCP SMB, you can redirect an XCP command output by using the “>” operator, as shown in the following example:
 ----
 C:\xcp>xcp --help > help-output.txt
 ----
