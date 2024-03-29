@@ -177,5 +177,11 @@ sidebar:
              url: /xcp-nfs-reference-logging-eventlog.html
            - title: Enable the syslog client
              url: /xcp-nfs-reference-logging-syslog.html
+        - title: XCP event logs
+          entries:
+           - title: NFS event logs
+             url: /xcp-reference-event-logs-nfs.html
+           - title: SMB event logs
+             url: /xcp-reference-event-logs-smb.html
     - title: Legal notices
       url: /legal-notices.html

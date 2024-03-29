@@ -1,0 +1,74 @@
+---
+sidebar: sidebar
+permalink: xcp-reference-event-logs-smb.html
+keywords: netapp, xcp, reference, smb, logging, events, event, logs 
+summary: XCP SMB event logs
+---
+= XCP SMB event logs
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[lead]
+Review example event logs for XCP SMB. 
+
+The following table shows event logs for XCP SMB.
+
+[cols=3*,options="header",cols="20,40,40"]
+|===
+| Event ID
+| Event template
+| Event example
+a| 355 a| `CPU usage has crossed <CPU percentage use>%` a| `2020-06-23 12:42:02,705 - INFO {"Event ID": 355, "Event Category": "System resource utilization", "Event Type": "CPU usage for xcp", "Event Source": "NETAPP-01", "Description": "CPU usage has crossed 96%"}`
+
+a| 356 a| `Memory usage has crossed <memory percentage use>%` a| `2020-06-23 12:42:02,705 - INFO {"Event ID": 356, "Event Category": "System resource utilization", "Event Type": "Memory usage for xcp", "Event Source": "NETAPP-01", "Description": "CPU usage has crossed92.5%"}`
+
+a| 61 a| `Address was not found: <complete address over which command is fired>` a| `2020-07-15 02:57:06,466 - ERROR {"Event ID": 61, "Event Category": "Application Failure", "Event Type": "Address was not found", "ExecutionId": 408264113696, "Event Source": "NETAPP-01", "Description": "Address was not found: \"\\\\<IP address of SMB server>\\cifs1\""}`
+
+a| 62 a| `Interface cannot be found: < complete address over which command is fired >` a| `2020-07-15 02:52:00,603 - ERROR {"Event ID": 62, "Event Category": "Application Failure", "Event Type": "Interface was not found", "ExecutionId": 408264071616, "Event Source": "NETAPP-01", "Description": "Interface cannot be found: \"\\\\<IP address of SMB server>\\cifs11\""}`
+
+a| 63 a| `Invalid Address. Please make sure that the Address starts with '\\'` a| `2020-07-15 03:00:10,422 - ERROR {"Event ID": 63, "Event Category": "Application Failure", "Event Type": "Invalid Address", "ExecutionId": 408264197308, "Event Source": "NETAPP-01", "Description": "Invalid Address. Please make sure that the Address starts with '\\'"}`
+
+a| 41 a| `Destination volume is left with no free space please increase the size target volume:<destination volume>` a| `2020-06-15 17:12:46,413 - ERROR {"Event ID": 41, "Event Category": "Application Failure", "Event Type": "No space left on destination error", "Event Source": "NETAPP-01", "Description": "Destination volume is left with no free space please increase the size of target volume: <IP address of SMB server>\\to"}`
+
+a| 211 a| `Log file path : <file path>, severity filter level <severity level>, log message sanitization is set as <value of sanitization option>` a| `{"Event ID": 211, "Event Category": "Logging and supportability", "Event Type": "XCP logging information", "ExecutionId": 408252673852, "Event Source": "NETAPP-01", "Description": "Log file path : C:\\NetApp\\XCP\\Logs\\xcp.log, severity filter level DEBUG, log message sanitization is set as False"}`
+
+a| 215 a| `Event file path : <file path>, severity filter level <severity level>, Event message sanitization is set as <sanitization option>` a| `{"Event ID": 215, "Event Category": "Logging and supportability", "Event Type": "XCP event information", "ExecutionId": 408252673852, "Event Source": "NETAPP-01", "Description": "Event file path : C:\\NetApp\\XCP\\Logs\\xcp_event.log, severity filter level INFO, Event message sanitization is set as False"}`
+
+a| 181 a| `This license is issued to <user name> of <company name>, license type is <license type> with <status> status, license will expire expires on <expiration date>` a| `{"Event ID": 181, "Event Category": "Authentication and authorization", "Event Type": "license information", "ExecutionId": 408252673852, "Event Source": "NETAPP-01", "Description": "This license is issued to calin of NetApp Inc, license type is SANDBOX with ACTIVE status, license will expire on Mon Dec 31 00:00:00 2029"}`
+
+a| 13 a| `XCP <command> is running on platform <platform information> for source <scan source>` a| `2020-07-15 02:12:56,917 - INFO {"Event ID": 13, "Event Category": "XCP job status", "Event Type": "Starting xcp scan operation", "ExecutionId": 408263470688, "Event Source": "NETAPP-01", "Description": "XCP {scan} is running on platform Windows- 8.1-6.3.9600-SP0 for source \\\\<IP address of SMB server>\\cifs"}`
+
+a| 351 a| `System resources available wile command : <command>, are : cpu
+<CPU information>, total memory <total memory on system>, available memory` a| `2020-07-15 02:12:56,917 - INFO {"Event ID": 351, "Event Category": "System resource utilization", "Event Type": "Resources available for scan", "ExecutionId": 408263470688, "Event Source": "NETAPP-01", "Description": "System resources available while executing xcp command : scan, are : cpu 4, total memory 8.00GiB, available memory 6.81GiB"}`
+
+a| 14 a| `XCP scan completed successfully after scanning <scanned items count> items. Source :<scan source>` a| `2020-07-15 02:12:57,932 - INFO {"Event ID": 14, "Event Category": "XCP job status", "Event Type": "XCP scan completion", "ExecutionId": 408263470688, "Event Source": "NETAPP-01", "Description": "XCP scan completed successfully after scanning 29 items. Source : \\\\<IP address of SMB server>\\cifs"}`
+
+a| 25 a| `XCP <command> is running on platform <platform information> for source <copy source> and destination <copy destination>` a| `2020-07-15 02:19:06,562 - INFO {"Event ID": 25, "Event Category": "XCP job status", "Event Type": "Starting xcp copy operation", "ExecutionId": 408263563552, "Event Source": "NETAPP-01", "Description": "XCP {copy} is running on platform Windows- 8.1-6.3.9600-SP0 for source \\\\<IP address of SMB server>\\cifs and destination \\\\<IP address of SMB destination server>\\source_vol"}`
+
+a| 352 a| `System resources available while executing command :<command>, are : cpu
+<CPU information>, total memory <Total memory>, available memory <memory available for execution>` a| `2020-07-15 02:19:06,562 - INFO {"Event ID": 352, "Event Category": "System resource utilization", "Event Type": "Resources available for copy", "ExecutionId": 408263563552, "Event Source": "NETAPP-01", "Description": "System resources available while executing xcp command : copy, are : cpu 4, total memory 8.00GiB, available memory 6.82GiB"}`
+
+a| 26 a| `XCP copy completed successfully after copying <copied items count> items. Source :<copy source>, destination : <copy destination>` a| `2020-07-15 02:19:14,500 - INFO {"Event ID": 26, "Event Category": "XCP job status", "Event Type": "XCP copy completion", "ExecutionId": 408263563552, "Event Source": "NETAPP-01", "Description": "XCP copy completed successfully after copying 0 items. Source :`
+
+a| 16 a| `XCP <command> is running on platform <platform> for source <sync source> and destination <sync destination>` a| `2020-07-15 02:27:10,490 - INFO {"Event ID": 16, "Event Category": "XCP job status", "Event Type": "Starting xcp sync operation", "ExecutionId": 408263688308, "Event Source": "NETAPP-01", "Description": "XCP {sync} is running on platform Windows- 8.1-6.3.9600-SP0 for source \\\\<IP address of SMB server>\\cifs and destination \\\\<IP address of SMB destination server>\\source_vol"}`
+
+a| 353 a| `System resources available while executing xcp command: <command>, are : cpu <CPU information>, total memory <total memory>, available memory <available memory>` a| `2020-07-15 02:27:10,490 - INFO {"Event ID": 353, "Event Category": "System resource utilization", "Event Type": "Resources available for sync", "ExecutionId": 408263688308, "Event Source": "NETAPP-01", "Description": "System resources available while executing xcp command : sync, are : cpu 4, total memory 8.00GiB, available memory 6.83GiB"}`
+
+a| 17 a| `XCP sync completed successfully after scanning <scanned item count> items, copying <copied item count> items, comparing <compared item count> items, removing <removed item count> items. Source : <sync source>, destination : <sync destination>` a| `2020-07-15 03:04:14,269 - INFO {"Event ID": 17, "Event Category": "XCP job status", "Event Type": "XCP sync completion", "ExecutionId": 408264256392, "Event Source": "NETAPP-01", "Description": "XCP sync completed successfully after scanning30 items, copying 20 items, comparing 30 items, removing 0 items. Source : \\\\<IP address of SMB server>\\cifs, destination :\\\\<IP address of SMB destination server>\\source_vol"}`
+
+a| 19 a| `XCP <command> is running on platform <platform information> for source <verify source> and destination <verify destination>` a| `2020-07-15 03:14:04,854 - INFO {"Event ID": 19, "Event Category": "XCP job status", "Event Type": "Starting xcp verify operation", "ExecutionId": 408264409944, "Event Source": "NETAPP-01", "Description": "XCP {verify -noacl} is running on platform Windows-8.1-6.3.9600-SP0 for source \\\\<IP address of SMB server>\\cifs and destination \\\\<IP address of SMB destination server>\\source_vol"}`
+
+a| 354 a| `System resources available for command : <command>, are : cpu <CPU information>, total memory <total memory>, available memory <available memory for execution>` a| `2020-07-15 03:14:04,854 - INFO {"Event ID": 354, "Event Category": "System resource utilization", "Event Type": "Resources available for verify", "ExecutionId": 408264409944, "Event Source": "NETAPP-01", "Description": "System resources available while executing xcp command : verify, are : cpu 4, total memory 8.00GiB, available memory 6.80GiB"}`
+
+a| 20 a| `XCP verify is completed by scanning <scanned item count> items, comparing <compared item count> items` a| `{"Event ID": 20, "Event Category": "XCP job status", "Event Type": "XCP verify completion", "command Id": 408227440800, "Event Source": "NETAPP-01", "Description": "XCP verify is completed by scanning 59 items, comparing 0 items"}`
+
+a| 357 a| `CPU utilization reduced to <CPU utilization percentage>%` a| `{"Event ID": 357, "Event Category": "System resource utilization", "Event Type": "CPU usage for xcp", "Event Source": "NETAPP- 01", "Description": "CPU utilization reduced to 8.2%"}`
+
+a| 358 a| `Memory utilization reduced to <memory utilization percentage>%` a| `{"Event ID": 358, "Event Category": "System resource utilization", "Event Type": "Memory usage for xcp", "Event Source": "NETAPP-01", "Description": "Memory utilization reduced to 19%"}`
+
+a| 10 a| `XCP command <command> has failed` a| `2020-07-14 09:43:08,381 - INFO {"Event ID": 10, "Event Category": " Xcp job status", "Event Type": "XCP command failure", "Event Source": "NETAPP-01", "Description": " XCP command H:\\console_msg\\xcp_cifs\\xcp\\ main .py verify \\\\<IP address of SMB server>\\cifs \\\\<IP address of SMB destination server>\\source_vol has failed”`
+
+|===
