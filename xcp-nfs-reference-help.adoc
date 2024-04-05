@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The NFS `help` command displays a list of commands, command parameters, and a brief description of each. The `help` command is useful for beginners who are new to the XCP tool.
 
 .Syntax

@@ -11,7 +11,7 @@ summary: XCP SMB "copy" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The `copy` command scans and copies the entire source directory structure to a destination SMB share. The `copy` command requires source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are printed to the console once every five seconds.
 
 [NOTE]

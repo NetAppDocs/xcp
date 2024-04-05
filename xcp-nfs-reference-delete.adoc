@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The XCP NFS `delete` command deletes everything in a given path.
 
 .Syntax

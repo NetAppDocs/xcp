@@ -11,7 +11,7 @@ summary: XCP use cases
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 Learn about XCP different data migration use cases for the XCP tool.
 
 link:https://docs.netapp.com/us-en/netapp-solutions/xcp/xcp-bp-data-migration-from-7-mode-to-ontap.html[Data migration from 7-Mode to ONTAP^]

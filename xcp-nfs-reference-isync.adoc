@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 View the descriptions, parameters, and examples for the XCP `isync` command, including when the `isync` command is used with the `estimate` option. 
 
 == isync

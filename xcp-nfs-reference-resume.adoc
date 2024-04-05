@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The XCP NFS `resume` command restarts an interrupted copy operation by specifying the catalog index name or number. The catalog index name or number of the previous copy operation is located in the `<catalog path>:/catalog/indexes` directory.
 
 [[resume_id]]

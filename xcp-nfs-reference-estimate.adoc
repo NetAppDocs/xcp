@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The XCP NFS `estimate` command is used to estimate the time to complete a baseline copy from the source to destination. It calculates the estimated time to do baseline copy by using all of the current available system resources, such as CPU, RAM, Network, and other parameters. You can use the `-target` option to start a sample copy operation and get the estimation time.
 
 .Syntax

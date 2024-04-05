@@ -11,7 +11,7 @@ summary: XCP SMB "verify" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The `verify` command reads and compares the source and target shares and provides information about what is different. You can use the `verify` command on any source and destination, regardless of the tool used to perform the copy or sync operation.
 
 .Syntax

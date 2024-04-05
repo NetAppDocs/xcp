@@ -11,7 +11,7 @@ summary: XCP SMB command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The XCP command reference provides examples of the available commands for XCP NFS and SMB. Each command has additional parameters that you can use alone or in combination, as required. XCP supports log file rotation and log filtering based on the severity level.
 
 [NOTE]

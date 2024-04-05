@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 View the descriptions, parameters, and examples for the XCP `sync` command, including when the `sync` command is used with the `dry run` option. 
 
 == sync

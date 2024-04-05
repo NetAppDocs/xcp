@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The NFS `indexdelete` command deletes catalog indexes.
 
 .Syntax

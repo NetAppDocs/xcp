@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The XCP NFS `chown` command scans and changes the ownership of all the files for the given directory structure. The `chown` command requires an NFS share or the POSIX path as a variable. XCP chown recursively changes the ownership for a given path. The `chown` command displays the changed user ID (UID) for a file.
 
 .Syntax

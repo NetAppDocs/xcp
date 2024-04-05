@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: xcp-nfs-reference-logging-syslog.html
+permalink: xcp-reference-logging-syslog.html
 keywords: netapp, xcp, reference, event, logging
 summary: XCP logging
 ---
@@ -12,7 +12,7 @@ summary: XCP logging
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 XCP supports a syslog client to send XCP event log messages to a remote syslog receiver for NFS and SMB. It supports the UDP protocol using the default port 514.
 
 == Configure the syslog client for NFS and SMB

@@ -11,7 +11,7 @@ summary: XCP SMB "sync" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The `sync` command scans for changes and modifications in the source and target shares in parallel and applies the appropriate actions to the target to make sure that the target is identical to the source. The `sync` command compares data content, time stamps, file attributes, ownership, and security information.
 
 .Syntax

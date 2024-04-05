@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The XCP NFS `copy` command scans and copies the entire source directory structure to a destination NFSv3 export.
 
 The `copy` command requires having source and destination paths as variables. The scanned and copied files, throughput, speed, and elapsed time details are displayed in the command output.

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: xcp-nfs-reference-logging-eventlog.html
+permalink: xcp-reference-logging-eventlog.html
 keywords: netapp, xcp, reference, event, logging
 summary: XCP logging
 ---
@@ -12,7 +12,7 @@ summary: XCP logging
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 XCP supports event messaging which you can enable using the `eventlog` option in the `xcpLogConfig.json` JSON config file.
 
 For NFS, all events messages are written to the `xcp_event.log` file located in either the default location `/opt/NetApp/xFiles/xcp/` or a custom location configured using the following environment variable:

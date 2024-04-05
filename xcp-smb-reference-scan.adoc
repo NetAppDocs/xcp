@@ -11,7 +11,7 @@ summary: XCP SMB "scan" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The SMB `scan` command recursively scans the entire SMB share and lists all the files by the end of the `scan` command.
 
 .Syntax

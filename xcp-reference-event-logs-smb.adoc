@@ -11,7 +11,7 @@ summary: XCP SMB event logs
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 Review example event logs for XCP SMB. 
 
 The following table shows event logs for XCP SMB.

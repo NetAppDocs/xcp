@@ -11,7 +11,7 @@ summary: XCP SMB "configure" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The `configure` command configures the SMB system and connects to the system where the PostgreSQL database is running.
  
 .Syntax

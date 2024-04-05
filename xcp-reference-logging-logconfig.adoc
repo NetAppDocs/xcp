@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: xcp-nfs-reference-logging-logconfig.html
+permalink: xcp-reference-logging-logconfig.html
 keywords: netapp, xcp, reference, event, logging
 summary: XCP logging
 ---
@@ -12,7 +12,7 @@ summary: XCP logging
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 Learn about the logConfig option in the `xcpLogConfig.json` JSON configuration file for XCP NFS and SMB.
 
 The following example shows the JSON configuration file set with the “logConfig” option:

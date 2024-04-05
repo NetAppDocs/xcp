@@ -11,7 +11,7 @@ summary: XCP SMB "license" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The SMB `license` command displays XCP license information.
 
 .Syntax

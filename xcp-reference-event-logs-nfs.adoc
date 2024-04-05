@@ -11,7 +11,7 @@ summary: XCP NFS event logs
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 Review example event logs for XCP NFS. 
 
 The following table shows event logs for XCP NFS.

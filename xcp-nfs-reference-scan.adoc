@@ -12,7 +12,7 @@ summary: XCP NFS command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The XCP NFS `scan` command recursively scans the entire source NFSv3 exported paths and returns file structure statistics. 
 
 NetApp recommends that you put the source NFS export mounts in read-only mode during the scan operation.

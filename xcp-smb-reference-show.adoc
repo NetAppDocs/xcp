@@ -11,7 +11,7 @@ summary: XCP SMB "show" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The SMB `show` command queries the RPC services and NFS exports of one or more storage servers. The command also lists the available services and exports with the used and free capacity of each export, followed by the attributes of the root of each export.
 
 .Syntax

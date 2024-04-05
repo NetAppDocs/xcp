@@ -11,7 +11,7 @@ summary: XCP SMB "listen" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The `listen` command reads the XCP binary and starts the XCP services.
 
 .Syntax

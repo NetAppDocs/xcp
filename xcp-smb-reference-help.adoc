@@ -11,7 +11,7 @@ summary: XCP SMB "help" command reference
 :linkattrs:
 :imagesdir: ./media/
 
-[lead]
+[.lead]
 The SMB `help` command displays a list of commands, command parameters, and a brief description of each. This command is very useful for beginners who are new to XCP.
 
 .Syntax
