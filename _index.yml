@@ -35,6 +35,6 @@ indexpage:
     - title: XCP command reference 
       links:
         - title: NFS command reference 
-          url: /xcp-nfs-reference.html
+          url: /xcp-nfs-reference-help.html
         - title: SMB command reference
-          url: /xcp-smb-reference.html
+          url: /xcp-smb-reference-help.html
