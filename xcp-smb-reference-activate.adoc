@@ -12,7 +12,7 @@ summary: XCP SMB "activate" command reference
 :imagesdir: ./media/
 
 [.lead]
-The SMB `activate` command activates the XCP license. Before running this command, verify that the license file is downloaded and copied on the C:\NetApp\XCP directory on the XCP host. The license can be activated on any number of hosts.
+The SMB `activate` command activates the XCP license. Before running this command, verify that the license file is downloaded and copied on the C:\NetApp\XCP directory on the XCP host or client machine. The license can be activated on any number of hosts.
 
 .Syntax
 [source,cli]

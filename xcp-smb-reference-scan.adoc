@@ -44,9 +44,9 @@ The following table lists the `scan` parameters and their description.
 | <<scan -stats>> 
 | Lists files in the tree statistic report format.
 | <<scan -html>> 
-| Lists files in the tree statistic report format.
+| Lists files in the tree statistic HTML report format.
 | <<scan -csv>> 
-| Lists files in the tree statistic report format.
+| Lists files in the tree statistic csv report format.
 | <<scan -l>> 
 | List files in the long listing output format.
 | <<scan -ownership>> 
