@@ -4,6 +4,6 @@
 ----
 [root@localhost /]# ./xcp activate
 
-XCP already activated
+XCP activated
 ----
 ====
