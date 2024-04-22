@@ -16,7 +16,7 @@ The `verify` command reads and compares the source and target shares and provide
 
 .Syntax
 [source,cli]
-xcp verify \\<source SMB share> \\<IP address of SMB destination server>
+xcp verify \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-verify.adoc[]
@@ -177,7 +177,7 @@ Using `-ads` parameter with the `verify` command to read if there are any altern
 
 .Syntax
 [source,cli]
-xcp verify -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share 
+xcp verify -ads \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-verify-ads.adoc[]
@@ -187,7 +187,7 @@ Use the `-noacls` parameter with the `verify` command to not check ACLs.
 
 .Syntax
 [source,cli]
-xcp verify -noacls -noownership \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp verify -noacls -noownership \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-verify-noacls.adoc[]
@@ -216,7 +216,7 @@ Use the `-ctimewindow <float>` parameter with the `verify` command to specify th
 
 .Syntax
 [source,cli]
-xcp verify -ctimewindow <float> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp verify -ctimewindow <float> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-verify-ctimewindow.adoc[]
@@ -237,7 +237,7 @@ Use the `-stats` parameter with the `verify` command to scan the source and the 
 
 .Syntax
 [source,cli]
-xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp verify -stats \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-verify-stats.adoc[]

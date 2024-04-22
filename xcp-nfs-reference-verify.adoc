@@ -13,9 +13,7 @@ summary: XCP NFS command reference
 :imagesdir: ./media/
 
 [.lead]
-The `verify` command uses full byte-by-byte data comparison between source and target directories after a copy operation without using a catalog index number. The command checks for modification times and other file or directory attributes, including permissions. The command also reads the files in both directories and compares the data.
-
-IMPORTANT: The `verify` command is useful when the source and target directory trees are identical. However, if a source directory is moved or renamed, the `verify` command will not locate any files in that directory even though they are still in the target tree.
+The `verify` command uses full byte-by-byte data comparison between source and target directories after a copy operation without using a catalog index number. The command checks for modification times and other file or directory attributes, including permissions. The command also reads the files on both sides and compares the data.
 
 .Syntax
 [source,cli]

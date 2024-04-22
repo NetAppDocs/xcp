@@ -95,7 +95,7 @@ Use the `-match <filter>` parameter with the `sync` command to scan the source a
 
 .Syntax
 [source,cli]
-xcp sync -match <filter> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -match <filter> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-match.adoc[]
@@ -105,7 +105,7 @@ Use the `-preserve-atime` parameter with the `sync` command to reset "atime" to 
 
 .Syntax
 [source,cli]
-xcp sync -preserve-atime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -preserve-atime \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-preserveatime.adoc[]
@@ -115,7 +115,7 @@ Use the `-noatime` parameter with the `sync` command to sync all the differences
 
 .Syntax
 [source,cli]
-xcp sync -noatime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -noatime \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-noatime.adoc[]
@@ -125,7 +125,7 @@ Use the `-noctime` parameter with the `sync` command to sync all the differences
 
 .Syntax
 [source,cli]
-xcp sync -noctime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -noctime \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-noctime.adoc[]
@@ -135,7 +135,7 @@ Use the `-nomtime` parameter with the `sync` command to sync all the differences
 
 .Syntax
 [source,cli]
-xcp sync -nomtime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -nomtime \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-nomtime.adoc[]
@@ -145,7 +145,7 @@ Use the `-noattrs` parameter with the `sync` command to sync all the differences
 
 .Syntax
 [source,cli]
-xcp sync -noattrs \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -noattrs \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-noattrs.adoc[]
@@ -166,7 +166,7 @@ Use the `-atimewindow <float>` parameter with the `sync` command to specify the 
 
 .Syntax
 [source,cli]
-xcp sync -atimewindow <float> \\<IP address or hostname of SMB server>\copy_share2\\<IP address of SMB destination server>\source_share
+xcp sync -atimewindow <float> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 In the following example, XCP accepts a difference in atime of up to 10 minutes between the source and the destination files, and it does not update the atime on the target.
 
@@ -179,7 +179,7 @@ Use the `-ctimewindow <float>` parameter with the `sync` command to specify the 
 
 .Syntax
 [source,cli]
-xcp sync -ctimewindow <float> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -ctimewindow <float> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 In the following example, XCP accepts a difference in atime for up to 10 minutes between the source and the destination files, and it does not update the ctime on the target.
 
@@ -192,7 +192,7 @@ Use the `-mtimewindow <float>` parameter with the `sync` command to specify the 
 
 .Syntax
 [source,cli]
-xcp sync -mtimewindow <float> \\<IP address or hostname of SMB server>\copy_share2\\<IP address of SMB destination server>\source_share
+xcp sync -mtimewindow <float> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-mtimewindow.adoc[]
@@ -215,7 +215,7 @@ Use the `-l` parameter with the `sync` command to provide detailed logging infor
 
 .Syntax
 [source,cli]
-xcp sync -l \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp sync -l \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-l.adoc[]
@@ -228,7 +228,7 @@ NOTE: You cannot use the `-onlyacl` parameter without the `-fallback-user` and `
 
 .Syntax
 [source,cli]
-xcp sync -onlyacl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+xcp sync -onlyacl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-onlyacl.adoc[]
@@ -239,7 +239,7 @@ Use the `-aclverify{yes,no}` parameter with the `sync` command to provide an opt
 
 .Syntax
 [source,cli]
-xcp sync -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+xcp sync -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-aclverify.adoc[]
@@ -251,7 +251,7 @@ Use the `-bs <n>` parameter with the `sync` command to provide a read/write bloc
 
 .Syntax
 [source,cli]
-xcp.exe sync -bs <n> \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+xcp.exe sync -bs <n> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-bs.adoc[]
@@ -263,7 +263,7 @@ the target is identical to the source.
 
 .Syntax
 [source,cli]
-xcp sync -ads \\<source_IP_address>\source_share\src \\<dest_IP_address>\dest_share
+xcp sync -ads \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-sync-ads.adoc[]

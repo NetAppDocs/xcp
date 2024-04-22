@@ -80,7 +80,7 @@ NOTE: The maximum value for n is 61.
 
 .Syntax
 [source,cli]
-xcp copy -parallel <n> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp copy -parallel <n> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-parallel.adoc[]
@@ -91,7 +91,7 @@ Use the `-match <filter>` parameter with the `copy` command to copy only the dat
 
 .Syntax
 [source,cli]
-xcp copy -match <filter> \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp copy -match <filter> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-match.adoc[]
@@ -115,7 +115,7 @@ Use the `-preserve-atime` parameter with the `copy` command to reset the "atime"
 
 .Syntax
 [source,cli]
-xcp copy -preserve-atime \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp copy -preserve-atime \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-preserveatime.adoc[]

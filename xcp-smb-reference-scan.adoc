@@ -77,7 +77,7 @@ Use the `-v` parameter with the `scan` command to provide detailed logging infor
 
 .Syntax
 [source,cli]
-xcp scan -v \\<IP address or hostname of SMB server>\copy_share2 
+xcp scan -v \\<IP address or hostname of SMB server>\source_share 
 
 .Show example
 include::./_include/ref-example-smb-scan-v.adoc[]
@@ -90,7 +90,7 @@ NOTE: The maximum value for n is 61.
 
 .Syntax
 [source,cli]
-xcp scan -parallel <n> \\<IP address or hostname of SMB server>\copy_share2  
+xcp scan -parallel <n> \\<IP address or hostname of SMB server>\source_share  
 
 .Show example
 include::./_include/ref-example-smb-scan-paralllel.adoc[]
@@ -102,7 +102,7 @@ Use the `-match <filter>` parameter with the `scan` command to only process file
 
 .Syntax
 [source,cli]
-xcp scan -match <filter> \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -match <filter> \\<IP address or hostname of SMB server>\source_share
 
 In the following example, `scan -match` scans all files that have changed between one month and one year and prints a line to the console for each file found. The ISO format of its last modification time, a human-readable size of the file, its type, and its relative path are returned for each file.
 
@@ -135,7 +135,7 @@ Use the `-exclude <filter>` with the `scan` command to excludes directories and 
 
 .Syntax
 [source,cli]
-xcp scan -exclude <filter>> \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic
+xcp scan -exclude <filter> \\<IP address or hostname of SMB server>\source_share
 
 In the following example, `scan -exclude` excludes any file that has changed between one month and one year, and prints a line to the console for each file that is not excluded. The details printed for each file are the ISO format of its last modification time, a human-readable size of the file, its type, and its relative path.
 
@@ -164,7 +164,7 @@ When you scan an SMB share, the access time is modified on the files (if the sto
 
 .Syntax
 [source,cli]
-xcp scan -preserve-atime \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -preserve-atime \\<IP address or hostname of SMB server>\source_share
 
 .Show example
 include::./_include/ref-example-smb-scan-preserveatime.adoc[]
@@ -179,7 +179,7 @@ NOTE: The `–depth` option specifies how deep XCP can scan the files into the s
 
 .Syntax
 [source,cli]
-xcp scan -depth <2> \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -depth <2> \\<IP address or hostname of SMB server>\source_share
 
 .Show example
 include::./_include/ref-example-smb-scan-depth-n.adoc[]
@@ -189,7 +189,7 @@ Use the `-stats` parameter with the `scan` command to  to list files in a tree s
 
 .Syntax
 [source,cli]
-xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share 
+xcp scan -stats \\<IP address or hostname of SMB server>\source_share 
 
 .Show example
 include::./_include/ref-example-smb-scan-stats.adoc[]
@@ -201,7 +201,7 @@ NOTE: XCP reports (.csv, .html) are saved in the same location as the XCP binary
 
 .Syntax
 [source,cli]
-xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol 
+xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_share
 
 .Show example
 include::./_include/ref-example-smb-scan-html.adoc[]
@@ -211,7 +211,7 @@ Use the `-csv` parameter with the `scan` command to list files in a CSV tree sta
 
 .Syntax
 [source,cli]
-xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol 
+xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_share
 
 .Show example
 include::./_include/ref-example-smb-scan-csv.adoc[]
@@ -221,7 +221,7 @@ Use the `-l` parameter with the `scan` command to list files in the long listing
 
 .Syntax
 [source,cli]
-xcp scan -l \\<IP address or hostname of SMB server>\copy_share2 
+xcp scan -l \\<IP address or hostname of SMB server>\source_share 
 
 .Show example
 include::./_include/ref-example-smb-scan-l.adoc[]
@@ -233,7 +233,7 @@ NOTE: You can only use `-ownership` with the `-l`, `-match`, `-fmt`, or `-stats`
 
 .Syntax
 [source,cli]
-xcp scan -l -ownership \\<IP address or hostname of SMB server>\copy_share2 xcp scan -l -ownership \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -l -ownership \\<IP address or hostname of SMB server>\source_share 
 
 .Show example
 include::./_include/ref-example-smb-scan-ownership.adoc[]
@@ -243,7 +243,7 @@ Use the `-du` parameter with the `scan` command to summarize the space usage of 
 
 .Syntax
 [source,cli]
-xcp scan -du \\<IP address or hostname of SMB server>\copy_share2 xcp scan -du \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -du \\<IP address or hostname of SMB server>\source_share 
 
 .Show example
 include::./_include/ref-example-smb-scan-du.adoc[]
@@ -254,7 +254,7 @@ Use the `-fmt <expression>` parameter with the `scan` command to format a file l
 
 .Syntax
 [source,cli]
-xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))" \\<IPaddress or hostname of SMB server>\copy_share2
+xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))" \\<IPaddress or hostname of SMB server>\source_share
 
 .Show example
 include::./_include/ref-example-smb-scan-fmt.adoc[]
