@@ -18,6 +18,5 @@ Job ID : Job_XCP_copy_2022-06-30_14.22.53.742272_2022-06-30_14.37.07.746208_resu
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2022-06-30_14.22.53.742272_2022-06-
 30_14.37.07.746208_resume.log
 STATUS : PASSED
-[root@client1 linux]#
 ----
 ====

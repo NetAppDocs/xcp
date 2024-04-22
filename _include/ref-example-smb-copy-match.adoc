@@ -2,9 +2,9 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp copy -match "'gx' in name" \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
-xcp copy -match "'gx' in name" \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source share
-xcp copy -match 'gx' in name \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+c:\netapp\xcp>xcp copy -match "'gx' in name" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+
+xcp copy -match 'gx' in name \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 317 scanned, 5 matched, 4 copied, 0 errors 
 Total Time : 1s
 STATUS : PASSED

@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp show <IP address or hostname of NFS server>
+[root@localhost linux]# ./xcp show <IP address or hostname of NFS server>
 
 getting pmap dump from <IP address or hostname of NFS server> port 111... getting export list from <IP address or hostname of NFS server>...
 sending 3 mounts and 12 nfs requests to <IP address or hostname of NFS server>...

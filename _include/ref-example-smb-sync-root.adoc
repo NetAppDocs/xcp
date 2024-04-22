@@ -2,6 +2,11 @@
 [%collapsible]
 ====
 ----
+C:\NetApp\XCP>xcp sync -acl -root -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
+xcp sync -acl -root -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+12 scanned, 0 copied, 12 compared, 0 skipped, 0 removed, 0 errors, 1 acls copied
+Total Time : 2s
+STATUS : PASSED
 ----
 ====

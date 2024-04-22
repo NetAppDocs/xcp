@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client-01linux]# ./xcp estimate -t 100 -id estimate01 -target 10.101.12.11:/temp8
+[root@client-01 linux]# ./xcp estimate -t 100 -id estimate01 -target 10.101.12.11:/temp8
 
 xcp: WARNING: your license will expire in less than 10 days! You can renew your license at https://xcp.netapp.com
 Job ID: Job_2023-04-12_08.09.16.126908_estimate

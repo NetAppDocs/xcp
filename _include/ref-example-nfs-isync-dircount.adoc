@@ -2,6 +2,8 @@
 [%collapsible]
 ====
 ----
+root@client1 linux]# ./xcp isync -dircount 32k <source_ip_address>:/source_vol
+<destination_ip_address>:/dest_vol
 Job ID: Job_2023-11-16_23.33.45.854686_isync
 16,086 scanned, 824 MiB in (164 MiB/s), 2.75 MiB out (558 KiB/s), 5s
 24,916 scanned, 4.42 GiB in (727 MiB/s), 12.5 MiB out (1.91 MiB/s), 11s

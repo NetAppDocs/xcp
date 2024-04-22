@@ -2,8 +2,8 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
-xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+c:\netapp\xcp>xcp verify -stats \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+xcp verify -stats \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
        == Number of files ==
 	            empty    <8KiB    8-64KiB    64KiB-1MiB   1-10MiB   10-100MiB   >100MiB
@@ -35,7 +35,7 @@ Regular files: 315 / same / same
 Symbolic links:
 Junctions:
 Special files:
-xcp verify -stats \\<IP address or hostname of SMB server>\copy_share2 \\<IP address of SMB destination server>\source_share
+xcp verify -stats \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 635 scanned, 0 errors Total Time : 1s 
 STATUS : PASSED
 ----

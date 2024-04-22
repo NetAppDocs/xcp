@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-C:\xcp>xcp sync -acl -fallback-user "DOMAIN\gabi" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\performance_SMB_home_dirs \\<IP address of SMB destination server>\performance_SMB_home_dirs
+C:\xcp>xcp sync -acl -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 10,796	scanned,	4,002	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	s
 15,796	scanned,	8,038	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	0s
 15,796	scanned,	8,505	compared,	0	errors,	0	skipped,	0	copied,	0	removed,	5s
@@ -27,7 +27,8 @@ C:\xcp>xcp sync -acl -fallback-user "DOMAIN\gabi" -fallback-group "DOMAIN\Group"
 15,796	scanned,	15,488	compared,	0	errors,	0	skipped,    0	copied	0	removed,	1m50s
 15,796	scanned,	15,796	compared,	0	errors,	0	skipped,     0	copied	0	removed,	1m51s
 
-xcp sync --acl -fallback-user "DOMAIN\gabi" -fallback-group "DOMAIN\Group 15,796 scanned, 0 copied, 15,796 compared, 0 removed, 0 errors
+xcp sync -acl -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+15,796 scanned, 0 copied, 15,796 compared, 0 removed, 0 errors
 Total Time : 1m51
 STATUS : PASSED
 ----

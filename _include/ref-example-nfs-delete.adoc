@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost dest_vol]# /xcp/linux/xcp delete <IP address of destination NFSserver>:/dest_vol
+[root@localhost ]# /xcp/linux/xcp delete <IP address of destination NFSserver>:/dest_vol
 
 WARNING: You have selected <IP address of destination NFS server>:/dest_vol for
 removing data.Data in this path /dest_vol will be deleted.

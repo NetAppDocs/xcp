@@ -23,6 +23,5 @@ Job ID : Job_2023-11-17_00.49.20.336389_isync
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-17_00.49.20.336389_isync.log
 Error Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-17_00.49.20.336389_isync.error
 STATUS : PASSED
-[root@client1 linux]#
 ----
 ====

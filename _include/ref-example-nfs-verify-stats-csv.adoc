@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp verify -stats -csv <IP address of source NFS server>:/source_vol <IP
+[root@localhost linux]# ./xcp verify -stats -csv <IP address of source NFS server>:/source_vol <IP
 address of destination NFS server>:/dest_vol
 
 224,618 scanned, 48.7 MiB in (9.54 MiB/s), 2.98 MiB out (597 KiB/s), 5s

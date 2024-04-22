@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp sync -id ID001 -bs 32k
+[root@localhost linux]# ./xcp sync -id ID001 -bs 32k
 
 xcp: Index: {source: <IP address or hostname of NFS server>:/source_vol, target: <IP address of
 destination NFS server>:/dest_vol}
@@ -11,6 +11,5 @@ Xcp command : xcp sync -id ID001 -bs 32k
 Speed : 25.3 KiB in (20.4 KiB/s), 21.0 KiB out (16.9 KiB/s)
 Total Time : 1s.
 STATUS : PASSED
-
 ----
 ====

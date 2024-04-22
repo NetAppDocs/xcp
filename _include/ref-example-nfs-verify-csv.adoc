@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp verify -csv <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+[root@localhost linux]# ./xcp verify -csv <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 222,028 scanned, 48.2 MiB in (9.63 MiB/s), 2.95 MiB out (603 KiB/s), 5s
 == Number of files ==
@@ -56,6 +56,5 @@ Xcp command : xcp verify -csv <source_ip_address>:/source_vol <destination_ip_ad
 269,260 scanned, 0 matched, 0 error
 Speed	: 59.5 MiB in (7.53 MiB/s), 3.94 MiB out (512 KiB/s) Total Time : 7s.
 STATUS	: PASSED
-
 ----
 ====

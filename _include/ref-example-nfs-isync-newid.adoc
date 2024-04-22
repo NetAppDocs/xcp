@@ -15,6 +15,5 @@ Total Time : 3s.
 Job ID : Job_2023-11-16_04.33.32.381458_isync
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_04.33.32.381458_isync.log
 STATUS : PASSED
-[root@client1 linux]#
 ----
 ====

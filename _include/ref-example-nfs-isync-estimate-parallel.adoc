@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client1linux]# ./xcp isync estimate -parallel 10 -id <name>
+[root@client1 linux]# ./xcp isync estimate -parallel 10 -id <name>
 
 Job ID: Job_2023-11-16_02.15.25.109554_isync_estimate
 Index: <name> {source: <source_ip_address>:/source_vol, target:
@@ -12,6 +12,5 @@ Estimated Time : 8m3s
 Job ID : Job_2023-11-16_02.15.25.109554_isync_estimate
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.15.25.109554_isync_estimate.log
 STATUS : PASSED
-[root@client1linux]#
 ----
 ====

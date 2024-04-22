@@ -2,6 +2,7 @@
 [%collapsible]
 ====
 ----
+[root@client1 linux]# ./xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 Job ID: Job_2023-11-16_23.41.00.713151_isync
 14,514 scanned, 570 excluded, 675 MiB in (133 MiB/s), 2.03 MiB out (411 KiB/s), 5s
 24,211 scanned, 570 excluded, 4.17 GiB in (713 MiB/s), 11.0 MiB out (1.79 MiB/s), 10s

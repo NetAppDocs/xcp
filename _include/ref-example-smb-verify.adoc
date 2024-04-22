@@ -2,13 +2,12 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp verify -v \\<source SMB share> \source_share \\<IP address of SMB destination server>\dest_share
-xcp verify -v \\<source SMB share> \source_share \\ <IP address of SMB destination server>\dest_share
+c:\netapp\xcp>xcp verify  \\<IP address of SMB source server>\source_share  \\<IP address of SMB destination server>\dest_share
+xcp verify  \\<IP address of SMB source server>\source_share  \\ <IP address of SMB destination server>\dest_share
 
-xcp verify -v \\<source SMB share> \source_share \\<IP address of SMB destination server>\dest_share
+xcp verify  \\<IP address of SMB source server>\source_share  \\<IP address of SMB destination server>\dest_share
 374 scanned, 373 compared, 373 same, 0 different, 0 missing, 0 errors 
-c:\netapp\xcp>xcp verify -v \\<source SMB share> \source_share destination server>\dest_share
-xcp verify -v \\<source SMB share> \source_share server>\dest_share
+xcp verify  \\<IP address of SMB source server>\source_share  \\<IP address of SMB destination server>\dest_share
 Total Time : 3s
 STATUS : PASSED
 ----

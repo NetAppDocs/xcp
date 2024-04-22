@@ -2,41 +2,41 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp scan -depth 2 \\<IP address or hostname of SMB server>\copy_share2 
-xcp scan -depth 2 \\<IP address or hostname of SMB server>\copy_share2
+c:\netapp\xcp>xcp scan -depth 2 \\<IP address or hostname of SMB server>\source_share
+xcp scan -depth 2 \\<IP address or hostname of SMB server>\source_share
 
-copy_share2\ASUP.pm 
-copy_share2\ASUP_REST.pm 
-copy_share2\Allflavors_v2.pm 
-copy_share2\Armadillo.pm 
-copy_share2\AsupExtractor.pm 
-copy_share2\BTS_Config.pm 
-copy_share2\Backup.pm 
-copy_share2\Aggregate.pm 
-copy_share2\Burt.pm 
-copy_share2\CConfig.pm 
-copy_share2\CIFS.pm 
-copy_share2\CR.pm 
-copy_share2\CRC.pm 
-copy_share2\CSHM.pm 
-copy_share2\agnostic\Fileclone.pm 
-copy_share2\agnostic\Jobs.pm 
-copy_share2\agnostic\License.pm
-copy_share2\agnostic\Panamax_Clone_Utils.pm 
-copy_share2\agnostic\LunCmds.pm 
-copy_share2\agnostic\ProtocolAccess.pm 
-copy_share2\agnostic\Qtree.pm 
-copy_share2\agnostic\Quota.pm 
-copy_share2\agnostic\RbacCmdFetcher.pm 
-copy_share2\agnostic\RbacCmdFetcher_ReadMe 
-copy_share2\agnostic\SFXOD.pm 
-copy_share2\agnostic\Snapmirror.pm 
-copy_share2\agnostic\VolEfficiency.pm 
-copy_share2\agnostic\flatfile.txt 
-copy_share2\agnostic
-copy_share2
+source_share\ASUP.pm 
+source_share\ASUP_REST.pm 
+source_share\Allflavors_v2.pm 
+source_share\Armadillo.pm 
+source_share\AsupExtractor.pm 
+source_share\BTS_Config.pm 
+source_share\Backup.pm 
+source_share\Aggregate.pm 
+source_share\Burt.pm 
+source_share\CConfig.pm 
+source_share\CIFS.pm 
+source_share\CR.pm 
+source_share\CRC.pm 
+source_share\CSHM.pm 
+source_share\agnostic\Fileclone.pm 
+source_share\agnostic\Jobs.pm 
+source_share\agnostic\License.pm
+source_share\agnostic\Panamax_Clone_Utils.pm 
+source_share\agnostic\LunCmds.pm 
+source_share\agnostic\ProtocolAccess.pm 
+source_share\agnostic\Qtree.pm 
+source_share\agnostic\Quota.pm 
+source_share\agnostic\RbacCmdFetcher.pm 
+source_share\agnostic\RbacCmdFetcher_ReadMe 
+source_share\agnostic\SFXOD.pm 
+source_share\agnostic\Snapmirror.pm 
+source_share\agnostic\VolEfficiency.pm 
+source_share\agnostic\flatfile.txt 
+source_share\agnostic
+source_share
 
-xcp scan -depth 2 \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -depth 2 \\<IP address or hostname of SMB server>\source_share
 317 scanned, 0 matched, 0 errors 
 Total Time : 0s
 STATUS : PASSED

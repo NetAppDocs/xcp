@@ -31,5 +31,10 @@ IPC$ Everyone Allow/Full Control
 ETC$ Administrators Allow/FullControl 
 HOME Everyone Allow/Full Control
 C$ Administrators Allow/Full Control
+
+xcp show \\<IP address or hostname of SMB server>
+0 errors
+Total Time : 0s
+STATUS : PASSED
 ----
 ====

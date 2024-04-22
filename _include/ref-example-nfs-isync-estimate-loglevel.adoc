@@ -12,6 +12,5 @@ Estimated Time : 8m18s
 Job ID : Job_2023-11-16_02.16.58.212518_isync_estimate
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.16.58.212518_isync_estimate.log
 STATUS : PASSED
-[root@client1 linux]#
 ----
 ====

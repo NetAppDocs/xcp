@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp activate
+[root@localhost linux]# ./xcp activate
 
 XCP activated
 ----

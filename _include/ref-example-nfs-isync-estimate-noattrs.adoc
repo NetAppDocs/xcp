@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client 1 linux]# ./xcp isync estimate -noattrs -id <name>
+[root@client1 linux]# ./xcp isync estimate -noattrs -id <name>
 
 Job ID: Job_2023-11-23_23.20.25.042500_isync_estimate
 Index: isync_est {source: <source_ip_address>:/fg1, target: <target_ip_address>:/fv}

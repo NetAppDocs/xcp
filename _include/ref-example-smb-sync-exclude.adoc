@@ -2,6 +2,11 @@
 [%collapsible]
 ====
 ----
+C:\netapp\xcp>xcp sync -exclude "path('*Exceptions*')" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
+xcp sync -exclude path('*Exceptions*') \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+451 scanned, 427 excluded, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors
+Total Time : 2s
+STATUS : PASSED
 ----
 ====

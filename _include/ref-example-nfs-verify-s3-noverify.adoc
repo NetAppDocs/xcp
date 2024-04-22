@@ -2,12 +2,12 @@
 [%collapsible]
 ====
 ----
-[root@client1 linux]# ./xcp verify -s3.noverify hdfs://user/test s3://bucket1
+[root@client1 linux]# ./xcp verify -s3.noverify hdfs://<HDFS source> s3://<s3-bucket>
 
 xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
 13_10.59.01.817044
 Job ID: Job_2023-06-13_10.59.01.817044_verify
-Xcp command : xcp verify -s3.noverify hdfs://user/test s3://bucket1
+Xcp command : xcp verify -s3.noverify hdfs://<HDFS source> s3://<s3-bucket>
 Stats : 8 scanned, 8 indexed, 100% found (5 have data), 5 compared, 100% verified (data)
 Speed : 21.3 KiB in (5.84 KiB/s), 90.8 KiB out (24.9 KiB/s)
 Total Time : 3s.
@@ -15,7 +15,7 @@ Job ID : Job_2023-06-13_10.59.01.817044_verify
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_10.59.01.817044_verify.log
 STATUS : PASSED
 
-./xcp verify -s3.profile sg -s3.noverify -s3.endpoint https://<endpoint_url>: hdfs:///user/demo s3://bucket
+./xcp verify -s3.profile sg -s3.noverify -s3.endpoint https://<endpoint_url> hdfs://<HDFS source> s3://<s3-bucket>
 
 xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
 13_11.29.00.543286
@@ -38,7 +38,7 @@ KiB/s), 1.71 MiB out (49.7 KiB/s), 36s
 KiB/s), 1.95 MiB out (50.0 KiB/s), 41s
 15,009 scanned, 9 indexed, 14,229 found, 14,067 compared, 13.7 KiB same data, 32.2 MiB in (102
 KiB/s), 1.98 MiB out (6.25 KiB/s), 46s
-Xcp command : xcp verify -s3.profile sg -s3.noverify -s3.endpoint https://<endpoint_url>: hdfs:///user/demo s3://bucket
+Xcp command : xcp verify -s3.profile sg -s3.noverify -s3.endpoint https://<endpoint_url> <HDFS source> s3://<s3-bucket>
 Stats : 15,009 scanned, 15,009 indexed, 100% found (15,005 have data), 15,005 compared, 100%
 verified (data)
 Speed : 33.9 MiB in (724 KiB/s), 2.50 MiB out (53.5 KiB/s)
