@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp verify -stats <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+[root@localhost linux]# ./xcp verify -stats <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 
 228,609 scanned, 49.7 MiB in (9.93 MiB/s), 3.06 MiB out (625 KiB/s), 5s
 == Number of files ==

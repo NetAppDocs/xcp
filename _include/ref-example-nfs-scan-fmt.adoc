@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp scan -fmt "'{}, {}, {}, {}, {}'.format(name, x, ctime, atime, mtime)"
+[root@localhost linux]# ./xcp scan -fmt "'{}, {}, {}, {}, {}'.format(name, x, ctime, atime, mtime)"
 <IP address or hostname of NFS server>:/source_vol
 
 source_vol, <IP address or hostname of NFS server>:/source_vol, 1583294484.46, 1583294492.63,

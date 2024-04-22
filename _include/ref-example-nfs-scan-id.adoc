@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp scan -id 3
+[root@localhost linux]# ./xcp scan -id 3
 
 xcp: Index: {source: 10.10.1.10:/vol/ex_s01/etc/keymgr, target: None}
 keymgr/root/cacert.pem

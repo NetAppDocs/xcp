@@ -3,10 +3,10 @@
 ====
 ----
 c:\netapp\xcp>xcp scan -match "1*month < modified < 1*year" -fmt "'{:>15} {:>7}{}
-{}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname of SMB server>\copy_share2
-xcp scan -match "1*month < modified < 1*year" -fmt "'{:>15} {:>7} {} {}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname of SMB server>\copy_share2
+{}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname of SMB server>\source_share
+xcp scan -match "1*month < modified < 1*year" -fmt "'{:>15} {:>7} {} {}'.format(iso(mtime), humanize_size(size), type, relpath)" \\<IP address or hostname of SMB server>\source_share
 
-xcp scan -match 1*month < modified < 1*year -fmt '{:>15} {:>7} {} {}'.format(iso(mtime), humanize_size(size), type, relpath) \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -match 1*month < modified < 1*year -fmt '{:>15} {:>7} {} {}'.format(iso(mtime), humanize_size(size), type, relpath) \\<IP address or hostname of SMB server>\source_share
 317 scanned, 0 matched, 0 errors 
 Total Time : 0s
 STATUS : PASSED

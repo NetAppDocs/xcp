@@ -2,10 +2,11 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp copy -exclude "'resync' in name" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac
-xcp copy -exclude "'resync' in name" \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac
+c:\netapp\xcp>xcp copy -exclude "'resync' in name" \\<IP address or hostname of SMB server>\source_share \\<IP address or hostname of SMB server>\dest_share
 
-xcp copy -exclude 'resync' in name \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac 18 scanned, 2 excluded, 0 skipped, 15 copied, 122KiB (50.5KiB/s), 0 errors 
+
+xcp copy -exclude 'resync' in name \\<IP address or hostname of SMB server>\source_share \\\\<IP address or hostname of SMB server>\dest_share 
+18 scanned, 2 excluded, 0 skipped, 15 copied, 122KiB (50.5KiB/s), 0 errors 
 Total Time : 2s
 STATUS : PASSED
 ----

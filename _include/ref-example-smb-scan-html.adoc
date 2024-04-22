@@ -2,8 +2,7 @@
 [%collapsible]
 ====
 ----
-Z:\scripts\xcp\windows>xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol
-
+Z:\scripts\xcp\windows>xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_share
 1,972 scanned, 0 matched, 0 errors, 7s
 4,768 scanned, 0 matched, 0 errors,12s
 7,963 scanned, 0 matched, 0 errors,17s
@@ -70,7 +69,7 @@ Total space used: 147MiB
 Dedupe estimate: N/A 
 Sparse data: N/A
 xcp scan -stats -html -preserve-atime -ownership \\<IP address or hostname ofSMB 
-server>\source_vol
+server>\source_share
 17,789 scanned, 0 matched, 0errors 
 Total Time : 39s
 STATUS : PASSED

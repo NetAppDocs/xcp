@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp verify <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+[root@localhost linux]# ./xcp verify <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
 
 xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-
 04_23.54.40.893449

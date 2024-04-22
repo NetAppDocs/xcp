@@ -20,6 +20,5 @@ Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-20_04.08.18.967541_isync_e
 Error Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-
 20_04.08.18.967541_isync_estimate.error
 STATUS : PASSED
-[root@client 1 linux]#
 ----
 ====

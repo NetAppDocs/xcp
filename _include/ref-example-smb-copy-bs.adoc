@@ -3,6 +3,7 @@
 ====
 ----
 c:\Netapp\xcp>xcp.exe copy -bs 32k \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+
 xcp.exe copy -bs 32k \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
 568 scanned, 0 matched, 0 skipped, 567 copied, 17.7MiB (6.75MiB/s), 0 errors 
 Total Time : 2s

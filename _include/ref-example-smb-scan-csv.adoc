@@ -2,10 +2,8 @@
 [%collapsible]
 ====
 ----
-Z:\scripts\xcp\windows>xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol
+Z:\scripts\xcp\windows>xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_share
 
-Output:
-Z:\scripts\xcp\windows>xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol
 1,761 scanned, 0 matched, 0 errors, 6s
 4,949 scanned, 0 matched, 0 errors,11s
 7,500 scanned, 0 matched, 0 errors,16s
@@ -69,7 +67,7 @@ Junctions:
 Special files:
 Total space for regular files: 147MiB Total space for directories: 0 Total space used: 147MiB
 Dedupe estimate: N/A Sparse data: N/A
-xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_vol
+xcp scan -stats -csv -preserve-atime -ownership \\<IP address or hostname of SMB server>\source_share
 17,789 scanned, 0 matched, 0 errors Total Time : 40s
 STATUS : PASSED
 ----

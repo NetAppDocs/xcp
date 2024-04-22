@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp sync dry-run -id ID001 -dircount 32k
+[root@localhost linux]# ./xcp sync dry-run -id ID001 -dircount 32k
 
 xcp: Index: {source: <IP address or hostname of NFS server>:/source_vol, target: <IP address of
 destination NFS server>:/dest_vol}

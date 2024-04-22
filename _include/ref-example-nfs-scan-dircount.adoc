@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp scan -dircount 64k <IP address or hostname of NFS server>:/source_vol
+[root@localhost linux]# ./xcp scan -dircount 64k <IP address or hostname of NFS server>:/source_vol
 
 source_vol
 source_vol/USER.1/FILE_1

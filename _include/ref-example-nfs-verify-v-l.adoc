@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp verify -v -l <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+[root@localhost linux]# ./xcp verify -v -l <IP address of NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
 
 xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-
 05_02.30.00.952454
@@ -35,6 +35,5 @@ different item, 0 error
 Speed : 4.95 GiB in (87.6 MiB/s), 69.2 MiB out (1.20 MiB/s)
 Total Time : 57s.
 STATUS : PASSED
-
 ----
 ====

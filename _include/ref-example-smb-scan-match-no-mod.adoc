@@ -4,10 +4,10 @@
 ----
 c:\netapp\xcp>xcp scan -match "modified > 3*month and size > 4194304" -fmt "'{},{},
 {}'.format(iso(mtime), humanize_size(size), relpath)" \\<IP address or hostname of SMB 
-server>\copy_share2
-xcp scan -match "modified > 3*month and size > 4194304" -fmt "'{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath)" \\<IP address or hostname of SMB server>\copy_share2
+server>\source_share
+xcp scan -match "modified > 3*month and size > 4194304" -fmt "'{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath)" \\<IP address or hostname of SMB server>\source_share
 
-xcp scan -match modified > 3*month and size > 4194304 -fmt '{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath) \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -match modified > 3*month and size > 4194304 -fmt '{}, {}, {}'.format(iso(mtime), humanize_size(size), relpath) \\<IP address or hostname of SMB server>\source_share
 317 scanned, 0 matched, 0 errors 
 Total Time : 0s
 STATUS : PASSED

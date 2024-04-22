@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client1linux]# ./xcp isync estimate -s3.insecure -id S3_index
+[root@client1 linux]# ./xcp isync estimate -s3.insecure -id S3_index
 
 Job ID: Job_2023-11-16_02.22.36.481539_isync_estimate
 Index: S3_index {source: <source_ip_address>:/source_vol/USER5, target: s3://
@@ -14,6 +14,5 @@ Estimated Time : 9.4s
 Job ID : Job_2023-11-16_02.22.36.481539_isync_estimate
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.22.36.481539_isync_estimate.log
 STATUS : PASSED
-[root@client1 linux]#
 ----
 ====

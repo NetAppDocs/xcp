@@ -2,29 +2,17 @@
 [%collapsible]
 ====
 ----
-[root@client1 linux]# ./xcp verify -s3.insecure hdfs:///user/test s3://bucket1
+[root@client1 linux]# ./xcp verify -s3.insecure hdfs://<HDFS source> s3://<s3-bucket>
 
 xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
 08_09.04.33.301709
 Job ID: Job_2023-06-08_09.04.33.301709_verify
-Xcp command : xcp verify -s3.insecure hdfs:///user/test s3://bucket1
+Xcp command : xcp verify -s3.insecure hdfs://<HDFS source> s3://<s3-bucket>
 Stats : 8 scanned, 8 indexed, 100% found (5 have data), 5 compared, 100% verified (data)
 Speed : 21.3 KiB in (8.20 KiB/s), 90.8 KiB out (34.9 KiB/s)
 Total Time : 2s.
 Job ID : Job_2023-06-08_09.04.33.301709_verify
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-08_09.04.33.301709_verify.log
-STATUS : PASSED
-[root@client1 linux]#./xcp verify -s3.insecure hdfs:///user/demo s3://bucket1
-
-xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
-08_09.19.48.399814
-Job ID: Job_2023-06-08_09.19.48.399814_verify
-Xcp command : xcp verify -s3.insecure 1 hdfs:///user/demo s3://bucket1
-Stats : 8 scanned, 8 indexed, 100% found (5 have data), 5 compared, 100% verified (data)
-Speed : 25.3 KiB in (11.6 KiB/s), 93.2 KiB out (42.6 KiB/s)
-Total Time : 2s.
-Job ID : Job_2023-06-08_09.19.48.399814_verify
-Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-08_09.19.48.399814_verify.log
 STATUS : PASSED
 ----
 ====

@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client1linux]# ./xcp isync estimate -s3.endpoint <S3_endpoint_url> -id S3_index1
+[root@client1 linux]# ./xcp isync estimate -s3.endpoint <S3_endpoint_url> -id S3_index1
 
 Job ID: Job_2023-11-16_02.35.49.911194_isync_estimate
 Index: S3_index1 {source: <source_ip_address>:/source_vol/USER5, target: s3://isyncestimate/}
@@ -13,6 +13,5 @@ Estimated Time : 13.3s
 Job ID : Job_2023-11-16_02.35.49.911194_isync_estimate
 Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.35.49.911194_isync_estimate.log
 STATUS : PASSED
-[root@client1 linux]#
 ----
 ====

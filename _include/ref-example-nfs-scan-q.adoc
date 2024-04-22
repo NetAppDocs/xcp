@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp scan -q <IP address or hostname of NFSserver>:/source_vol
+[root@localhost linux]# ./xcp scan -q <IP address or hostname of NFSserver>:/source_vol
 
 Xcp command : xcp scan -q <IP address or hostname of NFS server>:/source_vol
 13 scanned, 0 matched, 0 error

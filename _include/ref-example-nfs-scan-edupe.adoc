@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-root@localhost /]# ./xcp scan -edupe <IP address or hostname of NFSserver>:/source_vol
+root@localhost linux]# ./xcp scan -edupe <IP address or hostname of NFSserver>:/source_vol
 
 == Maximum Values ==
 Size Used Depth Namelen Dirsize

@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp resume -id ID001 -parallel 3
+[root@localhost linux]# ./xcp resume -id ID001 -parallel 3
 
 xcp: Index: {source: <IP address or hostname of NFS server>:/source_vol, target: <IP address of
 destination NFS server>:/dest_vol}

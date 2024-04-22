@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@localhost /]# ./xcp scan -subdir-names <IP address or hostname of NFS server>:/source_vol
+[root@localhost linux]# ./xcp scan -subdir-names <IP address or hostname of NFS server>:/source_vol
 
 source_vol
 Xcp command : xcp scan -subdir-names <IP address or hostname of NFS server>:/source_vol

@@ -2,7 +2,7 @@
 [%collapsible]
 ====
 ----
-[root@client-01linux]# ./xcp estimate -gbit 10 -id estimate01
+[root@client-01 linux]# ./xcp estimate -gbit 10 -id estimate01
 
 xcp: WARNING: your license will expire in less than 10 days! You can renew your license at
 https://xcp.netapp.com
