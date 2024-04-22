@@ -2,52 +2,52 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp scan -match "type is not directory" -fmt "'{}{:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMB server>\copy_share2
-xcp scan -match "type is not directory" -fmt "'{} {:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMB server>\copy_share2
+c:\netapp\xcp>xcp scan -match "type is not directory" -fmt "'{}{:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMB server>\source_share
+xcp scan -match "type is not directory" -fmt "'{} {:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMB server>\source_share
 
 --truncated output--
-\\<IP address or hostname of SMB server>\copy_share2\ASUP.pm 
+\\<IP address or hostname of SMB server>\source_share\ASUP.pm 
 1362688899.238098
-\\<IP address or hostname of SMB server>\copy_share2\ASUP_REST.pm 
+\\<IP address or hostname of SMB server>\source_share\ASUP_REST.pm 
 1362688899.264073
-\\<IP address or hostname of SMB server>\copy_share2\Allflavors_v2.pm 
+\\<IP address or hostname of SMB server>\source_share\Allflavors_v2.pm 
 1362688899.394938
-\\<IP address or hostname of SMB server>\copy_share2\Armadillo.pm 
+\\<IP address or hostname of SMB server>\source_share\Armadillo.pm 
 1362688899.402936
-\\<IP address or hostname of SMB server>\copy_share2\AsupExtractor.pm 
+\\<IP address or hostname of SMB server>\source_share\AsupExtractor.pm 
 1362688899.410922
-\\<IP address or hostname of SMB server>\copy_share2\BTS_Config.pm 
+\\<IP address or hostname of SMB server>\source_share\BTS_Config.pm 
 1362688899.443902
-\\<IP address or hostname of SMB server>\copy_share2\Backup.pm 
+\\<IP address or hostname of SMB server>\source_share\Backup.pm 
 1362688899.444905
-\\<IP address or hostname of SMB server>\copy_share2\Aggregate.pm 
+\\<IP address or hostname of SMB server>\source_share\Aggregate.pm 
 1362688899.322019
-\\<IP address or hostname of SMB server>\copy_share2\Burt.pm 
+\\<IP address or hostname of SMB server>\source_share\Burt.pm 
 1362688899.446889
-\\<IP address or hostname of SMB server>\copy_share2\CConfig.pm 
+\\<IP address or hostname of SMB server>\source_share\CConfig.pm 
 1362688899.4479
-\\<IP address or hostname of SMB server>\copy_share2\CIFS.pm 
+\\<IP address or hostname of SMB server>\source_share\CIFS.pm 
 1362688899.562795
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\ProtocolAccess.pm 
+\\<IP address or hostname of SMB server>\source_share\agnostic\ProtocolAccess.pm 
 1362688900.358093
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\Qtree.pm 
+\\<IP address or hostname of SMB server>\source_share\agnostic\Qtree.pm 
 1362688900.359095
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\Quota.pm 
+\\<IP address or hostname of SMB server>\source_share\agnostic\Quota.pm 
 1362688900.360094
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\RbacCmdFetcher.pm 
+\\<IP address or hostname of SMB server>\source_share\agnostic\RbacCmdFetcher.pm 
 1362688900.3611
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\RbacCmdFetcher_ReadMe 
+\\<IP address or hostname of SMB server>\source_share\agnostic\RbacCmdFetcher_ReadMe 
 1362688900.362094
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\SFXOD.pm 
+\\<IP address or hostname of SMB server>\source_share\agnostic\SFXOD.pm 
 1362688900.363094
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\Snapmirror.pm 
+\\<IP address or hostname of SMB server>\source_share\agnostic\Snapmirror.pm 
 1362688900.364092
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\VolEfficiency.pm 
+\\<IP address or hostname of SMB server>\source_share\agnostic\VolEfficiency.pm 
 1362688900.375077
-\\<IP address or hostname of SMB server>\copy_share2\agnostic\flatfile.txt 
+\\<IP address or hostname of SMB server>\source_share\agnostic\flatfile.txt 
 1362688900.376076
 
-xcp scan -match type is not directory -fmt '{} {:>70}'.format(abspath, mtime) \\<IP address or hostname of SMB server>\copy_share2
+xcp scan -match type is not directory -fmt '{} {:>70}'.format(abspath, mtime) \\<IP address or hostname of SMB server>\source_share
 317 scanned, 315 matched, 0 errors 
 Total Time : 0s
 STATUS : PASSED

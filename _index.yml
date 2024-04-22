@@ -32,7 +32,7 @@ indexpage:
           url: https://www.netapp.com/search/#q=xcp&sort=relevancy&f:@language=English
         - title: NetApp Community (forums)
           url: link:https://community.netapp.com
-    - title: XCP command reference 
+    - title: XCP reference 
       links:
         - title: NFS command reference 
           url: /xcp-nfs-reference-help.html

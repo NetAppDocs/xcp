@@ -2,31 +2,31 @@
 [%collapsible]
 ====
 ----
-c:\netapp\xcp>xcp scan -v \\<IP address or hostname of SMB server>\copy_share2 
-xcp scan -v \\<IP address or hostname of SMB server>\copy_share2
+c:\netapp\xcp>xcp scan -v \\<IP address or hostname of SMB server>\source_share 
+xcp scan -v \\<IP address or hostname of SMB server>\source_share
 ---Truncated output----
-copy_share2\ASUP.pm 
-copy_share2\ASUP_REST.pm 
-copy_share2\Allflavors_v2.pm 
-copy_share2\Armadillo.pm 
-copy_share2\AsupExtractor.pm 
-copy_share2\BTS_Config.pm 
-copy_share2\Backup.pm 
-copy_share2\Aggregate.pm 
-copy_share2\Burt.pm 
-copy_share2\CConfig.pm 
-copy_share2\CIFS.pm 
-copy_share2\CR.pm 
-copy_share2\CRC.pm 
-copy_share2\CSHM.pm 
-copy_share2\CSM.pm 
-copy_share2\agnostic\SFXOD.pm 
-copy_share2\agnostic\Snapmirror.pm
-copy_share2\agnostic\VolEfficiency.pm 
-copy_share2\agnostic\flatfile.txt 
-copy_share2\agnostic
-copy_share2
-xcp scan \\<IP address or hostname of SMB server>\copy_share2
+source_share\ASUP.pm 
+source_share\ASUP_REST.pm 
+source_share\Allflavors_v2.pm 
+source_share\Armadillo.pm 
+source_share\AsupExtractor.pm 
+source_share\BTS_Config.pm 
+source_share\Backup.pm 
+source_share\Aggregate.pm 
+source_share\Burt.pm 
+source_share\CConfig.pm 
+source_share\CIFS.pm 
+source_share\CR.pm 
+source_share\CRC.pm 
+source_share\CSHM.pm 
+source_share\CSM.pm 
+source_share\agnostic\SFXOD.pm 
+source_share\agnostic\Snapmirror.pm
+source_share\agnostic\VolEfficiency.pm 
+source_share\agnostic\flatfile.txt 
+source_share\agnostic
+source_share
+xcp scan \\<IP address or hostname of SMB server>\source_share
 317 scanned, 0 matched, 0 errors 
 Total Time : 0s
 STATUS : PASSED

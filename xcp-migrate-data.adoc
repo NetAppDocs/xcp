@@ -21,7 +21,7 @@ The `copy` command scans and copies the entire source directory structure to a d
 
 *Example:*
 ----
-xcp copy -newid <id> src_server:/src_export dst_server:/dst_export
+xcp copy <source_nfs_export_path> <destination_nfs_export_path>
 ----
 
 *POSIX path example:*
@@ -38,7 +38,7 @@ The `resume` command restarts a previously interrupted copy operation by specify
 *Example:*
 
 ----
-xcp resume [options] -id <id used for copy>
+xcp resume -id <catalog_name>
 ----
 
 Run `xcp help resume` for more details.
@@ -49,7 +49,7 @@ The `sync` command scans for changes and modifications performed on a source NFS
 
 *Example:*
 ----
-xcp sync [options] -id <id used for copy>
+xcp sync -id <catalog_name>
 ----
 
 Run `xcp help sync` for more details.
@@ -60,7 +60,7 @@ The `verify` command uses a full byte-by-byte data comparison between source and
 
 *Example:*
 ----
-xcp verify src_server:/src_export dst_server:/dst_export
+xcp verify <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
 ----
 *POSIX path example:*
 ----

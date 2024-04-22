@@ -22,7 +22,7 @@ The `copy` command scans and copies the entire source directory structure to a d
 
 .Syntax
 [source,cli]
-xcp copy \\<source SMB share> \\<IP address of SMB destination server>
+xcp copy \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy.adoc[]
@@ -67,7 +67,7 @@ Use the `-v` parameter with the `copy` command to provide detailed debug informa
 
 .Syntax
 [source,cli]
-xcp copy -v \\<IP address of SMB destination server>\src \\<IP address of SMB destination server>\dest\d 1
+xcp copy -v \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-v.adoc[]
@@ -103,7 +103,7 @@ Use the `-exclude <filter>` parameter with the `copy` command to only copy exclu
 
 .Syntax
 [source,cli]
-xcp copy -exclude <filter> \\<IP address or hostname of SMB server>\localtest\arch\win32\agnostic\snapmirror \\101.101.101.10\dest_lac
+xcp copy -exclude <filter> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 In the following example, the files and directories that have the string "resync" in their name have been excluded for copy.
 
@@ -128,7 +128,7 @@ Use the `-acl` parameter with the `-fallback-user` and `-fallback-group` options
 
 .Syntax
 [source,cli]
-xcp copy -acl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+xcp copy -acl -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 [[smb_copy_aclverify]]
 == copy -aclverify {yes,no}
@@ -138,7 +138,7 @@ You must use the `-aclverify {yes,no}` parameter parameter with the `copy -acl` 
 
 .Syntax
 [source,cli]
-xcp copy -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+xcp copy -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-aclverify.adoc[]
@@ -148,7 +148,7 @@ Use the `-noownership` parameter with the `copy` command to not copy the ownersh
 
 .Syntax
 [source,cli]
-xcp.exe copy -acl -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+xcp.exe copy -acl -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-noownership.adoc[]
@@ -159,7 +159,7 @@ Use the `-bs <n>` parameter with the `copy` command to provide a read/write bloc
 
 .Syntax
 [source,cli]
-xcp.exe copy -bs <n> \\<source_IP_address>\source_share\src \\<destination_IP_address>\dest_share
+xcp.exe copy -bs <n> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-bs.adoc[]
@@ -169,7 +169,7 @@ Use the `-ads` parameter with the `copy` command to copy NTFS alternate data str
 
 .Syntax
 [source,cli]
-xcp copy -ads \\<source_IP_address>\source_share\src \\destination_IP_address>\dest_share
+xcp copy -ads \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
 .Show example
 include::./_include/ref-example-smb-copy-ads.adoc[]
