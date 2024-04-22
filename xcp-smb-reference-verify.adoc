@@ -193,7 +193,8 @@ xcp verify -noacls -noownership \\<IP address or hostname of SMB server>\source_
 include::./_include/ref-example-smb-verify-noacls.adoc[]
 
 === verify -noacls -noownership
-<Missing description>
+
+Use the `-noownership` parameter with `verify -noacls`  to not check ACLs or ownership from the source to the destination.
 
 .Syntax
 [source,cli]
@@ -276,7 +277,7 @@ NOTE: If you use `fallback-user` and `fallback-group` with a copy or sync operat
 xcp verify -fallback-user <fallback_user> -fallback-group <fallback_group> <source><target>
 
 === verify -noownership -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
-Use the `-noownership,` `-fallback-user`, and `-fallback-group` parameters with the `verify` command to list the ACL differences and skip verification of ownership between files and directories on the source and destination
+Use the `-noownership,` `-fallback-user`, and `-fallback-group` parameters with the `verify` command to list the ACL differences and skip verification of ownership between files and directories on the source and destination.
 
 .Syntax
 [source,cli]

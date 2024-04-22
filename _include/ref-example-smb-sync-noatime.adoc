@@ -1,6 +1,7 @@
 .Show example
 [%collapsible]
 ====
+----
 c:\netapp\xcp>xcp sync -noatime \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 xcp sync -noatime \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 
@@ -8,5 +9,7 @@ xcp sync -noatime \\<IP address or hostname of SMB server>\source_share \\<IP ad
 634 scanned, 0 copied, 634 compared, 0 removed, 0 errors 
 Total Time : 3s
 STATUS : PASSED
+
 ----
+
 ====
