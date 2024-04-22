@@ -197,7 +197,7 @@ include::./_include/ref-example-smb-scan-stats.adoc[]
 == scan -html
 Use the `-html` parameter with the `scan` command  to list files in a HTML statistics report.
 
-NOTE: XCP reports (.csv, .html) are saved in the same location as the XCP binary. The file name is in the format <xcp_process_id>_<time_stamp>.html. When XCP cannot map security identifiers (SIDs) to owner names, it uses the last few digits after the final “–” in the SID to represent the owner. For example, when XCP is unable to map the SID S-1-5-21-1896871423-3211229150-3383017265-4854184 to its owner, it represents the owner by using 4854184. To view .csv and .html example reports, see link:<TBD>[Sample XCP NFS and SMB Reports].
+NOTE: XCP reports (.csv, .html) are saved in the same location as the XCP binary. The file name is in the format <xcp_process_id>_<time_stamp>.html. When XCP cannot map security identifiers (SIDs) to owner names, it uses the last few digits after the final “–” in the SID to represent the owner. For example, when XCP is unable to map the SID S-1-5-21-1896871423-3211229150-3383017265-4854184 to its owner, it represents the owner by using 4854184. 
 
 .Syntax
 [source,cli]
