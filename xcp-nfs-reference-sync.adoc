@@ -61,7 +61,7 @@ include::./_include/ref-example-nfs-sync-nonames.adoc[]
 [[sync_bs]]
 === sync -bs <n[k]>
 
-Use the the`-bs <n[k]>` parameter with the `sync` command to  specify the read/write block size. The default block size is 64k. 
+Use the the `-bs <n[k]>` parameter with the `sync` command to  specify the read/write block size. The default block size is 64k. 
 
 .Syntax
 
