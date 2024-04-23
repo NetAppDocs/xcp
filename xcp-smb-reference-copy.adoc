@@ -33,22 +33,22 @@ The following table lists the `copy` parameters and their description.
 |===
 | Parameter | Description
 
-| <<smb_copy_help, copy -h, --help>> | Show this help message and exit.
+| <<smb_copy_help, copy -h, --help>> | Shows this help message and exit.
 | <<copy -v>> | Increase debug verbosity.
-| <<smb_copy_parallel, copy -parallel <n> >> | Number of concurrent processes (default: <cpu-count>).
-| <<smb_copy_match, copy -match <filter> >> | Only process files and directories that match the filter (see `xcp help - match` for details).
-| <<smb_copy_exclude, copy -exclude <filter> >> | Only exclude files and directories in the filter
-| <<copy -preserve-atime>> | Restore last accessed date on source.
-| <<smb_copy_acl, copy -acl>> | Copy security information.
+| <<smb_copy_parallel, copy -parallel <n> >> | Specifies the number of concurrent processes (default: <cpu-count>).
+| <<smb_copy_match, copy -match <filter> >> | Only processes files and directories that match the filter (see `xcp help - match` for details).
+| <<smb_copy_exclude, copy -exclude <filter> >> | Only excludes files and directories in the filter
+| <<copy -preserve-atime>> | Restores last accessed date on source.
+| <<smb_copy_acl, copy -acl>> | Copies security information.
 | <<smb_copy_acl, copy -fallback-user FALLBACK_USER >> 
-| Active Directory user or local (non-domain) user on the target machine that receives the permissions of local (non-domain) source machine users. For example, domain\administrator.
+| Specifies the Active Directory user or local (non-domain) user on the target machine that receives the permissions of local (non-domain) source machine users. For example, domain\administrator.
 | <<smb_copy_acl, copy -fallback-group FALLBACK_GROUP >> 
-| Active Directory group or local (non-domain) group on the target machine that receives the permissions of local (non-domain) source machine groups. For example, domain\administrators.
-| copy -root | Copy the ACL for a root directory.
-| <<smb_copy_aclverify, copy -aclverify {yes,no}>> | Provide an option to skip or include ACL verification during the copy -acl operation.
-| <<copy -noownership>> | Do not copy ownership.
+| Specifies the Active Directory group or local (non-domain) group on the target machine that receives the permissions of local (non-domain) source machine groups. For example, domain\administrators.
+| <<smb_copy_root,copy -root>> | Copies the ACLs for a root directory.
+| <<smb_copy_aclverify, copy -aclverify {yes,no}>> | Provides an option to skip or include ACL verification during the copy -acl operation.
+| <<copy -noownership>> | Does not copy ownership.
 | <<smb_copy_bs, copy -bs <n> >> | Read/Write blocksize (default:1M)
-| <<copy -ads>> | Uses the copy command with the `-ads` option to copy NTFS alternate data streams from the source SMB share to the destination SMB share.
+| <<copy -ads>> | Copies NTFS alternate data streams from the source SMB share to the destination SMB share.
 |=== 
 
 [[smb_copy_help]]
@@ -142,6 +142,17 @@ xcp copy -acl -aclverify yes -fallback-user <fallback_user> -fallback-group <fal
 
 .Show example
 include::./_include/ref-example-smb-copy-aclverify.adoc[]
+
+[[smb_copy_root,copy -root]]
+== copy -root
+Use the `-root` parameter with the `copy` command to copy the ACLs for the root directory. 
+
+.Syntax
+[source,cli]
+xcp copy -acl -root -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share 
+
+.Show example
+include::./_include/ref-example-smb-copy-root.adoc[]
 
 == copy -noownership
 Use the `-noownership` parameter with the `copy` command to not copy the ownership from the source to the destination. You must use `-noownership` with the `-acl` option and it requires `fallback-user` and `fallback-group` as mandatory parameters.

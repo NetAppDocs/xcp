@@ -31,7 +31,7 @@ The following table lists the `sync` parameters and their description.
 | <<sync -v>> | Increase debug verbosity.
 | <<smb_sync_parallel, sync -parallel <n> >> | Number of concurrent processes (default: <cpu-count>).
 | <<smb_sync_match, sync -match <filter> >> | Only process files and directories that match the filter (see `xcp help - match` for details).
-| sync -exclude <filter> | Only exclude files and directories in the filter.
+| <<smb_sync_exclude,sync -exclude <filter> >> | Only exclude files and directories in the filter.
 | <<sync -preserve-atime>> | Restore last accessed date on source.
 | <<sync -noatime>> | Do not check file access time.
 | <<sync -noctime>> | Do not check file creation time.
@@ -47,7 +47,7 @@ The following table lists the `sync` parameters and their description.
 | <<sync_smb_acl,sync -fallback-group FALLBACK_GROUP >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | <<sync -l>> | Increases output detail.
-| sync -root | Sync ACL for root directory.
+| <<smb_sync_root,sync -root>> | Sync ACLs for the root directory.
 | <<smb_sync_onlyacl, sync -onlyacl>> | Copy only the security information.
 | <<smb_sync_aclverify, sync -aclverify{yes,no} >> | Provide an option to include or skip ACL verification during the ACL sync operation.
 | <<smb_sync_bs, sync -bs <n> >> | Read/Write blocksize (default:1M).
@@ -99,6 +99,18 @@ xcp sync -match <filter> \\<IP address or hostname of SMB server>\source_share \
 
 .Show example
 include::./_include/ref-example-smb-sync-match.adoc[]
+
+[[smb_sync_exclude]]
+== sync -exclude <filter>
+
+Use the `-exclude <filter>` parameter with the `sync` command to only exclude files and directories in the filter.
+
+.Syntax
+[source,cli]
+xcp sync -exclude <filter> \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+
+.Show example
+include::./_include/ref-example-smb-sync-exclude.adoc[]
 
 == sync -preserve-atime 
 Use the `-preserve-atime` parameter with the `sync` command to reset "atime" to the original value before XCP read the file.
@@ -219,6 +231,17 @@ xcp sync -l \\<IP address or hostname of SMB server>\source_share \\<IP address 
 
 .Show example
 include::./_include/ref-example-smb-sync-l.adoc[]
+
+[[smb_sync_root,sync -root]]
+== sync -root
+Use the `-root` parameter with the `sync` command to sync the ACLs for the root directory. 
+
+.Syntax
+[source,cli]
+xcp sync -acl -root -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+
+.Show example
+include::./_include/ref-example-smb-sync-root.adoc[]
 
 [[smb_sync_onlyacl]]
 == sync -onlyacl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP

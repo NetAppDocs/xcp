@@ -28,36 +28,36 @@ The following table lists the `scan` parameters and their description.
 | Parameter | Description
 
 | <<smb_scan_help,scan -h, –-help>> 
-| Show this help message and exit.
+| Shows this help message and exit.
 | <<scan -v>> 
-| Increase debug verbosity.
+| Increases debug verbosity.
 | <<smb_scan_parallel, scan -parallel <n> >> 
-| Number of concurrent processes (default: <cpu-count>).
+| Specifies the number of concurrent processes (default: <cpu-count>).
 | <<smb_scan_match_filter, scan -match <filter> >> 
-| Only process files and directories that match the filter.
+| Only processes files and directories that match the filter.
 | <<smb_scan_exclude_filter, scan -exclude <filter> >>
-| Only exclude files and directories in the filter.
+| Only excludes files and directories in the filter.
 | <<scan -preserve-atime>> 
-| Restore last accessed date on source.
+| Restores the last accessed date on source.
 | <<smb_scan_depth, scan -depth <n> >> 
-| Limit the search depth to n levels.
+| Limits the search depth to n levels.
 | <<scan -stats>> 
 | Lists files in the tree statistic report format.
 | <<scan -html>> 
 | Lists files in the tree statistic HTML report format.
 | <<scan -csv>> 
-| Lists files in the tree statistic csv report format.
+| Lists files in the tree statistic CSV report format.
 | <<scan -l>>  
-| List files in the long listing output format.
+| Lists files in the long listing output format.
 | <<scan -ownership>> 
-| Retrieve ownership information of files and directories on the source 
+| Retrieves ownership information of files and directories on the source 
 system.
 | <<scan -du>> 
-| Summarize space usage of each directory including subdirectories.
+| Summarizes space usage of each directory including subdirectories.
 | <<smb_scan_fmt, scan -fmt <expression> >> 
-| Format file listing according to the Python expression (see `xcp help -fmt` for details).
+| Formats file listing according to the Python expression (see `xcp help -fmt` for details).
 | <<scan -ads>> 
-| The `scan` command with the `-ads` flag recursively scans the entire SMB share and lists all files and any associated alternate data streams.
+| Recursively scans the entire SMB share and lists all files and any associated alternate data streams.
 |===
 
 [[smb_scan_help]]
