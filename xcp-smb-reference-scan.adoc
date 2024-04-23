@@ -28,7 +28,7 @@ The following table lists the `scan` parameters and their description.
 | Parameter | Description
 
 | <<smb_scan_help,scan -h, –-help>> 
-| Shows this help message and exit.
+| Displays detailed information about how to use the scan command.
 | <<scan -v>> 
 | Increases debug verbosity.
 | <<smb_scan_parallel, scan -parallel <n> >> 
@@ -62,7 +62,7 @@ system.
 
 [[smb_scan_help]]
 == scan -h, –-help
-Use the -h and –-help parameters with the `scan` command to display detailed information about how to use the scan command.
+Use the `-h` and `–-help` parameters with the `scan` command to display detailed information about how to use the scan command.
 
 .Syntax
 [source,cli]

@@ -32,7 +32,7 @@ The following table lists the `scan` parameters and their description.
 | <<scan_l,scan -l>> | Lists files in the long listing output format.
 | <<scan_q,scan -q>> | Shows the number of files scanned.
 | <<nfs_scan_stats_csv_html,scan -stats>> | Lists files in the tree statistic report format.
-| <<nfs_scan_stats_csv_html,scan -csv>>| Lists files in the tree statistic csv report format.
+| <<nfs_scan_stats_csv_html,scan -csv>>| Lists files in the tree statistic CSV report format.
 | <<nfs_scan_stats_csv_html,scan -html>>| Lists files in the tree statistic HTML report format.
 | <<scan -nonames>> | Excludes user and group names for file listings and reports.
 | <<nfs_scan_newid, scan -newid <name> >> | Specifies the catalog name for a new index.

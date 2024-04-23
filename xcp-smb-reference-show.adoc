@@ -29,5 +29,5 @@ The following table lists the `show` parameters and their description.
 | Parameter
 | Description
 | show -v | Prints verbose details about SMB servers using the IP address or host name.
-| show -h, --help | Shows this help message and exit.
+| show -h, --help | Displays detailed information about how to use the command.
 |=== 
