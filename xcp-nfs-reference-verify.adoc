@@ -209,6 +209,18 @@ xcp verify -dircount <n[k]> <source_ip_address>:/source_vol <destination_ip_addr
 
 include::./_include/ref-example-nfs-verify-dircount.adoc[]
 
+[[nfs_verify_noid]]
+== verify -noId
+
+Use the `-noId` parameter with the `verify` command to disable the creation of a default index. The default value is false.
+
+.Syntax
+
+[source,cli]
+xcp verify -noId <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+include::./_include/ref-example-nfs-verify-noid.adoc[]
+
 [[nfs_verify_preserveatime]]
 == verify -preserve-atime
 
