@@ -10,7 +10,7 @@ indexpage:
         - title: Install XCP
           url: /xcp-install-xcp.html
         - title: XCP reference
-          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886872    
+          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886872     
     - title: Earlier releases
       links:
         - title: NetApp XCP 1.9.2 release notes
