@@ -285,7 +285,7 @@ include::./_include/ref-example-nfs-scan-subdir-names.adoc[]
 
 Use the `-preserve-atime` parameter with the `scan` command to restore all files to the last accessed date on the source. 
 
-When an NFS share is scanned, the access time is modified on the files if the storage system is configured to modify access time on read. XCP does not directly change the access time, XCP reads the files one by one and this triggers an update to the access time. The `-preserve-atime` option resets the access time to the original value set before the XCP read operation.
+When an NFS share is scanned, the access time is modified on the files if the storage system is configured to modify access time on read. XCP does not directly change the access time. XCP reads the files one by one and this triggers an update to the access time. The `-preserve-atime` option resets the access time to the original value set before the XCP read operation.
 
 .Syntax
 
