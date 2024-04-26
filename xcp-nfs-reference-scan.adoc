@@ -34,7 +34,7 @@ The following table lists the `scan` parameters and their description.
 | <<nfs_scan_stats_csv_html,scan -stats>> | Lists files in the tree statistic report format.
 | <<nfs_scan_stats_csv_html,scan -csv>>| Lists files in the tree statistic CSV report format.
 | <<nfs_scan_stats_csv_html,scan -html>>| Lists files in the tree statistic HTML report format.
-| <<scan -nonames>> | Excludes user and group names for file listings and reports.
+| <<scan -nonames>> | Excludes user and group names from file listings and reports.
 | <<nfs_scan_newid, scan -newid <name> >> | Specifies the catalog name for a new index.
 | <<nfs_scan_id, scan -id <catalog_name> >> | Specifies the catalog name of a previous copy or scan index.
 | <<nfs_scan_match, scan -match <filter> >> | Only processes files and directories that match the filter.
@@ -110,7 +110,7 @@ include::./_include/ref-example-nfs-scan-html.adoc[]
 
 == scan -nonames
 
-Use the `-nonames` parameter with the `scan` command to exclude user and group names for file listings or reports.
+Use the `-nonames` parameter with the `scan` command to exclude user and group names from file listings or reports.
 
 NOTE: When used with the `scan` command, the `-nonames` parameter only applies to file listings returned using the `-l` option.
 

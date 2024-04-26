@@ -175,7 +175,7 @@ include::./_include/ref-example-nfs-isync-newid.adoc[]
 [[nfs_isync_loglevel]]
 === isync -loglevel <name>
 
-Use the the `-loglevel <name>` parameter with the `isync` command to set the log level; available levels are INFO, DEBUG. The default value is INFO.
+Use the the `-loglevel <name>` parameter with the `isync` command to set the log level; available levels are INFO and DEBUG. The default value is INFO.
 
 .Syntax
 
@@ -407,7 +407,7 @@ include::./_include/ref-example-nfs-isync-estimate-id.adoc[]
 [[nfs_isync_estimate_loglevel]]
 === isync estimate -loglevel <name>
 
-Use the the `-loglevel <name>` parameter with `isync estimate` to set the log level; available levels are INFO, DEBUG. The default value is INFO.
+Use the the `-loglevel <name>` parameter with `isync estimate` to set the log level; available levels are INFO and DEBUG. The default value is INFO.
 
 .Syntax
 

@@ -35,7 +35,7 @@ The following table lists the `copy` parameters and their description.
 |===
 | Parameter
 | Description
-| <<copy -nonames>> | Excludes user and group names for file listings and reports.
+| <<copy -nonames>> | Excludes user and group names from file listings and reports.
 | <<copy_match,copy -match <filter> >> | Only processes files and directories that match the filter.
 | <<copy_md5, copy -md5 <string_expression> >> | Generates checksums on the files and saves the checksums when indexing (default: false). 
 | <<copy_dircount,copy -dircount <n[k]> >> | Specifies the request size when reading directories.
@@ -52,7 +52,7 @@ The following table lists the `copy` parameters and their description.
 
 == copy -nonames
 
-Use the `-nonames` parameter with the `copy` command to exclude user and group names for file listings or reports.
+Use the `-nonames` parameter with the `copy` command to exclude user and group names from file listings or reports.
 
 .Syntax
 

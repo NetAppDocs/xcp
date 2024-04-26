@@ -48,7 +48,7 @@ include::./_include/ref-example-nfs-indexdelete-match.adoc[]
 [[nfs_indexdelete_loglevel]]
 == indexdelete -loglevel <name>
 
-Use the `-loglevel <name>` parameter with the `indexdelete` command  to set the log level; available levels are INFO, DEBUG. The default level is INFO.
+Use the `-loglevel <name>` parameter with the `indexdelete` command  to set the log level; available levels are INFO and DEBUG. The default level is INFO.
 
 .Syntax
 
