@@ -131,7 +131,7 @@ include::./_include/ref-example-smb-scan-match-mtime.adoc[]
 
 [[smb_scan_exclude_filter]]
 == scan -exclude <filter>
-Use the `-exclude <filter>` with the `scan` command to excludes directories and files based on the pattern in the filter.
+Use the `-exclude <filter>` with the `scan` command to exclude directories and files based on the pattern in the filter.
 
 .Syntax
 [source,cli]
@@ -185,7 +185,7 @@ xcp scan -depth <2> \\<IP address or hostname of SMB server>\source_share
 include::./_include/ref-example-smb-scan-depth-n.adoc[]
 
 == scan -stats
-Use the `-stats` parameter with the `scan` command to  to list files in a tree statistics report format.
+Use the `-stats` parameter with the `scan` command to list files in a tree statistics report format.
 
 .Syntax
 [source,cli]
@@ -261,7 +261,7 @@ include::./_include/ref-example-smb-scan-fmt.adoc[]
 
 == scan -ads
 
-Use the `-ads` flag parameter with the `scan` command with to recursively scan the entire SMB share and lis all files and any associated alternate data streams.
+Use the `-ads` flag parameter with the `scan` command with to recursively scan the entire SMB share and list all files and any associated alternate data streams.
 
 .Syntax
 [source,cli]

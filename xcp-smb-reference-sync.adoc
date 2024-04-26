@@ -280,9 +280,7 @@ xcp.exe sync -bs <n> \\<IP address or hostname of SMB server>\source_share \\<IP
 include::./_include/ref-example-smb-sync-bs.adoc[]
 
 == sync -ads
-Using `-ads` parameter with the `sync` command to scan for changes and modifications to alternate data streams
-in the source and target SMB share. If there are changes, it applies the change to the target to make sure that 
-the target is identical to the source.
+Use `-ads` parameter with the `sync` command to scan for changes and modifications to alternate data streams in the source and target SMB share. If there are changes, it applies the change to the target to make sure that the target is identical to the source.
 
 .Syntax
 [source,cli]

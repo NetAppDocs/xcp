@@ -80,7 +80,7 @@ include::./_include/ref-example-smb-verify-v.adoc[]
 
 [[smb_verify_parallel]]
 ==  verify -parallel <n>
-Use the `-parallel <n>` parameter with the `verify` command to set a higher or lower number of XCP concurrent processes. The `verify -parallel <n>` command verifies with the number of concurrent processes (default: <cpu-count>).
+Use the `-parallel <n>` parameter with the `verify` command to set a higher or lower number of XCP concurrent processes. The `verify -parallel <n>` command verifies the number of concurrent processes (default: <cpu-count>).
 
 NOTE: The maximum value for n is 61. 
 
