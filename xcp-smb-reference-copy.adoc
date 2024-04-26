@@ -40,9 +40,9 @@ The following table lists the `copy` parameters and their description.
 | <<smb_copy_exclude, copy -exclude <filter> >> | Only excludes files and directories in the filter
 | <<copy -preserve-atime>> | Restores last accessed date on source.
 | <<smb_copy_acl, copy -acl>> | Copies security information.
-| <<smb_copy_acl, copy -fallback-user FALLBACK_USER >> 
+| <<smb_copy_acl, copy -fallback-user <fallback_user> >> 
 | Specifies the Active Directory user or local (non-domain) user on the target machine that receives the permissions of local (non-domain) source machine users. For example, domain\administrator.
-| <<smb_copy_acl, copy -fallback-group FALLBACK_GROUP >> 
+| <<smb_copy_acl, copy -fallback-group <fallback_group> >> 
 | Specifies the Active Directory group or local (non-domain) group on the target machine that receives the permissions of local (non-domain) source machine groups. For example, domain\administrators.
 | <<smb_copy_root,copy -root>> | Copies the ACLs for a root directory.
 | <<smb_copy_aclverify, copy -aclverify {yes,no}>> | Provides an option to skip or include ACL verification during the copy -acl operation.

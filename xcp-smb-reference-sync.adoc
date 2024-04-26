@@ -42,9 +42,9 @@ The following table lists the `sync` parameters and their description.
 | <<sync_smb_ctime, sync -ctimewindow <float> >> | Acceptable creation time difference, in seconds.
 | <<sync_smb_mtime, sync -mtimewindow <float> >> | Acceptable modification time difference, in seconds,
 | <<sync_smb_acl, sync -acl>> | Copy security information.
-| <<sync_smb_acl,sync -fallback-user FALLBACK_USER >> 
+| <<sync_smb_acl,sync -fallback-user <fallback_user> >> 
 | Active Directory user or local(non-domain) user on the target machine to receive the permissions of local (non-domain) source machine users (example: domain\administrator).
-| <<sync_smb_acl,sync -fallback-group FALLBACK_GROUP >>
+| <<sync_smb_acl,sync -fallback-group <fallback_group> >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | <<sync -l>> | Increases output detail.
 | <<smb_sync_root,sync -root>> | Sync ACLs for the root directory.

@@ -48,9 +48,9 @@ make sure that the target is identical to the source.
 | <<verify -stats>> | Scan source and target trees in parallel and compare tree statistics.
 | <<verify -l>> | Increases output detail.
 | <<verify -ll>> | Increases output detail (git diff format).
-| <<verify_smb_acl, verify -fallback-user FALLBACK_USER >> 
+| <<verify_smb_acl, verify -fallback-user <fallback_user> >> 
 | Active Directory user or local(non-domain) user on the target machine to receive the permissions of local (non-domain) source machine users (example: domain\administrator).
-| <<verify_smb_acl, verify -fallback-group FALLBACK_GROUP >>
+| <<verify_smb_acl, verify -fallback-group <fallback_group> >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
 | <<smb_verify_root,verify -root>> | Sync ACLs for the root directory.
 | <<verify_smb_onlyacl, verify -onlyacl>> | Copy only the security information.
