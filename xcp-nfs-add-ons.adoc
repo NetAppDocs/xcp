@@ -53,4 +53,5 @@ You can include HDFS clusters in an XCP scale-out configuration because they use
 
 NOTE: HDFS connectors are qualified and supported for MapR and Cloudera clusters but can only perform a baseline `copy` operation.
 
+// 2024 Apr 26, OTHERDOC-47
 // 2021-Nov-08, BURT 1423222
