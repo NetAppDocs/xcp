@@ -121,7 +121,7 @@ xcp copy -preserve-atime \\<IP address or hostname of SMB server>\source_share \
 include::./_include/ref-example-smb-copy-preserveatime.adoc[]
 
 [[smb_copy_acl]]
-== copy -acl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+== copy -acl -fallback-user <fallback_user> -fallback-group <fallback_group>
 Use the `-acl` parameter with the `copy` command to activate the transfer of the security descriptors (ACLs).
 
 Use the `-acl` parameter with the `-fallback-user` and `-fallback-group` options to specify a user and a group on the target machine or from Active Directory to receive the permissions of local (non-domain) source machine users or groups. This does not refer to unmatched users from an Active Directory.

@@ -280,7 +280,7 @@ xcp verify -ll \\<IP address of SMB source server>\source_share \\<IP address of
 include::./_include/ref-example-smb-verify-ll.adoc[]
 
 [[verify_smb_acl]]
-== verify -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+== verify-fallback-user <fallback_user> -fallback-group <fallback_group>
 Use the `-fallback-user` and `-fallback-group` parameters with the `verify` command to list the ACL and ownership differences between files and directories on the source and destination.
 
 NOTE: If you use `fallback-user` and `fallback-group` with a copy or sync operation, NetApp recommends that you also use the `fallback-user` and `fallback-group` parameters with the verify operation.
@@ -289,14 +289,14 @@ NOTE: If you use `fallback-user` and `fallback-group` with a copy or sync operat
 [source,cli]
 xcp verify -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
-=== verify -noownership -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+=== verify -noownership-fallback-user <fallback_user> -fallback-group <fallback_group>
 Use the `-noownership,` `-fallback-user`, and `-fallback-group` parameters with the `verify` command to list the ACL differences and skip verification of ownership between files and directories on the source and destination.
 
 .Syntax
 [source,cli]
 xcp verify -noownership -fallback-user <fallback_user> -fallback-group <fallback_group> \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
 
-=== verify -noacls -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+=== verify -noacls-fallback-user <fallback_user> -fallback-group <fallback_group>
 Use the `-noacls`, `-fallback-user`, and `-fallback-group` parameters with the `verify` command to skip verification of ACLs and verify ownership between files and directories on the source and destination.
 
 .Syntax

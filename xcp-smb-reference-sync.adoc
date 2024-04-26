@@ -210,7 +210,7 @@ xcp sync -mtimewindow <float> \\<IP address or hostname of SMB server>\source_sh
 include::./_include/ref-example-smb-sync-mtimewindow.adoc[]
 
 [[sync_smb_acl]]
-== sync -acl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+== sync -acl -fallback-user <fallback_user> -fallback-group <fallback_group>
 Use the `-acl`, `-fallback-user` and `-fallback-group` parameters with the `sync` command to compare the data and the security information from the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` options are a user or group on the target machine or in the Active Directory that receive the permissions of the local (non-domain) source users or groups.
 
 NOTE: You cannot use the `-acl` option without the `-fallback-user` and `-fallback-group` options.
@@ -244,7 +244,7 @@ xcp sync -acl -root -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" 
 include::./_include/ref-example-smb-sync-root.adoc[]
 
 [[smb_sync_onlyacl]]
-== sync -onlyacl -fallback-user FALLBACK_USER -fallback-group FALLBACK_GROUP
+== sync -onlyacl-fallback-user <fallback_user> -fallback-group <fallback_group>
 Use the `-onlyacl`, `-fallback-user`, and `-fallback-group` parameters with the `sync` command to compare the security information between the source with the target and apply the required actions on the target. The `-fallback-user` and `-fallback-group` are a user or group on the target machine or in the Active Directory that receive the permissions of the local (non-domain) source users or groups.
 
 NOTE: You cannot use the `-onlyacl` parameter without the `-fallback-user` and `-fallback-group` options.
