@@ -23,8 +23,6 @@ indexpage:
           url: https://library.netapp.com/ecm/ecm_get_file/ECMLP2884968
         - title: NetApp XCP 1.9.1 reference
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883343
-        - title: NetApp XCP 1.9 release notes
-          url: https://library.netapp.com/ecm/ecm_get_file/ECMLP2883342
     - title: More resources
       links:
         - title: NetApp TechCommTV (NetApp XCP videos)
