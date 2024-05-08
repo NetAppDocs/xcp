@@ -38,7 +38,7 @@ The following table lists the `scan` parameters and their description.
 | <<nfs_scan_newid, scan -newid <name> >> | Specifies the catalog name for a new index.
 | <<nfs_scan_id, scan -id <catalog_name> >> | Specifies the catalog name of a previous copy or scan index.
 | <<nfs_scan_match, scan -match <filter> >> | Only processes files and directories that match the filter.
-| <<nfs_scan_fmt, scan -fmt <string_expression>> | Only processes files and directories that match the format.
+| <<nfs_scan_fmt, scan -fmt <string_expression> >> | Only processes files and directories that match the format.
 | <<nfs_scan_du,scan -du>> | Summarizes the space usage of each directory, including subdirectories.
 | <<nfs_scan_md5, scan -md5 <string_expression> >> | Generates checksums on the files and saves the checksums when indexing (default: false). 
 | <<nfs_scan_depth,scan -depth <n> >> | Limits the search depth.
