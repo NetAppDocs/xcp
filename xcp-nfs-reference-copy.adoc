@@ -102,6 +102,8 @@ include::./_include/ref-example-nfs-copy-dircount.adoc[]
 
 Use the `-edupe` parameter with the `copy` command to include the deduplication estimate in reports.
 
+NOTE: Simple Storage Service (S3) does not support sparse files. Therefore, specifying an S3 bucket as the target destination for `copy -edupe` returns the value "None" for sparse data.
+
 .Syntax
 
 [source,cli]
