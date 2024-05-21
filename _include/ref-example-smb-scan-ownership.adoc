@@ -1,0 +1,45 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -l -ownership \\<IP address or hostname of SMB server>\source_share xcp scan -l -ownership \\<IP address or hostname of SMB server>\source_share
+
+f	BUILTIN\Administrators	195KiB	7y0d	source_share\ASUP.pm
+f	BUILTIN\Administrators	34.7KiB	7y0d	source_share\ASUP_REST.pm
+f	BUILTIN\Administrators	4.11KiB	7y0d	source_share\Allflavors_v2.pm
+f	BUILTIN\Administrators	38.1KiB	7y0d	source_share\Armadillo.pm
+f	BUILTIN\Administrators	3.83KiB	7y0d	source_share\AsupExtractor.pm
+f	BUILTIN\Administrators	70.1KiB	7y0d	source_share\BTS_Config.pm
+f	BUILTIN\Administrators	2.65KiB	7y0d	source_share\Backup.pm
+f	BUILTIN\Administrators	60.3KiB	7y0d	source_share\Aggregate.pm
+f	BUILTIN\Administrators	36.9KiB	7y0d	source_share\Burt.pm
+f	BUILTIN\Administrators	8.98KiB	7y0d	source_share\CConfig.pm
+f	BUILTIN\Administrators	19.3KiB	7y0d	source_share\CIFS.pm
+f	BUILTIN\Administrators	20.7KiB	7y0d	source_share\CR.pm
+f	BUILTIN\Administrators	2.28KiB	7y0d	source_share\CRC.pm
+f	BUILTIN\Administrators	18.7KiB	7y0d	source_share\CSHM.pm
+f	BUILTIN\Administrators	43.0KiB	7y0d	source_share\CSM.pm
+f	BUILTIN\Administrators	19.7KiB	7y0d	source_share\ChangeModel.pm
+f	BUILTIN\Administrators	33.3KiB	7y0d	source_share\Checker.pm
+f	BUILTIN\Administrators	3.47KiB	7y0d	source_share\Class.pm
+f	BUILTIN\Administrators	37.8KiB	7y0d	source_share\Client.pm
+f	BUILTIN\Administrators	2.44KiB	7y0d	source_share\ClientInfo.pm
+f	BUILTIN\Administrators	37.2KiB	7y0d	source_share\ClientMgr.pm
+f	BUILTIN\Administrators	17.1KiB	7y0d	source_share\ClientRPC.pm
+f	BUILTIN\Administrators	9.21KiB	7y0d	source_share\ClusterAgent.pm
+f   BUILTIN\Administrators  15.7KiB 7y0d source_share\agnostic\Qtree.pm 
+f   BUILTIN\Administrators  29.3KiB 7y0d source_share\agnostic\Quota.pm
+f   BUILTIN\Administrators  13.7KiB 7y0d source_share\agnostic\RbacCmdFetcher.pm
+f   BUILTIN\Administrators  5.55KiB 7y0d source_share\agnostic\RbacCmdFetcher_ReadMe
+f   BUILTIN\Administrators  3.92KiB 7y0d source_share\agnostic\SFXOD.pm 
+f   BUILTIN\Administrators  35.8KiB 7y0d source_share\agnostic\Snapmirror.pm
+f   BUILTIN\Administrators  40.4KiB 7y0d source_share\agnostic\VolEfficiency.pm
+f   BUILTIN\Administrators  6.22KiB 7y0d source_share\agnostic\flatfile.txt 
+d   BUILTIN\Administrators  7y0d source_share\agnostic
+d   BUILTIN\Administrators
+
+xcp scan -l -ownership \\<IP address or hostname of SMB server>\source_share
+317 scanned, 0 matched, 0 errors Total Time : 1s
+STATUS : PASSED
+----
+====

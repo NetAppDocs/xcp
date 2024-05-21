@@ -1,0 +1,21 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp scan -s3.endpoint https://<endpoint_url>: s3://xcp-testing
+
+Job ID: Job_2023-06-13_11.23.06.029137_scan
+aws_files/USER1/FILE_USER1_1024_1
+aws_files/USER1/FILE_USER1_1024_2
+aws_files/USER1/FILE_USER1_1024_3
+aws_files/USER1/FILE_USER1_1024_4
+aws_files/USER1/FILE_USER1_1024_5
+Xcp command : xcp scan -s3.endpoint https://<endpoint_url>: s3://xcp-testing
+Stats : 8 scanned, 5 s3.objects
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 0s.
+Job ID : Job_2023-06-13_11.23.06.029137_scan
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_11.23.06.029137_scan.log
+STATUS : PASSED
+----
+====

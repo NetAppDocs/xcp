@@ -25,7 +25,7 @@ NOTE: During the copy operation, you can use the `-preserve-atime` flag with the
 *Example:*
 
 ----
-C:\xcp>xcp copy \\<source SMB share> \\<destination SMB share>
+C:\xcp>xcp copy \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 ----
 
 Run `xcp help copy` for more details.
@@ -41,7 +41,7 @@ NOTE: During the sync operation,  you can use the `-preserve-atime` flag with th
 *Example:*
 
 ----
-C:\xcp>xcp sync \\<source SMB share> \\<destination SMB share>
+C:\xcp>xcp sync \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 ----
 
 Run `xcp help sync` for more details.
@@ -58,7 +58,7 @@ During the verify operation, you can use the `-preserve-atime` flag with the `ve
 *Example:*
 
 ----
-C:\xcp>xcp verify \\<source SMB share> \\<destination SMB share>
+C:\xcp>xcp verify \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
 ----
 
 Run `xcp help verify` for more details.

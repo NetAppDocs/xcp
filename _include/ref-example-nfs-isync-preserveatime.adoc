@@ -1,0 +1,26 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp isync -preserve-atime <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+Job ID: Job_2023-11-17_01.31.26.077154_isync
+21,649 scanned, 1.41 GiB in (260 MiB/s), 5.63 MiB out (1.01 MiB/s), 5s
+32,034 scanned, 10.9 GiB in (400 MiB/s), 29.3 MiB out (925 KiB/s), 30s
+33,950 scanned, 1 copied, 12.9 GiB in (399 MiB/s), 35.5 MiB out (1.24 MiB/s), 35s
+33,950 scanned, 1 copied, 14.7 GiB in (361 MiB/s), 39.6 MiB out (830 KiB/s), 41s
+.
+.
+.
+42,499 scanned, 1 copied, 229 GiB in (623 MiB/s), 529 MiB out (1.37 MiB/s), 7m16s
+42,499 scanned, 1 copied, 233 GiB in (719 MiB/s), 536 MiB out (1.56 MiB/s), 7m21s
+Xcp command : xcp isync -preserve-atime <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+Stats : 42,499 scanned, 1 copied
+Speed : 234 GiB in (541 MiB/s), 540 MiB out (1.22 MiB/s)
+Total Time : 7m23s.
+Job ID : Job_2023-11-17_01.31.26.077154_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-17_01.31.26.077154_isync.log
+Error Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-17_01.31.26.077154_isync.error
+STATUS : PASSED
+----
+====

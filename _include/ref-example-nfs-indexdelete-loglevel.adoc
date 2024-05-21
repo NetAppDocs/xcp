@@ -1,0 +1,26 @@
+.Show example
+[%collapsible]
+====
+----
+root@client1 linux]# ./xcp indexdelete -loglevel DEBUG -match "fnm('test*')"
+
+Job ID: Job_2023-11-16_03.39.36.814557_indexdelete
+===========================================================================================
+Name Command Size Created Updated
+===========================================================================================
+testing scan 24.5 KiB 16-Nov-2023 16-Nov-2023
+testingisync isync 12.5 KiB 16-Nov-2023 16-Nov-2023
+5 scanned, 2 matched, 65.1 KiB in (61.1 KiB/s), 6.24 KiB out (5.85 KiB/s), 1s.
+WARNING: 2 matched indexes will be deleted permanently.
+Are you sure you want to delete (yes/no): yes
+6 scanned, 2 matched, 65.1 KiB in (10.5 KiB/s), 6.39 KiB out (1.03 KiB/s), 7s
+Xcp command : xcp indexdelete -loglevel DEBUG -match fnm('test*')
+Stats : 32 scanned, 2 matched, 2 index deleted
+Speed : 75.5 KiB in (10.3 KiB/s), 11.1 KiB out (1.52 KiB/s)
+Total Time : 7s.
+Job ID : Job_2023-11-16_03.39.36.814557_indexdelete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_03.39.36.814557_indexdelete.log
+STATUS : PASSED
+[root@client1 linux]#
+----
+====

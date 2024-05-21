@@ -1,0 +1,11 @@
+.Show example
+[%collapsible]
+====
+----
+C:\NetApp\XCP>xcp.exe configure
+
+Please choose the menu you want to start:
+1. Configure xcp.ini file
+0. Quit
+----
+====

@@ -1,0 +1,51 @@
+.Show example
+[%collapsible]
+====
+----
+root@client1 linux]# ./xcp copy -s3.endpoint https://<endpoint_url>: hdfs:///user/test
+s3://xcp-testing
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_copy_2023-06-
+13_11.20.32.571348
+Job ID: Job_XCP_copy_2023-06-13_11.20.32.571348_copy
+Xcp command : xcp copy -s3.endpoint https://<endpoint_url> hdfs:///user/test s3://xcp-testing
+Stats : 8 scanned, 5 copied, 8 indexed, 5 KiB s3.data.uploaded, 5
+s3.copied.single.key.file, 5 s3.copied.file
+Speed : 6.78 KiB in (1.77 KiB/s), 83.6 KiB out (21.8 KiB/s)
+Total Time : 3s.
+Migration ID: XCP_copy_2023-06-13_11.20.32.571348
+Job ID : Job_XCP_copy_2023-06-13_11.20.32.571348_copy
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2023-06-13_11.20.32.571348_copy.log
+STATUS : PASSED
+[root@client1 linux]# ./xcp copy -s3.endpoint https://<endpoint_url>: hdfs:///user/demo
+s3://xcp-testing
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_copy_2023-06-
+13_11.40.26.913130
+Job ID: Job_XCP_copy_2023-06-13_11.40.26.913130_copy
+15,009 scanned, 1,462 copied, 9 indexed, 1.46 MiB s3.data.uploaded, 1,491
+s3.copied.single.key.file, 1,491 s3.copied.file, 4.58 MiB in (933 KiB/s), 1.72 MiB out (350
+KiB/s), 5s
+15,009 scanned, 4,283 copied, 9 indexed, 4.20 MiB s3.data.uploaded, 4,302
+s3.copied.single.key.file, 4,302 s3.copied.file, 7.70 MiB in (629 KiB/s), 4.85 MiB out (632
+KiB/s), 10s
+15,009 scanned, 7,323 copied, 9 indexed, 7.17 MiB s3.data.uploaded, 7,343
+s3.copied.single.key.file, 7,343 s3.copied.file, 11.0 MiB in (672 KiB/s), 8.24 MiB out (681
+KiB/s), 15s
+15,009 scanned, 10,427 copied, 9 indexed, 10.2 MiB s3.data.uploaded, 10,439
+s3.copied.single.key.file, 10,439 s3.copied.file, 14.5 MiB in (690 KiB/s), 11.7 MiB out (695
+KiB/s), 20s
+15,009 scanned, 13,445 copied, 9 indexed, 13.1 MiB s3.data.uploaded, 13,454
+s3.copied.single.key.file, 13,454 s3.copied.file, 17.8 MiB in (676 KiB/s), 15.0 MiB out (682
+KiB/s), 25s
+Xcp command : xcp copy -s3.endpoint https://<endpoint_url>: hdfs:///user/demo s3://xcp-testing
+Stats : 15,009 scanned, 15,005 copied, 15,009 indexed, 14.7 MiB s3.data.uploaded, 15,005
+s3.copied.single.key.file, 15,005 s3.copied.file
+Speed : 19.2 MiB in (712 KiB/s), 17.1 MiB out (635 KiB/s)
+Total Time : 27s.
+Migration ID: XCP_copy_2023-06-13_11.40.26.913130
+Job ID : Job_XCP_copy_2023-06-13_11.40.26.913130_copy
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2023-06-13_11.40.26.913130_copy.log
+STATUS : PASSED
+----
+====

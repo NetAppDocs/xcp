@@ -1,0 +1,52 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost linux]# ./xcp verify -noattrs <IP address of source NFS server>:/source_vol <IP address
+of destination NFS server>:/dest_vol
+
+xcp: WARNING: No index name has been specified, creating one with name: autoname_verify_2020-03-05_02.19.14.011569
+
+40,397 scanned, 9,917 found, 4,249 compared, 4,249 same data, 211 MiB in (41.6 MiB/s), 3.78 MiB
+out (764 KiB/s), 5s
+40,397 scanned, 14,533 found, 8,867 compared, 8,867 same data, 475 MiB in (52.9 MiB/s), 6.06 MiB
+out (466 KiB/s), 10s
+40,397 scanned, 20,724 found, 15,038 compared, 15,038 same data, 811 MiB in (67.0 MiB/s), 9.13
+MiB out (628 KiB/s), 15s
+40,397 scanned, 25,659 found, 19,928 compared, 19,928 same data, 1.02 GiB in (46.6 MiB/s), 11.5
+MiB out (477 KiB/s), 20s
+40,397 scanned, 30,535 found, 24,803 compared, 24,803 same data, 1.32 GiB in (62.0 MiB/s), 14.0
+MiB out (513 KiB/s), 25s
+75,179 scanned, 34,656 indexed, 39,727 found, 32,595 compared, 32,595 same data, 1.58 GiB in
+(53.4 MiB/s), 20.1 MiB out (1.22 MiB/s), 30s
+75,179 scanned, 34,656 indexed, 47,680 found, 40,371 compared, 40,371 same data, 1.74 GiB in
+(32.3 MiB/s), 23.6 MiB out (717 KiB/s), 35s
+75,179 scanned, 34,656 indexed, 58,669 found, 51,524 compared, 51,524 same data, 1.93 GiB in
+(37.9 MiB/s), 28.4 MiB out (989 KiB/s), 40s
+78,097 scanned, 39,772 indexed, 69,343 found, 61,858 compared, 61,858 same data, 2.12 GiB in
+(39.0 MiB/s), 33.4 MiB out (1015 KiB/s), 45s
+110,213 scanned, 69,593 indexed, 80,049 found, 69,565 compared, 69,565 same data, 2.37 GiB in
+(51.3 MiB/s), 39.3 MiB out (1.18 MiB/s), 50s
+110,213 scanned, 69,593 indexed, 86,233 found, 75,727 compared, 75,727 same data, 2.65 GiB in
+(57.8 MiB/s), 42.3 MiB out (612 KiB/s), 55s
+110,213 scanned, 69,593 indexed, 93,710 found, 83,218 compared, 83,218 same data, 2.93 GiB in
+(56.1 MiB/s), 45.8 MiB out (705 KiB/s), 1m0s
+110,213 scanned, 69,593 indexed, 99,700 found, 89,364 compared, 89,364 same data, 3.20 GiB in
+(56.9 MiB/s), 48.7 MiB out (593 KiB/s), 1m5s
+124,888 scanned, 94,661 indexed, 107,509 found, 95,304 compared, 95,304 same data, 3.54 GiB in
+(68.6 MiB/s), 53.5 MiB out (1000 KiB/s), 1m10s
+134,630 scanned, 104,739 indexed, 116,494 found, 102,792 compared, 102,792 same data, 3.94 GiB
+in (81.7 MiB/s), 58.2 MiB out (949 KiB/s), 1m15s
+134,630 scanned, 104,739 indexed, 123,475 found, 109,601 compared, 109,601 same data, 4.28 GiB
+in (70.0 MiB/s), 61.7 MiB out (711 KiB/s), 1m20s
+134,630 scanned, 104,739 indexed, 129,354 found, 115,295 compared, 115,295 same data, 4.55 GiB
+in (55.3 MiB/s), 64.5 MiB out (572 KiB/s), 1m25s
+Xcp command : xcp verify -noattrs <IP address of source NFS server>:/source_vol <IP address
+of destination NFS server>:/dest_vol
+134,630 scanned, 0 matched, 100% found (121,150 have data), 100% verified (data, mods), 0
+different item, 0 error
+Speed : 4.95 GiB in (56.5 MiB/s), 69.2 MiB out (789 KiB/s)
+Total Time : 1m29s.
+STATUS : PASSED
+----
+====

@@ -1,0 +1,33 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp estimate -id csdata01 -dircount 128k -t 300 -target <path>
+
+xcp: WARNING: your license will expire in less than 11 days! You can renew your license at
+https://xcp.netapp.com
+xcp: WARNING: XCP catalog volume is low on disk space: 99.99% used, 61.6 MiB free space.
+Job ID: Job_2023-04-20_13.03.46.820673_estimate
+Starting live test for 5m0s to estimate time to copy ‘data-set:/user1 to `<path>`...
+1,909 scanned, 126 copied, 2 giants, 580 MiB in (115 MiB/s), 451 MiB out (89.5 MiB/s), 5s
+1,909 scanned, 134 copied, 2 giants, 1.23 GiB in (136 MiB/s), 1015 MiB out (112 MiB/s), 10s
+1,909 scanned, 143 copied, 2 giants, 1.88 GiB in (131 MiB/s), 1.54 GiB out (113 MiB/s), 15s
+.
+.
+.
+7,136 scanned, 2,140 copied, 4 linked, 8 giants, 33.6 GiB in (110 MiB/s), 32.4 GiB out (110
+MiB/s), 4m57s
+Sample test copy completed for, 300.03s
+0 in (-7215675436.180/s), 0 out (-6951487617.036/s), 5m2s
+2,186 scanned, 610 KiB in (121 KiB/s), 76.9 KiB out (15.3 KiB/s), 5m7s
+Estimated time to copy ‘data-set:/user1to '10.01.12.11:/mapr11' based on a 5m0s live test:
+7d6h
+Xcp command : xcp estimate -id csdata01 -dircount 128k -t 300 -target 10.101.12.11:/mapr11
+Estimated Time : 7d6h
+Job ID : Job_2023-04-20_13.03.46.820673_estimate
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-20_13.03.46.820673_estimate.log
+STATUS : PASSED
+xcp: WARNING: XCP catalog volume is low on disk space: 99.99% used, 61.6 MiB free space.
+[root@client1 linux]#
+----
+====

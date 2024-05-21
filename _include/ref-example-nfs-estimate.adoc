@@ -1,0 +1,23 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client-01 linux]# ./xcp estimate -t 100 -id estimate01 -target 10.101.10.10:/temp8
+
+xcp: WARNING: your license will expire in less than 10 days! You can renew your license at https://xcp.netapp.com
+Job ID: Job_2023-04-12_08.09.16.126908_estimate
+Starting live test for 1m40s to estimate time to copy '10.101.10.10:/temp4' to
+'10.101.10.10:/temp8'...
+estimate regular file copy task completed before the 1m40s duration
+0 in (0/s), 0 out (0/s), 5s
+0 in (0/s), 0 out (0/s), 10s
+Estimated time to copy '10.101.12.11:/temp4' to '10.101.12.10:/temp8' based on a 1m40s live test:
+5.3s
+Xcp command : xcp estimate -t 100 -id estimate01 -target 10.101.12.10:/temp8
+Estimated Time : 5.3s
+Job ID : Job_2023-04-12_08.09.16.126908_estimate
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-12_08.09.16.126908_estimate.log
+STATUS : PASSED
+[root@client-01linux]#
+----
+====

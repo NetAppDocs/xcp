@@ -1,0 +1,41 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -parallel 8 \\<IP address or hostname of SMB server>\cifs_share 
+xcp scan -parallel 8 \\<IP address or hostname of SMB server>\cifs_share
+
+cifs_share\ASUP.pm 
+cifs_share\ASUP_REST.pm 
+cifs_share\Allflavors_v2.pm 
+cifs_share\Armadillo.pm 
+cifs_share\AsupExtractor.pm 
+cifs_share\BTS_Config.pm 
+cifs_share\Backup.pm 
+cifs_share\Aggregate.pm 
+cifs_share\agnostic\CifsAccess.pm 
+cifs_share\agnostic\DU_Cmode.pm 
+cifs_share\agnostic\Flexclone.pm 
+cifs_share\agnostic\HyA_Clone_Utils.pm 
+cifs_share\agnostic\Fileclone.pm 
+cifs_share\agnostic\Jobs.pm 
+cifs_share\agnostic\License.pm 
+cifs_share\agnostic\Panamax_Clone_Utils.pm 
+cifs_share\agnostic\LunCmds.pm 
+cifs_share\agnostic\ProtocolAccess.pm 
+cifs_share\agnostic\Qtree.pm 
+cifs_share\agnostic\Quota.pm 
+cifs_share\agnostic\RbacCmdFetcher.pm 
+cifs_share\agnostic\RbacCmdFetcher_ReadMe 
+cifs_share\agnostic\SFXOD.pm 
+cifs_share\agnostic\Snapmirror.pm 
+cifs_share\agnostic\VolEfficiency.pm 
+cifs_share\agnostic\flatfile.txt 
+cifs_share\agnostic
+cifs_share
+xcp scan -parallel 8 \\<IP address or hostname of SMB server>\cifs_share
+317 scanned, 0 matched, 0 errors 
+Total Time : 0s
+STATUS : PASSED
+----
+====

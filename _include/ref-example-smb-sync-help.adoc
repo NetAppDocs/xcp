@@ -1,0 +1,44 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Netapp\xcp>xcp sync --help
+usage: xcp sync [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>] [-preserve-atime] [-noatime] [-noctime] [-nomtime] [-noattrs] [-atimewindow <float>]
+[-ctimewindow <float>] [-mtimewindow <float>] [-acl] [-fallback-user FALLBACK_USER] [-fallback-group FALLBACK_GROUP] [-loglevel <name>] [-l] [-root]
+[-noownership] [-onlyacl] [-aclverify {yes,no}] [-bs <n>] [-ads] source target
+
+Note: ONTAP does not let a SMB client modify COMPRESSED or ENCRYPTED attributes. XCP sync will ignore these file attributes.
+
+positional arguments: 
+   source
+   target
+
+optional arguments:
+   -h, --help              show this help message and exit
+   -v                      increase debug verbosity
+   -parallel <n>           number of concurrent processes (default: <cpu-count>)
+   -match <filter>         only process files and directories that match the filter (see `xcp help -match` for details)
+   -exclude <filter>       Exclude files and directories that match the filter (see `xcp help -exclude` for details)
+   -preserve-atime	       restore last accessed date on source
+   -noatime                do not check file access time
+   -noctime                do not check file creation time
+   -nomtime                do not check file modification time
+   -noattrs                do not check attributes
+   -atimewindow <float>    acceptable access time difference in seconds
+   -ctimewindow <float>    acceptable creation time difference in seconds
+   -mtimewindow <float>    acceptable modification time difference in seconds
+   -acl                    copy security information
+   -fallback-user FALLBACK_USER
+                           the name of the user on the target machine to receive the permissions of local (non-domain) source machine users (eg. domain\administrator)
+   -fallback-group FALLBACK_GROUP
+                           the name of the group on the target machine to receive the permissions of local (non-domain) source machine groups (eg. domain\administrators)
+   -loglevel <name>        option to set log levelfilter
+   -l                      increase output detail
+   -root                   sync acl for root directory
+   -noownership            do not sync ownership
+   -onlyacl                sync only acls
+   -aclverify {yes,no}     choose whether you need to skip acl verification
+   -bs <n>                 read/write block size for sync (default: 1M)
+   -ads                    sync ntfs alternate data stream
+----
+====

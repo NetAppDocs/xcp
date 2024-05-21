@@ -1,0 +1,22 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost linux]# ./xcp verify -noid <IP address of source NFS server>:/source_vol <IP address of destination NFS server>:/dest_vol
+
+Job ID: Job_2024-04-22_07.19.41.825308_verify
+ 49,216 scanned, 10,163 found, 9,816 compared, 9.59 KiB same data, 1.15 GiB in (234 MiB/s), 5.67 MiB out (1.13 MiB/s), 6s
+ 49,615 scanned, 4,958 indexed, 27,018 found, 26,534 compared, 25.9 KiB same data, 3.08 GiB in (390 MiB/s), 15.1 MiB out (1.86 MiB/s), 11s
+ 73,401 scanned, 34,884 indexed, 46,365 found, 45,882 compared, 44.8 KiB same data, 5.31 GiB in (420 MiB/s), 26.6 MiB out (2.12 MiB/s), 16s
+ 80,867 scanned, 44,880 indexed, 63,171 found, 62,704 compared, 61.2 KiB same data, 7.23 GiB in (377 MiB/s), 36.2 MiB out (1.83 MiB/s), 21s
+ 83,102 scanned, 69,906 indexed, 79,587 found, 79,246 compared, 77.4 KiB same data, 9.13 GiB in (387 MiB/s), 46.0 MiB out (1.95 MiB/s), 26s
+
+Xcp command : xcp verify 10.235.122.70:/source_vol 10.235.122.86:/dest_vol
+Stats       : 83,102 scanned, 83,102 indexed, 100% found (82,980 have data), 82,980 compared, 100% verified (data, attrs, mods)
+Speed       : 9.55 GiB in (347 MiB/s), 48.4 MiB out (1.72 MiB/s)
+Total Time  : 28s.
+Job ID      : Job_2024-04-22_07.19.41.825308_verify
+Log Path    : /opt/NetApp/xFiles/xcp/xcplogs/Job_2024-04-22_07.19.41.825308_verify.log
+STATUS      : PASSED
+----
+====

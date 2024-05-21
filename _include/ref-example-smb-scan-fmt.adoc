@@ -1,0 +1,38 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))"	\\<IP address or hostname of SMB server>\source_share
+xcp scan -fmt "', '.join(map(str, [relpath, name, size, depth]))"	\\<IP address or hostname of SMB server>\source_share
+
+source_share\ASUP.pm, ASUP.pm, 199239, 1
+source_share\ASUP_REST.pm, ASUP_REST.pm, 35506, 1
+source_share\Allflavors_v2.pm, Allflavors_v2.pm, 4204, 1
+source_share\Armadillo.pm, Armadillo.pm, 39024, 1
+source_share\AsupExtractor.pm, AsupExtractor.pm, 3924, 1
+source_share\BTS_Config.pm, BTS_Config.pm, 71777, 1
+source_share\Backup.pm, Backup.pm, 2714, 1
+source_share\Aggregate.pm, Aggregate.pm, 61699, 1
+source_share\Burt.pm, Burt.pm, 37780, 1
+source_share\CConfig.pm, CConfig.pm, 9195, 1
+source_share\CIFS.pm, CIFS.pm, 19779, 1
+source_share\CR.pm, CR.pm, 21215, 1
+source_share\CRC.pm, CRC.pm, 2337, 1
+source_share\agnostic\LunCmds.pm, LunCmds.pm, 30962, 2
+source_share\agnostic\ProtocolAccess.pm, ProtocolAccess.pm, 41868, 2
+source_share\agnostic\Qtree.pm, Qtree.pm, 16057,2
+source_share\agnostic\Quota.pm, Quota.pm, 30018,2
+source_share\agnostic\RbacCmdFetcher.pm, RbacCmdFetcher.pm, 14067, 2
+source_share\agnostic\RbacCmdFetcher_ReadMe, RbacCmdFetcher_ReadMe, 5685, 2
+source_share\agnostic\SFXOD.pm, SFXOD.pm, 4019, 2
+source_share\agnostic\Snapmirror.pm, Snapmirror.pm, 36624, 2
+source_share\agnostic\VolEfficiency.pm, VolEfficiency.pm, 41344, 2
+source_share\agnostic\flatfile.txt, flatfile.txt, 6366, 2
+source_share\agnostic, agnostic, 0, 1
+source_share, , 0, 0
+xcp scan -fmt ', '.join(map(str, [relpath, name, size, depth])) \\<IP address or hostname of SMB server>\source_share
+317 scanned, 0 matched, 0 errors 
+Total Time : 0s
+STATUS : PASSED
+----
+====

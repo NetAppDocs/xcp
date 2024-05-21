@@ -1,0 +1,28 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
+
+Job ID: Job_2023-11-20_04.11.03.128824_isync
+41,030 scanned, 935 MiB in (162 MiB/s), 4.23 MiB out (752 KiB/s), 6s
+57,915 scanned, 2.10 GiB in (239 MiB/s), 10.00 MiB out (1.13 MiB/s), 11s
+57,915 scanned, 3.20 GiB in (210 MiB/s), 14.6 MiB out (879 KiB/s), 16s
+92,042 scanned, 4.35 GiB in (196 MiB/s), 21.6 MiB out (1.17 MiB/s), 22s
+123,977 scanned, 5.70 GiB in (257 MiB/s), 29.6 MiB out (1.49 MiB/s), 27s
+137,341 scanned, 6.75 GiB in (212 MiB/s), 36.0 MiB out (1.25 MiB/s), 32s
+154,503 scanned, 8.00 GiB in (226 MiB/s), 43.0 MiB out (1.24 MiB/s), 38s
+181,578 scanned, 36 copied, 8.68 GiB in (132 MiB/s), 49.7 MiB out (1.26 MiB/s), 43s
+target scan completed: 181,656 scanned, 1,477 copied, 1 removed, 8.76 GiB in (200 MiB/s), 123 MiB
+out (2.75 MiB/s), 44s.
+181,907 scanned, 10,013 copied, 1 removed, 9.17 GiB in (95.3 MiB/s), 545 MiB out (95.2 MiB/s), 49s
+Xcp command : xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
+Stats : 1 removed, 181,907 scanned, 10,263 copied
+Speed : 9.17 GiB in (190 MiB/s), 548 MiB out (11.1 MiB/s)
+Total Time : 49s.
+Job ID : Job_2023-11-20_04.11.03.128824_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-20_04.11.03.128824_isync.log
+STATUS : PASSED
+[root@client1 linux]
+----
+====

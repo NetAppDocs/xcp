@@ -1,0 +1,12 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -exclude "type is not directory" -fmt "'{} {:>70}'.format(abspath, mtime)" \\<IP address or hostname of SMBserver>\source_share
+
+xcp scan -exclude type is not directory -fmt '{} {:>70}'.format(abspath, mtime) \\<IP address or hostname of SMB server>\source_share
+18 scanned, 17 excluded, 0errors 
+Total Time : 0s
+STATUS : PASSED
+----
+====

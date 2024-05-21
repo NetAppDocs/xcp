@@ -1,0 +1,22 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client-1 linux]# ./xcp delete -s3.noverify s3://bucket1
+
+Job ID: Job_2023-06-13_10.56.19.319076_delete
+WARNING: You have selected s3://bucket1 for removing data. Data in this path //bucket1 will be
+deleted.
+Are you sure you want to delete (yes/no): yes
+Recursively removing data in s3://bucket1 ...
+2,771 scanned, 0 in (0/s), 0 out (0/s), 5s
+9,009 scanned, 9,005 s3.objects, 2,000 s3.removed, 0 in (0/s), 0 out (0/s), 10s
+Xcp command : xcp delete -s3.noverify s3://bucket1
+Stats : 9,009 scanned, 9,005 s3.objects, 9,005 s3.removed
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 15s.
+Job ID : Job_2023-06-13_10.56.19.319076_delete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_10.56.19.319076_delete.log
+STATUS : PASSED
+----
+====

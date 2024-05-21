@@ -1,0 +1,14 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost linux]# ./xcp scan -subdir-names <IP address or hostname of NFS server>:/source_vol
+
+source_vol
+Xcp command : xcp scan -subdir-names <IP address or hostname of NFS server>:/source_vol
+7 scanned, 0 matched, 0 error
+Speed : 1.30 KiB in (1.21 KiB/s), 444 out(414/s)
+Total Time : 1s.
+STATUS : PASSED
+----
+====

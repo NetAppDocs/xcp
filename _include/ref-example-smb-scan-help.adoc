@@ -1,0 +1,33 @@
+.Show example
+[%collapsible]
+====
+----
+C:\netapp\xcp>xcp scan --help
+
+usage: xcp scan [-h] [-v] [-parallel <n>] [-match <filter>] [-exclude <filter>] [-preserve-atime] [-depth
+<n>] [-loglevel <name>] [-stats] [-l] [-ownership] [-du]
+                [-fmt <expression>] [-html] [-csv] [-edupe] [-bs <n>] [-ads] 
+                source
+positional arguments: 
+   source
+optional arguments:
+   -h, --help           show this help message and exit 
+   -v                   increase debug verbosity
+   -parallel <n>        number of concurrent processes (default: <cpu-count>)
+   -match <filter>      only process files and directories that match the filter (see `xcp help -match` for     details)
+   -exclude <filter>    Exclude files and directories that match the filter (see `xcp help -exclude` for details)
+   -preserve-atime      restore last accessed date on source 
+   -depth <n>           limit the search depth
+   -loglevel <name>     option to set log level filter (default:INFO)
+   -stats               print tree statistics report
+   -l                   detailed file listing output 
+   -ownership           retrieve ownership information
+   -du                  summarize space usage of each directory including subdirectories
+   -fmt <expression>    format file listing according to the python expression (see `xcp help -fmt` for details)
+   -html                Save HTML statistics report 
+   -csv                 Save CSV statistics report
+   -edupe               Include dedupe and sparse data estimate in reports (see documentation for details) 
+   -bs <n>              read/write block size for scans which read data with -edupe (default: 64k)
+   -ads                 scan NTFS alternate data stream
+----
+====

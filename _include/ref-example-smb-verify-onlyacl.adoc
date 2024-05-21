@@ -1,0 +1,25 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\ctladmin\Desktop>xcp verify -onlyacl -preserve-atime -fallback-user "DOMAIN\User" -fallback- group "DOMAIN\Group" -ll \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+
+4,722	scanned,	0 compared, 0 same, 0 different, 0 missing, 0 errors, 5s	
+7,142	scanned,	120 compared, 120 same, 0 different, 0 missing, 0 errors, 10s	
+7,142	scanned,	856 compared, 856 same, 0 different, 0 missing, 0 errors, 15s	
+7,142	scanned,	1,374 compared, 1,374 same, 0 different, 0 missing, 0 errors,	20s
+7,142	scanned,	2,168 compared, 2,168 same, 0 different, 0 missing, 0 errors,	25s
+7,142	scanned,	2,910 compared, 2,910 same, 0 different, 0 missing, 0 errors,	30s
+7,142	scanned,	3,629 compared, 3,629 same, 0 different, 0 missing, 0 errors,	35s
+7,142	scanned,	4,190 compared, 4,190 same, 0 different, 0 missing, 0 errors,	40s
+7,142	scanned,	4,842 compared, 4,842 same, 0 different, 0 missing, 0 errors,	45s
+7,142	scanned,	5,622 compared, 5,622 same, 0 different, 0 missing, 0 errors,	50s
+7,142	scanned,	6,402 compared, 6,402 same, 0 different, 0 missing, 0 errors,	55s
+7,142	scanned,	7,019 compared, 7,019 same, 0 different, 0 missing, 0 errors,	1m0s
+
+xcp verify -onlyacl -preserve-atime -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" -ll \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+7,142 scanned, 7,141 compared, 7,141 same, 0 different, 0 missing, 0 errors 
+Total Time : 1m2s
+STATUS : PASSED
+----
+====

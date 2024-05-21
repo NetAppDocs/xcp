@@ -1,0 +1,13 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp verify -noctime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
+xcp verify -noctime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
+
+xcp verify -noctime \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share : PASSED
+374 scanned, 373 compared, 373 same, 0 different, 0 missing, 0 errors 
+Total Time : 3s
+STATUS : PASSED
+----
+====

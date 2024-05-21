@@ -1,0 +1,146 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-estimate.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= estimate
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The XCP NFS `estimate` command is used to estimate the time to complete a baseline copy from the source to destination. It calculates the estimated time to complete a baseline copy by using all of the current available system resources, such as CPU, RAM, Network, and other parameters. You can use the `-target` option to start a sample copy operation and get the estimation time.
+
+.Syntax
+[source,cli]
+xcp estimate -id <name>
+
+include::./_include/ref-example-nfs-estimate.adoc[]
+
+The following table lists the `estimate` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<nfs_estimate_id, estimate -id <name>  >> | Specifies the catalog name of a previous copy or scan index.
+| <<nfs_estimate_gbit, estimate -gbit <n>  >> | Uses gigabits of bandwidth to estimate best-case time (default: 1).
+| <<nfs_estimate_target, estimate -target <path>  >> | Specifies the target to use for live test copy.
+| <<nfs_estimate_t, estimate -t <n/s/m/h]> >> | Specifies the duration of live test copy (default: 5m).
+| <<nfs_estimate_bs, estimate -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
+| <<nfs_estimate_dircount, estimate -dircount <n[k]>  >> |Specifies the request size for reading directories (default: 64k).
+| <<nfs_estimate_preserveatime, estimate -preserve-atime >> | Preserves access time of the file or directory (default: False).
+| <<nfs_estimate_loglevel,estimate -loglevel <name> >> | Sets the log level; available levels are INFO, DEBUG (default: INFO)
+|===
+
+[[nfs_estimate_id]]
+== estimate -id <name>
+
+Use the `-id <name>` parameter with the `estimate` command to exclude the files and directories that match the filter. 
+
+.Syntax
+
+[source,cli]
+xcp estimate -id <name>
+
+include::./_include/ref-example-nfs-estimate-id.adoc[]
+
+[[nfs_estimate_gbit]]
+== estimate -gbit <n>
+
+Use the `-gbit <n>` parameter with the `estimate` command to estimate best-case time (default: 1). This option cannot be used with the `-target` option.
+
+.Syntax
+
+[source,cli]
+xcp estimate -gbit <n> -id <name>
+
+include::./_include/ref-example-nfs-estimate-gbit.adoc[]
+
+[[nfs_estimate_target]]
+== estimate -target <path>
+
+Use the `-target <path>` parameter with the `estimate` command to specify target to use for live test copy.
+
+.Syntax
+
+[source,cli]
+xcp estimate -t 100 -id <name> -target <path>
+
+include::./_include/ref-example-nfs-estimate-target.adoc[]
+
+[[nfs_estimate_t]]
+== estimate -t <n[s|m|h]>
+
+Use the `-t <n[s|m|h]>` parameter with the `estimate` command to specify the duration of live test copy. The default value is 5m.
+
+.Syntax
+
+[source,cli]
+xcp estimate -t <n[s|m|h]> -id <name> -target <path>
+
+include::./_include/ref-example-nfs-estimate-t.adoc[]
+
+[[nfs_estimate_bs]]
+== estimate -bs <n[k]>
+
+Use the `-bs <n[k]>` parameter with the `estimate` command to specify the read/write block size. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp estimate -id <name> -bs <n[k]>
+
+include::./_include/ref-example-nfs-estimate-bs.adoc[]
+
+[[nfs_estimate_dircount]]
+== estimate -dircount <n[k]>
+
+Use the `-dircount <n[k]>` parameter with the `estimate` command to specify the requested size for reading directories. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp estimate -id <name> -dircount <n[k]> -t <n> -target <path>
+
+include::./_include/ref-example-nfs-estimate-dircount.adoc[]
+
+[[nfs_estimate_parallel]]
+== estimate -parallel <n> 
+
+Use the `-parallel <n>` parameter with the `estimate` command to specify the maximum number of concurrent batch processes. The default value is 7.
+
+.Syntax
+
+[source,cli]
+xcp estimate -loglevel <name> -parallel <n> -id <name>
+
+include::./_include/ref-example-nfs-estimate-parallel.adoc[]
+
+[[nfs_estimate_preserveatime]]
+== estimate -preserve-atime
+
+Use the `-preserve-atime` parameter with the `estimate` command to preserve the access time of the file or directory. The default value is false.
+
+.Syntax
+
+[source,cli]
+xcp estimate -loglevel <name> -preserve-atime -id <name>
+
+include::./_include/ref-example-nfs-estimate-preserveatime.adoc[]
+
+[[nfs_estimate_loglevel]]
+== estimate -loglevel <name>
+
+Use the `-loglevel <name>` parameter with the `estimate` command to set the log level; available levels are INFO and DEBUG. The default level is INFO.
+
+.Syntax
+
+[source,cli]
+xcp estimate -loglevel <name> -id <name>
+
+include::./_include/ref-example-nfs-estimate-loglevel.adoc[]

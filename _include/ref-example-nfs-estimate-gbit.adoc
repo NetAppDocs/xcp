@@ -1,0 +1,19 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client-01 linux]# ./xcp estimate -gbit 10 -id estimate01
+
+xcp: WARNING: your license will expire in less than 10 days! You can renew your license at
+https://xcp.netapp.com
+Job ID: Job_2023-04-12_08.12.28.453735_estimate
+== Best-case estimate to copy '10.101.12.11:/temp4' given 10 gigabits of bandwidth ==
+0 of data at max 1.25 GiB/s: at least 0.0s
+Xcp command : xcp estimate -gbit 10 -id estimate01
+Estimated Time : 0.0s
+Job ID : Job_2023-04-12_08.12.28.453735_estimate
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-12_08.12.28.453735_estimate.log
+STATUS : PASSED
+[root@client-01linux]#
+----
+====

@@ -1,0 +1,17 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp isync estimate -exclude "fnm('DIR1*')" -id <name>
+
+Job ID: Job_2023-11-16_02.16.30.449378_isync_estimate
+Index: <name> {source: <source_ip_address>:/source_vol, target:
+<destination_ip_address>:/dest_vol}
+Excluded: 60 excluded, 0 did not match exclude criteria
+Xcp command : xcp isync estimate -exclude fnm('DIR1*') -id <name>
+Estimated Time : 3m29s
+Job ID : Job_2023-11-16_02.16.30.449378_isync_estimate
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.16.30.449378_isync_estimate.log
+STATUS : PASSED
+----
+====

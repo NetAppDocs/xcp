@@ -1,0 +1,85 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-chmod.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= chmod
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The XCP NFS `chmod` command scans and changes the file permission of all the files for the given directory structure. The 'chmod' command requires mode or reference, NFS share, or the POSIX path as a variable. The XCP `chmod` command recursively changes the permissions for a given path. The command output displays the total files scanned and the permissions changed in the output.
+
+
+.Syntax
+[source,cli]
+xcp chmod -mode <value> <source NFS export path>
+
+include::./_include/ref-example-nfs-chmod.adoc[]
+
+The following table lists the `chmod` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<nfs_chmod_exclude, chmod -exclude <filter>  >> | Excludes the files and directories that match the filter. 
+| <<nfs_chmod_match, chmod -match <filter>  >> | Only processes the files and directories that match the filter.
+| <<nfs_chmod_reference, chmod -reference <reference> >> | Specifies the referenced file or directory point.
+| <<nfs_chmod_v,chmod -v >> | Reports the output for every object processed.
+
+|===
+
+[[nfs_chmod_exclude]]
+== chmod -exclude <filter>
+
+Use the `-exclude <filter>` parameter with the `chmod` command to exclude the files and directories that match the filter. 
+
+.Syntax
+
+[source,cli]
+xcp chmod -exclude <filter> -mode <value> <source NFS export path>
+
+include::./_include/ref-example-nfs-chmod-exclude.adoc[]
+
+[[nfs_chmod_match]]
+== chmod -match <filter>
+
+Use the `-match <filter>` parameter with the `chmod` command to only process the files and directories that match the filter.
+
+.Syntax
+
+[source,cli]
+xcp chmod -match <filter>  -mode <value> <source NFS export path>
+
+include::./_include/ref-example-nfs-chmod-match.adoc[]
+
+[[nfs_chmod_reference]]
+== chmod -reference <reference> 
+
+Use the `-reference <reference>` parameter with the `chmod` command to specify the referenced file or directory point.
+
+.Syntax
+
+[source,cli]
+xcp chmod -reference <reference> <source NFS export path>
+
+include::./_include/ref-example-nfs-chmod-reference.adoc[]
+
+[[nfs_chmod_v]]
+== chmod -v
+
+Use the `-v` parameter with the `chmod` command to report the output for every object processed.
+
+.Syntax
+
+[source,cli]
+chmod -mode <value> -v <source NFS export path>
+
+include::./_include/ref-example-nfs-chmod-v.adoc[]
+

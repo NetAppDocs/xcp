@@ -1,0 +1,43 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp resume -s3.profile sg -s3.endpoint https://<endpoint_url>: -id
+XCP_copy_2023-06-08_10.40.42.519258
+
+Job ID: Job_XCP_copy_2023-06-08_10.40.42.519258_2023-06-08_10.52.18.453982_resume
+Index: {source: hdfs:///user/demo target: s3://xxx-bucket/
+Reviewing the incomplete index...
+Found 0 completed directories and 2 in progress
+9 reviewed, 4.53 KiB in (3.03 KiB/s), 188 out (126/s), 1s.
+9 reviewed, 6.81 KiB in (4.52 KiB/s), 2.30 KiB out (1.53 KiB/s), 1s.
+Starting second pass for the in-progress directories...
+9 reviewed, 9 re-reviewed, 10.9 KiB in (6.76 KiB/s), 2.44 KiB out (1.51 KiB/s), 1s.
+15,008 scanned*, 1,660 copied*, 9 indexed*, 1.64 MiB s3.data.uploaded, 1,675
+s3.copied.single.key.file, 1,675 s3.copied.file, 4.75 MiB in (971 KiB/s), 1.92 MiB out (392
+KiB/s), 5s
+15,008 scanned*, 3,453 copied*, 9 indexed*, 3.39 MiB s3.data.uploaded, 3,467
+s3.copied.single.key.file, 3,467 s3.copied.file, 6.79 MiB in (412 KiB/s), 3.91 MiB out (403
+KiB/s), 10s
+15,008 scanned*, 6,296 copied*, 9 indexed*, 6.16 MiB s3.data.uploaded, 6,305
+s3.copied.single.key.file, 6,305 s3.copied.file, 9.86 MiB in (619 KiB/s), 7.08 MiB out (637
+KiB/s), 15s
+15,008 scanned*, 9,527 copied*, 9 indexed*, 9.33 MiB s3.data.uploaded, 9,554
+s3.copied.single.key.file, 9,554 s3.copied.file, 13.4 MiB in (717 KiB/s), 10.7 MiB out (726
+KiB/s), 20s
+15,008 scanned*, 12,656 copied*, 9 indexed*, 12.4 MiB s3.data.uploaded, 12,648
+s3.copied.single.key.file, 12,648 s3.copied.file, 16.9 MiB in (715 KiB/s), 14.1 MiB out (706
+KiB/s), 25s
+Xcp command : xcp resume -s3.profile sg -s3.endpoint https://<endpoint_url>: -id XCP_copy_2023-
+06-08_10.40.42.519258
+Stats : 15,008 scanned*, 15,006 copied*, 15,009 indexed*, 14.6 MiB s3.data.uploaded,
+14,996 s3.copied.single.key.file, 14,996 s3.copied.file
+Speed : 19.2 MiB in (661 KiB/s), 17.1 MiB out (590 KiB/s)
+Total Time : 29s.
+Migration ID: XCP_copy_2023-06-08_10.40.42.519258
+Job ID : Job_XCP_copy_2023-06-08_10.40.42.519258_2023-06-08_10.52.18.453982_resume
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2023-06-08_10.40.42.519258_2023-06-
+08_10.52.18.453982_resume.log
+STATUS : PASSED
+----
+====

@@ -1,0 +1,8 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp scan -match "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath, depth]))" \\<IP address or hostname of SMB server>\source_share > name.csv
+xcp scan -match "type is directory" -fmt "','.join(map(str, [iso(mtime), relpath, depth]))" \\<IP address or hostname of SMB server>\source_share > name.csv
+----
+====

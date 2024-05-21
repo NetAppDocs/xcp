@@ -1,0 +1,13 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp verify -v -match "'Microsoft' in name" \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
+xcp verify -v -match "'Microsoft' in name" \\<IP address of SMB source server>\source_share \\<IP address of SMB destination server>\dest_share
+
+xcp verify -v -match 'Microsoft' in name \\<IP address of SMB source server> \source_share \\<IP address of SMB destination server>\dest_share
+374 scanned, 0 compared, 0 same, 0 different, 0 missing, 0 errors 
+Total Time : 1s
+STATUS : PASSED
+----
+====

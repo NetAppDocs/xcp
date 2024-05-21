@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-show.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= show
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The NFS `show` command queries the RPC services and NFS exports of one or more storage servers. The command also lists the available services and exports and shows the used and free capacity of each export, followed by the attributes of the root of each export.
+
+.Syntax
+
+[source,cli]
+xcp show <ip_address_or_host_name>
+
+IMPORTANT: The `show` command requires the host name or IP address of the NFSv3 exported system.
+
+include::./_include/ref-example-nfs-show.adoc[]
+
+
+== show -v
+
+Use the `-v` parameter with the `show` command to return details about NFS servers using the IP address or host name.
+
+.Syntax
+
+[source,cli]
+xcp show -v
+
+

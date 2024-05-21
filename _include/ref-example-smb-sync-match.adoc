@@ -1,0 +1,13 @@
+.Show example
+[%collapsible]
+====
+----
+c:\netapp\xcp>xcp sync -match "'gx' in name" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+xcp sync -match "'gx' in name" \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+
+xcp sync -match 'gx' in name \\<IP address or hostname of SMB server>\source_share \\<IP address of SMB destination server>\dest_share
+634 scanned, 0 copied, 10 compared, 0 removed, 0 errors 
+Total Time : 2s
+STATUS : PASSED
+----
+====

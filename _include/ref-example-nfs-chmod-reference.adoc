@@ -1,0 +1,14 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chmod -reference 101.11.10.10:/s_v1/D1/1.txt 102.21.10.10:/s_v1/D2/
+
+Xcp command : xcp chmod -reference 101.11.10.10:/s_v1/D1/1.txt 102.21.10.10:/s_v1/D2/
+Stats : 6 scanned, 6 changed mode
+Speed : 3.11 KiB in (3.15 KiB/s), 1.98 KiB out (2.00 KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@user-1 linux]#
+----
+====

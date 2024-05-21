@@ -1,0 +1,480 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-isync.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= isync 
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+View the descriptions, parameters, and examples for the XCP `isync` command, including when the `isync` command is used with the `estimate` option. 
+
+== isync
+
+The XCP NFS `isync` command compares the source and destination and synchronizes the differences on the target without using the catalog index.
+
+.Syntax
+[source,cli]
+xcp isync <source_ip_address>:/src <destination_ip_address>:/dest
+
+include::./_include/ref-example-nfs-isync.adoc[]
+
+The following table lists the `isync` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<nfs_isync_nodata, isync -nodata >> |  Does not check data.
+| <<nfs_isync_noattrs, isync -noattrs>> | Does not check attributes.
+| <<nfs_isync_nomods, isync -nomods >> | Does not check file modification times.
+| <<nfs_isync_mtimewindow, isync -mtimewindow <s> >> | Specifies the acceptable modification time difference for verification.
+| <<nfs_isync_match, isync -match <filter>  >> | Only processes the files and directories that match the filter.
+| <<nfs_isync_bs, isync -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
+| <<nfs_isync_parallel, isync -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7).
+| <<nfs_isync_dircount, isync -dircount <n[k]> >> | Specifies the request size when reading directories (default 64k).
+| <<nfs_isync_exclude, isync -exclude <filter> >> | Excludes the files and directories that match the filter.
+| <<nfs_isync_newid, isync -newid <name> >> | Specifies the catalog name for a new index catalog.
+| <<nfs_isync_loglevel, isync -loglevel <name>  >> | Sets the log level; available levels are INFO, DEBUG (default: INFO).
+| <<nfs_isync_preserve_atime, isync -preserve-atime>> | Restores all files to the last accessed date on the source.
+| <<nfs_isync_s3_insecure, isync -s3.insecure>> | Provides the option to use HTTP instead of HTTPS for S3 bucket communication.
+| <<nfs_isync_endpoint, isync -s3.endpoint <s3_endpoint_url> >> | Overrides the default Amazon Web Services (AWS) endpoint URL with the specified URL for S3 bucket communication.
+| <<nfs_isync_s3_profile, isync -s3.profile <profile_name> >> | Specifies a profile from the AWS credential file for S3 bucket communication.
+| <<nfs_isync_s3_noverify,isync -s3.noverify>> | Overrides the default verification of SSL certification for S3 bucket communication.
+|===
+
+
+[[nfs_isync_nodata]]
+=== isync -nodata
+
+Use the the `-nodata` parameter with the `isync` command to specify not to check data.
+
+.Syntax
+
+[source,cli]
+xcp isync -nodata <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol  
+
+include::./_include/ref-example-nfs-isync-nodata.adoc[]
+
+[[nfs_isync_noattrs]]
+=== isync -noattrs
+
+Use the the `-noattrs` parameter with the `isync` command to specify not to check attributes.
+
+.Syntax
+
+[source,cli]
+xcp isync -noattrs <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
+
+include::./_include/ref-example-nfs-isync-noattrs.adoc[]
+
+[[nfs_isync_nomods]]
+=== isync -nomods
+
+Use the the `-nomods` parameter with the `isync` command to specify not to check file modification times.
+
+.Syntax
+
+[source,cli]
+isync -nomods <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
+
+include::./_include/ref-example-nfs-isync-nomods.adoc[]
+
+[[nfs_isync_mtimewindow]]
+=== isync -mtimewindow <s>
+
+Use the the `-mtimewindow <s>` parameter with the `isync` command to  specify the acceptable modification time difference for verification.
+
+.Syntax
+
+[source,cli]
+xcp isync -mtimewindow <s> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+include::./_include/ref-example-nfs-isync-mtimewindow.adoc[]
+
+
+[[nfs_isync_match]]
+=== isync -match <filter> 
+
+Use the `-match <filter>` parameter with the `isync` command to only process the files and directories that match the filter.
+
+.Syntax
+
+[source,cli]
+xcp isync  -match <filter> -id <name>
+
+include::./_include/ref-example-nfs-isync-match.adoc[]
+
+
+[[nfs_isync_bs]]
+=== isync -bs <n[k]>
+
+Use the the `-bs <n[k]>` parameter with the `isync` command to  specify the read/write block size. The default block size is 64k. 
+
+.Syntax
+
+[source,cli]
+xcp isync -loglevel DEBUG -bs <n[k]> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+include::./_include/ref-example-nfs-isync-bs.adoc[]
+
+[[nfs_isync_parallel]]
+=== isync -parallel 
+
+Use the the `-parallel <n>` parameter with the `isync` command to specify the maximum number of concurrent batch processes. The default value is 7.
+
+.Syntax
+
+[source,cli]
+xcp isync -parallel <n> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol 
+
+include::./_include/ref-example-nfs-isync-parallel.adoc[]
+
+[[nfs_isync_dircount]]
+=== isync -dircount <n[k]>
+
+Use the the `-dircount <n[k]>` parameter with the `isync` command to specify the request size when reading directories. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp isync -dircount <n[k]> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+include::./_include/ref-example-nfs-isync-dircount.adoc[]
+
+[[nfs_isync_exclude]]
+=== isync -exclude <filter>
+
+Use the the `-exclude <filter>` parameter with the `isync` command to exclude the files and directories that match the filter.
+
+.Syntax
+
+[source,cli]
+xcp isync -exclude <filter> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+include::./_include/ref-example-nfs-isync-exclude.adoc[]
+
+[[nfs_isync_newid]]
+=== isync -newid <name>
+
+Use the the `-newid <name>` parameter with the `isync` command to specify the catalog name for a new index catalog.
+
+.Syntax
+
+[source,cli]
+xcp isync -newid <name> -s3.endpoint <S3_endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+
+include::./_include/ref-example-nfs-isync-newid.adoc[]
+
+[[nfs_isync_loglevel]]
+=== isync -loglevel <name>
+
+Use the the `-loglevel <name>` parameter with the `isync` command to set the log level; available levels are INFO and DEBUG. The default value is INFO.
+
+.Syntax
+
+[source,cli]
+xcp isync -loglevel <name> -bs <n[k]> <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+include::./_include/ref-example-nfs-isync-loglevel.adoc[]
+
+
+[[nfs_isync_preserve_atime]]
+=== isync -preserve-atime
+
+Use the the `-preserve-atime` parameter with the `isync` command to restore all files to the last accessed date on the source. 
+
+.Syntax
+
+[source,cli]
+xcp isync -preserve-atime <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+
+include::./_include/ref-example-nfs-isync-preserveatime.adoc[]
+
+[[nfs_isync_s3_insecure]]
+=== isync -s3.insecure
+
+Use the `-s3.insecure` parameter with the `isync` command to use HTTP instead of HTTPS for S3 bucket communication.
+
+.Syntax
+
+[source,cli]
+xcp isync -newid <name> -s3.insecure -s3.endpoint <S3_endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+
+include::./_include/ref-example-nfs-isync-s3-insecure.adoc[]
+
+[[nfs_isync_endpoint]]
+=== isync -s3.endpoint <s3_endpoint_url>
+
+Use the `-s3.endpoint <s3_endpoint_url>` parameter with the `isync` command to override the default AWS endpoint URL with a specified URL for S3 bucket communication.
+
+.Syntax
+
+[source,cli]
+xcp isync -newid <name> -s3.noverify -s3.endpoint <endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+
+include::./_include/ref-example-nfs-isync-s3-endpoint.adoc[]
+
+[[nfs_isync_s3_profile]]
+=== isync -s3.profile <name>
+
+Use the `s3.profile` parameter with the `isync` command to specify a profile from the AWS credential file for S3 bucket communication.
+
+.Syntax
+
+[source,cli]
+xcp isync -s3.profile <name> -s3.endpoint <S3-endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate
+
+include::./_include/ref-example-nfs-isync-s3-profile.adoc[]
+
+[[nfs_isync_s3_noverify]]
+=== isync -s3.noverify
+
+Use the `-s3.noverify` parameter with the `isync` command to override the default verification of SSL certification for S3 bucket communication. 
+
+.Syntax
+
+[source,cli]
+xcp isync -newid <name> -s3.noverify -s3.endpoint <endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+
+include::./_include/ref-example-nfs-isync-s3-noverify.adoc[]
+
+
+== isync estimate
+
+The `isync` command can be used with the `estimate` option to estimate the time it takes for the `isync` command to synchronize incremental changes. The `-id` parameter specifies the catalog name of a previous copy operation.
+
+.Syntax
+[source,cli]
+xcp isync estimate -id <name>
+
+IMPORTANT: The `-id` parameter is required with the `isync estimate` command option.
+
+include::./_include/ref-example-nfs-isync-estimate.adoc[]
+
+The following table lists the `isync estimate` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<nfs_isync_estimate_nodata, isync estimate -nodata >> |  Does not check data.
+| <<nfs_isync_estimate_noattrs, isync estimate -noattrs>> | Does not check attributes.
+| <<nfs_isync_estimate_nomods, isync estimate -nomods >> | Does not check file modification times.
+| <<nfs_isync_estimate_mtimewindow, isync estimate -mtimewindow <s> >> | Specifies the acceptable modification time difference for verification.
+| <<nfs_isync_estimate_match, isync estimate -match <filter>  >> | Only processes the files and directories that match the filter.
+| <<nfs_isync_estimate_bs, isync estimate -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
+| <<nfs_isync_estimate_parallel, isync estimate -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7).
+| <<nfs_isync_estimate_dircount, isync estimate -dircount <n[k]> >> | Specifies the request size when reading directories (default 64k).
+| <<nfs_isync_estimate_exclude, isync estimate -exclude <filter> >> | Excludes the files and directories that match the filter.
+| <<nfs_isync_estimate_id, isync estimate -id <name> >> | Specifies the catalog name for a previous copy operation.
+| <<nfs_isync_estimate_loglevel, isync estimate -loglevel <name>  >> | Sets the log level; available levels are INFO, DEBUG (default: INFO).
+| <<nfs_isync_estimate_preserve_atime, isync estimate -preserve-atime>> | Restores all files to the last accessed date on the source.
+| <<nfs_isync_estimate_s3_insecure, isync estimate -s3.insecure>> | Provides the option to use HTTP instead of HTTPS for S3 bucket communication.
+| <<nfs_isync_estimate_endpoint, isync estimate -s3.endpoint <s3_endpoint_url> >> | Overrides the default Amazon Web Services (AWS) endpoint URL with the specified URL for S3 bucket communication.
+| <<nfs_isync_estimate_s3_profile, isync -s3.profile <profile_name> >> | Specifies a profile from the AWS credential file for S3 bucket communication.
+| <<nfs_isync_estimate_s3_noverify,isync estimate -s3.noverify>> | Overrides the default verification of SSL certification for S3 bucket communication.
+|===
+
+
+[[nfs_isync_estimate_nodata]]
+=== isync estimate -nodata
+
+Use the the `-nodata` parameter with `isync estimate` to specify not to check data.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -nodata -id <name>  
+
+include::./_include/ref-example-nfs-isync-estimate-nodata.adoc[]
+
+[[nfs_isync_estimate_noattrs]]
+=== isync estimate -noattrs
+
+Use the the `-noattrs` parameter with `isync estimate` to specify not to check attributes.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -noattrs -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-noattrs.adoc[]
+
+[[nfs_isync_estimate_nomods]]
+=== isync estimate -nomods
+
+Use the the `-nomods` parameter with `isync estimate` to specify not to check file modification times.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -nomods -id <name>
+
+include::./_include/ref-example-nfs-isync-nomods.adoc[]
+
+[[nfs_isync_estimate_mtimewindow]]
+=== isync estimate -mtimewindow <s>
+
+Use the the `-mtimewindow <s>` parameter with `isync estimate` to specify the acceptable modification time difference for verification.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -mtimewindow <s> -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-mtimewindow.adoc[]
+
+[[nfs_isync_estimate_match]]
+=== isync estimate -match <filter> 
+
+Use the `-match <filter>` parameter with `isync estimate` to only process the files and directories that match the filter.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -match <filter> -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-match.adoc[]
+
+
+[[nfs_isync_estimate_bs]]
+=== isync estimate -bs <n[k]>
+
+Use the the `-bs <n[k]>` parameter with `isync estimate` to specify the read/write block size. The default block size is 64k. 
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -bs <n[k]> -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-bs.adoc[]
+
+[[nfs_isync_estimate_parallel]]
+=== isync estimate -parallel 
+
+Use the the `-parallel <n>` parameter with `isync estimate` to specify the maximum number of concurrent batch processes. The default value is 7.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -parallel <n> -id <name> 
+
+include::./_include/ref-example-nfs-isync-estimate-parallel.adoc[]
+
+[[nfs_isync_estimate_dircount]]
+=== isync estimate -dircount <n[k]>
+
+Use the the `-dircount <n[k]>` parameter with `isync estimate` to specify the request size when reading directories. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -dircount <n[k]> -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-dircount.adoc[]
+
+[[nfs_isync_estimate_exclude]]
+=== isync estimate -exclude <filter>
+
+Use the the `-exclude <filter>` parameter with `isync estimate` to exclude the files and directories that match the filter.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -exclude <filter> -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-exclude.adoc[]
+
+[[nfs_isync_estimate_id]]
+=== isync estimate -id <name>
+
+Use the the `-id <name>` parameter with `isync estimate` to specify the catalog name pf a previous copy operation.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-id.adoc[]
+
+[[nfs_isync_estimate_loglevel]]
+=== isync estimate -loglevel <name>
+
+Use the the `-loglevel <name>` parameter with `isync estimate` to set the log level; available levels are INFO and DEBUG. The default value is INFO.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -loglevel <name> -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-loglevel.adoc[]
+
+
+[[nfs_isync_estimate_preserve_atime]]
+=== isync estimate -preserve-atime
+
+Use the the `-preserve-atime` parameter with `isync estimate` to restore all files to the last accessed date on the source. 
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -preserve-atime -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-preserveatime.adoc[]
+
+[[nfs_isync_estimate_s3_insecure]]
+=== isync estimate -s3.insecure
+
+Use the `-s3.insecure` parameter with `isync estimate` to use HTTP instead of HTTPS for S3 bucket communication.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -s3.insecure -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-s3-insecure.adoc[]
+
+[[nfs_isync_estimate_endpoint]]
+=== isync estimate -s3.endpoint <s3_endpoint_url>
+
+Use the `-s3.endpoint <s3_endpoint_url>` parameter with `isync estimate` to override the default AWS endpoint URL with a specified URL for S3 bucket communication.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -s3.endpoint <S3_endpoint_url> -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-s3-endpoint.adoc[]
+
+[[nfs_isync_estimate_s3_profile]]
+=== isync estimate -s3.profile <name>
+
+Use the `s3.profile` parameter with `isync estimate` to specify a profile from the AWS credential file for S3 bucket communication.
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -s3.profile s3_profile -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-s3-profile.adoc[]
+
+[[nfs_isync_estimate_s3_noverify]]
+=== isync estimate -s3.noverify
+
+Use the `-s3.noverify` parameter with `isync estimate` to override the default verification of SSL certification for S3 bucket communication. 
+
+.Syntax
+
+[source,cli]
+xcp isync estimate -s3.noverify -id <name>
+
+include::./_include/ref-example-nfs-isync-estimate-s3-noverify.adoc[]
+
+

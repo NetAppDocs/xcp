@@ -1,0 +1,15 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chmod -match "fnm('2.img')" -mode 777 101.11.10.10:/s_v1/D2/
+
+Filtered: 1 matched, 5 did not match
+Xcp command : xcp chmod -match fnm('2.img') -mode 101.11.10.10:/s_v1/D2/
+Stats : 6 scanned, 1 matched, 2 changed mode
+Speed : 1.67 KiB in (1.99 KiB/s), 484 out (578/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@user-1 linux]
+----
+====

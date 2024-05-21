@@ -1,0 +1,34 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost linux]# ./xcp show <IP address or hostname of NFS server>
+
+getting pmap dump from <IP address or hostname of NFS server> port 111... getting export list from <IP address or hostname of NFS server>...
+sending 3 mounts and 12 nfs requests to <IP address or hostname of NFS server>...
+
+== RPC Services ==
+'<IP address or hostname of NFS server>': UDP rpc services: MNT v1/2/3, NFS v3, NLM v4, PMAP v2/3/4, STATUS v1
+'<IP address or hostname of NFS server>': TCP rpc services: MNT v1/2/3, NFS v3/4, NLM v4, PMAP v2/3/4, STATUS v1
+
+== NFS Exports == Mounts Errors Server
+3	0 <IP address or hostname of NFS server>
+
+Space      Files   Space       Files
+Free	    Free	Used       Used Export
+
+93.9 MiB	19,886	1.10 MiB	104 <IP address or hostname of NFS server>:/
+9.44 GiB	2.49M	65.7 MiB	276 <IP address or hostname of NFS server>:/catalog_vol
+84.9 GiB	22.4M	593 MiB	115 <IP address or hostname of NFS server>:/source_vol
+
+== Attributes of NFS Exports ==
+drwxr-xr-x --- root root 4KiB 4KiB 6d2h <IP address or hostname of NFSserver>:/
+drwxr-xr-x --- root root 4KiB 4KiB 6d2h <IP address or hostname of NFS server>:/catalog_vol
+drwxr-xr-x --- root root 4KiB 4KiB 1h30m <IP address or hostname of NFS server>:/source_vol
+
+Xcp command : xcp show <IP address or hostname of NFS server>
+0 error
+Speed	: 3.62 KiB in (17.9 KiB/s), 6.28 KiB out (31.1 KiB/s) Total Time : 0s.
+STATUS	: PASSED
+----
+====

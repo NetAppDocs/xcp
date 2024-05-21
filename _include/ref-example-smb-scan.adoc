@@ -1,0 +1,23 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\Administrator\Desktop\xcp>xcp scan \\<IP address or hostname of SMB server>\volxcp 
+c:\netapp\xcp\xcp scan \\<IP address of SMB destination server>\source_share
+volxcp\3333.txt
+volxcp\SMB.txt 
+volxcp\SMB1.txt 
+volxcp\com.txt 
+volxcp\commands.txt 
+volxcp\console.txt 
+volxcp\linux.txt 
+volxcp\net use.txt 
+volxcp\newcom.txt 
+volxcp\notepad.txt
+c:\netapp\xcp\xcp scan \\<IP address of SMB destination server>\source_share 
+60,345 scanned, 0 matched, 0 errors
+Total Time : 8s 
+STATUS : PASSED
+C:\Users\Administrator\Desktop\xcp>Parameters
+----
+====

@@ -1,0 +1,16 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost linux]# ./xcp scan -du <IP address or hostname of NFSserver>:/source_vol
+
+24KiB source_vol/USER.1
+24KiB source_vol/USER.2
+52KiB source_vol
+Xcp command : xcp scan -du <IP address or hostname of NFSserver>:/source_vol
+18 scanned, 0 matched, 0 error
+Speed : 4.59 KiB in (12.9 KiB/s), 756 out (2.07KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+----
+====

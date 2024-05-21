@@ -1,0 +1,85 @@
+.Show example
+[%collapsible]
+====
+----
+root@client1 linux]# ./xcp scan -stats <ip_address>:/fg1
+
+Job ID: Job_2023-11-23_23.23.33.930501_scan
+== Maximum Values ==
+Size Used Depth File Path Namelen Dirsize
+50.4 MiB 50.6 MiB 1 24 20 33
+== Average Values ==
+Size Depth Namelen Dirsize
+15.3 MiB 0 6 33
+== Top Space Users ==
+root
+107 MiB
+== Top File Owners ==
+root
+34
+== Top File Extensions ==
+.sh .out .py .sh1 other
+8 2 2 1 20
+16.0 KiB 3.09 MiB 448 1.48 KiB 502 MiB
+== Number of files ==
+empty <8KiB 8-64KiB 64KiB-1MiB 1-10MiB 10-100MiB >100MiB
+20 1 2 10
+== Space used ==
+empty <8KiB 8-64KiB 64KiB-1MiB 1-10MiB 10-100MiB >100MiB
+76 KiB 12 KiB 5.16 MiB 102 MiB
+== Directory entries ==
+empty 1-10 10-100 100-1K 1K-10K >10K
+
+== Depth ==
+0-5 6-10 11-15 16-20 21-100 >100
+34
+== Accessed ==
+>1 year9-12 months 6-9 months 3-6 months 1-3 months 1-31 days 1-24 hrs <1 hour <15 mins
+future
+33
+505 MiB
+== Modified ==
+>1 year9-12 months 6-9 months 3-6 months 1-3 months 1-31 days 1-24 hrs <1 hour <15 mins
+future
+16
+17
+400 MiB 105
+MiB
+== Changed ==
+>1 year9-12 months 6-9 months 3-6 months 1-3 months 1-31 days 1-24 hrs <1 hour <15 mins
+future
+16
+17
+400 MiB 105
+MiB
+== Path ==
+0-1024 >1024
+33
+Total count: 34
+Directories: 1
+Regular files: 33
+Symbolic links: None
+Special files: None
+Hard links: None
+Multilink files: None
+Space Saved by Hard links (KB): 0
+Sparse data: N/A
+Dedupe estimate: N/A
+Total space for regular files: size: 505 MiB, used: 107 MiB
+Total space for symlinks: size: 0, used: 0
+Total space for directories: size: 8 KiB, used: 8 KiB
+Total space used: 107 MiB
+Xcp command : xcp scan -stats <ip_address>:/fg1
+Stats : 34 scanned
+Speed : 6.35 KiB in (7.23 KiB/s), 444 out (506/s)
+Total Time : 0s.
+Job ID : Job_2023-11-23_23.23.33.930501_scan
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/
+Job_2023-11-23_23.23.33.930501_scan.log
+
+STATUS : PASSED
+[root@client 1 linux]#
+
+
+----
+====

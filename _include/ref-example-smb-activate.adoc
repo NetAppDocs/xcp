@@ -1,0 +1,8 @@
+.Show example
+[%collapsible]
+====
+----
+C:\Users\Administrator\Desktop\xcp>xcp activate
+XCP activated
+----
+====

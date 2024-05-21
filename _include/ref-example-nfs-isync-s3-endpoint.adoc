@@ -1,0 +1,19 @@
+.Show example
+[%collapsible]
+====
+----
+root@client1 linux]# ./xcp isync -newid testing -s3.endpoint <S3-endpoint_url> <source_ip_address>:/src/USER4 s3://isyncestimate/
+
+Job ID: Job_2023-11-16_04.33.32.381458_isync
+target scan completed: 502 scanned, 250 s3.objects, 251 indexed, 118 KiB in (38.9 KiB/s), 63.7 KiB
+out (20.9 KiB/s), 3s.
+Xcp command : xcp isync -newid testing -s3.endpoint S3-endpoint_url>
+<source_ip_address>:/src/USER4 s3://isyncestimate/
+Stats : 502 scanned, 250 s3.objects, 251 indexed
+Speed : 118 KiB in (38.8 KiB/s), 63.7 KiB out (20.9 KiB/s)
+Total Time : 3s.
+Job ID : Job_2023-11-16_04.33.32.381458_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_04.33.32.381458_isync.log
+STATUS : PASSED
+----
+====

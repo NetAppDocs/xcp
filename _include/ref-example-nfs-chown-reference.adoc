@@ -1,0 +1,15 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chown -reference 101.101.10.210:/s_v1/smaple_set/D2/2.img 101.101.10.210:/s_v1/smaple_set/D1
+
+Xcp command : xcp chown -reference 101.101.10.210:/s_v1/smaple_set/D2/2.img
+101.101.10.210:/s_v1/smaple_set/D1
+Stats : 6 scanned, 6 changed ownership
+Speed : 3.11 KiB in (6.25 KiB/s), 2.01 KiB out (4.05 KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+[root@user-1 linux]#
+----
+====
