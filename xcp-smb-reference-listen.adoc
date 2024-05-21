@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: xcp-smb-reference-listen.html
+keywords: netapp, xcp, reference, smb, command, commands
+summary: XCP SMB "listen" command reference
+---
+= listen
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The `listen` command reads the XCP binary and starts the XCP services.
+
+.Syntax
+
+[source,cli]
+xcp.exe listen
+
+.Show example
+include::./_include/ref-example-smb-verify-listen.adoc[]

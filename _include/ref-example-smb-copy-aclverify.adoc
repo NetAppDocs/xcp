@@ -1,0 +1,22 @@
+.Show example
+[%collapsible]
+====
+----
+C:\NetApp\xcp>xcp copy -acl -aclverify yes -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group"
+\\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+
+12 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 5s, 0 acls copied
+12 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 10s, 0 acls copied
+12 scanned, 0 matched, 0 skipped, 0 copied, 0 (0/s), 0 errors, 15s, 0 acls copied xcp copy -acl -aclverify yes -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+12 scanned, 0 matched, 0 skipped, 11 copied, 10KiB (634/s), 0 errors, 11 acls copied 
+Total Time : 16s
+STATUS : PASSED
+
+C:\NetApp\xcp>xcp copy -acl -aclverify no \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+
+xcp copy -acl -aclverify no \\<source_IP_address>\source_share \\<destination_IP_address>\dest_share
+12 scanned, 0 matched, 0 skipped, 11 copied, 10KiB (5.61KiB/s), 0 errors, 11 acls copied 
+Total Time : 1s
+STATUS : PASSED
+----
+====

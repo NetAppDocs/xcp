@@ -1,0 +1,17 @@
+.Show example
+[%collapsible]
+====
+----
+[root@localhost linux]# ./xcp copy -parallel 4 <IP address or hostname of NFS server>:/source_vol
+<IP address of destination NFS server>:/dest_vol
+
+xcp: WARNING: No index name has been specified, creating one with name: autoname_copy_2020-03-
+03_23.59.41.477783
+Xcp command : xcp copy -parallel 4 <IP address or hostname of NFS server>:/source_vol <IP address
+of destination NFS server>:/dest_vol
+18 scanned, 0 matched, 17 copied, 0 error
+Speed : 39.1 KiB in (35.6 KiB/s), 81.6 KiB out (74.4 KiB/s)
+Total Time : 1s.
+STATUS : PASSED
+----
+====

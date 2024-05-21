@@ -1,0 +1,17 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp isync estimate -match <filter> -id <name>
+
+Job ID: Job_2023-11-16_02.13.34.904794_isync_estimate
+Index: <name> {source: <source_ip_address>:/source_vol, target:
+<destination_ip_address>:/dest_vol}
+Filtered: 0 matched, 6 did not match
+Xcp command : xcp isync estimate -match fnm('FILE_*') -id <name>
+Estimated Time : 0.8s
+Job ID : Job_2023-11-16_02.13.34.904794_isync_estimate
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_02.13.34.904794_isync_estimate.log
+STATUS : PASSED
+----
+====

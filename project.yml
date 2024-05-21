@@ -89,7 +89,7 @@ sidebar:
         - title: Migrate SMB data
           url: /xcp-migrate-smb-data.html
           entries:
-            - title: NTFS Alternate Data Streams migration for SMB
+            - title: NTFS alternate data streams migration for SMB
               url: /xcp-smb-ads.html
         - title: Migrate HDFS data
           url: /xcp-migrate-hdfs-data.html
@@ -105,5 +105,83 @@ sidebar:
           url: /xcp-troubleshoot-xcp-smb-errors.html
         - title: Troubleshoot XCP File Analytics errors
           url: /xcp-troubleshoot-xcp-file-analytics-errors.html
+    - title: XCP reference
+      entries:
+        - title: XCP command reference overview
+          url: /xcp-reference-overview.html
+        - title: NFS command reference
+          entries: 
+            - title: help
+              url: /xcp-nfs-reference-help.html
+            - title: show
+              url: /xcp-nfs-reference-show.html
+            - title: license
+              url: /xcp-nfs-reference-license.html
+            - title: activate
+              url: /xcp-nfs-reference-activate.html
+            - title: scan 
+              url: /xcp-nfs-reference-scan.html
+            - title: copy
+              url: /xcp-nfs-reference-copy.html
+            - title: sync
+              url: /xcp-nfs-reference-sync.html
+            - title: resume
+              url: /xcp-nfs-reference-resume.html
+            - title: verify
+              url: /xcp-nfs-reference-verify.html
+            - title: chmod
+              url: /xcp-nfs-reference-chmod.html
+            - title: chown
+              url: /xcp-nfs-reference-chown.html
+            - title: logdump
+              url: /xcp-nfs-reference-logdump.html
+            - title: delete
+              url: /xcp-nfs-reference-delete.html
+            - title: estimate
+              url: /xcp-nfs-reference-estimate.html
+            - title: indexdelete
+              url: /xcp-nfs-reference-indexdelete.html
+            - title: isync
+              url: /xcp-nfs-reference-isync.html
+        - title: SMB command reference
+          entries: 
+            - title: help
+              url: /xcp-smb-reference-help.html
+            - title: show
+              url: /xcp-smb-reference-show.html
+            - title: license
+              url: /xcp-smb-reference-license.html
+            - title: activate
+              url: /xcp-smb-reference-activate.html
+            - title: scan
+              url: /xcp-smb-reference-scan.html
+            - title: copy
+              url: /xcp-smb-reference-copy.html
+            - title: sync
+              url: /xcp-smb-reference-sync.html
+            - title: verify
+              url: /xcp-smb-reference-verify.html
+            - title: configure
+              url: /xcp-smb-reference-configure.html
+            - title: listen
+              url: /xcp-smb-reference-listen.html 
+        - title: XCP use cases
+          entries:
+           - title: XCP use cases
+             url: /xcp-reference-use-cases.html
+        - title: XCP logging
+          entries:
+           - title: Set the logConfig option 
+             url: /xcp-reference-logging-logconfig.html
+           - title: Set the eventlog option
+             url: /xcp-reference-logging-eventlog.html
+           - title: Enable the syslog client
+             url: /xcp-reference-logging-syslog.html
+        - title: XCP event logs
+          entries:
+           - title: NFS event logs
+             url: /xcp-reference-event-logs-nfs.html
+           - title: SMB event logs
+             url: /xcp-reference-event-logs-smb.html
     - title: Legal notices
       url: /legal-notices.html

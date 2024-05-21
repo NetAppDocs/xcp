@@ -1,0 +1,24 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp delete -force
+10.101.10.101:/xcp_catalog/catalog/indexes/XCP_copy_2023-04-25_05.53.58.273910
+
+Job ID: Job_2023-04-25_06.11.30.584440_delete
+WARNING: You have selected 10.101.10.101:/xcp_catalog/catalog/indexes/XCP_copy_2023-04-
+25_05.53.58.273910 for removing data. Data in this path
+/xcp_catalog/catalog/indexes/XCP_copy_2023-04-25_05.53.58.273910 will be deleted.
+Recursively removing data in 10.101.10.101:/xcp_catalog/catalog/indexes/XCP_copy_2023-04-
+25_05.53.58.273910 ...
+Xcp command : xcp delete -force 110.101.10.101:/xcp_catalog/catalog/indexes/XCP_copy_2023-04-
+25_05.53.58.273910
+Stats : 14 scanned, 12 removes, 1 rmdir
+Speed : 6.44 KiB in (4.73 KiB/s), 3.59 KiB out (2.64 KiB/s)
+Total Time : 1s.
+Job ID : Job_2023-04-25_06.11.30.584440_delete
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-04-25_06.11.30.584440_delete.log
+STATUS : PASSED
+[root@client-1 linux] #
+----
+====

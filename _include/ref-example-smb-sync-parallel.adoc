@@ -1,0 +1,11 @@
+.Show example
+[%collapsible]
+====
+----
+C:\xcp>xcp sync -parallel 5 \\<IP address or hostname of SMB server>\volxcp\\<IP address of SMB destination server>\xcp1_test1
+658 scanned, 244 compared, 0 errors, 0 skipped, 0 copied, 0 removed, 5s
+658 scanned, 606 compared, 0 errors, 0 skipped, 0 copied, 0 removed, 10s
+658 scanned, 658 compared, 0 errors, 0 skipped, 0 copied, 0 removed, 10s 
+Sending statistics...
+----
+====

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-help.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= help
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The NFS `help` command displays a list of commands, command parameters, and a brief description of each. The `help` command is useful for beginners who are new to the XCP tool.
+
+.Syntax
+[source,cli]
+xcp help
+
+include::./_include/ref-example-nfs-help.adoc[]
+
+== help info
+
+Use the `info` parameter with the `help` command to display documentation, examples, and tuning recommendations.
+
+.Syntax
+
+[source,cli]
+xcp help info
+
+include::./_include/ref-example-nfs-help-info.adoc[]
+

@@ -1,0 +1,62 @@
+.Show example
+[%collapsible]
+====
+----
+C:\netapp\xcp>xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share
+
+== Maximum Values ==
+        Size      Depth      Namelen     Dirsize
+     88.2MiB          3          108          20
+
+== Average Values ==
+        Size      Depth      Namelen    Dirsize
+     4.74MiB          2          21            9
+
+== Top File Extensions ==
+no extension      .PDF       .exe       .html      .whl     .py      other
+   22               2          2           2         2        1        9
+  20.0KiB        1.54MiB    88.4MiB     124KiB    1.47MiB  1.62KiB   98.3MiB
+
+== Number of files ==
+  empty    <8KiB    8-64KiB    64KiB-1MiB    1-10MiB    10-100MiB    >100MiB
+      2       24          2             7          2            3
+
+== Space used ==
+  empty    <8KiB    8-64KiB    64KiB-1MiB    1-10MiB    10-100MiB     >100MiB
+      0  24.0KiB     124KiB       2.87MiB    2.91MiB       184MiB           0
+
+== Directory entries ==
+  empty     1-10     10-100        100-1K     1K-10K         >10K
+               4          1
+== Depth ==
+    0-5     6-10      11-15         16-20     21-100         >100
+     45
+
+== Modified ==
+>1 year  9-12 months  6-9 months  3-6 months  1-3 months  1-31 days  1-24 hrs  <1 
+hour     <15 mins       future      <1970       invalid
+                                                                   44         1
+                                                               190MiB
+
+== Created ==
+>1 year  9-12 months  6-9 months  3-6 months  1-3 months  1-31 days  1-24 hrs  <1 
+hour     <15 mins       future      <1970       invalid
+                                                                   45
+                                                               190MiB
+Total count: 45
+Directories: 5
+Regular files: 40
+Symbolic links:
+Junctions:
+Special files:
+Total space for regular files: 190MiB
+Total space for directories: 0
+Total space used: 190MiB
+Dedupe estimate: N/A
+Sparse data: N/A
+xcp scan -stats \\<IP address or hostname of SMB server>\cifs_share
+45 scanned, 0 matched, 0 errors
+Total Time : 0s
+STATUS : PASSED
+----
+====

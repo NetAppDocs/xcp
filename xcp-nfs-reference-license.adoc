@@ -1,0 +1,35 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-license.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= license
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The NFS `license` command displays XCP license information. 
+
+Before running this command, verify that the license file is downloaded and copied to the `/opt/NetApp/xFiles/xcp/` directory on the XCP Linux client host.
+
+.Syntax
+
+[source,cli]
+xcp license
+
+include::./_include/ref-example-nfs-license.adoc[]
+
+== license update
+
+Use the `update` parameter with the `license` command to retrieve the latest license from the XCP server.
+
+.Syntax
+[source,cli]
+xcp license update
+
+include::./_include/ref-example-nfs-license-update.adoc[]

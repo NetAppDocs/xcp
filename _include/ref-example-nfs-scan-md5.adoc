@@ -1,0 +1,31 @@
+.Show example
+[%collapsible]
+====
+----
+root@localhost linux]# ./xcp scan -md5 <IP address or hostname of NFSserver>:/source_vol
+
+source_vol
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.1/FILE_1
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.1/FILE_2
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.1/FILE_3
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.1/FILE_4
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.1/FILE_5
+d41d8cd98f00b204e9800998ecf8427e source_vol/USER.1/file1.txt
+d41d8cd98f00b204e9800998ecf8427e source_vol/USER.1/file2.txt
+d41d8cd98f00b204e9800998ecf8427esource_vol/USER.1/logfile.txt
+d41d8cd98f00b204e9800998ecf8427e source_vol/USER.1/log1.txt
+e894f2344aaa92289fb57bc8f597ffa9 source_vol/r1.txt
+source_vol/USER.1
+source_vol/USER.2
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.2/FILE_1
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.2/FILE_5
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.2/FILE_2
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.2/FILE_3
+d47b127bc2de2d687ddc82dac354c415 source_vol/USER.2/FILE_4
+Xcp command : xcp scan -md5 <IP address or hostname of NFS server>:/source_vol
+18 scanned, 0 matched, 0 error
+Speed : 16.0 KiB in (34.5 KiB/s), 2.29 KiB out (4.92 KiB/s)
+Total Time : 0s.
+STATUS : PASSED
+----
+====

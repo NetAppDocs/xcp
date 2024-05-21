@@ -1,0 +1,30 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+Job ID: Job_2023-11-16_23.41.00.713151_isync
+14,514 scanned, 570 excluded, 675 MiB in (133 MiB/s), 2.03 MiB out (411 KiB/s), 5s
+24,211 scanned, 570 excluded, 4.17 GiB in (713 MiB/s), 11.0 MiB out (1.79 MiB/s), 10s
+30,786 scanned, 574 excluded, 116 removed, 7.07 GiB in (589 MiB/s), 17.7 MiB out (1.32
+MiB/s), 15s
+30,786 scanned, 574 excluded, 116 removed, 10.1 GiB in (629 MiB/s), 24.7 MiB out (1.40
+MiB/s), 20s
+31,106 scanned, 222 copied, 574 excluded, 116 removed, 12.8 GiB in (510 MiB/s), 42.3 MiB out
+(3.33 MiB/s), 26s
+.
+.
+.
+41,316 scanned, 1,000 copied, 1,206 excluded, 1,000 removed, 225 GiB in (616 MiB/s), 563 MiB
+out (1.36 MiB/s), 6m35s
+Excluded: 1206 excluded, 0 did not match exclude criteria
+Xcp command : xcp isync -exclude fnm("FILE_USER5*") <source_ip_address>:/source_vol <destination_ip_address>:/dest_vol
+Stats : 1,000 removed, 41,316 scanned, 1,000 copied, 1,206 excluded
+Speed : 227 GiB in (584 MiB/s), 568 MiB out (1.42 MiB/s)
+Total Time : 6m38s.
+Job ID : Job_2023-11-16_23.41.00.713151_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_23.41.00.713151_isync.log
+Error Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_23.41.00.713151_isync.error
+STATUS : PASSED
+----
+====

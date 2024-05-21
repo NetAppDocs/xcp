@@ -1,0 +1,71 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client 1 linux]# ./xcp scan -preserve-atime 101.10.10.10:/source_vol
+
+xcp: Job ID: Job_2022-06-30_14.14.15.334173_scan
+source_vol/USER2/DIR1_4/FILE_DIR1_4_1024_1
+source_vol/USER2/DIR1_4/FILE_DIR1_4_13926_4
+source_vol/USER2/DIR1_4/FILE_DIR1_4_65536_2
+source_vol/USER2/DIR1_4/FILE_DIR1_4_7475_3
+source_vol/USER2/DIR1_4/FILE_DIR1_4_20377_5
+source_vol/USER2/DIR1_4/FILE_DIR1_4_26828_6
+source_vol/USER2/DIR1_4/FILE_DIR1_4_33279_7
+source_vol/USER2/DIR1_4/FILE_DIR1_4_39730_8
+source_vol/USER1
+source_vol/USER2
+source_vol/USER1/FILE_USER1_1024_1
+source_vol/USER1/FILE_USER1_65536_2
+source_vol/USER1/FILE_USER1_7475_3
+source_vol/USER1/FILE_USER1_13926_4
+source_vol/USER1/FILE_USER1_20377_5
+source_vol/USER1/FILE_USER1_26828_6
+source_vol/USER1/FILE_USER1_33279_7
+source_vol/USER1/FILE_USER1_39730_8
+source_vol/USER1/DIR1_2
+source_vol/USER1/DIR1_3
+source_vol/USER2/FILE_USER2_1024_1
+source_vol/USER2/FILE_USER2_65536_2
+source_vol/USER2/FILE_USER2_7475_3
+source_vol/USER2/FILE_USER2_13926_4
+source_vol/USER2/FILE_USER2_20377_5
+source_vol/USER2/FILE_USER2_26828_6
+source_vol/USER2/FILE_USER2_33279_7
+source_vol/USER2/FILE_USER2_39730_8
+source_vol/USER2/DIR1_3
+source_vol/USER2/DIR1_4
+source_vol/USER1/DIR1_2/FILE_DIR1_2_1024_1
+source_vol/USER1/DIR1_2/FILE_DIR1_2_7475_3
+source_vol/USER1/DIR1_2/FILE_DIR1_2_33279_7
+source_vol/USER1/DIR1_2/FILE_DIR1_2_26828_6
+source_vol/USER1/DIR1_2/FILE_DIR1_2_65536_2
+source_vol/USER1/DIR1_2/FILE_DIR1_2_39730_8
+source_vol/USER1/DIR1_2/FILE_DIR1_2_13926_4
+source_vol/USER1/DIR1_2/FILE_DIR1_2_20377_5
+source_vol/USER1/DIR1_3/FILE_DIR1_3_1024_1
+source_vol/USER1/DIR1_3/FILE_DIR1_3_7475_3
+source_vol/USER1/DIR1_3/FILE_DIR1_3_65536_2
+source_vol/USER1/DIR1_3/FILE_DIR1_3_13926_4
+source_vol/USER1/DIR1_3/FILE_DIR1_3_20377_5
+source_vol/USER1/DIR1_3/FILE_DIR1_3_26828_6
+source_vol/USER1/DIR1_3/FILE_DIR1_3_33279_7
+source_vol/USER1/DIR1_3/FILE_DIR1_3_39730_8
+source_vol/USER2/DIR1_3/FILE_DIR1_3_1024_1
+source_vol/USER2/DIR1_3/FILE_DIR1_3_65536_2
+source_vol/USER2/DIR1_3/FILE_DIR1_3_7475_3
+source_vol/USER2/DIR1_3/FILE_DIR1_3_13926_4
+source_vol/USER2/DIR1_3/FILE_DIR1_3_20377_5
+source_vol/USER2/DIR1_3/FILE_DIR1_3_26828_6
+source_vol/USER2/DIR1_3/FILE_DIR1_3_33279_7
+source_vol/USER2/DIR1_3/FILE_DIR1_3_39730_8
+source_vol
+Xcp command : xcp scan -preserve-atime 101.10.10.10:/source_vol
+Stats : 55 scanned
+Speed : 14.1 KiB in (21.2 KiB/s), 2.33 KiB out (3.51 KiB/s)
+Total Time : 0s.
+Job ID : Job_2022-06-30_14.14.15.334173_scan
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2022-06-30_14.14.15.334173_scan.log
+STATUS : PASSED
+----
+====

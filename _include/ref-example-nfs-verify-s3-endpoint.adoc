@@ -1,0 +1,19 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp verify -s3.endpoint https://<endpoint_url> hdfs://<HDFS source> s3://<s3-bucket>
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
+13_11.20.48.203492
+Job ID: Job_2023-06-13_11.20.48.203492_verify
+2 scanned, 2 found, 9.55 KiB in (1.90 KiB/s), 12.5 KiB out (2.50 KiB/s), 5s
+Xcp command : xcp verify -s3.endpoint https://<endpoint_url>  hdfs://<HDFS source> s3://<s3-bucket>
+Stats : 8 scanned, 8 indexed, 100% found (5 have data), 5 compared, 100% verified (data)
+Speed : 21.3 KiB in (2.28 KiB/s), 91.1 KiB out (9.72 KiB/s)
+Total Time : 9s.
+Job ID : Job_2023-06-13_11.20.48.203492_verify
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_11.20.48.203492_verify.log
+STATUS : PASSED
+----
+====

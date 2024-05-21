@@ -15,7 +15,7 @@ summary: Plan NFS data migrations
 [.lead]
 Plan your NFS data migrations.
 
-== Show
+== show
 
 The `show` command queries the RPC services and NFS exports of one or more storage servers. The command lists the available services and exports with the used and free capacity of each export, followed by the root attributes of each export.
 
@@ -26,7 +26,7 @@ The `show` command queries the RPC services and NFS exports of one or more stora
 
 Run `xcp help show` for more details.
 
-== Scan
+== scan
 
 The `scan` command recursively scans the entire source NFSv3 exported paths and prints the statistics of file structure at the end of the scan. NetApp recommends putting the source NFS export mounts in read-only mode during the scan operation.
 

@@ -1,0 +1,15 @@
+.Show example
+[%collapsible]
+====
+----
+[root@user-1 linux]# ./xcp chown -exclude "fnm('1.img')" -user user2 101.101.10.210:/s_v1/smaple_set/D1
+
+Excluded: 1 excluded, 0 did not match exclude criteria
+Xcp command : xcp chown -exclude fnm('1.img') -user user2101.101.10.210:/s_v1/smaple_set/D1
+Stats : 5 scanned, 1 excluded, 5 changed ownership
+Speed : 2.10 KiB in (1.75 KiB/s), 976 out (812/s)
+Total Time : 1s.
+STATUS : PASSED
+[root@user-1 linux]#
+----
+====

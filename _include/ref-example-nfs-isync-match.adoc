@@ -1,0 +1,27 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp isync -match fnm("FILE_USER5*") <source_ip_address>:/source_vol
+<destination_ip_address>:/dest_vol
+Job ID: Job_2023-11-16_23.25.03.734323_isync
+24,006 scanned, 570 matched, 32.5 MiB in (5.31 MiB/s), 221 KiB out (36.2 KiB/s), 6s
+33,012 scanned, 570 matched, 34.2 MiB in (223 KiB/s), 237 KiB out (2.06 KiB/s), 14s
+33,149 scanned, 572 matched, 275 MiB in (38.3 MiB/s), 781 KiB out (86.6 KiB/s), 20s
+39,965 scanned, 572 matched, 276 MiB in (214 KiB/s), 812 KiB out (4.95 KiB/s), 27s
+40,542 scanned, 572 matched, 276 MiB in (15.4 KiB/s), 818 KiB out (1.00 KiB/s), 32s
+40,765 scanned, 1,024 matched, 1.88 GiB in (297 MiB/s), 4.51 MiB out (682 KiB/s), 38s
+target scan completed: 41,125 scanned, 1,055 matched, 1.88 GiB in (48.9 MiB/s), 4.51 MiB out
+(117 KiB/s), 39s.
+42,372 scanned, 1,206 matched, 4.26 GiB in (445 MiB/s), 9.92 MiB out (1013 KiB/s), 43s
+Filtered: 1206 matched, 41290 did not match
+Xcp command : xcp isync -match fnm("FILE_USER5*") <source_ip_address>:/source_vol
+<destination_ip_address>:/dest_vol
+Stats : 42,496 scanned, 1,206 matched
+Speed : 6.70 GiB in (145 MiB/s), 15.4 MiB out (332 KiB/s)
+Total Time : 47s.
+Job ID : Job_2023-11-16_23.25.03.734323_isync
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-11-16_23.25.03.734323_isync.log
+STATUS : PASSED
+----
+====

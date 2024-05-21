@@ -1,0 +1,148 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-resume.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= resume
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The XCP NFS `resume` command restarts an interrupted copy operation by specifying the catalog index name or number. The catalog index name or number of the previous copy operation is located in the `<catalog path>:/catalog/indexes` directory.
+
+[[resume_id]]
+.Syntax
+[source,cli]
+xcp resume -id <catalog_name>
+
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `resume` command.
+
+include::./_include/ref-example-nfs-resume.adoc[]
+
+The following table lists the `resume` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<resume_id, resume -id <catalog_name> >> | Specifies the catalog name of a previous copy index. This is a required parameter for the resume command. 
+| <<resume_bs, resume -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
+| <<resume_dircount, resume -dircount <n[k]> >> | Specifies the request size when reading directories.
+| <<resume_parallel,resume -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
+| <<resume_preserve_atime,resume -preserve-atime>> | Restores all files to the last accessed date on the source.
+| <<resume_s3_insecure,resume -s3.insecure>> | Provides the option to use HTTP instead of HTTPS for S3 bucket communication.
+| <<resume_s3_endpoint,resume -s3.endpoint <s3_endpoint_url> >> | Overrides the default Amazon Web Services (AWS) endpoint URL with the specified URL for S3 bucket communication.
+| <<resume_s3_profile,resume -s3.profile <profile_name> >> | Specifies a profile from the AWS credential file for S3 bucket communication.
+| <<resume_s3_noverify, resume -s3.noverify >> | Overrides the default verification of SSL certification for S3 bucket communication.
+
+|===
+
+[[resume_bs]]
+== resume -bs <n[k]>
+
+Use the `-bs <n[k]>` parameter with the `resume` command to specify the read/write block size. The default block size is 64k. 
+
+.Syntax
+
+[source,cli]
+xcp resume -id <catalog_name> -bs <n[k]> 
+
+include::./_include/ref-example-nfs-resume-bs.adoc[]
+
+[[resume_dircount]]
+== resume -dircount <n[k]>
+
+Use the `-dircount <n[k]>` parameter with the `resume` command to  specify the request size when reading directories. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp resume -id <catalog_name> -dircount <n[k]> 
+
+include::./_include/ref-example-nfs-resume-dircount.adoc[]
+
+[[resume_parallel]]
+== resume -parallel <n> 
+
+Use the `- parallel <n>` parameter with the `resume` command to specify the maximum number of concurrent batch processes. The default value is 7.
+
+.Syntax
+
+[source,cli]
+xcp resume -id <catalog_name> -parallel <n> 
+
+include::./_include/ref-example-nfs-resume-parallel.adoc[]
+
+[[resume_preserve_atime]]
+== resume -preserve-atime
+
+Use the `-preserve-atime` parameter with the `resume` command to restore all files to the last accessed date on the source. 
+
+The `-preserve-atime` parameter resets the access time to the original value set before the XCP read operation.
+
+.Syntax
+
+[source,cli]
+xcp resume -id <catalog_name> -preserve-atime 
+
+include::./_include/ref-example-nfs-resume-preserveatime.adoc[]
+
+[[resume_s3_insecure]]
+== resume -s3.insecure
+
+Use the `-s3.insecure` parameter with the `resume` command to use HTTP instead of HTTPS for S3 bucket communication.
+
+NOTE: If the `-s3.insecure` parameter is used with the `copy` command, it is ignored on resume. You must specify `-s3.insecure` again to use the option on resume.
+
+.Syntax
+
+[source,cli]
+xcp resume -s3.insecure -id <catalog_name>
+
+include::./_include/ref-example-nfs-resume-s3-insecure.adoc[]
+
+[[resume_s3_endpoint]]
+== resume -s3.endpoint <s3_endpoint_url>
+
+Use the `-s3.endpoint <s3_endpoint_url>` parameter with the `resume` command to override the default AWS endpoint URL with the specified URL for S3 bucket communication. 
+
+NOTE: By default, resume uses the S3 profile and S3 endpoint specified during the copy operation. However, if you specify a new S3 endpoint and S3 profile on resume, it overrides the default used with the `copy` command.
+
+.Syntax
+
+[source,cli]
+xcp resume -s3.profile <profile_name> -s3.endpoint https://<endpoint_url>: -id <catalog_name>
+
+include::./_include/ref-example-nfs-resume-s3-endpoint.adoc[]
+
+[[resume_s3_profile]]
+== resume s3.profile <profile_name>
+
+Use the `-s3.profile <profile_name>` parameter with the `resume` command to specify a profile from the AWS credential file for S3 bucket communication. 
+
+NOTE: By default, resume uses the S3 profile and S3 endpoint specified during the copy operation. However, if you specify a new S3 endpoint and S3 profile on resume, it overrides the default used with the `copy` command.
+
+.Syntax
+
+[source,cli]
+xcp resume -s3.profile <name> -s3.endpoint -id <catalog_name>
+
+include::./_include/ref-example-nfs-resume-s3-profile.adoc[]
+
+[[resume_s3_noverify]]
+== resume -s3.noverify 
+
+Use the `-s3.noverify` parameter with the `resume` command to override the default verification of SSL certification for S3 bucket communication. 
+
+.Syntax
+
+[source,cli]
+xcp resume -s3.noverify -id <catalog_name>
+
+include::./_include/ref-example-nfs-resume-s3-noverify.adoc[]
+

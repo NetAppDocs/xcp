@@ -1,0 +1,216 @@
+---
+sidebar: sidebar
+permalink: xcp-nfs-reference-sync.html
+keywords: netapp, xcp, reference, nfs, command, commands
+summary: XCP NFS command reference
+---
+
+= sync 
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+View the descriptions, parameters, and examples for the XCP `sync` command, including when the `sync` command is used with the `dry run` option. 
+
+== sync
+
+The XCP NFS `sync` command scans for changes and modifications to a source NFS directory by using a catalog index tag name or the number of a previous copy operation. Incremental changes to the source are copied and applied to the target directory. The old catalog index numbers are replaced with new ones after the sync operation.
+
+NOTE: During the sync operation, modified files and directories are copied to the destination NFSv3 export again.
+
+[[sync_id]]
+.Syntax
+[source,cli]
+xcp sync -id <catalog_name>
+
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync` command.
+
+include::./_include/ref-example-nfs-sync.adoc[]
+
+The following table lists the `sync` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<sync_id, sync -id <catalog_name> >> | Specifies the catalog name of a previous copy index. This is a required parameter for the `sync` command.
+| <<sync_nonames, sync -nonames>> | Excludes user and group names from file listings and reports.
+| <<sync_bs, sync -bs <n[k]> >> | Specifies the read/write block size (default: 64k).
+| <<sync_dircount, sync -dircount <n[k]> >> | Specifies the request size when reading directories.
+| <<sync_parallel, sync -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
+| <<sync_preserve_atime, sync -preserve-atime>> | Restores all files to the last accessed date on the source.
+
+|===
+
+
+[[sync_nonames]]
+=== sync -nonames
+
+Use the the `-nonames` parameter with the `sync` command to exclude user and group names from file listings or reports.
+
+.Syntax
+
+[source,cli]
+xcp sync -id <catalog_name> -nonames 
+
+include::./_include/ref-example-nfs-sync-nonames.adoc[]
+
+[[sync_bs]]
+=== sync -bs <n[k]>
+
+Use the the `-bs <n[k]>` parameter with the `sync` command to  specify the read/write block size. The default block size is 64k. 
+
+.Syntax
+
+[source,cli]
+xcp sync -id <catalog_name> -bs <n[k]>
+
+include::./_include/ref-example-nfs-sync-bs.adoc[]
+
+
+[[sync_dircount]]
+=== sync -dircount <n[k]>
+
+Use the the `-dircount <n[k]>` parameter with the `sync` command to specify the request size when reading directories. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp sync -id <catalog_name> -dircount <n[k]>
+
+include::./_include/ref-example-nfs-sync-dircount.adoc[]
+
+[[sync_parallel]]
+=== sync -parallel 
+
+Use the the `-parallel` parameter with the `sync` command to specify the maximum number of concurrent batch processes. The default value is 7.
+
+.Syntax
+
+[source,cli]
+xcp sync -id <catalog_name> -parallel <n> 
+
+include::./_include/ref-example-nfs-sync-parallel.adoc[]
+
+[[sync_preserve_atime]]
+=== -preserve-atime
+
+Use the the `-preserve-atime` parameter with the `sync` command to restore all files to the last accessed date on the source. 
+
+The `-preserve-atime` option resets the access time to the original value set before the XCP read operation.
+
+.Syntax
+
+[source,cli]
+xcp sync -preserve-atime -id <catalog_name>
+
+include::./_include/ref-example-nfs-sync-preserveatime.adoc[]
+
+== sync dry-run
+
+The `sync` command with the `dry-run` option looks for changes or modifications made to the source NFS directory using the previous catalog index number of a copy operation. This command also detects files and directories that are new, moved, deleted, or renamed since the previous copy operation. The command reports the source changes but does not apply them to the target.
+
+
+.Syntax
+[source,cli]
+xcp sync dry-run -id <catalog_name>
+
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync dry-run` command option.
+
+include::./_include/ref-example-nfs-sync-dry-run.adoc[]
+
+The following table lists the `sync dry-run` parameters and their description.
+
+[cols=2*,options="header"]
+|===
+| Parameter
+| Description
+| <<sync_dry_run_id, sync dry-run -id <catalog_name> >> | Specifies the catalog name of a previous copy index. This is a required parameter for the `sync` command.
+| <<sync_dry_run_stats, sync dry-run -stats>> | Performs a deep scan of the modified directories and reports everything that is
+new.
+| <<sync_dry_run_l, sync dry-run -l>> | Prints details about files and directories that changed.
+| <<sync_dry_run_nonames, sync dry-run -nonames>> | Excludes user and group names from file listings and reports.
+| <<sync_dry_run_dircount, sync dry-run -dircount <n[k]> >> | Specifies the request size when reading directories.
+| <<sync_dry_run_parallel, sync dry-run -parallel <n> >> | Specifies the maximum number of concurrent batch processes (default: 7). 
+
+|===
+
+[[sync_dry_run_id]]
+=== sync dry-run -id <catalog_name>
+
+Use the the `-id <catalog_name>` parameter with `sync dry-run` to specify the catalog name of a previous copy index.
+
+IMPORTANT: The `-id <catalog_name>` parameter is required with the `sync dry-run` command option.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> 
+
+include::./_include/ref-example-nfs-sync-dry-run-id.adoc[]
+
+[[sync_dry_run_stats]]
+=== sync dry-run -stats
+
+Use the the `-stats` parameter with `sync dry-run` to perform a deep scan of the modified directories and report everything that is new.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -stats 
+
+include::./_include/ref-example-nfs-sync-dry-run-stats.adoc[]
+
+[[sync_dry_run_l]]
+=== sync dry-run -l
+
+Use the the `-l` parameter with `sync dry-run` to print details about files and directories that changed.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -l 
+
+include::./_include/ref-example-nfs-sync-dry-run-l.adoc[]
+
+[[sync_dry_run_nonames]]
+=== sync dry-run -nonames
+
+Use the the `-nonames` parameter with `sync dry-run` to exclude user and group names from file listings or reports.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -nonames 
+
+include::./_include/ref-example-nfs-sync-dry-run-noname.adoc[]
+
+
+[[sync_dry_run_dircount]]
+=== sync dry-run -dircount <n[k]>
+
+Use the the `-dircount <n[k]>` parameter with `sync dry-run` to specify the request size when reading directories. The default value is 64k.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -dircount <n[k]>
+
+include::./_include/ref-example-nfs-sync-dry-run-dircount.adoc[]
+
+
+[[sync_dry_run_parallel]]
+=== sync dry-run -parallel 
+
+Use the the `-parallel` parameter with `sync dry-run` to specify the maximum number of concurrent batch processes. The default value is 7.
+
+.Syntax
+
+[source,cli]
+xcp sync dry-run -id <catalog_name> -parallel <n> 
+
+include::./_include/ref-example-nfs-sync-dry-run-parallel.adoc[]
+

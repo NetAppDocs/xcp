@@ -1,0 +1,27 @@
+.Show example
+[%collapsible]
+====
+----
+C:\NetApp\xcp>xcp sync -acl -aclverify yes -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+
+25 scanned, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors, 5s, 0 acls copied
+25 scanned, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors, 10s, 0 acls copied
+25 scanned, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors, 15s, 0 acls copied xcp sync -acl -aclverify yes -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+25 scanned, 1 copied, 25 compared, 0 skipped, 0 removed, 0 errors, 12 acls copied Total Time : 16s
+STATUS : PASSED
+C:\NetApp\xcp>xcp sync -acl -aclverify no \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+
+xcp sync -acl -aclverify no \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+27 scanned, 1 copied, 27 compared, 0 skipped, 0 removed, 0 errors, 13 acls copied Total Time : 2s
+STATUS : PASSED
+C:\NetApp\xcp>xcp sync -onlyacl -aclverify yes -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+24 scanned, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors, 5s, 0 acls copied
+24 scanned, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors, 10s, 0 acls copied
+24 scanned, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors, 15s, 0 acls copied xcp sync -onlyacl -aclverify yes -fallback-user "DOMAIN\User" -fallback-group "DOMAIN\Group" \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+C:\NetApp\xcp>xcp sync -onlyacl -aclverify no \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+xcp sync -onlyacl -aclverify no \\<source_IP_address>\source_share \\<IP address of SMB destination server>\dest_share
+24 scanned, 0 copied, 24 compared, 0 skipped, 0 removed, 0 errors, 11 acls copied 
+Total Time : 2s
+STATUS : PASSED
+----
+====

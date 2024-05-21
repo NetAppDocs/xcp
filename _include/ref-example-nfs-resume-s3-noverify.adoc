@@ -1,0 +1,41 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp resume -s3.noverify -id XCP_copy_2023-06-13_11.32.47.743708
+
+Job ID: Job_XCP_copy_2023-06-13_11.32.47.743708_2023-06-13_11.33.41.388541_resume
+Index: {source: hdfs:///user/demo, target: s3://bucket/
+Reviewing the incomplete index...
+Found 0 completed directories and 2 in progress
+9 reviewed, 4.53 KiB in (3.70 KiB/s), 188 out (153/s), 1s.
+9 reviewed, 6.81 KiB in (5.52 KiB/s), 2.30 KiB out (1.87 KiB/s), 1s.
+Starting second pass for the in-progress directories...
+9 reviewed, 9 re-reviewed, 10.9 KiB in (8.19 KiB/s), 2.44 KiB out (1.83 KiB/s), 1s.
+15,008 scanned*, 1,643 copied*, 9 indexed*, 1.62 MiB s3.data.uploaded, 1,662
+s3.copied.single.key.file, 1,662 s3.copied.file, 4.78 MiB in (969 KiB/s), 1.90 MiB out (385
+KiB/s), 5s
+15,008 scanned*, 4,897 copied*, 9 indexed*, 4.78 MiB s3.data.uploaded, 4,892
+s3.copied.single.key.file, 4,892 s3.copied.file, 8.38 MiB in (735 KiB/s), 5.50 MiB out (737
+KiB/s), 10s
+15,008 scanned*, 8,034 copied*, 9 indexed*, 7.86 MiB s3.data.uploaded, 8,048
+s3.copied.single.key.file, 8,048 s3.copied.file, 11.8 MiB in (696 KiB/s), 9.02 MiB out (708
+KiB/s), 15s
+15,008 scanned*, 11,243 copied*, 9 indexed*, 11.0 MiB s3.data.uploaded, 11,258
+s3.copied.single.key.file, 11,258 s3.copied.file, 15.3 MiB in (709 KiB/s), 12.6 MiB out (724
+KiB/s), 20s
+15,008 scanned*, 14,185 copied*, 9 indexed*, 13.9 MiB s3.data.uploaded, 14,195
+s3.copied.single.key.file, 14,195 s3.copied.file, 18.6 MiB in (662 KiB/s), 15.9 MiB out (660
+KiB/s), 25s
+Xcp command : xcp resume -s3.noverify -id XCP_copy_2023-06-13_11.32.47.743708
+Stats : 15,008 scanned*, 15,006 copied*, 15,009 indexed*, 14.6 MiB s3.data.uploaded,
+14,996 s3.copied.single.key.file, 14,996 s3.copied.file
+Speed : 19.2 MiB in (736 KiB/s), 17.1 MiB out (657 KiB/s)
+Total Time : 26s.
+Migration ID: XCP_copy_2023-06-13_11.32.47.743708
+Job ID : Job_XCP_copy_2023-06-13_11.32.47.743708_2023-06-13_11.33.41.388541_resume
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_XCP_copy_2023-06-13_11.32.47.743708_2023-06-
+13_11.33.41.388541_resume.log
+STATUS : PASSED
+----
+====

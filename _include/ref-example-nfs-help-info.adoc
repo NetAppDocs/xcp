@@ -1,0 +1,364 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp help info
+COMMAND
+info
+
+
+USAGE
+help info
+
+
+DESCRIPTION
+Step by step usage of the XCP command. Follow these steps after you copy the binary and license
+
+1. Download the XCP license and XCP binary to the Linux machine. Run XCP activate: xcp activate
+
+2. On a fresh system, the above command will fail when looking for a license in
+/opt/NetApp/xFiles/xcp.
+Copy the XCP license to /opt/NetApp/xFiles/xcp and run the activate command again: xcp activate
+
+
+3. Check the validity of the license: xcp license
+
+
+4. Configure the ini file located at /opt/NetApp/xFiles/xcp/xcp.ini with catalog details: add catalog = catalog_nfs_server:/catalog_path
+
+
+5. List all the exports and details from the NFS server: xcp show server
+
+
+6. Pick up one of the exports and run a scan of the export: xcp scan server:/export1
+
+
+7. Initiate baseline copy:
+xcp copy -newid id1 server:/export1 server2:/e
+
+8. If the copy is halted for some reason, you can use the "xcp resume" command to resume the copy operation:
+xcp resume -id id1
+
+9. Start with incremental sync after the baseline is completed:
+xcp sync -id id1
+
+10. After copy or after every sync, you can verify to check data integrity:
+xcp verify server:/export1 server2:/export2
+
+SUPPORTED COMMANDS
+help: Display information about commands and options
+ -exclude: Display examples of filters
+ -fmt: Display examples of filters
+ -match: Display examples of filters
+help info: Display documentation, examples, and tuning            recommendations
+show: Request information from hosts about NFS and other RPC services
+ -v: Show more detailed information about servers
+ -loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+scan: Read all the directories in a file tree or a saved index
+ -l, -q: File listing output formats
+ -stats, -csv, -html: Tree statistics report formats
+ -nonames: Do not look up user and group names for file listings or reports
+ -newid <name>: Catalog name for a new index
+ -id <name>: Catalog name of a previous copy or scan index
+ -match <filter>: Only process files and directories that match the filter
+ -fmt <string expression>: Formatted output
+ -du: Summarize space usage of each directory, including  subdirectories
+ -md5: Checksum the files (also save the checksum files when indexing) (default: False)
+ -duk: Summarize space usage of directory, include subdirectories, with output in kilobytes
+ -acl4: Process NFSv4 access control lists (ACLs)
+ -acl4.threads <n>: Per-process thread pool size (default: 100)
+ -depth <n>: Limit the search depth
+ -dircount <n[k]>: Request size for reading directories (default: 64k)
+ -edupe: Include deduplication estimate in reports (see documentation for details)
+ -bs <n[k]>: Read/write block size for scans that read data with -md5 or -edupe (default: 64k)
+ -parallel <n>: Maximum concurrent batch processes (default: 7)
+ -noId: Disable the creation of a default index (default: False)
+ -exclude <filter>: Exclude the files and directories that match the filter
+ -preserve-atime: preserve atime of the file/dir (default: False)
+ -nodes <name>: comma-separated list of worker nodes
+ -s3.insecure: use http instead of https
+ -s3.noverify: do not verify ssl certificates
+ -s3.endpoint <S3 endpoint Url>: path such as https://10.10.10.101:1010
+ -s3.profile <profile-name>: config/cred profile to be used
+ -loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+copy: Recursively copy everything from source to target
+ -newid <name>: Catalog name for a new index
+ -md5: Checksum the files (also save the checksum files when indexing) (default: False)
+ -edupe: Include deduplication estimate in reports (see documentation for details) 
+ -nonames: Do not look up user and group names for file listings or reports
+ -acl4: Process NFSv4 access control lists (ACLs)
+ -acl4.threads <n>: Per-process thread pool size (default: 100)
+ -acl4.alwaysset: call "setacl" for all ACL-capable files and directories
+ -bs <n[k]>: read/write blocksize (default: 64k)
+ -dircount <n[k]>: Request size for reading directories (default: 64k)
+ -parallel <n>: Maximum concurrent batch processes (default: 7)
+ -noId: Disable the creation of a default index (default: False)
+ -match <filter>: Only process files and directories that match the filter
+ -exclude <filter>: Exclude the files and directories that match the filter
+ -copybatch <filename [args]>: custom batch processing module
+ -chown: set destination uid and gid when copying as non-root    user (default: False)
+ -preserve-atime: preserve atime of the file/dir (default: False)
+ -nodes <name>: comma-separated list of worker nodes
+ -s3.insecure: use http instead of https
+ -s3.noverify: do not verify ssl certificates
+ -s3.endpoint <S3 endpoint Url>: path such as https://10.10.10.101:1010
+ -loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+verify: Verify that the target is the same as the source
+[no options]: Full verification of target structure, names, attributes, and data
+-stats, -csv: Scan source and target trees in parallel and compare tree statistics
+-nodata: Do not check data
+-noattrs: Do not check attributes (default: False)
+-noown: Do not check ownership (uid and gid) (default: False)
+-nomods: Do not check file modification times
+-mtimewindow <s>: Acceptable modification time difference for verification
+-newid <name>: Catalog name for a new index
+-v, -l: Output formats to list any differences found
+-acl4: Process NFSv4 access control lists (ACLs)
+-acl4.threads <n>: Per-process thread pool size (default: 100)
+-nonames: Do not look up user and group names for file listings or reports
+-match <filter>: Only process files and directories that match the filter
+-bs <n[k]>: read/write blocksize (default: 64k)
+-parallel <n>: Maximum concurrent batch processes (default: 7)
+-dircount <n[k]>: Request size for reading directories (default: 64k)
+-noId: Disable the creation of a default index (default: False)
+-exclude <filter>: Exclude the files and directories that match the filter
+-preserve-atime: preserve atime of the file/dir (default: False)
+-s3.insecure: use http instead of https
+-s3.noverify: do not verify ssl certificates
+-s3.endpoint <S3 endpoint Url>: path such as https://10.10.10.101:1010
+-s3.profile <profile-name>: config/cred profile to be used
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+sync: Find all source changes and apply them to the target
+-id <name>: Catalog name of a previous copy index
+-snap <name or path>: Access a Snapshot copy of the source tree
+-nonames: Do not look up user and group names for file listings or reports
+-bs <n[k]>: read/write blocksize (default: 64k)
+-dircount <n[k]>: Request size for reading directories (default: 64k)
+-parallel <n>: Maximum concurrent batch processes (default: 7)
+-acl4.threads <n>: Per-process thread pool size (default: 100)
+-exclude <filter>: Exclude the files and directories that match the filter
+-preserve-atime: preserve atime of the file/dir (default: False)
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+sync dry-run: Find source changes but don't apply them to the target
+-id <name>: Catalog name of a previous copy index
+-snap <name or path>: Access a Snapshot copy of the source tree
+-stats: Deep scan the modified directories and report on everything new
+-nonames: Do not look up user and group names for file listings or reports
+-v, -l, -q: File listing output formats
+-dircount <n[k]>: Request size for reading directories (default: 64k)
+-parallel <n>: Maximum concurrent batch processes (default: 7)
+-target: Check that the target files match the index
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+isync: Sync changes on target without index
+  -nodata: Do not check data
+  -noattrs: Do not check attributes
+  -nomods: Do not check file modification times
+  -mtimewindow <s>: Acceptable modification time difference for verification
+  -acl4: Process NFSv4 access control lists (ACLs)
+  -acl4.threads <n>: Per-process thread pool size (default: 100)
+  -acl4.alwaysset: call "setacl" for all ACL-capable files and directories
+  -match <filter>: Only process files and directories that match the filter
+  -bs <n[k]>: read/write blocksize (default: 64k)
+  -parallel <n>: Maximum concurrent batch processes (default: 7)
+  -dircount <n[k]>: Request size for reading directories (default: 64k)
+  -exclude <filter>: Exclude the files and directories that match the filter
+  -newid <name>: Catalog name for a new index
+  -loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+  -preserve-atime: preserve atime of the file/dir (default: False)
+  -s3.insecure: use http instead of https
+  -s3.noverify: do not verify ssl certificates
+  -s3.endpoint <S3 endpoint Url>: path such as https://10.10.10.101:1010
+  -s3.profile <profile-name>: config/cred profile to be used
+ 
+
+ isync estimate: Find the estimated time to complete the next isync command
+  -nodata: Do not check data
+  -noattrs: Do not check attributes
+  -nomods: Do not check file modification times
+  -mtimewindow <s>: Acceptable modification time difference for verification
+  -acl4: Process NFSv4 access control lists (ACLs)
+  -acl4.threads <n>: Per-process thread pool size (default: 100)
+  -acl4.alwaysset: call "setacl" for all ACL-capable files and directories
+  -match <filter>: Only process files and directories that match the filter
+  -bs <n[k]>: read/write blocksize (default: 64k)
+  -parallel <n>: Maximum concurrent batch processes (default: 7)
+  -dircount <n[k]>: Request size for reading directories (default: 64k)
+  -exclude <filter>: Exclude the files and directories that match the filter
+  -loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+  -preserve-atime: preserve atime of the file/dir (default: False)
+  -s3.insecure: use http instead of https
+  -s3.noverify: do not verify ssl certificates
+  -s3.endpoint <S3 endpoint Url>: path such as https://10.10.10.101:1010
+  -s3.profile <profile-name>: config/cred profile to be used
+  -id <name>: Catalog name of a previous copy index
+
+resume: Restart an interrupted copy
+-id <name>: Catalog name of a previous copy index
+-bs <n[k]>: read/write 
+-s3.insecure: use http instead of https
+-s3.noverify: do not verify ssl certificates
+-s3.endpoint <S3 endpoint Url>: path such as https://10.10.10.101:1010
+-s3.profile <profile-name>: config/cred profile to be used
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+
+
+delete: Delete everything recursively
+-match <filter>: Only process files and directories that match the filter
+-force: Delete without confirmation
+-removetopdir: remove directory including children
+-exclude <filter>: Exclude the files and directories that match the filter
+-parallel <n>: Maximum concurrent batch processes (default: 7)
+-preserve-atime: preserve atime of the file/dir (default: False)
+-s3.insecure: use http instead of https
+-s3.noverify: do not verify ssl certificates
+-s3.endpoint <S3 endpoint Url>: path such as https://10.10.10.101:1010
+-s3.profile <profile-name>: config/cred profile to be used
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+activate: Activate a license on the current host
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+
+license: Show xcp license info
+
+
+license update: Retrieve the latest license from the XCP server
+
+
+chown: changing ownership of a file object
+exclude <filter>: Exclude the files and directories that match the filter
+-match <filter>: Only process files and directories that match the filter
+-group <group>: linux gid to be set at source
+-user <user>: linux uid to be set at source
+-user-from <userFrom>: user to be changed
+-group-from <groupFrom>: group to be changed
+-reference <reference>: referenced file or directory point
+-v: reports output for every object processed
+-preserve-atime: preserve atime of the file/dir (default: False)
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+
+chmod: changing permissions of a file object
+-exclude <filter>: Exclude the files and directories that match the filter
+-match <filter>: Only process files and directories that match the filter
+-reference <reference>: referenced file or directory point
+-v: reports output for every object processed
+-mode <mode>: mode to be set
+-preserve-atime: preserve atime of the file/dir (default: False)
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+
+logdump: Collect all logs related to the XCP job and dump those into a zipped folder named <ID>.zip under current dir
+-m <migration ID>: Filter logs by migration ID
+-j <job ID>: Filter logs by job ID
+
+
+estimate: Use a saved scan index to estimate copy time
+-id <name>: Catalog name of a previous copy or scan index
+-gbit <n>: Gigabits of bandwidth to estimate best-case time (default: 1)
+-target <path>: Target to use for live test copy
+-t <n[s|m|h]>: Duration of live test copy (default: 5m)
+-bs <n[k]>: read/write blocksize (default: 64k)
+-dircount <n[k]>: Request size for reading directories (default: 64k)
+-parallel <n>: Maximum concurrent batch processes (default: 7) preserve-atime:
+ preserve atime of the file/dir (default: False)
+-loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+indexdelete: delete catalog indexes
+  -match <filter>: Only process files and directories that match the filter
+  -loglevel <name>: Option to set log level; available levels are INFO, DEBUG (default: INFO)
+
+OUTPUT
+In the -l output, the size, space used, and modification time are all shown in human- readable format. Time is relative to the current time, so it is time zone independent. For example, "14d1h" means that the file was modified 14 days and one hour ago. Note: "current time" is the time XCP started. The timestamp is saved in the index metadata (catalog:/xFiles/indexes/*.json) and is used for reports against the index.
+
+The -stats option prints a human-readable report to the console. Other report format options are -html or -csv. The comma-separated values (CSV) format has exact values. CSV and HTML reports are automatically saved in the catalog, if there is one.
+
+The histograms for modified, accessed, and changed only count regular files.
+
+FILTERS
+A filter expression should evaluate to True or False in Python. Filters are used in XCP for the -match and -exclude options. See below for some examples of the filters. Use "xcp help <command>" to check which options are supported for commands.
+
+
+Variables and file attributes currently available to use in a filter: modified, accessed, changed: Floats representing age in hours depth, size, used, uid, gid, type, nlinks, mode, fileid: Integers name, base, ext: Strings (if name is "demo.sql" then base is =="demo" and ext is ==".sql") owner, group: Strings size units: k, m, g, t, p = K, M, G, T, P = 1024, 1048576, 2**30, 2**40, 2**50 file types: f, d, b, c, l, s, q = F, D, B, C, L, S, Q = 1, 2, 3, 4, 5, 6, 7
+
+Functions available to use in a filter:
+rxm(pattern): Regular expression match for each file name fnm(pattern): Unix-style wildcard match for each file name load(path): List of lines from a local (external) file rand(N): Match one out of every N files at random path(pattern): Wildcard match for the full path paths(<full_file_path>): Match or exclude all NFS export paths listed in the file Note: unlike most shell wildcards, pattern "/a/*" will match path /a/b/c
+
+The rxm() function only runs Python re.compile (pattern) once.
+Similarly, load() only reads its file once.
+
+
+Filter examples:
+Match files modified less than half an hour ago "type == f and modified < .5"
+
+Find anything with "core" in the name ("in" is a Python operator): "'core' in name"
+
+Same match using regular expressions: "rxm('.*core.*')"
+
+
+Same match using wildcards: "fnm('*core*')"
+
+Match files that are not regular files, directories, or links: "type not in (f,d,l)"
+ 
+
+Find jpg files over 500 megabytes (M is a variable): "fnm('*.jpg') and size > 500*M"
+
+Find files with "/demo/smith" in the path (x is the file; str(x) is its full path): "'/demo/smith' in str(x)"
+
+Exclude copying anything with "f" in its name: "fnm('*f*')"
+
+Exclude multiple export paths specified in "/root/excludePaths.txt". "paths('/root/excludePaths.txt')"
+The file "excludePaths.txt" may contain multiple export paths where each path is listed on a new line.
+The export paths may contain wildcards.
+For example, 10.10.1.10:/source_vol/*.txt in file excludePaths.txt will exclude all files having ".txt" extension
+
+If there are incremental changes in previously included directories and you want to exclude anything that has "dir40" as a substring in its name, you can specify the new exclude filter with the sync. This overrides the exclude filter used previously with the copy command and applies the new exclude filter.
+Note that if there are incremental changes on the source after the copy operation and there are files with "f" in their name, then these are copied on to the target when the sync operation is performed. If you want to avoid copying such files or directories, you can use the following command: xcp sync -exclude "'f' in name" -id <id>
+
+PERFORMANCE
+On Linux, please set the following in /etc/sysctl.conf and run "sysctl -p":
+
+net.core.rmem_default = 1342177
+net.core.rmem_max = 16777216
+net.core.wmem_default = 1342177
+net.core.wmem_max = 16777216
+net.ipv4.tcp_rmem = 4096 1342177 16777216
+net.ipv4.tcp_wmem = 4096 1342177 16777216
+net.core.netdev_max_backlog = 300000
+net.ipv4.tcp_fin_timeout = 10
+
+Make sure that your system has multiple CPUs and at least a few gigabytes (GBs) of free memory.
+
+Searching, checksumming or copying hundreds of thousands or millions of files should be many times faster with XCP than with standard tools such cp, find, du, rsync, or OS drag-and-drop.
+
+For the case of a single file, reading or copying with XCP is usually faster with
+a faster host CPU. When processing many files, reading or copying is faster with more cores or CPUs.
+
+The main performance throttle option is -parallel for the maximum number of concurrent processes as the number of concurrent directories being read and files being processed. For small numbers of files and/or when there is a network quality of service (QoS) limiter, you might also be able to increase performance by opening multiple channels. The usage section above shows how to use multiple host target addresses. The same syntax also opens more channels to a single target.
+For example: "host1,host1:/vol/src" makes each XCP process open two channels to host1. In some WAN environments, this can improve performance. Within a datacenter, if there are only 1 GbE network interface cards (NICs) on the host with XCP it usually helps to use the multipath syntax to leverage more than one NIC.
+To verify that you are running I/O over multiple paths, use OS tools to monitor network I/O. For example, on Linux, try "sar -n DEV 2 200".
+ 
+ENVIRONMENT VARIABLES
+XCP_CONFIG_DIR: Override the default location /opt/NetApp/xFiles/xcp
+If set, the value should be an OS filesystem path, possibly a mounted NFS directory. When XCP_CONFIG_DIR is set, a new directory with name same as hostname is created inside the custom configuration directory path wherein new logs will be stored
+
+
+XCP_LOG_DIR: Override the default, which stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly a mounted NFS directory.
+When XCP_LOG_DIR is set, a new directory with name same as hostname is created inside the custom log directory path wherein new logs will be stored
+
+
+XCP_CATALOG_PATH: Override the setting in xcp.ini. If set, the value should be in the XCP path format, server:export[:subdirectory].
+
+
+SECURITY
+All the files and directories in the catalog are world readable except for the index files, which have a ".index" suffix and are located in subdirectories under the top-level catalog "indexes" directory.
+Because each index file is essentially an archive of metadata of an entire file tree, the catalog should be stored on a NetApp volume with export permissions matching the the actual sources and targets. Note that file data is not stored in the index, only metadata.
+
+SUPPORT
+https://www.netapp.com/us/contact-us/support.aspx
+----
+====

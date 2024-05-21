@@ -1,0 +1,101 @@
+---
+sidebar: sidebar
+permalink: xcp-reference-event-logs-nfs.html
+keywords: netapp, xcp, reference, nfs, logging, events, event, logs 
+summary: XCP NFS event logs
+---
+= XCP NFS event logs
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Review example event logs for XCP NFS. 
+
+The following table shows event logs for XCP NFS.
+
+[cols=3*,options="header",cols="20,40,40"]
+|===
+| Event ID
+| Event template
+| Event example
+a| 401 a| `Mounted on NFS export <mount path> with maximum read block size <read block size> bytes, maximum write block size <write block size> bytes. Mount point has mode value<mode bits> and type: <fattr3 type>.` a| `2020-07-14 03:53:59,811 - INFO {"Event ID":401, "Event Category": "Mounting unmounting file system", "Event Type": "Mount file system information", "ExecutionId": 408249379415, "Event Source": "NETAPP-01","Description": "Mounted on NFS export <IPaddress of NFS server>:/test1 with maximum read block size 65536 bytes, maximum write block size 65536 bytes. Mount point has mode value 493 and type : Directory"}`
+
+a| 181 a| `This license is issued to <username>of <company name>,license type is <license type> with <license status> status, license willexpire on <expire date>` a| `2020-07-14 03:53:59,463 - INFO {"Event ID": 181, "Event Category": "Authentication and authorization", "Event Type": "License information", "ExecutionId": 408249379415, "Event Source": "NETAPP-01", "Description": "This license is issued to NetApp User of Network Appliance, Inc, license type is SANDBOX with ACTIVE status, license will expire on Thu Jul 1 00:00:00 2021"}`
+
+a| 183 a| `The license issued to <username> of <company name> will expire in less than one week` a| `2020-07-14 04:02:55,151 - WARNING {"Event ID": 183, "Event Category": "Authentication and authorisation", "Event Type": "License warning", "ExecutionId": 408249519546, "Event Source": "NETAPP-01", "Description": "The license issued to NetApp User of Network Appliance, Inc will expire in less than one week"}`
+
+a| 581 a| `Catalog path <catalog volume path> to store catalog directory is not accessible. Refer user guide for configuring catalog volume.` a| `2020-07-14 04:05:00,857 - ERROR {"Event ID": 581, "Event Category": "Catalog and indexing", "Event Type": "Catalog exporting error", "ExecutionId": 408249552351, "Event Source": "NETAPP-01", "Description": "Catalog path <IP address of NFS server>:/test11 to store catalog directory is not accessible. Refer user guide for configuring catalog volume."}`
+
+a| 582 a| `Failed creating catalog directory in catalog volume path <catalog volume
+path>` a| `2020-07-14 04:10:12,895 - ERROR {"Event ID": 582, "Event Category": "Catalog and indexing", "Event Type": "Catalog directory creation error", "ExecutionId": 408249630498, "Event Source": "NETAPP-01", "Description": "Failed creating catalog directory in catalogvolume path 10.234.104.250:/cat_vol"}`
+
+a| 584 a| `Error in creating index directory <index id> for <command>` a| `2020-07-14 04:52:15,918 - ERROR {"Event ID":584, "Event Category": "Catalog and indexing", "Event Type": "Error in index creation", "ExecutionId": 408250278214, "Event Source": "NETAPP-01", "Description": "Error in creating index directory abc7 for scan"}`
+
+a| 586 a| `Failed to create index <index id> in catalog volume while executing command :
+<command>` a| `2020-07-14 04:45:46,275 - ERROR {"Event ID": 586, "Event Category": "Catalog and indexing", "Event Type": "Error in index creation", "ExecutionId": 408250177021, "Event Source": "NETAPP-01", "Description": "Failed to create index abc6 in catalog volume while executing command : scan {- newid: 'abc6'}"}`
+
+a| 351 a| `System resources available while executing xcp command: <command>, are : <CPU info>, <memory info>` a| `2020-07-14 05:08:35,393 - INFO {"Event ID":351, "Event Category": "System resource utilization", "Event Type": "Resources available for scan", "ExecutionId": 408250529264, "Event Source": "NETAPP-01", "Description": "System resources available while executing xcp command : scan , are : CPU: count 4, load avg (1/5/15m) 0.0, 0.0, 0.0, System memory (GiB): avail 7.3, total 7.8, free 6.6, buffer 0.1, cache 0.5"}`
+
+a| 13 a| `XCP <command> is running on platform <platform info> for source <source info>` a| `2020-07-14 05:08:35,478 - INFO {"Event ID": 13, "Event Category": "XCP job status", "Event Type": "Starting xcp scan operation", "ExecutionId": 408250529264, "Event Source": "NETAPP-01", "Description": "XCP command : scan {-newid: 'abc7'} is running on platform Linux-2.6.26-2-amd64-x86_64-with-debian- 5.0.10 for source 10.234.104.250:/test1"}`
+
+a| 14 a| `XCP scan completed successfully after scanning <scan item count> items. Source : <source scanned>` a| `2020-07-14 05:08:35,653 - INFO {"Event ID": 14, "Event Category": "XCP job status", "Event Type": "XCP scan completion", "ExecutionId": 408250529264, "Event Source": "NETAPP-01", "Description": "XCP scan completed successfully after scanning 479 items. Source : 10.234.104.250:/test1"}`
+
+a| 354 a| `System resources available while executing xcp command: <command>, are : <CPU info>, <memory info>` a| `2020-07-14 05:15:13,562 - INFO {"Event ID": 354, "Event Category": "System resource utilization", "Event Type": "Resources available for copy", "ExecutionId": 408250596708, "Event Source": "NETAPP-01", "Description": "System resources available while executing xcp command : copy , are : CPU: count 4, load avg (1/5/15m) 0.0, 0.0, 0.0, System memory (GiB): avail 7.3, total 7.8, free 6.6, buffer 0.1, cache 0.5"}`
+
+a| 25 a| `XCP <command> is running on platform <platform info> for source <copy source> and destination <copy destination/target>` a| `2020-07-14 05:15:13,647 - INFO {"Event ID": 25, "Event Category": "XCP job status", "Event Type": "Starting xcp copy operation", "ExecutionId": 408250596708, "Event Source": "NETAPP-01", "Description": "XCP command : copy {} is running on platform Linux-2.6.26- 2-amd64-x86 64-with-debian-5.0.10 for source <IP address of NFS server>:/source_vol and destination <NFS destination source>:/test1"}`
+
+a| 26 a| `XCP copy completed successfully after scanning <scanned item count> of which <matched item count> are matched and <copied item count> items are copied to the destination. Source : <copy source>, destination :<copy destination/target` a| `2020-07-14 05:15:13,885 - INFO {"Event ID":26, "Event Category": "XCP job status", "Event Type": "XCP copy completion", "ExecutionId": 408250596708, "Event Source": "NETAPP-01", "Description": "XCP copy completed successfully after scanning 3 of which 0 are matched and 2 items are copied to the destination. Source : <IP address of NFS server>:/source_vol, destination : <NFS destination source>:/test1"}`
+
+a| 16 a| `XCP <command> is running on platform <platform info> for source <sync source> and destination <sync destination>` a| `2020-07-14 06:41:20,145 - INFO {"Event ID":
+16, "Event Category": "XCP job status", "Event Type": "Starting xcp sync operation", "ExecutionId": 408251920146, "Event Source": "NETAPP-01", "Description": "XCP command : sync {-id: 'autoname_copy_2020-07- 14_06.22.07.233271'} is running on platform Linux-2.6.26-2-amd64-x86_64-with-debian-5.0.10 for source <IP address of NFS server>:/src_vol and destination <NFS destination source>:/dest_vol"}`
+
+a| 352 a| `System resources available while executing xcp command: <command>, are : <CPU info>, <memory info>` a| `2020-07-14 06:41:28,728 - INFO {"Event ID": 352, "Event Category": "System resource utilization", "Event Type": "Resource available for sync", "ExecutionId": 408251920146, "Event Source": "NETAPP-01", "Description": "System resources available while executing xcp command : sync {-id: 'autoname_copy_2020-07-14_06.22.07.233271'} , are : CPU: count 4, load avg (1/5/15m) 0.1, 0.0, 0.0, System memory (GiB): avail 7.2, total 7.8, free 6.6, buffer 0.1, cache 0.5"}`
+
+a| 17 a| `XCP sync is completed. Total scanned <scanned item count>, copied
+<copied item count>, modification <modification item count>, new file <new file count>, delete item <delete item count>. Command executed : <command>` a| `2020-07-14 06:41:29,245 - INFO {"Event ID":17, "Event Category": "XCP job status", "Event Type": "XCP sync completion", "ExecutionId": 408251920146, "Event Source": "NETAPP-01", "Description": "XCP sync is completed. Total scanned 66, copied 0, modification 1, new file 0, delete item 0. Command executed : sync {-id: 'autoname_copy_2020-07-14_06.22.07.233271'}"}`
+
+a| 19 a| `XCP <command> is running on platform <platform info> for source <verify source> and destination <verify destination>` a| `2020-07-14 06:54:59,084 - INFO {"Event ID": 19, "Event Category": "XCP job status", "Event Type": "Starting xcp verify operation", "ExecutionId": 408252130477, "Event Source": "NETAPP-01", "Description": "XCP command : verify {} is running on platform Linux-2.6.26-2-amd64-x86_64-with- debian-5.0.10 for source <IP address of NFS server>:/src_vol and destination <IP address of NFS destination server>:/dest_vol"}`
+
+a| 353 a| `System resources available while executing xcp command: <command>, are : <CPU info>, <memory info>` a| `2020-07-14 06:54:59,085 - INFO {"Event ID": 353, "Event Category": "System resource utilization", "Event Type": "Resources available for verify", "ExecutionId": 408252130477, "Event Source": "NETAPP-01","Description": "System resources available while executing xcp command : verify , are : CPU: count 4, load avg (1/5/15m) 0.0, 0.0, 0.0, System memory (GiB): avail 7.3, total 7.8, free 6.6, buffer 0.1, cache 0.5"}`
+
+a| 211 a| `log file path : <file path> , severity filter level <severity level>, log message sanitization is set as <sanitization value>` a| `2020-07-14 06:40:59,104 - INFO {"Event ID": 211, "Event Category": "Logging and supportability", "Event Type": "XCP logging information", "ExecutionId": 408251920146, "Event Source": "NETAPP-01", "Description": "Log file path : /opt/NetApp/xFiles/xcp/xcplogs/xcp.log, severity filter level INFO, log message sanitization is set as False"}`
+
+a| 215 a| `Event file path: <file path>, severity filter level <severity level>, event message sanitization is set as <sanitization value>` a| `2020-07-14 06:40:59,105 - INFO {"Event ID": 215, "Event Category": "Logging and supportability", "Event Type": "XCP event information", "ExecutionId": 408251920146, "Event Source": "NETAPP-01", "Description": "Event file path :/opt/NetApp/xFiles/xcp/xcplogs/xcp_event.log, severity filter level INFO, event message sanitization is set as False"}`
+
+a| 54 a| `Catalog volume is left with no free space please increase the size of catalog volume <catalog volume running out of space>` a| `2020-07-14 04:10:12,897 - ERROR {"Event ID":54, "Event Category": "Application failure", "Event Type": "No space left on Catalog volume error", "ExecutionId": 408249630498, "Event Source": "NETAPP-01", "Description": "Catalog volume is left with no free space. Please increase the size of catalog volume<IP address of NFS destination server>:/cat_vol"}`
+
+a| 53 a| `Catalog volume <catalog volume> is left with no free space to store index <index id> while executing <command>. Please increase the size of the catalog volume <catalog volume running out of space>` a| `2020-07-14 04:52:15,922 - ERROR {"Event ID": 53, "Event Category": "Application failure", "Event Type": "No space left for catalog volume error", "ExecutionId": 408250278214, "Event Source": "NETAPP-01", "Description": "Catalog volume 10.234.104.250:/cat_vol is left with no free space to store index abc7 while executing : scan {-newid: 'abc7'}. Please increase the size of the catalog volume <IP address of NFS destination server>:/cat_vol"}`
+
+a| 61 a| `NFS LIF <LIF IP> is not reachable for path <volume path without IP> while executing <command>. Please check volume is not offline and is reachable.` a| `2020-07-14 07:38:20,100 - ERROR {"Event ID":61, "Event Category": "Application failure", "Event Type": "NFS mount has failed", "ExecutionId": 408252799101, "Event Source": "NETAPP-01", "Description": "NFS LIF <IP address of NFS destination server> is not reachable for path /test11 while executing : scan {}. Please check volume is not offline and is reachable"}`
+
+a| 71 a| `TCP connection could not be established for IP address <IP>. Check network setting and configuration.` a| `2020-07-14 07:44:44,578 - ERROR {"Event ID": 71, "Event Category": "Application failure", "Event Type": "IP is not active", "ExecutionId": 408252889541, "Event Source": "NETAPP-01", "Description": "TCP connection could not be established to the address <IP address of NFS destination server>. Check network setting and configuration."} (UT done)`
+
+a| 51 a| `Target volume is left with no free space while executing: <command>. Please increase the size of target volume <volume running out of space>.` a| `2020-07-14 07:07:07,286 - ERROR {"Event ID": 51, "Event Category": "Application failure", "Event Type": "No space left on destination error", "ExecutionId": 408252316712, "Event Source": "NETAPP-01", "Description": "Target volume is left with no free space while executing : copy {}. Please increase the size of target volume <IP address of NFS destination server>:/cat_vol"}`
+
+a| 76 a| `Index id {} is already present . Use new index id and rerun command :
+<command>` a| `2020-07-14 09:18:41,441 - ERROR {"Event ID": 76, "Event Category": "Application failure", "Event Type": "Index ID problem", "ExecutionId": null, "Event Source": "NETAPP- 01", "Description": "Index id asd is already present . Use new index id and rerun command: scan {-newid: 'asd'} "}`
+
+a| 362 a| `CPU usage has crossed <percentage CPU used>%` a| `2020-06-16 00:17:28,294 - ERROR {"Event ID": 362, "Event Category": "System resource utilization", "Event Type": "resources available for xcp", "Event Source": "NETAPP- 01 ", "Description": "CPU Usage has crossed 90.07%"}`
+
+a| 363 a| `Memory Usage has crossed <percentage memory used>%` a| `2020-06-16 00:17:28,300 - ERROR {"Event ID": 363, "Event Category": "System resource utilization", "Event Type": "resources available for xcp", "Event Source": "NETAPP- 01", "Description": "Memory Usage has crossed 95%"}`
+
+a| 22 a| `XCP <command> is running on platform <platform information> for source <resume source> and destination <resume destination>` a| `2020-07-14 06:24:26,768 - INFO {"Event ID": 22, "Event Category": "XCP job status", "Event Type": "Starting xcp resume operation", "ExecutionId": 408251663404, "Event Source": "NETAPP-01", "Description": "XCP command : resume {-id: 'autoname_copy_2020-07-14_06.22.07.233271'} is running on platform Linux-2.6.26-2-amd64- x86_64-with-debian-5.0.10 for source <IP address for NFS sever>:/src_vol and destination <IP address of NFS destination server>:/dest_vol"}`
+
+a| 356 a| `System resources available while executing xcp command: <command> , are : <CPU info>, <memory information>` a| `2020-07-14 06:24:26,837 - INFO {"Event ID": 356, "Event Category": "System resource utilization", "Event Type": "Resource available for resume", "ExecutionId": 408251663404, "Event Source": "NETAPP-01","Description": "System resources available while executing xcp command : resume {-id: 'autoname_copy_2020-07-14_06.22.07.233271'} , are : CPU: count 4, load avg (1/5/15m) 0.1, 0.1, 0.0, System memory (GiB): avail 7.2,total 7.8, free 6.6, buffer 0.1, cache 0.5"}`
+
+a| 23 a| `XCP resume is completed. Total scanned items <scanned item count>, total copied items <copied item count>. Command executed :<command>` a| `2020-07-14 06:26:15,608 - INFO {"Event ID": 23, "Event Category": "XCP job status", "Event Type": "XCP resume completion", "ExecutionId": 408251663404, "Event Source": "NETAPP-01", "Description": "XCP resume is completed. Total scanned items 5982, total copied items 5973. Command executed : resume {-id: 'autoname_copy_2020-07- 14_06.22.07.233271'} "}`
+
+a| 76 a| `Index id <index id> is already present. Use new index id and rerun command : <command>` a| `2020-07-14 09:43:08,381 - ERROR {"Event ID": 76, "Event Category": "Application failure", "Event Type": "Index ID problem", "ExecutionId": null, "Event Source": "NETAPP- 01", "Description": "Index id asd is already present . Use new index id and rerun command : scan {-newid: 'asd'} "}`
+
+a| 82 a| `Index id <index id> used while executing sync is incomplete. Try resume on the existing index id <index id>` a| `2020-07-14 10:33:09,307 - ERROR {"Event ID": 82, "Event Category": "Application failure", "Event Type": "Incomplete index used for sync", "ExecutionId": null, "Event Source": "NETAPP-01", "Description": "Index id autoname_copy_2020-07-14_10.28.22.323897 used while executing sync is incomplete. Try resume on the existing index id autoname_copy_2020-07-14_10.28.22.323897."}`
+
+a| 365 a| `CPU utilization reduced to <CPU percentage used>%` a| `2020-07-14 09:43:08 381 - ERROR {"Event ID": 364, "Event Category": "System resource utilization", "Event Type": "Resources available for xcp", "ExecutionId": 408251663404, "Event Source": "NETAPP-01", "Description": " CPU utilization reduced to 26%}`
+
+a| 364 a| `Memory utilization reduced to <CPU percentage used>%` a| `2020-07-14 09:43:08,381 - INFO {"Event ID": 364, "Event Category": " Resources available for xcp", "Event Type": "Resources available for xcp", "ExecutionId": 408351663478, "Event Source": "NETAPP-01", "Description": " Memory utilization reduced to 16.2%"}`
+
+a| 10 a| `XCP command <command> has failed` a| `2020-07-14 09:43:08,381 - INFO {"Event ID": 10, "Event Category": " Xcp job status", "Event Type": "XCP command failure", "ExecutionId":4082516634506, "Event Source": "NETAPP-01", "Description": " XCP command verify has failed”`
+
+|===

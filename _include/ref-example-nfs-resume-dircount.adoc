@@ -1,0 +1,58 @@
+.Show example
+[%collapsible]
+====
+----
+root@localhost linux]# ./xcp resume -id ID001 -dircount 32k
+
+xcp: Index: {source: <IP address or hostname of NFS server>:/source_vol, target: <IP address of
+destination NFS server>:/dest_vol}
+xcp: resume 'ID001': Reviewing the incomplete index...
+xcp: diff 'ID001': Found 4,582 completed directories and 238 in progress
+39,520 reviewed, 2.47 MiB in (1.49 MiB/s), 12.6 KiB out (7.62 KiB/s), 1s.
+xcp: resume 'ID001': Starting second pass for the in-progress directories...
+xcp: resume 'ID001': Resuming the in-progress directories...
+xcp: resume 'ID001': Resumed command: copy {-newid: u'ID001'}
+xcp: resume 'ID001': Current options: {-dircount: '32k', -id: 'ID001'}
+xcp: resume 'ID001': Merged options: {-dircount: '32k', -id: 'ID001', -newid: u'ID001'}
+xcp: resume 'ID001': Values marked with a * include operations before resume
+76,626 scanned*, 43,825 copied*, 39,520 indexed*, 31.7 MiB in (6.33 MiB/s), 23.0 MiB out (4.60
+MiB/s), 5s
+79,751 scanned*, 49,942 copied*, 39,520 indexed*, 140 MiB in (21.7 MiB/s), 131 MiB out (21.5
+MiB/s), 10s
+79,751 scanned*, 55,901 copied*, 39,520 indexed*, 234 MiB in (18.8 MiB/s), 223 MiB out (18.3
+MiB/s), 15s
+79,751 scanned*, 61,764 copied*, 39,520 indexed*, 325 MiB in (18.0 MiB/s), 313 MiB out (17.9
+MiB/s), 20s
+84,791 scanned*, 68,129 copied*, 44,510 indexed*, 397 MiB in (14.3 MiB/s), 384 MiB out (14.2
+MiB/s), 25s
+94,698 scanned*, 74,741 copied*, 54,039 indexed*, 485 MiB in (17.4 MiB/s), 473 MiB out (17.8
+MiB/s), 30s
+99,734 scanned*, 80,110 copied*, 59,044 indexed*, 605 MiB in (24.1 MiB/s), 591 MiB out (23.7
+MiB/s), 35s
+104,773 scanned*, 86,288 copied*, 69,005 indexed*, 716 MiB in (22.2 MiB/s), 703 MiB out (22.3
+MiB/s), 40s
+110,076 scanned*, 93,265 copied*, 79,102 indexed*, 795 MiB in (15.8 MiB/s), 781 MiB out (15.5
+MiB/s), 45s
+121,341 scanned*, 100,077 copied*, 84,096 indexed*, 897 MiB in (20.4 MiB/s), 881 MiB out (19.9
+MiB/s), 50s
+125,032 scanned*, 105,712 copied*, 89,132 indexed*, 1003 MiB in (21.2 MiB/s), 985 MiB out (20.7
+MiB/s), 55s
+129,548 scanned*, 110,382 copied*, 89,132 indexed*, 1.14 GiB in (32.0 MiB/s), 1.12 GiB out (32.1
+MiB/s), 1m0s
+131,976 scanned*, 115,158 copied*, 94,221 indexed*, 1.23 GiB in (19.2 MiB/s), 1.21 GiB out (18.3
+MiB/s), 1m5s
+134,430 scanned*, 119,161 copied*, 94,221 indexed*, 1.37 GiB in (27.8 MiB/s), 1.35 GiB out (28.3
+MiB/s), 1m10s
+134,630 scanned*, 125,013 copied*, 109,402 indexed*, 1.47 GiB in (21.2 MiB/s), 1.45 GiB out
+(21.4 MiB/s), 1m15s
+134,630 scanned*, 129,301 copied*, 114,532 indexed*, 1.61 GiB in (29.4 MiB/s), 1.60 GiB out
+(29.8 MiB/s), 1m20s
+134,630 scanned*, 132,546 copied*, 124,445 indexed*, 1.69 GiB in (14.8 MiB/s), 1.67 GiBout
+(15.0 MiB/s), 1m25s
+Xcp command : xcp resume -id ID001 -dircount 32k
+134,630 scanned*, 134,630 copied*, 0 modification, 0 new item, 0 delete item, 0 error
+Speed : 1.70 GiB in (19.7 MiB/s), 1.69 GiB out (19.5 MiB/s)
+Total Time : 1m28s.
+STATUS : PASSED
+----
+====

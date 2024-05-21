@@ -1,0 +1,39 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 xcp_nfs]# xcp logdump -j Job_2022-06-14_21.49.28.060943_scan
+
+xcp: Job ID: Job_2022-06-14_21.52.48.744198_logdump
+Xcp command : xcp logdump -j Job_2022-06-14_21.49.28.060943_scan
+Stats :
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 0s.
+Job ID : Job_2022-06-14_21.52.48.744198_logdump
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2022-06-14_21.52.48.744198_logdump.log
+STATUS : PASSED
+[root@client xcp_nfs]# ls Job_2022-06-14_21.49.28.060943_scan
+Job_2022-06-14_21.49.28.060943_scan.log supplementary
+[root@client1 xcp_nfs]# ls Job_2022-06-14_21.49.28.060943_scan/supplementary/
+Job_idx_2022-06-14_21.46.05.167338_copy.log Job_idx_2022-06-14_21.47.41.868410_sync.log
+xcp_history.json
+
+Job_idx_2022-06-14_21.46.35.134294_sync.log Job_idx_2022-06
+14_21.48.00.085869_sync.log
+[root@client1 xcp_nfs]#
+[root@client1 xcp_nfs]# ./xcp logdump -m idx
+
+xcp: Job ID: Job_2022-06-14_21.56.04.218977_logdump
+Xcp command : xcp logdump -m idx
+Stats :
+Speed : 0 in (0/s), 0 out (0/s)
+Total Time : 0s.
+Job ID : Job_2022-06-14_21.56.04.218977_logdump
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2022-06-14_21.56.04.218977_logdump.log
+STATUS : PASSED
+[root@client1 xcp_nfs]# ls idx
+Job_idx_2022-06-14_21.46.05.167338_copy.log Job_idx_2022-06-14_21.47.41.868410_sync.log
+xcp_history.json
+Job_idx_2022-06-14_21.46.35.134294_sync.log Job_idx_2022-06-14_21.48.00.085869_sync.log
+----
+====

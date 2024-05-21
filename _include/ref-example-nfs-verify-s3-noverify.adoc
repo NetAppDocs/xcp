@@ -1,0 +1,50 @@
+.Show example
+[%collapsible]
+====
+----
+[root@client1 linux]# ./xcp verify -s3.noverify hdfs://<HDFS source> s3://<s3-bucket>
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
+13_10.59.01.817044
+Job ID: Job_2023-06-13_10.59.01.817044_verify
+Xcp command : xcp verify -s3.noverify hdfs://<HDFS source> s3://<s3-bucket>
+Stats : 8 scanned, 8 indexed, 100% found (5 have data), 5 compared, 100% verified (data)
+Speed : 21.3 KiB in (5.84 KiB/s), 90.8 KiB out (24.9 KiB/s)
+Total Time : 3s.
+Job ID : Job_2023-06-13_10.59.01.817044_verify
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_10.59.01.817044_verify.log
+STATUS : PASSED
+
+./xcp verify -s3.profile sg -s3.noverify -s3.endpoint https://<endpoint_url> hdfs://<HDFS source> s3://<s3-bucket>
+
+xcp: WARNING: No index name has been specified, creating one with name: XCP_verify_2023-06-
+13_11.29.00.543286
+Job ID: Job_2023-06-13_11.29.00.543286_verify
+15,009 scanned, 9 indexed, 1,194 found, 908 compared, 908 same data, 4.87 MiB in (980 KiB/s), 199 KiB
+out (39.1 KiB/s), 5s
+15,009 scanned, 9 indexed, 2,952 found, 2,702 compared, 2.64 KiB same data, 8.56 MiB in (745 KiB/s),
+446 KiB out (48.7 KiB/s), 10s
+15,009 scanned, 9 indexed, 4,963 found, 4,841 compared, 4.73 KiB same data, 12.9 MiB in (873 KiB/s),
+729 KiB out (55.9 KiB/s), 15s
+15,009 scanned, 9 indexed, 6,871 found, 6,774 compared, 6.62 KiB same data, 16.9 MiB in (813 KiB/s),
+997 KiB out (53.4 KiB/s), 20s
+15,009 scanned, 9 indexed, 8,653 found, 8,552 compared, 8.35 KiB same data, 20.6 MiB in (745 KiB/s),
+1.22 MiB out (49.3 KiB/s), 25s
+15,009 scanned, 9 indexed, 10,436 found, 10,333 compared, 10.1 KiB same data, 24.3 MiB in (754
+KiB/s), 1.46 MiB out (49.8 KiB/s), 31s
+15,009 scanned, 9 indexed, 12,226 found, 12,114 compared, 11.8 KiB same data, 28.0 MiB in (751
+KiB/s), 1.71 MiB out (49.7 KiB/s), 36s
+15,009 scanned, 9 indexed, 14,005 found, 13,895 compared, 13.6 KiB same data, 31.7 MiB in (756
+KiB/s), 1.95 MiB out (50.0 KiB/s), 41s
+15,009 scanned, 9 indexed, 14,229 found, 14,067 compared, 13.7 KiB same data, 32.2 MiB in (102
+KiB/s), 1.98 MiB out (6.25 KiB/s), 46s
+Xcp command : xcp verify -s3.profile sg -s3.noverify -s3.endpoint https://<endpoint_url> <HDFS source> s3://<s3-bucket>
+Stats : 15,009 scanned, 15,009 indexed, 100% found (15,005 have data), 15,005 compared, 100%
+verified (data)
+Speed : 33.9 MiB in (724 KiB/s), 2.50 MiB out (53.5 KiB/s)
+Total Time : 47s.
+Job ID : Job_2023-06-13_11.29.00.543286_verify
+Log Path : /opt/NetApp/xFiles/xcp/xcplogs/Job_2023-06-13_11.29.00.543286_verify.log
+STATUS : PASSED
+----
+====
