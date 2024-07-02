@@ -44,6 +44,8 @@ The following features are not supported on XCP SMB:
 |===
 |Feature Name |Description
 
+| Third-party to NetApp NTFS access control lists (ACLs) 
+| XCP SMB does not support NTFS ACLs from a third-party to NetApp.
 |NFS symbolic link (symlink)
 |NFS symlink is not supported in XCP SMB
 |ACL option for scan
