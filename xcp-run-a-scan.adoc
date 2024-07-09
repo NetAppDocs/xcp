@@ -77,7 +77,7 @@ The File Space Used by Size graph displays the number of files in different file
 
 image:xcp_image12.png[Space Occupied by Users Graph]
 
-The Space Occupied by Users graph displays the space used by users. The Username column contains the names of users (UID when usernames cannot be retrieved) and the Space Used column indicates the space used by each username. This graph is available in XCP NFS and SMB. 
+The Space Occupied by Users graph displays the space used by users. The Username column contains the names of users (UID when usernames cannot be retrieved) and the Space Used column indicates the space used by each username.
 
 === Files Accessed/Modified/Created Graph
 
