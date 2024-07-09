@@ -44,6 +44,8 @@ The following features are not supported on XCP SMB:
 |===
 |Feature Name |Description
 
+| Third-party to NetApp NTFS access control lists (ACLs) 
+| XCP SMB does not support migration of third-party ACLs from non-NetApp to NetApp systems.
 |NFS symbolic link (symlink)
 |NFS symlink is not supported in XCP SMB
 |ACL option for scan
@@ -83,6 +85,7 @@ The following features are not available for Simple Storage Service (S3) connect
 
 * *Migration with S3 bucket as the source*: XCP does not support migration with an S3 bucket as the source.
 
+// 2024 Jul 09, OTHERDOC-72
 // 23 Oct 2023, OTHERDOC-34
 // 2023-06-15, XCP 1.9.2
 // 2023-05-11, OTHERDOC-8
