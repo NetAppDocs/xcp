@@ -89,7 +89,7 @@ NOTE: To get the access time (atime) graph in SMB scans, check the box for prese
 
 === File Size Accessed/Modified/Created Graph
 
-image:xcp-filesize-amc.png[]
+image:xcp-filesize-amc.png[A graph showing the size of files changed over time]
 
 The File Size Accessed/Modified/Created graph displays the size of files changed over time. The X-axis represents the period of time within which changes were made and the Y- axis represents the size of files changed.
 
@@ -103,11 +103,11 @@ The File Distribution by Extension graph represents the count of the different f
 
 Additionally, for SMB shares, you can get the number of alternate data streams files for each file extension by checking the box for alternate data streams before running a scan. 
 
-image:xcp-file-distribution-ads.png[]
+image:xcp-file-distribution-ads.png[A graph showing how to get the number of alternate data stream files for each file extension in XCP SMB]
 
 === File Size Distribution by Extension Graph
 
-image:xcp-filesize-dist-ex.png[]
+image:xcp-filesize-dist-ex.png[A graph showing the cumulative size of the different file extensions in a file share.]
 
 The File Size Distribution by Extension graph represents the cumulative size of the different file extensions in a file share. The size of the divisions representing the extensions is based on the size of files with each extension.
 
@@ -125,6 +125,6 @@ The Distribution by Type graph represents the count of the following types of fi
 
 Additionally, for SMB shares, you can get the number of alternate data streams files for different types by checking the box for alternate data streams before running a scan.  
 
-image:xcp-file-distribution-type.png[]
+image:xcp-file-distribution-type.png[A graph showing how to get the number of alternate data stream files for different types for XCP SMB]
 
 // 2023 Nov 20, XCP 1.9.3
