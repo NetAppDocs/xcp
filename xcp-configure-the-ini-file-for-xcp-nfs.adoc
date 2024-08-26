@@ -5,7 +5,7 @@ keywords: netapp, xcp, configure, configuring, how, performing, tuning, nfs,
 summary: Steps to configure the INI file XCP
 ---
 
-= Configure the INI file
+= Configure the INI file for XCP NFS
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,6 +14,10 @@ summary: Steps to configure the INI file XCP
 
 [.lead]
 Steps to configure the INI file for XCP.
+
+NOTE: The XCP INI file is not required in XCP SMB. 
+
+// 2024 Aug 13, GH issue 59
 
 == Configure the INI file for a root user
 
