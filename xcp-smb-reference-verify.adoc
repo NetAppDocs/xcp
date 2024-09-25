@@ -39,8 +39,8 @@ The following table lists the `verify` parameters and their description.
 | <<verify -nomtime>> | Do not check file modification time.
 | <<verify -noattrs>> | Do not check attributes.
 | <<verify -noownership>> | Do not check ownership.
-| <<verify -ads>> | Scan for changes and modifications of alternate data streams in the source and target SMB share. If there are changes, it applies the change to the target to 
-make sure that the target is identical to the source.
+| <<verify -ads>> | The `verify` command with `-ads` flag checks for any
+alternate data streams on the source and destination and displays any differences.
 | <<verify -noacls>> | Do not check ACLs.
 | <<verify_smb_atime, verify -atimewindow <float> >> | Acceptable access time difference, in seconds.
 | <<verify_smb_ctime, verify -ctimewindow <float> >> | Acceptable creation time difference, in seconds.
@@ -52,8 +52,8 @@ make sure that the target is identical to the source.
 | Active Directory user or local(non-domain) user on the target machine to receive the permissions of local (non-domain) source machine users (example: domain\administrator).
 | <<verify_smb_acl, verify -fallback-group <fallback_group> >>
 | Active Directory group or local(non-domain) group on the target machine to receive the permissions of local(non-domain) source machine groups (example: domain\administrators).
-| <<smb_verify_root,verify -root>> | Sync ACLs for the root directory.
-| <<verify_smb_onlyacl, verify -onlyacl>> | Copy only the security information.
+| <<smb_verify_root,verify -root>> | Verify ACLs for the root directory.
+| <<verify_smb_onlyacl, verify -onlyacl>> | Verify only the security information.
 
 |=== 
 
@@ -186,7 +186,7 @@ xcp verify -noownership \\<IP address of SMB source server>\source_share \\<IP a
 include::./_include/ref-example-smb-verify-noownership.adoc[]
 
 == verify -ads
-Using `-ads` parameter with the `verify` command to read if there are any alternate data streams on the source and destination and display any differences.
+Use the `-ads` parameter with the `verify` command to check if there are any alternate data streams on the source and destination and display any differences.
 
 .Syntax
 [source,cli]
@@ -305,7 +305,7 @@ xcp verify -noacls -fallback-user <fallback_user> -fallback-group <fallback_grou
  
 [[smb_verify_root,verify -root]]
 == verify -root
-Use the `-root` parameter with the `verify` command to sync the ACLs for the root directory. 
+Use the `-root` parameter with the `verify` command to verify the ACLs for the root directory. 
 
 .Syntax
 [source,cli]
@@ -324,3 +324,5 @@ xcp verify -onlyacl -preserve-atime -fallback-user <fallback_user> -fallback- gr
 
 .Show example
 include::./_include/ref-example-smb-verify-onlyacl.adoc[]
+
+// 2024 Sep 25, OTHERDOC-83
