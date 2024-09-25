@@ -39,7 +39,7 @@ The following table lists the `verify` parameters and their description.
 | <<verify -nomtime>> | Do not check file modification time.
 | <<verify -noattrs>> | Do not check attributes.
 | <<verify -noownership>> | Do not check ownership.
-| <<verify -ads>> | The `verify` command with `-ads` flag checks for any alternate data streams on the source and destination and displays any differences.
+| <<verify -ads>> | The `verify` command with the `-ads` parameter checks for any alternate data streams on the source and destination and displays any differences.
 | <<verify -noacls>> | Do not check ACLs.
 | <<verify_smb_atime, verify -atimewindow <float> >> | Acceptable access time difference, in seconds.
 | <<verify_smb_ctime, verify -ctimewindow <float> >> | Acceptable creation time difference, in seconds.
