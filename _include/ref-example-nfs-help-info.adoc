@@ -275,7 +275,7 @@ indexdelete: delete catalog indexes
 OUTPUT
 In the -l output, the size, space used, and modification time are all shown in human- readable format. Time is relative to the current time, so it is time zone independent. For example, "14d1h" means that the file was modified 14 days and one hour ago. Note: "current time" is the time XCP started. The timestamp is saved in the index metadata (catalog:/xFiles/indexes/*.json) and is used for reports against the index.
 
-The -stats option prints a human-readable report to the console. Other report format options are -html or -csv. The comma-separated values (CSV) format has exact values. CSV and HTML reports are automatically saved in the catalog, if there is one.
+The -stats option prints a human-readable report to the console. Other report format options are -html or -csv. The comma-separated values (CSV) format has exact values. CSV and HTML reports are automatically saved in the catalog, if a catalog exists.
 
 The histograms for modified, accessed, and changed only count regular files.
 
