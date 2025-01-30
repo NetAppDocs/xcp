@@ -85,8 +85,11 @@ include::./_include/ref-example-nfs-scan-q.adoc[]
 
 Use the `-stats`, `-csv`, and `-html` parameters with the `scan` command to list files in the tree statistic report format.
 
-NOTE: XCP reports (.csv, .html) are saved in the catalog location specified in the `xcp.ini` file. The files are stored in the `<catalog path>/catalog/indexes/1/reports` folder. You can view sample reports in the appendix.
-
+[NOTE]
+====
+*  The `-stats` option prints a human-readable report to the console. Other report format options are `-html` or `-csv`. The comma-separated values (CSV) format has exact values. CSV and HTML reports are automatically saved in the catalog, if a catalog exists.
+* XCP reports (.csv, .html) are saved in the catalog location specified in the `xcp.ini` file. The files are stored in the `<catalog path>/catalog/indexes/1/reports` folder. You can view sample reports in the appendix.
+====
 .Syntax
 
 [source,cli]
