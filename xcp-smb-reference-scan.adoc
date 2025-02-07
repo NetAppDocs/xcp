@@ -187,6 +187,8 @@ include::./_include/ref-example-smb-scan-depth-n.adoc[]
 == scan -stats
 Use the `-stats` parameter with the `scan` command to list files in a tree statistics report format.
 
+NOTE: The -stats option prints a human-readable report to the console. Other report format options are -html or -csv. The comma-separated values (CSV) format has exact values. CSV and HTML reports are automatically saved in the catalog, if a catalog exists.
+
 .Syntax
 [source,cli]
 xcp scan -stats \\<IP address or hostname of SMB server>\source_share 
